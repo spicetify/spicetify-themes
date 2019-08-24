@@ -1,4 +1,4 @@
-# Elementary
+# Spicy
 
 ## Screenshots
 
