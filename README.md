@@ -18,7 +18,7 @@ After that you can choose which theme to apply just by running `spicetify config
 If you want to add your theme:
 
 - Fork this repository
-- Create another folder with your theme name
+- Create another folder with your theme name. The theme name should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` in it
 - Copy `color.ini` and `user.css` to it
 - Create a `README.md` in it with the following structure 
 ```markdown
