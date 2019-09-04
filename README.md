@@ -6,6 +6,8 @@ You can find a preview of all the themes in the [wiki](https://github.com/morphe
 
 ## Installation
 
+(If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
+
 To install the themes in this repository, after cloning it, just run
 
 ```bash
@@ -20,7 +22,7 @@ After that you can choose which theme to apply just by running `spicetify config
 If you want to add your theme:
 
 - Fork this repository
-- Create another folder with your theme name. The theme name should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` in it
+- Create another folder with your theme name. The theme name should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` or any whitespace in it
 - Copy `color.ini` and `user.css` to it
 - Create a `README.md` in it with the following structure 
 ```markdown
