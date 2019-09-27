@@ -1,6 +1,10 @@
-#ShadowCustom
-##Screenshots
+# ShadowCustom
 
-![ShadowCustom](./screenshot1.png)
+## Screenshots
 
-###Feel free to comment suggestions or bugs and ill try and improve/fix.
+![Night](./screenshot.png)
+
+## More
+
+Highly inspired by SpicetifyDefault & Dark.
+Comment suggestions and bugs below, thanks.
