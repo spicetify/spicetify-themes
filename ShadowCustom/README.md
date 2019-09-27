@@ -1,5 +1,4 @@
-
-Add ShadowCustom Theme
+Shadow Custom Theme:
 
 This theme removes the friends section allowing more space for the playlist your viewing or the tab you are on.
 The bottom bar is increased in size, allowing for a larger 'Now Playing' Image cover.
