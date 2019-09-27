@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![Night](./screenshot.png)
+![Night](./7JL4785.png)
 
 ## More
 
