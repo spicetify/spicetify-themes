@@ -7,4 +7,4 @@
 
 ## Info
 
-Designed to match the new PoP_OS! dark mode [Spicetify Github Page](https://github.com/khanhas/spicetify-cli)
+Designed to match the new PoP_OS! dark mode.
