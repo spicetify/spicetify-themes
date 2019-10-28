@@ -1,0 +1,18 @@
+/*Thinner scrollbar*/
+::-webkit-scrollbar {
+	height: 6px !important;
+	width: 0px !important;
+	background-color: transparent;
+}
+
+/*Hide upgrade button */
+
+.upgrade-button {
+	display: none !important;
+}
+
+/*Exclude these elements from draggable property because it stops them from clickable*/
+
+.profile-items-container, .profile {
+	-webkit-app-region: no-drag !important;
+}
