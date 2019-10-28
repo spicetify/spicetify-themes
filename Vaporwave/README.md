@@ -4,11 +4,11 @@
 
 #### NewRetro (Default)
 
-![Arc-Dark](.\NewRetro.PNG)
+![Arc-Dark](./NewRetro.PNG)
 
 #### SeaPunk
 
-![Arc-Dark](.\SeaPunk.PNG)
+![Arc-Dark](./SeaPunk.PNG)
 
 ## How to install
 
@@ -23,5 +23,3 @@ spicetify config color_scheme <scheme name>
 Theme developed by [LivingWithHippos](https://github.com/LivingWithHippos/spicetify-themes)
 
 Highly inspired by [vapoRwave](https://github.com/moldach/vapoRwave)
-
-
