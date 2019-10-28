@@ -4,20 +4,18 @@
 
 #### NewRetro (Default)
 
-![Arc-Dark](C:\Users\User\Documents\GitHub\Temi-Spicetify\spicetify-themes\Vaporwave\NewRetro.PNG)
+![Arc-Dark](.\NewRetro.PNG)
 
 #### SeaPunk
 
-![Arc-Dark](C:\Users\User\Documents\GitHub\Temi-Spicetify\spicetify-themes\Vaporwave\SeaPunk.PNG)
+![Arc-Dark](.\SeaPunk.PNG)
 
 ## How to install
 
-Copy these files into your spicetify themes folder and run from your terminal
+To switch between the color themes run
 
 ```
-spicetify config current_theme Vaporwave
 spicetify config color_scheme <scheme name>
-spicetify apply
 ```
 
 ## Credits
