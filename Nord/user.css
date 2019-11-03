@@ -16,7 +16,7 @@
 .profile.content-top-bar__profile-link,
 .upgrade-button,
 .view-player .remote-playback-bar,
-.NewPlaylistButton {
+.LeftSidebarNewPlaylistButton__button {
 	display: none !important;
 }
 
