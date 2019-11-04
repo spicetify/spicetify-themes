@@ -1,4 +1,4 @@
-# Night owl
+# Night Owl
 
 ## Screenshots
 
