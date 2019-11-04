@@ -1,0 +1,97 @@
+:root {
+	--custom-border: #24405d;
+	--custom-border-secondary: #2d5175;
+	--custom-heart: #d61515;
+
+	--connect-box: #272727;
+	--playlist-filter-input: rgba(19, 49, 78, 0.5);
+}
+
+/* Custom font */
+h1, h2, h3, h4, h5, h6,
+p, span {
+
+}
+
+/* Disable visualization when shows lyric */
+.visualization-container {
+	display: none;
+}
+
+/* Scrollbars */
+.scrollbar-style-visible-mac::-webkit-scrollbar, .scrollbar-style-visible-mac ::-webkit-scrollbar, .scrollbar-style-visible-windows::-webkit-scrollbar, .scrollbar-style-visible-windows ::-webkit-scrollbar, .scrollbar-style-visible-linux::-webkit-scrollbar, .scrollbar-style-visible-linux ::-webkit-scrollbar {
+    width: 13px;
+}
+
+.scrollbar-style-visible-windows::-webkit-scrollbar-button, .scrollbar-style-visible-windows ::-webkit-scrollbar-button, .scrollbar-style-visible-linux::-webkit-scrollbar-button, .scrollbar-style-visible-linux ::-webkit-scrollbar-button {
+    background-color: var(--modspotify_sidebar_and_player_bg);
+    background-image: none !important;
+}
+
+.view-player,
+.LeftSidebarNewPlaylistButton__button,
+.Header--with-active-sticky-header .Header__background {
+	border-top-color: var(--custom-border);
+}
+
+.GlueSectionDivider__container {
+	border-bottom-color: var(--custom-border-secondary);
+}
+
+#menu-wrapper {
+	border-right: 1px solid var(--custom-border);
+}
+
+/* Heart */
+.added .button.button-icon-only.button-add,
+
+.view-player .now-playing-container .button-add, .view-player .now-playing-container .button-add:not(:disabled):hover, .view-player .now-playing-container .nowplaying-add-button, .view-player .now-playing-container .nowplaying-add-button:not(:disabled):hover,
+
+.Button--style-icon:not(.Button--is-drop-target-active),
+
+.button-header-add.added::before, .button-header-add.added:hover::before, .button-header-add.added.just-changed::before {
+    color: var(--custom-heart);
+}
+
+/* Disable animations */
+* {
+    -webkit-animation: none !important;
+    animation: none !important;
+
+	-webkit-transform: none !important;
+	transform: none !important;
+
+	box-shadow: none !important;
+	filter: none !important;
+}
+
+canvas {
+	display: none !important;
+}
+
+.Header__background-color {
+    background-color: transparent !important;
+}
+
+/* Force to avoid bad showing */
+body .ConnectPopup {
+	transform: translateX(-50%) !important;
+}
+
+body .glue-page-header--with-active-sticky-header .glue-page-header__sticky-inner {
+    transform: translateY(-48px) !important;
+}
+
+.ConnectPopup,
+.ConnectPopup__content {
+	background: var(--connect-box);
+}
+
+.h-search {
+	background: var(--playlist-filter-input);
+}
+
+.h-search::placeholder {
+	color: #648bab;
+	color: var(--modspotify_secondary_fg);
+}
