@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-![Alt text](/Screenshots/Screenshot_1.png?raw=true "Screenshot 1")
-![Alt text](/Screenshots/Screenshot_2.png?raw=true "Screenshot 1")
-![Alt text](/Screenshots/Screenshot_3.png?raw=true "Screenshot 1")
+![Alt text](./Screenshots/Screenshot_1.png "Screenshot 1")
+![Alt text](./Screenshots/Screenshot_2.png "Screenshot 2")
+![Alt text](./Screenshots/Screenshot_3.png "Screenshot 3")
 
 ## More
 
