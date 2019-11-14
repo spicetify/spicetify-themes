@@ -484,11 +484,20 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	animation: AnimationName 20s ease infinite !important;
 }
 
+.tl-row:hover {
+	background: linear-gradient(to right,#dc2430, #7b4397 ) !important;
+	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-moz-transition-property:width,height,background,font-size,opacity;
+}
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell{
+	background: transparent !important;
+}
+
 .tl-row.selected:hover {
 	background: linear-gradient(to right,#dc2430, #7b4397 ) !important;
 	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
 	-moz-transition-property:width,height,background,font-size,opacity;
-
 }
 .TableRow--is-selected {
 	background: linear-gradient(to right, #7b4397, #dc2430) !important;
