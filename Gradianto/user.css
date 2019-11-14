@@ -490,9 +490,20 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	-moz-transition-property:width,height,background,font-size,opacity;
 
 }
+.TableRow--is-selected {
+	background: linear-gradient(to right, #7b4397, #dc2430) !important;
+	/* transition: background 1s; */
+	background-size: 400% 400% !important;
 
-.GlueTableRow--is-selected {
-	background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+	-webkit-animation: AnimationName 20s ease infinite !important;
+	-moz-animation: AnimationName 20s ease infinite !important;
+	animation: AnimationName 20s ease infinite !important;
+}
+
+.TableRow--is-hover-forced, .TableRow:hover{
+	background: linear-gradient(to right,#dc2430, #7b4397 ) !important;
+	-webkit-transform: 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s;
+	-moz-transition-property:width,height,background,font-size,opacity;
 }
 
 .tracklist-podcast .tl-progress .row-progress__bar {
