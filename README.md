@@ -8,12 +8,14 @@ You can find a preview of all the themes in the [wiki](https://github.com/morphe
 
 (If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
 
-To install the themes in this repository, after cloning it, just run
+Once you cloned the repository you'll need to put the files into the Themes folder. This varies between operating systems. The example shows the `Themes` directory for Linux. For other operating systems, see the `Themes` folder location [here](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes).
 
 ```bash
 cd spicetify-themes
 cp -r * ~/.config/spicetify/Themes
 ```
+
+
 
 After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`
 
