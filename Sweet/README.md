@@ -4,7 +4,7 @@
 
 Window: 
 
-![Sweet](/screenshot.png?raw=true)
+![Sweet](/Sweet/screenshot.png?raw=true)
 
 ## More
 
