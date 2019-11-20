@@ -1,5 +1,6 @@
 :root {
 	--bar-height: 60px;
+	--right-sidebar-width: 200px !important;
   }
 
   /*Round corner cover image*/
@@ -326,6 +327,27 @@
 	margin-top: -5px;
   }
 
+	.buddy-list-iframe {
+		margin-left: 1em !important;
+		margin-right: 1em !important;
+	}
+
+	.card-wrapper {
+		margin-left: 5%;
+	}
+
+	.status-containers {
+		display: None !important;
+	}
+
+	#resize-buddy-list {
+		display: None !important;
+	}
+
+	#view-buddy-list {
+		min-width: 220px !important;
+	}
+
   /* Spice up Fullscreen mode */
   #view-player .album-art .album-art__image {
 	border-radius: 30px !important;
@@ -437,10 +459,18 @@
   /* Small tooltip */
   #tooltip {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
-	border-radius: 5px !important;
-	border: 2px solid var(--modspotify_main_fg);
-	padding: 10px 10px;
+	border-radius: 2px !important;
+	border: 1px solid var(--modspotify_secondary_fg);
+	padding: 0.25em 0.35em;
   }
+
+	.Rootlist {
+		margin-top: 2em !important;
+	}
+
+	.RootlistItemPlaylist {
+		margin-top: 0.5em !important;
+	}
 
   .tooltip-arrow-top, .tooltip-arrow-bottom {
 	display: none !important;
@@ -582,6 +612,15 @@
 	height: 4px;
   }
 
+	.progress-bar .handle {
+		border-radius: 10% !important;
+		border: 1px solid var(--modspotify_main_fg) !important;
+	}
+
+	.progress-bar .inner {
+		border-radius: 0 !important;
+	}
+
   .progress-container {
 	position: fixed !important;
 	width: 100% !important;
@@ -599,9 +638,9 @@
   }
 
   .context-menu {
-	border: 1px solid var(--modspotify_main_fg);
+	border: 1px solid var(--sidebar_and_player_bg);
 	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.2);
-	border-radius: 4px !important;
+	border-radius: 3px !important;
 	overflow: hidden;
   }
 
