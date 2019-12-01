@@ -508,8 +508,8 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	/* padding: 5px 20px;
 	border: 5px solid var(--modspotify_main_fg) !important;
 	border-radius: 6px;
-	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2); */
-	text-transform: uppercase;
+	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2); 
+	text-transform: uppercase; */
 }
 
 .glue-page-header.glue-page-header--album .glue-page-header__content-inner .glue-page-header__title,
