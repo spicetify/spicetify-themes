@@ -14,7 +14,7 @@ Full desktop:
 
 You can replace `user.css` with `minimal.css`, which hides spotify's sidebar. Probably not everyone's cup of tea, but it does showcase what's possible with spicetify. Additionally, it clears up a lot of screen space (if you don't require the sidebar, like me), and fits better in small tiling wm spaces.
 
-![minimal](./minimal-crop.jpg)
+![minimal](./minimal.jpg)
 
 ## More
 
