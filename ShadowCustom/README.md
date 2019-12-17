@@ -3,6 +3,7 @@
 ## Screenshots
 
 ![Night](./7JL4785.png)
+![Nord](./ShadowCustom-S-Nord.png)
 
 ## More
 
