@@ -1,4 +1,4 @@
-# ShadowCustom-S
+# ShadowCustom-S-Nord
 
 ## Screenshots
 
