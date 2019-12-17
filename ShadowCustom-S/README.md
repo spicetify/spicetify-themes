@@ -1,8 +1,8 @@
-# ShadowCustom
+# ShadowCustom-S
 
 ## Screenshots
 
-![Night](./7JL4785.png)
+
 ![Small](./ShadowCustom-S.png)
 ## More
 
