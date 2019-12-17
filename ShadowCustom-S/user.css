@@ -648,7 +648,7 @@ span.glue-page-header__title-text {
 /*Force player bar to has fixed height*/
 .view-player {
 	background: #554b63;
-    height: 210px;
+    height: 110px;
     border-top: 0;
 }
 
@@ -680,10 +680,10 @@ span.glue-page-header__title-text {
 }
 
 #now-playing-image-small .cover-image {
-    width: 175px;
-    height: 175px;
+    width: 105px;
+    height: 105px;
     left: 7px;
-    bottom: 61px;
+    bottom: -10px;
     border-radius: 10px;
 }
 
@@ -723,7 +723,7 @@ span.glue-page-header__title-text {
 .progress-container {
     position: fixed !important;
     width: 100% !important;
-    bottom: 180px;
+    bottom: 110px;
     margin: 0 !important;
     background: #554b63;
     padding: 10px;
