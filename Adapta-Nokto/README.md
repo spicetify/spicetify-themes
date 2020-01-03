@@ -14,4 +14,4 @@ Theme developed by [@j-james](https://github.com/j-james)
 
 An imitation of [adapta-gtk-theme](https://github.com/adapta-project/adapta-gtk-theme)'s Nokto variant.
 
-If someone figures out what `pressing_fg`, `pressing_button_bg`, `miscellaneous_bg`, or `miscellaneous_hover_bg` do, please tell me!
+If someone figures out what `pressing_fg` or `preserve_1` do, please tell me!
