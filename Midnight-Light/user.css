@@ -8,3 +8,7 @@
 .gc-label-text {
   color: #fafafa;
 }
+
+#view-leaderboard-ad {
+  display: none !important;
+}
