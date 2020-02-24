@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: 'Montserrat';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase !important;
+  font-family: 'Monoton Regular';
+  font-weight: 100 !important;
+}
+
+.player-bar-wrapper {
+  background-color: #282F3D !important;
+}
+
+.SidebarListItem {
+  transition: background-color 0.3s linear;
+}
+
+.SidebarListItem:hover {
+  background-color: #1f2430 !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
