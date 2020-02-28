@@ -34,9 +34,9 @@ If you want to add your theme:
 
 [Put at least one image here]
 
-## More (optional)
+## More
 
-[Author name and/or any other info about the theme]
+[Specify any needed font; (optionally) author name and/or any other info about the theme]
 
 ```
 - Open a Pull Request
