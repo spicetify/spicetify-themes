@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![Deep Coral](coral.png)
+![DeepCoral](coral.png)
 
 ## More
 
