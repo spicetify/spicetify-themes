@@ -1,4 +1,4 @@
-# Deep Coral
+# DeepCoral
 
 ## Screenshots
 
