@@ -1,0 +1,650 @@
+/* color vars */
+	:root {
+		--s-bg: #161925;
+		--s-fg: #C3C7D1;
+
+		--s-g1: #5800E2;
+		--s-g2: #FF00E6;
+
+		--s-red: #ed254e;
+		--s-green: #71f79f;
+		--s-yellow: #f9dc5c;
+		--s-blue: #7cb7ff;
+		--s-magenta: #c74ded;
+		--s-cyan: #00c1e4;
+		--s-lightgray: #F2EFEA;
+		--s-darkgray: #555753;
+	}
+
+body {
+	background: var(--s-bg);
+	color: var(--s-fg)
+}
+
+body, html, iframe {
+	background-color: var(--s-bg)
+}
+
+a {
+	color: var(--s-blue)
+}
+
+a:hover, a:focus, a.contextmenu-active {
+	color: var(--s-lightgray)
+}
+
+#view-content {
+	background-color: var(--s-bg) !important
+}
+
+textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-container .form-control {
+	background-color: var(--s-bg);
+	color: var(--s-fg);
+	border: 1px solid var(--s-magenta);
+	border-radius: 6px
+}
+
+/* alert message bar */
+	.alert {
+		background-color: var(--s-red);
+		color: var(--s-fg)
+	}
+
+
+/* bottom bar */
+	.view-player {
+		background: var(--s-bg);
+		border-top: none
+	}
+
+	/* text */
+		/* normal */ .view-player .track a, .view-player .artist a, .view-player .player-controls-container .progress-container .elapsed, .view-player .player-controls-container .progress-container .remaining {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .view-player .track a:hover, .view-player .artist a:hover {
+			color: var(--s-lightgray);
+		}
+
+		/* track/artist name underline */ a {
+			border-bottom: none
+		}
+
+		/* stupid ass shadows */
+			.view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+				background: linear-gradient(90deg,transparent,var(--s-bg))
+			}
+
+			.view-player .text-container .text-item-container .text-item .scroll-text-container:before {
+				background: linear-gradient(270deg,transparent,var(--s-bg))
+			}
+
+	/* progress & volume bars */
+		.progress-bar, .progress-bar .inner, .tracklist-podcast .tl-progress .row-progress {
+			background: var(--s-darkgray)
+		}
+
+		/* normal */ .view-player .player-controls-container .progress-container .progress-bar .inner, .view-player .extra-controls-container .volumebar-container .progress-bar .inner {
+			background-color: var(--s-lightgray)
+		}
+
+		/* hover */ .view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner, .view-player .extra-controls-container .volumebar-container:hover .inner, .view-player .player-controls-container .progress-container.progress-bar-enabled.dragging-progress-bar .progress-bar .inner, .view-player .player-controls-container .progress-container.progress-bar-enabled:hover .progress-bar .inner, .tracklist-podcast .tl-progress .row-progress__bar {
+			background: linear-gradient(45deg, var(--s-g1), var(--s-g2))
+		}
+
+		/* handle */ .progress-bar .handle {
+			border: none;
+			box-shadow: none;
+			background: var(--s-g2)
+		}
+
+		/* clicked handle */ .progress-bar-wrapper.active .handle {
+			box-shadow: none;
+			background: var(--s-lightgray)
+		}
+
+	/* buttons */
+		/* normal */ .view-player .player-controls-container .controls .button-play, .view-player .player-controls-container .controls .button-repeat, .view-player .player-controls-container .controls .button-shuffle, .view-player .player-controls-container .controls .button-thumbs-down, .view-player .player-controls-container .controls .button-thumbs-up, .view-player .player-controls-container .controls .next, .view-player .player-controls-container .controls .previous, .view-player .extra-controls-container .button-devices, .view-player .extra-controls-container .button-lyrics, .view-player .extra-controls-container .button-queue, .view-player .extra-controls-container .button-subtitles, .button.button-icon-only, .view-player .now-playing-container .button-add, .view-player .now-playing-container .button-add:not(:disabled):hover, .view-player .now-playing-container .nowplaying-add-button, .view-player .now-playing-container .nowplaying-add-button:not(:disabled):hover, .view-player .now-playing-container .nowplaying-ban-button, .view-player .now-playing-container .nowplaying-ban-button:not(:disabled):hover {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .view-player .player-controls-container .controls .next.contextmenu-active, .view-player .player-controls-container .controls .next:not(:disabled):hover, .view-player .player-controls-container .controls .previous.contextmenu-active, .view-player .player-controls-container .controls .previous:not(:disabled):hover, .view-player .player-controls-container .controls .button-repeat.contextmenu-active, .view-player .player-controls-container .controls .button-repeat:not(:disabled):hover, .view-player .player-controls-container .controls .button-shuffle.contextmenu-active, .view-player .player-controls-container .controls .button-shuffle:not(:disabled):hover, .view-player .player-controls-container .controls .button-thumbs-down.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-down:not(:disabled):hover, .view-player .player-controls-container .controls .button-thumbs-up.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-up:not(:disabled):hover, .view-player .player-controls-container .controls .button-play.contextmenu-active, .view-player .player-controls-container .controls .button-play:not(:disabled):hover, .view-player .extra-controls-container .button-devices.contextmenu-active, .view-player .extra-controls-container .button-devices:not(:disabled):hover, .view-player .extra-controls-container .button-lyrics.contextmenu-active, .view-player .extra-controls-container .button-lyrics:not(:disabled):hover, .view-player .extra-controls-container .button-queue.contextmenu-active, .view-player .extra-controls-container .button-queue:not(:disabled):hover, .view-player .extra-controls-container .button-subtitles.contextmenu-active, .view-player .extra-controls-container .button-subtitles:not(:disabled):hover, .button.button-icon-only.contextmenu-active, .button.button-icon-only:not(:disabled):hover {
+			color: var(--s-lightgray)
+		}
+
+		/* toggles on */ .view-player .player-controls-container .controls .button-repeat.active, .view-player .player-controls-container .controls .button-shuffle.active, .view-player .player-controls-container .controls .button-thumbs-down.active, .view-player .player-controls-container .controls .button-thumbs-up.active {
+			color: var(--s-magenta)
+		}
+
+		/* toggles dot */ .view-player .player-controls-container .button-repeat.active:after, .view-player .player-controls-container .button-shuffle.active:after {
+			background-color: var(--s-magenta)
+		}
+
+	/* cover art border */ .now-playing-large {
+		border-top: none
+	}
+
+/* left sidebar */
+	/* backgrounds */ .sidebar, .sidebar .sidebar-navbar, .LeftSidebar__scroll-section {
+		background-color: var(--s-bg)
+	}
+
+	/* "new playlist" button border */
+		/* normal */ .LeftSidebarNewPlaylistButton__button {
+			border-top: none;
+			color: var(--s-fg)
+		}
+
+		/* hover */ .LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
+			color: var(--s-lightgray)
+		}
+
+	/* links */ .SidebarListItemLink:link, .SidebarListItemLink:visited {
+		color: var(--s-fg)
+	}
+
+	/* hover links */ .SidebarListItemLink:focus, .SidebarListItemLink:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* titles */ html .SidebarList__title {
+		color: var(--s-fg)
+	}
+
+	/* selected indicator */ .SidebarListItem--is-active:after, .RootlistItem--is-active:before {
+		background-color: var(--s-magenta)
+	}
+
+	/* downloaded indicator */ .OfflineIndicator--is-downloaded {
+		color: var(--s-magenta)
+	}
+
+/* right sidebar */
+	/* element background */ .buddy-card, #view-buddy-list, .section-divider-sticky-wrapper, .button.button-with-stroke {
+		background-color: var(--s-bg)
+	}
+
+	/* "find friends" button */
+		/* hover background */ .button.button-with-stroke.contextmenu-active, .button.button-with-stroke:not(:disabled):hover {
+			background-color: var(--s-bg)
+		}
+
+		/* shadow fuckery */ .button.button-with-stroke.contextmenu-active, .button.button-with-stroke:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray), 0 0 0 1px transparent;
+			color: var(--s-lightgray)
+		}
+
+		/* text */ .button.button-with-stroke {
+			color: var(--s-fg)
+		}
+
+	/* header border */ .section-divider, .glue-page-header--with-active-sticky-header .glue-page-header__background, .Header--with-active-sticky-header .Header__background {
+		border-bottom: none
+	}
+
+	/* links */
+		/* normal */ .friend .user .name, .friend .context, .friend .context a, .friend .song-artist, .friend .song-artist a, .friend .song-title, .friend .song-title a {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .friend .context a:focus, .friend .context a:hover, .friend .song-artist a:focus, .friend .song-artist a:hover, .friend .song-title a:focus, .friend .song-title a:hover {
+			color: var(--s-lightgray)
+		}
+
+/* top bar */
+
+	/* background */ .body-container--mac .content-top-bar, .body-container--windows .content-top-bar, .body-container--windows .content-top-bar:after {
+		background: var(--s-bg)
+	}
+
+	/* username link */
+		/* normal */ .profile {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .profile:hover {
+			color: var(--s-lightgray);
+
+		}
+
+	/* dropdown toggle */ .content-top-bar__profile-menu-button .dropdown>button, .content-top-bar__profile-menu-button .dropdown>button.contextmenu-active, .content-top-bar__profile-menu-button .dropdown>button:not(:disabled):hover {
+		color: var(--s-fg)
+	}
+
+	/* search bar */
+		/* background */ input[type=search] {
+			background: var(--s-darkgray);
+			color: var(--s-fg)
+		}
+
+		/* search icon */ .spoticon-search-16::before {
+			color: var(--s-fg)
+		}
+
+/* context menu */
+	/* background */ .context-menu, .MenuItem, .Menu {
+		background-color: var(--s-bg)
+	}
+
+	/* separator */ .context-menu .sep {
+		background-color: var(--s-darkgray)
+	}
+
+	/* item link */ .context-menu .item .text, .MenuItem, .Menu {
+		color: var(--s-fg)
+	}
+
+	/* item background hover */ .context-menu .item.hover:not(.disabled) {
+		background-color: var(--s-darkgray)
+	}
+
+/* album list & album page */
+	/* header background */ .Header--with-active-sticky-header .Header__sticky, .glue-page-header--with-active-sticky-header .glue-page-header__sticky, .glue-page-header__content-wrapper, .Header__content-wrapper, .glue-page-header__background-scroll-overlay {
+		background: transparent
+	}
+
+	/* header gradient garbage */
+		/* gradient */ .glue-page-header__background-color, .GlueHeader__background-overlay {
+			background-color: var(--s-bg);
+			background-image: linear-gradient(to bottom, transparent, var(--s-bg));
+		}
+
+		/* overlay */ .glue-page-header__background-overlay {
+			background: transparent
+		}
+
+		/* scrolling overlay */ .glue-page-header__background-scroll-overlay-ellipse {
+			background-image: radial-gradient(circle farthest-corner, transparent, var(--s-bg) 50%)
+		}
+
+		/* backdrop */ .glue-page-header__background-scroll-overlay-ellipse-backdrop, .Header__background-overlay, .Header__background-scroll-overlay {
+			background: var(--s-bg)
+		}
+
+	/* album page header border */ .h-search-bar {
+		border-top: none
+	}
+
+	/* album grid background shit */ .card-placeholder-wrapper, .Card__image-hit-area {
+		background: none;
+		background-color: none
+	}
+
+	/* more header shit (?) */ #view-content>.embedded-app, #view-content>iframe, .Header__background .Header__background-color, .glue-page-header--with-active-sticky-header .glue-page-header__background-scroll-overlay-ellipse {
+		background-color: var(--s-bg)
+	}
+
+	/* header text shit */ .Header__label, .Header__content .Header__title-text, .glue-page-header__content .glue-page-header__count-label-text, .glue-page-header__content .glue-page-header__count-label-number, .glue-page-header__content .glue-page-header__label, .glue-page-header__content .glue-page-header__title {
+		color: var(--s-fg)
+	}
+
+	/* absolutely retarded header gradient */ .glue-page-header__top-bar, .Header__top-bar {
+		background: linear-gradient(var(--s-bg), var(--s-bg) 48px, transparent)
+	}
+
+	/* artist link under album */ .card-info-subtitle-links a {
+		color: var(--s-fg)
+	}
+
+	/* artist link hover */ .card-info-subtitle-links a:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* album header table */
+		/* border */ .Table__sticky-header-table, .Table__table, .tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, .tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search {
+			border-bottom: none
+		}
+
+		/* background */ .Table__sticky-header, .sticky-clone .tl-header {
+			background-color: var(--s-bg)
+		}
+
+		/* text/icons */ .TableHeaderCell {
+			color: var(--s-fg)
+		}
+
+	/* header buttons */
+		/* play */ .Button--style-green, .Button--style-green:not(:disabled).Button--is-strong-style, .Button--style-green:not(:disabled):hover, .button.button-green, .button.button-green.contextmenu-active, .button.button-green:not(:disabled):hover {
+			background: var(--s-magenta)
+		}
+
+		/* play background bullshit */ .Button--style-stroke, .button.button-white, .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			background: none !important;
+			box-shadow: none !important
+		}
+
+		/* love/more */ .Button--style-icon-stroke, .button.button-icon-with-stroke {
+			box-shadow: inset 0 0 0 1px var(--s-fg);
+			color: var(--s-fg);
+			background: none
+		}
+
+		/* love/more hover */ .Button--style-icon-stroke:hover, .button.button-icon-with-stroke.contextmenu-active, .button.button-icon-with-stroke:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray);
+			color: var(--s-lightgray);
+			background: none
+		}
+
+	/* stupid fucking button */
+		/* background of the stupid fucking button itself */ .Button--style-stroke, .button.button-white, .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			background: var(--s-bg);
+			box-shadow: inset 0 0 0 1px var(--s-fg)
+		}
+
+		/* background of the stupid fucking button itself on hover */ .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation].contextmenu-active, button[data-button=add-recommendation]:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray),0 0 0 1px transparent
+		}
+
+		/* text */ .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			color: var(--s-fg)
+		}
+
+		/* veeeeery special button hover background */ button[data-button=add-recommendation].contextmenu-active, button[data-button=add-recommendation]:not(:disabled):hover {
+			background-color: var(--s-bg)
+		}
+
+	/* tracklist */
+		/* explicit sign */ .TableCellSong__label, .tl-explicit .label, .tl-premium .label, .tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label {
+			border: 1px solid var(--s-fg);
+			color: var(--s-fg);
+			border-color: var(--s-fg) !important;
+		}
+
+		/* fucking AWFUL border + bunch of text */ .TableCell, .tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, .tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search, .tl-header th, .tl-cell, .tl-highlight, .added .button.button-icon-only.button-add, .Button--style-icon-background, .TrackListDiscRow__cell {
+			border-top: none;
+			color: var(--s-fg)
+		}
+
+		/* featured artist link */ .TableCellSong__featuredArtist {
+			color: var(--s-blue)
+		}
+
+		/* track hover background */ .TableRow--is-hover-forced, .TableRow:hover, .tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell, .card-horizontal > .card-horizontal-interior-wrapper:hover, .card-horizontal > .card-horizontal-interior-wrapper:active, .TableRow--is-selected {
+			background: var(--s-darkgray)
+		}
+
+		/* playing now icon */ .Button--style-icon-background {
+			background: none
+		}
+
+		/* disc */ .TrackListDiscRow__cell {
+			color: var(--s-fg)
+		}
+
+		/* now playing title */ .TableCellSong--track-is-playing .TableCellSong__featuredArtist, .TableCellSong--track-is-playing .TableCellSong__text-truncator, .TableCellSong--track-is-playing .TableCellSong__track-name, .tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+			color: var(--s-magenta)
+		}
+
+	/* "more by" */
+		/* text */ .GlueSectionDivider__title {
+			color: var(--s-fg)
+		}
+
+		/* border */ .GlueSectionDivider__container {
+			border-bottom: none
+		}
+
+		/* album name */ .Card__info-title a {
+			color: var(--s-fg)
+		}
+
+		/* album year */ .Card__info-subtitle-metadata {
+			color: var(--s-fg)
+		}
+
+	/* copyright */ .AlbumFooter__copyrights-list {
+		color: var(--s-fg)
+	}
+
+	/* search bar */ .h-search, .focus .h-search, .h-search:focus {
+		background: none;
+		color: var(--s-fg)
+	}
+
+	/* filtered shit? */ .empty-filtered-content {
+		border-top: none
+	}
+
+	/* slider */
+		/* on */ .slider.enabled {
+			background: var(--s-magenta)
+		}
+
+		/* handle */ .slider.enabled div, .slider div {
+			background: var(--s-fg);
+			box-shadow: 0 0 1px var(--s-fg), 0 0 3px var(--s-fg)
+		}
+
+		/* off */ .slider {
+			background: var(--s-darkgray);
+			border: 2px solid var(--s-fg)
+		}
+
+	/* album art hover overlay */ .card-overlay {
+	    background: var(--s-bg);
+	    opacity: 0.5;
+	}
+
+	/* charts */
+		/* unchanged */ .trend-mark.trend-equal::before {
+			background-color: var(--s-fg)
+		}
+
+		/* up */ .trend-mark.trend-up {
+			color: var(--s-green)
+		}
+
+		/* down */ .trend-mark.trend-down {
+			color: var(--s-red)
+		}
+
+/* artist page */
+	/* album header background in list view */ .header {
+		background: var(--s-bg)
+	}
+
+	/* motherfucking header shadow */ .glue-page-header__background-image-overlay-gradient {
+		background: linear-gradient(to bottom, transparent, var(--s-bg))
+	}
+
+	/* follow button */
+		/* text */ .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke), .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke), .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke).contextmenu-active, .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke):not(:disabled):hover, .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke).contextmenu-active, .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke):not(:disabled):hover {
+			color: var(--s-magenta)
+		}
+
+		/* background */ .button.button-with-stroke.added, .button.button-with-stroke.active, .button.button-with-stroke.added.contextmenu-active, .button.button-with-stroke.added:not(:disabled):hover, .button.button-with-stroke.active.contextmenu-active, .button.button-with-stroke.active:not(:disabled):hover {
+			background: var(--s-bg)
+		}
+
+		/* shadow fuckery */ .button.button-with-stroke.added, .button.button-with-stroke.active {
+			box-shadow: inset 0 0 0 1px var(--s-fg)
+		}
+
+	/* verified mark */ .header-verified-check {
+		color: var(--s-lightgray);
+		background-color: var(--s-cyan)
+	}
+
+	/* list view album shit */ .h-title a, .h-label, .card-info-title a {
+		color: var(--s-fg) !important;
+	}
+
+	/* view toggle */ .button.button-icon-only.active, .button.button-icon-only.active.contextmenu-active, .button.button-icon-only.active:not(:disabled):hover {
+		color: var(--s-magenta)
+	}
+
+	/* album year */ .card-info-subtitle-metadata {
+		color: var(--s-fg)
+	}
+
+	/* section title */ .section-divider > *, .rankings__title, .rankings__discovered-container, .rankings__topcities.title {
+		color: var(--s-fg)
+	}
+
+	/* sticky header */
+		/* link color */ .navbar-nav > li > a {
+			color: var(--s-fg)
+		}
+
+		/* hover link color */ .nav > li > a:hover, .nav > li > a:focus {
+			color: var(--s-lightgray)
+		}
+
+		/* active link color */ .nav > li.active > a {
+			color: var(--s-lightgray)
+		}
+
+		/* active indicator */ .nav > li.active > a::after {
+			background-color: var(--s-magenta)
+		}
+
+		/* in-between (?) background */ .glue-page-header--with-active-sticky-header .navbar.sticky-top {
+			background-color: var(--s-bg)
+		}
+
+		/* navbar background */ .navbar {
+			background: transparent
+		} /* NOTE: this is complete utter bullshit. i hate this. */
+
+	/* latest release & "fans also like" links */ .card-horizontal .card-info-title {
+		color: var(--s-fg)
+	}
+
+	/* image carousel */ .image-carousel__count, .image-carousel__count .current-slide {
+		color: var(--s-fg)
+	}
+
+	/* image carousel background */ .full-screen-modal--container>div:not(.modal-backdrop--hidden) {
+		background: none
+	}
+
+	/* stats */ .rankings__topcities.city, .rankings__topcities.listeners, .listening .monthly__data h2 {
+		color: var(--s-fg)
+	}
+
+/* modal */
+	/* background */ .Modal__content, .PlaylistAnnotationModal__img, .popover-title, .popover-footer, .modal-generic .modal-generic-title, .popover-addendum, .modal .popover-content {
+		background-color: var(--s-bg);
+		border-bottom: none;
+		border-top: none
+	}
+
+	/* title */ .PlaylistAnnotationModal__title, .Button--style-icon:not(.Button--is-drop-target-active), .popover-title {
+		color: var(--s-fg)
+	}
+
+	/* close button hover */ .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled).Button--is-strong-style, .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):focus.Button--with-focus, .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):hover {
+		color: var(--s-lightgray)
+	}
+
+	/* merch text */ .merch-popup-description, .popover-addendum {
+		color: var(--s-fg)
+	}
+
+/* dropdown menu */
+	/* background */ .dropdown-menu, .GlueDropdown {
+		background-color: var(--s-bg);
+		border: none
+	}
+
+	/* dangerous as fuck button */ .button.button-red, .button.button-red.contextmenu-active, .button.button-red:not(:disabled):hover {
+		background: var(--s-red);
+		color: var(--s-fg)
+	}
+
+/* podcast */
+	/* calendar sorting icon */ .tl-sort-asc::after, .tl-sort-desc::after {
+		color: var(--s-magenta)
+	}
+
+	/* some weird icon */ .tl-status-indicator {
+		border: 1px solid var(--s-magenta)
+	}
+
+	.tl-status-indicator--in-progress {
+		background: linear-gradient(to right, var(--s-magenta) 0%, var(--s-magenta) 55%, rgba(46, 119, 208, 0) 55%, rgba(46, 119, 208, 0) 100%)
+	}
+
+	.tl-status-indicator--new {
+		background-color: var(--s-magenta)
+	}
+
+	/* "about" text */ .App__description-title {
+		color: var(--s-fg)
+	}
+
+/* settings */
+	/* text */ .setting-row, .account-info__profile-info-name {
+		color: var(--s-fg)
+	}
+
+	/* facebook button */ .button.button-facebook, .button.button-facebook.contextmenu-active, .button.button-facebook:not(:disabled):hover {
+		background: var(--s-magenta);
+		color: var(--s-fg)
+	}
+
+/* devices menu */
+	/* popup */ .ConnectPopup, .ConnectPopup__content {
+		background: var(--s-bg)
+	}
+
+	/* text */ .ConnectPopup__header-title, .ConnectPopup__info, .ConnectPopup__header-help {
+		color: var(--s-fg)
+	}
+
+	/* help button hover */ .ConnectPopup__header-help:focus, .ConnectPopup__header-help:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* "learn more" button */ .button.button-blue, .button.button-blue.contextmenu-active, .button.button-blue:not(:disabled):hover {
+		background: var(--s-magenta);
+		color: var(--s-fg)
+	}
+
+	/* popup arrow */ .ConnectPopup:after {
+		border-top-color: var(--s-bg)
+	}
+
+	/* dot */ .ConnectDevicePicker__button--with-badge:after, .ConnectDevicePicker__button--with-badge.active:after, .view-player .remote-playback-bar {
+		background-color: var(--s-magenta)
+	}
+
+	/* available device */ .ConnectPopup__device--available, .ConnectPopup__device-info, .view-player .remote-playback-bar p {
+		color: var(--s-fg)
+	}
+
+	/* listening on this device */ .ConnectPopup__device--active, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title, .view-player .extra-controls-container .button-devices.active, .view-player .extra-controls-container .button-lyrics.active, .view-player .extra-controls-container .button-queue.active, .view-player .extra-controls-container .button-subtitles.active, .view-player .remote-playback-bar, .view-player .extra-controls-container .button-devices.active.contextmenu-active, .view-player .extra-controls-container .button-devices.active:not(:disabled):hover, .view-player .extra-controls-container .button-lyrics.active.contextmenu-active, .view-player .extra-controls-container .button-lyrics.active:not(:disabled):hover, .view-player .extra-controls-container .button-queue.active.contextmenu-active, .view-player .extra-controls-container .button-queue.active:not(:disabled):hover, .view-player .extra-controls-container .button-subtitles.active.contextmenu-active, .view-player .extra-controls-container .button-subtitles.active:not(:disabled):hover {
+		color: var(--s-magenta)
+	}
+
+	/* arrow */ .view-player .remote-playback-bar .arrow {
+		border-bottom-color: var(--s-magenta)
+	}
+
+/* "find friends" */
+	/* background */ .sections {
+		background: var(--s-bg)
+	}
+
+	/* item */ .user-container .user {
+		border-bottom: none
+	}
+
+/* user page */
+	/* followers count */ .list-group-item.list-group-item-social .list-group-item-text-wrapper {
+		color: var(--s-fg)
+	}
+
+/* playlist extender */ .playlist-extender-content .toggle-recommendations-arrow, .playlist-extender-content .playlist-extender-title-wrapper, .playlist-extender-content.hide-recommendations .playlist-extender-title-wrapper, .playlist-extender-content.hiding-recommendations .playlist-extender-title-wrapper {
+	color: var(--s-fg)
+}
+
+/* playlist extender hover */ .playlist-extender-content.hide-recommendations .playlist-extender-title-wrapper:hover, .playlist-extender-content.hiding-recommendations .playlist-extender-title-wrapper:hover, .playlist-extender-content .playlist-extender-title-wrapper:hover>.toggle-recommendations-arrow {
+	color: var(--s-lightgray)
+}
+
+/* scrollbar */ ::-webkit-scrollbar {
+	height: 6px !important;
+	width: 0px !important;
+	background-color: transparent;
+}
