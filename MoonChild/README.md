@@ -5,6 +5,11 @@
 ![MoonChild](./moonchild1.jpg)
 ![MoonChild](./moonchild2.jpg)
 
+## More
+
+Required font:
+- Karla
+
 ## Credits
 
 Theme developed by [bonecharm](https://www.reddit.com/user/bonecharm)
