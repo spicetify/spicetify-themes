@@ -1,4 +1,4 @@
-# Youtube Dark
+# YoutubeDark
 
 ## Screenshots
 
