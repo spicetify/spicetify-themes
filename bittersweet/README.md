@@ -1,4 +1,4 @@
-# bittersweet
+# Bittersweet
 
 ## Screenshots
 
