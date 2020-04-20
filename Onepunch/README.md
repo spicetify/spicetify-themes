@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![Onepunch](./OnepunchHome.png)
-![Onepunch](./OnepunchFullPlayer.png)
+![OnepunchHome](./OnepunchHome.png)
+![OnepunchFullPlayer](./OnepunchFullPlayer.png)
 
 ## More
 This is still an alpha project intended to redesign the app as much as possible.
