@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![Onepunch](Onepunch)
+![Onepunch](./Onepunch)
 
 ## More
 This is still an alpha project intended to redesign the app as much as possible.
