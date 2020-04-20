@@ -1,0 +1,294 @@
+:root {
+  }
+/*navigation menu edits*/
+.sidebar .sidebar-navbar {
+    padding-top: 30px;
+}
+.SidebarListItem--is-active, .RootlistItem--is-active {
+    background: #3b3b3b;
+    border-radius: 10px;
+    width: 70%;
+		position: relative;
+		right: -30px;
+}
+.SidebarListItem {
+    padding-left: 15px;
+    padding-right: 40px;
+		right: -30px
+}
+.SidebarListItem {
+font-weight: var(--glue-font-weight-normal);
+font-size: 13px;
+}
+.SidebarListItem--is-active:after {
+	display: none;
+}
+.SidebarListItemLink--is-highlighted:hover,
+.SidebarListItemLink--is-highlighted:link,
+.SidebarListItemLink--is-highlighted:visited {
+    font-weight: var(--glue-font-weight-bold);
+}
+html .SidebarList__title {
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: var(--glue-font-weight-black);
+    text-transform: uppercase;
+    letter-spacing: .16em;
+}
+		/*playlist items
+		.RootlistItem {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		.RootlistItem--is-active:before {
+    background-color: #3b3b3b;
+		}
+
+
+/*home page edits*/
+	/*Round corner cover image*/
+	.card-image,
+	.card-placeholder-wrapper,
+	.card-image-content-wrapper,
+	.Card:not(.Card--artist) .Card__image,
+	.Card:not(.Card--artist) .Card__image-wrapper {
+		border-radius: 10px !important;
+		overflow: hidden !important
+	}
+	.GlueSectionDivider__title, .Card__info-title a {
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #fafafa;
+	}
+	/*card info details*/
+	.Card__info-subtitle-description, .Card__info-subtitle-metadata{
+		display:none !important;
+	}
+	.Button--style-icon:not(.Button--is-drop-target-active) {
+		background: #3b3b3b !important;
+		height: 30px !important;
+		width: 30px !important;
+	}
+
+
+
+	/*scroll bar edits*/
+		/*Thinner scrollbar*/
+	::-webkit-scrollbar {
+		height: 6px !important;
+		width: 6px !important;
+		background-color: transparent;
+		}
+			/*Hide top and bottom buttons of scrollbar */
+		::-webkit-scrollbar-button {
+			display: none !important;
+		}
+
+
+/*play area edits*/
+	/*main frame*/
+	#view-player {
+    padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		}
+		body.remotebar .view-player .player-bar-wrapper,
+		.view-player{
+		height: 85px !important;
+		border-radius: 20px !important;
+    background: #282828 !important;
+    position: relative;
+    /*border: 10px solid #111111;*/
+		padding-left: 2px !important;
+		padding-right: 2px !important;
+		}
+		/*buttons and play progress*/
+		.view-player .player-controls-container .controls .button-play{
+			height: 35px !important;
+			width: 35px !important;
+			border-radius: 40px !important;
+			background: #555555 !important;
+			box-shadow:0 0 0 0 !important;
+			transition:none 0.3s cubic-bezier(.3,0,.7,1);
+			overflow: visible !important;
+		}
+		.view-player .player-controls-container .controls .button-play:before{
+			padding-left: 10px !important;
+			padding-top: 1px !important;
+		}
+		.view-player .player-controls-container .controls {
+    margin-top: -14px !important;
+		}
+		.view-player .player-controls-container .progress-container {
+		    margin-top: 2px !important;
+		}
+		.view-player .player-controls-container .controls .button-play:after {
+			box-shadow: unset !important;
+		}
+		.view-player .now-playing .cover-image-container .cover-image {
+    border-radius: 6px;
+		}
+
+
+/*browse tab edits*/
+/* Add round corner for Gerne and Mood cards */
+.gc-image-container,
+.gc-image {
+	border-radius: 10px !important;
+}
+.gc-label-text {
+	color: #fafafa;
+}
+
+
+/* Fullscreen mode edits */
+#view-player .album-art .album-art__image {
+	border-radius: 30px !important;
+	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.5) !important;
+}
+
+#view-player .album-art .album-art__image .card-image-content-wrapper,
+#view-player .album-art .album-art__image .card-image-content-wrapper .card-image {
+	border-radius: 30px !important;
+}
+
+#video-player .album-art__foreground {
+	flex-direction: row;
+	text-align: left;
+}
+
+#video-player .album-art__background {
+	background-color: initial;
+}
+
+#video-player .album-art__track-details {
+	padding-left: 40px;
+	line-height: initial;
+}
+
+#video-player .album-art__track-title {
+	font-size: 80px;
+	margin-top: 0;
+	line-height: initial;
+}
+
+#video-player .album-art__artist-name {
+	font-size: 50px;
+	margin-top: 0;
+	line-height: initial;
+}
+
+/*progress bar edits*/
+.progress-container .inner {
+	border-radius: 50px !important;
+	background-color: var(--modspotify_main_fg) !important;
+}
+.progress-bar, .progress-bar .inner{
+	background: #3b3b3b;
+	border-radius: 100px;
+}
+.progress-container .progress-bar,
+.progress-container .inner {
+	border-radius: 100px !important;
+	height: 4.5px;
+}
+.progress-container {
+		border-radius: 100px !important;
+	position: absolute !important;
+		right: 25%;
+	width: 50% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*search bar edits*/
+.SearchInput__input {
+	color: var(--modspotify_secondary_fg) !important;
+	background-color: var(--modspotify_main_bg) !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+.SearchInput__searchIcon{
+  color: var(--modspotify_secondary_fg) !important;
+}
+
+.content-top-bar__search-input{
+  max-width: unset!important;
+  height: auto !important;
+}
+
+/*change header colors*/
+.GlueHeader__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+.Header__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+/*scrubbing bar ball thingy*/
+.handle{
+  background: var(--modspotify_indicator_fg_and_button_bg) !important;
+  border: 3px solid var(--modspotify_indicator_fg_and_button_bg) !important;
+}
+
+.progress-bar-wrapper.progress-bar-wrapper--ltr.handle{
+  background: unset !important;
+  border: unset !important;
+}
+
+/*like heart thingy in bottom player*/
+.nowplaying-add-button .button .button-icon-only .button-add,
+.nowplaying-ban-button .button .button-icon-only .button-ban .spoticon-ban-16{
+  color: var(--like-color)!important;
+}
+
+/*like heart in playlist*/
+button.button-icon-only.button-add,
+.spoticon-heart-16,
+.spoticon-heart-active-16,
+.spoticon-heart-active-32,
+.spoticon-heart-32{
+    color: var(--like-color)!important;
+}
+
+/*highlighted playlist text color*/
+.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+/*hide a few elements*/
+.view-player .remote-playback-bar {
+	display: none !important;
+}
