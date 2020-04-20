@@ -201,13 +201,20 @@ html .SidebarList__title {
 
 
 
-
-
-
-
-
-
-
+/*experiments*/
+#view-buddy-list{
+  padding-top: 50px;
+}
+.LeftSidebar__section {
+    margin-bottom: -30px;
+    margin-top: 55px;
+}
+.sidebar .sidebar-navbar {
+    background-image: url(https://local_resource_host/images/spotify-logo-primary-green.png);
+    background-repeat: no-repeat;
+    background-size: 210px;
+    background-position-x: 20px;
+}
 
 
 
