@@ -1,6 +1,5 @@
-#Kaapi
-
-##Screenshots
+# Kaapi
+## Screenshots
 
 ![](home.png)
 ![](play.png)
