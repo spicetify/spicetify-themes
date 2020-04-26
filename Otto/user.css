@@ -1,13 +1,6 @@
 :root {
-	--bar-height: 90px;
+	--bar-height: 120px;
 }
-.sidebar {
---left-sidebar-item-height: 29px !important;
-}
-.resizer-right {
-	background-color: #000;
-}
-
 
 /*Round corner cover image*/
 .card-image,
@@ -57,6 +50,21 @@
 	visibility: hidden !important;
 }
 
+/*Lift up cover when hovering on it*/
+.card-image-content-wrapper,
+.Card:not(.Card--artist) .Card__image-wrapper {
+	transition-property: transform, box-shadow !important;
+	transition-duration: 1s !important;
+	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card-image-hit-area:not(.no-hover):hover .card-image-content-wrapper,
+.Card:not(.Card--artist) .Card__image-hit-area-counter-scale:hover .Card__image-wrapper {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
 .card-image-hit-area .card-button-add,
 .card-image-hit-area .card-button-play,
 .card-image-hit-area .card-button-more,
@@ -68,8 +76,24 @@
 .Card__image-hit-area .Card__more-button,
 .Card__image-hit-area .Card__overlay  {
 	transition-property: all !important;
-	transition-duration: 0.3s !important;
+	transition-duration: 1s !important;
 	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	opacity: 0 !important;
+}
+.card-image-hit-area:not(.no-hover):hover .card-button-add,
+.card-image-hit-area:not(.no-hover):hover .card-button-play,
+.card-image-hit-area:not(.no-hover):hover .card-button-more,
+.Card__image-hit-area:not(.no-hover):hover .card-button-add,
+.Card__image-hit-area:not(.no-hover):hover .card-button-play,
+.Card__image-hit-area:not(.no-hover):hover .card-button-more {
+	opacity: 1 !important;
+	transform: translateY(-10px);
+}
+
+.Card__image-hit-area:hover .Card__play-button,
+.Card__image-hit-area:hover .Card__add-button,
+.Card__image-hit-area:hover .Card__more-button,
+.Card__image-hit-area:hover .Card__overlay {
 	opacity: 1 !important;
 }
 
@@ -92,13 +116,13 @@
 }
 .SearchInput__input {
 	color: var(--modspotify_secondary_fg);
-	background-color: #141414 !important;
+	background-color: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), 0.5) !important;
 	border-radius: 4px !important;
 	padding-left: 34px;
 }
 
 .sidebar:hover .sidebar-navbar.sidebar-scroll-element {
-	opacity: 0.4!important;
+	opacity: 1!important;
 }
 
 .view-player .player-controls-container,
@@ -109,7 +133,7 @@
 .view-player .player-controls-container .controls .button-play{
 	height:50px !important;
 	border-radius:50px !important;
-	background-color: #0e0e0e !important;
+	background: transparent !important;
 	box-shadow:0 0 0 0 !important;
 	width:50px !important;
 	overflow: visible !important;
@@ -137,6 +161,14 @@
 	height: 100%  !important;
 	align-items: center !important;
 	margin-top : 0px !important;
+}
+
+/*
+Hide the song duration and elapsed text. I dont know where to put those so I just hide them
+*/
+.view-player .player-controls-container .progress-container .elapsed,
+.view-player .player-controls-container .progress-container .remaining {
+	display: none !important;
 }
 
 /* Add round corner for Gerne and Mood cards */
@@ -214,8 +246,8 @@ meaningless followers number
 .carousel .card-info-subtitle-description,
 .carousel .card-info-subtitle-metadata,
 .carousel .card:not(.card-type-station).card-info-title,
-.carousel .card.card-type-playlist.image-loaded .Card__info-subtitle-description,
-.carousel .card.card-type-playlist.image-loaded .Card__info-subtitle-metadata {
+.carousel .card.card-type-playlist.image-loaded .card-info-subtitle-description,
+.carousel .card.card-type-playlist.image-loaded .card-info-subtitle-metadata {
 	display: none !important;
 }
 
@@ -234,7 +266,7 @@ Button with text Play
 */
 .button.button-green,
 .GlueButton.GlueButton--style-green {
-	color: var(--modspotify_main_fg) !important;
+	color: var(--modspotify_main_bg) !important;
 }
 
 /*
@@ -254,14 +286,16 @@ Change text color in playlist
 .card-type-episode .card-info-title {
   	font-size: 15px;
   	font-weight: 900 !important;
-	text-align: center !important;
-	width: 100% !important;
 }
 
-.card-type-album .card-info-subtitle-links,
-.card-type-track .card-info-subtitle-links,
-.card-type-collection-album .card-info-subtitle-links,
-.card-type-episode .card-info-subtitle-links {
+.card:not(.card-horizontal).card-type-album .card-info-title,
+.card:not(.card-horizontal).card-type-album .card-info-subtitle-links,
+.card:not(.card-horizontal).card-type-track .card-info-title,
+.card:not(.card-horizontal).card-type-track .card-info-subtitle-links,
+.card:not(.card-horizontal).card-type-collection-album .card-info-title,
+.card:not(.card-horizontal).card-type-collection-album .card-info-subtitle-links,
+.card:not(.card-horizontal).card-type-episode .card-info-title,
+.card:not(.card-horizontal).card-type-episode .card-info-subtitle-links {
 	text-align: center !important;
 	width: 100% !important;
 }
@@ -279,6 +313,10 @@ Change text color in playlist
 	margin-left: 40px !important;
 	margin-top: 15px !important;
 }
+/*.browser-navigation-top-bar .button {
+    font-weight: bold;
+    color: #FE9388
+}*/
 
 .SearchInput__input,
 .SearchInput__searchIcon,
@@ -308,7 +346,7 @@ Change text color in playlist
 
 #video-player .album-art__foreground {
 	flex-direction: row;
-	text-align: left;
+	text-align: left;	
 }
 
 #video-player .album-art__background {
@@ -430,7 +468,7 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	margin-bottom: 30px;
 }
 
-.card-horizontal-interior-wrapper .card-info-  {
+.card-horizontal-interior-wrapper .card-info-title {
 	text-align: start !important;
 }
 
@@ -443,17 +481,18 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 }
 
 .tracklist-podcast .tl-progress .row-progress__bar {
-    background-color: #var(--modspotify_main_fg);
+    background-color: var(--modspotify_main_fg);
 }
 
 .Header__background-color{
 	background-color: var(--modspotify_main_bg) !important;
+	background-image: unset;
 }
 
 .Button--style-green,
 .button.button-green, .button.button-white {
-	/* border-radius: 4px; */
-	color: var(--modspotify_main_fg) !important;
+	border-radius: 4px;
+	color: var(--modspotify_main_bg) !important;
 }
 
 .glue-page-header:not(.glue-page-header--album):not(.glue-page-header--playlist):not(.glue-page-header--artist):not(.glue-page-header--dailymix):not(.glue-page-header--user):not(.glue-page-header--show)
@@ -462,10 +501,10 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 .MadeForYouHeader .Header__content-inner .Header__title-text-inner,
 .RecentlyPlayedPage__header .Header__content-inner .Header__title-text-inner {
 	background-color: var(--modspotify_main_bg);
-	/* padding: 5px 20px;
+	padding: 5px 20px;
 	border: 5px solid var(--modspotify_main_fg) !important;
 	border-radius: 6px;
-	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2); */
+	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
 	text-transform: uppercase;
 }
 
@@ -523,7 +562,7 @@ span.glue-page-header__title-text {
 }
 
 .view-player .now-playing .cover-image-link-wrapper {
-	flex: 0 1 calc(var(--bar-height) + 8px);
+	flex: 0 1 calc(var(--bar-height) + 10px);
 }
 
 .text-container {
@@ -533,7 +572,7 @@ span.glue-page-header__title-text {
 .view-player .now-playing-container .button-add {
 	color: var(--modspotify_main_fg) !important;
 }
-/*
+
 .progress-container .progress-bar,
 .progress-container .inner {
 	top: 0 !important;
@@ -545,15 +584,22 @@ span.glue-page-header__title-text {
 	top: 0 !important;
 	height: 5px;
 }
-*/
+
 .progress-container {
-	/*position: fixed !important;*/
-	width: 55% !important;
-	/*bottom: var(--bar-height) !important;*/
-	/*margin : 0 !important;*/
-	margin-left: auto;
-	margin-right: auto;
-	background-color:
+	position: fixed !important;
+	width: 100% !important;
+	bottom: var(--bar-height) !important;
+	margin : 0 !important;
+}
+
+.progress-container .inner {
+	border-radius: 0 2px 2px 0 !important;
+	background-color: var(--modspotify_main_fg) !important;
+	box-shadow: 0 2px 2px 0 var(--modspotify_main_fg);
+}
+
+.saber-hilt {
+	display: none;
 }
 
 .glue-page-header__p2s-details,
@@ -602,12 +648,12 @@ span.glue-page-header__title-text {
 	z-index: 2;
 }
 
-/* .glue-page-header__label span,
+.glue-page-header__label span,
 .Header__label span {
 	background-color: var(--modspotify_main_fg);
     color: var(--modspotify_main_bg);
     padding: 2px 10px;
-} */
+}
 
 .glue-page-header__label .header-verified-check {
 	background-color: transparent;
@@ -617,7 +663,54 @@ body.remotebar .view-player .player-bar-wrapper {
 	height: 100%;
 }
 
+.SidebarListItem--is-active:after,
+.RootlistItem--is-active:after {
+	background-color: transparent;
+	background-image: linear-gradient(90deg, var(--modspotify_sidebar_indicator_and_hover_button_bg) , transparent);
+	opacity: 0.2;
+	bottom: unset;
+	top: 5%;
+	height: 90%;
+	width: 100%
+}
 
 .Header__image-inner {
 	box-shadow: unset;
+}
+
+.Root__nav-bar {
+	background-color: var(--modspotify_main_bg);
+}
+
+.Root__main-view .btn,
+.Root__main-view button {
+	color: var(--modspotify_main_bg);
+}
+
+.Root__main-view .track-name-wrapper .tracklist-row__album-name-link,
+.Root__main-view .track-name-wrapper .tracklist-row__artist-name-link,
+.Root__main-view .track-row__episode-date {
+	color: var(--modspotify_secondary_fg);
+}
+
+.Root__main-view .TrackListHeader__entity-long-description {
+	color: var(--modspotify_secondary_fg);
+}
+
+.Root__main-view .mo-meta a:link, .Root__main-view .mo-meta a:visited {
+	color: var(--modspotify_secondary_fg);
+	opacity: 1;
+}
+
+.Root__main-view .TrackListRow__explicit-label {
+	background-color: rgba(var(--modspotify_rgb_secondary_fg), 0.6);
+	color: var(--modspotify_secondary_fg);
+}
+
+.Root__main-view .main-view-container {
+	background-color: var(--modspotify_main_bg);
+}
+
+.concert-title span {
+	color: var(--modspotify_secondary_fg) !important;
 }
