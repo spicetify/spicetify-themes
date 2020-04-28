@@ -8,7 +8,7 @@ Enjoy!
 ![Playlist Screenshot](screenshot1.png)
 
 ## More
-Theme developed by [@toby-wong](github.com.toby-wong)
+Theme developed by [@toby-wong](github.com/toby-wong)
 
 If someone can figure out the following issues please let me know :)
 - corner radius when hovering to edit playlist image
