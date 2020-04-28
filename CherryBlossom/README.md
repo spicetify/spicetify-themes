@@ -1,4 +1,4 @@
-# Cherry Blossom
+# CherryBlossom
 Dark minimal theme based on a Cherry Blossom Wallpaper. 
 ![Wallpaper](wallpaper.jpg)
 Enjoy!
