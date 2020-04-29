@@ -1,5 +1,9 @@
 # change log
 
+v	0.5 beta
+	1.	Added Day/Night selection
+	2.	
+
 v 0.1 beta
 
 	1.	fixed the Spotify logo.
