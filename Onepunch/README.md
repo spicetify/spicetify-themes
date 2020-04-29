@@ -11,7 +11,7 @@ But it will take time as I do this as a hobby. Hope you will like it.
 
 A theme by Saitama D. Luffy
 
-PS: feedbacks will be much appreciated. Specially from windows users. I can't test
+PS: Feedbacks will be much appreciated. Specially from windows users. I can't test
 in windows.
 
 Contact: Telegram https://t.me/saitama_a
