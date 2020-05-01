@@ -1,4 +1,4 @@
-# Onepunch
+# Onepunch by Saitama D. Luffy
 
 ## Screenshots
 
@@ -6,13 +6,24 @@
 ![OnepunchFullPlayer](./OnepunchFullPlayer.png)
 
 ## More
-This is still an alpha project intended to redesign the app as much as possible.
-But it will take time as I do this as a hobby. Hope you will like it.
 
-A theme by Saitama D. Luffy
+#### Details
 
-PS: feedbacks will be much appreciated. Specially from windows users. I can't test
-in windows.
+A project intended to redesign the Spotify app.
+With my slow updates, this is going to take a while. I hope you'll like it!
+Suggestions will always help me to make it look better.
+So, feel free to drop your feedback in the given contact details.
 
-Contact: Telegram https://t.me/saitama_a
-                Twitter https://twitter.com/_saitama_0
+#### Extras
+>To change between **day and night mode** just use the below code in your terminal app.
+>
+>      spicetify config color_scheme SCHEME
+>
+>Replace SCHEME by BASE or DARK for DAY or NIGHT mode respectively.
+
+
+#### Contact
+
+For feedback and reporting bugs only\
+             [Telegram](https://t.me/saitama_a)\
+             [Twitter](https://twitter.com/_saitama_0)
