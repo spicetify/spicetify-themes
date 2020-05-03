@@ -10,7 +10,7 @@
 #### Details
 
 >&nbsp;&nbsp;&nbsp;&nbsp;A project intended to redesign the Spotify app.As you know Saitama is only a "hero for fun", this is going to take a while even though he can finish an enemy with just one punch. I hope you'll like it! Suggestions will always help me to make it look better.
-So, feel free to drop your feedback in the given contact details.
+So, feel free to drop your feedback.
 
 #### Changelogs
 
@@ -31,5 +31,8 @@ So, feel free to drop your feedback in the given contact details.
 #### Contact
 
 For *feedback* and *reporting bugs* only.  
-&nbsp;&nbsp;&nbsp;&nbsp;[Telegram](https://t.me/saitama_a)  
-&nbsp;&nbsp;&nbsp;&nbsp;[Twitter](https://twitter.com/_saitama_0)
+> Format for bug reporting:  
+>
+>     Operating System(!important):
+>     Description of issue:
+>**&nbsp;&nbsp;&nbsp;&nbsp;[Twitter](https://twitter.com/_saitama_0)**

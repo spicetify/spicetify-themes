@@ -1,5 +1,3 @@
-# change logs
-
 ## Versions
 
 **v 0.1 beta**  	
@@ -12,12 +10,14 @@
 ***
 ## To-Do list
 
-**Important**  
+**Threat level God**  
 
 		$ New Day/Night selection after spicetify update.
 		$ Rework the white theme.
+		$ Fix the two bars in now playing.
+		$ Fix the logo not showing issue.
 
-**Low priority**
+**Threat level Demon**
 
 		$Rework the New playlist button idea.
 		$Rework the albumart holders.
