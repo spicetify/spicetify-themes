@@ -1,11 +1,18 @@
 ## Versions
 
+**v 0.2 beta**
+
+			$ Fixed the two bars shown in now playing.
+			$ An attempt to fix the logo not showing issue
+			  for platforms other than macos.
+			$ A few optimizations. 
+
 **v 0.1 beta**  	
 
-			$ fixed the Spotify logo.  
-			$ fixed the friend activity bar.  
-			$ fixed text colors inside album and playlist.  
-			$ fixed overlapping of sidebar items.  
+			$ Added the Spotify logo.  
+			$ Fixed the friend activity bar.  
+			$ Fixed text colors inside album and playlist.  
+			$ Fixed overlapping of sidebar items.  
 			$ A few optimizations.
 ***
 ## To-Do list
@@ -14,8 +21,6 @@
 
 		$ New Day/Night selection after spicetify update.
 		$ Rework the white theme.
-		$ Fix the two bars in now playing.
-		$ Fix the logo not showing issue.
 
 **Threat level Demon**
 
