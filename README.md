@@ -14,9 +14,9 @@ Once you cloned the repository you'll need to put the files into the Themes fold
 cd spicetify-themes
 cp -r * ~/.config/spicetify/Themes
 ```
-
-
-
+  
+NOTE: to install Dribbblish follow the instruction in its README.  
+  
 After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`
 
 ## Contributions
