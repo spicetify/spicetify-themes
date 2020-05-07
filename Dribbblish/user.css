@@ -906,6 +906,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	background: radial-gradient(ellipse at bottom, rgba(var(--modspotify_rgb_main_bg), 0.85), var(--modspotify_main_bg) 80%);
 }
 
+body.video-full-screen .view-player {
+	left: 0;
+	width: 100%;
+}
+
 /* Player Progress bar */
 
 .view-player .now-playing {
@@ -937,6 +942,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	bottom: calc(var(--bar-height) + var(--main-gap));
 	margin: 0;
 	left: var(--sidebar-width);
+}
+
+body.video-full-screen .view-player .player-controls-container .progress-container {
+    width: 100%;
+    left: 0;
 }
 
 .progress-container .inner {
