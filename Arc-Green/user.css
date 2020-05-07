@@ -1,0 +1,9 @@
+/* 	If you want to remove the scrollbar for a cleaner UI 
+	remove both slashes and * from each line below
+*/
+
+::-webkit-scrollbar {
+	/* height: 6px !important; */
+	/* width: 0px !important; */
+	/* background-color: transparent; */
+}

@@ -1,0 +1,77 @@
+:root {
+	--like-color: #3EA6FF;
+  }
+
+/*hide the left side new playlist button*/
+.LeftSidebarNewPlaylistButton__button {
+	display: none !important;
+}
+
+/*search bar edits*/
+.SearchInput__input {
+	color: var(--modspotify_secondary_fg) !important;
+	background-color: var(--modspotify_main_bg) !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+.SearchInput__searchIcon{
+  color: var(--modspotify_secondary_fg) !important;
+}
+
+.content-top-bar__search-input{
+  max-width: unset!important;
+  height: auto !important;
+}
+
+/*change header colors*/
+.GlueHeader__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+.Header__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+/*scrubbing bar ball thingy*/
+.handle{
+  background: var(--modspotify_indicator_fg_and_button_bg) !important;
+  border: 3px solid var(--modspotify_indicator_fg_and_button_bg) !important;
+}
+
+.progress-bar-wrapper.progress-bar-wrapper--ltr.handle{
+  background: unset !important;
+  border: unset !important;
+}
+
+/*side bar*/
+.SidebarListItem--is-active,
+.RootlistItem--is-active {
+  background: var(--modspotify_sidebar_indicator_and_hover_button_bg) !important;
+}
+
+/*like heart thingy in bottom player*/
+.nowplaying-add-button .button .button-icon-only .button-add,
+.nowplaying-ban-button .button .button-icon-only .button-ban .spoticon-ban-16{
+  color: var(--like-color)!important;
+}
+
+/*like heart in playlist*/
+button.button-icon-only.button-add,
+.spoticon-heart-16,
+.spoticon-heart-active-16,
+.spoticon-heart-active-32,
+.spoticon-heart-32{
+    color: var(--like-color)!important;
+}
+
+/*highlighted playlist text color*/
+.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+    color: #cccccc;
+}

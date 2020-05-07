@@ -1,0 +1,739 @@
+/*
+
+Original Theme: Thicktify by 8roly (https://sta.sh/01uc5a80m46u)
+Edited Theme: Moon Child by bonecharm (https://www.reddit.com/user/bonecharm)
+
+Moon Child V1.0
+Last Updated: September 3 2018
+
+*/
+
+html {
+	font-family: "Karla"!important; /* Change font here */
+}
+
+h1 {
+	font-family: "Karla"!important; /* Change font here */
+	text-transform: uppercase!important;
+	font-weight: bold;
+}
+
+/* Hide box shadow around follow button and adds border **/
+button.button-with-stroke {
+	box-shadow: none!important;
+	border: 1px solid var(--modspotify_main_fg)!important;
+}
+
+/* Hide box shadow around profile images */
+[dir] .glue-page-header__content .glue-page-header__image-inner {
+	box-shadow: none!important;
+}
+
+/* Sidebar Top Items */
+.sidebar-top-items {
+	background: var(--modspotify_main_fg);
+}
+
+#content-wrapper button {
+	color: var(--modspotify_main_fg);
+}
+
+/* Hide ads */
+#leaderboard-ad-wrapper, #hpto, .hpto-container, .RecentlyPlayedPage .Header__background-overlay, .AlbumHeader .Header__background-overlay {
+	display: none!important;
+}
+
+/* Hide headers */
+.RecentlyPlayedPage__header,
+.AlbumHeader,
+#artist-page .glue-page-header__background {
+	background: #ffffff!important;
+	background-image: none!important;
+	opacity: 1;
+}
+
+.RecentlyPlayedPage__header .Header__content-wrapper container,
+.AlbumHeader .Header__content-wrapper container {
+	-webkit-mask-image: none!important;
+}
+
+.RecentlyPlayedPage__header .Header__background .Header__background-color,
+.AlbumHeader .Header__background .Header__background-color,
+#artist-page #header .glue-page-header__background-image-overlay-gradient,
+#artist-page #header .glue-page-header__background-overlay {
+	background: #ffffff!important;
+}
+
+.RecentlyPlayedPage__header .Header, .AlbumHeader .Header {
+	height: auto;
+}
+
+/* Round corner cover image */
+.card-image,
+.card-placeholder-wrapper,
+.card-image-content-wrapper,
+.GlueCard:not(.GlueCard--artist) .GlueCard__image,
+.GlueCard:not(.GlueCard--artist) .GlueCard__image-wrapper {
+	border-radius: 3px!important;
+	overflow: hidden!important
+	border: none!important;
+	/* box-shadow: 0px 3px 5px rgba(0,0,0,.08)!important; */
+}
+
+/* Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button */
+.profile.content-top-bar__profile-link,
+.upgrade-button,
+.view-player .remote-playback-bar,
+.NewPlaylistButton {
+	display: none!important;
+}
+
+/* Exclude these elements from draggable property because it stops them from clickable */
+.profile-items-container,
+.profile
+ {
+	-webkit-app-region: no-drag!important;
+}
+
+/* Thinner scrollbar */
+::-webkit-scrollbar {
+	height: 8px!important;
+	width: 8px!important;
+	background-color: transparent;
+	transition: all .5s!important;
+}
+
+/*  Round corner scrollbar  */
+[dir] .scrollbar-style-visible-mac::-webkit-scrollbar-thumb, [dir] .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb, [dir] .scrollbar-style-visible-windows::-webkit-scrollbar-thumb, [dir] .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb, [dir] .scrollbar-style-visible-linux::-webkit-scrollbar-thumb, [dir] .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb {
+	border-radius: 3px!important;
+	background-color: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), .5);
+}
+
+/* Hide top and bottom buttons of scrollbar */
+::-webkit-scrollbar-button {
+	display: none!important;
+}
+
+/* Change the overlay color */
+.card-overlay {
+	background: rgba(var(--modspotify_rgb_preserve), .15)!important;
+}
+
+/* Hover effects on cover */
+.card-image-hit-area .card-button-add,
+.card-image-hit-area .card-button-play,
+.card-image-hit-area .card-button-more,
+.card-image-hit-area .card-overlay,
+.GlueCard__image-hit-area .card-button-add,
+.GlueCard__image-hit-area .card-button-play,
+.GlueCard__image-hit-area .card-button-more,
+.GlueCard__image-hit-area .GlueCard__play-button,
+.GlueCard__image-hit-area .GlueCard__add-button,
+.GlueCard__image-hit-area .GlueCard__more-button,
+.GlueCard__image-hit-area .GlueCard__overlay {
+	transition-property: all!important;
+	transition-duration: .3s!important;
+	transition-timing-function: cubic-bezier(.3,0,0,1)!important;
+	opacity: 0!important;
+}
+.card-image-hit-area:not(.no-hover):hover .card-button-add,
+.card-image-hit-area:not(.no-hover):hover .card-button-play,
+.card-image-hit-area:not(.no-hover):hover .card-button-more,
+.card-image-hit-area:not(.no-hover):hover .card-overlay,
+.GlueCard__image-hit-area:not(.no-hover):hover .card-button-add,
+.GlueCard__image-hit-area:not(.no-hover):hover .card-button-play,
+.GlueCard__image-hit-area:not(.no-hover):hover .card-button-more {
+	opacity: 1!important;
+}
+
+.GlueCard__image-hit-area:hover .GlueCard__play-button,
+.GlueCard__image-hit-area:hover .GlueCard__add-button,
+.GlueCard__image-hit-area:hover .GlueCard__more-button,
+.GlueCard__image-hit-area:hover .GlueCard__overlay {
+	opacity: 1!important;
+}
+
+.card-placeholder-wrapper {
+	background: transparent!important;
+}
+
+/* Spice up search input background */
+.SearchInput__input, [dir] .focus .h-search, [dir] .h-search:focus {
+	color: var(--modspotify_secondary_fg);
+	background-color: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), 0.5)!important;
+	border-radius: 12px;
+}
+
+.SearchInput {
+	color: var(--modspotify_secondary_fg);
+}
+
+/* Fixed player bar height and add cool shadow under */
+.view-player {
+	height: 128px!important;
+	/*box-shadow: 0 -5px 20px rgba(0,0,0,0.08)!important; */
+	border-top: 0px!important;
+}
+
+/* Make cover image in player bar bigger and change position it abit
+Also padding tilte and artist to correct position */
+.view-player .now-playing,
+.view-player .now-playing-container,
+.view-player .now-playing .cover-image-container {
+	height: 100%!important;
+	overflow: visible!important;
+}
+
+.view-player .now-playing .cover-image-container {
+	position: absolute!important;
+	overflow: visible!important;
+	bottom: 0px!important;
+	border: 0px!important;
+	left: -93px!important;
+}
+.view-player .now-playing .cover-image-container .cover-image {
+	width: 128px!important;
+	height: 128px!important;
+	position: absolute!important;
+	box-shadow: 0px 0px!important;
+	background-size: cover!important;
+}
+
+.view-player .now-playing-container .caption {
+	height: 100%!important;
+	align-content: center!important;
+	padding-left: 80px!important;
+}
+
+@media (min-width: 1200px){
+	.view-player .now-playing-container {
+		min-width: 500px;
+	}
+}
+
+
+.view-player .now-playing-container {
+	z-index: 9998!important;
+}
+
+
+/* Expanded sidebar width */
+.sidebar {
+	width: 200px!important;
+	opacity: 1;
+}
+
+.sidebar .sidebar-navbar.sidebar-scroll-element {
+	padding-top: 30px!important;
+	padding-bottom: 60px!important;
+	transition-property: opacity!important;
+	transition-duration: .5s!important;
+	transition-timing-function: cubic-bezier(.3,0,0,1)!important;
+}
+
+/* Playlist content */
+#content {
+	padding-bottom: 60px;
+}
+
+.view-player .player-controls-container,
+.view-player .player-controls-container .controls {
+	overflow: visible!important;
+}
+
+.view-player .player-controls-container .controls .button-play{
+	height:50px!important;
+	border-radius:50px!important;
+	background: transparent!important;
+	box-shadow:0 0 0 0!important;
+	width:50px!important;
+	overflow: visible!important;
+	transition:none 0.3s cubic-bezier(.3,0,.7,1);
+}
+
+.view-player .player-controls-container .controls .button-play:before{
+	font-size:18px!important;
+	padding-left: 16px!important;
+	padding-top: 9px!important;
+}
+
+.view-player .player-controls-container {
+	position: absolute!important;
+	width: 100%!important;
+}
+
+.view-player .player-controls-container .controls {
+	width: 100%!important;
+	height: 100% !important;
+	align-items: center!important;
+	margin-top : 0px!important;
+}
+
+/* Hide the song duration and elapsed text. I dont know where to put those so I just hide them */
+.view-player .player-controls-container .progress-container .elapsed,
+.view-player .player-controls-container .progress-container .remaining {
+	display: none!important;
+}
+
+/* Move progress bar to bottom of window */
+.view-player .player-controls-container .progress-container {
+	position: absolute!important;
+	width: 100%!important;
+	height: 100%!important;
+	bottom: -71px!important;
+	margin : 0 0 0 0!important;
+	z-index: 9999!important;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar {
+	margin-top: -6px!important;
+	top: 100%!important;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar .inner {
+	top: 100%!important;
+	margin-top: -4px!important;
+	border-radius: 0 2px 2px 0!important;
+	background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+}
+
+/* Add round corner for Gerne and Mood cards */
+.gc-image-container,
+.gc-image {
+	border-radius: 3px!important;
+}
+
+/* Collage of 3 album covers is usually seen in Browse and Chart. */
+.card-puff__image-wrapper,
+.card-puff__info-container,
+.card-puff__card-image {
+	border-radius: 3px!important;
+}
+
+.card-puff__image-wrapper {
+  overflow: visible;
+}
+
+.card-puff__card-image {
+	box-shadow: 0px 0px;
+	overflow: visible;
+}
+
+.card-puff__title-container {
+	background-color: rgba(0,0,0,0)!important;
+	align-items: start!important;
+}
+
+.card-puff.pressed .card-puff__image-wrapper,
+.card-puff.pressed .card-puff__info-container {
+  opacity: 0.7!important;
+}
+
+.card-puff__title {
+	padding: 5px 10px 5px 10px!important;
+	background-color: rgba(var(--modspotify_rgb_cover_overlay_and_shadow),0.8)!important;
+	border-radius: 3px 3px 0 0!important;
+	text-align: left!important;
+	width: 100%!important;
+	margin: 0!important;
+}
+
+/* We use round corner on cover so they look weird in original
+form, so I move last cover to the right 20px and first one to the left 20px */
+.card-puff__card-image:nth-child(1) {
+	right: 20px;
+	box-shadow: 0 0 0 0!important;
+}
+
+.card-puff__card-image:nth-child(3) {
+	left: 20px;
+}
+
+.grid-overlay-label {
+	top: 140px!important;
+}
+
+/**/
+.glue-page-header__background-color {
+	background-image: none!important;
+	background: var(--modspotify_main_bg);
+}
+
+.glue-page-header__background-overlay {
+	background-color: transparent!important;
+}
+
+.glue-page-header__sticky {
+  	padding-top: 60px!important;
+}
+
+/* Remove those title, cringy description and
+meaningless followers number */
+
+.carousel .card-info-subtitle-description,
+.carousel .card-info-subtitle-metadata,
+.carousel .card:not(.card-type-station).card-info-title,
+.carousel .card.card-type-playlist.image-loaded .card-info-subtitle-description,
+.carousel .card.card-type-playlist.image-loaded .card-info-subtitle-metadata {
+	display: none!important;
+}
+
+/* In top of Browse usually has bunch of Playlist or Album cards,
+and they has .carousel as a wrapper and it hides anything that
+overflows from its zone, aka our shadow and lifting animation. */
+.carousel {
+	overflow: visible!important;
+}
+
+/* Button with text Play */
+.button.button-green,
+.GlueButton.GlueButton--style-green {
+	color: var(--modspotify_main_bg)!important;
+}
+
+/* Change text color in playlist */
+.tl-explicit .label,
+.tl-premium .label,
+.tl-cell:not(.tl-number),
+.tl-cell a:link,
+.tl-highlight {
+  color: var(--modspotify_secondary_fg);
+}
+
+.card-type-album .card-info-title,
+.card-type-track .card-info-title,
+.card-type-collection-album .card-info-title,
+.card-type-episode .card-info-title {
+  	font-size: 15px;
+  	font-weight: 900!important;
+	text-align: center!important;
+	width: 100%!important;
+}
+
+.card-type-album .card-info-subtitle-links,
+.card-type-track .card-info-subtitle-links,
+.card-type-collection-album .card-info-subtitle-links,
+.card-type-episode .card-info-subtitle-links {
+	text-align: center!important;
+	width: 100%!important;
+}
+
+.tracklist-station-container::after {
+	background: transparent!important;
+}
+
+.GlueHeader__background-overlay {
+	background: var(--modspotify_main_bg)!important;
+}
+
+/* Move navigation buttons and search field to the right and down */
+.browser-navigation-top-bar {
+	margin-left: 40px!important;
+	margin-top: 15px!important;
+}
+
+.SearchInput__input,
+.SearchInput__searchIcon,
+.SearchInput__clearButton {
+	margin-top: 15px!important;
+}
+
+.content-top-bar__profile-menu-button {
+	margin-top: 15px!important;
+}
+
+.body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
+	margin-right: 110px!important;
+	margin-top: -5px;
+}
+
+/* Spice up Fullscreen mode */
+#view-player .album-art .album-art__image {
+	border-radius: 10px!important;
+	/* box-shadow: 0 3px 5px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.5)!important; */
+}
+
+#view-player .album-art .album-art__image .card-image-content-wrapper,
+#view-player .album-art .album-art__image .card-image-content-wrapper .card-image {
+	border-radius: 10px!important;
+}
+
+/* Daily mixes */
+.carousel .card-info-wrapper.card-info-with-description.card-info-with-metadata {
+	height: 50px!important;
+}
+
+/* Remove section divider */
+.section-divider {
+	border-bottom: 0!important;
+}
+
+/* Adjust Position of border active tab in Nav bar at top
+and add little glowing effect */
+.nav.navbar-nav {
+	overflow: hidden!important;
+}
+
+.nav.navbar-nav a {
+	overflow: visible!important;
+}
+
+.nav.navbar-nav a::after {
+	bottom: 0px!important;
+	width: 100%!important;
+}
+
+.nav.navbar-nav .active  a::after{
+	box-shadow: 0 0px 20px!important;
+}
+
+.nav.navbar-nav a:focus:not(.button):active::after{
+	background-color: var(--modspotify_pressing_fg)!important;
+}
+
+/* Friend sidebar */
+#view-buddy-list {
+	min-width: 15px!important;
+	width: 15px!important;
+	transition-property: all!important;
+	transition-duration: .5s!important;
+	transition-timing-function: cubic-bezier(.3,0,0,1)!important;
+	opacity: 0;
+}
+
+#view-buddy-list:hover {
+	width: 277px!important;
+	opacity: 1;
+}
+
+.body-container--windows .buddy-list-iframe {
+	height: 100%!important;
+}
+
+.with-buddy-list #view-buddy-list {
+	position: absolute;
+    right: 0px;
+    display: flex;
+    z-index: 999999;
+    height: 100%;
+}
+
+/* Notification bar */
+#content-wrapper #view-message-bar {
+	position: absolute!important;
+	width: calc(100% - 160px)!important;
+	margin-left: 80px!important;
+	border-radius: 0 0 10px 10px!important;
+}
+
+/* Small cover Big cover mechanism */
+.now-playing.cover-size-transition.active.image-expanded .cover-image {
+    width: 10px!important;
+	height: 10px!important;
+}
+.now-playing.cover-size-transition.active.image-expanded .caption {
+	padding-left: 0px!important;
+}
+#view-now-playing a.image {
+	overflow: visible!important;
+}
+
+#view-now-playing.expanded {
+	width: 200px;
+	height: 200px;
+}
+
+#now-playing-image-large .cover-image {
+	height: 200px!important;
+}
+
+/* Profile arrow in top left */
+.content-top-bar__profile-menu-button .dropdown {
+	position: fixed!important;
+	right: 150px!important;
+	top: 0!important;
+	-webkit-app-region: no-drag!important;
+}
+
+/* Small tooltip */
+#tooltip {
+	box-shadow: 0 0 10px rgba(0,0,0,0.2)!important;
+	border-radius: 5px!important;
+}
+
+.lyrics-lines-container,
+.message-container {
+	color: var(--modspotify_secondary_fg)!important;
+}
+
+/* Home page */
+.GlueCarousel__grid-wrapper::-webkit-scrollbar-thumb {
+	display: none;
+}
+
+.GlueCard__info-wrapper {
+	margin-bottom: 30px;
+}
+
+.card-horizontal-interior-wrapper .card-info-title {
+	text-align: start!important;
+}
+
+.tl-row.selected:hover .tl-cell {
+	background: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), .5)!important;
+}
+
+.GlueTableRow--is-selected {
+	background-color: transparent!important;
+}
+
+.tracklist-podcast .tl-progress .row-progress__bar {
+    background-color: var(--modspotify_main_fg);
+}
+
+/* Addtional styles */
+
+.view-player .track a {
+
+	font-size: 14pt!important;
+	font-weight: bold!important;
+	font-family: "Karla"!important; /* change font here */
+}
+
+::-webkit-scrollbar {
+	transition: all .5s!important;
+}
+
+::webkit-scrollbar:hover {
+	transition: all .3s!important;
+
+	}
+
+::webkit-scrollbar-thumb: {
+	background: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), .5)!important;
+}
+
+.button-icon-with-stroke {
+	box-shadow: 0px 0px!important;
+}
+
+	/* The player view is darker than the rest of the content */
+
+	.view-player, .progress-bar, .progress-bar .inner {
+		background: var(--modspotify_main_fg)!important;
+	}
+
+	.view-player .player-controls-container .controls .button-play.button-play:not(:hover):after {
+		box-shadow: 0px 0px!important;
+	}
+
+	.view-player .extra-controls-container .volumebar-container .progress-bar .inner, .view-player .player-controls-container .progress-container .progress-bar .inner, [dir] .view-player .player-controls-container .button-repeat.active:after, [dir] .view-player .player-controls-container .button-shuffle.active:after {
+		background: var(--modspotify_preserve_1) !important;
+	}
+
+	.view-player .extra-controls-container .button-devices, .view-player .extra-controls-container .button-lyrics, .view-player .extra-controls-container .button-queue, .view-player .extra-controls-container .button-subtitles, .view-player .button.button-icon-only, .view-player .player-controls-container .controls .next, .view-player .player-controls-container .controls .previous, .view-player .player-controls-container .controls .button-repeat, .view-player .player-controls-container .controls .button-shuffle, .view-player .player-controls-container .controls .button-thumbs-down, .view-player .player-controls-container .controls .button-thumbs-up, .view-player .artist a, .view-player .artist, .view-player .player-controls-container .controls .button-repeat.active.contextmenu-active, .view-player .player-controls-container .controls .button-shuffle.active.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-down.active.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-down.active:not(:disabled):hover, .view-player .player-controls-container .controls .button-thumbs-up.active.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-up.active:not(:disabled):hover, .view-player .player-controls-container .controls .button-repeat.active, .view-player .player-controls-container .controls .button-shuffle.active {
+		color: var(--modspotify_preserve_1)!important;
+	}
+
+	.view-player .player-controls-container .controls .next, .view-player .player-controls-container .controls .previous {
+		color: rgba(var(--modspotify_rgb_preserve_1), .5)!important;
+	}
+
+	[dir=ltr] .view-player .text-container .text-item-container .text-item .scroll-text-container:after, [dir=rtl] .view-player .text-container .text-item-container .text-item .scroll-text-container:before, .nav.navbar-nav .active a::after {
+
+		display: none!important;
+	}
+
+	.tl-header th, .SidebarList__title {
+		font-weight: bold!important;
+		font-size: 10pt!important;
+		color: var(--modspotify_main_fg)!important;
+	}
+
+	.progress-bar .inner {
+		background: var(--modspotify_main_fg)!important;
+	}
+
+	.view-player .player-controls-container .controls .next:hover, .view-player .player-controls-container .controls .previous:hover {
+		color: var(--modspotify_preserve_1)!important;
+	}
+
+	[dir] .view-player .player-controls-container .controls .button-play.button-play.playing:not(:hover):after, [dir] .button.button-icon-with-stroke::after, [dir] .button.button-with-stroke.added:not(:disabled):hover:active, [dir] .button.button-with-stroke.active:not(:disabled):hover:active, [dir] .button.button-with-stroke::after, [dir] .button.button-with-stroke.added, [dir] .button.button-with-stroke.active {
+		box-shadow: 0px 0px!important;
+	}
+
+	[dir] .context-menu {
+		box-shadow: 0px 3px 5px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.15)!important;
+	}
+
+	.view-player .player-controls-container .controls .button-play, .view-player .track a {
+		color: var(--modspotify_preserve_1)!important;
+	}
+
+	/* Remove bg color from playing icon in the sidebar */
+
+	[dir] .GlueButton--style-icon-stroke {
+		background: transparent!important;
+		box-shadow: 0px 0px!important;
+	}
+
+	[dir] .GlueButton--style-icon-background {
+		background: transparent!important;
+	}
+
+	/* Change the sliders...way smaller */
+
+	[dir] .slider {
+		border: 1px solid transparent;
+		height: 12px;
+		width: 22px;
+		background: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+	}
+
+	[dir] .slider div {
+		width: 12px;
+		height: 12px;
+		top: -1px;
+		left: -2px;
+		box-shadow: 0px 0px;
+	}
+
+	[dir=ltr] .slider.enabled div {
+		left: 8px;
+	}
+
+	[dir=ltr] .slider.enabled {
+		background: var(--modspotify_scrollbar_fg_and_selected_row_bg);
+	}
+
+	/* that is some facebook button, huh?*/
+
+	[dir] .button.button-facebook {
+		background: #789fda;
+		color: #fff;
+	}
+
+	/* Bold currently playing song */
+
+	.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+		font-weight: bold;
+		background: transparent!important;
+	}
+
+	/* Browse section tweaks */
+
+	div.card-puff__image-wrapper > a, [dir] .card-puff__title {
+		font-family: "Karla"!important; /* change font here */
+		font-weight: bold;
+		font-size: 18pt!important;
+		text-transform: uppercase;
+		vertical-align: bottom;
+		color: var(--modspotify_preserve_1);
+	}
+
+	.card-puff__title {
+		background: linear-gradient(transparent, var(--modspotify_scrollbar_fg_and_selected_row_bg))!important;
+		height: 100%;
+		vertical-align: text-bottom!important;
+	}
+
