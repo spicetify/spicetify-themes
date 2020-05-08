@@ -282,4 +282,7 @@ span.glue-page-header__title-text {
 	color:var(--modspotify_indicator_fg_and_button_bg) !important
 }
 
-
+.context-menu .item.hover:not(.disabled),
+.button {
+	cursor: pointer;
+}
