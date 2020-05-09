@@ -8,7 +8,7 @@ This is an alternative color scheme that uses the Gruvbox color palette. https:/
 ![](Gruvbox.png)
 ## Info
 To change the color scheme, use these commands:
-```
+```bash
 spicetify config color_scheme <scheme name>
 spicetify apply
 ```
