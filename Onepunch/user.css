@@ -1,5 +1,7 @@
 :root {
   }
+
+
 /*navigation menu edits*/
 .sidebar .sidebar-navbar {
     padding-top: 30px;
@@ -35,6 +37,23 @@ html .SidebarList__title {
     text-transform: uppercase;
     letter-spacing: .16em;
 }
+        /*added the logo and fixed  layout*/
+#view-buddy-list{
+  padding-top: 50px;
+}
+.LeftSidebar {
+  margin-top: 50px;
+}
+.LeftSidebar__section {
+    margin-bottom: 24px;
+}
+.sidebar .sidebar-navbar {
+    background-image: url(https://local_resource_host/images/spotify-logo-primary-green.png);
+    background-repeat: no-repeat;
+    background-size: 175px;
+    background-position-x: 28px;
+}
+
 		/*playlist items
 		.RootlistItem {
 			padding-left: 30px;
@@ -42,7 +61,13 @@ html .SidebarList__title {
 		}
 		.RootlistItem--is-active:before {
     background-color: #3b3b3b;
-		}
+		}*/
+
+/*for now I have hidden the new playlist button but I've a idea for it and will add in future*/
+    .LeftSidebarNewPlaylistButton__button {
+    	display: none !important;
+    }
+
 
 
 /*home page edits*/
@@ -201,13 +226,26 @@ html .SidebarList__title {
 
 
 
+/*editing the alumb and playlists inside*/
+          /*album edits*/
+.Button__alt-text, .Button__text {
+  color: #FAFAFA !important;
+}
+.Button--style-green {
+    font-size: 14px;
+  }
+  .TableCell--is-emphasized {
+    color: #FAFAFA;
+}
+            /*playlist edits*/
+.b-play-text, .b-pause-text, .b-add-text, .b-added-text, .b-remove-text {
+    color: #FAFAFA;
+}
+.tl-highlight {
+    color: #FAFAFA;
+}
 
-
-
-
-
-
-
+/*experiments*/
 
 
 

@@ -1,0 +1,202 @@
+/*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button*/
+.profile.content-top-bar__profile-link,
+.upgrade-button,
+.view-player .remote-playback-bar,
+.LeftSidebarNewPlaylistButton__button {
+	display: none !important;
+}
+
+/* Don't show the album cover */
+.view-player .now-playing .cover-image-link-wrapper {
+	display: none !important;
+}
+
+/*
+Hide the song duration and elapsed text. I dont know where to put those so I just hide them
+*/
+.view-player .player-controls-container .progress-container .elapsed,
+.view-player .player-controls-container .progress-container .remaining {
+	display: none !important;
+}
+
+/*Thinner scrollbar*/
+::-webkit-scrollbar {
+	height: 1px !important;
+	width: 1px !important;
+	background-color: transparent;
+}
+
+/* This is needed to move the bar above the player buttons */
+:root {
+	--bar-height: 70px;
+}
+
+/*Hide top and bottom buttons of scrollbar */
+::-webkit-scrollbar-button {
+	display: none !important;
+}
+
+.view-player .player-controls-container,
+.view-player .player-controls-container .controls {
+	overflow: visible !important;
+}
+
+.view-player .player-controls-container .controls .button-play{
+	height:50px !important;
+	border-radius:50px !important;
+	background: transparent !important;
+	box-shadow:0 0 0 0 !important;
+	width:50px !important;
+	overflow: visible !important;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+	transition:none 0.3s cubic-bezier(.3,0,.7,1);
+}
+
+.view-player .player-controls-container .controls .button-play:before{
+	font-size:18px !important;
+	padding-left: 16px !important;
+	padding-top: 9px !important;
+}
+
+.view-player .player-controls-container .controls .button-play:after {
+	box-shadow: unset !important;
+}
+
+.view-player .player-controls-container {
+	position: absolute !important;
+	width: 100% !important;
+}
+
+.view-player .player-controls-container .controls {
+	width: 100% !important;
+	height: 100%  !important;
+	align-items: center !important;
+	margin-top : 0px !important;
+}
+
+/*Force player bar to has fixed height*/
+.view-player {
+	height: var(--bar-height) !important;
+	border-top: 0;
+}
+
+.view-player .now-playing {
+	overflow: unset;
+}
+
+.view-player .cover-image-container {
+	position: fixed !important;
+	left: 0;
+	bottom: 0;
+}
+
+.view-player .now-playing .cover-image-link,
+.view-player .now-playing .cover-image-link figure {
+	width: var(--bar-height);
+	height: var(--bar-height);
+}
+
+#now-playing-image-small .cover-image {
+    width: var(--bar-height);
+    height: var(--bar-height);
+}
+
+.view-player .now-playing .cover-image-link-wrapper {
+	flex: 0 1 calc(var(--bar-height) + 10px);
+}
+
+.text-container {
+	z-index: 3;
+}
+
+.view-player .now-playing-container .button-add {
+	color: var(--modspotify_main_fg) !important;
+}
+
+.progress-container .progress-bar,
+.progress-container .inner {
+	top: 0 !important;
+	margin-top: 0 !important;
+	height: 5px;
+}
+
+.progress-container .progress-bar-wrapper {
+	top: 0 !important;
+	height: 5px;
+}
+
+.progress-container {
+	position: fixed !important;
+	width: 100% !important;
+	bottom: var(--bar-height) !important;
+	margin : 0 !important;
+}
+
+.progress-container .inner {
+	border-radius: 0 2px 2px 0 !important;
+	background-color: var(--modspotify_main_fg) !important;
+	box-shadow: 0 2px 2px 0 var(--modspotify_main_fg);
+}
+
+.glue-page-header__p2s-details,
+.glue-page-header__p2s-followers {
+	display: none;
+}
+
+.context-menu {
+	border: 2px solid var(--modspotify_main_fg);
+	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
+	border-radius: 7px !important;
+	overflow: hidden;
+}
+
+#menu-wrapper ::-webkit-scrollbar {
+	display: none;
+}
+
+#menu-wrapper {
+	border-right: 3px solid black;
+    border-image: linear-gradient(0deg, transparent , var(--modspotify_scrollbar_fg_and_selected_row_bg) 40%, var(--modspotify_scrollbar_fg_and_selected_row_bg) 60%, transparent 90%) 2 90%;
+}
+
+.main-view-wrapper {
+	overflow: unset;
+}
+
+.Button--style-icon-stroke:after,
+.Button--style-icon-stroke:hover:after,
+.Button--style-icon-stroke,
+.glue-page-header__button .button-icon-with-stroke,
+.glue-page-header__button .button-icon-with-stroke::after {
+	box-shadow: unset;
+}
+
+.glue-page-header.glue-page-header--artist .glue-page-header__label {
+	padding-top: 10px;
+}
+
+.glue-page-header.glue-page-header--artist.has-custom-image .glue-page-header__label {
+	padding-top: 8px;
+}
+
+.glue-page-header__content .glue-page-header__label {
+	margin-left: -2px;
+	z-index: 2;
+}
+
+.glue-page-header__label span,
+.Header__label span {
+	background-color: var(--modspotify_main_fg);
+    color: var(--modspotify_main_bg);
+    padding: 2px 10px;
+}
+
+.glue-page-header__label .header-verified-check {
+	background-color: transparent;
+}
+
+body.remotebar .view-player .player-bar-wrapper {
+	height: 100%;
+}
+
+/* Type THX1138 in search box :) */
