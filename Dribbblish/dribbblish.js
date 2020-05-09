@@ -78,6 +78,8 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist"], (queries) =>
                 case "collection:albums":       return "album";
                 case "collection:artists":      return "artist";
                 case "collection:podcasts":     return "podcasts";
+                case "playlist:local-files":    return "localfile";
+                case "stations":                return "stations";
             }})(item.href.replace("spotify:app:", ""));
 
             item.firstChild.classList.add(`spoticon-${icon}-24`);
