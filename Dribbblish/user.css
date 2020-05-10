@@ -524,6 +524,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .scrollbar-style-visible-linux .RootlistItem, .scrollbar-style-visible-mac .RootlistItem, .scrollbar-style-visible-windows .RootlistItem {
 	padding-right: var(--left-sidebar-padding-right);
+	padding-left: var(--left-sidebar-padding-left);
 }
 
 .SidebarListItem--is-active:after, .RootlistItem--is-active:before {
@@ -566,10 +567,12 @@ body.remotebar .view-player .player-bar-wrapper {
 	display: none;
 }
 
-.SidebarListItem__play-button {
-	z-index: 2;
+.SidebarListItem__play-button,
+.RootlistItemPlaylist__play-button {
+	z-index: 3;
 	position: absolute;
-	margin-left: 0;
+	margin-left: 15px;
+	margin-top: 15px;
 }
 
 .SidebarListItem__play-button .Button {
@@ -1182,12 +1185,34 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 
 
 .SidebarListItemLink {
-    margin-left: 4px;
 	z-index: 2;
+	justify-content: center;
 }
 
 .RootlistItem__link .SidebarListItemLink {
-    margin-left: 0;
+	margin-left: 0;
+}
+
+.RootlistItemFolder__arrow:hover {
+	color: var(--modspotify_main_bg);
+}
+
+.SidebarListItemLink:link,
+.SidebarListItemLink:visited,
+.RootlistItem__link {
+	padding-left: 0;
+	color: var(--modspotify_main_bg);
+}
+
+.RootlistItemFolder__arrow {
+	color: var(--modspotify_main_bg);
+	padding: 0;
+	position: absolute;
+	z-index: 3;
+	margin-left: 15px;
+	margin-top: 15px;
+	width: 28px;
+	height: 28px;
 }
 
 .LeftSidebar__section {
@@ -1319,4 +1344,5 @@ button[data-button=add-recommendation] {
 	height: 10%;
 	background: linear-gradient(to top, var(--modspotify_main_fg) 10%, transparent);
 	z-index: 3;
+	pointer-events: none;
 }
