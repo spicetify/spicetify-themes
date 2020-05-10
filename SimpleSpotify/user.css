@@ -1,0 +1,119 @@
+.LeftSidebar__scroll-section::-webkit-scrollbar, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar {
+  width: 5px;
+}
+.LeftSidebar__scroll-section::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-thumb {
+  background: #1fc167;
+}
+.LeftSidebar__scroll-section::-webkit-scrollbar-track-piece, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-track-piece {
+  background: #131313;
+}
+
+.Button--style-icon:not(.Button--is-drop-target-active), .added .button.button-icon-only.button-add {
+  color: #444444;
+}
+
+.slider {
+  background: #131313;
+}
+.slider > div {
+  background-color: #1fc167;
+}
+.slider:hover > div {
+  background-color: #1fc167;
+}
+
+.tl-row .tl-cell {
+  border-color: #131313;
+}
+
+#new-playlist-button-mount-point {
+  padding: 15px;
+}
+
+.LeftSidebarNewPlaylistButton__button {
+  background: #b3b3b3;
+  border: 0;
+  border-radius: 30px;
+  height: auto;
+  color: #1b1b1b;
+  padding: 14px 25px;
+  display: flex;
+  justify-content: center;
+}
+.LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
+  color: #1b1b1b;
+  background-color: #d8d8d8;
+  transition: all ease 0.2s;
+}
+
+.LeftSidebarNewPlaylistButton__text {
+  flex: 0 0 auto;
+}
+
+.SidebarListItem--is-active:after {
+  left: 8px;
+  background-color: #1fc167;
+  border-radius: 2px;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar .inner {
+  background-color: #1fc167;
+}
+.view-player .player-controls-container .controls, .view-player .player-controls-container .progress-container {
+  margin: 0;
+}
+
+.tl-explicit .label, .tl-premium .label {
+  color: white;
+}
+
+.tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label {
+  border-color: white !important;
+}
+
+.tl-row.selected .tl-cell, .TableRow--is-selected {
+  background-color: #222222;
+}
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell {
+  background-color: #222222;
+}
+
+.player-controls-container {
+  display: flex;
+  justify-content: center;
+}
+
+#player-progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+#player-progressbar .progress-bar {
+  background: #131313;
+}
+#player-progressbar .progress-bar-wrapper {
+  height: auto;
+}
+#player-progressbar .inner {
+  border-radius: 0;
+}
+
+.context-menu {
+  background: #2b2b2b;
+}
+.context-menu .item.hover:not(.disabled) {
+  background-color: #222222;
+}
+
+.button.button-green {
+  color: #ffffff;
+}
+
+.glue-page-header__content .glue-page-header__title {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=user.css.map */
