@@ -6,4 +6,4 @@
 
 ## More
 
-Based on the Music Artist HONNE 
+Based on the Music Artist HONNE by HamLord
