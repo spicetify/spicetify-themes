@@ -124,7 +124,7 @@ html .SidebarList__title {
 		.view-player{
 		height: 85px !important;
 		border-radius: 20px !important;
-    background: #282828 !important;
+    background: var(--modspotify_main_bg_second) !important;
     position: relative;
     /*border: 10px solid #111111;*/
 		padding-left: 2px !important;
