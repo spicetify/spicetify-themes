@@ -1,9 +1,0 @@
-# change log
-
-v 0.1 beta
-
-	1.	fixed the Spotify logo.
-	2.	fixed the friend activity bar
-	3.	fixed text colors inside album and playlist
-	4.	fixed overlapping of sidebar items.
-	5.	A few optimizations.
