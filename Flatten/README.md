@@ -1,4 +1,4 @@
-# Flatten - spotify-based flat design
+# Flatten
 
 ## Screenshots
 
