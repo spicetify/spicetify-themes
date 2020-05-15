@@ -1,4 +1,4 @@
-# HONNE ◑
+# Honne ◑
 
 ## Screenshot 
 
@@ -6,4 +6,4 @@
 
 ## More
 
-Based on the Music Artist HONNE by HamLord
+Based on the Music Artist Honne ◑by HamLord
