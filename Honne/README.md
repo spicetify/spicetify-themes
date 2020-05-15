@@ -1,4 +1,4 @@
-# Honne ◑
+# Honne 
 
 ## Screenshot 
 
