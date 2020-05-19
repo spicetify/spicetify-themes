@@ -39,19 +39,13 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
 
             Spicetify.CosmosAPI.resolver.get({
                 url: `sp://core-playlist/v1/playlist/${href}/metadata`,
-                body: {
-                    policy: {
-                        name: true,
-                        picture: true,
-                        owner: { username: true, name: true }
-                    }
-                }
+                body: { policy: { picture: true } },
             }, (err, res) => {
                 if (err) return;
                 const meta = res.getJSONBody().metadata;
                 item.firstChild.className = "playlist-picture"
                 item.firstChild.style.backgroundImage = `url(${meta.picture})`;
-                item.firstChild.setAttribute("data-tooltip", meta.name + "\nby " + meta.owner.name || meta.owner.username);
+                item.firstChild.setAttribute("data-tooltip", item.textContent);
             });
         }
     }
