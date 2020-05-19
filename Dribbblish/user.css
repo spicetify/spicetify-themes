@@ -63,6 +63,10 @@ body {
 	background-color: transparent;
 }
 
+::-webkit-scrollbar-track {
+	background-color: transparent !important;
+}
+
 /*Round corner scrollbar*/
 
 ::-webkit-scrollbar-thumb {
@@ -95,18 +99,17 @@ body {
 	opacity: 1 !important;
 }
 
-.Card__image-wrapper--contextmenu-active:not(.Card__image-wrapper--hover-disabled) .Card__add-button,
-.Card__image-wrapper--contextmenu-active:not(.Card__image-wrapper--hover-disabled) .Card__more-button,
-.Card__image-wrapper--contextmenu-active:not(.Card__image-wrapper--hover-disabled) .Card__overlay,
-.Card__image-wrapper--contextmenu-active:not(.Card__image-wrapper--hover-disabled) .Card__play-button,
-.Card__image-wrapper:not(.Card__image-wrapper--hover-disabled) .Card__image-hit-area:hover .Card__add-button,
-.Card__image-wrapper:not(.Card__image-wrapper--hover-disabled) .Card__image-hit-area:hover .Card__more-button,
-.Card__image-wrapper:not(.Card__image-wrapper--hover-disabled) .Card__image-hit-area:hover .Card__overlay,
-.Card__image-wrapper:not(.Card__image-wrapper--hover-disabled) .Card__image-hit-area:hover .Card__play-button {
+.Card__image-hit-area:hover .Card__add-button,
+.Card__image-hit-area:hover .Card__more-button,
+.Card__image-hit-area:hover .Card__overlay,
+.Card__image-hit-area:hover .Card__play-button {
 	opacity: 1;
 }
 
-.card-image-hit-area:not(.no-hover):hover .card-overlay, .card-image-hit-area:not(.no-hover):hover .card-button-add, .card-image-hit-area:not(.no-hover):hover .card-button-play, .card-image-hit-area:not(.no-hover):hover .card-button-more, .card-image-wrapper.contextmenu-active .card-overlay, .card-image-wrapper.contextmenu-active .card-button-add, .card-image-wrapper.contextmenu-active .card-button-play, .card-image-wrapper.contextmenu-active .card-button-more, .card:not(.card-horizontal).pressed .card-overlay, .card:not(.card-horizontal).pressed .card-button-add, .card:not(.card-horizontal).pressed .card-button-play, .card:not(.card-horizontal).pressed .card-button-more {
+.card-image-hit-area:hover .card-overlay, 
+.card-image-hit-area:hover .card-button-add, 
+.card-image-hit-area:hover .card-button-play, 
+.card-image-hit-area:hover .card-button-more {
 	opacity: 1;
 }
 
@@ -147,7 +150,6 @@ body {
 .Carousel__grid-wrapper::after {
 	border: 2px solid var(--modspotify_scrollbar_fg_and_selected_row_bg);
 	border-radius: var(--section-border-radius);
-	/* margin: 16px !important; */
 }
 
 .GlueSectionDivider, .section-divider {
@@ -160,11 +162,7 @@ body {
 
 .card-info-subtitle-metadata, .card-info-subtitle-description, .Card__info-subtitle-description, .Card__info-subtitle-metadata {
 	letter-spacing: 0;
-	font-family: var(--info-font-family);
-	font-weight: 400;
 	font-size: 12px;
-	color: var(--modspotify_secondary_fg);
-	/* display: none; */
 }
 
 .GlueSectionDivider__description {
@@ -173,14 +171,9 @@ body {
 
 .card-info-title a, .card-horizontal .card-info-title span, .Card__info-title a {
 	letter-spacing: 0;
-	font-family: var(--info-font-family);
 	font-weight: 500;
 	font-size: 15px;
 	color: var(--modspotify_secondary_fg);
-}
-
-.card.playing .card-info-title a, .card.paused .card-info-title a, .playing .card .card-info-title a, .paused .card .card-info-title a {
-	color: var(--modspotify_main_fg);
 }
 
 .tracklist-station-container::after {
@@ -257,9 +250,7 @@ body {
 	border-bottom: 0 !important;
 }
 
-/* Adjust Position of border active tab in Nav bar at top
-and add little glowing effect
-*/
+/* Adjust Position of border active tab in Nav bar at top */
 
 .nav.navbar-nav li {
 	margin: 0;
@@ -307,6 +298,10 @@ and add little glowing effect
 	width: calc(100% - 160px) !important;
 	margin-left: 80px !important;
 	border-radius: 0 0 10px 10px !important;
+}
+
+.alert, .alert a, .alert .close {
+	color: var(--modspotify_secondary_fg) !important;
 }
 
 /* Small cover Big cover mechanism */
@@ -357,16 +352,17 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 
 /* Home page */
 
-.card-horizontal-interior-wrapper .card-info-title, .card-horizontal-interior-wrapper .card-info-subtitle-links {
-	text-align: start !important;
-}
-
 .tracklist-podcast .tl-progress .row-progress__bar {
 	background-color: var(--modspotify_main_fg);
 }
 
 .Header__background-color {
-	background-color: var(--modspotify_main_bg) !important;
+	background-color: unset !important;
+	background-image: unset;
+}
+
+.Header__background-overlay {
+	background: unset;
 }
 
 /* Button */
@@ -449,6 +445,16 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 	background-color: rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2);
 }
 
+.context-menu .item:first-child,
+.Menu .MenuItem:first-child {
+	border-radius: 8px 8px 0 0;
+}
+
+.context-menu .item:last-child,
+.Menu .MenuItem:last-child {
+	border-radius: 0 0 8px 8px;
+}
+
 .Menu__title {
 	letter-spacing: 0;
 	font-weight: 500;
@@ -524,6 +530,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .scrollbar-style-visible-linux .RootlistItem, .scrollbar-style-visible-mac .RootlistItem, .scrollbar-style-visible-windows .RootlistItem {
 	padding-right: var(--left-sidebar-padding-right);
+	padding-left: var(--left-sidebar-padding-left);
 }
 
 .SidebarListItem--is-active:after, .RootlistItem--is-active:before {
@@ -533,7 +540,7 @@ body.remotebar .view-player .player-bar-wrapper {
 	height: 50px;
 	width: 50px;
 	border-radius: 10px;
-	left: 15px;
+	left: 17px;
 	z-index: -1;
 }
 
@@ -542,7 +549,7 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .LeftSidebar__scroll-section .SidebarListItem--is-active:after {
-	top: 2px;
+	top: 3px;
 }
 
 .body-container--mac .sidebar-top-items__drag-area,
@@ -555,7 +562,7 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .RootlistItem--is-active:before {
-	top: 2px;
+	top: 3px;
 }
 
 .SidebarListItem__inner {
@@ -566,10 +573,12 @@ body.remotebar .view-player .player-bar-wrapper {
 	display: none;
 }
 
-.SidebarListItem__play-button {
-	z-index: 2;
+.SidebarListItem__play-button,
+.RootlistItemPlaylist__play-button {
+	z-index: 3;
 	position: absolute;
-	margin-left: 0;
+	margin-left: 15px;
+	margin-top: 15px;
 }
 
 .SidebarListItem__play-button .Button {
@@ -649,7 +658,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /* Sort element: color, remove label */
 
-.section-divider .GlueDropdown {
+.section-divider .GlueDropdown, select {
 	color: var(--modspotify_secondary_fg);
 	font-weight: 400;
 	border-radius: 4px;
@@ -1174,6 +1183,7 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	height: var(--left-sidebar-item-height);
 	background-size: cover;
 	border-radius: 50%;
+	margin: 0 auto;
 }
 
 .playlist-picture span {
@@ -1182,12 +1192,34 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 
 
 .SidebarListItemLink {
-    margin-left: 4px;
 	z-index: 2;
+	justify-content: center;
 }
 
 .RootlistItem__link .SidebarListItemLink {
-    margin-left: 0;
+	margin-left: 0;
+}
+
+.RootlistItemFolder__arrow:hover {
+	color: var(--modspotify_main_bg);
+}
+
+.SidebarListItemLink:link,
+.SidebarListItemLink:visited,
+.RootlistItem__link {
+	padding-left: 0;
+	color: var(--modspotify_main_bg);
+}
+
+.RootlistItemFolder__arrow {
+	color: var(--modspotify_main_bg);
+	padding: 0;
+	position: absolute;
+	z-index: 3;
+	margin-left: 15px;
+	margin-top: 15px;
+	width: 28px;
+	height: 28px;
 }
 
 .LeftSidebar__section {
@@ -1284,6 +1316,10 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 	text-align: left;
 }
 
+.glue-page-header__content .glue-page-header__label {
+	padding-top: 0;
+}
+
 .glue-page-header__top-bar {
 	background: unset;
 }
@@ -1319,4 +1355,5 @@ button[data-button=add-recommendation] {
 	height: 10%;
 	background: linear-gradient(to top, var(--modspotify_main_fg) 10%, transparent);
 	z-index: 3;
+	pointer-events: none;
 }

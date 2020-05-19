@@ -1,11 +1,13 @@
 # Kaapi
 ## Screenshots
+
 ### Base
-This is the default color scheme.
 ![](home.png)
+![](play.png)
+
 ### Gruvbox
-This is an alternative color scheme that uses the Gruvbox color palette. https://github.com/morhetz/gruvbox-contrib
-![](Gruvbox.png)
+![](https://user-images.githubusercontent.com/1497894/81452747-ecf03880-9187-11ea-9303-56bddd477247.png)
+
 ## Info
 To change the color scheme, use these commands:
 ```bash

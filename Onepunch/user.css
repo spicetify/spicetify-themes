@@ -48,12 +48,15 @@ html .SidebarList__title {
     margin-bottom: 24px;
 }
 .sidebar .sidebar-navbar {
-    background-image: url(https://local_resource_host/images/spotify-logo-primary-green.png);
+    /*background-image: url(https://local_resource_host/images/logo-navbar-green.png);*/
+    background-image: url(https://imgur.com/YQroYy7.png);
     background-repeat: no-repeat;
     background-size: 175px;
     background-position-x: 28px;
 }
-
+.resizer{
+  display: none !important;
+}
 		/*playlist items
 		.RootlistItem {
 			padding-left: 30px;
@@ -121,7 +124,7 @@ html .SidebarList__title {
 		.view-player{
 		height: 85px !important;
 		border-radius: 20px !important;
-    background: #282828 !important;
+    background: var(--modspotify_main_bg_second) !important;
     position: relative;
     /*border: 10px solid #111111;*/
 		padding-left: 2px !important;
@@ -153,6 +156,10 @@ html .SidebarList__title {
 		.view-player .now-playing .cover-image-container .cover-image {
     border-radius: 6px;
 		}
+    .view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+    background: #282828 !important;
+    right: 0;
+    }
 
 
 /*browse tab edits*/

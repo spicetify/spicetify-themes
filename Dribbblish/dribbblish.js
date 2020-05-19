@@ -19,28 +19,42 @@ if (Spicetify.Abba) {
 // Add "Open User Profile" item in profile menu
 new Spicetify.Menu.Item(window.__spotify.username, false, () => window.open(window.__spotify.userUri)).register();
 
-waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist"], (queries) => {
+waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__list"], (queries) => {
     /** Replace Playlist name with their pictures */
-    queries[1].querySelectorAll(`.SidebarListItemLink`).forEach(item => {
-        Spicetify.CosmosAPI.resolver.get({
-            url: `sp://core-playlist/v1/playlist/${item.href.replace("app:", "")}/metadata`,
-            body: {
-                policy: {
-                    name: true,
-                    picture: true,
-                    owner: { username: true, name: true }
-                }
-            }
-        }, (err, res) => {
-            if (err) return;
-            // return;
-            const meta = res.getJSONBody().metadata;
-            item.firstChild.className = "playlist-picture"
-            item.firstChild.style.backgroundImage = `url(${meta.picture})`;
-            item.firstChild.setAttribute("data-tooltip", meta.name + "\nby " + meta.owner.name || meta.owner.username);
-        });
-    });
+    function loadPlaylistImage() {
+        const sidebarItem = queries[1].childNodes;
 
+        for (let i = 0; i < sidebarItem.length; i++) {
+            const item = sidebarItem[i];
+            const link = item.getElementsByTagName("a")[0];
+            const href = link.href.replace("app:", "");
+
+            if (href.indexOf("playlist-folder") != -1) {
+                const button = item.getElementsByTagName("button")[0]
+                button.classList.add("Button", "Button--style-icon-background", "Button--size-28",);
+                item.setAttribute("data-tooltip", item.innerText);
+                link.firstChild.innerText = item.innerText.slice(0, 3);
+                continue;
+            }
+
+            Spicetify.CosmosAPI.resolver.get({
+                url: `sp://core-playlist/v1/playlist/${href}/metadata`,
+                body: { policy: { picture: true } },
+            }, (err, res) => {
+                if (err) return;
+                const meta = res.getJSONBody().metadata;
+                item.firstChild.className = "playlist-picture"
+                item.firstChild.style.backgroundImage = `url(${meta.picture})`;
+                item.firstChild.setAttribute("data-tooltip", item.textContent);
+            });
+        }
+    }
+
+    loadPlaylistImage();
+
+    new MutationObserver(loadPlaylistImage)
+        .observe(queries[1], {childList: true});
+    
     /** Replace Apps name with icons */
 
     /** List of avaiable icons to use:
@@ -94,12 +108,12 @@ waitForElement(["#search-input"], (queries) => {
 
 waitForElement(["#main-container"], (queries) => {
     const shadow = document.createElement("div");
-    shadow.id = "dribbblish-back-shadow"
+    shadow.id = "dribbblish-back-shadow";
     queries[0].prepend(shadow);
 });
 
 waitForElement([".LeftSidebar"], (queries) => {
     const fade = document.createElement("div");
-    fade.id = "dribbblish-sidebar-fade-in"
+    fade.id = "dribbblish-sidebar-fade-in";
     queries[0].append(fade);
 });
