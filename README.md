@@ -17,7 +17,8 @@ cp -r * ~/.config/spicetify/Themes
   
 NOTE: to install Dribbblish follow the instruction in its README.  
   
-After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`
+After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`. 
+Some themes have 2 or more different color schemes. You can switch between them, once selected the theme, with `spicetify config color_scheme SCHEME_NAME`.
 
 ## Contributions
 
