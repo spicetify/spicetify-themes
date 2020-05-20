@@ -249,7 +249,7 @@ span.glue-page-header__title-text {
 	border: 2px solid var(--modspotify_main_fg);
 	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
 	border-radius: 6px !important;
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 
@@ -270,16 +270,45 @@ span.glue-page-header__title-text {
 	box-shadow: unset;
 }
 
+/* Scrollbar color change */
 .scrollbar-style-visible-mac::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac ::-webkit-scrollbar-thumb, .scrollbar-style-visible-windows::-webkit-scrollbar-thumb, .scrollbar-style-visible-windows ::-webkit-scrollbar-thumb, .scrollbar-style-visible-linux::-webkit-scrollbar-thumb, .scrollbar-style-visible-linux ::-webkit-scrollbar-thumb {
   background-color: #4e4633;
 }
 
+/* Change color of headings in sidebar */
 .SidebarList__title{
 	color: var(--modspotify_sidebar_indicator_and_hover_button_bg) !important;
 }
 
+/* Change color for top menu for playlist */
 .tl-header th {
 	color:var(--modspotify_indicator_fg_and_button_bg) !important
 }
 
+/*Round corners and add shadow around profile menu thing and some images*/
+.GlueDropdown,
+.image,
+.Menu,
+.profile .avatar,
+.toggle-cover-size,
+.body-container--unknown-os .ConnectPopup,
+.body-container--windows .ConnectPopup {
+/*	border: 2px solid var(--modspotify_main_fg);*/
+	box-shadow: 0 4px 12px 0 rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.2);
+	border-radius: 6px !important;
+	overflow: hidden !important;
+}
+
+/*background color around the text playlist*/
+  .glue-page-header__label span,
+  .Header__label span {
+	background-color: var(--modspotify_secondary_fg);
+	color: var(--modspotify_main_bg);
+	padding: 2px 10px;
+  }
+
+/*heart icon*/  
+.view-player .nowplaying-add-button{
+	color:var(--modspotify_sidebar_indicator_and_hover_button_bg) !important;
+}
 
