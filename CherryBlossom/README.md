@@ -4,8 +4,16 @@ Dark minimal theme based on a Cherry Blossom Wallpaper.
 Enjoy!
 
 ## Screenshots
+
+### CherryBlossom
+
 ![Home Page Screenshot](screenshot.png)
 ![Playlist Screenshot](screenshot1.png)
+
+### Coral
+
+![Home Page Screenshot](screenshotCoral.png)
+![Playlist Screenshot](screenshot1Coral.png)
 
 ## More
 Theme developed by [@toby-wong](github.com/toby-wong)
