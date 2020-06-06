@@ -84,6 +84,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
         .forEach(item => {
             let icon = ((app) => {switch (app) {
                 case "genius":                  return "lyrics";
+                case "JQBX":                    return "addsuggestedsong";
                 case "bookmark":                return "tag";
                 case "reddit":                  return "discover";
                 case "made-for-you":            return "user";
