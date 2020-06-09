@@ -10,6 +10,11 @@
 #### Dark
 ![demo3](./dark.png)
 
+#### Nord-Dark
+![demo4](./nord-dark.png)
+
+#### Nord-Light
+![demo5](./nord-light.png)
 
 ## More
 ### How to install
