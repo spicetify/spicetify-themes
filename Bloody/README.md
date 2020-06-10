@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![MacOS Spotify #1](screenshot1.png)
-![MacOS Spotify #2](screenshot2.png)
+![MacOS Spotify #1](screenshot1.jpg)
+![MacOS Spotify #2](screenshot2.jpg)
 
 ## More
 
