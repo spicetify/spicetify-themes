@@ -16,6 +16,9 @@
 #### Nord-Light
 ![demo5](./nord-light.png)
 
+#### Samouraï
+![demoSamourai](./samourai.png)
+
 ## More
 ### How to install
 Run these command:
