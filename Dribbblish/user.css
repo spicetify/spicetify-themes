@@ -1270,7 +1270,7 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 }
 
 .sidebar .sidebar-navbar {
-	background-color: var(--modspotify_main_fg);
+	background-color: var(--modspotify_secondary_bg);
 	padding-bottom: 10px;
 	z-index: 0;
 }
@@ -1353,7 +1353,7 @@ button[data-button=add-recommendation] {
 	bottom: 0;
 	width: var(--sidebar-width);
 	height: 10%;
-	background: linear-gradient(to top, var(--modspotify_main_fg) 10%, transparent);
+	background: linear-gradient(to top, var(--modspotify_secondary_bg) 10%, transparent);
 	z-index: 3;
 	pointer-events: none;
 }
