@@ -10,11 +10,14 @@
 #### Dark
 ![demo3](./dark.png)
 
+#### Dracula
+![demo4](./dracula.png)
+
 #### Nord-Dark
-![demo4](./nord-dark.png)
+![demo5](./nord-dark.png)
 
 #### Nord-Light
-![demo5](./nord-light.png)
+![demo6](./nord-light.png)
 
 #### Samouraï
 ![demoSamourai](./samourai.png)
@@ -22,7 +25,7 @@
 ## More
 ### How to install
 Run these command:
-  
+
 #### Linux and MacOS:
 In **Bash**:
 ```bash
@@ -45,10 +48,10 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
 
-Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:  
+Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
 
-There are 3 color schemes you can choose: `base`, `white`, `dark`. Change scheme with commands:
+There are 3 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
