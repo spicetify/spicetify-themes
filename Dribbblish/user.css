@@ -1039,7 +1039,7 @@ button#player-button-repeat, #player-button-thumbs-up, .view-player button[data-
 }
 
 .view-player .player-controls-container .controls .button-repeat.active, .view-player .player-controls-container .controls .button-shuffle.active, .view-player .player-controls-container .controls .button-thumbs-down.active, .view-player .player-controls-container .controls .button-thumbs-up.active {
-	color: var(--modspotify_main_fg);
+	color: var(--modspotify_active_control_fg);
 }
 
 .view-player .player-controls-container .controls .button-play, .view-player .player-controls-container .controls .button-play:after {
