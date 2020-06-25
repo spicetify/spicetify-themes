@@ -10,9 +10,10 @@
     --main-gap: 10px;
 }
 
-* {
+/* Uncomment this if you already have Fira Sans installed and want to make use of it */
+/** {
 	font-family: Fira Sans Light;
-}
+}*/
 
 /*Round corner cover image*/
 .card-image,
