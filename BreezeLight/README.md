@@ -1,7 +1,8 @@
 # Breeze Light
 ## Screenshots
 
-[Put at least one image here]
+![Screenshot](screenshot1.png)
+![Screenshot](screenshot2.png)
 
 ## More
 
