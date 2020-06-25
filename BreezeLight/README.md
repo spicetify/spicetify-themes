@@ -5,9 +5,9 @@
 
 ## More
 
-There is commented code on user.css in case your system uses Fira Sans and want to reach further levels of eyecandy.
-
 Heavily inspired by Breeze Light theme and purposefully designed to match both [Evolvere Light Pure Circle Inverted Aurorae Theme][1] and [Breeze Light theme][2].
+
+The theme has been thought with Fira Sans Light in mind -and in screenshots-. If you want that too, there is a commented bit at the very start of user.css; uncomment it and you are good to go.
 
 [1]: https://store.kde.org/s/KDE/p/1002630/ "Evolvere Light Pure Circle Inverted Aurorae Theme"
 [2]: https://store.kde.org/p/1181628/ "Breeze Light"
