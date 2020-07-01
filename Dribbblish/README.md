@@ -19,6 +19,12 @@
 #### Nord-Light
 ![demo6](./nord-light.png)
 
+#### Solarized Dark
+![demoSolarizedDark](./solarized-dark.png)
+
+#### Solarized Light
+![demoSolarizedLight](./solarized-light.png)
+
 #### Samouraï
 ![demoSamourai](./samourai.png)
 
@@ -51,7 +57,7 @@ spicetify apply
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
 
-There are 3 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`. Change scheme with commands:
+There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `solarized-dark`, `solarized-light`, `samourai`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
