@@ -28,6 +28,9 @@
 #### Samouraï
 ![demoSamourai](./samourai.png)
 
+#### Ashes
+![demoAshes](./ashes.png)
+
 ## More
 ### How to install
 Run these command:
@@ -57,7 +60,7 @@ spicetify apply
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
 
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `solarized-dark`, `solarized-light`, `samourai`. Change scheme with commands:
+There are 10 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `solarized-dark`, `solarized-light`, `samourai`, `ashes`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
