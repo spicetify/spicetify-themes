@@ -1,11 +1,13 @@
 :root {
-    --bar-height: 70px;
-    --bar-cover-art-size: 40px;
-    --cover-border-radius: 8px;
-    --section-border-radius: 8px;
-    --sidebar-width: 85px;
-    --main-corner-radius: 15px;
-    --main-gap: 10px;
+	--bar-height: 70px;
+	--bar-cover-art-size: 40px;
+	--cover-border-radius: 8px;
+	--section-border-radius: 8px;
+	--sidebar-width: 85px;
+	--main-corner-radius: 15px;
+	--main-gap: 10px;
+	/* If you are using HideWindowsControls.exe, set this variable to 0 */
+	--os-windows-icon-dodge: 1;
 }
 
 @font-face {
@@ -37,9 +39,9 @@
 }
 
 body {
-    --glue-font-family: "Google Sans Display", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
-    --info-font-family: "Roboto", "spotify-circular", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
-    letter-spacing: 0;
+	--glue-font-family: "Google Sans Display", "spotify-circular", "Noto Sans CJK JP Bold", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+	--info-font-family: "Roboto", "spotify-circular", "Noto Sans CJK JP Thin", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+	letter-spacing: 0;
 }
 
 /*Round corner cover image*/
@@ -219,8 +221,8 @@ body {
 }
 
 .body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
-    margin-right: 110px !important;
-    margin-top: -5px;
+	margin-right: calc(var(--os-windows-icon-dodge) * 110px) !important;
+	margin-top: calc(var(--os-windows-icon-dodge) * -5px);
 }
 
 /* Spice up Fullscreen mode */
@@ -351,7 +353,7 @@ body {
 /* [WINDOWS] Change Profile menu horizontal position */
 
 body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
-    right: 190px !important;
+	right: calc(var(--os-windows-icon-dodge) * 170px + 20px) !important;
 }
 
 body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdown {
@@ -635,7 +637,7 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .body-container--windows .LeftSidebar {
-    margin-top: 30px;
+	margin-top: calc(var(--os-windows-icon-dodge) * 30px);
 }
 
 .RootlistItem--is-active:before {
