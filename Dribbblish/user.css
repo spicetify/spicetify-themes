@@ -1081,7 +1081,7 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
 
 .view-player .player-controls-container {
     text-align: left;
-    flex: 0 1 18%;
+    flex: 1 1;
     order: 0;
 }
 
@@ -1090,8 +1090,9 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
 }
 
 .view-player .now-playing-container {
-    flex: 0 1 64%;
+    flex: 2 1;
     order: 2;
+    min-width: 0;
 }
 
 .view-player .now-playing-container .caption {
@@ -1119,8 +1120,13 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
 }
 
 .view-player .extra-controls-container {
+    flex: 1 1;
     order: 3;
     padding-right: 0;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 30px;
+    min-width: 100px;
 }
 
 .view-player .player-controls-container .controls {
