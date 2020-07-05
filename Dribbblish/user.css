@@ -6,7 +6,7 @@
 	--sidebar-width: 85px;
 	--main-corner-radius: 15px;
 	--main-gap: 10px;
-	/* If you are using HideWindowsControls.exe, set this variable to 0 */
+	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
 }
 

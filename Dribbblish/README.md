@@ -48,9 +48,14 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
 
+### Hide Window Controls
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
 
+Alternatively, you can use `SpotifyNoControl.exe`, included in this theme package, to completely remove all windows controls and title menu (three dot at top left corner). Title menu still can be access via Alt key. Closing, minimizing can be done via right click menu at top window region.  
+`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. So you should make a shortcut for it, change icon and add to desktop or start menu.
+
+### Color Schemes
 There are 3 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
