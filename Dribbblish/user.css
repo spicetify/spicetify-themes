@@ -1083,6 +1083,7 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
     text-align: left;
     flex: 1 1;
     order: 0;
+    min-width: 220px;
 }
 
 .view-player .player-bar-spacer {
@@ -1123,10 +1124,19 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
     flex: 1 1;
     order: 3;
     padding-right: 0;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: 30px;
-    min-width: 100px;
+    min-width: 220px;
+}
+
+@media (max-width:900px) {
+    #video-fullscreen-button {
+        display: none;
+    }
+    .volumebar-container {
+        width: 80px;
+    }
+    .view-player .player-controls-container .button {
+        margin: 2px;
+    }
 }
 
 .view-player .player-controls-container .controls {
