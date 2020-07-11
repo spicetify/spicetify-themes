@@ -26,6 +26,14 @@
 *
 */
 /* NAVIGATION MENU EDITS */
+/* #menu-wrapper {
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 10;
+    position: fixed;
+    z-index: ;
+} */
 .sidebar .sidebar-navbar {
   padding-top: 12px;
 }
@@ -87,9 +95,9 @@ html .SidebarList__title {
   margin-bottom: 20px;
 }
 
-.resizer {
+/* .resizer {
   display: none !important;
-}
+} */
 /* playlist items */
 .RootlistItem {
   padding-left : 30px;

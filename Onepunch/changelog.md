@@ -1,5 +1,10 @@
 ## Versions
 
+**v 0.9 beta**
+
+-   [x] half baked release!!
+- [x] don't mind the "few" icon mismatches :D.
+
 **v 0.5 beta**
 
 -   [x] Changed all possible icons.

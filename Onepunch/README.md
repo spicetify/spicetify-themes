@@ -2,7 +2,8 @@
 
 ## Screenshots
 
-![OnepunchHome](./OnepunchHome.png)
+![1](./1.png)
+![2](./2.png)
 
 ## More
 
