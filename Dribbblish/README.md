@@ -25,6 +25,9 @@
 #### Samouraï
 ![demoSamourai](./samourai.png)
 
+#### Purple
+![demo8](./purple.png)
+
 ## More
 ### How to install
 Run these command:
@@ -62,7 +65,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 8 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `horizon`, `samourai`. Change scheme with commands:
+There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
