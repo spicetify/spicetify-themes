@@ -25,6 +25,9 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Pink
+![demo9](./pink.png)
+
 ## More
 ### How to install
 Run these command:
