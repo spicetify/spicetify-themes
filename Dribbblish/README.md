@@ -19,6 +19,9 @@
 #### Nord-Light
 ![demo6](./nord-light.png)
 
+#### Horizon
+![demoHorizon](./horizon.png)
+
 #### Samouraï
 ![demoSamourai](./samourai.png)
 
@@ -65,7 +68,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 3 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`, `purple`. Change scheme with commands:
+There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
