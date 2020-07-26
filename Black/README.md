@@ -2,7 +2,9 @@
 
 ## Screenshots
 
-![Screenshot](https://i.imgur.com/HjK3Gab.png)
+![Base](https://i.imgur.com/HjK3Gab.png)
+
+![Purple](purple.png)
 
 ## Info
 
