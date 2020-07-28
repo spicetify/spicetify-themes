@@ -14,7 +14,7 @@
 ![demo4](./dracula.png)
 
 #### Gruvbox
-!.[demoGruvbox](./gruvbox.png)
+![demoGruvbox](./gruvbox.png)
 
 #### Nord-Dark
 ![demo5](./nord-dark.png)
