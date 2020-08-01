@@ -32,7 +32,10 @@
 ![demo8](./purple.png)
 
 ## More
+Requires spicetify-cli **v0.9.9 or newer**.
+
 ### How to install
+
 Run these command:
 
 #### Linux and MacOS:
