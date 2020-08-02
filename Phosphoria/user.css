@@ -69,7 +69,7 @@ h2, h3 {
 .progress-container .inner {
 	border-radius: 0 2px 2px 0 !important;
 	background-color: var(--modspotify_secondary_fg) !important;
-	box-shadow: 0 0px 11px 0 var(--modspotify_secondary_fg);
+	box-shadow: 0 0px 8px 0 var(--modspotify_secondary_fg);
 }
 
 .nav.navbar-nav {
