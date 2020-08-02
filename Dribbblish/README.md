@@ -77,6 +77,15 @@ spicetify config color_scheme <scheme name>
 spicetify apply
 ```
 
+# How to unistall 
+
+Remove the dribbblish script with the following commands 
+
+```
+spicetify config extensions dribbblish.js-
+spicetify apply
+```
+
 ## `color.ini` reference
 
 These keys are used in the `colors.ini` file.
