@@ -2,14 +2,14 @@
 
 ## Screenshots
 
-![Phosphoria](./screnshot1.png)
+![Phosphoria](./screenshot1.png)
 
 ## More
 
 A twist on the original Spotify dark theme; Phosphoria provides a more modern aesthetic and a glowing green phosphorus vibe.   
 
 
- - Required Font: [Oswald](https://fonts.google.com/specimen/Oswald)
+ - Required Font: [Oswald](https://fonts.google.com/specimen/Oswald) (with Oswald Light)
 
 ## Credits: 
 
