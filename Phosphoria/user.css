@@ -1,0 +1,110 @@
+
+:root {
+	--bar-height: 120px;
+}
+
+/*Huge shoutout to adriankarlen for the clever thin scrollbar trick!*/
+::-webkit-scrollbar {
+	height: 6px !important;
+	width: 6px !important;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-button {
+	display: none !important;
+}
+
+
+/*Big Fonts, UI change*/
+h1 {
+    text-transform: uppercase !important;
+    font-family: 'Oswald'; 
+    font-stretch: extra-expanded !important;
+    letter-spacing: 10px !important; /*a e s t h e t i c*/
+}
+
+h2, h3 {
+    text-transform: uppercase !important;
+}
+
+
+
+/*Move player controls closer to the top of the navbar*/
+.view-player .player-controls-container {
+    padding-top: 2px;
+    padding-bottom: 15px; 
+}
+
+.view-player .player-controls-container .progress-container {
+    padding-top: 13px; 
+}
+
+.view-player .player-controls-container .controls {
+    margin-top: 9px !important; 
+}
+
+
+/*Move the progess bar around a bit so the glow stands out*/
+.progress-container .progress-bar,
+.progress-container .inner {
+    top: 0 !important;
+	margin-top: 0px !important;
+	height: 5px;
+}
+
+.progress-container .progress-bar-wrapper {
+	top: 0 !important;
+	height: 5px;
+}
+
+.progress-container {
+	bottom: var(--bar-height) !important;
+}
+
+/*Phosphorus-style Progress Bar!!*/
+.progress-container .inner {
+	border-radius: 0 2px 2px 0 !important;
+	background-color: var(--modspotify_secondary_fg) !important;
+	box-shadow: 0 0px 10px 0 var(--modspotify_secondary_fg);
+}
+
+.nav.navbar-nav {
+	overflow: hidden !important;
+}
+
+.nav.navbar-nav a {
+	overflow: visible !important;
+}
+
+.nav.navbar-nav a::after {
+	bottom: 0px !important;
+	width: 100% !important;
+}
+
+.nav.navbar-nav .active  a::after{
+	box-shadow: 0 0px 20px !important;
+}
+
+.nav.navbar-nav a:focus:not(.button):active::after{
+	background-color: var(--modspotify_pressing_fg) !important;
+}
+
+
+/*Bottom bar too bright with the normal forground color, changed to be more subtle*/
+.view-player .remote-playback-bar {
+    background-color: var(--modspotify_slider_bg) !important; 
+}
+
+.view-player .remote-playback-bar .arrow {
+    border-bottom-color: var(--modspotify_slider_bg) !important; 
+}
+
+/*Adjust font*/
+.view-player .track a {
+    font-family: "Oswald Light";
+    font-size: 21px; 
+}
