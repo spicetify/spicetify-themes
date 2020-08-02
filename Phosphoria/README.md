@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![Phosphoria](./screnshot1.png)
+![Phosphoria](./screenshot1.png)
 
 ## More
 
