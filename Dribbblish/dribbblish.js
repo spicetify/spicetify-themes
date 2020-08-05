@@ -21,7 +21,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
             if (!link || !link[0]) continue;
             link = link[0];
 
-            const href = link.href.replace("app:", "");
+            let href = link.href.replace("app:", "");
 
             if (href.indexOf("playlist-folder") != -1) {
                 const button = item.getElementsByTagName("button")[0]
@@ -29,6 +29,10 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 item.setAttribute("data-tooltip", item.innerText);
                 link.firstChild.innerText = item.innerText.slice(0, 3);
                 continue;
+            }
+
+            if (href.indexOf("chart") != -1) {
+                href = href.replace("chart:", "user:spotifycharts:playlist:");
             }
 
             Spicetify.CosmosAPI.resolver.get({
@@ -48,7 +52,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
 
     new MutationObserver(loadPlaylistImage)
         .observe(queries[1], {childList: true});
-    
+
     /** Replace Apps name with icons */
 
     /** List of avaiable icons to use:
@@ -96,7 +100,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 case "playlist:local-files":    return "localfile";
                 case "stations":                return "stations";
             }})(item.href.replace("spotify:app:", ""));
-            
+
             replaceTextWithIcon(item.firstChild, icon);
         });
 
