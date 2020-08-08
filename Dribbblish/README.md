@@ -77,7 +77,7 @@ spicetify config color_scheme <scheme name>
 spicetify apply
 ```
 
-# How to unistall 
+# How to uninstall 
 
 Remove the dribbblish script with the following commands 
 
