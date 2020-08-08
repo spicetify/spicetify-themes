@@ -1,3 +1,6 @@
+// Hide popover message
+document.getElementById("popover-container").style.height = 0;
+
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));
     if (queries.every(a => a)) {
@@ -79,8 +82,11 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
     */
 
     function replaceTextWithIcon(el, iconName) {
-        el.classList.add(`spoticon-${iconName}-24`);
-        el.setAttribute("data-tooltip", el.innerText);
+        if (iconName) {
+            el.classList.add(`spoticon-${iconName}-24`);
+        }
+
+        el.parentNode.setAttribute("data-tooltip", el.innerText);
         el.innerText = "";
     }
 
@@ -99,6 +105,13 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 case "collection:podcasts":     return "podcasts";
                 case "playlist:local-files":    return "localfile";
                 case "stations":                return "stations";
+                /**
+                 * Uncomment 3 lines below if you're using old version of Spotify that
+                 * does not have Home/Browse/Radio app icons by default.
+                 */
+                //case "home":					return "home";
+                //case "browse":	                return "browse";
+                //case "radio":	                return "radio";
             }})(item.href.replace("spotify:app:", ""));
 
             replaceTextWithIcon(item.firstChild, icon);
