@@ -43,3 +43,13 @@ If you want to add your theme:
 - Open a Pull Request
 
 **Thanks to all the contributors.**
+
+## Troubleshooting
+
+If you find problems when using or installing these themes, use the
+[Spectrum](https://spectrum.chat/spicetify) chat. 
+
+For bugs use the GitHub issues. 
+
+If you are unsure about which channel to use, go for Spectrum.
+
