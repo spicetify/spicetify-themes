@@ -10,6 +10,11 @@
 	--os-windows-icon-dodge: 1;
 }
 
+div#popover-container::before {
+    content: "You haven't installed 'dribbblish.js' extension. Please run follow instruction on theme README page.";
+    font-size: 30px;
+}
+
 @font-face {
     font-family: "Google Sans Display";
     src: url("https://local_resource_host/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
@@ -1399,6 +1404,10 @@ button#player-button-repeat,
 .SidebarListItemLink:before {
     color: var(--modspotify_preserve_1);
     margin-right: 0;
+}
+
+.SidebarListItem__label {
+    overflow: unset;
 }
 
 .SidebarListItem__label:before {
