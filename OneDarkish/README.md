@@ -7,4 +7,4 @@
 
 ## More
 
-Inspired by [One dark UI](https://atom.io/themes/one-dark-ui). Feedback is always appreciated :).
+Inspired by [One Dark UI](https://atom.io/themes/one-dark-ui). Feedback is always appreciated :).
