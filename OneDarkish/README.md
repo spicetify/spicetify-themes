@@ -2,8 +2,9 @@
 
 ## Screenshots
 
-[Put at least one image here]
+![screenshot of OneDarkish applied to an artist's page](https://github.com/lukeiamyo/spicetify-themes/blob/master/OneDarkish/screenshot_artist.png)
+![screenshot of OneDarkish applied to a playlist](https://github.com/lukeiamyo/spicetify-themes/blob/master/OneDarkish/screenshot_playlist.png)
 
 ## More
 
-Based off of the Atom text editor's color scheme. Feedback is always appreciated :).
+Inspired by [One dark UI](https://atom.io/themes/one-dark-ui). Feedback is always appreciated :).
