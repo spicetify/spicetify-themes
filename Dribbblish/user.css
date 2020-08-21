@@ -1422,6 +1422,7 @@ button#player-button-repeat,
 
 .sidebar .sidebar-navbar {
     background-color: var(--modspotify_secondary_bg);
+    transition: background-color 2s linear;
     padding-bottom: 10px;
     z-index: 0;
 }
@@ -1514,7 +1515,7 @@ button[data-button=add-recommendation] {
     padding-right: 1px !important;
 }
 
-.flex-col-container::before {
+#video-player::before, .flex-col-container::before {
     content: '';
     background-image: var(--image_xlarge_url);
     background-repeat: no-repeat;
@@ -1529,5 +1530,14 @@ button[data-button=add-recommendation] {
     filter: blur(25px);
     z-index: +1;
     pointer-events: none;
+}
+
+#video-player::before {
+    opacity: 0.5;
+    transition: background-image 1s;
+}
+
+.flex-col-container::before {
     opacity: 0.05;
+    transition: background-image 2s;
 }
