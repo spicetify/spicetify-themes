@@ -226,7 +226,7 @@ async function songchange() {
     } else {
         // podcast?
         nearTrackSpan.innerText = ""
-        nearArtistSpan.innerText = ""
+        nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
     }
     
     document.documentElement.style.setProperty('--image_xlarge_url', 'url("'+Spicetify.Player.data.track.metadata.image_xlarge_url+'")')
@@ -237,6 +237,9 @@ async function songchange() {
             updateColors(document.documentElement) // main app
             if (document.querySelector("#app-queue")!=null) updateColors(document.querySelector("#app-queue").contentDocument.documentElement) // now playing
             if (lastDoc!==null) updateColors(lastDoc) // current iframe
+        }, (err) => {
+            console.log(err)
+            // todo: retry only colorExtract
         })
 }
 
