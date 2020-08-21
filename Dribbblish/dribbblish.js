@@ -228,6 +228,8 @@ async function songchange() {
         nearTrackSpan.innerText = ""
         nearArtistSpan.innerText = ""
     }
+    
+    document.documentElement.style.setProperty('--image_xlarge_url', 'url("'+Spicetify.Player.data.track.metadata.image_xlarge_url+'")')
 
     Spicetify.colorExtractor(Spicetify.Player.data.track.uri)
         .then((colors) => {

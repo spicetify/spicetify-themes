@@ -8,6 +8,7 @@
 	--main-gap: 10px;
 	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
+	--image_xlarge_url: '';
 }
 
 div#popover-container::before {
@@ -1511,4 +1512,22 @@ button[data-button=add-recommendation] {
 #content .app-content, #tracklist-container {
     padding-left: 1px !important;
     padding-right: 1px !important;
+}
+
+.flex-col-container::before {
+    content: '';
+    background-image: var(--image_xlarge_url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(25px);
+    z-index: +1;
+    pointer-events: none;
+    opacity: 0.05;
 }
