@@ -1507,3 +1507,8 @@ button[data-button=add-recommendation] {
     z-index: 3;
     pointer-events: none;
 }
+
+#content .app-content, #tracklist-container {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
