@@ -1515,7 +1515,7 @@ button[data-button=add-recommendation] {
     padding-right: 1px !important;
 }
 
-#video-player::before, .flex-col-container::before {
+#video-player::before, .main-view-wrapper::before {
     content: '';
     background-image: var(--image_url);
     background-repeat: no-repeat;
@@ -1528,7 +1528,6 @@ button[data-button=add-recommendation] {
     right: 0;
     bottom: 0;
     filter: blur(15px);
-    z-index: +1;
     pointer-events: none;
     backface-visibility: hidden;
     will-change: transform;
@@ -1536,10 +1535,12 @@ button[data-button=add-recommendation] {
 }
 
 #video-player::before {
+    z-index: +1;
     opacity: 0.5;
 }
 
-.flex-col-container::before {
+.main-view-wrapper::before {
+    z-index: +3;
     opacity: 0.06;
 }
 
