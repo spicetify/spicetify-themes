@@ -181,7 +181,7 @@ function LightenDarkenColor(col, amt) {
 function updateColors(root) {
     colHex = mainColor
     colRGB = hexToRgb(colHex)
-    darkerColHex = LightenDarkenColor(colHex, -40)
+    darkerColHex = LightenDarkenColor(colHex, -50)
     darkerColRGB = hexToRgb(darkerColHex)
 
     root.style.setProperty('--modspotify_main_fg', colHex)
@@ -207,6 +207,11 @@ function updateColors(root) {
     //root.style.setProperty('--modspotify_rgb_scrollbar_fg_and_selected_row_bg', darkerColRGB)
     root.style.setProperty('--modspotify_rgb_selected_button', darkerColRGB)
     //root.style.setProperty('--modspotify_rgb_miscellaneous_hover_bg', colRGB)
+}
+
+function trickHideGradient(display) {
+    // gradient can't be animated so hide and reshow
+    document.querySelector("#dribbblish-sidebar-fade-in").style.display = display
 }
 
 async function songchange() {
@@ -238,12 +243,14 @@ async function songchange() {
     Spicetify.colorExtractor(Spicetify.Player.data.track.uri)
         .then((colors) => {
             mainColor = colors['LIGHT_VIBRANT']
+            trickHideGradient('none')
             updateColors(document.documentElement) // main app
             if (document.querySelector("#app-queue")!=null) updateColors(document.querySelector("#app-queue").contentDocument.documentElement) // now playing
             if (lastDoc!==null) updateColors(lastDoc) // current iframe
+            setTimeout(trickHideGradient, 1500, 'block') //animation lasts 1.5sec
         }, (err) => {
             console.log(err)
-            // On startup we receive songChange to soon and colorExtractor will fail
+            // On startup we receive songChange too soon and colorExtractor will fail
             // todo: retry only colorExtract
             setTimeout(songchange, 200)
         })

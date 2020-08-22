@@ -1422,7 +1422,7 @@ button#player-button-repeat,
 
 .sidebar .sidebar-navbar {
     background-color: var(--modspotify_secondary_bg);
-    transition: background-color 2s linear;
+    transition: background-color 1.5s linear;
     padding-bottom: 10px;
     z-index: 0;
 }
@@ -1532,16 +1532,15 @@ button[data-button=add-recommendation] {
     pointer-events: none;
     backface-visibility: hidden;
     will-change: transform;
+    transition: background-image 1.5s linear;
 }
 
 #video-player::before {
     opacity: 0.5;
-    transition: background-image 1s linear;
 }
 
 .flex-col-container::before {
     opacity: 0.06;
-    transition: background-image 2s linear;
 }
 
 .view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
