@@ -1,6 +1,6 @@
 :root {
 	--bar-height: 70px;
-	--bar-cover-art-size: 40px;
+	--bar-cover-art-size: 52px;
 	--cover-border-radius: 8px;
 	--section-border-radius: 8px;
 	--sidebar-width: 85px;
@@ -1024,7 +1024,7 @@ select {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     z-index: 2;
     /* Glowing effect */
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--modspotify_rgb_main_bg), 0.35), var(--modspotify_main_bg) 70%);
+    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--modspotify_rgb_main_bg), 0.45), var(--modspotify_main_bg) 70%);
 }
 
 body.video-full-screen .view-player {
