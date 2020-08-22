@@ -243,7 +243,9 @@ async function songchange() {
             if (lastDoc!==null) updateColors(lastDoc) // current iframe
         }, (err) => {
             console.log(err)
+            // On startup we receive songChange to soon and colorExtractor will fail
             // todo: retry only colorExtract
+            setTimeout(songchange, 200)
         })
 }
 
