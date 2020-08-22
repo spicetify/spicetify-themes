@@ -229,7 +229,7 @@ async function songchange() {
         nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
     }
     
-    document.documentElement.style.setProperty('--image_xlarge_url', 'url("'+Spicetify.Player.data.track.metadata.image_xlarge_url+'")')
+    document.documentElement.style.setProperty('--image_url', 'url("'+Spicetify.Player.data.track.metadata.image_url+'")')
 
     Spicetify.colorExtractor(Spicetify.Player.data.track.uri)
         .then((colors) => {

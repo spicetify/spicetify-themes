@@ -8,7 +8,7 @@
 	--main-gap: 10px;
 	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
-	--image_xlarge_url: '';
+	--image_url: '';
 }
 
 div#popover-container::before {
@@ -1517,7 +1517,7 @@ button[data-button=add-recommendation] {
 
 #video-player::before, .flex-col-container::before {
     content: '';
-    background-image: var(--image_xlarge_url);
+    background-image: var(--image_url);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1527,17 +1527,20 @@ button[data-button=add-recommendation] {
     left: 0;
     right: 0;
     bottom: 0;
-    filter: blur(25px);
+    filter: blur(15px);
     z-index: +1;
     pointer-events: none;
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 #video-player::before {
     opacity: 0.5;
-    transition: background-image 1s;
+    transition: background-image 1s linear;
 }
 
 .flex-col-container::before {
-    opacity: 0.05;
-    transition: background-image 2s;
+    opacity: 0.06;
+    transition: background-image 2s linear;
+}
 }
