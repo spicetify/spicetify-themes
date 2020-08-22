@@ -1546,3 +1546,9 @@ button[data-button=add-recommendation] {
 .view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
     top: -7px !important;
 }
+
+.browser-navigation-top-bar .button:hover,
+.browser-navigation-top-bar .button:hover:before,
+.SidebarListItem__label:hover:before, .SidebarListItemLink:hover:before {
+    color: var(--modspotify_pressing_button_fg);
+}
