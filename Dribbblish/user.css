@@ -1553,3 +1553,7 @@ button[data-button=add-recommendation] {
 .SidebarListItem__label:hover:before, .SidebarListItemLink:hover:before {
     color: var(--modspotify_pressing_button_fg);
 }
+
+.SearchInput__input:focus, .SearchInput__input:hover {
+    background-color: rgba(var(--modspotify_rgb_main_fg), 0.05);
+}
