@@ -1543,4 +1543,7 @@ button[data-button=add-recommendation] {
     opacity: 0.06;
     transition: background-image 2s linear;
 }
+
+.view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
+    top: -7px !important;
 }
