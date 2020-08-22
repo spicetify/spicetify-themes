@@ -219,14 +219,18 @@ async function songchange() {
         recent_date = new Date()
         recent_date.setMonth(recent_date.getMonth() - 6)
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
+        album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
         
         if (nearTrackSpan!==null) nearTrackSpan.innerText = " • " + Spicetify.Player.data.track.metadata.popularity + "%"
-        if (nearArtistSpan!==null) nearArtistSpan.innerText = " • " + Spicetify.Player.data.track.metadata.album_title + " • " + album_date
-
-    } else {
+        if (nearArtistSpan!==null) nearArtistSpan.innerHTML = " — " + album_link + " • " + album_date
+    } else if (Spicetify.Player.data.track.metadata.album_track_number==0) {
         // podcast?
         nearTrackSpan.innerText = ""
         nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
+    } else {
+        // When clicking a song from the homepage, songChange is fired with half empty metadata
+        // todo: retry only once?
+        setTimeout(songchange, 200)
     }
     
     document.documentElement.style.setProperty('--image_url', 'url("'+Spicetify.Player.data.track.metadata.image_url+'")')
