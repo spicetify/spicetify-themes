@@ -1,4 +1,4 @@
-# Elementary Extended
+# Elementary Color Scheme
 
 ## Screenshots
 
