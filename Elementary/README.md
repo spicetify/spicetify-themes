@@ -12,5 +12,5 @@
 
 (This theme was previously posted on a [spectrum chat](https://spectrum.chat/spicetify/themes?tab=posts))
 
-Credits to [@theredhood13](https://github.com/theredhood13)
+Credits to [@theredhood13](https://github.com/theredhood13)<br>
 Blue Contrast by [AmitGujar](https://github.com/AmitGujar)
