@@ -6,7 +6,7 @@
 
 ![Base](https://i.imgur.com/w8A5q9U.png)
 
-## BlueContrast
+### BlueContrast
 
 ![BlueContrast](./screenshot.jpg)
 
