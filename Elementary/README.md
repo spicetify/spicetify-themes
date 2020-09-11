@@ -2,15 +2,18 @@
 
 ## Screenshots
 
-![Elementary](https://i.imgur.com/w8A5q9U.png)
+### Base
 
-## Blue Contrast
+![Base](https://i.imgur.com/w8A5q9U.png)
 
-<img src = "screenshot.jpg" alt="Theme Screenshot">
+## BlueContrast
+
+![BlueContrast](./screenshot.jpg)
 
 ## More
 
 (This theme was previously posted on a [spectrum chat](https://spectrum.chat/spicetify/themes?tab=posts))
 
-Credits to [@theredhood13](https://github.com/theredhood13)<br>
-Blue Contrast by [AmitGujar](https://github.com/AmitGujar)
+Credits to [@theredhood13](https://github.com/theredhood13)
+
+BlueContrast by [AmitGujar](https://github.com/AmitGujar)
