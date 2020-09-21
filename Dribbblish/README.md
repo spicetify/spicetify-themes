@@ -28,6 +28,9 @@
 #### Samouraï
 ![demoSamourai](./samourai.png)
 
+#### Beach-Sunset
+![demo7](./beach-sunset.png)
+
 #### Purple
 ![demo8](./purple.png)
 
