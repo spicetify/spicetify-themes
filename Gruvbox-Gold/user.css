@@ -1,6 +1,11 @@
 /*Thinner scrollbar*/
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     height: 6px !important;
     width: 0px !important;
     background-color: transparent;
+} */
+
+.TableCellSong__label {
+    color: var(--modspotify_main_fg);
+    border: 1px solid var(--modspotify_main_fg);
 }
