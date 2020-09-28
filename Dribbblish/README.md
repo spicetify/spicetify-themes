@@ -34,6 +34,9 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Palenight
+![demo9](./palenight.png)
+
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
