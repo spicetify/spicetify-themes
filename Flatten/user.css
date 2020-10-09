@@ -39,7 +39,7 @@
 }
 
 .Button--style-icon:not(.Button--is-drop-target-active), .added .button.button-icon-only.button-add {
-  color: #444444;
+  color: #ec5546;
 }
 
 .Button--style-green {
@@ -58,9 +58,7 @@
   border-color: white !important;
 }
 
-.tl-row .tl-cell {
-  border-color: #131313;
-}
+
 .tl-row.selected .tl-cell, .tl-row .TableRow--is-selected {
   background-color: #222222;
 }
@@ -164,6 +162,10 @@
 
 .glue-page-header__content .glue-page-header__title, .glue-page-header__sticky, .glue-page-header__title, .Header__content .Header__title-text {
   color: #ffffff;
+}
+
+.GlueHeader__background-color {
+    background-color: #1b1b1b !important;
 }
 
 .friend .user-play-button .card-image {
