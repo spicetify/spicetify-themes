@@ -2,7 +2,7 @@
   width: 5px;
 }
 .LeftSidebar__scroll-section::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-thumb, #view-content > .embedded-app::-webkit-scrollbar-thumb, .context-menu::-webkit-scrollbar-thumb {
-  background: #1fc167;
+  background: #1DB954;
 }
 .LeftSidebar__scroll-section::-webkit-scrollbar-track-piece, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-track-piece, #view-content > .embedded-app::-webkit-scrollbar-track-piece, .context-menu::-webkit-scrollbar-track-piece {
   background: #131313;
@@ -30,7 +30,7 @@
 
 .SidebarListItem--is-active:after {
   left: 8px;
-  background-color: #1fc167;
+  background-color: #1DB954;
   border-radius: 2px;
 }
 
@@ -51,11 +51,7 @@
 }
 
 .tl-explicit .label, .tl-premium .label {
-  color: white;
-}
-
-.tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label {
-  border-color: white !important;
+  color: #333333;
 }
 
 
@@ -106,7 +102,7 @@
 }
 
 .view-player .player-controls-container .progress-container .progress-bar .inner {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .view-player .player-controls-container .controls, .view-player .player-controls-container .progress-container {
   margin: 0;
@@ -140,10 +136,10 @@
   background: #131313;
 }
 .slider > div, .slider.enabled > div {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .slider:hover > div {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .slider.enabled {
   background-color: white;
@@ -167,6 +163,11 @@
 .GlueHeader__background-color {
     background-color: #1b1b1b !important;
 }
+
+.button .button-icon-only .spoticon-ban-active-16 {
+    color: #333333;
+}
+
 
 .friend .user-play-button .card-image {
   filter: grayscale(1);
