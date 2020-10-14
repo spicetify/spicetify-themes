@@ -2,7 +2,7 @@
   width: 5px;
 }
 .LeftSidebar__scroll-section::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-thumb, #view-content > .embedded-app::-webkit-scrollbar-thumb, .context-menu::-webkit-scrollbar-thumb {
-  background: #1fc167;
+  background: #1DB954;
 }
 .LeftSidebar__scroll-section::-webkit-scrollbar-track-piece, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-track-piece, #view-content > .embedded-app::-webkit-scrollbar-track-piece, .context-menu::-webkit-scrollbar-track-piece {
   background: #131313;
@@ -30,7 +30,7 @@
 
 .SidebarListItem--is-active:after {
   left: 8px;
-  background-color: #1fc167;
+  background-color: #1DB954;
   border-radius: 2px;
 }
 
@@ -38,8 +38,12 @@
   padding: 15px;
 }
 
-.Button--style-icon:not(.Button--is-drop-target-active), .added .button.button-icon-only.button-add {
-  color: #444444;
+.Button--style-icon.Button--size-32.spoticon-heart-active-16 {
+    color: #1db954;
+}
+
+.added .button.button-icon-only.button-add {
+    color: #1db954;
 }
 
 .Button--style-green {
@@ -51,16 +55,10 @@
 }
 
 .tl-explicit .label, .tl-premium .label {
-  color: white;
+  color: #333333;
 }
 
-.tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label {
-  border-color: white !important;
-}
 
-.tl-row .tl-cell {
-  border-color: #131313;
-}
 .tl-row.selected .tl-cell, .tl-row .TableRow--is-selected {
   background-color: #222222;
 }
@@ -108,7 +106,7 @@
 }
 
 .view-player .player-controls-container .progress-container .progress-bar .inner {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .view-player .player-controls-container .controls, .view-player .player-controls-container .progress-container {
   margin: 0;
@@ -142,10 +140,10 @@
   background: #131313;
 }
 .slider > div, .slider.enabled > div {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .slider:hover > div {
-  background-color: #1fc167;
+  background-color: #1DB954;
 }
 .slider.enabled {
   background-color: white;
@@ -165,6 +163,15 @@
 .glue-page-header__content .glue-page-header__title, .glue-page-header__sticky, .glue-page-header__title, .Header__content .Header__title-text {
   color: #ffffff;
 }
+
+.GlueHeader__background-color {
+    background-color: #1b1b1b !important;
+}
+
+.button .button-icon-only .spoticon-ban-active-16 {
+    color: #333333;
+}
+
 
 .friend .user-play-button .card-image {
   filter: grayscale(1);
