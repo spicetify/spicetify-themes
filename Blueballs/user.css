@@ -1,0 +1,4 @@
+.TableCellSong__label {
+    border: 1px solid var(--modspotify_sidebar_indicator_and_hover_button_bg);
+    color: var(--modspotify_sidebar_indicator_and_hover_button_bg);
+}
