@@ -1,6 +1,6 @@
 :root {
 	--bar-height: 70px;
-	--bar-cover-art-size: 40px;
+	--bar-cover-art-size: 52px;
 	--cover-border-radius: 8px;
 	--section-border-radius: 8px;
 	--sidebar-width: 85px;
@@ -8,6 +8,7 @@
 	--main-gap: 10px;
 	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
+	--image_url: '';
 }
 
 div#popover-container::before {
@@ -1023,7 +1024,7 @@ select {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     z-index: 2;
     /* Glowing effect */
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--modspotify_rgb_main_bg), 0.85), var(--modspotify_main_bg) 70%);
+    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--modspotify_rgb_main_bg), 0.45), var(--modspotify_main_bg) 70%);
 }
 
 body.video-full-screen .view-player {
@@ -1421,6 +1422,7 @@ button#player-button-repeat,
 
 .sidebar .sidebar-navbar {
     background-color: var(--modspotify_secondary_bg);
+    transition: background-color 1.5s linear;
     padding-bottom: 10px;
     z-index: 0;
 }
@@ -1506,4 +1508,52 @@ button[data-button=add-recommendation] {
     background: linear-gradient(to top, var(--modspotify_secondary_bg) 10%, transparent);
     z-index: 3;
     pointer-events: none;
+}
+
+#content .app-content, #tracklist-container {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+}
+
+#video-player::before, .main-view-wrapper::before {
+    content: '';
+    background-image: var(--image_url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(15px);
+    pointer-events: none;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: background-image 1.5s linear;
+}
+
+#video-player::before {
+    z-index: +1;
+    opacity: 0.5;
+}
+
+.main-view-wrapper::before {
+    z-index: +3;
+    opacity: 0.06;
+}
+
+.view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
+    top: -7px !important;
+}
+
+.browser-navigation-top-bar .button:hover,
+.browser-navigation-top-bar .button:hover:before,
+.SidebarListItem__label:hover:before, .SidebarListItemLink:hover:before {
+    color: var(--modspotify_pressing_button_fg);
+}
+
+.SearchInput__input:focus, .SearchInput__input:hover {
+    background-color: rgba(var(--modspotify_rgb_main_fg), 0.05);
 }
