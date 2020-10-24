@@ -277,6 +277,8 @@ async function songchange() {
     Spicetify.colorExtractor(Spicetify.Player.data.track.uri)
         .then((colors) => {
             mainColor = colors['LIGHT_VIBRANT']
+            while( mainColor.length!=4 && mainColor.length<7 ) { mainColor = mainColor.replace("#", "#0"); }
+
             trickHideGradient('none')
             updateColors(document.documentElement) // main app
             setTimeout(trickHideGradient, 1500, 'block') //animation lasts 1.5sec
