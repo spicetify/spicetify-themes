@@ -144,9 +144,37 @@ function getAlbumInfo(uri) {
     })})
 }
 
+function isLight(hex) {
+    var bigint = parseInt(hex.replace("#",""), 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+    const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    return brightness > 155;
+}
+
+function hexToRgb(hex) {
+    var bigint = parseInt(hex.replace("#",""), 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+    return r + "," + g + "," + b;
+}
+
+function LightenDarkenColor(hex, amt) {
+    var bigint = parseInt(hex.replace("#",""), 16);
+    var r = Math.max(0, (bigint >> 16) + amt);
+    var b = Math.max(0, ((bigint >> 8) & 0x00FF) + amt);
+    var g = Math.max(0, (bigint & 0x0000FF) + amt);
+    var newColor = g | (b << 8) | (r << 16);
+    return '#'+newColor.toString(16);
+}
+
 var nearTrackSpan = null
 var nearArtistSpan = null
 var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
+var mainColor2 = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_bg')
+var isLightBg = isLight(mainColor2)
 var lastDoc = null
 
 waitForElement([".track"], (queries) => {
@@ -161,33 +189,17 @@ waitForElement([".artist"], (queries) => {
     queries[0].append(nearArtistSpan);
 });
 
-function hexToRgb(hex) {
-    var bigint = parseInt(hex.replace("#",""), 16);
-    var r = (bigint >> 16) & 255;
-    var g = (bigint >> 8) & 255;
-    var b = bigint & 255;
-    return r + "," + g + "," + b;
-}
-
-function LightenDarkenColor(col, amt) {
-  var num = parseInt(col, 16);
-  var r = (num >> 16) + amt;
-  var b = ((num >> 8) & 0x00FF) + amt;
-  var g = (num & 0x0000FF) + amt;
-  var newColor = g | (b << 8) | (r << 16);
-  return '#'+newColor.toString(16);
-}
-
-function updateColors(root) {
+function updateColors(root) {    
     colHex = mainColor
     colRGB = hexToRgb(colHex)
-    darkerColHex = LightenDarkenColor(colHex, -50)
+    darkerColHex = LightenDarkenColor(colHex, isLightBg ? 50 : -50)
     darkerColRGB = hexToRgb(darkerColHex)
 
+    root.style.setProperty('--is_light', isLightBg ? 1 : 0)
+    
     root.style.setProperty('--modspotify_main_fg', colHex)
     root.style.setProperty('--modspotify_active_control_fg', colHex)
     root.style.setProperty('--modspotify_secondary_bg', colHex)
-    root.style.setProperty('--modspotify_active_control_fg', colHex)
     //root.style.setProperty('--modspotify_pressing_button_bg', colHex)
     //root.style.setProperty('--modspotify_indicator_fg_and_button_bg', colHex)
     root.style.setProperty('--modspotify_pressing_fg', colHex)
@@ -199,7 +211,6 @@ function updateColors(root) {
     root.style.setProperty('--modspotify_rgb_main_fg', colRGB)
     root.style.setProperty('--modspotify_rgb_active_control_fgg', colRGB)
     root.style.setProperty('--modspotify_rgb_secondary_bg', colRGB)
-    root.style.setProperty('--modspotify_rgb_active_control_fg', colRGB)
     //root.style.setProperty('--modspotify_rgb_pressing_button_bg', colRGB)
     //root.style.setProperty('--modspotify_rgb_indicator_fg_and_button_bg', colRGB)    
     root.style.setProperty('--modspotify_rgb_pressing_fg', colRGB)

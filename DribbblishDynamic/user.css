@@ -9,6 +9,7 @@
 	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
 	--image_url: '';
+	--is_light: 0;
 }
 
 div#popover-container::before {
@@ -1230,6 +1231,7 @@ button#player-button-repeat,
 
 /* Connect Device Popup */
 
+.ConnectPopup__device--active, .ConnectPopup__device--active:hover, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title,
 .ConnectDevicePicker__button--with-badge:after {
     background-color: var(--modspotify_main_fg);
 }
@@ -1536,12 +1538,12 @@ button[data-button=add-recommendation] {
 
 #video-player::before {
     z-index: +1;
-    opacity: 0.5;
+    opacity: calc(0.5 + 0.2 * var(--is_light, 0));
 }
 
 .main-view-wrapper::before {
     z-index: +3;
-    opacity: 0.06;
+    opacity: calc(0.06 + 0.14 * var(--is_light, 0));
 }
 
 .view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
