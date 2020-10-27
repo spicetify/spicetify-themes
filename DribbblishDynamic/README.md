@@ -2,7 +2,9 @@
 This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours.
 ## Screenshots
 #### Dark
-![demo1](./color-match-bg.gif)
+![demo-dark](./color-match-bg.gif)
+#### White
+![demo-white](./white.png)
 
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
@@ -43,7 +45,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 5 color schemes you can choose: `base`, `white`, `dark`, `nord-dark`, `nord-light`. Change scheme with commands:
+There are 2 color schemes you can choose: `white`, `dark`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
