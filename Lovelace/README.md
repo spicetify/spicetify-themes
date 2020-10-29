@@ -2,13 +2,17 @@
 
 ## Screenshots
 
-### Artist
+### Base
 
 ![Artist](./artist-screenshot.png)
 
-### Playlist
-
 ![Playlist](./playlist-screenshot.png)
+
+### Mint
+
+![Artist](artist-screenshot-mint.png)
+
+![Playlist](./playlist-screenshot-mint.png)
 
 ## More
 
