@@ -1,6 +1,7 @@
 :root {
 	--bar-height: 70px;
 	--bar-cover-art-size: 52px;
+	--large-album-art: 225px;
 	--cover-border-radius: 8px;
 	--section-border-radius: 8px;
 	--sidebar-width: 85px;
@@ -1101,6 +1102,7 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
     flex: 2 1;
     order: 2;
     min-width: 0;
+    max-width: none !important;
 }
 
 .view-player .now-playing-container .caption {
@@ -1211,11 +1213,6 @@ button#player-button-repeat,
     overflow: hidden;
 }
 
-.view-player .now-playing .cover-image-link-wrapper {
-    width: var(--bar-cover-art-size);
-    height: var(--bar-cover-art-size);
-}
-
 /* Input form */
 
 .form-control,
@@ -1300,8 +1297,8 @@ button#player-button-repeat,
 
 #view-now-playing {
     /* position: absolute; */
-    max-width: 300px;
-    max-height: 300px;
+    max-width: var(--large-album-art);
+    max-height: var(--large-album-art);
     width: unset;
     height: unset;
     position: absolute;
@@ -1313,13 +1310,13 @@ button#player-button-repeat,
 
 #view-now-playing.expanded,
 #view-now-playing.expanded .large.image {
-    width: 300px;
-    height: 300px;
+    width: var(--large-album-art);
+    height: var(--large-album-art);
 }
 
 #view-now-playing.expanded {
-    bottom: calc(var(--bar-height) + var(--main-gap));
-    left: var(--sidebar-width);
+    bottom: calc(2 * var(--main-gap) + var(--bar-height) + 2px);
+    right:  calc(2 * var(--main-gap));
 }
 
 #view-now-playing a.image.large figure,
