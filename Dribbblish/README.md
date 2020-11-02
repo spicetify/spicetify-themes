@@ -34,6 +34,12 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Mechanical
+![demoMechanical](./mechanical.png)
+
+#### Eyecandy
+![demoEyecandy](./eyecandy.png)
+
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
@@ -74,7 +80,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ### Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `gruvbox`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`. Change scheme with commands:
+There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `gruvbox`, `nord-dark`, `nord-light`, `horizon`, `samourai`, `purple`, `mechanical`, `eyecandy`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
