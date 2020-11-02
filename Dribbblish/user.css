@@ -1099,6 +1099,7 @@ body.video-full-screen .view-player .player-controls-container .progress-contain
     flex: 2 1;
     order: 2;
     min-width: 0;
+    max-width: none !important;
 }
 
 .view-player .now-playing-container .caption {
