@@ -46,10 +46,10 @@ If you want to add your theme:
 
 ## Troubleshooting
 
-If you find problems when using or installing these themes, use the
-[Spectrum](https://spectrum.chat/spicetify) chat. 
+If you find problems when using or installing these themes, or you need help in modifying the 
+`user.css` use the [Spectrum](https://spectrum.chat/spicetify) chat. 
 
-For bugs use the GitHub issues. 
+For bugs and requesting new features use the GitHub issues. 
 
 If you are unsure about which channel to use, go for Spectrum.
 
