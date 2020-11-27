@@ -170,18 +170,11 @@ function LightenDarkenColor(hex, amt) {
     return '#'+newColor.toString(16);
 }
 
-var nearTrackSpan = null
 var nearArtistSpan = null
 var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
 var mainColor2 = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_bg')
 var isLightBg = isLight(mainColor2)
 var lastDoc = null
-
-waitForElement([".track"], (queries) => {
-    nearTrackSpan = document.createElement("span");
-    nearTrackSpan.id = "dribbblish-track-info";
-    queries[0].append(nearTrackSpan);
-});
 
 waitForElement([".artist"], (queries) => {
     nearArtistSpan = document.createElement("span");
@@ -267,7 +260,6 @@ async function songchange() {
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
         album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
         
-        if (nearTrackSpan!==null) nearTrackSpan.innerText = " • " + Spicetify.Player.data.track.metadata.popularity + "%"
         if (nearArtistSpan!==null) nearArtistSpan.innerHTML = " — " + album_link + " • " + album_date
         
         //waitForElement([".album-art__artist-name"], (queries) => {
@@ -275,11 +267,9 @@ async function songchange() {
         //}, 1000)
     } else if (Spicetify.Player.data.track.metadata.album_track_number==0) {
         // podcast?
-        nearTrackSpan.innerText = ""
         nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
     } else if (Spicetify.Player.data.track.metadata.is_local=="true") {
         // local?
-        nearTrackSpan.innerText = ""
         nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
     } else {
         // When clicking a song from the homepage, songChange is fired with half empty metadata
