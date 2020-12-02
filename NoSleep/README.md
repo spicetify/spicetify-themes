@@ -6,9 +6,9 @@ target="_blank"><br><img width="100" src="https://emojipedia-us.s3.dualstack.us-
 <a href="https://twitter.com/3raxton"><img src="https://img.shields.io/badge/Contact-@3raxton-blue.svg" alt="License">
 </a>
 <a><img src="https://img.shields.io/badge/theme-dark-brightgreen.svg" alt="Theme"></a>
-<a><img src="https://img.shields.io/badge/no-sleep-red.svg" alt="NoSleep"></a>
-<a href="https://3raxton.github.io/license"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-</a>
+<a><img src="https://img.shields.io/badge/no-sleep-E71A0E.svg" alt="NoSleep"></a>
+<a href="https://3raxton.github.io/license"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+<a href="https://hits.seeyoufarm.com/"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmorpheusthewhite%2Fspicetify-themes%2Fblob%2Fmaster%2FNoSleep&count_bg=%23E71A0E&title_bg=%23000000&icon=spotify.svg&icon_color=%23E71A0E&title=hits&edge_flat=false" alt="License"></a>
 
 </p>
 
