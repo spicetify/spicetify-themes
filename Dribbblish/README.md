@@ -39,7 +39,7 @@ Requires spicetify-cli **v0.9.9 or newer**.
 
 ### How to install
 
-Run these command:
+Run these commands:
 
 #### Linux and MacOS:
 In **Bash**:
