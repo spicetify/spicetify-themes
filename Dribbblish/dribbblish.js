@@ -1,6 +1,38 @@
 // Hide popover message
 document.getElementById("popover-container").style.height = 0;
 
+// Get stored hidden sidebar list
+let appHiddenList = [];
+try {
+    const rawList = JSON.parse(localStorage.getItem("sidebar-app-hide-list"));
+    if (!Array.isArray(rawList)) throw 0;
+    appHiddenList.push(...rawList);
+} catch {
+    localStorage.setItem("sidebar-app-hide-list", "[]")
+}
+
+new Spicetify.ContextMenu.Item(
+    "Hide",
+    ([uri]) => {
+        appHiddenList.push(uri.replace("spotify:special:sidebarapp:", ""));
+        localStorage.setItem("sidebar-app-hide-list", JSON.stringify(appHiddenList));
+        window.location.reload();
+    },
+    ([uri]) => uri.startsWith("spotify:special:sidebarapp:")
+).register();
+
+for (const app of appHiddenList) {
+    new Spicetify.ContextMenu.Item(
+        "Show " + app.replace("spotify:app:", ""),
+        () => {
+            appHiddenList = appHiddenList.filter(item => item !== app);
+            localStorage.setItem("sidebar-app-hide-list", JSON.stringify(appHiddenList));
+            window.location.reload();
+        },
+        ([uri]) => uri.startsWith("spotify:special:sidebarapp:")
+    ).register();
+}
+
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));
     if (queries.every(a => a)) {
@@ -82,11 +114,23 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
     */
 
     function replaceTextWithIcon(el, iconName) {
+        const href = el.parentNode.href;
+        if (appHiddenList.indexOf(href) !== -1) {
+            let parent = el;
+            while (parent.tagName !== "LI") {
+                parent = parent.parentNode;
+            }
+            parent.remove();
+            return;
+        }
+
         if (iconName) {
             el.classList.add(`spoticon-${iconName}-24`);
         }
 
         el.parentNode.setAttribute("data-tooltip", el.innerText);
+        el.parentNode.setAttribute("data-contextmenu", "");
+        el.parentNode.setAttribute("data-uri", "spotify:special:sidebarapp:" + href);
         el.innerText = "";
     }
 
