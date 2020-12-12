@@ -26,4 +26,4 @@
 
 Author: [bBSempai](https://github.com/bbsempai)
 
-Dark Mode theme based on [Lovelace](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Lovelace)
+Neon Dark theme inspired from [Lovelace](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Lovelace)
