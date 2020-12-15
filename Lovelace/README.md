@@ -8,11 +8,24 @@
 
 ![Playlist](./playlist-screenshot.png)
 
+### Lovepink
+
+![Artist](https://i.imgur.com/sJZuz9F.png)
+
+![Playlist](https://i.imgur.com/d0a3vwG.png)
+
 ### Mint
 
 ![Artist](artist-screenshot-mint.png)
 
 ![Playlist](./playlist-screenshot-mint.png)
+
+### Neon
+
+![Artist](https://i.imgur.com/4JowX9F.png)
+
+
+![Playlist](https://i.imgur.com/SlakWFF.png)
 
 ## More
 
