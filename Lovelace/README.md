@@ -29,7 +29,7 @@
 
 ## More
 
-Author: [adriankarlen](https://github.com/adriankarlen)
+Author: [adriankarlen](https://github.com/adriankarlen)<br>Neon dark themes provided by [bBSempai](https://github.com/bbsempai)
 
 Based on [this](https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/lovelace.itermcolors) iTerm2 color scheme. 
 
