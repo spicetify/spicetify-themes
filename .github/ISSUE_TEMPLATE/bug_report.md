@@ -31,7 +31,8 @@ Add logs from console. To do that
 4. Navigate to tab Console
 5. Copy console window content.
 
-**Environment (please complete the following information):**
+**Specifics (please complete the following information):**
  - OS: [e.g. iOS]
  - Spotify version [e.g. 1.1.10.546.ge08ef575]
  - Spicetify version [e.g. 1.1.0]
+ - Theme name
