@@ -1,14 +1,16 @@
-# Spicetify Dark
+# Dark
 
 ## Screenshots
 
-Window:
+### Base
 
 ![Spicetify Dark](https://i.imgur.com/Dpfy5Gz.png)
-
-Full desktop:
-
 ![Full desktop](https://i.redd.it/ephz750tqld31.png)
+
+### Bloody
+
+![MacOS Spotify #1](screenshot1.jpg)
+![MacOS Spotify #2](screenshot2.jpg)
 
 ## Info
 
