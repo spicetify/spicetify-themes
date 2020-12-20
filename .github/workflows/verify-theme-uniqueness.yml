@@ -1,0 +1,9 @@
+name: verify-themes-uniqueness
+on: [push]
+jobs:
+  verify-theme-uniqueness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: ./.github/scripts/theme-uniqueness.sh
+
