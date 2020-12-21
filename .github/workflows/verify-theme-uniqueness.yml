@@ -1,5 +1,5 @@
 name: verify-themes-uniqueness
-on: [push]
+on: [push, pull_request]
 jobs:
   verify-theme-uniqueness:
     runs-on: ubuntu-latest

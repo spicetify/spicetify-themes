@@ -1,5 +1,5 @@
 name: validate-themes-name
-on: [push]
+on: [push, pull_request]
 jobs:
   validate-themes-name:
     runs-on: ubuntu-latest
