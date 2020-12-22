@@ -26,14 +26,14 @@ If you want to add your theme:
 
 - Fork this repository
 - Create another folder with your theme name. The theme name should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` or any whitespace in it; if a "-" is present in the name it must be followed by an uppercase letter.
-- Copy `color.ini` and `user.css` to it
+- Copy `color.ini` and `user.css` into it
 - Create a `README.md` in it with the following structure 
 ```markdown
 # THEME_NAME
 
 ## Screenshots
 
-[Put at least one image here]
+[Put at least one image per color scheme here]
 
 ## More
 
