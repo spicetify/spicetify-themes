@@ -34,6 +34,9 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Solarized-Dark
+![demo9](./solarized-dark.png)
+
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
