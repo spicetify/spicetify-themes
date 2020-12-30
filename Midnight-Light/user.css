@@ -12,3 +12,36 @@
 #view-leaderboard-ad {
   display: none !important;
 }
+
+/* Top Alert bar warning */
+.alert,
+/* Button that shows "Offline" */
+.offline-label-wrapper,
+/* The Cast button */
+.button.button-blue,
+.button.button-blue:hover,
+/* Facebook settings button */
+.button.button-facebook,
+.button.button-facebook:hover {
+  color: white !important;
+}
+
+/* The play button */
+.button.button-green {
+  background: #63cc88;
+  color: white !important;
+}
+
+.button.button-green:hover {
+  background: #3a8655 !important;
+}
+
+/* The profile picture */
+.card-placeholder-wrapper {
+  background: var(--modspotify_main_fg);
+}
+
+.slider,
+.slider.enabled {
+  border: 2px solid var(--modspotify_slider_bg);
+}
