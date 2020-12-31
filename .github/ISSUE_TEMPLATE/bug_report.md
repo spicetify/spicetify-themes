@@ -31,6 +31,10 @@ Add logs from console. To do that
 4. Navigate to tab Console
 5. Copy console window content.
 
+```console
+(Please paste here console logs or attach a screenshot)
+```
+
 **Specifics (please complete the following information):**
  - OS: [e.g. iOS]
  - Spotify version [e.g. 1.1.10.546.ge08ef575]
