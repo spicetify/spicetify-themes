@@ -1509,11 +1509,6 @@ button[data-button=add-recommendation] {
     pointer-events: none;
 }
 
-#content .app-content, #tracklist-container {
-    padding-left: 1px !important;
-    padding-right: 1px !important;
-}
-
 #video-player::before, .main-view-wrapper::before {
     content: '';
     background-image: var(--image_url);
