@@ -13,6 +13,9 @@
 #### Dracula
 ![demo4](./dracula.png)
 
+#### Dracula2
+![demoDracula2](./dracula2.png)
+
 #### Gruvbox
 ![demoGruvbox](./gruvbox.png)
 
