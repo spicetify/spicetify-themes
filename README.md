@@ -53,3 +53,4 @@ For bugs and requesting new features use the GitHub issues.
 
 If you are unsure about which channel to use, go for Spectrum.
 
+NOTE: Spotify ad-blocked version is not supported.
