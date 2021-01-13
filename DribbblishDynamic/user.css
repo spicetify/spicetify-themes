@@ -1556,3 +1556,10 @@ button[data-button=add-recommendation] {
 .SearchInput__input:focus, .SearchInput__input:hover {
     background-color: rgba(var(--modspotify_rgb_main_fg), 0.05);
 }
+
+#offline-global-progress{
+    width: 85px;
+    height: 80px;
+    padding-left: 1px!important;
+    padding-right: 1px!important;
+}
