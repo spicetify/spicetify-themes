@@ -11,7 +11,7 @@
 }
 
 div#popover-container::before {
-    content: "You haven't installed 'dribbblish.js' extension. Please run follow instruction on theme README page.";
+    content: "You haven't installed 'dribbblish.js' extension. Please follow instructions on theme README page.";
     font-size: 30px;
 }
 
@@ -643,6 +643,10 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .body-container--windows .LeftSidebar {
 	margin-top: calc(var(--os-windows-icon-dodge) * 30px);
+}
+
+.body-container--mac .LeftSidebar {
+    margin-top: 24px;
 }
 
 .RootlistItem--is-active:before {
