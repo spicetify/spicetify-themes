@@ -8,6 +8,9 @@
 	--main-gap: 10px;
 	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
 	--os-windows-icon-dodge: 1;
+	/* If you don't want to use SpotifyNoControl.exe and want your top-gap fancy set this variable to 1 */
+	/* IMPORTANT: This option only works with --os-windows-icon-dodge set to 1 */
+	--os-windows-top-gap: 1;
 }
 
 div#popover-container::before {
@@ -358,7 +361,7 @@ body {
 /* [WINDOWS] Change Profile menu horizontal position */
 
 body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
-	right: calc(var(--os-windows-icon-dodge) * 170px + 20px) !important;
+	right: calc(var(--os-windows-icon-dodge) * 170px - var(--os-windows-top-gap) * 170px + 20px) !important;
 }
 
 body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdown {
@@ -1439,7 +1442,7 @@ button#player-button-repeat,
     width: calc(100% - var(--sidebar-width) - var(--main-gap));
     height: calc(100% - var(--bar-height) - var(--main-gap) * 2);
     left: var(--sidebar-width);
-    top: var(--main-gap);
+    top: calc(var(--os-windows-top-gap) * 30px + 10px);
     border-radius: var(--main-corner-radius) var(--main-corner-radius) 0 0;
     overflow: hidden;
 }
@@ -1497,7 +1500,7 @@ button[data-button=add-recommendation] {
     width: calc(100% - var(--sidebar-width) - var(--main-gap));
     height: calc(100% - var(--main-gap) * 2);
     left: var(--sidebar-width);
-    top: var(--main-gap);
+    top: calc(var(--os-windows-top-gap) * 30px + 10px);
     box-shadow: 0 0 10px 3px #0000003b;
     border-radius: var(--main-corner-radius);
     z-index: 1;
