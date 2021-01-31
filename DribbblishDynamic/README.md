@@ -1,8 +1,11 @@
 # DribbblishDynamic
-This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours.
+This is a tweaked version of Dribbblish theme. The main difference is that the highligh color is dynamic, ie. it will match the current album art colours (note: local files are excluded).
+
 ## Screenshots
+
 #### Dark
 ![demo-dark](./color-match-bg.gif)
+
 #### White
 ![demo-white](./white.png)
 
