@@ -9,9 +9,15 @@
 
 ![VPFut](screenshot.png)
 
+### Discord
+
+![Discord themed Spotify screenshot](discord.png)
+
 ## More
 
 Inspired by [One Dark UI](https://atom.io/themes/one-dark-ui). Feedback is always appreciated :).
 
 VPFut color scheme developed by [Caio Domingues](https://github.com/caiodomingues)
 
+Discord color scheme developed by [@davomyan](https://github.com/DavoMyan)
+Twitter: [@davomyan](https://twitter.com/DavoMyan)
