@@ -34,8 +34,8 @@
 }
 .profile .incognito-badge { /* Online - playing music */
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='14.5' y='17' width='21' height='21' viewBox='0 0 25 25'%3E%3Cmask id='1de335f8-922e-4b97-b0dc-d3e29e64b60f'%3E%3Crect x='7.5' y='5' width='10' height='10' rx='5' ry='5' fill='transparent'%3E%3C/rect%3E%3Crect x='6.25' y='3.75' width='7.5' height='7.5' rx='3.75' ry='3.75' fill='transparent'%3E%3C/rect%3E%3Cpolygon points='-2.16506,-2.5 2.16506,0 -2.16506,2.5' fill='transparent' transform='scale(0) translate(13.125 10)' style='transform-origin: 13.125px 10px;'%3E%3C/polygon%3E%3Ccircle fill='transparent' cx='12.5' cy='10' r='0'%3E%3C/circle%3E%3C/mask%3E%3Crect fill='transparent' width='25' height='15' mask='url(%231de335f8-922e-4b97-b0dc-d3e29e64b60f)'%3E%3C/rect%3E%3C/svg%3E");
-    top: 15px;
-    left: 16px;
+    top: 62.5%;
+    left: 66.6%;
 	background-color: #43b581;
 	height: 9px;
     width: 9px;
@@ -57,14 +57,14 @@
 	display: unset;
 }
 
-.tooltip, #tooltip {
+.tooltip, #tooltip, .Tooltip {
 	background-color: var(--s-context-menu);
 	border-radius: 4px !important;
 }
 .tooltip-arrow-bottom {
 	border-top: 5px solid var(--s-context-menu);
 }
-.tooltip-arrow-top {
+.tooltip-arrow-top, .Tooltip__arrow {
 	border-bottom: 5px solid var(--s-context-menu);
 }
 
