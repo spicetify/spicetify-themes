@@ -281,10 +281,13 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 		/* hover */ .LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
 			color: var(--s-lightgray)
 		}
-
+	
+	.SidebarListItem {
+		transition-duration: 1s;
+	}
 	.SidebarListItem:hover {
 		background-color: var(--s-unprogress);
-		animation-duration: 3s;
+		transition-duration: 1s;
 	}
 
 	/* links */ .SidebarListItemLink:link, .SidebarListItemLink:visited {
