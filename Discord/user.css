@@ -669,6 +669,11 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 		color: var(--s-fg)
 	}
 
+	/* Images used for album art */
+	.card-image {
+		border-radius: 4px;
+	}
+
 	/* image carousel */ .image-carousel__count, .image-carousel__count .current-slide {
 		color: var(--s-fg)
 	}
