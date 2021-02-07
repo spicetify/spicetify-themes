@@ -3,12 +3,12 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family:Raleway;
+	font-family:Raleway, sans-serif;
 	text-transform:uppercase !important;
 	font-weight:lighter !important;
 }
 body {
-	font-family:Google Sans;
+	font-family:Google Sans, sans-serif;
 	font-weight:bold;	
 }
 
