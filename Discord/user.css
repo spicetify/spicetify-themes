@@ -371,6 +371,8 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 			color: #72767d;
 		}
 
+
+
 /* context menu */
 	/* background */ .context-menu, .MenuItem, .Menu {
 		background-color: var(--s-context-menu);
@@ -672,6 +674,10 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 
 	/* Images used for album art */
 	.card-image {
+		border-radius: 4px;
+	}
+
+	.Card__image {
 		border-radius: 4px;
 	}
 
