@@ -25,8 +25,9 @@
 	--s-darkgray: #555753;
 }
 
-.Card__image {
-    border-radius: 8px;
+/* Images used for album art */
+.card-image, .Card__image, .card, .gc-image-container, .Card__overlay {
+	border-radius: 8px;
 }
 
 .profile .incognito-badge.paused { /* Away - not playing music */
@@ -285,6 +286,15 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 		/* hover */ .LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
 			color: var(--s-lightgray)
 		}
+	
+	.SidebarListItem {
+		transition-duration: 0.5s;
+    	border-radius: 2px;
+    	margin: 2px 8px;
+	}
+	.SidebarListItem:hover {
+		background-color: var(--s-unprogress);
+	}
 
 	/* links */ .SidebarListItemLink:link, .SidebarListItemLink:visited {
 		color: var(--s-fg)
@@ -369,6 +379,8 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 		/* search icon */ .spoticon-search-16::before {
 			color: #72767d;
 		}
+
+
 
 /* context menu */
 	/* background */ .context-menu, .MenuItem, .Menu {
