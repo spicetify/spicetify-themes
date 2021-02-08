@@ -254,14 +254,6 @@ function updateColors(root) {
     //root.style.setProperty('--modspotify_rgb_scrollbar_fg_and_selected_row_bg', darkerColRGB)
     root.style.setProperty('--modspotify_rgb_selected_button', darkerColRGB)
     //root.style.setProperty('--modspotify_rgb_miscellaneous_hover_bg', colRGB)
-    // Also update the color of the icons for bright and white backgrounds to remain readable.
-    var colRGB = colRGB.split(",")
-    var brightness = Math.round(((parseInt(colRGB[0]) * 299) +
-        (parseInt(colRGB[1]) * 587) +
-        (parseInt(colRGB[2]) * 114)) / 1000);
-    var textColour = (brightness > 125) ? '#000000' : '#ffffff';
-    root.style.setProperty('--modspotify_preserve_1', textColour);
-    
 }
 
 function updateColorsAllIframes() {
