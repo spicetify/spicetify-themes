@@ -254,6 +254,11 @@ function updateColors(root) {
     //root.style.setProperty('--modspotify_rgb_scrollbar_fg_and_selected_row_bg', darkerColRGB)
     root.style.setProperty('--modspotify_rgb_selected_button', darkerColRGB)
     //root.style.setProperty('--modspotify_rgb_miscellaneous_hover_bg', colRGB)
+
+    // Also update the color of the icons for bright and white backgrounds to remain readable.
+    isLightFg = isLight(colHex);
+    iconCol = getComputedStyle(document.documentElement).getPropertyValue(isLightFg ? '--modspotify_main_bg' : '--modspotify_secondary_fg');
+    root.style.setProperty('--modspotify_preserve_1', iconCol);
 }
 
 function updateColorsAllIframes() {
