@@ -1246,7 +1246,7 @@ button#player-button-repeat,
 
 .button.button-blue {
     background-color: var(--modspotify_main_fg);
-    color: var(--modspotify_secondary_fg);
+    color: var(--modspotify_preserve_1);
 }
 
 /* Volume bar */
@@ -1270,8 +1270,8 @@ button#player-button-repeat,
 
 /* Notification */
 .notification-bubble-container>div {
-    background: var(--modspotify_main_fg);
-    color: var(--modspotify_secondary_fg);
+    background-color: var(--modspotify_main_fg);
+    color: var(--modspotify_preserve_1);
 }
 
 .view-player .text-container .text-item-container .text-item .scroll-text-container:after {
