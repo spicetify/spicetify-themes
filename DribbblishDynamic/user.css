@@ -1,20 +1,20 @@
 :root {
-	--bar-height: 70px;
-	--bar-cover-art-size: 52px;
-	--large-album-art: 225px;
-	--cover-border-radius: 8px;
-	--section-border-radius: 8px;
-	--sidebar-width: 85px;
-	--main-corner-radius: 15px;
-	--main-gap: 10px;
-	/* If you are using SpotifyNoControl.exe, set this variable to 0 */
-	--os-windows-icon-dodge: 1;
-	--image_url: '';
-	--is_light: 0;
+    --bar-height: 70px;
+    --bar-cover-art-size: 52px;
+    --large-album-art: 225px;
+    --cover-border-radius: 8px;
+    --section-border-radius: 8px;
+    --sidebar-width: 85px;
+    --main-corner-radius: 15px;
+    --main-gap: 10px;
+    /* If you are using SpotifyNoControl.exe, set this variable to 0 */
+    --os-windows-icon-dodge: 1;
+    --image_url: '';
+    --is_light: 0;
 }
 
 div#popover-container::before {
-    content: "You haven't installed 'dribbblish.js' extension. Please run follow instruction on theme README page.";
+    content: "You haven't installed 'dribbblish-dynamic.js' extension. Please follow instructions on theme README page.";
     font-size: 30px;
 }
 
@@ -47,9 +47,9 @@ div#popover-container::before {
 }
 
 body {
-	--glue-font-family: "Google Sans Display", "spotify-circular", "Noto Sans CJK JP Bold", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
-	--info-font-family: "Roboto", "spotify-circular", "Noto Sans CJK JP Thin", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
-	letter-spacing: 0;
+    --glue-font-family: "Google Sans Display", "spotify-circular", "Noto Sans CJK JP Bold", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+    --info-font-family: "Roboto", "spotify-circular", "Noto Sans CJK JP Thin", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+    letter-spacing: 0;
 }
 
 /*Round corner cover image*/
@@ -229,8 +229,8 @@ body {
 }
 
 .body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
-	margin-right: calc(var(--os-windows-icon-dodge) * 110px) !important;
-	margin-top: calc(var(--os-windows-icon-dodge) * -5px);
+    margin-right: calc(var(--os-windows-icon-dodge) * 110px) !important;
+    margin-top: calc(var(--os-windows-icon-dodge) * -5px);
 }
 
 /* Spice up Fullscreen mode */
@@ -361,7 +361,7 @@ body {
 /* [WINDOWS] Change Profile menu horizontal position */
 
 body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
-	right: calc(var(--os-windows-icon-dodge) * 170px + 20px) !important;
+    right: calc(var(--os-windows-icon-dodge) * 170px + 20px) !important;
 }
 
 body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdown {
@@ -645,7 +645,11 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .body-container--windows .LeftSidebar {
-	margin-top: calc(var(--os-windows-icon-dodge) * 30px);
+    margin-top: calc(var(--os-windows-icon-dodge) * 30px);
+}
+
+.body-container--mac .LeftSidebar {
+    margin-top: 24px;
 }
 
 .RootlistItem--is-active:before {
@@ -1507,6 +1511,11 @@ button[data-button=add-recommendation] {
     background: linear-gradient(to top, var(--modspotify_secondary_bg) 10%, transparent);
     z-index: 3;
     pointer-events: none;
+}
+
+#content .app-content, #tracklist-container {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
 }
 
 #video-player::before, .main-view-wrapper::before {
