@@ -188,7 +188,6 @@ function getAlbumInfo(uri) {
 }
 
 function isLight(hex) {
-    var rgb = hexToRgb(hex);
     var [r,g,b] = hexToRgb(hex).split(',').map(Number);
     const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
     return brightness > 128;
