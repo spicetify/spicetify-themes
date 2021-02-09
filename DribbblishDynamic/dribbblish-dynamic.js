@@ -188,12 +188,10 @@ function getAlbumInfo(uri) {
 }
 
 function isLight(hex) {
-    var bigint = parseInt(hex.replace("#",""), 16);
-    var r = (bigint >> 16) & 255;
-    var g = (bigint >> 8) & 255;
-    var b = bigint & 255;
+    var rgb = hexToRgb(hex);
+    var [r,g,b] = rgb.split(',');
     const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-    return brightness > 155;
+    return brightness > 128;
 }
 
 function hexToRgb(hex) {
