@@ -440,7 +440,7 @@ body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdo
 .Button--style-icon-background:hover,
 .button.button-icon-with-stroke:hover {
     transform: none !important;
-    background-color: var(--modspotify_indicator_fg_and_button_bg) !important;
+    background-color: var(--modspotify_sidebar_indicator_and_hover_button_bg) !important;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.26) !important;
 }
 
