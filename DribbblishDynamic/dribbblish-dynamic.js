@@ -188,12 +188,9 @@ function getAlbumInfo(uri) {
 }
 
 function isLight(hex) {
-    var bigint = parseInt(hex.replace("#",""), 16);
-    var r = (bigint >> 16) & 255;
-    var g = (bigint >> 8) & 255;
-    var b = bigint & 255;
+    var [r,g,b] = hexToRgb(hex).split(',').map(Number);
     const brightness = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-    return brightness > 155;
+    return brightness > 128;
 }
 
 function hexToRgb(hex) {
@@ -205,10 +202,10 @@ function hexToRgb(hex) {
 }
 
 function LightenDarkenColor(hex, amt) {
-    var bigint = parseInt(hex.replace("#",""), 16);
-    var r = Math.max(0, (bigint >> 16) + amt);
-    var b = Math.max(0, ((bigint >> 8) & 0x00FF) + amt);
-    var g = Math.max(0, (bigint & 0x0000FF) + amt);
+    var [r,g,b] = hexToRgb(hex).split(',').map(Number);
+    r = Math.max(0, r + amt);
+    b = Math.max(0, b + amt);
+    g = Math.max(0, g + amt);
     var newColor = g | (b << 8) | (r << 16);
     return '#'+newColor.toString(16);
 }
