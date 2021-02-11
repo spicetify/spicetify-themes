@@ -677,6 +677,24 @@ body.remotebar .view-player .player-bar-wrapper {
     height: 32px;
 }
 
+/* Download and offline bottom bars */
+
+.offline-label-wrapper,
+.sidebar #offline-global-progress {
+    bottom: calc(var(--bar-height) + var(--main-gap));
+    left: calc(var(--sidebar-width));
+    z-index: 4;
+    margin-right: 24px;
+    position: absolute;
+}
+
+.offline-label-wrapper {
+    background-color: var(--modspotify_sidebar_and_player_bg)
+}
+.sidebar #offline-global-progress p {
+    background-color: var(--modspotify_main_fg) !important;
+}
+
 /* Mood card */
 
 .gc-image-container,
