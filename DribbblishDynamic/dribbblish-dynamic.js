@@ -139,7 +139,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 case "reddit":                  return "discover";
                 case "made-for-you":            return "user";
                 case "recently-played":         return "time";
-                case "collection-songs":        return "collection";
+                case "collection-songs":        return "heart";
                 case "collection:albums":       return "album";
                 case "collection:artists":      return "artist";
                 case "collection:podcasts":     return "podcasts";
