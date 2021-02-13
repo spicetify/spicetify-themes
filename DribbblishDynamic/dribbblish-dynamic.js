@@ -41,9 +41,6 @@ function waitForElement(els, func, timeout = 100) {
     }
 }
 
-// Add "Open User Profile" item in profile menu
-new Spicetify.Menu.Item(window.__spotify.username, false, () => window.open(window.__spotify.userUri)).register();
-
 waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__list"], (queries) => {
     /** Replace Playlist name with their pictures */
     function loadPlaylistImage() {
