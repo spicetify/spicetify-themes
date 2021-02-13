@@ -64,9 +64,8 @@ body {
     overflow: hidden !important;
 }
 
-/*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom */
+/*Hide some annoying elements like upgrade button and device connect bar at bottom */
 
-.profile.content-top-bar__profile-link,
 .upgrade-button,
 .view-player .remote-playback-bar {
     display: none !important;
@@ -218,19 +217,11 @@ body {
     margin-left: 8px;
 }
 
+.content-top-bar__profile,
 .SearchInput__input,
 .SearchInput__searchIcon,
 .SearchInput__clearButton {
     margin-top: 15px !important;
-}
-
-.content-top-bar__profile-menu-button {
-    margin-top: 15px !important;
-}
-
-.body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
-    margin-right: calc(var(--os-windows-icon-dodge) * 110px) !important;
-    margin-top: calc(var(--os-windows-icon-dodge) * -5px);
 }
 
 /* Spice up Fullscreen mode */
@@ -348,24 +339,6 @@ body {
 
 #view-now-playing a.image {
     overflow: visible !important;
-}
-
-/* Profile arrow in top left */
-
-.content-top-bar__profile-menu-button .dropdown {
-    position: fixed !important;
-    top: 10px !important;
-    -webkit-app-region: no-drag !important;
-}
-
-/* [WINDOWS] Change Profile menu horizontal position */
-
-body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
-    right: calc(var(--os-windows-icon-dodge) * 170px + 20px) !important;
-}
-
-body:not(.body-container--windows) .content-top-bar__profile-menu-button .dropdown {
-    right: 20px !important;
 }
 
 /* Small tooltip */
