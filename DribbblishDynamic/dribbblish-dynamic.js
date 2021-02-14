@@ -200,11 +200,10 @@ function hexToRgb(hex) {
 
 const LightenDarkenColor = (h, p) => '#' + [1, 3, 5].map(s => parseInt(h.substr(s, 2), 16)).map(c => parseInt((c * (100 + p)) / 100)).map(c => (c < 255 ? c : 255)).map(c => c.toString(16).padStart(2, '0')).join('');
 
-var nearArtistSpan = null
-var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
-var mainColor2 = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_bg')
-var isLightBg = isLight(mainColor2)
-var lastDoc = null
+let nearArtistSpan = null
+let mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
+let mainColor2 = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_bg')
+let isLightBg = isLight(mainColor2)
 
 waitForElement([".artist"], (queries) => {
     nearArtistSpan = document.createElement("span");
@@ -213,10 +212,11 @@ waitForElement([".artist"], (queries) => {
 });
 
 function updateColors(root) {    
-    colHex = mainColor
-    colRGB = hexToRgb(colHex)
-    darkerColHex = LightenDarkenColor(colHex, isLightBg ? 40 : -40)
-    darkerColRGB = hexToRgb(darkerColHex)
+    let colHex = mainColor
+    if( isLightBg ) colHex = LightenDarkenColor(colHex, -5) // vibrant color is always too bright for white bg mode
+    let colRGB = hexToRgb(colHex)
+    let darkerColHex = LightenDarkenColor(colHex, isLightBg ? 40 : -40)
+    let darkerColRGB = hexToRgb(darkerColHex)
 
     root.style.setProperty('--is_light', isLightBg ? 1 : 0)
     
@@ -272,11 +272,11 @@ function updateColorsAllIframes() {
     if (document.querySelector("#app-artist")!=null) updateColors(document.querySelector("#app-artist").contentDocument.documentElement)
     
     // code below works but then generate many errors on page change.
-    /*frames = document.getElementsByTagName("iframe");
+    frames = document.getElementsByTagName("iframe");
     for (i=0; i<frames.length; ++i) {
         console.log(i+". "+frames[i].id)
         updateColors(frames[i].contentDocument.documentElement)
-    }*/
+    }
 }
 
 function trickHideGradient(display) {
@@ -285,44 +285,47 @@ function trickHideGradient(display) {
 }
 
 async function songchange() {
-    album_uri = Spicetify.Player.data.track.metadata.album_uri
+    let album_uri = Spicetify.Player.data.track.metadata.album_uri
     
     if (album_uri!==undefined) {
         const albumInfo = await getAlbumInfo(album_uri.replace("spotify:album:", ""))
 
-        album_date = new Date(albumInfo.year, (albumInfo.month || 1)-1, albumInfo.day|| 0)
-        recent_date = new Date()
+        let album_date = new Date(albumInfo.year, (albumInfo.month || 1)-1, albumInfo.day|| 0)
+        let recent_date = new Date()
         recent_date.setMonth(recent_date.getMonth() - 6)
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
         album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
         
-        if (nearArtistSpan!==null) nearArtistSpan.innerHTML = " — " + album_link + " • " + album_date
-        
-        //waitForElement([".album-art__artist-name"], (queries) => {
-        //    queries[0].innerText += "`n" + Spicetify.Player.data.track.metadata.album_title + " • " + album_date
-        //}, 1000)
+        if (nearArtistSpan!==null)
+            nearArtistSpan.innerHTML = " — " + album_link + " • " + album_date
     } else if (Spicetify.Player.data.track.metadata.album_track_number==0) {
-        // podcast?
+        // podcast
         nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
     } else if (Spicetify.Player.data.track.metadata.is_local=="true") {
-        // local?
+        // local file
         nearArtistSpan.innerText = " — " + Spicetify.Player.data.track.metadata.album_title
     } else {
         // When clicking a song from the homepage, songChange is fired with half empty metadata
         // todo: retry only once?
         setTimeout(songchange, 200)
     }
-    
+
     document.documentElement.style.setProperty('--image_url', 'url("'+Spicetify.Player.data.track.metadata.image_url+'")')
 
     Spicetify.colorExtractor(Spicetify.Player.data.track.uri)
         .then((colors) => {
             mainColor = colors['LIGHT_VIBRANT']
-            while( mainColor.length!=4 && mainColor.length<7 ) { mainColor = mainColor.replace("#", "#0"); }
 
-            trickHideGradient('none')
-            updateColors(document.documentElement) // main app
+            // Spotify returns hex colors with improper length
+            while( mainColor.length!=4 && mainColor.length<7 )
+                { mainColor = mainColor.replace("#", "#0"); }
+
+            // main app
+            trickHideGradient('none') // bottom left gradient looks bad when changing color
+            updateColors(document.documentElement)
             setTimeout(trickHideGradient, 1500, 'block') //animation lasts 1.5sec
+
+            // most pages are iframes, they need a specific color update
             updateColorsAllIframes()
         }, (err) => {
             console.log(err)
@@ -335,7 +338,8 @@ async function songchange() {
 Spicetify.Player.addEventListener("songchange", songchange)
 Spicetify.Player.addEventListener("appchange", ({"data": data}) => {
     //console.log(data.container)
-    //lastDoc = data.container.contentDocument.documentElement || data.container
     setTimeout(updateColorsAllIframes, 200)
-    //updateColorsAllIframes()
 })
+
+// Add "About" item in profile menu
+new Spicetify.Menu.Item("About", false, () => window.open("spotify:app:about")).register();
