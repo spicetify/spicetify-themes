@@ -136,9 +136,9 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 case "genius":                  return "lyrics";
                 case "JQBX":                    return "addsuggestedsong";
                 case "bookmark":                return "tag";
-                case "reddit":                  return "discover";
-                case "made-for-you":            return "user";
-                case "recently-played":         return "time";
+                case "reddit":                  return "trending";
+                case "made-for-you":            return "headphones";
+                case "recently-played":         return "refresh";
                 case "collection-songs":        return "heart";
                 case "collection:albums":       return "album";
                 case "collection:artists":      return "artist";
@@ -158,7 +158,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
         });
 
     waitForElement([`[href="spotify:app:recently-played"]`], ([query]) => {
-        replaceTextWithIcon(query.firstChild, "time");
+        replaceTextWithIcon(query.firstChild, "refresh");
     });
 });
 
@@ -270,6 +270,8 @@ function updateColorsAllIframes() {
     if (document.querySelector("#app-search")!=null) updateColors(document.querySelector("#app-search").contentDocument.documentElement)
     // genius
     if (document.querySelector("#app-genius")!=null) updateColors(document.querySelector("#app-genius").contentDocument.documentElement)
+    // reddit
+    if (document.querySelector("#app-reddit")!=null) updateColors(document.querySelector("#app-reddit").contentDocument.documentElement)
     // browse
     if (document.querySelector("#app-browse")!=null) updateColors(document.querySelector("#app-browse").contentDocument.documentElement)
     // genre
