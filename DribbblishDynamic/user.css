@@ -952,7 +952,7 @@ select {
 /* Toggle button */
 
 .slider {
-    background: var(--modspotify_secondary_fg);
+    background: var(--modspotify_miscellaneous_bg);
     border: 0;
     height: 18px;
     border-radius: 9px;
