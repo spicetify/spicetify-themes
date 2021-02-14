@@ -1223,7 +1223,16 @@ button#player-button-repeat,
 
 /* Connect Device Popup */
 
-.ConnectPopup__device--active, .ConnectPopup__device--active:hover, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title,
+.ConnectPopup__device--active,
+.ConnectPopup__device--active .ConnectPopup__device-info,
+.ConnectPopup__device--active .ConnectPopup__device-title {
+    color: var(--modspotify_preserve_1);
+}
+
+.ConnectPopup__device--active,
+.ConnectPopup__device--active:hover,
+.ConnectPopup__device--active .ConnectPopup__device-info,
+.ConnectPopup__device--active .ConnectPopup__device-title,
 .ConnectDevicePicker__button--with-badge:after {
     background-color: var(--modspotify_main_fg);
 }

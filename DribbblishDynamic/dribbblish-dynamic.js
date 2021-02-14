@@ -149,9 +149,9 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                  * Uncomment 3 lines below if you're using old version of Spotify that
                  * does not have Home/Browse/Radio app icons by default.
                  */
-                //case "home":					return "home";
-                //case "browse":	                return "browse";
-                //case "radio":	                return "radio";
+                //case "home":                  return "home";
+                //case "browse":                return "browse";
+                //case "radio":                 return "radio";
             }})(item.href.replace("spotify:app:", ""));
 
             replaceTextWithIcon(item.firstChild, icon);
@@ -198,14 +198,7 @@ function hexToRgb(hex) {
     return r + "," + g + "," + b;
 }
 
-function LightenDarkenColor(hex, amt) {
-    var [r,g,b] = hexToRgb(hex).split(',').map(Number);
-    r = Math.max(0, r + amt);
-    b = Math.max(0, b + amt);
-    g = Math.max(0, g + amt);
-    var newColor = g | (b << 8) | (r << 16);
-    return '#'+newColor.toString(16);
-}
+const LightenDarkenColor = (h, p) => '#' + [1, 3, 5].map(s => parseInt(h.substr(s, 2), 16)).map(c => parseInt((c * (100 + p)) / 100)).map(c => (c < 255 ? c : 255)).map(c => c.toString(16).padStart(2, '0')).join('');
 
 var nearArtistSpan = null
 var mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
@@ -222,7 +215,7 @@ waitForElement([".artist"], (queries) => {
 function updateColors(root) {    
     colHex = mainColor
     colRGB = hexToRgb(colHex)
-    darkerColHex = LightenDarkenColor(colHex, isLightBg ? 50 : -50)
+    darkerColHex = LightenDarkenColor(colHex, isLightBg ? 40 : -40)
     darkerColRGB = hexToRgb(darkerColHex)
 
     root.style.setProperty('--is_light', isLightBg ? 1 : 0)
