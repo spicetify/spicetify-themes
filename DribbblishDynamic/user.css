@@ -952,7 +952,7 @@ select {
 /* Toggle button */
 
 .slider {
-    background: var(--modspotify_secondary_fg);
+    background: var(--modspotify_miscellaneous_bg);
     border: 0;
     height: 18px;
     border-radius: 9px;
@@ -1223,7 +1223,16 @@ button#player-button-repeat,
 
 /* Connect Device Popup */
 
-.ConnectPopup__device--active, .ConnectPopup__device--active:hover, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title,
+.ConnectPopup__device--active,
+.ConnectPopup__device--active .ConnectPopup__device-info,
+.ConnectPopup__device--active .ConnectPopup__device-title {
+    color: var(--modspotify_preserve_1);
+}
+
+.ConnectPopup__device--active,
+.ConnectPopup__device--active:hover,
+.ConnectPopup__device--active .ConnectPopup__device-info,
+.ConnectPopup__device--active .ConnectPopup__device-title,
 .ConnectDevicePicker__button--with-badge:after {
     background-color: var(--modspotify_main_fg);
 }
