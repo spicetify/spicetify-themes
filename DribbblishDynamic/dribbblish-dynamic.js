@@ -256,35 +256,15 @@ function updateColors(root) {
 }
 
 function updateColorsAllIframes() {
-    // playing queue
-    if (document.querySelector("#app-queue")!=null) updateColors(document.querySelector("#app-queue").contentDocument.documentElement)
-    // collection (podcast, recent, etc.)
-    if (document.querySelector("#app-collection")!=null) updateColors(document.querySelector("#app-collection").contentDocument.documentElement)
-    // collection (local files)
-    if (document.querySelector("#app-collection-songs")!=null) updateColors(document.querySelector("#app-collection-songs").contentDocument.documentElement)
-    // buddy list
-    if (document.querySelector("#iframe-buddy-list")!=null) updateColors(document.querySelector("#iframe-buddy-list").contentDocument.documentElement)
-    // playlist
-    if (document.querySelector("#app-playlist")!=null) updateColors(document.querySelector("#app-playlist").contentDocument.documentElement)
-    // search
-    if (document.querySelector("#app-search")!=null) updateColors(document.querySelector("#app-search").contentDocument.documentElement)
-    // genius
-    if (document.querySelector("#app-genius")!=null) updateColors(document.querySelector("#app-genius").contentDocument.documentElement)
-    // reddit
-    if (document.querySelector("#app-reddit")!=null) updateColors(document.querySelector("#app-reddit").contentDocument.documentElement)
-    // browse
-    if (document.querySelector("#app-browse")!=null) updateColors(document.querySelector("#app-browse").contentDocument.documentElement)
-    // genre
-    if (document.querySelector("#app-genre")!=null) updateColors(document.querySelector("#app-genre").contentDocument.documentElement)
-    // artist
-    if (document.querySelector("#app-artist")!=null) updateColors(document.querySelector("#app-artist").contentDocument.documentElement)
     
-    // code below works but then generate many errors on page change.
-    /*frames = document.getElementsByTagName("iframe");
+    // Update colors for all iframes.
+    // works but may generate errors on page change.
+    frames = document.getElementsByTagName("iframe");
     for (i=0; i<frames.length; ++i) {
         console.log(i+". "+frames[i].id)
         updateColors(frames[i].contentDocument.documentElement)
-    }*/
+    }
+    
 }
 
 function trickHideGradient(display) {
