@@ -2,6 +2,22 @@
   --bar-height: 120px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: San Francisco Display, sans-serif;
+  text-transform: uppercase !important;
+}
+body {
+  font-family: San Francisco Display, sans-serif;
+}
+
+/** {
+	font-family:Google Sans;
+}*/
 /*Round corner cover image*/
 .card-image,
 .card-placeholder-wrapper,
@@ -347,6 +363,32 @@ Change text color in playlist
   border-radius: 30px !important;
 }
 
+#video-player .album-art__foreground {
+  flex-direction: row;
+  text-align: left;
+}
+
+#video-player .album-art__background {
+  background-color: initial;
+}
+
+#video-player .album-art__track-details {
+  padding-left: 50px;
+  line-height: initial;
+}
+
+#video-player .album-art__track-title {
+  font-size: 84px;
+  margin-top: 0;
+  line-height: initial;
+}
+
+#video-player .album-art__artist-name {
+  font-size: 54px;
+  margin-top: 0;
+  line-height: initial;
+}
+
 /* Daily mixes */
 .carousel
   .card-info-wrapper.card-info-with-description.card-info-with-metadata {
@@ -391,24 +433,18 @@ and add little glowing effect
 }
 
 /* Small cover Big cover mechanism */
-.now-playing.cover-size-transition.active.image-expanded .cover-image {
-  width: 10px !important;
-  height: 10px !important;
+.now-playing.cover-size-transition.active.image-expanded
+  #now-playing-image-small {
+  display: none;
 }
-.now-playing.cover-size-transition.active.image-expanded .caption {
-  padding-left: 0px !important;
+
+.now-playing.cover-size-transition.active.image-expanded
+  .cover-image-link-wrapper {
+  flex: 0 1 10px;
 }
+
 #view-now-playing a.image {
   overflow: visible !important;
-}
-
-#view-now-playing.expanded {
-  width: 200px;
-  height: 200px;
-}
-
-#now-playing-image-large .cover-image {
-  height: 200px !important;
 }
 
 /* Profile arrow in top left */
@@ -418,6 +454,7 @@ and add little glowing effect
   -webkit-app-region: no-drag !important;
 }
 
+/* [WINDOWS] Change Profile menu horizontal position */
 body.body-container--windows .content-top-bar__profile-menu-button .dropdown {
   right: 190px !important;
 }
@@ -544,6 +581,20 @@ span.glue-page-header__title-text {
   overflow: unset;
 }
 
+.cover-image {
+  cursor: default;
+}
+
+.spoticon-chevron-up-16::before,
+#view-now-playing.now-playing-large .large .now-playing__button:before {
+  cursor: pointer;
+}
+.view-player .cover-image-container {
+  position: fixed !important;
+  left: 0;
+  bottom: 0;
+}
+
 .view-player .now-playing .cover-image-link,
 .view-player .now-playing .cover-image-link figure {
   width: var(--bar-height);
@@ -551,11 +602,9 @@ span.glue-page-header__title-text {
 }
 
 #now-playing-image-small .cover-image {
-  position: fixed !important;
   width: var(--bar-height);
   height: var(--bar-height);
-  left: 0;
-  bottom: 0;
+  cursor: default;
 }
 
 .view-player .now-playing .cover-image-link-wrapper {
