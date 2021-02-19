@@ -1539,6 +1539,10 @@ button[data-button=add-recommendation] {
 
 #video-player::before {
     z-index: +1;
+    opacity: 0;
+}
+
+.video-full-screen-art  #video-player::before {
     opacity: calc(0.5 + 0.2 * var(--is_light, 0));
 }
 
