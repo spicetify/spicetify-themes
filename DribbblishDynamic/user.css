@@ -1332,6 +1332,7 @@ button#player-button-repeat,
     width: var(--left-sidebar-item-height);
     height: var(--left-sidebar-item-height);
     background-size: cover;
+    background-position: center;
     border-radius: 50%;
     margin: 0 auto;
 }
