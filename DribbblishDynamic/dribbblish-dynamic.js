@@ -178,6 +178,20 @@ waitForElement([".LeftSidebar"], (queries) => {
     queries[0].append(fade);
 });
 
+var big_album_cover = document.querySelector('#now-playing-image-small');
+
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        if (mutation.type == "attributes") {
+            if(big_album_cover.getAttribute("data-log-context") === "cover-large"){
+                document.documentElement.style.setProperty('--move_buddy_list', "250px");
+            }else{
+                document.documentElement.style.setProperty('--move_buddy_list', "0px");
+            }
+        }
+    });
+});
+
 function getAlbumInfo(uri) {
     return new Promise((resolve) => { Spicetify.CosmosAPI.resolver.get(`hm://album/v1/album-app/album/${uri}/desktop`, (err, raw) => {
         resolve(!err && raw.getJSONBody())
