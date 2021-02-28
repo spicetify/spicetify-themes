@@ -11,6 +11,7 @@
     --os-windows-icon-dodge: 1;
     --image_url: '';
     --is_light: 0;
+    --move_buddy_list: 0px;
 }
 
 div#popover-container::before {
@@ -974,6 +975,11 @@ select {
 }
 
 /* Friend list */
+
+.body-container--windows .buddy-list-iframe {
+    margin-top: 48px;
+    margin-bottom: var(--move_buddy_list);
+}
 
 .buddy-list-title h3 {
     font-weight: 500;
