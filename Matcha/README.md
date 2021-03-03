@@ -6,7 +6,12 @@ Has a dark (base) and a light variant and narrow scroll bar tweak.
 
 ## Screenshots
 
+### Base
+
 ![Matcha Dark themed Spotify screenshot](screenshot_dark.png)
+
+### Light
+
 ![Matcha Light themed Spotify screenshot](screenshot_light.png)
 
 ## More
