@@ -17,6 +17,7 @@
 
 /*Round corner scrollbar*/
 ::-webkit-scrollbar-thumb {
+	background-color: var(--modspotify_miscellaneous_bg) !important;
 	border-radius: 3px !important;
 }
 
