@@ -4,7 +4,7 @@ This is a collection of themes for [spicetify](https://github.com/khanhas/spicet
 
 ### **You can find a preview of all the themes in the [wiki](https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview).**
 
-## Installation
+## Installation and usage
 
 (If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
 
