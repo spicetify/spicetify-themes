@@ -52,3 +52,8 @@
   background-image: none !important;
   background: none !important;
 }
+
+/* Ensure padlock in private session is showing */
+.profile .incognito-badge svg {
+  fill: white;
+}
