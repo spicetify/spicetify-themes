@@ -45,3 +45,10 @@
 .slider.enabled {
   border: 2px solid var(--modspotify_slider_bg);
 }
+
+/* Remove linear gradient from "Header" and "Radio" */
+.Header__background-color,
+.Radio__background-color {
+  background-image: none !important;
+  background: none !important;
+}
