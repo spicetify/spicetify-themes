@@ -15,9 +15,6 @@ body {
   font-family: San Francisco Display, sans-serif;
 }
 
-/** {
-	font-family:Google Sans;
-}*/
 /*Round corner cover image*/
 .card-image,
 .card-placeholder-wrapper,
@@ -26,6 +23,12 @@ body {
 .Card:not(.Card--artist) .Card__image-wrapper {
   border-radius: 10px !important;
   overflow: hidden !important;
+}
+
+/* prevent top cards row being cutoff in artist page */
+
+li.release-node {
+  margin-top: 16px;
 }
 
 /*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button*/
@@ -305,7 +308,7 @@ Change text color in playlist
 .card-type-episode .card-info-title {
   font-size: 15px;
   font-weight: 900 !important;
-  text-align: center !important;
+  text-align: left !important;
   width: 100% !important;
 }
 
@@ -313,7 +316,7 @@ Change text color in playlist
 .card-type-track .card-info-subtitle-links,
 .card-type-collection-album .card-info-subtitle-links,
 .card-type-episode .card-info-subtitle-links {
-  text-align: center !important;
+  text-align: left !important;
   width: 100% !important;
 }
 
@@ -548,8 +551,9 @@ body:not(.body-container--windows)
   .glue-page-header__title,
 .glue-page-header.glue-page-header--playlist
   .glue-page-header__content-inner
-  .glue-page-header__title {
-  margin-top: 10px;
+  .glue-page-header__title,
+.glue-page-header__content .glue-page-header__meta-info {
+  margin-top: 30px !important;
 }
 
 span.glue-page-header__title-text {
@@ -732,4 +736,14 @@ body.remotebar .view-player .player-bar-wrapper {
 
 .Header__image-inner {
   box-shadow: unset;
+}
+
+/* explicit text color */
+.TableCellSong__label {
+  color: unset !important;
+}
+
+/* margin for clear recents search button */
+button.RecentlySearched__clear-all-button.button.button-with-stroke {
+  margin-bottom: 30px;
 }
