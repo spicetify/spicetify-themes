@@ -59,7 +59,6 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 button.classList.add("Button", "Button--style-icon-background", "Button--folder");
                 item.setAttribute("data-tooltip", item.innerText);
                 replaceTextWithIcon(link.firstChild, 'collection');
-                // link.firstChild.innerText = item.innerText.slice(0, 3);
                 continue;
             }
 
