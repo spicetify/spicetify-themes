@@ -56,9 +56,10 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
 
             if (href.indexOf("playlist-folder") != -1) {
                 const button = item.getElementsByTagName("button")[0]
-                button.classList.add("Button", "Button--style-icon-background", "Button--size-28",);
+                button.classList.add("Button", "Button--style-icon-background", "Button--folder");
                 item.setAttribute("data-tooltip", item.innerText);
-                link.firstChild.innerText = item.innerText.slice(0, 3);
+                replaceTextWithIcon(link.firstChild, 'collection');
+                // link.firstChild.innerText = item.innerText.slice(0, 3);
                 continue;
             }
 
@@ -159,6 +160,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
 
     waitForElement([`[href="spotify:app:recently-played"]`], ([query]) => {
         replaceTextWithIcon(query.firstChild, "time");
+        query.setAttribute("data-tooltip", 'Recently Played');
     });
 });
 
