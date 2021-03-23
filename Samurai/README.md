@@ -1,9 +1,9 @@
 
-#Samurai
+# Samurai
 
-##Screenshots 
+## Screenshots 
 
 ![Samurai](./samuraitheme.png)
 
-#more
+## More
 highly inspired by Material-Ocean and YoutubeDark
