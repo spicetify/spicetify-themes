@@ -1,0 +1,322 @@
+/*samurai theme css*/
+:root {
+	 --bar-height: 120px;
+  }
+
+/* Remove section divider */
+.section-divider {
+    border-bottom: 0 !important;
+}
+/*Exclude these elements from draggable property because it stops them from clickable*/
+.profile-items-container,
+.profile {
+  -webkit-app-region: no-drag !important;
+}
+/* For Linux */ #view-navigation-bar .item.active:after {
+  background-color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--modspotify_sidebar_indicator_and_hover_button_bg),
+    transparent
+  );
+  opacity: 0.2;
+  bottom: unset;
+  top: 5%;
+  height: 90%;
+  width: 100%;
+}
+
+.Header__image-inner {
+  box-shadow: unset;
+}
+
+/* explicit text color */
+.TableCellSong__label {
+  color: unset !important;
+}
+
+/* margin for clear recents search button */
+button.RecentlySearched__clear-all-button.button.button-with-stroke {
+  margin-bottom: 30px;
+}
+
+/* Home page */
+.GlueCarousel__grid-wrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.GlueCard__info-wrapper,
+.Card__info-wrapper {
+  margin-bottom: 30px;
+}
+
+.card-horizontal-interior-wrapper .card-info-title {
+  text-align: start !important;
+}
+
+.tl-row.selected:hover .tl-cell {
+  background: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+}
+
+.GlueTableRow--is-selected {
+  background-color: var(
+    --modspotify_scrollbar_fg_and_selected_row_bg
+  ) !important;
+}
+
+.tracklist-podcast .tl-progress .row-progress__bar {
+  background-color: var(--modspotify_main_fg);
+}
+
+.Header__background-color {
+  background-color: var(--modspotify_main_bg) !important;
+}
+
+.Button--style-green,
+.button.button-green,
+.button.button-white {
+  border-radius: 4px;
+  color: var(--modspotify_main_bg) !important;
+}
+
+.glue-page-header:not(.glue-page-header--album):not(.glue-page-header--playlist):not(.glue-page-header--artist):not(.glue-page-header--dailymix):not(.glue-page-header--user):not(.glue-page-header--show)
+  .glue-page-header__content-inner
+  .glue-page-header__title-text,
+.HomeHeader .Header__content-inner .Header__title-text-inner,
+.MadeForYouHeader .Header__content-inner .Header__title-text-inner,
+.RecentlyPlayedPage__header .Header__content-inner .Header__title-text-inner {
+  background-color: var(--modspotify_main_bg);
+  padding: 5px 20px;
+  border: 5px solid var(--modspotify_main_fg) !important;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px 0
+    rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.2);
+  text-transform: uppercase;
+}
+
+.glue-page-header.glue-page-header--album
+  .glue-page-header__content-inner
+  .glue-page-header__title,
+.glue-page-header.glue-page-header--artist
+  .glue-page-header__content-inner
+  .glue-page-header__title,
+.glue-page-header.glue-page-header--dailymix
+  .glue-page-header__content-inner
+  .glue-page-header__title,
+.glue-page-header.glue-page-header--playlist
+  .glue-page-header__content-inner
+  .glue-page-header__title,
+.glue-page-header__content .glue-page-header__meta-info {
+  margin-top: 30px !important;
+}
+
+span.glue-page-header__title-text {
+  color: var(--modspotify_main_fg);
+}
+
+.glue-page-header .glue-page-header__content-inner .glue-page-header__button {
+  margin-top: 40px;
+}
+
+.glue-page-header__content-inner,
+.glue-page-header__data,
+.glue-page-header__title,
+.Header__content-inner,
+.Header__data,
+.Header__title,
+.Header__title-text,
+.Header__title-text-inner {
+  overflow: visible !important;
+}
+
+/* Small tooltip */
+#tooltip {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 5px !important;
+  border: 2px solid var(--modspotify_main_fg);
+  padding: 10px 10px;
+}
+
+.tooltip-arrow-top,
+.tooltip-arrow-bottom {
+  display: none !important;
+}
+
+.lyrics-lines-container,
+.message-container {
+  color: #ffffff !important;
+}
+/* Daily mixes */
+.carousel
+  .card-info-wrapper.card-info-with-description.card-info-with-metadata {
+  height: 50px !important;
+}
+
+/*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button*/
+.profile.content-top-bar__profile-link,
+.upgrade-button,
+.view-player .remote-playback-bar,
+.NewPlaylistButton {
+  display: none !important;
+}
+
+/* prevent top cards row being cutoff in artist page */
+
+li.release-node {
+  margin-top: 18px;
+}
+
+/*Round corner cover image*/
+.card-image,
+.card-placeholder-wrapper,
+.card-image-content-wrapper,
+.Card:not(.Card--artist) .Card__image,
+.Card:not(.Card--artist) .Card__image-wrapper {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/*
+We use round corner on cover so they look weird in original
+form, so I move last cover to the right 20px and first one to the left 20px
+*/
+.card-puff__card-image:nth-child(1) {
+  right: 20px;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.card-puff__card-image:nth-child(3) {
+  left: 20px;
+}
+
+.grid-overlay-label {
+  top: 140px !important;
+}
+
+/**/
+.glue-page-header__background-color {
+  background-image: none !important;
+  background: var(--modspotify_main_bg);
+}
+
+/*Thinner scrollbar*/
+::-webkit-scrollbar {
+  height: 6px !important;
+  width: 3px !important;
+  background-color: transparent;
+}
+
+/*Round corner scrollbar*/
+::-webkit-scrollbar-thumb {
+  border-radius: 3px !important;
+}
+
+/*hide the left side new playlist button*/
+.LeftSidebarNewPlaylistButton__button {
+	display: none !important;
+}
+
+/*search bar edits*/
+.SearchInput__input {
+	color: var(--modspotify_secondary_fg) !important;
+	background-color: var(--modspotify_main_bg) !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+.SearchInput__searchIcon{
+  color: var(--modspotify_secondary_fg) !important;
+}
+
+.content-top-bar__search-input{
+  max-width: unset!important;
+  height: auto !important;
+}
+
+/*change header colors*/
+.GlueHeader__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+.Header__background-color{
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+/*scrubbing bar ball thingy*/
+.handle{
+  background: var(--modspotify_indicator_fg_and_button_bg) !important;
+  border: 3px solid var(--modspotify_indicator_fg_and_button_bg) !important;
+}
+
+.progress-bar-wrapper.progress-bar-wrapper--ltr.handle{
+  background: unset !important;
+  border: unset !important;
+}
+
+/*like heart thingy in bottom player*/
+.nowplaying-add-button .button .button-icon-only .button-add,
+.nowplaying-ban-button .button .button-icon-only .button-ban .spoticon-ban-16{
+  color: var(--like-color)!important;
+}
+
+/*like heart in playlist*/
+button.button-icon-only.button-add,
+.spoticon-heart-16,
+.spoticon-heart-active-16,
+.spoticon-heart-active-32,
+.spoticon-heart-32{
+    color: var(--like-color)!important;
+}
+
+/*highlighted playlist text color*/
+.tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+    color: #cccccc;
+}
+
+/* Spice up Fullscreen mode */
+#view-player .album-art .album-art__image {
+  border-radius: 30px !important;
+  box-shadow: 0 10px 70px
+    rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.5) !important;
+}
+
+#view-player .album-art .album-art__image .card-image-content-wrapper,
+#view-player
+  .album-art
+  .album-art__image
+  .card-image-content-wrapper
+  .card-image {
+  border-radius: 30px !important;
+}
+
+#video-player .album-art__foreground {
+  flex-direction: row;
+  text-align: middle;
+}
+
+#video-player .album-art__background {
+  background-color: initial;
+}
+
+#video-player .album-art__track-details {
+  padding-left: 50px;
+  line-height: initial;
+}
+
+#video-player .album-art__track-title {
+  font-size: 84px;
+  margin-top: 0;
+  line-height: initial;
+}
+
+#video-player .album-art__artist-name {
+  font-size: 54px;
+  margin-top: 0;
+  line-height: initial;
+}
