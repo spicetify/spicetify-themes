@@ -1,4 +1,4 @@
-# Tree Green
+# Tree-Green
 
 ## Screenshots
 
