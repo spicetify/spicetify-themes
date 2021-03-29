@@ -1,0 +1,39 @@
+:root {
+	--bar-height: 120px;
+}
+html,
+body {
+    font-family: "Google Sans Display";
+    src: url("https://local_resource_host/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase !important;
+  font-family: "Google Sans Display";
+    src: url("https://local_resource_host/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
+    font-style: normal;
+  font-weight: 100 !important;
+}
+
+.player-bar-wrapper {
+  background-color:#c54b6e !important;
+}
+
+.SidebarListItem {
+  transition: background-color 0.3s linear;
+}
+
+.SidebarListItem:hover {
+  background-color:#c54b8c !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
