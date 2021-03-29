@@ -66,3 +66,42 @@
 .now-playing-container{
     min-width: 400px !important;
 }
+
+/* CHANGES IN V2 */
+
+/* Thinner font for Friend Activity title and friends' names */
+.section-divider > *:first-child,
+.friend .user .name {
+	font-weight: 600;
+}
+
+/* Thinner font for subtitles and username in Settings */
+.account-info__profile-info-name-text,
+.section-divider h4 {
+	font-weight: 600;
+}
+
+/* Brighter color of 'Explicit' labels */
+.tl-explicit .label, .tl-premium .label {
+	color: #d0d0d0;
+}
+
+/* Thinner font for 'Help create Popular Songs for this artist!' heading */
+.no-top-tracks h3 {
+	font-weight: 600;
+}
+
+/* Thinner font for 'The playlist is currently empty' heading */
+.empty-content-title {
+	font-weight: 600;
+}
+
+/* Thinner font for subtitles in Home and Radio tabs */
+.GlueSectionDivider__title {
+	font-weight: 600;
+}
+
+/* Thinner font for 'Nothing here yet' subtitle in Recently Played */
+.RecentlyPlayedEmptyState__title {
+	font-weight: 600;
+}
