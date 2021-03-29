@@ -4,6 +4,6 @@
 ![BurntSienna](./screenshot.png)
 
 ## More
-Montserrat Font is neccessary, it is avaiable on Google Fonts:
+Montserrat Font is necessary, it is available on Google Fonts:
 https://fonts.google.com/specimen/Montserrat<br>
 Author: https://github.com/pjaspinski
