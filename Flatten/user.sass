@@ -1,0 +1,133 @@
+// left sidebar css	
+.LeftSidebar__scroll-section,.scrollbar-style-visible-mac.body-container--mac,#view-content>.embedded-app,.context-menu
+	&::-webkit-scrollbar
+		width: 5px
+	&::-webkit-scrollbar-thumb
+		background: #1fc167
+	&::-webkit-scrollbar-track-piece
+		background: #131313
+.LeftSidebarNewPlaylistButton__button
+	background: #b3b3b3
+	border: 0
+	border-radius: 30px
+	height: auto
+	color: #1b1b1b
+	padding: 14px 25px
+	display: flex
+	justify-content: center
+	&:focus,&:hover
+		color: #1b1b1b
+		background-color: #d8d8d8
+		transition: all ease 0.2s
+.LeftSidebarNewPlaylistButton__text
+	flex: 0 0 auto
+.SidebarListItem--is-active:after
+	left: 8px
+	background-color: #1fc167
+	border-radius: 2px
+#new-playlist-button-mount-point
+	padding: 15px
+
+
+// button css
+.Button--style-icon.Button--size-32.spoticon-heart-active-16
+    color: #1db954
+.added .button.button-icon-only.button-add
+    color: #1db954
+.Button--style-green
+	color: #ffffff
+.button.button-green
+	color: #ffffff
+
+
+// table css
+.tl-explicit .label, .tl-premium .label
+	color: white
+
+.tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label
+	border-color: white !important
+
+.tl-row
+	.tl-cell
+		border-color: #131313
+	&.selected .tl-cell,.TableRow--is-selected
+		background-color: #222222
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell,.TableRow--is-hover-forced, .TableRow:hover
+	background-color: #222222
+
+.TableCell
+	border-color: #131313
+
+.TableRow--is-hover-forced, .TableRow:hover
+	background-color: #222222
+
+.TableCellSong__label,.TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label
+	color: white
+
+.TableRow:hover .TableCellSong__label,TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label
+	border-color: white
+
+// player css
+.player-controls-container
+	display: flex
+	justify-content: center
+#player-progressbar
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: auto
+	.progress-bar
+		background: #131313
+	.progress-bar-wrapper
+		height: auto
+	.inner
+		border-radius: 0
+.view-player .player-controls-container
+	.progress-container .progress-bar .inner
+		background-color: #1fc167
+	.controls, .progress-container
+		margin: 0
+.view-player
+	height: 70px
+	.now-playing
+		.cover-image-link-wrapper
+			height: 40px
+			flex: 0 1 64px
+		.cover-image-link
+			height: 40px
+			width: 40px
+			figure
+				height: 40px
+				width: 40px
+			.toggle-cover-size
+				right: 9px
+				top: 10px 
+.view-player .now-playing .cover-image-container .cover-image
+	border-radius: 50%
+.slider
+	background: #131313
+	&> div,&.enabled> div
+		background-color: #1fc167
+	&:hover>div
+		background-color: #1fc167
+	&.enabled
+		background-color: white
+
+// right-click menu css
+.context-menu
+	background: #2b2b2b
+	.item.hover:not(.disabled)
+		background-color: #222222
+
+// background css
+.Header__content-wrapper
+	background-color: #1b1b1b
+.glue-page-header__content .glue-page-header__title,.glue-page-header__sticky ,.glue-page-header__title,.Header__content .Header__title-text
+	color: #ffffff
+
+
+// friend sidebar css
+.friend .user-play-button .card-image
+	filter: grayscale(1)

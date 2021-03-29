@@ -648,3 +648,7 @@ textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-con
 	width: 0px !important;
 	background-color: transparent;
 }
+
+/* gradient on radio */ .tracklist-station-container::after {
+		background: linear-gradient(rgba(var(--modspotify_rgb_sidebar_and_player_bg),0), var(--s-bg));
+}

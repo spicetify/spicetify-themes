@@ -1,0 +1,28 @@
+/*Header bullshit*/
+.Header__background-color, .GlueHeader__content-wrapper {
+	background-color: var(--modspotify_main_bg) !important;
+}
+
+/*Thinner scrollbar*/
+::-webkit-scrollbar {
+	height: 6px !important;
+	width: 6px !important;
+	background-color: transparent;
+}
+
+/*Scrollbar background color*/
+::-webkit-scrollbar-track {
+	background-color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+/*Round corner scrollbar*/
+::-webkit-scrollbar-thumb {
+	background-color: var(--modspotify_miscellaneous_bg) !important;
+	border-radius: 3px !important;
+}
+
+/*Hide top and bottom buttons of scrollbar */
+/*who uses those, lol*/
+::-webkit-scrollbar-button {
+	display: none !important;
+}

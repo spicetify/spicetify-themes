@@ -1,0 +1,180 @@
+.LeftSidebar__scroll-section::-webkit-scrollbar, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar, #view-content > .embedded-app::-webkit-scrollbar, .context-menu::-webkit-scrollbar {
+  width: 5px;
+}
+.LeftSidebar__scroll-section::-webkit-scrollbar-thumb, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-thumb, #view-content > .embedded-app::-webkit-scrollbar-thumb, .context-menu::-webkit-scrollbar-thumb {
+  background: #1DB954;
+}
+.LeftSidebar__scroll-section::-webkit-scrollbar-track-piece, .scrollbar-style-visible-mac.body-container--mac::-webkit-scrollbar-track-piece, #view-content > .embedded-app::-webkit-scrollbar-track-piece, .context-menu::-webkit-scrollbar-track-piece {
+  background: #131313;
+}
+
+.LeftSidebarNewPlaylistButton__button {
+  background: #b3b3b3;
+  border: 0;
+  border-radius: 30px;
+  height: auto;
+  color: #1b1b1b;
+  padding: 14px 25px;
+  display: flex;
+  justify-content: center;
+}
+.LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
+  color: #1b1b1b;
+  background-color: #d8d8d8;
+  transition: all ease 0.2s;
+}
+
+.LeftSidebarNewPlaylistButton__text {
+  flex: 0 0 auto;
+}
+
+.SidebarListItem--is-active:after {
+  left: 8px;
+  background-color: #1DB954;
+  border-radius: 2px;
+}
+
+#new-playlist-button-mount-point {
+  padding: 15px;
+}
+
+.Button--style-icon.Button--size-32.spoticon-heart-active-16 {
+    color: #1db954;
+}
+
+.added .button.button-icon-only.button-add {
+    color: #1db954;
+}
+
+.Button--style-green {
+  color: #ffffff;
+}
+
+.button.button-green {
+  color: #ffffff;
+}
+
+.tl-explicit .label, .tl-premium .label {
+  color: #333333;
+}
+
+
+.tl-row.selected .tl-cell, .tl-row .TableRow--is-selected {
+  background-color: #222222;
+}
+
+.tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell, .TableRow--is-hover-forced, .TableRow:hover {
+  background-color: #222222;
+}
+
+.TableCell {
+  border-color: #131313;
+}
+
+.TableRow--is-hover-forced, .TableRow:hover {
+  background-color: #222222;
+}
+
+.TableCellSong__label, .TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label {
+  color: white;
+}
+
+.TableRow:hover .TableCellSong__label, TableRow--is-hover-enabled:hover .TableCellSong__label, .TableRow--is-selected .TableCellSong__label {
+  border-color: white;
+}
+
+.player-controls-container {
+  display: flex;
+  justify-content: center;
+}
+
+#player-progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+#player-progressbar .progress-bar {
+  background: #131313;
+}
+#player-progressbar .progress-bar-wrapper {
+  height: auto;
+}
+#player-progressbar .inner {
+  border-radius: 0;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar .inner {
+  background-color: #1DB954;
+}
+.view-player .player-controls-container .controls, .view-player .player-controls-container .progress-container {
+  margin: 0;
+}
+
+.view-player {
+  height: 70px;
+}
+.view-player .now-playing .cover-image-link-wrapper {
+  height: 40px;
+  flex: 0 1 64px;
+}
+.view-player .now-playing .cover-image-link {
+  height: 40px;
+  width: 40px;
+}
+.view-player .now-playing .cover-image-link figure {
+  height: 40px;
+  width: 40px;
+}
+.view-player .now-playing .cover-image-link .toggle-cover-size {
+  right: 9px;
+  top: 10px;
+}
+
+.view-player .now-playing .cover-image-container .cover-image {
+  border-radius: 50%;
+}
+
+.slider {
+  background: #131313;
+}
+.slider > div, .slider.enabled > div {
+  background-color: #1DB954;
+}
+.slider:hover > div {
+  background-color: #1DB954;
+}
+.slider.enabled {
+  background-color: white;
+}
+
+.context-menu {
+  background: #2b2b2b;
+}
+.context-menu .item.hover:not(.disabled) {
+  background-color: #222222;
+}
+
+.Header__content-wrapper {
+  background-color: #1b1b1b;
+}
+
+.glue-page-header__content .glue-page-header__title, .glue-page-header__sticky, .glue-page-header__title, .Header__content .Header__title-text {
+  color: #ffffff;
+}
+
+.GlueHeader__background-color {
+    background-color: #1b1b1b !important;
+}
+
+.button .button-icon-only .spoticon-ban-active-16 {
+    color: #333333;
+}
+
+
+.friend .user-play-button .card-image {
+  filter: grayscale(1);
+}
+
+/*# sourceMappingURL=user.css.map */

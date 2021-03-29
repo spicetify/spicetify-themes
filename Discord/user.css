@@ -1,0 +1,829 @@
+/* color vars */
+:root {
+	--s-bg: #272a2e;
+	--s-fg: #f9f9f9;
+
+	--s-blurple: #7289DA;
+	--s-dark-blurple: #6475b3;
+	--s-player-bar: #3e4148;
+	--s-unprogress: #32363b;
+	--s-ping: #f04747;
+	--s-side-bar: #202225;
+	--s-friends-bar: #2f3136;
+	--s-context-menu: #18191c;
+
+	--s-g1: #5800E2;
+	--s-g2: #FF00E6;
+
+	--s-red: #ed254e;
+	--s-green: #71f79f;
+	--s-yellow: #f9dc5c;
+	--s-blue: #7cb7ff;
+	--s-magenta: #c74ded;
+	--s-cyan: #00c1e4;
+	--s-lightgray: #F2EFEA;
+	--s-darkgray: #555753;
+}
+
+/* Images used for album art */
+.card-image, .Card__image, .card, .gc-image-container, .Card__overlay {
+	border-radius: 8px;
+}
+
+.profile .incognito-badge.paused { /* Away - not playing music */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='14.5' y='17' width='21' height='21' viewBox='0 0 25 25'%3E%3Cmask id='1de335f8-922e-4b97-b0dc-d3e29e64b60f'%3E%3Crect x='7.5' y='5' width='10' height='10' rx='5' ry='5' fill='white'%3E%3C/rect%3E%3Crect x='6.25' y='3.75' width='7.5' height='7.5' rx='3.75' ry='3.75' fill='black'%3E%3C/rect%3E%3Cpolygon points='-2.16506,-2.5 2.16506,0 -2.16506,2.5' fill='black' transform='scale(0) translate(13.125 10)' style='transform-origin: 13.125px 10px;'%3E%3C/polygon%3E%3Ccircle fill='black' cx='12.5' cy='10' r='0'%3E%3C/circle%3E%3C/mask%3E%3Crect fill='%23faa61a' width='25' height='15' mask='url(%231de335f8-922e-4b97-b0dc-d3e29e64b60f)'%3E%3C/rect%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: -6px -4px;
+	background-color: var(--s-bg) !important;
+    box-shadow: 0 0 0 1pt var(--s-bg);
+}
+.profile .incognito-badge { /* Online - playing music */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='14.5' y='17' width='21' height='21' viewBox='0 0 25 25'%3E%3Cmask id='1de335f8-922e-4b97-b0dc-d3e29e64b60f'%3E%3Crect x='7.5' y='5' width='10' height='10' rx='5' ry='5' fill='transparent'%3E%3C/rect%3E%3Crect x='6.25' y='3.75' width='7.5' height='7.5' rx='3.75' ry='3.75' fill='transparent'%3E%3C/rect%3E%3Cpolygon points='-2.16506,-2.5 2.16506,0 -2.16506,2.5' fill='transparent' transform='scale(0) translate(13.125 10)' style='transform-origin: 13.125px 10px;'%3E%3C/polygon%3E%3Ccircle fill='transparent' cx='12.5' cy='10' r='0'%3E%3C/circle%3E%3C/mask%3E%3Crect fill='transparent' width='25' height='15' mask='url(%231de335f8-922e-4b97-b0dc-d3e29e64b60f)'%3E%3C/rect%3E%3C/svg%3E");
+    top: 62.5%;
+    left: 66.6%;
+	background-color: #43b581;
+	height: 9px;
+    width: 9px;
+	display: unset;
+	transition: background-color 1s linear 0s,
+				background-image 1s linear 0s,
+				background-position 1s ease 0s;
+}
+.profile .incognito-badge svg {
+    box-shadow: 0 0 0 2pt var(--s-bg);
+    border-radius: 20px;
+}
+.profile .incognito-badge svg text {
+    display: none;
+}
+
+.RootlistItemPlaylist__owner-text {
+	color: #ffffff1c;
+	display: unset;
+}
+
+.tooltip, #tooltip, .Tooltip {
+	background-color: var(--s-context-menu);
+	border-radius: 4px !important;
+}
+.tooltip-arrow-bottom {
+	border-top: 5px solid var(--s-context-menu);
+}
+.tooltip-arrow-top, .Tooltip__arrow {
+	border-bottom: 5px solid var(--s-context-menu);
+}
+
+#resize-buddy-list {
+	clip-path: inset(0px 0px 0px -50px);
+    box-shadow: -1px 0px 20px 0px black;
+}
+
+.context-menu .item {
+	border-radius: 2px;
+	padding: 6px 8px;
+	margin: 2px 0;
+}
+
+.context-menu .item.hover span.text {
+	color: white;
+}
+
+.MenuItem {
+    background-repeat: no-repeat;
+	background-position: 96% center;
+}
+.MenuItem.selected {
+    color: white;
+}
+.MenuItem[data-menu-item="private-session"] {
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h120v120H0z'/%3E%3Cpath d='M60 0c33.137 0 60 26.863 60 60s-26.863 60-60 60S0 93.137 0 60 26.863 0 60 0zm17.5 64.837c-6.456 0-11.822 4.502-13.222 10.516-3.267-1.397-6.3-1.009-8.556-.039C54.283 69.3 48.917 64.837 42.5 64.837c-7.506 0-13.611 6.092-13.611 13.582C28.889 85.908 34.994 92 42.5 92c7.156 0 12.95-5.51 13.494-12.495 1.167-.815 4.24-2.328 8.012.078C64.628 86.529 70.383 92 77.5 92c7.506 0 13.611-6.092 13.611-13.581 0-7.49-6.105-13.582-13.611-13.582zm-35 3.88c5.367 0 9.722 4.347 9.722 9.702 0 5.355-4.355 9.7-9.722 9.7-5.367 0-9.722-4.345-9.722-9.7 0-5.355 4.355-9.701 9.722-9.701zm35 0c5.367 0 9.722 4.347 9.722 9.702 0 5.355-4.355 9.7-9.722 9.7-5.367 0-9.722-4.345-9.722-9.7 0-5.355 4.355-9.701 9.722-9.701zM95 57H25v4h70v-4zM72.874 29.34c-.8-1.82-2.866-2.78-4.785-2.143L60 29.914l-8.128-2.717-.192-.058c-1.928-.533-3.954.51-4.669 2.387L38.144 53h43.712L72.95 29.526z' fill='%23b9bbbe'/%3E%3C/g%3E%3C/svg%3E");
+}
+.MenuItem[data-menu-item="private-session"].selected {
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h120v120H0z'/%3E%3Cpath d='M60 0c33.137 0 60 26.863 60 60s-26.863 60-60 60S0 93.137 0 60 26.863 0 60 0zm17.5 64.837c-6.456 0-11.822 4.502-13.222 10.516-3.267-1.397-6.3-1.009-8.556-.039C54.283 69.3 48.917 64.837 42.5 64.837c-7.506 0-13.611 6.092-13.611 13.582C28.889 85.908 34.994 92 42.5 92c7.156 0 12.95-5.51 13.494-12.495 1.167-.815 4.24-2.328 8.012.078C64.628 86.529 70.383 92 77.5 92c7.506 0 13.611-6.092 13.611-13.581 0-7.49-6.105-13.582-13.611-13.582zm-35 3.88c5.367 0 9.722 4.347 9.722 9.702 0 5.355-4.355 9.7-9.722 9.7-5.367 0-9.722-4.345-9.722-9.7 0-5.355 4.355-9.701 9.722-9.701zm35 0c5.367 0 9.722 4.347 9.722 9.702 0 5.355-4.355 9.7-9.722 9.7-5.367 0-9.722-4.345-9.722-9.7 0-5.355 4.355-9.701 9.722-9.701zM95 57H25v4h70v-4zM72.874 29.34c-.8-1.82-2.866-2.78-4.785-2.143L60 29.914l-8.128-2.717-.192-.058c-1.928-.533-3.954.51-4.669 2.387L38.144 53h43.712L72.95 29.526z' fill='white'/%3E%3C/g%3E%3C/svg%3E");
+}
+.MenuItem[data-menu-item="account"] {
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23b9bbbe' fill-rule='evenodd' clip-rule='evenodd' d='M 11.879 12.303 C 14.47 12.303 16.579 10.193 16.579 7.602 C 16.579 5.012 14.47 2.902 11.879 2.902 C 9.288 2.902 7.179 5.012 7.179 7.602 C 7.179 10.193 9.288 12.303 11.879 12.303 Z M 11.879 13.477 C 6.344 13.477 2.479 16.377 2.479 20.527 L 2.479 21.703 L 21.279 21.703 L 21.279 20.527 C 21.279 16.377 17.414 13.477 11.879 13.477 Z' style=''/%3E%3C/svg%3E");
+}
+.MenuItem[data-menu-item="account"].selected {
+	background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' fill-rule='evenodd' clip-rule='evenodd' d='M 11.879 12.303 C 14.47 12.303 16.579 10.193 16.579 7.602 C 16.579 5.012 14.47 2.902 11.879 2.902 C 9.288 2.902 7.179 5.012 7.179 7.602 C 7.179 10.193 9.288 12.303 11.879 12.303 Z M 11.879 13.477 C 6.344 13.477 2.479 16.377 2.479 20.527 L 2.479 21.703 L 21.279 21.703 L 21.279 20.527 C 21.279 16.377 17.414 13.477 11.879 13.477 Z' style=''/%3E%3C/svg%3E");	color: white;
+}
+.MenuItem[data-menu-item="settings"] {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon-LYJorE' aria-hidden='false' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath fill='%23b9bbbe' fill-rule='evenodd' clip-rule='evenodd' d='M19.738 10H22V14H19.739C19.498 14.931 19.1 15.798 18.565 16.564L20 18L18 20L16.565 18.564C15.797 19.099 14.932 19.498 14 19.738V22H10V19.738C9.069 19.498 8.203 19.099 7.436 18.564L6 20L4 18L5.436 16.564C4.901 15.799 4.502 14.932 4.262 14H2V10H4.262C4.502 9.068 4.9 8.202 5.436 7.436L4 6L6 4L7.436 5.436C8.202 4.9 9.068 4.502 10 4.262V2H14V4.261C14.932 4.502 15.797 4.9 16.565 5.435L18 3.999L20 5.999L18.564 7.436C19.099 8.202 19.498 9.069 19.738 10ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z'%3E%3C/path%3E%3C/svg%3E");
+}
+.MenuItem[data-menu-item="settings"].selected {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon-LYJorE' aria-hidden='false' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath fill='white' fill-rule='evenodd' clip-rule='evenodd' d='M19.738 10H22V14H19.739C19.498 14.931 19.1 15.798 18.565 16.564L20 18L18 20L16.565 18.564C15.797 19.099 14.932 19.498 14 19.738V22H10V19.738C9.069 19.498 8.203 19.099 7.436 18.564L6 20L4 18L5.436 16.564C4.901 15.799 4.502 14.932 4.262 14H2V10H4.262C4.502 9.068 4.9 8.202 5.436 7.436L4 6L6 4L7.436 5.436C8.202 4.9 9.068 4.502 10 4.262V2H14V4.261C14.932 4.502 15.797 4.9 16.565 5.435L18 3.999L20 5.999L18.564 7.436C19.099 8.202 19.498 9.069 19.738 10ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z'%3E%3C/path%3E%3C/svg%3E");
+}
+.MenuItem[data-menu-item="log-out"] {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon-LYJorE' aria-hidden='false' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath fill='%23f04747' d='M10.418 13L12.708 15.294L11.292 16.706L6.586 11.991L11.294 7.292L12.707 8.708L10.41 11H21.949C21.446 5.955 17.177 2 12 2C6.486 2 2 6.487 2 12C2 17.513 6.486 22 12 22C17.177 22 21.446 18.046 21.949 13H10.418Z'%3E%3C/path%3E%3C/svg%3E");
+	color: #f04747;
+}
+.MenuItem[data-menu-item="log-out"].selected {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon-LYJorE' aria-hidden='false' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M10.418 13L12.708 15.294L11.292 16.706L6.586 11.991L11.294 7.292L12.707 8.708L10.41 11H21.949C21.446 5.955 17.177 2 12 2C6.486 2 2 6.487 2 12C2 17.513 6.486 22 12 22C17.177 22 21.446 18.046 21.949 13H10.418Z'%3E%3C/path%3E%3C/svg%3E");
+	background-color: #f04747;
+	color: white;
+}
+
+.PopoverMenu__arrow {
+	border-bottom-color: transparent;
+}
+#profile-menu-toggle {
+    -webkit-text-stroke: medium;
+}
+#top-bar-profile-link-text {
+	margin-right: 0;
+}
+
+.Header__content-wrapper {
+	background: var(--s-friends-bar);
+}
+
+.spoticon-chevron-right-16, .spoticon-chevron-left-16 {
+	width: 24px !important;
+}
+.spoticon-chevron-right-16 {
+	margin-right: 10px;
+}
+.spoticon-chevron-left-16 {
+	margin-left: 10px;
+}
+.spoticon-chevron-right-16::before, .spoticon-chevron-left-16::before {
+	content: '';
+}
+.spoticon-chevron-right-16::before {
+	background-image: url("data:image/png;base64,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");
+    background-repeat: no-repeat;
+    background-size: 11px 13px;
+    background-position: center;
+}
+.spoticon-chevron-left-16::before {
+	background-image: url("data:image/png;base64,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");
+    background-repeat: no-repeat;
+    background-size: 11px 13px;
+    background-position: center;
+}
+
+body {
+	background: var(--s-bg);
+	color: var(--s-fg);
+	font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+body, html, iframe {
+	background-color: var(--s-bg)
+}
+
+a {
+	color: var(--s-blurple)
+}
+
+a:hover, a:focus, a.contextmenu-active {
+	color: var(--s-dark-blurple)
+}
+
+#view-content {
+	background-color: var(--s-bg) !important
+}
+
+textarea, input, select, .form-group input[disabled], .GlueDropdown, .filter-container .form-control {
+	background-color: var(--s-bg);
+	color: var(--s-fg);
+	border: 1px solid var(--s-blurple);
+	border-radius: 6px
+}
+
+/* alert message bar */
+	.alert {
+		background-color: var(--s-red);
+		color: var(--s-fg)
+	}
+
+
+/* bottom bar */
+	.view-player {
+		background: var(--s-player-bar);
+		border-top: none
+	}
+
+	/* text */
+		/* normal */ .view-player .track a, .view-player .artist a, .view-player .player-controls-container .progress-container .elapsed, .view-player .player-controls-container .progress-container .remaining {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .view-player .track a:hover, .view-player .artist a:hover {
+			color: var(--s-lightgray);
+		}
+
+		/* track/artist name underline */ a {
+			border-bottom: none
+		}
+
+		/* stupid ass shadows */
+			.view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+				background: transparent;
+			}
+
+			.view-player .text-container .text-item-container .text-item .scroll-text-container:before {
+				background: transparent;
+			}
+
+	/* progress & volume bars */
+		.progress-bar, .progress-bar .inner, .tracklist-podcast .tl-progress .row-progress {
+			background: var(--s-unprogress)
+		}
+
+		/* normal */ .view-player .player-controls-container .progress-container .progress-bar .inner, .view-player .extra-controls-container .volumebar-container .progress-bar .inner {
+			background-color: var(--s-lightgray)
+		}
+
+		/* hover */ .view-player .extra-controls-container .volumebar-container .progress-bar-wrapper.active .inner, .view-player .extra-controls-container .volumebar-container:hover .inner, .view-player .player-controls-container .progress-container.progress-bar-enabled.dragging-progress-bar .progress-bar .inner, .view-player .player-controls-container .progress-container.progress-bar-enabled:hover .progress-bar .inner, .tracklist-podcast .tl-progress .row-progress__bar {
+			background: var(--s-blurple)
+		}
+
+		/* handle */ .progress-bar .handle {
+			border: none;
+			box-shadow: none;
+			background: var(--s-fg)
+		}
+
+		/* clicked handle */ .progress-bar-wrapper.active .handle {
+			box-shadow: none;
+			background: var(--s-lightgray)
+		}
+
+	/* buttons */
+		/* normal */ .view-player .player-controls-container .controls .button-play, .view-player .player-controls-container .controls .button-repeat, .view-player .player-controls-container .controls .button-shuffle, .view-player .player-controls-container .controls .button-thumbs-down, .view-player .player-controls-container .controls .button-thumbs-up, .view-player .player-controls-container .controls .next, .view-player .player-controls-container .controls .previous, .view-player .extra-controls-container .button-devices, .view-player .extra-controls-container .button-lyrics, .view-player .extra-controls-container .button-queue, .view-player .extra-controls-container .button-subtitles, .button.button-icon-only, .view-player .now-playing-container .button-add, .view-player .now-playing-container .button-add:not(:disabled):hover, .view-player .now-playing-container .nowplaying-add-button, .view-player .now-playing-container .nowplaying-add-button:not(:disabled):hover, .view-player .now-playing-container .nowplaying-ban-button, .view-player .now-playing-container .nowplaying-ban-button:not(:disabled):hover {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .view-player .player-controls-container .controls .next.contextmenu-active, .view-player .player-controls-container .controls .next:not(:disabled):hover, .view-player .player-controls-container .controls .previous.contextmenu-active, .view-player .player-controls-container .controls .previous:not(:disabled):hover, .view-player .player-controls-container .controls .button-repeat.contextmenu-active, .view-player .player-controls-container .controls .button-repeat:not(:disabled):hover, .view-player .player-controls-container .controls .button-shuffle.contextmenu-active, .view-player .player-controls-container .controls .button-shuffle:not(:disabled):hover, .view-player .player-controls-container .controls .button-thumbs-down.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-down:not(:disabled):hover, .view-player .player-controls-container .controls .button-thumbs-up.contextmenu-active, .view-player .player-controls-container .controls .button-thumbs-up:not(:disabled):hover, .view-player .player-controls-container .controls .button-play.contextmenu-active, .view-player .player-controls-container .controls .button-play:not(:disabled):hover, .view-player .extra-controls-container .button-devices.contextmenu-active, .view-player .extra-controls-container .button-devices:not(:disabled):hover, .view-player .extra-controls-container .button-lyrics.contextmenu-active, .view-player .extra-controls-container .button-lyrics:not(:disabled):hover, .view-player .extra-controls-container .button-queue.contextmenu-active, .view-player .extra-controls-container .button-queue:not(:disabled):hover, .view-player .extra-controls-container .button-subtitles.contextmenu-active, .view-player .extra-controls-container .button-subtitles:not(:disabled):hover, .button.button-icon-only.contextmenu-active, .button.button-icon-only:not(:disabled):hover {
+			color: var(--s-lightgray)
+		}
+
+		/* toggles on */ .view-player .player-controls-container .controls .button-repeat.active, .view-player .player-controls-container .controls .button-shuffle.active, .view-player .player-controls-container .controls .button-thumbs-down.active, .view-player .player-controls-container .controls .button-thumbs-up.active {
+			color: var(--s-blurple)
+		}
+
+		/* toggles dot */ .view-player .player-controls-container .button-repeat.active:after, .view-player .player-controls-container .button-shuffle.active:after {
+			background-color: var(--s-blurple)
+		}
+
+	/* cover art border */ .now-playing-large {
+		border-top: none
+	}
+
+/* left sidebar */
+	/* backgrounds */ .sidebar, .sidebar .sidebar-navbar, .LeftSidebar__scroll-section {
+		background-color: var(--s-side-bar)
+	}
+
+	/* "new playlist" button border */
+		/* normal */ .LeftSidebarNewPlaylistButton__button {
+			border-top: none;
+			color: var(--s-fg)
+		}
+
+		/* hover */ .LeftSidebarNewPlaylistButton__button:focus, .LeftSidebarNewPlaylistButton__button:hover {
+			color: var(--s-lightgray)
+		}
+	
+	.SidebarListItem {
+		transition-duration: 0.5s;
+    	border-radius: 2px;
+    	margin: 2px 8px;
+	}
+	.SidebarListItem:hover {
+		background-color: var(--s-unprogress);
+	}
+
+	/* links */ .SidebarListItemLink:link, .SidebarListItemLink:visited {
+		color: var(--s-fg)
+	}
+
+	/* hover links */ .SidebarListItemLink:focus, .SidebarListItemLink:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* titles */ html .SidebarList__title {
+		color: var(--s-fg)
+	}
+
+	/* selected indicator */ .SidebarListItem--is-active:after, .RootlistItem--is-active:before {
+		background-color: var(--s-blurple)
+	}
+
+	/* downloaded indicator */ .OfflineIndicator--is-downloaded {
+		color: var(--s-ping)
+	}
+
+/* right sidebar */
+	/* element background */ .buddy-card, #view-buddy-list, .section-divider-sticky-wrapper, .button.button-with-stroke, .scrollbar-style-visible-windows {
+		background-color: var(--s-friends-bar)
+	}
+
+	/* "find friends" button */
+		/* hover background */ .button.button-with-stroke.contextmenu-active, .button.button-with-stroke:not(:disabled):hover {
+			background-color: var(--s-friends-bar)
+		}
+
+		/* shadow fuckery */ .button.button-with-stroke.contextmenu-active, .button.button-with-stroke:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray), 0 0 0 1px transparent;
+			color: var(--s-lightgray)
+		}
+
+		/* text */ .button.button-with-stroke {
+			color: var(--s-fg)
+		}
+
+	/* header border */ .section-divider, .glue-page-header--with-active-sticky-header .glue-page-header__background, .Header--with-active-sticky-header .Header__background {
+		border-bottom: none
+	}
+
+	/* links */
+		/* normal */ .friend .user .name, .friend .context, .friend .context a, .friend .song-artist, .friend .song-artist a, .friend .song-title, .friend .song-title a {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .friend .context a:focus, .friend .context a:hover, .friend .song-artist a:focus, .friend .song-artist a:hover, .friend .song-title a:focus, .friend .song-title a:hover {
+			color: var(--s-lightgray)
+		}
+
+/* top bar */
+/*
+	/* background * / .body-container--mac .content-top-bar, .body-container--windows .content-top-bar, .body-container--windows .content-top-bar:after {
+		background: var(--s-friends-bar);
+	} */
+
+	/* username link */
+		/* normal */ .profile {
+			color: var(--s-fg)
+		}
+
+		/* hover */ .profile:hover {
+			color: var(--s-lightgray);
+
+		}
+
+	/* dropdown toggle */ .content-top-bar__profile-menu-button .dropdown>button, .content-top-bar__profile-menu-button .dropdown>button.contextmenu-active, .content-top-bar__profile-menu-button .dropdown>button:not(:disabled):hover {
+		color: var(--s-fg)
+	}
+
+	/* search bar */
+		/* background */ input[type=search] {
+			background: var(--s-side-bar);
+			color: #72767d;
+			border-radius: 4px !important;
+			padding-top: 1px;
+		}
+
+		/* search icon */ .spoticon-search-16::before {
+			color: #72767d;
+		}
+
+
+
+/* context menu */
+	/* background */ .context-menu, .MenuItem, .Menu {
+		background-color: var(--s-context-menu);
+		padding: 6px 8px;
+	}
+
+	.context-menu, .Menu {
+		border-radius: 4px !important;
+	}
+
+	.MenuItem {
+		border-radius: 2px;
+		margin: 2px 0;
+	}
+
+	/* separator */ .context-menu .sep {
+		background-color: hsla(0, 0%, 100%, 0.06)
+	}
+
+	/* item link */ .context-menu .item .text, .MenuItem, .Menu {
+		color: #b9bbbe;
+	}
+
+	/* item background hover */ .context-menu .item.hover:not(.disabled) {
+		background-color: var(--s-blurple)
+	}
+
+/* album list & album page */
+	/* header background */ .Header--with-active-sticky-header .Header__sticky, .glue-page-header--with-active-sticky-header .glue-page-header__sticky, .glue-page-header__content-wrapper, .glue-page-header__background-scroll-overlay {
+		background: transparent
+	}
+
+	/* header gradient garbage */
+		/* gradient */ .glue-page-header__background-color, .GlueHeader__background-overlay {
+			background-color: var(--s-bg);
+			background-image: linear-gradient(to bottom, transparent, var(--s-bg));
+		}
+
+		/* overlay */ .glue-page-header__background-overlay {
+			background: transparent
+		}
+
+		/* scrolling overlay */ .glue-page-header__background-scroll-overlay-ellipse {
+			background-image: radial-gradient(circle farthest-corner, transparent, var(--s-bg) 50%)
+		}
+
+		/* backdrop */ .glue-page-header__background-scroll-overlay-ellipse-backdrop, .Header__background-overlay, .Header__background-scroll-overlay {
+			background: var(--s-bg)
+		}
+
+	/* album page header border */ .h-search-bar {
+		border-top: none
+	}
+
+	/* album grid background shit */ .card-placeholder-wrapper, .Card__image-hit-area {
+		background: none;
+		background-color: none
+	}
+
+	/* more header shit (?) */ #view-content>.embedded-app, #view-content>iframe, .Header__background .Header__background-color, .glue-page-header--with-active-sticky-header .glue-page-header__background-scroll-overlay-ellipse {
+		background-color: var(--s-bg)
+	}
+
+	/* header text shit */ .Header__label, .Header__content .Header__title-text, .glue-page-header__content .glue-page-header__count-label-text, .glue-page-header__content .glue-page-header__count-label-number, .glue-page-header__content .glue-page-header__label, .glue-page-header__content .glue-page-header__title {
+		color: var(--s-fg)
+	}
+
+	/* absolutely retarded header gradient */ .glue-page-header__top-bar, .Header__top-bar {
+		background: linear-gradient(var(--s-bg), var(--s-bg) 48px, transparent)
+	}
+
+	/* artist link under album */ .card-info-subtitle-links a {
+		color: var(--s-fg)
+	}
+
+	/* artist link hover */ .card-info-subtitle-links a:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* album header table */
+		/* border */ .Table__sticky-header-table, .Table__table, .tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, .tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search {
+			border-bottom: none
+		}
+
+		/* background */ .Table__sticky-header, .sticky-clone .tl-header {
+			background-color: var(--s-bg)
+		}
+
+		/* text/icons */ .TableHeaderCell {
+			color: var(--s-fg)
+		}
+
+	/* header buttons */
+		/* play */ .Button--style-green, .Button--style-green:not(:disabled).Button--is-strong-style, .Button--style-green:not(:disabled):hover, .button.button-green, .button.button-green.contextmenu-active, .button.button-green:not(:disabled):hover {
+			background: var(--s-blurple)
+		}
+
+		/* play background bullshit */ .Button--style-stroke, .button.button-white, .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			background: none !important;
+			box-shadow: none !important
+		}
+
+		/* love/more */ .Button--style-icon-stroke, .button.button-icon-with-stroke {
+			box-shadow: inset 0 0 0 1px var(--s-fg);
+			color: var(--s-fg);
+			background: none
+		}
+
+		/* love/more hover */ .Button--style-icon-stroke:hover, .button.button-icon-with-stroke.contextmenu-active, .button.button-icon-with-stroke:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray);
+			color: var(--s-lightgray);
+			background: none
+		}
+
+	/* stupid fucking button */
+		/* background of the stupid fucking button itself */ .Button--style-stroke, .button.button-white, .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			background: var(--s-bg);
+			box-shadow: inset 0 0 0 1px var(--s-fg)
+		}
+
+		/* background of the stupid fucking button itself on hover */ .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation].contextmenu-active, button[data-button=add-recommendation]:not(:disabled):hover {
+			box-shadow: inset 0 0 0 1px var(--s-lightgray),0 0 0 1px transparent
+		}
+
+		/* text */ .Button__alt-text--is-active, .Button__text--is-active, .Button--style-stroke, .button.button-white, .Button--style-stroke:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, .button.button-white.contextmenu-active, .button.button-white:not(:disabled):hover, button[data-button=add-recommendation] {
+			color: var(--s-fg)
+		}
+
+		/* veeeeery special button hover background */ button[data-button=add-recommendation].contextmenu-active, button[data-button=add-recommendation]:not(:disabled):hover {
+			background-color: var(--s-bg)
+		}
+
+	/* tracklist */
+		/* explicit sign */ .TableCellSong__label, .tl-explicit .label, .tl-premium .label, .tl-row:hover .tl-explicit .label, .tl-row:hover .tl-premium .label, .tl-row.selection-focus .tl-explicit .label, .tl-row.selection-focus .tl-premium .label {
+			border: 1px solid var(--s-fg);
+			color: var(--s-fg);
+			border-color: var(--s-fg) !important;
+		}
+
+		/* fucking AWFUL border + bunch of text */ .TableCell, .tracklist-album, .tracklist-chart, .tracklist-basic, .tracklist-playlist, .tracklist-podcast, .tracklist-popular, .tracklist-station, .tracklist-queue, .tracklist-search, .tl-header th, .tl-cell, .tl-highlight, .added .button.button-icon-only.button-add, .Button--style-icon-background, .TrackListDiscRow__cell {
+			border-top: none;
+			color: var(--s-fg)
+		}
+
+		/* featured artist link */ .TableCellSong__featuredArtist {
+			color: var(--s-blue)
+		}
+
+		/* track hover background */ .TableRow--is-hover-forced, .TableRow:hover, .tl-row:hover .tl-cell, .tl-row.contextmenu-active .tl-cell, .card-horizontal > .card-horizontal-interior-wrapper:hover, .card-horizontal > .card-horizontal-interior-wrapper:active, .TableRow--is-selected {
+			background: var(--s-darkgray)
+		}
+
+		/* playing now icon */ .Button--style-icon-background {
+			background: none
+		}
+
+		/* disc */ .TrackListDiscRow__cell {
+			color: var(--s-fg)
+		}
+
+		/* now playing title */ .TableCellSong--track-is-playing .TableCellSong__featuredArtist, .TableCellSong--track-is-playing .TableCellSong__text-truncator, .TableCellSong--track-is-playing .TableCellSong__track-name, .tl-row.current .tl-cell:not(.tl-number), .tl-row.current .tl-cell a:link, .tl-row.current .tl-highlight {
+			color: var(--s-blurple)
+		}
+
+	/* "more by" */
+		/* text */ .GlueSectionDivider__title {
+			color: var(--s-fg)
+		}
+
+		/* border */ .GlueSectionDivider__container {
+			border-bottom: none
+		}
+
+		/* album name */ .Card__info-title a {
+			color: var(--s-fg)
+		}
+
+		/* album year */ .Card__info-subtitle-metadata {
+			color: var(--s-fg)
+		}
+
+	/* copyright */ .AlbumFooter__copyrights-list {
+		color: var(--s-fg)
+	}
+
+	/* search bar */ .h-search, .focus .h-search, .h-search:focus {
+		background: none;
+		color: var(--s-fg)
+	}
+
+	/* filtered shit? */ .empty-filtered-content {
+		border-top: none
+	}
+
+	/* slider */
+		/* on */ .slider.enabled {
+			background: var(--s-blurple)
+		}
+
+		/* handle */ .slider.enabled div, .slider div {
+			background: var(--s-fg);
+			box-shadow: 0 0 1px var(--s-fg), 0 0 3px var(--s-fg)
+		}
+
+		/* off */ .slider {
+			background: var(--s-darkgray);
+			border: 2px solid var(--s-fg)
+		}
+
+	/* album art hover overlay */ .card-overlay {
+	    background: var(--s-bg);
+	    opacity: 0.5;
+	}
+
+	/* charts */
+		/* unchanged */ .trend-mark.trend-equal::before {
+			background-color: var(--s-fg)
+		}
+
+		/* up */ .trend-mark.trend-up {
+			color: var(--s-green)
+		}
+
+		/* down */ .trend-mark.trend-down {
+			color: var(--s-red)
+		}
+
+/* artist page */
+	/* album header background in list view */ .header {
+		background: var(--s-bg)
+	}
+
+	/* motherfucking header shadow */ .glue-page-header__background-image-overlay-gradient {
+		background: linear-gradient(to bottom, transparent, var(--s-bg))
+	}
+
+	/* follow button */
+		/* text */ .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke), .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke), .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke).contextmenu-active, .added .button-add:not(.button-icon-only):not(.button-icon-with-stroke):not(:disabled):hover, .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke).contextmenu-active, .button-add.added:not(.button-icon-only):not(.button-icon-with-stroke):not(:disabled):hover {
+			color: var(--s-blurple)
+		}
+
+		/* background */ .button.button-with-stroke.added, .button.button-with-stroke.active, .button.button-with-stroke.added.contextmenu-active, .button.button-with-stroke.added:not(:disabled):hover, .button.button-with-stroke.active.contextmenu-active, .button.button-with-stroke.active:not(:disabled):hover {
+			background: var(--s-bg)
+		}
+
+		/* shadow fuckery */ .button.button-with-stroke.added, .button.button-with-stroke.active {
+			box-shadow: inset 0 0 0 1px var(--s-fg)
+		}
+
+	/* verified mark */ .header-verified-check {
+		color: var(--s-lightgray);
+		background-color: var(--s-cyan)
+	}
+
+	/* list view album shit */ .h-title a, .h-label, .card-info-title a {
+		color: var(--s-fg) !important;
+	}
+
+	/* view toggle */ .button.button-icon-only.active, .button.button-icon-only.active.contextmenu-active, .button.button-icon-only.active:not(:disabled):hover {
+		color: var(--s-blurple)
+	}
+
+	/* album year */ .card-info-subtitle-metadata {
+		color: var(--s-fg)
+	}
+
+	/* section title */ .section-divider > *, .rankings__title, .rankings__discovered-container, .rankings__topcities.title {
+		color: var(--s-fg)
+	}
+
+	/* sticky header */
+		/* link color */ .navbar-nav > li > a {
+			color: var(--s-fg)
+		}
+
+		/* hover link color */ .nav > li > a:hover, .nav > li > a:focus {
+			color: var(--s-lightgray)
+		}
+
+		/* active link color */ .nav > li.active > a {
+			color: var(--s-lightgray)
+		}
+
+		/* active indicator */ .nav > li.active > a::after {
+			background-color: var(--s-blurple)
+		}
+
+		/* in-between (?) background */ .glue-page-header--with-active-sticky-header .navbar.sticky-top {
+			background-color: var(--s-bg)
+		}
+
+		/* navbar background */ .navbar {
+			background: transparent
+		} /* NOTE: this is complete utter bullshit. i hate this. */
+
+	/* latest release & "fans also like" links */ .card-horizontal .card-info-title {
+		color: var(--s-fg)
+	}
+
+	/* image carousel */ .image-carousel__count, .image-carousel__count .current-slide {
+		color: var(--s-fg)
+	}
+
+	/* image carousel background */ .full-screen-modal--container>div:not(.modal-backdrop--hidden) {
+		background: none
+	}
+
+	/* stats */ .rankings__topcities.city, .rankings__topcities.listeners, .listening .monthly__data h2 {
+		color: var(--s-fg)
+	}
+
+/* modal */
+	/* background */ .Modal__content, .PlaylistAnnotationModal__img, .popover-title, .popover-footer, .modal-generic .modal-generic-title, .popover-addendum, .modal .popover-content {
+		background-color: var(--s-bg);
+		border-bottom: none;
+		border-top: none
+	}
+
+	/* title */ .PlaylistAnnotationModal__title, .Button--style-icon:not(.Button--is-drop-target-active), .popover-title {
+		color: var(--s-fg)
+	}
+
+	/* close button hover */ .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled).Button--is-strong-style, .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):focus.Button--with-focus, .Button--style-icon:not(.Button--is-drop-target-active):not(:disabled):hover {
+		color: var(--s-lightgray)
+	}
+
+	/* merch text */ .merch-popup-description, .popover-addendum {
+		color: var(--s-fg)
+	}
+
+/* dropdown menu */
+	/* background */ .dropdown-menu, .GlueDropdown {
+		background-color: var(--s-bg);
+		border: none
+	}
+
+	/* dangerous as fuck button */ .button.button-red, .button.button-red.contextmenu-active, .button.button-red:not(:disabled):hover {
+		background: var(--s-red);
+		color: var(--s-fg)
+	}
+
+/* podcast */
+	/* calendar sorting icon */ .tl-sort-asc::after, .tl-sort-desc::after {
+		color: var(--s-ping)
+	}
+
+	/* some weird icon */ .tl-status-indicator {
+		border: 1px solid var(--s-ping)
+	}
+
+	.tl-status-indicator--in-progress {
+		background: linear-gradient(to right, var(--s-ping) 0%, var(--s-ping) 55%, rgba(46, 119, 208, 0) 55%, rgba(46, 119, 208, 0) 100%)
+	}
+
+	.tl-status-indicator--new {
+		background-color: var(--s-ping)
+	}
+
+	/* "about" text */ .App__description-title {
+		color: var(--s-fg)
+	}
+
+/* settings */
+	/* text */ .setting-row, .account-info__profile-info-name {
+		color: var(--s-fg)
+	}
+
+	/* facebook button */ .button.button-facebook, .button.button-facebook.contextmenu-active, .button.button-facebook:not(:disabled):hover {
+		background: var(--s-blurple);
+		color: var(--s-fg)
+	}
+
+/* devices menu */
+	/* popup */ .ConnectPopup, .ConnectPopup__content {
+		background: var(--s-bg)
+	}
+
+	/* text */ .ConnectPopup__header-title, .ConnectPopup__info, .ConnectPopup__header-help {
+		color: var(--s-fg)
+	}
+
+	/* help button hover */ .ConnectPopup__header-help:focus, .ConnectPopup__header-help:hover {
+		color: var(--s-lightgray)
+	}
+
+	/* "learn more" button */ .button.button-blue, .button.button-blue.contextmenu-active, .button.button-blue:not(:disabled):hover {
+		background: var(--s-blurple);
+		color: var(--s-fg)
+	}
+
+	/* popup arrow */ .ConnectPopup:after {
+		border-top-color: var(--s-bg)
+	}
+
+	/* dot */ .ConnectDevicePicker__button--with-badge:after, .ConnectDevicePicker__button--with-badge.active:after, .view-player .remote-playback-bar {
+		background-color: var(--s-ping)
+	}
+
+	/* available device */ .ConnectPopup__device--available, .ConnectPopup__device-info, .view-player .remote-playback-bar p {
+		color: var(--s-fg)
+	}
+
+	/* unavailable device */ .ConnectPopup__device--not-available .device-subtitle, .ConnectPopup__device--not-available, .ConnectPopup__device--not-available .ConnectPopup__device-info, .ConnectPopup__device--not-available .ConnectPopup__device-title, .view-player .extra-controls-container .button-devices.active, .view-player .extra-controls-container .button-lyrics.active, .view-player .extra-controls-container .button-queue.active, .view-player .extra-controls-container .button-subtitles.active, .view-player .remote-playback-bar, .view-player .extra-controls-container .button-devices.active.contextmenu-active, .view-player .extra-controls-container .button-devices.active:not(:disabled):hover, .view-player .extra-controls-container .button-lyrics.active.contextmenu-active, .view-player .extra-controls-container .button-lyrics.active:not(:disabled):hover, .view-player .extra-controls-container .button-queue.active.contextmenu-active, .view-player .extra-controls-container .button-queue.active:not(:disabled):hover, .view-player .extra-controls-container .button-subtitles.active.contextmenu-active, .view-player .extra-controls-container .button-subtitles.active:not(:disabled):hover {
+		color: #9b9b9b
+	}
+
+	/* listening on this device */ .ConnectPopup__device--active, .ConnectPopup__device--active .ConnectPopup__device-info, .ConnectPopup__device--active .ConnectPopup__device-title, .view-player .extra-controls-container .button-devices.active, .view-player .extra-controls-container .button-lyrics.active, .view-player .extra-controls-container .button-queue.active, .view-player .extra-controls-container .button-subtitles.active, .view-player .remote-playback-bar, .view-player .extra-controls-container .button-devices.active.contextmenu-active, .view-player .extra-controls-container .button-devices.active:not(:disabled):hover, .view-player .extra-controls-container .button-lyrics.active.contextmenu-active, .view-player .extra-controls-container .button-lyrics.active:not(:disabled):hover, .view-player .extra-controls-container .button-queue.active.contextmenu-active, .view-player .extra-controls-container .button-queue.active:not(:disabled):hover, .view-player .extra-controls-container .button-subtitles.active.contextmenu-active, .view-player .extra-controls-container .button-subtitles.active:not(:disabled):hover {
+		color: var(--s-blurple)
+	}
+
+	/* arrow */ .view-player .remote-playback-bar .arrow {
+		border-bottom-color: var(--s-ping)
+	}
+
+/* "find friends" */
+	/* background */ .sections {
+		background: var(--s-bg)
+	}
+
+	/* item */ .user-container .user {
+		border-bottom: none
+	}
+
+/* user page */
+	/* followers count */ .list-group-item.list-group-item-social .list-group-item-text-wrapper {
+		color: var(--s-fg)
+	}
+
+/* playlist extender */ .playlist-extender-content .toggle-recommendations-arrow, .playlist-extender-content .playlist-extender-title-wrapper, .playlist-extender-content.hide-recommendations .playlist-extender-title-wrapper, .playlist-extender-content.hiding-recommendations .playlist-extender-title-wrapper {
+	color: var(--s-fg)
+}
+
+/* playlist extender hover */ .playlist-extender-content.hide-recommendations .playlist-extender-title-wrapper:hover, .playlist-extender-content.hiding-recommendations .playlist-extender-title-wrapper:hover, .playlist-extender-content .playlist-extender-title-wrapper:hover>.toggle-recommendations-arrow {
+	color: var(--s-lightgray)
+}
+
+/* scrollbar */ ::-webkit-scrollbar {
+	height: 6px !important;
+	width: 0px !important;
+	background-color: transparent;
+}
+
+/* gradient on radio */ .tracklist-station-container::after {
+		background: linear-gradient(rgba(var(--modspotify_rgb_sidebar_and_player_bg),0), var(--s-bg));
+}
