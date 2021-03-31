@@ -37,6 +37,13 @@
 #### Purple
 ![demo8](./purple.png)
 
+#### Wal (Tested on Linux only)
+![demo9](./wal.gif)
+This theme lets you integrate your pywal generated color palette into Dribblish, thus allowing 
+dynamic coloring scheming on the go. This is achieved by reading colors from Xresources which 
+are modified by pywal. Once this theme is selected using ```spicetify config color_scheme wal```, 
+all you have to do is generate a new palette based on your wallpaper using pywal and use 
+```spicetify apply``` to set the new scheme. 
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
