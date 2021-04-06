@@ -1,5 +1,7 @@
 # Bittersweet
 
+**This theme is currently unmantained and has some unsolved issues. If you want to contribute go to the Issues tab of this repository and select the _unmantained_ label to find the reported bugs.**
+
 ## Screenshots
 
 ![Home screen](https://i.imgur.com/0XBojv8.jpg)
