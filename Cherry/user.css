@@ -2,6 +2,10 @@
 	--bar-height: 120px;
 }
 
+h1 {
+	font-family: "Montserrat"
+}
+
 /*Round corner cover image*/
 .card-image,
 .card-placeholder-wrapper,
@@ -29,8 +33,8 @@
 
 /*Thinner scrollbar*/
 ::-webkit-scrollbar {
-	height: 6px !important;
-	width: 6px !important;
+	height: 0px !important;
+	width: 0px !important;
 	background-color: transparent;
 }
 
@@ -94,7 +98,10 @@
 .Card__image-hit-area:hover .Card__add-button,
 .Card__image-hit-area:hover .Card__more-button,
 .Card__image-hit-area:hover .Card__overlay {
-	opacity: 1 !important;
+	transition-property: all !important;
+	transition-duration: 1s !important;
+	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	opacity: 0 !important;
 }
 
 .glue-page-header__content .glue-page-header__image-inner {
