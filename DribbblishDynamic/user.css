@@ -399,6 +399,15 @@ body {
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.16) !important;
 }
 
+.Button.Button--folder {
+    position:absolute;
+    height: 20px;
+    width: 20px;
+    right: 8px;
+    bottom: 17px;
+    font-size: 10px;
+}
+
 .Button.Button--style-icon-stroke,
 .Button.Button--style-icon-background {
     border-radius: 50%;
