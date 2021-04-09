@@ -1,0 +1,29 @@
+/*Necessary to differentiate the color of the sidebar from the color of the bottom bar*/
+
+.sidebar {
+    background-color: #121212;
+}
+
+.sidebar .sidebar-navbar {
+    /* padding-top: 10px; */
+    background-color: #121212;
+}
+
+
+.LeftSidebar__scroll-section {
+    background-color: #121212;
+}
+
+
+
+/*Color of selected rows*/
+
+.tl-row.selected .tl-cell {
+    background-color: #333333;
+    border-color: var(--modspotify_main_bg);
+}
+
+
+
+
+
