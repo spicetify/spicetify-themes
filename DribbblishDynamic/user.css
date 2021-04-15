@@ -47,9 +47,16 @@ div#popover-container::before {
     font-weight: 500;
 }
 
+@font-face {
+    font-family: "icomoon";
+    src: url("https://local_resource_host/fonts/icomoon.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+
 body {
-    --glue-font-family: "Google Sans Display", "spotify-circular", "Noto Sans CJK JP Bold", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
-    --info-font-family: "Roboto", "spotify-circular", "Noto Sans CJK JP Thin", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+    --glue-font-family: "Google Sans Display", "icomoon", "spotify-circular", "Noto Sans CJK JP Bold", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
+    --info-font-family: "Roboto", "icomoon", "spotify-circular", "Noto Sans CJK JP Thin", "spotify-circular-cyrillic", "spotify-circular-arabic", "spotify-circular-hebrew", "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", "Meiryo", "MS Gothic", sans-serif;
     letter-spacing: 0;
 }
 
@@ -1583,4 +1590,16 @@ button[data-button=add-recommendation] {
 
 .SearchInput__input:focus, .SearchInput__input:hover {
     background-color: rgba(var(--modspotify_rgb_main_fg), 0.05);
+}
+
+/* Custom icons */
+.icomoon-recently-played::before {
+    font-family: icomoon;
+    content: "\e900";
+    font-size: 24px;
+}
+.icomoon-reddit::before {
+    font-family: icomoon;
+    content: "\e901";
+    font-size: 28px;
 }

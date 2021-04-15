@@ -121,7 +121,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
         }
 
         if (iconName) {
-            el.classList.add(`spoticon-${iconName}-24`);
+            el.classList.add(iconName);
         }
 
         el.parentNode.setAttribute("data-tooltip", el.innerText);
@@ -136,9 +136,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 case "genius":                  return "lyrics";
                 case "JQBX":                    return "addsuggestedsong";
                 case "bookmark":                return "tag";
-                case "reddit":                  return "discover";
-                case "made-for-you":            return "user";
-                case "recently-played":         return "time";
+                case "made-for-you":            return "user-circle";
                 case "collection-songs":        return "heart";
                 case "collection:albums":       return "album";
                 case "collection:artists":      return "artist";
@@ -152,6 +150,13 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 //case "home":                  return "home";
                 //case "browse":                return "browse";
                 //case "radio":                 return "radio";
+            }})(item.href.replace("spotify:app:", ""));
+            if (icon) {
+                icon = `spoticon-${icon}-24`;
+            }
+            else icon = ((app) => {switch (app) {
+                case "reddit":                  return "icomoon-reddit";
+                case "recently-played":         return "icomoon-recently-played";
             }})(item.href.replace("spotify:app:", ""));
 
             replaceTextWithIcon(item.firstChild, icon);
