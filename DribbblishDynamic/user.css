@@ -431,6 +431,7 @@ body {
 .button.button-icon-with-stroke:hover {
     transform: none !important;
     background-color: var(--modspotify_sidebar_indicator_and_hover_button_bg) !important;
+    color: var(--modspotify_preserve_1) !important;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.26) !important;
 }
 
@@ -1066,6 +1067,7 @@ body.video-full-screen .view-player {
     top: 0 !important;
     margin-top: 0 !important;
     height: 2px;
+    margin-right: -1px;
 }
 
 .progress-container .progress-bar-wrapper {
@@ -1574,7 +1576,7 @@ button[data-button=add-recommendation] {
 
 .main-view-wrapper::before {
     z-index: +3;
-    opacity: calc(0.06 + 0.14 * var(--is_light, 0));
+    opacity: calc(0.06 + 0.12 * var(--is_light, 0));
 }
 
 .view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {

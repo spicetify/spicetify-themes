@@ -235,8 +235,13 @@ function updateColors(root) {
     let colHex = mainColor
     if( isLightBg ) colHex = LightenDarkenColor(colHex, -5) // vibrant color is always too bright for white bg mode
     let colRGB = hexToRgb(colHex)
-    let darkerColHex = LightenDarkenColor(colHex, isLightBg ? 40 : -40)
+    let darkerColHex = LightenDarkenColor(colHex, isLightBg ? 45 : -40)
     let darkerColRGB = hexToRgb(darkerColHex)
+
+    let sliderColHex = LightenDarkenColor(colHex, isLightBg ? 40 : -65)
+    let sliderColRGB = hexToRgb(sliderColHex)    
+    let buttonBgColHex = isLightBg ? "#FFFFFF" : LightenDarkenColor(colHex, -80)
+    let buttonBgColRGB = hexToRgb(buttonBgColHex)
 
     root.style.setProperty('--is_light', isLightBg ? 1 : 0)
     
@@ -244,23 +249,25 @@ function updateColors(root) {
     root.style.setProperty('--modspotify_active_control_fg', colHex)
     root.style.setProperty('--modspotify_secondary_bg', colHex)
     //root.style.setProperty('--modspotify_pressing_button_bg', colHex)
-    //root.style.setProperty('--modspotify_indicator_fg_and_button_bg', colHex)
+    root.style.setProperty('--modspotify_indicator_fg_and_button_bg', buttonBgColHex)
     root.style.setProperty('--modspotify_pressing_fg', colHex)
     root.style.setProperty('--modspotify_sidebar_indicator_and_hover_button_bg', colHex)
     //root.style.setProperty('--modspotify_scrollbar_fg_and_selected_row_bg', darkerColHex)
     root.style.setProperty('--modspotify_selected_button', darkerColHex)
     //root.style.setProperty('--modspotify_miscellaneous_hover_bg', colHex)
+    root.style.setProperty('--modspotify_slider_bg', sliderColHex)
     
     root.style.setProperty('--modspotify_rgb_main_fg', colRGB)
     root.style.setProperty('--modspotify_rgb_active_control_fgg', colRGB)
     root.style.setProperty('--modspotify_rgb_secondary_bg', colRGB)
     //root.style.setProperty('--modspotify_rgb_pressing_button_bg', colRGB)
-    //root.style.setProperty('--modspotify_rgb_indicator_fg_and_button_bg', colRGB)    
+    root.style.setProperty('--modspotify_rgb_indicator_fg_and_button_bg', buttonBgColRGB)    
     root.style.setProperty('--modspotify_rgb_pressing_fg', colRGB)
     root.style.setProperty('--modspotify_rgb_sidebar_indicator_and_hover_button_bg', colRGB)
     //root.style.setProperty('--modspotify_rgb_scrollbar_fg_and_selected_row_bg', darkerColRGB)
     root.style.setProperty('--modspotify_rgb_selected_button', darkerColRGB)
     //root.style.setProperty('--modspotify_rgb_miscellaneous_hover_bg', colRGB)
+    root.style.setProperty('--modspotify_rgb_slider_bg', sliderColRGB)
 
     // Also update the color of the icons for bright and white backgrounds to remain readable.
     let isLightFg = isLight(colHex);
