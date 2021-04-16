@@ -12,11 +12,12 @@
     --image_url: '';
     --is_light: 0;
     --move_buddy_list: 0px;
+    --warning_message: "You haven't installed 'dribbblish-dynamic.js' extension. Please follow instructions on theme README page.";
 }
 
 div#popover-container::before {
-    content: "You haven't installed 'dribbblish-dynamic.js' extension. Please follow instructions on theme README page.";
     font-size: 30px;
+    content: var(--warning_message);
 }
 
 @font-face {
@@ -391,6 +392,7 @@ body {
     letter-spacing: 0;
 }
 
+.button-facebook,
 .Button.Button--style-green,
 .Button.Button--style-stroke,
 .Button.Button--style-icon-stroke,
@@ -977,7 +979,7 @@ select {
 }
 
 .slider.enabled {
-    background: var(--modspotify_sidebar_indicator_and_hover_button_bg);
+    background: var(--modspotify_selected_button);
 }
 
 .slider.enabled div {

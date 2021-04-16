@@ -1,5 +1,6 @@
 // Hide popover message
 document.getElementById("popover-container").style.height = 0;
+document.documentElement.style.setProperty('--warning_message', ' ')
 
 let appHiddenList = [];
 try {
