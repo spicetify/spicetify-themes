@@ -1,6 +1,6 @@
 // Hide popover message
 document.getElementById("popover-container").style.height = 0;
-document.documentElement.style.setProperty('--warning_message', ' ')
+document.documentElement.style.setProperty('--warning_message', ' ');
 
 let appHiddenList = [];
 try {
@@ -59,7 +59,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
                 const button = item.getElementsByTagName("button")[0]
                 button.classList.add("Button", "Button--style-icon-background", "Button--folder");
                 item.setAttribute("data-tooltip", item.innerText);
-                replaceTextWithIcon(link.firstChild, 'collection');
+                replaceTextWithIcon(link.firstChild, 'spoticon-collection-24');
                 continue;
             }
 
