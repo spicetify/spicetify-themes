@@ -162,9 +162,8 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
             replaceTextWithIcon(item.firstChild, icon);
         });
 
-    waitForElement([`[href="spotify:app:recently-played"]`], ([query]) => {
-        replaceTextWithIcon(query.firstChild, "time");
-        query.setAttribute("data-tooltip", 'Recently Played');
+    waitForElement([`[href="spotify:app:queue:history"]`], ([query]) => {
+        replaceTextWithIcon(query.firstChild);
     });
 });
 
