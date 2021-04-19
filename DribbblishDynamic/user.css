@@ -993,6 +993,12 @@ select {
     border-radius: 11px;
 }
 
+/* Advertisement */
+
+.h-description {
+    color: var(--modspotify_secondary_fg) !important;
+}
+
 /* Friend list */
 
 .body-container--windows .buddy-list-iframe {
