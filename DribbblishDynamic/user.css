@@ -1456,7 +1456,7 @@ button#player-button-repeat,
 .RootlistItemFolder__name:before,
 .RootlistItemFolder__arrow:before,
 .SidebarListItem__label:before {
-    color: var(--modspotify_preserve_1);
+    color: var(--modspotify_secondary_fg);
 }
 
 .sidebar .sidebar-navbar {
