@@ -22,6 +22,9 @@
 #### Nord-Dark
 ![demo5](./nord-dark.png)
 
+#### Nord-Darker
+![demoNord-Darker](./nord-darker.png)
+
 #### Nord-Light
 ![demo6](./nord-light.png)
 
@@ -39,11 +42,11 @@
 
 #### Wal (Tested on Linux only)
 ![demo9](./wal.gif)
-This theme lets you integrate your pywal generated color palette into Dribblish, thus allowing 
-dynamic coloring scheming on the go. This is achieved by reading colors from Xresources which 
-are modified by pywal. Once this theme is selected using ```spicetify config color_scheme wal```, 
-all you have to do is generate a new palette based on your wallpaper using pywal and use 
-```spicetify apply``` to set the new scheme. 
+This theme lets you integrate your pywal generated color palette into Dribblish, thus allowing
+dynamic coloring scheming on the go. This is achieved by reading colors from Xresources which
+are modified by pywal. Once this theme is selected using ```spicetify config color_scheme wal```,
+all you have to do is generate a new palette based on your wallpaper using pywal and use
+```spicetify apply``` to set the new scheme.
 ## More
 Requires spicetify-cli **v0.9.9 or newer**.
 
@@ -78,8 +81,8 @@ spicetify apply
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
 
-Alternatively, you can use `SpotifyNoControl.exe`, included in this theme package, to completely remove all windows controls and title menu (three dot at top left corner). Title menu still can be access via Alt key. Closing, minimizing can be done via right click menu at top window region.  
-`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. You can drag and drop it to your taskbar but make sure you unpin the original Spotify icon first. Alternatively you can make a shortcut for it and add to desktop or start menu.  
+Alternatively, you can use `SpotifyNoControl.exe`, included in this theme package, to completely remove all windows controls and title menu (three dot at top left corner). Title menu still can be access via Alt key. Closing, minimizing can be done via right click menu at top window region.
+`SpotifyNoControl.exe` could be used as Spotify launcher, it opens Spotify and hides controls right after. You can drag and drop it to your taskbar but make sure you unpin the original Spotify icon first. Alternatively you can make a shortcut for it and add to desktop or start menu.
 Moreover, by default, Spotify adjusted sidebar items and profile menu icon to stay out of Windows native controls region. If you decided to use `SpotifyNoControl.exe` from now on, please open `user.css` file and change variable `--os-windows-icon-dodge` value to 0 as instruction to snap icons back to their original position.
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
@@ -91,9 +94,9 @@ spicetify config color_scheme <scheme name>
 spicetify apply
 ```
 
-# How to uninstall 
+# How to uninstall
 
-Remove the dribbblish script with the following commands 
+Remove the dribbblish script with the following commands
 
 ```
 spicetify config extensions dribbblish.js-
