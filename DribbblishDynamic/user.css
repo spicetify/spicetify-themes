@@ -61,6 +61,10 @@ body {
     letter-spacing: 0;
 }
 
+select {
+    background-color: var(--modspotify_indicator_fg_and_button_bg);
+}
+
 /*Round corner cover image*/
 
 .card-image,
@@ -1454,10 +1458,8 @@ button#player-button-repeat,
 }
 
 .RootlistItemFolder__name:before,
-.RootlistItemFolder__arrow:before,
-.SidebarListItem__label:before,
-.SidebarListItemLink:before {
-    color: var(--modspotify_secondary_fg);
+.SidebarListItem__label:before {
+    color: var(--modspotify_preserve_1);
 }
 
 .sidebar .sidebar-navbar {
@@ -1594,8 +1596,9 @@ button[data-button=add-recommendation] {
 
 .browser-navigation-top-bar .button:hover,
 .browser-navigation-top-bar .button:hover:before,
-.RootlistItemFolder__name:hover:before, .RootlistItemFolder__arrow:hover:before,
-.SidebarListItem__label:hover:before, .SidebarListItemLink:hover:before {
+.RootlistItemFolder__name:hover:before,
+.SidebarListItem__label:hover:before,
+.SidebarListItemLink:hover:before {
     color: var(--modspotify_pressing_button_fg);
 }
 
