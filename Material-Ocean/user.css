@@ -747,3 +747,8 @@ body.remotebar .view-player .player-bar-wrapper {
 button.RecentlySearched__clear-all-button.button.button-with-stroke {
   margin-bottom: 30px;
 }
+
+/* lyrics container color */
+.lyrics-color-container {
+  background-color: var(--modspotify_main_bg) !important;
+}
