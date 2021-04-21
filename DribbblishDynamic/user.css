@@ -12,7 +12,28 @@
     --image_url: '';
     --is_light: 0;
     --move_buddy_list: 0px;
+    --transition: linear 0.35s;
+    /* You can darken (eg. -20) or lighten (eg. +20) the main color*/
+    --custom_darken: -5;
     --warning_message: "You haven't installed 'dribbblish-dynamic.js' extension. Please follow instructions on theme README page.";
+}
+
+body, button {
+    transition: color var(--transition) !important;
+    transition: background-color var(--transition) !important;
+}
+
+.cover-image {
+    transition: background-image var(--transition) !important;
+}
+
+.button, tr, td {
+    transition: color var(--transition) !important;
+    transition: background-color var(--transition) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, text {
+    transition: color var(--transition) !important;
 }
 
 div#popover-container::before {
@@ -116,7 +137,7 @@ select {
     opacity: 0;
     background: linear-gradient(transparent, rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.5));
     border-radius: var(--cover-border-radius) !important;
-    transition: opacity cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+    transition: opacity var(--transition);
 }
 
 .card .card-button-add,
@@ -124,7 +145,8 @@ select {
 .card .card-button-more {
     visibility: visible;
     opacity: 0;
-    transition: opacity cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
+    transition: opacity var(--transition);
+    transition: color var(--transition);
 }
 
 .card.playing .card-button-play,
@@ -268,14 +290,14 @@ select {
     font-size: 84px;
     margin-top: 0;
     line-height: initial;
-    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: color var(--transition);
 }
 
 #video-player .album-art__artist-name {
     font-size: 54px;
     margin-top: 0;
     line-height: initial;
-    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    transition: color var(--transition);
 }
 
 /* Remove section divider */
@@ -360,9 +382,10 @@ select {
 .Tooltip {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) !important;
     border-radius: 4px !important;
-    background-color: var(--modspotify_secondary_fg);
+    background-color: rgba(var(--modspotify_rgb_secondary_fg), 0.5);
     color: var(--modspotify_main_bg);
     padding: 10px 10px;
+    backdrop-filter: blur(20px);
 }
 
 .tooltip-arrow-top,
@@ -394,6 +417,7 @@ select {
     text-transform: capitalize;
     font-size: 14px;
     letter-spacing: 0;
+    transition: color var(--transition);
 }
 
 .button-facebook,
@@ -479,8 +503,8 @@ select {
     border-radius: 8px !important;
     padding: 0;
     border: 1px solid rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2);
-    background-color: rgba(var(--modspotify_rgb_sidebar_and_player_bg), 0.85);
-    backdrop-filter: blur(25px);
+    background-color: rgba(var(--modspotify_rgb_sidebar_and_player_bg), 0.5);
+    backdrop-filter: blur(20px);
 }
 
 .context-menu .item,
@@ -1006,7 +1030,7 @@ select {
 /* Friend list */
 
 .body-container--windows .buddy-list-iframe {
-    margin-top: 48px;
+    margin-top: 8px;
     margin-bottom: var(--move_buddy_list);
 }
 
@@ -1463,8 +1487,8 @@ button#player-button-repeat,
 }
 
 .sidebar .sidebar-navbar {
-    background-color: var(--modspotify_secondary_bg);
-    transition: background-color 1.5s linear;
+    background-image: linear-gradient(180deg, var(--modspotify_secondary_bg) 40%, var(--modspotify_selected_button) 100%);
+    transition: background-color var(--transition);
     padding-bottom: 10px;
     z-index: 0;
 }
@@ -1547,7 +1571,7 @@ button[data-button=add-recommendation] {
     bottom: 0;
     width: var(--sidebar-width);
     height: 10%;
-    background: linear-gradient(to top, var(--modspotify_secondary_bg) 10%, transparent);
+    background: linear-gradient(to top, var(--modspotify_selected_button) 10%, transparent);
     z-index: 3;
     pointer-events: none;
 }
@@ -1573,7 +1597,7 @@ button[data-button=add-recommendation] {
     pointer-events: none;
     backface-visibility: hidden;
     will-change: transform;
-    transition: background-image 1.5s linear;
+    transition: background-image var(--transition);
 }
 
 #video-player::before {
@@ -1592,6 +1616,7 @@ button[data-button=add-recommendation] {
 
 .view-player .nowplaying-add-button, .view-player .nowplaying-ban-button {
     top: -7px !important;
+    transition: background-color var(--transition);
 }
 
 .browser-navigation-top-bar .button:hover,

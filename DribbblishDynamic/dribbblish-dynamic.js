@@ -224,6 +224,7 @@ let nearArtistSpan = null
 let mainColor = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_fg')
 let mainColor2 = getComputedStyle(document.documentElement).getPropertyValue('--modspotify_main_bg')
 let isLightBg = isLight(mainColor2)
+let customDarken = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--custom_darken'))
 
 waitForElement([".artist"], (queries) => {
     nearArtistSpan = document.createElement("span");
@@ -233,8 +234,7 @@ waitForElement([".artist"], (queries) => {
 
 function updateColors(root) {
     if( root===null) return;
-    let colHex = mainColor
-    if( isLightBg ) colHex = LightenDarkenColor(colHex, -5) // vibrant color is always too bright for white bg mode
+    let colHex = LightenDarkenColor(mainColor, customDarken)
     let colRGB = hexToRgb(colHex)
     let darkerColHex = LightenDarkenColor(colHex, isLightBg ? 45 : -40)
     let darkerColRGB = hexToRgb(darkerColHex)
@@ -281,7 +281,6 @@ function updateColorsAllIframes() {
     // code below works but then generate many errors on page change.
     let frames = document.getElementsByTagName("iframe");
     for (i=0; i<frames.length; ++i) {
-        console.log(i+". "+frames[i].id)
         try {
             updateColors(frames[i].contentDocument.documentElement)
         } catch (error) {
