@@ -2,8 +2,8 @@
 A modified version of Spicetify's DribbblishDynamic theme
 
 ## Screenshots
-![SubtleDribbblishDynamic - Home](screenshots/subtle-ex1.png "SubtleDribbblishDynamic - Home")
-![SubtleDribbblishDynamic - Artist](screenshots/subtle-ex3.png "SubtleDribbblishDynamic - Artist")
+![SubtleDribbblishDynamic - Home](screenshots/subtle-ex1.PNG "SubtleDribbblishDynamic - Home")
+![SubtleDribbblishDynamic - Artist](screenshots/subtle-ex3.PNG "SubtleDribbblishDynamic - Artist")
 ![SubtleDribbblishDynamic - Colors](screenshots/subtle-gif1.gif "SubtleDribbblishDynamic - Colors")
 
 ## About
