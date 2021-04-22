@@ -2,6 +2,7 @@
 document.getElementById("popover-container").style.height = 0;
 document.documentElement.style.setProperty('--warning_message', ' ');
 
+// Get stored hidden sidebar list
 let appHiddenList = [];
 try {
     const rawList = JSON.parse(localStorage.getItem("sidebar-app-hide-list"));
@@ -354,3 +355,37 @@ window.addEventListener("message", ({data: info}) => {
 
 // Add "About" item in profile menu
 new Spicetify.Menu.Item("About", false, () => window.open("spotify:app:about")).register();
+
+// Track elapsed time
+(function Dribbblish() {
+    if (!Spicetify.Player.origin) {
+        setTimeout(Dribbblish, 300);
+        return;
+    }
+
+    const progBar = Spicetify.Player.origin.progressbar;
+
+    // Remove default elapsed element update since we already hide it
+    progBar._listenerMap["progress"].pop();
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "handle prog-tooltip";
+    progBar._innerElement.append(tooltip);
+    
+    function updateTooltip(e) {
+        const curWidth = progBar._innerElement.offsetWidth;
+        const maxWidth = progBar._container.offsetWidth;
+        const ttWidth = tooltip.offsetWidth / 2;
+        if (curWidth < ttWidth) {
+            tooltip.style.right = String(-ttWidth * 2 + curWidth) + "px";
+        } else if (curWidth > maxWidth - ttWidth) {
+            tooltip.style.right = String(curWidth - maxWidth) + "px";
+        } else {
+            tooltip.style.right = String(-ttWidth) + "px";
+        }
+        tooltip.innerText = Spicetify.Player.formatTime(e) + " / " +
+            Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+    }
+    progBar.addListener("progress", (e) => {updateTooltip(e.value)});
+    updateTooltip(progBar._currentValue);
+})();
