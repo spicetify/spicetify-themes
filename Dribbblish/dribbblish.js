@@ -181,3 +181,35 @@ waitForElement([".LeftSidebar"], (queries) => {
     fade.id = "dribbblish-sidebar-fade-in";
     queries[0].append(fade);
 });
+
+(function Dribbblish() {
+    if (!Spicetify.Player.origin) {
+        setTimeout(Dribbblish, 300);
+        return;
+    }
+
+    const progBar = Spicetify.Player.origin.progressbar;
+
+    // Remove default elapsed element update since we already hide it
+    progBar._listenerMap["progress"].pop();
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "handle prog-tooltip";
+
+    progBar._innerElement.append(tooltip);
+    
+    Spicetify.Player.origin.progressbar.addListener("progress", (e) => {
+        const curWidth = progBar._innerElement.offsetWidth;
+        const maxWidth = progBar._container.offsetWidth;
+        const ttWidth = tooltip.offsetWidth / 2;
+        if (curWidth < ttWidth) {
+            tooltip.style.right = String(-ttWidth * 2 + curWidth) + "px";
+        } else if (curWidth > maxWidth - ttWidth) {
+            tooltip.style.right = String(curWidth - maxWidth) + "px";
+        } else {
+            tooltip.style.right = String(-ttWidth) + "px";
+        }
+        tooltip.innerText = Spicetify.Player.formatTime(e.value) + " / " +
+            Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+    });
+})();

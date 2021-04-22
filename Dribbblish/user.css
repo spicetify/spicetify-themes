@@ -1513,3 +1513,14 @@ button[data-button=add-recommendation] {
     z-index: 3;
     pointer-events: none;
 }
+
+.progress-bar .handle.prog-tooltip {
+    min-width: 100px;
+    width: unset;
+    height: 25px;
+    top: -35px;
+    padding: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--modspotify_secondary_fg);
+}
