@@ -645,19 +645,19 @@ body.remotebar .view-player .player-bar-wrapper {
     background-color: var(--modspotify_pressing_button_fg);
     opacity: 0.2;
     bottom: unset;
-    height: 50px;
-    width: 50px;
+    height: calc(var(--left-sidebar-item-height) * 1.8);
+    width: calc(var(--left-sidebar-item-height) * 1.8);
     border-radius: 10px;
-    left: 17px;
+    left: calc(0.5 * var(--sidebar-width) - 0.5 * var(--left-sidebar-item-height) * 1.8);
     z-index: -1;
 }
 
 .LeftSidebar__section .SidebarListItem--is-active:after {
-    top: 6px;
+    top: calc( -0.4 * var(--left-sidebar-item-height) + 12px);
 }
 
 .LeftSidebar__scroll-section .SidebarListItem--is-active:after {
-    top: 3px;
+    top: calc( -0.4 * var(--left-sidebar-item-height) + 12px);
 }
 
 .body-container--mac .sidebar-top-items__drag-area,
@@ -674,7 +674,7 @@ body.remotebar .view-player .player-bar-wrapper {
 }
 
 .RootlistItem--is-active:before {
-    top: 3px;
+    top: calc( -0.4 * var(--left-sidebar-item-height) + 12px);
 }
 
 .SidebarListItem__inner {
@@ -1433,6 +1433,7 @@ button#player-button-repeat,
 .RootlistItem__link {
     padding-left: 0;
     color: var(--modspotify_preserve_1);
+    height: var(--left-sidebar-item-height);
 }
 
 .RootlistItemFolder__arrow {
@@ -1451,7 +1452,7 @@ button#player-button-repeat,
 }
 
 .LeftSidebar__section.LeftSidebar__section--rootlist {
-    padding: 18px 0;
+    padding: 12px 0;
 }
 
 #new-playlist-button-mount-point {
