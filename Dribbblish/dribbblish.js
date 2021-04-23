@@ -183,7 +183,7 @@ waitForElement([".LeftSidebar"], (queries) => {
 });
 
 (function Dribbblish() {
-    if (!Spicetify.Player.origin) {
+    if (!Spicetify.Player.origin || !Spicetify.EventDispatcher || !Spicetify.Event) {
         setTimeout(Dribbblish, 300);
         return;
     }
@@ -212,4 +212,21 @@ waitForElement([".LeftSidebar"], (queries) => {
         tooltip.innerText = Spicetify.Player.formatTime(e.value) + " / " +
             Spicetify.Player.formatTime(Spicetify.Player.getDuration());
     });
+
+    function updateDevicesIcon(length) {
+        if (length > 1) {
+            Spicetify.Player.origin.remotePlaybackBar._connectDevicePickerIconElement
+                .classList.remove("hidden");
+        } else {
+            Spicetify.Player.origin.remotePlaybackBar._connectDevicePickerIconElement
+                .classList.add("hidden");
+        }
+    }
+
+    updateDevicesIcon(Spicetify.Player.origin.connectPopup.devices().length);
+
+    Spicetify.EventDispatcher.addEventListener(
+        Spicetify.Event.TYPES.SPCONNECT_DEVICE_STATE,
+        ({ params }) => updateDevicesIcon(params.devices.length)
+    );
 })();
