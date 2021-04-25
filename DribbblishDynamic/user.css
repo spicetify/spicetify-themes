@@ -259,6 +259,10 @@ select {
     margin-top: 15px !important;
 }
 
+.body-container--windows:not(.with-buddy-list):not(.messagebar) .content-top-bar__profile {
+    margin-right: calc(var(--os-windows-icon-dodge) * 135px);
+}
+
 /* Spice up Fullscreen mode */
 
 #view-player .album-art .album-art__image {
@@ -633,11 +637,9 @@ body.remotebar .view-player .player-bar-wrapper {
     padding-bottom: 12px;
 }
 
-.scrollbar-style-visible-linux .RootlistItem,
-.scrollbar-style-visible-mac .RootlistItem,
-.scrollbar-style-visible-windows .RootlistItem {
-    padding-right: var(--left-sidebar-padding-right);
-    padding-left: var(--left-sidebar-padding-left);
+.RootlistItem {
+    padding-right: var(--left-sidebar-padding-right) !important;
+    padding-left: var(--left-sidebar-padding-left) !important;
 }
 
 .SidebarListItem--is-active:after,

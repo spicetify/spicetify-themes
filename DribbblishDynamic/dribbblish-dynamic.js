@@ -358,7 +358,7 @@ new Spicetify.Menu.Item("About", false, () => window.open("spotify:app:about")).
 
 // Track elapsed time
 (function Dribbblish() {
-    if (!Spicetify.Player.origin) {
+    if (!Spicetify.Player.origin || !Spicetify.EventDispatcher || !Spicetify.Event) {
         setTimeout(Dribbblish, 300);
         return;
     }
