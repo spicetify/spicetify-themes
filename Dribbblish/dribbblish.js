@@ -1,5 +1,6 @@
 // Hide popover message
 document.getElementById("popover-container").style.height = 0;
+const DribbblishShared = {};
 
 // Get stored hidden sidebar list
 let appHiddenList = [];
@@ -61,8 +62,21 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
             if (href.indexOf("playlist-folder") != -1) {
                 const button = item.getElementsByTagName("button")[0]
                 button.classList.add("Button", "Button--style-icon-background", "Button--size-28",);
-                item.setAttribute("data-tooltip", item.innerText);
-                link.firstChild.innerText = item.innerText.slice(0, 3);
+                if (item.innerText.length > 3) {
+                    item.setAttribute("data-tooltip", item.innerText);
+                }
+
+                const id = href.split(":")[2];
+                const base64 = localStorage.getItem("dribbblish:folder-image:" + id);
+                const container = item.firstChild;
+                if (base64) {
+                    container.style.backgroundImage = base64;
+                    container.classList.add("playlist-picture");
+                } else {
+                    container.style.backgroundImage = "";
+                    container.classList.remove("playlist-picture");
+                    link.firstChild.innerHTML = `<span>${item.innerText.slice(0, 3)}</span>`;
+                }
                 continue;
             }
 
@@ -83,6 +97,7 @@ waitForElement([".LeftSidebar", ".LeftSidebar__section--rootlist .SidebarList__l
         }
     }
 
+    DribbblishShared.loadPlaylistImage = loadPlaylistImage;
     loadPlaylistImage();
 
     new MutationObserver(loadPlaylistImage)
@@ -229,4 +244,60 @@ waitForElement([".LeftSidebar"], (queries) => {
         Spicetify.Event.TYPES.SPCONNECT_DEVICE_STATE,
         ({ params }) => updateDevicesIcon(params.devices.length)
     );
+
+    const filePickerForm = document.createElement("form");
+    filePickerForm.setAttribute("aria-hidden", true);
+    filePickerForm.innerHTML = '<input type="file" class="glue-hidden-visually" />';
+    document.body.appendChild(filePickerForm);
+    /** @type {HTMLInputElement} */
+    const filePickerInput = filePickerForm.childNodes[0];
+    filePickerInput.accept = [
+        "image/jpeg",
+        "image/apng",
+        "image/avif",
+        "image/gif",
+        "image/png",
+        "image/svg+xml",
+        "image/webp"
+    ].join(",");
+
+    filePickerInput.onchange = () => {
+        if (!filePickerInput.files.length) return;
+
+        const file = filePickerInput.files[0];
+        const reader = new FileReader;
+        reader.onload = (event) => {
+            const result = "url('" + event.target.result + "')";
+            const id = Spicetify.URI.from(filePickerInput.uri).id;
+            try {
+                localStorage.setItem(
+                    "dribbblish:folder-image:" + id,
+                    result
+                );
+            } catch {
+                Spicetify.showNotification("File too large");
+            }
+            DribbblishShared.loadPlaylistImage?.call();
+        }
+        reader.readAsDataURL(file);
+    }
+
+    new Spicetify.ContextMenu.Item("Choose folder image",
+        ([uri]) => {
+            filePickerInput.uri = uri;
+            filePickerForm.reset();
+            filePickerInput.click();
+        },
+        ([uri]) => Spicetify.URI.isFolder(uri),
+        "edit",
+    ).register();
+    new Spicetify.ContextMenu.Item("Remove folder image",
+        ([uri]) => {
+            const id = Spicetify.URI.from(uri).id;
+            localStorage.removeItem("dribbblish:folder-image:" + id);
+            DribbblishShared.loadPlaylistImage?.call();
+        },
+        ([uri]) => Spicetify.URI.isFolder(uri),
+        "ban",
+    ).register();
 })();
