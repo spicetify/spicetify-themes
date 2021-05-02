@@ -14,6 +14,10 @@ Has a dark (base) and a light variant and narrow scroll bar tweak.
 
 ![Matcha Light themed Spotify screenshot](screenshot_light.png)
 
+### Dark-Aliz
+
+![Matcha Dark-Aliz themed Spotify screenshot](screenshot_dark-aliz.png)
+
 ## More
 
 By [@jwty](https://github.com/jwty). Standalone download in available [this](https://github.com/jwty/Matcha-Spotify-Theme) repository.
