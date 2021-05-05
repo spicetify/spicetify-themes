@@ -135,7 +135,7 @@ select {
 .Card__overlay {
     visibility: visible;
     opacity: 0;
-    background: linear-gradient(transparent, rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.5));
+    background: linear-gradient(transparent, var(--modspotify_indicator_fg_and_button_bg));
     border-radius: var(--cover-border-radius) !important;
     transition: opacity var(--transition);
 }
@@ -267,7 +267,7 @@ select {
 
 #view-player .album-art .album-art__image {
     border-radius: 30px !important;
-    box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), .5) !important;
+    box-shadow: 0 10px 70px var(--modspotify_indicator_fg_and_button_bg) !important;
 }
 
 #view-player .album-art .album-art__image .card-image-content-wrapper,
@@ -338,7 +338,7 @@ select {
     border-radius: 4px;
     z-index: -1;
     background-color: transparent;
-    transition: 0.2s ease-in;
+    transition: var(--transition);
     transition-property: width, background-color;
 }
 
@@ -386,9 +386,12 @@ select {
 .Tooltip {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) !important;
     border-radius: 4px !important;
-    background-color: rgba(var(--modspotify_rgb_secondary_fg), 0.5);
+    background-color: var(--modspotify_indicator_fg_and_button_bg);
     color: var(--modspotify_main_bg);
     padding: 10px 10px;
+    
+    backface-visibility: hidden;
+    transform: translateZ(0);
     backdrop-filter: blur(20px);
 }
 
@@ -506,8 +509,10 @@ select {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.1);
     border-radius: 8px !important;
     padding: 0;
-    border: 1px solid rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2);
+    border: 1px solid var(--modspotify_indicator_fg_and_button_bg);
     background-color: rgba(var(--modspotify_rgb_sidebar_and_player_bg), 0.5);
+    backface-visibility: hidden;
+    transform: translateZ(0);
     backdrop-filter: blur(20px);
 }
 
@@ -517,6 +522,18 @@ select {
     font-size: 14px !important;
     line-height: 40px !important;
     font-family: var(--info-font-family);
+}
+
+.MenuItem--is-active {
+    color: unset;
+}
+
+.MenuItemToggle--checked {
+    padding-left: 6px !important;
+}
+
+.MenuItemToggle--checked:before {
+    margin-right: 6px;
 }
 
 .context-menu .item.parent:after {
@@ -547,7 +564,7 @@ select {
 .dropdown-interior-menu>.active>a,
 .dropdown-interior-menu>.active.selected,
 .dropdown-interior-menu>.active>a:focus {
-    background-color: rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2);
+    background-color: var(--modspotify_indicator_fg_and_button_bg);
 }
 
 .context-menu .item:first-child,
@@ -749,7 +766,6 @@ body.remotebar .view-player .player-bar-wrapper {
 .TableCell {
     font-family: var(--info-font-family);
     font-weight: 400;
-    height: 50px;
 }
 
 .tl-cell:not(.tl-number),
@@ -763,7 +779,7 @@ body.remotebar .view-player .player-bar-wrapper {
 .tl-row.selected .tl-cell,
 .tl-row.selected:hover .tl-cell,
 .TableRow.TableRow--is-selected .TableCell {
-    background-color: rgba(var(--modspotify_rgb_sidebar_indicator_and_hover_button_bg), 0.2) !important;
+    background-color: var(--modspotify_indicator_fg_and_button_bg) !important;
 }
 
 .tl-row .tl-cell:first-child,
@@ -1128,7 +1144,7 @@ body.video-full-screen .view-player {
     padding: 0 5px;
     border-radius: 4px;
     text-align: center;
-    color: var(--modspotify_secondary_fg);
+    color: var(--modspotify_preserve_1);
     box-shadow: none !important;
 }
 
@@ -1643,7 +1659,7 @@ button[data-button=add-recommendation] {
 }
 
 .SearchInput__input:focus, .SearchInput__input:hover {
-    background-color: rgba(var(--modspotify_rgb_main_fg), 0.05);
+    background-color: var(--modspotify_indicator_fg_and_button_bg);
 }
 
 /* Custom icons */
