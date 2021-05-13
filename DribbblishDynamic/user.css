@@ -387,7 +387,7 @@ select {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2) !important;
     border-radius: 4px !important;
     background-color: var(--modspotify_indicator_fg_and_button_bg);
-    color: var(--modspotify_main_bg);
+    color: var(--modspotify_secondary_fg);
     padding: 10px 10px;
     
     backface-visibility: hidden;
