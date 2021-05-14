@@ -231,6 +231,17 @@ body {
     color: var(--modspotify_preserve_1) !important;
 }
 
+/*
+Change text color in album
+*/
+.TableCell--is-emphasized {
+    color: var(--modspotify_secondary_fg); 
+}
+
+.TableCell--is-emphasized:hover {
+    color: var(--modspotify_main_fg); 
+}
+
 .tracklist-station-container::after {
     background: transparent !important;
 }
