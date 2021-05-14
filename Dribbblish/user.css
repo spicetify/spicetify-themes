@@ -1322,6 +1322,7 @@ button#player-button-repeat,
 #view-now-playing.expanded {
     bottom: calc(var(--bar-height) + var(--main-gap));
     left: var(--sidebar-width);
+    border-top-right-radius: var(--main-corner-radius);
 }
 
 #view-now-playing a.image.large figure,
