@@ -389,7 +389,7 @@ select {
     background-color: var(--modspotify_indicator_fg_and_button_bg);
     color: var(--modspotify_secondary_fg);
     padding: 10px 10px;
-    
+
     backface-visibility: hidden;
     transform: translateZ(0);
     backdrop-filter: blur(20px);
@@ -1411,6 +1411,7 @@ button#player-button-repeat,
 #view-now-playing.expanded {
     bottom: calc(2 * var(--main-gap) + var(--bar-height) + 2px);
     right:  calc(2 * var(--main-gap));
+    border-top-right-radius: var(--main-corner-radius);
 }
 
 #view-now-playing a.image.large figure,
