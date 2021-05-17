@@ -4,6 +4,8 @@ This is a collection of themes for [spicetify](https://github.com/khanhas/spicet
 
 ### **You can find a preview of all the themes in the [wiki](https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview).**
 
+**Note that these themes require you to have the old Spotify UI (<v1.1.56) and Spicetify v1.2.1**
+
 ## Installation and usage
 
 (If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
