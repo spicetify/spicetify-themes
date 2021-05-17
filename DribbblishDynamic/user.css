@@ -1411,7 +1411,7 @@ button#player-button-repeat,
 #view-now-playing.expanded {
     bottom: calc(2 * var(--main-gap) + var(--bar-height) + 2px);
     right:  calc(2 * var(--main-gap));
-    border-top-right-radius: var(--main-corner-radius);
+    border-radius: var(--cover-border-radius);
 }
 
 #view-now-playing a.image.large figure,
