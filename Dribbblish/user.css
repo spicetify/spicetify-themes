@@ -1413,6 +1413,10 @@ button#player-button-repeat,
     color: var(--modspotify_secondary_fg);
 }
 
+#playlist-extender .playlist-extender-content header {
+    padding-left: 52px;
+}
+
 .SidebarListItemLink:before {
     color: var(--modspotify_preserve_1);
     margin-right: 0;
