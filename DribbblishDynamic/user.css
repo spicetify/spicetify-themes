@@ -1506,7 +1506,9 @@ button#player-button-repeat,
 
 /* "Recommended Songs" header */
 #playlist-extender .playlist-extender-content header {
-    padding-left: 52px; /* 52 matches the recommended songs playlist */
+    /* 52px will match the surrounding padding */
+    padding-left: 52px;
+    padding-right: 52px;
 }
 
 .SidebarListItemLink:before {
