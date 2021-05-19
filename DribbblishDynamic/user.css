@@ -1504,8 +1504,9 @@ button#player-button-repeat,
     color: var(--modspotify_secondary_fg);
 }
 
+/* "Recommended Songs" header */
 #playlist-extender .playlist-extender-content header {
-  padding-left: 52px;
+    padding-left: 52px; /* 52 matches the recommended songs playlist */
 }
 
 .SidebarListItemLink:before {
