@@ -1,0 +1,303 @@
+:root {
+  --spotify-main-color: #1db954;
+  --heart-color: #f00;
+  --round-value: 50%;
+  --main-blur-backdrop: blur(20px) saturate(180%)
+}
+
+
+/* remove upgrade button, user name */
+#view-upgrade-button,
+#top-bar-profile-link-text {
+  display: none
+}
+
+
+/* cover image */
+.view-player .cover-image-link,
+.view-player .cover-image-container,
+.view-player .cover-image {
+  border-radius: var(--round-value)
+}
+
+.view-player .cover-image {
+  background-size: cover !important
+}
+
+.view-player .now-playing .cover-image-link .toggle-cover-size,
+#view-now-playing #now-playing-image-large .now-playing__button {
+  backdrop-filter: var(--main-blur-backdrop);
+  background-color: rgba(9, 9, 9, .2);
+  transition: background-color .5s, opacity .5s;
+  border-radius: var(--round-value)
+}
+
+.view-player .now-playing .cover-image-link .toggle-cover-size {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#view-now-playing #now-playing-image-large .now-playing__corner-buttons {
+  opacity: unset;
+  transition: unset
+}
+
+#view-now-playing #now-playing-image-large .now-playing__button {
+  opacity: 0
+}
+
+.view-player .now-playing .cover-image-link:hover .toggle-cover-size,
+#view-now-playing #now-playing-image-large:hover .now-playing__button {
+  opacity: 1
+}
+
+.view-player .now-playing .cover-image-link .toggle-cover-size::before,
+#view-now-playing #now-playing-image-large .now-playing__button::before {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  transition: color .5s
+}
+
+.view-player .now-playing .cover-image-link .toggle-cover-size:hover,
+#view-now-playing #now-playing-image-large .now-playing__button:hover {
+  background-color: rgba(9, 9, 9, .3)
+}
+
+.view-player .now-playing .cover-image-link .toggle-cover-size:hover::before,
+#view-now-playing #now-playing-image-large .now-playing__button:hover::before {
+  color: #ddd
+}
+
+
+/* progress bar */
+.progress-container:hover .progress-bar .handle {
+  opacity: 0 !important
+}
+
+#player-progressbar:hover .progress-bar .handle {
+  opacity: 1 !important
+}
+
+#player-progressbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+#player-progressbar .progress-bar-wrapper {
+  height: 4px
+}
+
+#player-progressbar .progress-bar-wrapper .progress-bar .inner {
+  background-color: var(--spotify-main-color)
+}
+
+#player-text-elapsed,
+#player-text-remaining {
+  position: absolute;
+  top: 15%;
+  left: 50%
+}
+
+#player-text-elapsed {
+  transform: translateX(-140%)
+}
+
+#player-text-elapsed::after {
+  position: absolute;
+  right: -15px;
+  font-weight: bold;
+  color: var(--spotify-main-color);
+  content: "/"
+}
+
+#player-text-remaining {
+  transform: translateX(-10%)
+}
+
+.player-controls-container {
+  margin-top: 26px
+}
+
+
+/* like button */
+.AlbumRoot__content tr:not([data-ta-is-playable]) .Button--style-icon,
+.tracklist-playlist tr.unavailable .tl-save .button-add {
+  color: #404040
+}
+
+.tracklist-popular tr:hover .tl-save .button-add::before,
+.tracklist-playlist tr:hover .tl-save .button-add::before,
+.tracklist-search tr:hover .tl-save .button-add::before {
+  color: unset !important
+}
+
+.tl-save .button-add:not([disabled])::before {
+  color: unset !important
+}
+
+/* ALBUM - playlists */
+/* PLAYLISTS */
+.AlbumRoot__content .Button--style-icon:not(.Button--is-drop-target-active):not([data-ta-id="ta-more-button"]):not([data-ta-id="card-button-context-menu"]):hover,
+.tl-save .button-add:hover {
+  color: var(--heart-color) !important
+}
+
+/* ... */
+/* More by [ARTIST] */
+/* YOUR LIBRARY - Albums */
+.track-text-item .nowplaying-add-button[data-log-click="remove-button"],
+.Button--style-icon:not(.Button--is-drop-target-active)[data-ta-is-added],
+.tl-save .button-add[data-log-click="remove-button"],
+.Card__image-hit-area .Button--style-icon[data-tooltip-text="Remove from Your Library"],
+.added .card-image-hit-area .card-button-add::before {
+  color: var(--heart-color) !important
+}
+
+/* ALBUM header */
+.AlbumHeader .CanonicalButton[data-tooltip-text="Save to Your Library"]:hover::before,
+.AlbumHeader .CanonicalButton[data-ta-is-added] {
+  color: var(--heart-color) !important
+}
+.AlbumHeader .CanonicalButton[data-tooltip-text="Save to Your Library"]:hover,
+.AlbumHeader .CanonicalButton[data-tooltip-text="Save to Your Library"]:hover:active,
+.AlbumHeader .CanonicalButton[data-tooltip-text="Save to Your Library"]:hover::after,
+.AlbumHeader .CanonicalButton[data-tooltip-text="Save to Your Library"]:hover:active::after,
+.AlbumHeader .CanonicalButton[data-ta-is-added]:hover,
+.AlbumHeader .CanonicalButton[data-ta-is-added]::after,
+.AlbumHeader .CanonicalButton[data-ta-is-added]:hover::after,
+.AlbumHeader .CanonicalButton[data-ta-is-added]:hover:active::after {
+  box-shadow: inset 0 0 0 1px var(--heart-color)
+}
+
+.track-text-item .nowplaying-add-button:hover {
+  color: var(--heart-color) !important
+}
+
+
+/* modal backdrop */
+.modal-backdrop,
+.Modal__overlay {
+  opacity: 1 !important;
+  backdrop-filter: var(--main-blur-backdrop);
+  background-color: rgba(9, 9, 9, .2)
+}
+
+
+/* full app display */
+#fad-background-image {
+  filter: unset !important;
+  background-image: unset !important;
+  background-color: #282828
+}
+
+#fad-art,
+#fad-art-image,
+#fad-art-inner {
+  border-radius: var(--round-value) !important
+}
+
+#fad-art {
+  width: 300px !important;
+  margin: 60px 80px;
+  position: relative;
+  transform: scale(.85)
+}
+
+#fad-art-image {
+  box-shadow: 0 0 10px rgba(3, 3, 3, .5) inset
+}
+
+#fad-art-inner {
+  display: none
+}
+
+#fad-art::before, #fad-art::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  content: ''
+}
+
+#fad-art::before {
+  background: radial-gradient(#333, #000);
+  box-shadow: 0 0 10px #000;
+  transform: scale(1.5)
+}
+
+#fad-art::after {
+  background-color: #2a2a2a;
+  transform: scale(1.65);
+  z-index: -1
+}
+
+#fad-details {
+  width: 520px
+}
+
+#fad-details #fad-title {
+  font-size: 38px
+}
+
+#fad-details #fad-artist {
+  margin-top: 10px;
+  font-size: 24px
+}
+
+#fad-back,
+#fad-next {
+  line-height: 20px
+}
+
+#fad-play {
+  line-height: 24px
+}
+
+#fad-back,
+#fad-play,
+#fad-next {
+  cursor: pointer
+}
+
+#fad-back::before,
+#fad-next::before {
+  font-size: 20px
+}
+
+#fad-play::before {
+  font-size: 24px
+}
+
+#fad-back::before,
+#fad-play::before,
+#fad-next::before {
+  color: #ccc
+}
+
+#fad-back:hover::before,
+#fad-play:hover::before,
+#fad-next:hover::before {
+  color: #fff
+}
+
+#fad-elapsed,
+#fad-duration {
+  min-width: 32px
+}
+
+#context-menu-container {
+  cursor: default
+}
+
+
+@media (min-width: 1460px) and (min-height: 960px) {
+  #fad-foreground {
+    transform: scale(1.2)
+  }
+}
