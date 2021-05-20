@@ -1413,6 +1413,13 @@ button#player-button-repeat,
     color: var(--modspotify_secondary_fg);
 }
 
+/* "Recommended Songs" header */
+#playlist-extender .playlist-extender-content header {
+    /* 52px will match the surrounding padding */
+    padding-left: 52px;
+    padding-right: 52px;
+}
+
 .SidebarListItemLink:before {
     color: var(--modspotify_preserve_1);
     margin-right: 0;
