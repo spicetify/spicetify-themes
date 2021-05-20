@@ -23,7 +23,7 @@ The turntable inspired by [网易云音乐](https://music.163.com) and [Smartisa
 
 ### Installation
 
-1. add extension - [Full App Display](https://github.com/khanhas/spicetify-cli/wiki/Extensions#full-app-display) (optional)
+1. add extension - [Full App Display](https://github.com/khanhas/spicetify-cli/wiki/Extensions#full-app-display)
 
 ```bash
 spicetify config extensions fullAppDisplay.js
