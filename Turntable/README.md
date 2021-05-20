@@ -1,15 +1,13 @@
-# Spotify Spice
+# Turntable
 
 Based on Spotify original theme.
-
-Just like the name of theme, it is Spotify's spice. I don't want to make a lot of modifications, more is to follow my thoughts. I hope to make it more natural and better.
 
 A new version for spicetify v2 click [here](https://github.com/grasonchan/spotify-spice).
 
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/spotify_spice.png" alt="spotify spice">
+  <img src="screenshots/turntable.png" alt="turntable">
 </div>
 <div align="center">
   <img src="screenshots/full_app_display.png" alt="full app display">
@@ -34,6 +32,6 @@ spicetify config extensions fullAppDisplay.js
 2. select the theme and apply
 
 ```bash
-spicetify config current_theme SpotifySpice
+spicetify config current_theme Turntable
 spicetify apply
 ```
