@@ -1,0 +1,338 @@
+/* sidebar edits */
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.logo {
+  background-color: var(--spice-card) !important;
+  color: var(--spice-main) !important;
+}
+
+.main-likedSongsButton-likedSongsIcon,
+.main-createPlaylistButton-createPlaylistIcon,
+.main-yourEpisodesButton-yourEpisodesIcon {
+  background: var(--spice-text) !important;
+  border-radius: 0px !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton {
+  color: var(--spice-main) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
+.main-createPlaylistButton-button {
+  color: var(--spice-text) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected .main-collectionLinkButton-icon {
+  opacity: .7 !important;
+}
+
+
+.main-rootlist-rootlistDividerGradient {
+  background: linear-gradient(180deg, var(--spice-main), transparent);
+}
+
+.main-rootlist-rootlistDivider {
+  background-color: unset !important;
+}
+
+/* top queue */
+.queue-tabBar-active {
+  background-color: var(--spice-card) !important;
+}
+
+.queue-tabBar-headerItemLink {
+  color: var(--spice-text) !important;
+}
+
+/* header colored backgrounds */
+.main-home-homeHeader,
+.x-441-entityHeader-overlay,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor,
+.x-914-entityHeader-overlay,
+.x-914-actionBarBackground-background {
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+/* play button in main page */
+.main-playButton-PlayButton.main-playButton-primary {
+  color: var(--spice-main);
+  background-color: var(--spice-button);
+}
+
+.connect-title,
+.connect-header {
+  display: none;
+}
+
+/* Topbar visibility bug */
+.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn)>* {
+  opacity: unset !important;
+}
+
+.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)>* {
+  opacity: 0 !important;
+}
+
+/* Remove Topbar background colour */
+.main-topBar-background {
+  background-color: unset !important;
+}
+
+.main-topBar-overlay,
+.x-441-actionBarBackground-background {
+  background-color: var(--spice-main) !important;
+}
+
+.main-entityHeader-shadow {
+  box-shadow: 0 04px 20px #21212130;
+}
+
+.main-trackList-playingIcon {
+  filter: hue-rotate(270deg);
+}
+
+span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
+  fill: black;
+}
+
+
+/* details metadata */
+.main-entityTitle-subtitle.main-entityTitle-gray,
+.main-entityHeader-metaDataText {
+  color: var(--spice-text) !important;
+}
+
+.main-duration-container {
+  color: var(--spice-subtext);
+}
+
+.main-entityTitle-subtitle {
+  color: var(--spice-extratext);
+}
+
+/* artist page edits*/
+.main-entityHeader-background.main-entityHeader-gradient {
+  opacity: .4;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--spice-main), var(--spice-main));
+}
+
+.artist-artistPick-pickComment {
+  background: unset !important;
+  border-radius: 0px !important;
+  border-bottom: solid 2px var(--spice-text) !important;
+  color: var(--spice-text) !important;
+}
+
+.artist-artistSavedTracks-imageContainer .artist-artistSavedTracks-heartIcon {
+  color: var(--spice-card);
+}
+
+/* home screen edits */
+.view-homeShortcutsGrid-name {
+  color: var(--spice-button);
+}
+
+
+.main-shelf-title {
+  color: var(--spice-subtext)
+}
+
+.view-homeShortcutsGrid-shortcut,
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageWrapper,
+.main-cardImage-imageWrapper,
+.main-cardImage-imagePlaceholder,
+.main-cardImage-image {
+  border-radius: 10px !important;
+}
+
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-image {
+  border-radius: 10px 0 0 10px !important;
+}
+
+.main-cardImage-circular,
+.main-entityHeader-circle {
+  border-radius: 50% !important;
+}
+
+.main-entityHeader-image {
+  border-radius: 10px;
+}
+
+
+/* inside a page edits */
+.main-addButton-button {
+  color: rgba(var(--spice-rgb-card), .7) !important;
+}
+
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker,
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle {
+  color: var(--spice-subtext) !important;
+}
+
+.main-trackList-rowTitle {
+  color: var(--spice-text) !important;
+}
+
+
+
+/* friend activity */
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-playbackContext a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-usernameAndTimestamp a {
+  color: var(--spice-text) !important;
+}
+
+.main-buddyFeed-activityMetadata .main-buddyFeed-username a {
+  color: var(--spice-subtext) !important;
+}
+
+.main-avatar-avatar.main-avatar-withBadge:after {
+  background: var(--spice-extratext);
+}
+
+/* setting menu */
+
+input:checked~.x-533-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), .4) !important;
+}
+
+input:checked~.x-533-toggle-indicatorWrapper .x-533-toggle-indicator {
+  background-color: var(--spice-button) !important;
+}
+
+.x-533-toggle-indicator {
+  background: var(--spice-button) !important;
+}
+
+
+/* search page edits */
+
+input {
+  background-color: unset !important;
+  border-bottom: solid 2px var(--spice-text) !important;
+  border-radius: 0 !important;
+  color: var(--spice-text) !important;
+}
+
+.x-833-searchInput-searchInputSearchIcon {
+  color: var(--spice-text) !important;
+}
+
+.x-833-heroCategoryCard-heroTitle,
+.x-833-categoryCard-title {
+  color: var(--spice-main) !important;
+}
+
+
+/* menu and dropdown menus including the user menu */
+.main-type-mesto,
+.x-533-dropDown-dropDown {
+  color: var(--spice-text) !important;
+}
+
+.main-userWidget-box {
+  background-color: unset !important;
+  border-radius: 0px !important;
+  border-bottom: solid 2px var(--spice-text) !important;
+  color: var(--spice-text) !important;
+}
+
+.main-userWidget-box:focus,
+.main-userWidget-box:hover,
+.main-userWidget-box[data-context-menu-open=true] {
+  background-color: rgba(var(--spice-rgb-button), .5) !important;
+  border-radius: 10px !important;
+}
+
+.main-avatar-image {
+  padding-bottom: 8% !important;
+}
+
+/* card edits */
+
+.main-card-card a,
+.main-card-card button {
+  color: var(--spice-extratext);
+}
+
+.main-card-card:hover,
+.main-card-card[data-context-menu-open=true] {
+  background-color: rgba(var(--spice-rgb-sec-card), .3) !important;
+}
+
+.main-contextMenu-menu,
+.main-card-card:focus-within,
+
+.main-deletePlaylistDialog-container {
+  background-color: var(--spice-sec-card) !important;
+}
+
+
+/* mini player edits */
+
+.progress-bar--is-active .progress-bar__fg,
+:not(.no-focus-outline) .progress-bar:focus-within .progress-bar__fg {
+  background-color: var(--fg-color);
+}
+
+.main-shuffleButton-button.main-shuffleButton-on,
+.main-repeatButton-button.main-repeatButton-on {
+  color: var(--spice-button) !important;
+}
+
+.cover-art--with-auto-height {
+  border: solid var(--spice-sec-player) 5px !important;
+}
+
+.cover-art,
+.cover-art .cover-art-image {
+  border-radius: 10px;
+  background-color: var(--spice-sec-player) !important;
+}
+
+.main-nowPlayingBar-container {
+  background-color: var(--spice-sec-player) !important;
+  border-top: unset !important;
+
+  height: 80px;
+}
+
+
+
+/* 
+
+i am unable to remove the small album cover when we expand the 
+album art. So for now i am disabling these edits. If anyone wants
+to contribute feel free to create a pull request on my repo.
+
+*/
+
+
+/* .main-nowPlayingBar-container {
+  border-radius: 15px !important;
+} */
+/* .Root__now-playing-bar {
+  position: fixed;
+  bottom: 5px;
+  left: 14%;
+  width: 70%;
+  background: none !important;
+} */
+
+/* .main-coverSlotExpanded-container {
+height: auto;
+position: fixed;
+bottom: 70px;
+left: 14.5%;
+width: 17.85%;
+} */
+
+/* .main-connectBar-connectBar {
+  display: none;
+} */
