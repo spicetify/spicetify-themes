@@ -5,3 +5,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## Default
 
 ![Ocean Screenshot](Default/ocean.png)
+
+## Onepunch
+
+![Onepunch](Onepunch/\__Home.png)
