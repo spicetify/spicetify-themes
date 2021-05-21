@@ -1,0 +1,380 @@
+/*
+*
+* RESIZING THE ICONS
+*
+*/
+/* pause button no hover */
+.card.playing .view-player .player-controls-container .controls .button-play.button-play:not(:hover):before,
+.tl-row.playing .view-player .player-controls-container .controls .button-play.button-play:not(:hover):before,
+.view-player .player-controls-container .controls .button-play.button-play.playing:not(:hover):before {
+  font-size: 38px !important;
+}
+
+/* pause button hover */
+.card.playing .view-player .player-controls-container .controls .button-play.button-play:hover:before,
+.tl-row.playing .view-player .player-controls-container .controls .button-play.button-play:hover:before,
+.view-player .player-controls-container .controls .button-play.button-play.playing:hover:before {
+  font-size: 33px !important;
+}
+
+/* play button */
+.view-player .player-controls-container .controls .button-play.button-play:before {
+  font-size: 33px !important;
+}
+
+/*
+*
+* OTHER UI CHANGES
+*
+*/
+/* NAVIGATION MENU EDITS */
+.sidebar .sidebar-navbar {
+  padding-top: 12px;
+}
+
+.SidebarListItem--is-active {
+  background: var(--modspotify_preserve_1);
+  border-radius: 10px;
+  width: 70%;
+  position: relative;
+}
+
+.SidebarListItem {
+  padding-left: 15px;
+  padding-right: 40px;
+  margin-left: 30px;
+  font-weight: var(--glue-font-weight-normal);
+  font-size: 13px;
+}
+
+.SidebarListItem--is-active:after {
+  display: none;
+}
+
+.SidebarListItemLink--is-highlighted:hover,
+.SidebarListItemLink--is-highlighted:link,
+.SidebarListItemLink--is-highlighted:visited {
+  font-weight: var(--glue-font-weight-bold);
+  color: var(--modspotify_main_bg);
+}
+
+html .SidebarList__title {
+  font-size: 13px;
+  line-height: 40px;
+  color: var(--modspotify_miscellaneous_bg);
+  font-weight: var(--glue-font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.LeftSidebar__section {
+  margin-bottom: 20px;
+}
+
+/* playlist items */
+.RootlistItem {
+  padding-left: 35px;
+}
+
+.RootlistItem--is-active {
+  background: var(--modspotify_secondary_bg);
+  border-radius: 10px;
+  width: 70%;
+}
+
+.RootlistItem--is-active:before {
+  display: none;
+}
+
+.RootlistItemFolder__name,
+.RootlistItemFolder__arrow {
+  color: var(--modspotify_preserve_1);
+}
+
+/*for now I have hidden the new playlist button but I've an idea for it and will add in future*/
+.LeftSidebarNewPlaylistButton__button {
+  display: none !important;
+}
+
+/* HOME PAGE EDITS */
+/*Round corner cover image*/
+.Card:not(.Card--artist) .Card__image,
+.Card:not(.Card--artist) .Card__image-wrapper,
+.card-image,
+.card-image-content-wrapper,
+.card-placeholder-wrapper {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.GlueSectionDivider__title {
+  color: var(--modspotify_secondary_text);
+}
+
+.Card__info-title a {
+  line-height: 30px;
+  color: var(--modspotify_extra_labels);
+}
+
+/* CARD INFO DETAILS EDIT */
+/*.Card__info-subtitle-description, .Card__info-subtitle-metadata{
+		display:none !important;
+	}*/
+.Button--style-icon:not(.Button--is-drop-target-active) {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+/*scroll bar edits*/
+/*Thinner scrollbar*/
+::-webkit-scrollbar {
+  height: 6px !important;
+  width: 6px !important;
+  background-color: transparent;
+}
+
+/*Hide top and bottom buttons of scrollbar */
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+/* PLAY AREA EDITS */
+/*main frame*/
+#view-player {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.view-player,
+body.remotebar .view-player .player-bar-wrapper {
+  height: 85px !important;
+  border-radius: 20px !important;
+  background: var(--modspotify_main_bg_second) !important;
+  position: relative;
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+/*buttons and play progress*/
+.view-player .player-controls-container .controls .button-play {
+  height: 35px !important;
+  width: 35px !important;
+  border-radius: 40px !important;
+  box-shadow: 0 0 0 0 !important;
+  transition: none 0.3s cubic-bezier(.3, 0, .7, 1);
+  overflow: visible !important;
+}
+
+.view-player .player-controls-container .controls .button-play:before {
+  padding-left: 0 !important;
+  padding-top: 1px !important;
+}
+
+.view-player .player-controls-container .controls {
+  margin-top: -14px !important;
+}
+
+.view-player .player-controls-container .progress-container {
+  margin-top: 2px !important;
+}
+
+.view-player .player-controls-container .controls .button-play:after {
+  box-shadow: unset !important;
+}
+
+.view-player .now-playing .cover-image-container .cover-image {
+  border-radius: 6px;
+}
+
+.view-player .text-container .text-item-container .text-item .scroll-text-container:after {
+  background: var(--modspotify_main_bg_second) !important;
+  right: 0;
+}
+
+#view-now-playing.expanded .large.image {
+  border-radius: 10px 10px 0px 0px;
+}
+
+/* BROWSE TAB EDITS */
+/* Add round corner for Gerne and Mood cards */
+.gc-image,
+.gc-image-container {
+  border-radius: 10px !important;
+}
+
+.gc-label-text {
+  color: var(--modspotify_primary_text);
+}
+
+/* FULL SCREEN MODE EDITS */
+#view-player .album-art .album-art__image {
+  border-radius: 30px !important;
+  box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), .5) !important;
+}
+
+#view-player .album-art .album-art__image .card-image-content-wrapper,
+#view-player .album-art .album-art__image .card-image-content-wrapper .card-image {
+  border-radius: 30px !important;
+}
+
+#video-player .album-art__foreground {
+  flex-direction: row;
+  text-align: left;
+}
+
+#video-player .album-art__background {
+  background-color: initial;
+}
+
+#video-player .album-art__track-details {
+  padding-left: 40px;
+  line-height: initial;
+}
+
+#video-player .album-art__track-title {
+  font-size: 80px;
+  margin-top: 0;
+  line-height: initial;
+}
+
+#video-player .album-art__artist-name {
+  font-size: 50px;
+  margin-top: 0;
+  line-height: initial;
+}
+
+/* PROGRESS BAR EDITS */
+.progress-container .inner {
+  border-radius: 50px !important;
+  background-color: var(--modspotify_main_fg) !important;
+}
+
+.progress-bar,
+.progress-bar .inner {
+  background: #3b3b3b;
+  border-radius: 100px;
+}
+
+.progress-container .inner,
+.progress-container .progress-bar {
+  border-radius: 100px !important;
+  height: 4.5px;
+}
+
+.progress-container {
+  border-radius: 100px !important;
+  position: absolute !important;
+  right: 25%;
+  width: 50% !important;
+}
+
+/* INSIDE THE ALBUM AND PLAYLIST EDITS */
+/*album edits*/
+.Button__alt-text,
+.Button__text {
+  color: var(--modspotify_primary_text) !important;
+}
+
+.Button--style-green {
+  font-size: 14px;
+}
+
+.TableCell--is-emphasized {
+  color: var(--modspotify_primary_text) !important;
+}
+
+/*playlist edits*/
+.b-add-text,
+.b-added-text,
+.b-pause-text,
+.b-play-text,
+.b-remove-text {
+  color: var(--modspotify_primary_text) !important;
+}
+
+.tl-highlight {
+  color: var(--modspotify_primary_text) !important;
+}
+
+
+/* isidde profile page */
+.section-divider>*,
+.section-divider .section-auxiliary a {
+  color: var(--modspotify_preserve_1);
+}
+
+.card-info-title a {
+  color: var(--modspotify_secondary_text);
+}
+
+.nav>li.active>a {
+  color: var(--modspotify_main_bg);
+  background: var(--modspotify_main_fg);
+  border-radius: 4px;
+  line-height: 33px;
+}
+
+/* the context menu */
+
+.context-menu .item.hover:not(.disabled) {
+  color: var(--modspotify_main_bg);
+}
+
+
+
+
+
+
+/*
+*
+* EXPERIMENTS
+*
+*/
+/*search bar edits*/
+.SearchInput__input {
+  color: var(--modspotify_secondary_fg) !important;
+  background-color: var(--modspotify_main_bg) !important;
+  border-style: solid !important;
+  border-width: 1px !important;
+  border-radius: 0 !important;
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+}
+
+.SearchInput__searchIcon {
+  color: var(--modspotify_secondary_fg) !important;
+}
+
+.content-top-bar__search-input {
+  max-width: unset !important;
+  height: auto !important;
+}
+
+/*change header colors*/
+.GlueHeader__background-color {
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+.Header__background-color {
+  border-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-color: var(--modspotify_sidebar_and_player_bg) !important;
+  background-image: unset !important;
+}
+
+/*scrubbing bar ball thingy*/
+.handle {
+  background: var(--modspotify_indicator_fg_and_button_bg) !important;
+  border: 3px solid var(--modspotify_indicator_fg_and_button_bg) !important;
+}
+
+.progress-bar-wrapper.progress-bar-wrapper--ltr.handle {
+  background: unset !important;
+  border: unset !important;
+}
+
+/*hide a few elements*/
+.view-player .remote-playback-bar {
+  display: none !important;
+}
