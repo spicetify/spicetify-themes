@@ -141,7 +141,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-playPauseButton-button {
     background-color: var(--spice-main);
-    box-shadow: black 0 5px 9px 0px;
+    box-shadow: var(--spice-shadow) 0 5px 9px 0px;
     --button-size: 43px !important;
     color: var(--spice-button);
 }
@@ -202,7 +202,12 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-trackList-trackListRow.main-trackList-selected, 
 .main-trackList-trackListRow.main-trackList-selected:hover {
-    background-color: rgba(var(--spice-rgb-selected-row),.15) !important;
+    background-color: rgba(var(--spice-rgb-selected-row),.1) !important;
+}
+
+.main-trackList-trackListRow:focus-within, 
+.main-trackList-trackListRow:hover {
+    background-color: rgba(var(--spice-rgb-selected-row),.05);
 }
 
 .main-duplicateTracksDialog-container {
@@ -216,4 +221,16 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 ._9eb5acf729a98d62135ca21777fef244-scss {
     color: var(--spice-card);
+}
+
+.x-sortBox-sortDropdown,
+.x-filterBox-expandButton {
+    color: var(--spice-text) !important;
+}
+
+/* Main Play Button Change */
+.main-playButton-PlayButton.main-playButton-primary {
+    color: var(--spice-text);
+    background-color: var(--spice-player);
+    box-shadow: var(--spice-shadow) 0 5px 4px 0px;
 }
