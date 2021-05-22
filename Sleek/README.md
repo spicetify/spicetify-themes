@@ -1,7 +1,7 @@
 # Sleek
 ## Screenshots
 
-![Theme Screenshot](SleekScreenshot.png)
+![Psycho Screenshot](psycho.png)
 
 ## More
 

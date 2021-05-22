@@ -6,10 +6,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
-## Pscyho
+## Sleek
 
-![Psycho Screenshot](/Psycho/screenshot.png)
+![Psycho Screenshot](Sleek/psycho.png)
 
 ## Onepunch
 
-![Onepunch](Onepunch/\__Home.png)
+![Onepunch Screenshot](Onepunch/\__Home.png)
