@@ -1,9 +1,11 @@
-# THEME_NAME
+# NoGold
 
 ## Screenshots
 
-[Put at least one image per color scheme here]
 
-## More
 
-[Specify any needed font; (optionally) author name and/or any other info about the theme]
+## Info
+
+Caution for eyes 
+High Contrast colors in dark theme.
+
