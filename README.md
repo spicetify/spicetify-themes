@@ -50,7 +50,6 @@ If you want to add your theme:
 
     [Specify any needed font; (optionally) author name and/or any other info about the theme]
     ```
-
 *   Add the theme preview to [THEMES.md](./THEMES.md) (themes are in alphabetical order) following this structure if it has only one color scheme
 
     ```markdown
@@ -75,7 +74,7 @@ If you want to add your theme:
 
     ...
     ```
-*   Open a Pull Request
+*   Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)
 
 **Thanks to all the contributors.**
 
