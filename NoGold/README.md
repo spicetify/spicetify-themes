@@ -8,10 +8,9 @@ Gold with Fiery Red accents on Dark Theme.
 
 ## Info
 
-Caution for eyes.
-
 High Contrast colors in dark theme.
 
 Inspired from the [No Sleep](https://github.com/morpheusthewhite/spicetify-themes/tree/master/NoSleep) and [OldSchoolSenn](https://github.com/morpheusthewhite/spicetify-themes/tree/master/OldSchoolSenn) themes
+
 
 
