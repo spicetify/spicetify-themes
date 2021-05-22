@@ -1,7 +1,12 @@
 # Sleek
+
 ## Screenshots
 
+### Psycho
 ![Psycho Screenshot](psycho.png)
+
+### Deep
+![Deep Screenshot](deep.png)
 
 ## More
 

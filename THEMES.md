@@ -8,7 +8,13 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Sleek
 
+#### Psycho
+
 ![Psycho Screenshot](Sleek/psycho.png)
+
+#### Deep
+
+![Psycho Screenshot](Sleek/deep.png)
 
 ## Onepunch
 

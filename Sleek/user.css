@@ -27,10 +27,6 @@ input {
     border: 0;
 }
 
-.main-playButton-PlayButton.main-playButton-primary {
-    color: var(--spice-main);
-}
-
 .connect-title, .connect-header {
     display: none;
 }
@@ -81,10 +77,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     display: none !important;
 }
 
-.main-billboardComponent-footer {
-    display: none !important;
-}
-
 /* Hide Upgrade Button */
 
 .main-topBar-UpgradeButton {
@@ -113,18 +105,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 /* Changing Playback Bar Location */
-
-.playback-bar .progress-bar-wrapper {
-    right: 82.9%;
-}
-
-.playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper {
-    width: 265.8%;
+.progress-bar__bg, .progress-bar__fg_wrapper {
     border-radius: 0;
-}
-
-.playback-bar .progress-bar__fg {
-    background-color: var(--spice-text);
 }
 
 .playback-bar__progress-time {
@@ -132,7 +114,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .playback-bar {
-    transform: translateY(-72px);
+    width: 100%;
+    bottom: 83px;
+    position: absolute;
 }
 
 .main-playbackBarRemainingTime-container {
@@ -147,14 +131,13 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     background-color: var(--spice-main);
     box-shadow: var(--spice-shadow) 0 5px 9px 0px;
     --button-size: 43px !important;
-    color: var(--spice-button);
+    color: var(--spice-text);
 }
 
 .player-controls__buttons {
     align-items: center;
 }
 
-/* Give Subtitles Border */
 .main-entityTitle-subtitle.main-entityTitle-small.main-entityTitle-uppercase.main-entityTitle-bold {
     border: 2px var(--spice-text) solid;
     border-radius: 4px;
@@ -164,11 +147,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     padding: 0 5px;
 }
 
-.main-entityTitle-subtitle.main-entityTitle-small {
-    color: var(--spice-button);
-}
-
-/* Change Scrollbar Color */
 .os-theme-spotify.os-host-transition>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
     border-radius: 4px;
     background-color: rgba(var(--spice-rgb-button-disabled),.8);
@@ -186,6 +164,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-userWidget-box {
     color: var(--spice-subtext);
+    background-color: transparent !important;
 }
 
 /* Improve Sidebar Buttons */
@@ -236,24 +215,46 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* Main Play Button Change */
 .main-playButton-PlayButton.main-playButton-primary {
-    color: var(--spice-text);
-    background-color: var(--spice-player);
+    color: var(--spice-main);
+    background-color: var(--spice-playback-bar);
     box-shadow: var(--spice-shadow) 0 5px 4px 0px;
 }
 
-/* Download Button Change */
+.main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
+    display: none;
+}
+
+.main-entityHeader-image {
+    border-radius: 10%;
+}
+
 .x-downloadButton-button {
     box-shadow: var(--spice-shadow) 0 5px 4px 0px;
     background: var(--spice-player);
     border-radius: 50%;
 }
 
-/* Remove Likes Information */
-.main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
-    display: none;
+/* Link playback-bar color */
+.playback-bar .progress-bar__fg {
+    background-color: var(--spice-playback-bar);
 }
 
-/* Give Main Image Curved Edges */
-.main-entityHeader-image {
-    border-radius: 10%;
+:not(.no-focus-outline) .progress-bar:focus-within .progress-bar__fg {
+    background-color: var(--spice-playback-bar);
+}
+
+.main-navBar-navBarLinkActive {
+    background-color: var(--spice-playback-bar);
+}
+
+.main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
+    color: var(--spice-subtext);
+}
+
+.main-navBar-navBarLink:focus, .main-navBar-navBarLink:hover {
+    color: var(--spice-subtext);
+}
+
+.progress-bar__slider {
+    background-color: var(--spice-subtext);
 }
