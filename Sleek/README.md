@@ -1,8 +1,8 @@
 # Sleek
 ## Screenshots
 
-![Screenshot](screenshot.png)
+![Theme Screenshot](SleekScreenshot.png)
 
 ## More
 
-A simple theme that builds on the basic Spotify UI.
+A simple and sleek theme that builds on the basic Spotify UI.
