@@ -12,10 +12,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Sleek
 
-#### Psycho
-
-![Psycho Screenshot](Sleek/psycho.png)
-
 #### Deep
 
 ![Deep Screenshot](Sleek/deep.png)
+
+#### Psycho
+
+![Psycho Screenshot](Sleek/psycho.png)
