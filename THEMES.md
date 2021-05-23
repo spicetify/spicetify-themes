@@ -8,4 +8,14 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Onepunch
 
-![Onepunch](Onepunch/\__Home.png)
+![Onepunch Screenshot](Onepunch/\__Home.png)
+
+## Sleek
+
+#### Psycho
+
+![Psycho Screenshot](Sleek/psycho.png)
+
+#### Deep
+
+![Deep Screenshot](Sleek/deep.png)
