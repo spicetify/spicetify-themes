@@ -19,3 +19,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Psycho
 
 ![Psycho Screenshot](Sleek/psycho.png)
+
+## Turntable
+
+![Turntable](Turntable/screenshots/full_app_display_vertical_mode.png)
