@@ -6,6 +6,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Onepunch
+
+![Onepunch Screenshot](Onepunch/\__Home.png)
+
 ## Sleek
 
 #### Psycho
@@ -14,8 +18,4 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Deep
 
-![Psycho Screenshot](Sleek/deep.png)
-
-## Onepunch
-
-![Onepunch Screenshot](Onepunch/\__Home.png)
+![Deep Screenshot](Sleek/deep.png)
