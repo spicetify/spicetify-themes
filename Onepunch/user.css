@@ -198,16 +198,25 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* setting menu */
 
-input:checked~.x-533-toggle-indicatorWrapper {
-  background-color: rgba(var(--spice-rgb-button), .4) !important;
+.main-dropDown-dropDown {
+  background-color: var(--spice-button-disabled) !important;
+  color: var(--spice-text) !important;
 }
 
-input:checked~.x-533-toggle-indicatorWrapper .x-533-toggle-indicator {
-  background-color: var(--spice-button) !important;
+.x-settings-title {
+  color: var(--spice-tab-active) !important;
 }
 
-.x-533-toggle-indicator {
-  background: var(--spice-button) !important;
+input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
+  background-color: var(--spice-button-knob) !important;
+}
+
+.x-toggle-indicator {
+  background: var(--spice-button-knob) !important;
+}
+
+input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), .5) !important;
 }
 
 
@@ -273,6 +282,10 @@ input {
   background-color: var(--spice-sec-card) !important;
 }
 
+.main-keyboardShortcutsHelpModal-container {
+  background-color: var(--spice-main) !important;
+  color: var(--spice-text) !important;
+}
 
 /* mini player edits */
 
@@ -309,7 +322,7 @@ input {
 
 i am unable to remove the small album cover when we expand the 
 album art. So for now i am disabling these edits. If anyone wants
-to contribute feel free to create a pull request on my repo.
+to contribute to this feel free to add.
 
 */
 
