@@ -1,0 +1,122 @@
+/* bottom player */
+.main-nowPlayingBar-container {
+	background-color: var(--spice-bottombarplayer) !important;
+}
+
+.main-nowPlayingBar-container {
+	border-top: none;
+}
+
+/* Side bar */
+.main-navBar-navBar {
+	background-color: var(--spice-sidebar) !important;
+}
+
+.main-navBar-navBarLinkActive {
+	background-color: var(--spice-sidebarhighlighteditem) !important;
+}
+
+/* side bar transition between playlists and top */
+.main-rootlist-rootlistDividerGradient {
+  background: linear-gradient(180deg, var(--spice-main), transparent);
+}
+
+.main-rootlist-rootlistDivider {
+  background-color: unset !important;
+}
+
+/* removes gradient etc at the top */
+.main-home-homeHeader,
+.x-441-entityHeader-overlay,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor,
+.x-914-entityHeader-overlay,
+.x-914-actionBarBackground-background {
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+.main-topBar-background {
+  background-color: unset !important;
+}
+
+.main-topBar-overlay,
+.x-441-actionBarBackground-background {
+  background-color: var(--spice-main) !important;
+
+}
+
+
+/* cards on main pages */
+.main-card-card {
+	background: var(--spice-maincard) !important;
+}
+
+.main-card-card:hover {
+	background: var(--spice-maincardhover) !important;
+}
+
+.view-homeShortcutsGrid-shortcut,
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageWrapper,
+.main-cardImage-imageWrapper,
+.main-cardImage-imagePlaceholder,
+.main-cardImage-image {
+  border-radius: 10px !important;
+}
+
+/* User dropdown menu */
+.main-userWidget-box {
+  background-color: var(--spice-main);
+  border-radius: 12px;
+}
+
+.progress-bar {
+  --bg-color: var(--spice-secondary);
+}
+
+/* top history buttons */
+.main-topBar-historyButtons .main-topBar-button:not([disabled]) {
+  background-color: var(--spice-secondary);
+}
+
+.main-topBar-historyButtons .main-topBar-button[disabled] {
+  background-color: rgba(var(--spice-secondary), 0.5);
+}
+
+/* bottom album artwork */
+.cover-art, .cover-art-image {
+  border-radius: 12px;
+  background-color: var(--spice-secondary) !important;
+}
+
+/* list items */
+.main-rootlist-rootlistItemLink:not(.main-rootlist-rootlistItemLinkActive) {
+  color: var(--spice-text3);
+}
+.main-rootlist-rootlistItemLink .main-rootlist-rootlistItemLinkActive {
+  color: var(--spice-text2);
+}
+
+.main-navBar-navBarLink:not(.main-navBar-navBarLinkActive) {
+  color: (--spice-text3);
+}
+
+.main-navBar-navBarLink .main-navBar-navBarLinkActive {
+  color: (--spice-text2);
+}
+
+.main-entityHeader-shadow {
+  box-shadow: 0 04px 20px #21212130;
+}
+
+/* settings buttons */
+input:hover:not([disabled]):not(:active):not(:checked)~.x-toggle-indicatorWrapper {
+  background-color: var(--spice-tertiary) !important;
+}
+
+/* visualiser next to playing song in playlist */
+.main-trackList-playingIcon {
+  /* use a css filter to turn gif black, then nord8 (https://codepen.io/sosuke/pen/Pjoqqp)*/
+  filter: brightness(0%) invert(77%) sepia(21%) saturate(499%) hue-rotate(147deg) brightness(91%) contrast(93%);
+}
