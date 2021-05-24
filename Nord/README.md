@@ -1,4 +1,4 @@
-# THEME_NAME
+# Nord
 
 ## Screenshots
 ![Home](./__Home.png)
