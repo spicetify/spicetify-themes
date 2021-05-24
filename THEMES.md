@@ -10,6 +10,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Onepunch Screenshot](Onepunch/\__Home.png)
 
+## Palenight Sky
+
+![Ocean Screenshot](PalenightSky/Screenshots/Home.png)
+
 ## Sleek
 
 #### Deep
