@@ -6,6 +6,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Nord
+
+![Nord Screenshot](Nord/\__Home.png)
 ## Onepunch
 
 ![Onepunch Screenshot](Onepunch/\__Home.png)
