@@ -19,3 +19,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Psycho
 
 ![Psycho Screenshot](Sleek/psycho.png)
+
+## Turntable
+
+https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
