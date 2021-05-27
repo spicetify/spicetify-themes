@@ -2,11 +2,14 @@
 
 ## Screenshots
 
-### Psycho
-![Psycho Screenshot](psycho.png)
+### BIB
+![BIB Screenshot](bib.png)
 
 ### Deep
 ![Deep Screenshot](deep.png)
+
+### Psycho
+![Psycho Screenshot](psycho.png)
 
 ## More
 

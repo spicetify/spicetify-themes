@@ -12,6 +12,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Sleek
 
+#### BIB
+
+![BIB Screenshot](Sleek/bib.png)
+
 #### Deep
 
 ![Deep Screenshot](Sleek/deep.png)
