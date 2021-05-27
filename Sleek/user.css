@@ -124,7 +124,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .player-controls__buttons {
-    transform: translateY(10px);
+    transform: translateY(6px);
 }
 
 .main-playPauseButton-button {
@@ -248,13 +248,24 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
-    color: var(--spice-subtext);
-}
-
-.main-navBar-navBarLink:focus, .main-navBar-navBarLink:hover {
-    color: var(--spice-subtext);
+    color: var(--spice-button-text) !important;
 }
 
 .progress-bar__slider {
     background-color: var(--spice-subtext);
+}
+
+a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
+    color: var(--spice-subtext);
+}
+
+.main-heroCard-card a,
+.collection-collectionEntityHeroCard-descriptionContainer {
+    color: var(--spice-subtext) !important;
+}
+
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a, .main-buddyFeed-activityMetadata .main-buddyFeed-username a, .main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink,
+p.main-buddyFeed-timestamp.main-type-finale,
+.main-buddyFeed-findFriendsButton .main-buddyFeed-findFriendsIcon {
+    color: var(--spice-subtext);
 }
