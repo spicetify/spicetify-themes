@@ -277,8 +277,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-connectBar-connectBar {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
-    border: 2px solid var(--spice-sidebar);
-    border-top: 0;
+    border: 2px solid var(--spice-main);
+    border-top: 2px solid var(--spice-sidebar);
     background-color: var(--spice-main);
     font-size: 10px;
 }
