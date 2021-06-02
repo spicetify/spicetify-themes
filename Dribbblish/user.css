@@ -50,6 +50,7 @@ body {
 .main-type-canon {
     font-family: var(--info-font-family);
     letter-spacing: normal;
+    
 }
 
 .main-type-ballad {
@@ -112,7 +113,7 @@ input {
 .main-entityHeader-shadow,
 .main-contextMenu-menu,
 .connect-device-list-container {
-    box-shadow: 0 4px 20px #21212130;
+    box-shadow: 0 4px 20px #292828;
 }
 
 .main-trackList-playingIcon {
@@ -268,16 +269,16 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-nowPlayingBar-container {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
-    background-color: unset;
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-button), 0.55), var(--spice-main) 60%);
     border-top: 0;
     min-width: 518px;
 }
 
 .main-connectBar-connectBar {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
-    border: 2px solid var(--spice-main);
-    border-top: 0;
+    border: 2px solid var(--spice-sidebar);
+    border-bottom: 0;
+    background-color: var(--spice-main);
+    font-size: 10px;
 }
 
 @media(max-width:768px){
