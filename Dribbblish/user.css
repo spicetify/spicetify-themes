@@ -113,7 +113,7 @@ input {
 .main-entityHeader-shadow,
 .main-contextMenu-menu,
 .connect-device-list-container {
-    box-shadow: 0 4px 20px #292828;
+    box-shadow: 0 4px 20px #21212130;
 }
 
 .main-trackList-playingIcon {
@@ -271,12 +271,14 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     border-top: 0;
     min-width: 518px;
+    background-color: unset;
+    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-button), 0.55), var(--spice-main) 60%);
 }
 
 .main-connectBar-connectBar {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     border: 2px solid var(--spice-sidebar);
-    border-bottom: 0;
+    border-top: 0;
     background-color: var(--spice-main);
     font-size: 10px;
 }
