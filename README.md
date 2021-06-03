@@ -61,16 +61,7 @@ spicetify apply
 ### Windows
 In **Powershell**:
 ```powershell
-cd "$(spicetify -c | Split-Path)\Themes\Dribbblish"
-Copy-Item dribbblish.js ..\..\Extensions
-Copy-Item dribbblish-dynamic.js ..\..\Extensions
-Copy-Item Vibrant.min.js ..\..\Extensions
-spicetify config extensions dribbblish.js
-spicetify config extensions dribbblish-dynamic.js
-spicetify config extensions Vibrant.min.js
-spicetify config current_theme Dribbblish color_scheme base
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
-spicetify apply
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.ps1" | Invoke-Expression
 ```
 
 ## Change Color Schemes

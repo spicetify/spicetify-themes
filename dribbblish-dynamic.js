@@ -1,4 +1,4 @@
-let current = '2.3'
+let current = '1.1'
 
 /* css needed for system mode detection */
 document.styleSheets[0].insertRule(`
