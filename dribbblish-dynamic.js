@@ -257,9 +257,11 @@ waitForElement([".cover-art-image"], (queries) => {
       return response.json();
     }).then(data => {
       if( data.tag_name > current ) {
-          document.querySelector("#main-topBar-moon-div").classList.add("main-topBarUpdateAvailable")
-          document.querySelector("#main-topBar-moon-button").append(`NEW v${data.tag_name} available`)
-          document.querySelector("#main-topBar-moon-button").setAttribute("title", `Changes: ${data.name}`)
+          upd = document.createElement("div")
+          upd.classList.add("ellipsis-one-line", "main-type-finale")
+          document.querySelector(".main-userWidget-box").append(upd)
+          upd.append(`NEW v${data.tag_name} available`)
+          upd.setAttribute("title", `Changes: ${data.name}`)
       }
     }).catch(err => {
       // Do something for an error here

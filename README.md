@@ -48,6 +48,8 @@ In **Bash**:
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 mkdir -p ../../Extensions
 cp dribbblish.js ../../Extensions/.
+cp dribbblish-dynamic.js ../../Extensions/.
+cp Vibrant.min.js ../../Extensions/.
 spicetify config extensions dribbblish.js
 spicetify config extensions dribbblish-dynamic.js
 spicetify config extensions Vibrant.min.js
@@ -61,6 +63,8 @@ In **Powershell**:
 ```powershell
 cd "$(spicetify -c | Split-Path)\Themes\Dribbblish"
 Copy-Item dribbblish.js ..\..\Extensions
+Copy-Item dribbblish-dynamic.js ..\..\Extensions
+Copy-Item Vibrant.min.js ..\..\Extensions
 spicetify config extensions dribbblish.js
 spicetify config extensions dribbblish-dynamic.js
 spicetify config extensions Vibrant.min.js
