@@ -1,5 +1,6 @@
-let current = '1.0'
+let current = '2.3'
 
+/* css needed for system mode detection */
 document.styleSheets[0].insertRule(`
     :root {
         --system_is_dark: 1;
@@ -9,6 +10,33 @@ document.styleSheets[0].insertRule(`
         :root {
             --system_is_dark: 0 !important;
         }
+    }`)
+
+/* css for color transition */
+document.styleSheets[0].insertRule(`
+    @property --spice-sidebar {
+      syntax: '<color>';
+      initial-value: magenta;
+      inherits: true;
+    }`)
+
+document.styleSheets[0].insertRule(`
+    @property --spice-main {
+      syntax: '<color>';
+      initial-value: magenta;
+      inherits: true;
+    }`)
+
+document.styleSheets[0].insertRule(`
+    @property --spice-button {
+      syntax: '<color>';
+      initial-value: magenta;
+      inherits: true;
+    }`)
+    
+document.styleSheets[0].insertRule(`
+    html {
+        transition: --spice-sidebar 1s, --spice-main 1s, --spice-button 1s;
     }`)
 
 function waitForElement(els, func, timeout = 100) {
@@ -239,7 +267,7 @@ waitForElement([".cover-art-image"], (queries) => {
     Spicetify.showNotification("Applied system " + (systemDark ? "dark" : "light") + " theme.")
 })()
 
-/* translucid background cover */
+/* css for translucid background cover */
 document.styleSheets[0].addRule('.main-view-container__scroll-node-child::before',
 `   content: '';
     background-image: var(--image_url);
