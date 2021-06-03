@@ -6,6 +6,25 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Dribbblish
+
+#### Base
+![base](Dribbblish/base.png)
+#### White
+![white](Dribbblish/white.png)
+#### Dark
+![dark](Dribbblish/dark.png)
+#### Nord-Light
+![nord-light](Dribbblish/nord-light.png)
+#### Nord-Dark
+![nord-dark](Dribbblish/nord-dark.png)
+#### Beach-Sunset
+![beach-sunset](Dribbblish/beach-sunset.png)
+#### Purple
+![purple](Dribbblish/purple.png)
+#### Samourai
+![samourai](Dribbblish/samourai.png)
+
 ## Onepunch
 
 ![Onepunch Screenshot](Onepunch/\__Home.png)
