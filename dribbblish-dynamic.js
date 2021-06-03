@@ -1,4 +1,15 @@
-let current = '2.3'
+let current = '1.0'
+
+document.styleSheets[0].insertRule(`
+    :root {
+        --system_is_dark: 1;
+    }`)
+document.styleSheets[0].insertRule(`
+    @media (prefers-color-scheme: light) {
+        :root {
+            --system_is_dark: 0 !important;
+        }
+    }`)
 
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));
@@ -117,22 +128,12 @@ function toggleDark(setDark) {
 let systemDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--system_is_dark'))==1
 toggleDark(systemDark)
 
-waitForElement([".main-topBar-indicators"], (queries) => {
-    // Add activator on top bar
-    const div = document.createElement("div")
-    div.id = 'main-topBar-moon-div'
-    div.classList.add("main-topBarStatusIndicator-TopBarStatusIndicatorContainer")
-    queries[0].append(div)
-
-    const button = document.createElement("button")
-    button.id = 'main-topBar-moon-button'
-    button.classList.add("main-topBarStatusIndicator-TopBarStatusIndicator", "main-topBarStatusIndicator-hasTooltip")
-    button.setAttribute("title", "Light/Dark")
-    button.onclick = () => { toggleDark(); };
-    button.innerHTML = `<svg role="img" viewBox="0 0 16 16" height="16" width="16"><path fill="currentColor" d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"></path>
-</svg>`
-    div.append(button)
-});
+DribbblishShared.configMenu.register();
+DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
+    "Dark mode",
+    systemDark,
+    (self) => { toggleDark(); }
+));
 
 function updateColors(colHex) {
     let isLightBg = isLight(mainColorBg)
@@ -239,8 +240,6 @@ waitForElement([".cover-art-image"], (queries) => {
 })()
 
 /* translucid background cover */
-document.styleSheets[0].addRule('p.special:before','content: "'+str+'";');
-
 document.styleSheets[0].addRule('.main-view-container__scroll-node-child::before',
 `   content: '';
     background-image: var(--image_url);
