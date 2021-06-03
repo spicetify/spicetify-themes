@@ -1,20 +1,20 @@
 # Dribbblish
 
-### base
+### Base
 ![base](base.png)
-### white
+### White
 ![white](white.png)
-### dark
+### Dark
 ![dark](dark.png)
-### nord-light
+### Nord-Light
 ![nord-light](nord-light.png)
-### nord-dark
+### Nord-Dark
 ![nord-dark](nord-dark.png)
-### beach-sunset
+### Beach-Sunset
 ![beach-sunset](beach-sunset.png)
-### purple
+### Purple
 ![purple](purple.png)
-### samourai
+### Samourai
 ![samourai](samourai.png)
 
 ##  Features
