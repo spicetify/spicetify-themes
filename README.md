@@ -45,17 +45,7 @@ Run these commands:
 ### Linux and MacOS:
 In **Bash**:
 ```bash
-cd "$(dirname "$(spicetify -c)")/Themes/DribbblishDynamic"
-mkdir -p ../../Extensions
-cp dribbblish.js ../../Extensions/.
-cp dribbblish-dynamic.js ../../Extensions/.
-cp Vibrant.min.js ../../Extensions/.
-spicetify config extensions dribbblish.js
-spicetify config extensions dribbblish-dynamic.js
-spicetify config extensions Vibrant.min.js
-spicetify config current_theme Dribbblish color_scheme base
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
-spicetify apply
+curl -fsSL https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.sh | sh
 ```
 
 ### Windows

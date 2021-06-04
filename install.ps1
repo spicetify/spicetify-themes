@@ -87,8 +87,8 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
   Copy-Item dribbblish-dynamic.js ..\..\Extensions
   Copy-Item Vibrant.min.js ..\..\Extensions
   spicetify config extensions default-dynamic.js-
-  spicetify config extensions dribbblish-dynamic.js
   spicetify config extensions dribbblish.js
+  spicetify config extensions dribbblish-dynamic.js
   spicetify config extensions Vibrant.min.js
   spicetify config current_theme DribbblishDynamic
   spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
