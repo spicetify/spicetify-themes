@@ -45,7 +45,7 @@ Run these commands:
 ### Linux and MacOS:
 In **Bash**:
 ```bash
-cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
+cd "$(dirname "$(spicetify -c)")/Themes/DribbblishDynamic"
 mkdir -p ../../Extensions
 cp dribbblish.js ../../Extensions/.
 cp dribbblish-dynamic.js ../../Extensions/.
