@@ -74,14 +74,14 @@ If you want to add your theme:
 
     ...
     ```
-*   Commit only one message, more details in the **Commit Message**
+*   Commit only once, more details in the **Commit Message**
 *   Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)
 
 **Thanks to all the contributors.**
 
 ### Commit Message
 
-**NOTE: commit only one message when you add a new theme or scheme, you can commit other messages later.**
+**NOTE: commit only once when you add a new theme or scheme (you can also commit again later, if you need to).**
 
 #### Format
 
