@@ -1,4 +1,4 @@
-let current = '1.1'
+let current = '1.2'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -32,6 +32,13 @@ document.styleSheets[0].insertRule(`
     .new-releases-header button.switch:hover,
     .lyrics-tabBar-header button.switch:hover {
         background-color: rgba(var(--spice-rgb-subtext), 0.3) !important;
+    }`)
+
+/* unreadable top buttons */
+document.styleSheets[0].insertRule(`
+    .main-topBar-historyButtons svg {
+        color: var(--spice-text) !important;
+        fill: var(--spice-text) !important;
     }`)
 
 /* big cover opacity on hover */
@@ -228,8 +235,8 @@ Spicetify.Player.addEventListener("songchange", songchange)
 
 function pickCoverColor(img) {
     var swatches = new Vibrant(img, 12).swatches()
-    cols = isLight(mainColorBg) ? ["Vibrant", "DarkVibrant", "LightVibrant", "Muted"]
-                                : ["Vibrant", "LightVibrant", "DarkVibrant", "Muted"]
+    cols = isLight(mainColorBg) ? ["Vibrant", "DarkVibrant", "Muted", "LightVibrant"]
+                                : ["Vibrant", "LightVibrant", "Muted", "DarkVibrant"]
     mainColor = "#509bf5"
     for (var col in cols)
         if (swatches[cols[col]]) {
