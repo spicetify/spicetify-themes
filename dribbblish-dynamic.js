@@ -1,6 +1,7 @@
 let current = '1.1'
 
-/* css needed for system mode detection */
+/* css is injected so this works with untouched user.css from Dribbblish */
+/* dark theme */
 document.styleSheets[0].insertRule(`
     :root {
         --system_is_dark: 1;
@@ -12,33 +13,35 @@ document.styleSheets[0].insertRule(`
         }
     }`)
 
-/* css for color transition */
+/* progressbar tooltip text color */
 document.styleSheets[0].insertRule(`
-    @property --spice-sidebar {
-      syntax: '<color>';
-      initial-value: magenta;
-      inherits: true;
+    .playback-bar .prog-tooltip {
+        color: var(--spice-sidebar-text) !important;
     }`)
 
+/* edit button of CustomApps */
 document.styleSheets[0].insertRule(`
-    @property --spice-main {
-      syntax: '<color>';
-      initial-value: magenta;
-      inherits: true;
+    .reddit-sort-container button.switch,
+    .new-releases-header button.switch,
+    .lyrics-tabBar-header button.switch {
+        background-color: rgba(var(--spice-rgb-subtext), 0.15) !important;
+        color: var(--spice-text);
+    }`)
+document.styleSheets[0].insertRule(`
+    .reddit-sort-container button.switch:hover,
+    .new-releases-header button.switch:hover,
+    .lyrics-tabBar-header button.switch:hover {
+        background-color: rgba(var(--spice-rgb-subtext), 0.3) !important;
     }`)
 
+/* big cover opacity on hover */
 document.styleSheets[0].insertRule(`
-    @property --spice-button {
-      syntax: '<color>';
-      initial-value: magenta;
-      inherits: true;
-    }`)
-    
-document.styleSheets[0].insertRule(`
-    html {
-        transition: --spice-sidebar 1s, --spice-main 1s, --spice-button 1s;
+    .main-coverSlotExpanded-container:hover .cover-art,
+    .main-coverSlotExpanded-container:hover img  {
+        opacity: 0.5;
     }`)
 
+/* js */
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));
     if (queries.every(a => a)) {
@@ -269,8 +272,8 @@ waitForElement([".cover-art-image"], (queries) => {
     Spicetify.showNotification("Applied system " + (systemDark ? "dark" : "light") + " theme.")
 })()
 
-/* css for translucid background cover */
-document.styleSheets[0].addRule('.main-view-container__scroll-node-child::before',
+/* translucid background cover */
+document.styleSheets[0].addRule('.Root__top-container::before',
 `   content: '';
     background-image: var(--image_url);
     background-repeat: no-repeat;
@@ -286,7 +289,6 @@ document.styleSheets[0].addRule('.main-view-container__scroll-node-child::before
     pointer-events: none;
     backface-visibility: hidden;
     will-change: transform;
-    transition: background-image var(--transition);
     opacity: calc(0.07 + 0.03 * var(--is_light, 0));
     z-index: +3;`)
 
