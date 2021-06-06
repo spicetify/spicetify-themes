@@ -1,0 +1,52 @@
+@import "./functions.scss";
+
+// Bottom Bar
+
+// .Root__now-playing-bar {
+//     @include panel(var(--panelOverlay200));
+//     // background: var(--panelOverlay200) !important;
+
+// }
+
+.main-nowPlayingBar-container {
+    border-top: none;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 5px;
+        background: var(--progressBarColor);
+    }
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+    @include panel(var(--panelOpacity200));
+
+    &::before {
+        width: 100%;
+        height: inherit;
+        margin: 0 -16px;
+        z-index: unset;
+    }
+}
+
+.main-coverSlotExpanded-container {
+    margin-bottom: 8px;
+}
+
+.progress-bar__bg,
+.progress-bar__fg_wrapper {
+    border-radius: var(--progressBarRadius);
+    height: var(--progressBarHeight);
+    background: var(--progressBarBackground);
+}
+
+.progress-bar__fg {
+    border-radius: var(--progressBarRadius);
+    height: var(--progressBarHeight);
+    background: var(--progressBarColor);
+}
+
+.main-type-finale {
+    color: var(--textColor) !important;
+    z-index: 1;
+}

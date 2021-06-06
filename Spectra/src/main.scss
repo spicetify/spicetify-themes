@@ -1,0 +1,53 @@
+@use "./variables.scss";
+@use "./reset.scss";
+
+@use "./topbar.scss";
+@use "./bottombar.scss";
+@use "./buttons.scss";
+@use "./cards.scss";
+@use "./links.scss";
+
+@import "./functions.scss";
+
+// Main SCSS File
+
+#main,
+.progress-bar__fg,
+.main-nowPlayingBar-container {
+    background: var(--background);
+}
+
+.Root {
+    @include panel(var(--panelOpacity100));
+}
+
+.main-buddyFeed-buddyFeed,
+.Root__nav-bar {
+    @include panel(var(--panelOpacity100));
+}
+
+.main-contextMenu-menu {
+    @include panel(var(--panelOpacity250));
+    border-radius: 15px;
+
+    &::before {
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+    }
+}
+
+.main-trackList-trackListRow.main-trackList-active {
+    &:hover,
+    &:focus,
+    &:focus-within {
+        .main-trackList-rowMarker,
+        .main-trackList-rowTitle {
+            color: var(--textHighlight);
+        }
+    }
+}
+
+.main-trackList-playingIcon {
+    filter: brightness(10) grayscale(1);
+}

@@ -1,0 +1,55 @@
+@import "./functions.scss";
+
+// Top Bar
+
+.main-trackList-trackListHeader {
+    color: var(--textColor);
+}
+
+.main-topBar-background::before,
+.main-trackList-trackListHeaderStuck::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.main-topBar-background {
+    @include panel(var(--panelOpacity200));
+}
+
+.main-trackList-trackListHeaderStuck {
+    @include panel(var(--panelOpacity150));
+}
+
+.main-topBar-background,
+.main-trackList-trackListHeaderStuck {
+    background: var(--background) !important;
+}
+
+.main-trackList-trackList {
+    border: none !important;
+}
+
+// User Area
+.main-userWidget-box,
+.main-avatar-userIcon {
+    @include panel(var(--panelOpacity100));
+
+    &:hover {
+        @include panel(var(--panelOpacity150));
+    }
+
+    &::before {
+        border-radius: 23px;
+    }
+}
+
+.x-searchInput-searchInputInput,
+.x-searchInput-searchInputInput::placeholder,
+.x-searchInput-searchInputSearchIcon {
+    color: var(--textColor) !important;
+}

@@ -1,0 +1,39 @@
+@import "./functions.scss";
+
+// Reset Stylesheet
+
+input,
+.main-rootlist-rootlistDividerGradient,
+.main-home-homeHeader,
+.x-entityHeader-overlay,
+.x-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor,
+.main-topBar-background,
+.main-rootlist-rootlistDivider,
+.playlist-playlist-playlistContent,
+.main-navBar-navBarLink,
+.main-navBar-navBarLinkActive,
+.main-topBar-overlay,
+.main-userWidget-box:focus,
+.main-userWidget-box:hover,
+.main-userWidget-box,
+.main-avatar-userIcon,
+.main-contextMenu-menu,
+.main-createPlaylistButton-createPlaylistIcon {
+    background: transparent;
+    background-color: unset !important;
+    background-image: unset !important;
+}
+
+// Connect
+.connect-title,
+.connect-header {
+    display: none;
+}
+
+// Cards
+.main-cardImage-imageWrapper {
+    background-color: transparent;
+}

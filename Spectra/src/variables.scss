@@ -1,0 +1,43 @@
+// Default Values
+
+:root,
+::before,
+::after {
+    // Global Colors
+    --primary: var(--spice-primary);
+    --secondary: var(--spice-secondary);
+
+    // Text Color
+    --textColor: var(--spice-text);
+    --textSecondary: var(--spice-subtext);
+    --textHighlight: var(--spice-texthighlight);
+
+    // Background Properties
+    --background: linear-gradient(
+        30deg,
+        var(--spice-primary) 0%,
+        var(--spice-secondary) 100%
+    );
+
+    // Button Properties
+    --buttonColor: var(--spice-button);
+    --buttonBackground: linear-gradient(
+        215deg,
+        var(--spice-primary) 0%,
+        var(--spice-secondary) 100%
+    );
+
+    // Panel Colors
+    --panelColor: var(--spice-panelcolor);
+    --panelOpacity100: 0.3;
+    --panelOpacity150: 0.4;
+    --panelOpacity200: 0.6;
+    --panelOpacity250: 0.7;
+    --panelOpacity300: 0.8;
+
+    // Progress Bar Properties
+    --progressBarColor: var(--background);
+    --progressBarBackground: var(--spice-progressbg);
+    --progressBarRadius: 3px;
+    --progressBarHeight: 6px;
+}
