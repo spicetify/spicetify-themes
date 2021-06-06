@@ -1,21 +1,7 @@
 # Dribbblish Dynamic
 
 ### base
-![base](base.png)
-### white
-![white](white.png)
-### dark
-![dark](dark.png)
-### nord-light
-![nord-light](nord-light.png)
-### nord-dark
-![nord-dark](nord-dark.png)
-### beach-sunset
-![beach-sunset](beach-sunset.png)
-### purple
-![purple](purple.png)
-### samourai
-![samourai](samourai.png)
+![base](dynamic.gif)
 
 ##  Features
 ### Resizable sidebar
@@ -54,13 +40,6 @@ In **Powershell**:
 Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.ps1" | Invoke-Expression
 ```
 
-## Change Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`, `purple`. Change scheme with commands:
-```
-spicetify config color_scheme <scheme name>
-spicetify apply
-```
-
 ## Hide Window Controls
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
 ![instruction1](./windows-shortcut-instruction.png)
@@ -72,7 +51,6 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
 ## Uninstall 
-
 Remove the dribbblish script with the following commands 
 
 ```
