@@ -1,0 +1,113 @@
+@import "./functions.scss";
+
+// Buttons
+.main-playButton-PlayButton.main-playButton-primary {
+    background: var(--buttonBackground);
+}
+
+.player-controls__buttons {
+    align-items: center;
+
+    button {
+        color: var(--buttonColor) !important;
+
+        &.main-playPauseButton-button {
+            background: var(--buttonBackground);
+
+            width: 42px;
+            height: 42px;
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        &::before {
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--buttonBackground);
+            z-index: -1;
+            transition: 0.3s;
+            opacity: 0;
+        }
+
+        &::after {
+            display: none !important;
+        }
+
+        &:not([disabled]) {
+            &:hover,
+            &[class$="-on"] {
+                color: var(--buttonColor) !important;
+                &::before {
+                    opacity: 1;
+                }
+                background: var(--buttonBackground);
+                border-radius: 50%;
+            }
+
+            &:hover {
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+.x-settings-facebookButton,
+.x-settings-facebookButton:active,
+.x-settings-facebookButton:focus,
+.x-settings-facebookButton:hover,
+.main-buttons-button:not(.main-entityHeader-titleButton) {
+    background: var(--background) !important;
+    border: none;
+}
+
+.main-topBar-button {
+    background: transparent;
+
+    @include panel(var(--panelOpacity200));
+
+    &::before {
+        border-radius: 50%;
+    }
+}
+
+.main-dropDown-dropDown {
+    background: var(--background), var(--secondary);
+    border-radius: 32px;
+    color: var(--textColor);
+}
+
+.main-trackList-trackListRow {
+    &:focus-within,
+    &:focus,
+    &:hover {
+        .main-trackList-addToPlaylistButton {
+            border: none !important;
+        }
+    }
+}
+
+.main-createPlaylistButton-createPlaylistIcon {
+    @include panel(var(--panelOpacity200));
+    color: var(--textColor);
+
+    &::before {
+        border-radius: 50%;
+    }
+}
+
+.main-entityHeader-imagePlaceholder {
+    background: var(--background);
+    color: var(--textColor);
+}
+
+.main-deletePlaylistDialog-secondaryButton {
+    color: var(--textColor);
+}

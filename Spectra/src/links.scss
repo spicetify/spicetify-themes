@@ -1,0 +1,55 @@
+@import "./functions.scss";
+
+// Links
+
+.link-subtle {
+    color: var(--textSecondary) !important;
+}
+
+.main-navBar-navBarLink {
+    &.main-navBar-navBarLinkActive {
+        @include panel(var(--panelOpacity100));
+
+        &::before {
+            height: 40px;
+            margin: 0px -24px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.x-toggle-indicatorWrapper {
+    background: var(--background);
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.reddit-tabBar-headerItemLink {
+    @include panel(var(--panelOpacity100));
+
+    &.reddit-tabBar-active {
+        @include panel(var(--panelOpacity200));
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+    }
+}
+.queue-tabBar-headerItemLink {
+    @include panel(var(--panelOpacity100));
+
+    &.queue-tabBar-active {
+        @include panel(var(--panelOpacity200));
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+    }
+}

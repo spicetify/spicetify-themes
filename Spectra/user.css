@@ -1,0 +1,518 @@
+:root,
+::before,
+::after {
+  --primary: var(--spice-primary);
+  --secondary: var(--spice-secondary);
+  --textColor: var(--spice-text);
+  --textSecondary: var(--spice-subtext);
+  --textHighlight: var(--spice-texthighlight);
+  --background: linear-gradient(
+      30deg,
+      var(--spice-primary) 0%,
+      var(--spice-secondary) 100%
+  );
+  --buttonColor: var(--spice-button);
+  --buttonBackground: linear-gradient(
+      215deg,
+      var(--spice-primary) 0%,
+      var(--spice-secondary) 100%
+  );
+  --panelColor: var(--spice-panelcolor);
+  --panelOpacity100: 0.3;
+  --panelOpacity150: 0.4;
+  --panelOpacity200: 0.6;
+  --panelOpacity250: 0.7;
+  --panelOpacity300: 0.8;
+  --progressBarColor: var(--background);
+  --progressBarBackground: var(--spice-progressbg);
+  --progressBarRadius: 3px;
+  --progressBarHeight: 6px;
+}
+
+input,
+.main-rootlist-rootlistDividerGradient,
+.main-home-homeHeader,
+.x-entityHeader-overlay,
+.x-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor,
+.main-topBar-background,
+.main-rootlist-rootlistDivider,
+.playlist-playlist-playlistContent,
+.main-navBar-navBarLink,
+.main-navBar-navBarLinkActive,
+.main-topBar-overlay,
+.main-userWidget-box:focus,
+.main-userWidget-box:hover,
+.main-userWidget-box,
+.main-avatar-userIcon,
+.main-contextMenu-menu,
+.main-createPlaylistButton-createPlaylistIcon {
+  background: transparent;
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+.connect-title,
+.connect-header {
+  display: none;
+}
+
+.main-cardImage-imageWrapper {
+  background-color: transparent;
+}
+
+.main-trackList-trackListHeader {
+  color: var(--textColor);
+}
+
+.main-topBar-background::before,
+.main-trackList-trackListHeaderStuck::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.main-topBar-background {
+  background: transparent !important;
+}
+.main-topBar-background::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main-trackList-trackListHeaderStuck {
+  background: transparent !important;
+}
+.main-trackList-trackListHeaderStuck::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity150);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main-topBar-background,
+.main-trackList-trackListHeaderStuck {
+  background: var(--background) !important;
+}
+
+.main-trackList-trackList {
+  border: none !important;
+}
+
+.main-userWidget-box,
+.main-avatar-userIcon {
+  background: transparent !important;
+}
+.main-userWidget-box::before,
+.main-avatar-userIcon::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-userWidget-box:hover,
+.main-avatar-userIcon:hover {
+  background: transparent !important;
+}
+.main-userWidget-box:hover::before,
+.main-avatar-userIcon:hover::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity150);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-userWidget-box::before,
+.main-avatar-userIcon::before {
+  border-radius: 23px;
+}
+
+.x-searchInput-searchInputInput,
+.x-searchInput-searchInputInput::placeholder,
+.x-searchInput-searchInputSearchIcon {
+  color: var(--textColor) !important;
+}
+
+.main-nowPlayingBar-container {
+  border-top: none;
+}
+.main-nowPlayingBar-container::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: var(--progressBarColor);
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  background: transparent !important;
+}
+.main-nowPlayingBar-nowPlayingBar::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-nowPlayingBar-nowPlayingBar::before {
+  width: 100%;
+  height: inherit;
+  margin: 0 -16px;
+  z-index: unset;
+}
+
+.main-coverSlotExpanded-container {
+  margin-bottom: 8px;
+}
+
+.progress-bar__bg,
+.progress-bar__fg_wrapper {
+  border-radius: var(--progressBarRadius);
+  height: var(--progressBarHeight);
+  background: var(--progressBarBackground);
+}
+
+.progress-bar__fg {
+  border-radius: var(--progressBarRadius);
+  height: var(--progressBarHeight);
+  background: var(--progressBarColor);
+}
+
+.main-type-finale {
+  color: var(--textColor) !important;
+  z-index: 1;
+}
+
+.main-playButton-PlayButton.main-playButton-primary {
+  background: var(--buttonBackground);
+}
+
+.player-controls__buttons {
+  align-items: center;
+}
+.player-controls__buttons button {
+  color: var(--buttonColor) !important;
+}
+.player-controls__buttons button.main-playPauseButton-button {
+  background: var(--buttonBackground);
+  width: 42px;
+  height: 42px;
+}
+.player-controls__buttons button.main-playPauseButton-button svg {
+  height: 20px;
+  width: 20px;
+}
+.player-controls__buttons button::before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--buttonBackground);
+  z-index: -1;
+  transition: 0.3s;
+  opacity: 0;
+}
+.player-controls__buttons button::after {
+  display: none !important;
+}
+.player-controls__buttons button:not([disabled]):hover, .player-controls__buttons button:not([disabled])[class$=-on] {
+  color: var(--buttonColor) !important;
+  background: var(--buttonBackground);
+  border-radius: 50%;
+}
+.player-controls__buttons button:not([disabled]):hover::before, .player-controls__buttons button:not([disabled])[class$=-on]::before {
+  opacity: 1;
+}
+.player-controls__buttons button:not([disabled]):hover {
+  transform: scale(1.08);
+}
+
+.x-settings-facebookButton,
+.x-settings-facebookButton:active,
+.x-settings-facebookButton:focus,
+.x-settings-facebookButton:hover,
+.main-buttons-button:not(.main-entityHeader-titleButton) {
+  background: var(--background) !important;
+  border: none;
+}
+
+.main-topBar-button {
+  background: transparent;
+  background: transparent !important;
+}
+.main-topBar-button::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-topBar-button::before {
+  border-radius: 50%;
+}
+
+.main-dropDown-dropDown {
+  background: var(--background), var(--secondary);
+  border-radius: 32px;
+  color: var(--textColor);
+}
+
+.main-trackList-trackListRow:focus-within .main-trackList-addToPlaylistButton, .main-trackList-trackListRow:focus .main-trackList-addToPlaylistButton, .main-trackList-trackListRow:hover .main-trackList-addToPlaylistButton {
+  border: none !important;
+}
+
+.main-createPlaylistButton-createPlaylistIcon {
+  background: transparent !important;
+  color: var(--textColor);
+}
+.main-createPlaylistButton-createPlaylistIcon::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-createPlaylistButton-createPlaylistIcon::before {
+  border-radius: 50%;
+}
+
+.main-entityHeader-imagePlaceholder {
+  background: var(--background);
+  color: var(--textColor);
+}
+
+.main-deletePlaylistDialog-secondaryButton {
+  color: var(--textColor);
+}
+
+.main-card-card {
+  background: transparent !important;
+}
+.main-card-card::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-card-card:hover {
+  background: transparent !important;
+}
+.main-card-card:hover::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-card-card::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+}
+
+.link-subtle {
+  color: var(--textSecondary) !important;
+}
+
+.main-navBar-navBarLink.main-navBar-navBarLinkActive {
+  background: transparent !important;
+}
+.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-navBar-navBarLink.main-navBar-navBarLinkActive::before {
+  height: 40px;
+  margin: 0px -24px;
+  border-radius: 20px;
+}
+
+.x-toggle-indicatorWrapper {
+  background: var(--background);
+  transition: 0.3s;
+}
+.x-toggle-indicatorWrapper:hover {
+  transform: scale(1.05);
+}
+
+.reddit-tabBar-headerItemLink {
+  background: transparent !important;
+}
+.reddit-tabBar-headerItemLink::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.reddit-tabBar-headerItemLink.reddit-tabBar-active {
+  background: transparent !important;
+}
+.reddit-tabBar-headerItemLink.reddit-tabBar-active::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.reddit-tabBar-headerItemLink::before {
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+.queue-tabBar-headerItemLink {
+  background: transparent !important;
+}
+.queue-tabBar-headerItemLink::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.queue-tabBar-headerItemLink.queue-tabBar-active {
+  background: transparent !important;
+}
+.queue-tabBar-headerItemLink.queue-tabBar-active::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity200);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.queue-tabBar-headerItemLink::before {
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+#main,
+.progress-bar__fg,
+.main-nowPlayingBar-container {
+  background: var(--background);
+}
+
+.Root {
+  background: transparent !important;
+}
+.Root::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main-buddyFeed-buddyFeed,
+.Root__nav-bar {
+  background: transparent !important;
+}
+.main-buddyFeed-buddyFeed::before,
+.Root__nav-bar::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity100);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.main-contextMenu-menu {
+  background: transparent !important;
+  border-radius: 15px;
+}
+.main-contextMenu-menu::before {
+  content: "";
+  background: var(--panelColor);
+  opacity: var(--panelOpacity250);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+.main-contextMenu-menu::before {
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+
+.main-trackList-trackListRow.main-trackList-active:hover .main-trackList-rowMarker,
+.main-trackList-trackListRow.main-trackList-active:hover .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active:focus .main-trackList-rowMarker,
+.main-trackList-trackListRow.main-trackList-active:focus .main-trackList-rowTitle, .main-trackList-trackListRow.main-trackList-active:focus-within .main-trackList-rowMarker,
+.main-trackList-trackListRow.main-trackList-active:focus-within .main-trackList-rowTitle {
+  color: var(--textHighlight);
+}
+
+.main-trackList-playingIcon {
+  filter: brightness(10) grayscale(1);
+}
+
+/*# sourceMappingURL=user.css.map */
