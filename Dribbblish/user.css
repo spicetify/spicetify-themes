@@ -58,7 +58,7 @@ body {
 
 .lyrics-lyricsContainer-LyricsLine {
     font-family: var(--glue-font-family);
-    letter-spacing: normal !important;
+    letter-spacing: -.03em !important;
 }
 
 .main-rootlist-rootlistDividerGradient {
@@ -251,8 +251,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     height: 32px !important;
 }
 
-.main-buddyFeed-avatarContainer {
-    padding-left: 4px;
+.main-buddyFeed-avatarContainer,
+.main-buddyFeed-overlay {
+    left: 4px;
 }
 
 .main-avatar-avatar.main-avatar-withBadge:after {
@@ -310,6 +311,12 @@ html,
 .Root__nav-bar,
 .main-buddyFeed-buddyFeed {
     background-color: var(--spice-sidebar) !important;
+}
+
+html {
+    background-image: url("http://local_resource_host/dribbblish.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Root__nav-bar .link-subtle,
@@ -767,4 +774,30 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 
 .main-nowPlayingWidget-coverExpanded {
     transform: translateX(-27px);
+}
+
+/** Mini dribbblish */
+.x-categoryCard-CategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 14px);
+    height: calc(100% - 6px);
+    margin: 3px 10px;
+    border-radius: 5px;
+}
+
+.x-categoryCard-CategoryCard {
+    height: 100px;
+}
+
+.x-categoryCard-image {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.x-heroCategoryCard-HeroCategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 20px);
+    height: calc(100% - 6px);
+    margin: 3px 16px;
+    border-radius: 5px;
 }
