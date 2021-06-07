@@ -87,7 +87,7 @@
 .main-nowPlayingWidget-coverArt .cover-art-image {
   border: 2px solid #aaa;
   transform: scale(1.1);
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, .2))
+  box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
 /* expand & collapse button */
