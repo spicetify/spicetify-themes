@@ -74,7 +74,7 @@ waitForElement([".main-rootlist-rootlistPlaylistsScrollNode ul"], ([query]) => {
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                img.src = meta.picture;
+                img.src = meta.picture || "/images/tracklist-row-song-fallback.svg";
             });
         }
     }
