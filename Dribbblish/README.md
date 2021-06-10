@@ -16,6 +16,8 @@
 ![purple](purple.png)
 ### Samourai
 ![samourai](samourai.png)
+### Dracula
+![dracula](dracula.png)
 
 ##  Features
 ### Resizable sidebar
@@ -66,7 +68,7 @@ spicetify apply
 ```
 
 ## Change Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`, `purple`. Change scheme with commands:
+There are 10 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`, `purple, dracula`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
