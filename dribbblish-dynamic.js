@@ -47,6 +47,11 @@ document.styleSheets[0].insertRule(`
     .main-coverSlotExpanded-container:hover img  {
         opacity: 0.5;
     }`)
+/* temporary fix */
+document.styleSheets[0].insertRule(`
+    .main-shuffleButton-button {
+        order: unset !important;
+    }`)
 
 /* js */
 function waitForElement(els, func, timeout = 100) {
