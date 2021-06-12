@@ -6,6 +6,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Discord
+
+![Discord Screenshot](Discord/Screenshot_1.png)
+
 ## Dribbblish
 
 #### Base
