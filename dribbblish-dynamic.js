@@ -1,4 +1,4 @@
-let current = '1.2'
+let current = '1.3'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -51,6 +51,17 @@ document.styleSheets[0].insertRule(`
 document.styleSheets[0].insertRule(`
     .main-shuffleButton-button {
         order: unset !important;
+    }`)
+document.styleSheets[0].insertRule(`
+    .main-rootlist-expandArrow:focus,
+    .main-rootlist-expandArrow:hover,
+    .main-rootlist-textWrapper:focus,
+    .main-rootlist-textWrapper:hover,
+    .main-contextMenu-menuHeading,
+    .main-contextMenu-menuItemButton,
+    .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
+    .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+        color: var(--spice-sidebar-text) !important;
     }`)
 
 /* js */
@@ -175,7 +186,7 @@ DribbblishShared.configMenu.register();
 DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
     "Dark mode",
     systemDark,
-    (self) => { toggleDark(); }
+    (self) => { toggleDark(); self.isEnabled = !self.isEnabled; }
 ));
 
 function updateColors(colHex) {
