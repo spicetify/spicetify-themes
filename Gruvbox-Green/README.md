@@ -1,10 +1,10 @@
 ## Screenshots
 
-![screenshot](https://user-images.githubusercontent.com/75601961/121886697-594a4d80-cd33-11eb-918e-656adf21d2c2.png)
+![screenshot](https://github.com/crookshanks003/spicetify-themes/blob/master/Gruvbox-Green/screenshot.png)
 
 ## More
 
-Change colour button and button-active in color.ini to any other gruvbox palette color to get different look.
+Change colour 'button' and 'button-active' in color.ini to any other gruvbox palette color to get different look.
 
 ## Gruvbox
 
