@@ -1,3 +1,5 @@
+#Gruvbox-Green
+
 ## Screenshots
 
 ![screenshot](https://github.com/crookshanks003/spicetify-themes/blob/master/Gruvbox-Green/screenshot.png)
