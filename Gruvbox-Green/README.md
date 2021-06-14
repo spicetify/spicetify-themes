@@ -1,4 +1,4 @@
-#Gruvbox-Green
+# Gruvbox-Green
 
 ## Screenshots
 
