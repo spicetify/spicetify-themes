@@ -1,0 +1,87 @@
+.main-rootlist-rootlistDividerGradient {
+    background: unset;
+}
+
+input {
+    background-color: unset !important;
+    border-bottom: solid 1px var(--spice-text) !important;
+    border-radius: 0 !important;
+    padding: 6px 10px 6px 48px;
+    color: var(--spice-text) !important;
+}
+
+.x-searchInput-searchInputSearchIcon,
+.x-searchInput-searchInputClearButton {
+    color: var(--spice-text) !important;
+}
+
+.main-home-homeHeader {
+    background-color: var(--spice-subtext) !important;
+}
+
+.main-entityHeader-backgroundColor {
+    background-color: var(--spice-button) !important;
+}
+
+.main-actionBarBackground-background {
+    background-image: unset !important;
+    background-color: unset !important;
+}
+
+.main-actionBar-ActionBar,
+.main-trackList-trackList,
+.main-trackList-trackListHeader {
+    background-color: var(--spice-main) !important;
+}
+.main-topBar-overlay {
+    background-color: var(--spice-topbar) !important;
+}
+
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive {
+    background: var(--spice-button);
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 0 5px 0 -10px;
+}
+
+.main-navBar-navBarLinkActive {
+    background: var(--spice-button);
+}
+
+.main-contextMenu-menu {
+    background-color: var(--spice-button);
+}
+
+.main-contextMenu-menuHeading,
+.main-contextMenu-menuItemButton,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+    color: var(--spice-text);
+}
+
+.main-playPauseButton-button {
+    background-color: var(--spice-button);
+    color: var(--spice-text) !important;
+}
+
+.queue-queue-title,
+.queue-playHistory-title {
+    color: var(--spice-text) !important;
+}
+
+.progress-bar__bg {
+    background: var(--spice-topbar);
+}
+
+.progress-bar__fg {
+    background: var(--spice-subtext);
+}
+
+.lyrics-lyricsContainer-SyncedLyricsPage {
+    background-color: var(--spice-button) !important;
+}
+
+.show-show-sectionTitle,
+.episode-episode-contentDescriptionTitle {
+    color: var(--spice-text) !important;
+}
