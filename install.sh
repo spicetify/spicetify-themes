@@ -7,10 +7,9 @@ set -e
 if [ $# -eq 0 ]; then
     latest_release_uri="https://api.github.com/repos/JulienMaille/dribbblish-dynamic-theme/releases/latest"
     echo "DOWNLOADING    $latest_release_uri"
-    version=$(
-        command curl -sSf "$latest_release_uri" |
-            command grep -Po '(?<="tag_name": ")[0-9.]*'
-    )
+    version=$( command curl -sSf "$latest_release_uri" |
+        command grep -Eo "tag_name\": .*" |
+        command grep -Eo "[0-9.]*" )
     if [ ! "$version" ]; then exit 1; fi
 else
     version="${1}"
@@ -27,7 +26,7 @@ fi
 
 tar_file="$spicetify_install/${version}.zip"
 
-echo "DOWNLOADING    $download_uri"
+echo "DOWNLOADING    v$version  $download_uri"
 curl --fail --location --progress-bar --output "$tar_file" "$download_uri"
 cd "$spicetify_install"
 

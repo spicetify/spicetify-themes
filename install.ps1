@@ -81,7 +81,7 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
   Write-Done
 
   # Installing.
-  Write-Part "INSTALLING     ";
+  Write-Part "INSTALLING";
   cd $sp_dot_dir
   Copy-Item dribbblish.js ..\..\Extensions
   Copy-Item dribbblish-dynamic.js ..\..\Extensions
