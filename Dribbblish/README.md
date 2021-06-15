@@ -16,6 +16,8 @@
 ![purple](purple.png)
 ### Samourai
 ![samourai](samourai.png)
+### Horizon
+![horizon](horizon.png)
 
 ##  Features
 ### Resizable sidebar
