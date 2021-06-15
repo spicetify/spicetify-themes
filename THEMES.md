@@ -24,6 +24,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 ![purple](Dribbblish/purple.png)
 #### Samourai
 ![samourai](Dribbblish/samourai.png)
+#### Horizon
+![horizon](Dribbblish/horizon.png)
 
 ## Onepunch
 
