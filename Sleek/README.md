@@ -11,6 +11,8 @@
 ### Psycho
 ![Psycho Screenshot](psycho.png)
 
+### Deeper
+![Deeper Screenshot](deeper.png)
 ## More
 
 A simple and sleek theme that builds on the basic Spotify UI.
