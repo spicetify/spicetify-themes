@@ -218,6 +218,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     color: var(--spice-main);
     background-color: var(--spice-playback-bar);
     box-shadow: var(--spice-shadow) 0 5px 4px 0px;
+    cursor: pointer !important;
 }
 
 .main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
@@ -244,7 +245,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-navBar-navBarLinkActive {
-    background-color: var(--spice-playback-bar);
+    background-color: var(--spice-main);
 }
 
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
@@ -322,4 +323,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
 
 .view-homeShortcutsGrid-shortcut:focus-within, .view-homeShortcutsGrid-shortcut:hover, .view-homeShortcutsGrid-shortcut[data-context-menu-open=true] {
     background-color: var(--spice-selected-row) !important;
+}
+.main-rootlist-textWrapper.main-type-viola{
+    cursor: pointer !important;
 }
