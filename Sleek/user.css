@@ -326,7 +326,12 @@ p.main-buddyFeed-timestamp.main-type-finale,
 }
 .main-rootlist-textWrapper.main-type-viola{
     cursor: pointer !important;
+    transition: all 500ms;   
 }
+.main-rootlist-textWrapper.main-type-viola:hover{
+    font-size:20px;
+    font-size-adjust: 20px;
+    }
 .main-navBar-navBar{
     border-right: 2px solid var(--spice-misc);
 }
