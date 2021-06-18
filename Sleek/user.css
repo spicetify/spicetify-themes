@@ -327,3 +327,18 @@ p.main-buddyFeed-timestamp.main-type-finale,
 .main-rootlist-textWrapper.main-type-viola{
     cursor: pointer !important;
 }
+.main-navBar-navBar{
+    border-right: 2px solid var(--spice-misc);
+}
+.cMigZB *{
+    color: var(--spice-misc) !important;
+}
+.main-trackInfo-name a{
+    color: var(--spice-misc) !important;
+}
+.main-trackInfo-artists a:link{
+    color: var(--spice-misc) !important;
+}
+[class*=" spoticon-"]:before{
+    color: var(--spice-misc) !important;
+}
