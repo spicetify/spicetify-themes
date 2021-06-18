@@ -130,7 +130,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .main-playPauseButton-button {
     background-color: var(--spice-main);
     box-shadow: var(--spice-shadow) 0 5px 9px 0px;
-    --button-size: 43px !important;
+    --button-size: 50px !important;
     color: var(--spice-text);
 }
 
@@ -347,3 +347,4 @@ p.main-buddyFeed-timestamp.main-type-finale,
 [class*=" spoticon-"]:before{
     color: var(--spice-misc) !important;
 }
+
