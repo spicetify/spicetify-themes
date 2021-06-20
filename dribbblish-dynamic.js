@@ -1,4 +1,4 @@
-let current = '1.3'
+let current = '1.4'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -6,6 +6,7 @@ document.styleSheets[0].insertRule(`
     :root {
         --system_is_dark: 1;
     }`)
+
 document.styleSheets[0].insertRule(`
     @media (prefers-color-scheme: light) {
         :root {
@@ -27,6 +28,7 @@ document.styleSheets[0].insertRule(`
         background-color: rgba(var(--spice-rgb-subtext), 0.15) !important;
         color: var(--spice-text);
     }`)
+
 document.styleSheets[0].insertRule(`
     .reddit-sort-container button.switch:hover,
     .new-releases-header button.switch:hover,
@@ -41,18 +43,29 @@ document.styleSheets[0].insertRule(`
         fill: var(--spice-text) !important;
     }`)
 
+document.styleSheets[0].insertRule(`
+    .lyrics-lyricsContainer-LyricsBackground {
+        background: linear-gradient(180deg, transparent 0px, transparent 60px, var(--lyrics-color-background) 61px) !important;
+    }`)
+
 /* big cover opacity on hover */
 document.styleSheets[0].insertRule(`
     .main-coverSlotExpanded-container:hover .cover-art,
-    .main-coverSlotExpanded-container:hover img  {
+    .main-coverSlotExpanded-container:hover img {
         opacity: 0.5;
     }`)
+
 /* temporary fix */
 document.styleSheets[0].insertRule(`
     .main-shuffleButton-button {
         order: unset !important;
     }`)
+
 document.styleSheets[0].insertRule(`
+    .collection-collectionEntityHeroCard-likedSongs,
+    .collection-collectionEntityHeroCard-likedSongs .main-cardHeader-link,
+    .collection-collectionEntityHeroCard-likedSongs .collection-collectionEntityHeroCard-descriptionContainer,
+    .x-heroCategoryCard-heroTitle,
     .main-rootlist-expandArrow:focus,
     .main-rootlist-expandArrow:hover,
     .main-rootlist-textWrapper:focus,

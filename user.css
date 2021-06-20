@@ -58,11 +58,11 @@ body {
 
 .lyrics-lyricsContainer-LyricsLine {
     font-family: var(--glue-font-family);
-    letter-spacing: normal !important;
+    letter-spacing: -.03em !important;
 }
 
-.main-rootlist-rootlistDividerGradient {
-    background: unset;
+.main-rootlist-rootlistDivider {
+    display: none;
 }
 
 input {
@@ -119,8 +119,11 @@ input {
     filter: grayscale(1);
 }
 
-span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
-    fill: black;
+span.artist-artistVerifiedBadge-badge svg > path:first-of-type {
+    fill: var(--spice-button);
+}
+span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
+    fill: var(--spice-text);
 }
 
 /* Full window artist background */
@@ -147,8 +150,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
-    font-size: 175px !important;
-    line-height: 175px !important;
+    font-size: 120px !important;
+    line-height: 120px !important;
 }
 
 /** Hightlight selected playlist */
@@ -245,16 +248,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     color: rgba(var(--spice-rgb-sidebar-text), 0.8);
 }
 
-.main-avatar-avatar,
-.main-buddyFeed-overlay {
-    width: 32px !important;
-    height: 32px !important;
-}
-
-.main-buddyFeed-avatarContainer {
-    padding-left: 4px;
-}
-
 .main-avatar-avatar.main-avatar-withBadge:after {
     box-shadow: 0 0 0 2px var(--spice-sidebar);
     background-color: var(--spice-notification);
@@ -269,7 +262,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .main-nowPlayingBar-container {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     background-color: unset;
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-button), 0.55), var(--spice-main) 60%);
+    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%);
     border-top: 0;
     min-width: 518px;
 }
@@ -278,18 +271,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     border: 2px solid var(--spice-main);
     border-top: 0;
-}
-
-@media(max-width:768px){
-    /* .control-button{
-        display: none;
-    } */
-    .volume-bar {
-        flex: 0 1 40px;
-    }
-    .volume-bar .progress-bar-wrapper {
-        display: none;
-    }
+    color: var(--spice-sidebar-text);
 }
 
 .Root__nav-bar {
@@ -310,6 +292,12 @@ html,
 .Root__nav-bar,
 .main-buddyFeed-buddyFeed {
     background-color: var(--spice-sidebar) !important;
+}
+
+html {
+    background-image: url("http://local_resource_host/dribbblish.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .Root__nav-bar .link-subtle,
@@ -416,6 +404,7 @@ html.sidebar-hide-text .GlueDropTarget span {
 
 .player-controls__buttons {
     margin-bottom: 0;
+    width: 192px;
 }
 
 .progress-bar {
@@ -426,9 +415,20 @@ html.sidebar-hide-text .GlueDropTarget span {
 
 .minimal-player .player-controls__buttons {
     width: 120px;
+    gap: 0px;
 }
+
+.minimal-player .player-controls__left,
+.minimal-player .player-controls__right {
+    --button-size: 16px !important;
+    gap: 0px;
+}
+
 .minimal-player .volume-bar {
     flex: 0 1 70px;
+}
+.extra-minimal-player .player-controls__buttons {
+    width: 64px;
 }
 .extra-minimal-player .main-shuffleButton-button,
 .extra-minimal-player .main-repeatButton-button,
@@ -580,15 +580,11 @@ li.GlueDropTarget {
 }
 
 /** Rearrange player bar */
-.main-shuffleButton-button {
-    order: 1;
-}
-
 .main-nowPlayingBar-left {
     order: 1;
     flex: 1;
     width: auto;
-    min-width: unset !important;
+    min-width: 0 !important;
 }
 
 .main-nowPlayingBar-center {
@@ -767,4 +763,78 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 
 .main-nowPlayingWidget-coverExpanded {
     transform: translateX(-27px);
+}
+
+/** Mini dribbblish */
+.x-categoryCard-CategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 14px);
+    height: calc(100% - 6px);
+    margin: 3px 10px;
+    border-radius: 5px;
+}
+
+.x-categoryCard-CategoryCard {
+    height: 100px;
+}
+
+.x-categoryCard-image {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.x-heroCategoryCard-HeroCategoryCard > div {
+    background-color: var(--spice-main);
+    width: calc(100% - 20px);
+    height: calc(100% - 6px);
+    margin: 3px 16px;
+    border-radius: 5px;
+}
+
+.main-dropDown-dropDown,
+.x-sortBox-sortDropdown {
+    background-color: rgba(var(--spice-rgb-selected-row), .1) !important;
+}
+
+.connect-device-list-item:focus,
+.connect-device-list-item:hover {
+    background-color: rgba(var(--spice-rgb-selected-row), .3);
+}
+
+
+/* 1.1.56 */
+.main-navBar-navBar {
+    width: var(--sidebar-width) !important;
+}
+
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+@media (min-width: 1024px) {
+    .main-entityHeader-container.main-entityHeader-nonWrapped {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+
+.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton {
+    color: rgba(var(--spice-rgb-selected-row), .7);
+    padding-left: 8px;
+    text-decoration: none;
+}
+.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton:hover,
+.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton:focus {
+    color: var(--spice-text);
+}
+
+.main-userWidget-dropDownMenu svg {
+    position: unset;
+}
+.main-userWidget-dropDownMenu > li svg {
+    position: absolute;
+}
+.main-buddyFeed-buddyFeed.main-buddyFeed-buddyFeed-expanded {
+    z-index: 4;
 }
