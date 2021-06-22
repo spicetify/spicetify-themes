@@ -62,6 +62,13 @@ document.styleSheets[0].insertRule(`
     }`)
 
 document.styleSheets[0].insertRule(`
+    .main-navBar-navBar a:hover,
+    .main-navBar-navBar a:hover span,
+    .main-buddyFeed-activityMetadata a:hover {
+        color: var(--spice-button) !important;
+    }`)
+
+document.styleSheets[0].insertRule(`
     .collection-collectionEntityHeroCard-likedSongs,
     .collection-collectionEntityHeroCard-likedSongs .main-cardHeader-link,
     .collection-collectionEntityHeroCard-likedSongs .collection-collectionEntityHeroCard-descriptionContainer,
