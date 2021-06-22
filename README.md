@@ -24,65 +24,13 @@ Some themes have 2 or more different color schemes. You can switch between them,
 
 ## Contributions
 
-### Before contributing
-
-For avoiding having too many similar themes with small changes, themes are merged only if they bring **sensitive** changes to default Spotify UI and are different from existing themes.
-
-A theme name (as well as color scheme name) should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` or any whitespace in it; if a "-" is present in the name it must be followed by an uppercase letter.
-
-### How to contribute
-
-If you want to add your theme:
-
-*   Fork this repository
-*   Create another folder named after your theme name
-*   Create `color.ini` and `user.css` files
-*   Create a `README.md` in it with the following structure
-
-    ```markdown
-    # THEME_NAME
-
-    ## Screenshots
-
-    [Put at least one image per color scheme here]
-
-    ## More
-
-    [Specify any needed font; (optionally) author name and/or any other info about the theme]
-    ```
-*   Add the theme preview to [THEMES.md](./THEMES.md) (themes are in alphabetical order) following this structure if it has only one color scheme
-
-    ```markdown
-
-    ## THEME_NAME
-
-    [A single image of the theme]
-    ```
-
-    If, instead, more than one color scheme is present
-
-    ```markdown
-    ## THEME_NAME
-
-    #### COLOR_SCHEME1_NAME 
-
-    [A single image of the theme using the color scheme]
-
-    #### COLOR_SCHEME2_NAME
-
-    [A single image of the theme using the color scheme]
-
-    ...
-    ```
-*   Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)
-
-**Thanks to all the contributors.**
+We've set up a separate document for our [contribution guidelines](./CONTRIBUTING.md).
 
 ## Troubleshooting
 
-If you find problems when using or installing these themes, or you need help in modifying a theme use the [Spectrum](https://spectrum.chat/spicetify) chat.
+Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. If you find problems when using or installing these themes, or you need help in modifying a theme use the [Spectrum](https://spectrum.chat/spicetify) chat.
 
-For bugs and requesting new features use the GitHub issues.
+Use GitHub issues ONLY for bugs and requesting new features.
 
 If you are unsure about which channel to use, go for Spectrum.
 

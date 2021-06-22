@@ -124,7 +124,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .player-controls__buttons {
-    transform: translateY(10px);
+    transform: translateY(6px);
 }
 
 .main-playPauseButton-button {
@@ -187,12 +187,12 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-trackList-trackListRow.main-trackList-selected, 
 .main-trackList-trackListRow.main-trackList-selected:hover {
-    background-color: rgba(var(--spice-rgb-selected-row),.1) !important;
+    background-color: rgba(var(--spice-rgb-selected-row),.8) !important;
 }
 
 .main-trackList-trackListRow:focus-within, 
 .main-trackList-trackListRow:hover {
-    background-color: rgba(var(--spice-rgb-selected-row),.05);
+    background-color: rgba(var(--spice-rgb-selected-row),.4);
 }
 
 .main-duplicateTracksDialog-container {
@@ -248,13 +248,78 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
-    color: var(--spice-subtext);
-}
-
-.main-navBar-navBarLink:focus, .main-navBar-navBarLink:hover {
-    color: var(--spice-subtext);
+    color: var(--spice-button-text) !important;
 }
 
 .progress-bar__slider {
     background-color: var(--spice-subtext);
+}
+
+a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
+    color: var(--spice-subtext);
+}
+
+.main-heroCard-card a,
+.collection-collectionEntityHeroCard-descriptionContainer {
+    color: var(--spice-subtext) !important;
+}
+
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a, .main-buddyFeed-activityMetadata .main-buddyFeed-username a, .main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink,
+p.main-buddyFeed-timestamp.main-type-finale,
+.main-buddyFeed-findFriendsButton .main-buddyFeed-findFriendsIcon {
+    color: var(--spice-subtext);
+}
+
+/* Recolor sub-buttons */
+
+.main-moreButton-button {
+    color: var(--spice-sub-button);
+}
+
+.x-downloadButton-button {
+    color: var(--spice-sub-button) !important;
+}
+
+.x-downloadButton-button:hover {
+    color: var(--spice-text) !important;
+}
+
+.main-addButton-button {
+    color: var(--spice-sub-button);
+}
+
+.main-entityHeader-metaDataText {
+    color: var(--spice-sub-button);
+}
+
+.main-duration-container {
+    color: var(--spice-sub-button);
+}
+
+.main-tag-container {
+    background-color: var(--spice-sub-button);
+}
+
+.x-sortBox-sortDropdown {
+    background-color: var(--spice-selected-row) !important;
+}
+
+.x-filterBox-searchIconContainer {
+    color: var(--spice-sub-button) !important;
+}
+
+.x-filterBox-expandButton:focus, .x-filterBox-expandButton:hover {
+    background-color: var(--spice-selected-row) !important;
+}
+
+.main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus, .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
+    background-color: var(--spice-selected-row) !important;
+}
+
+.view-homeShortcutsGrid-shortcut {
+    background-color: rgba(var(--spice-rgb-selected-row),0.6) !important;
+}
+
+.view-homeShortcutsGrid-shortcut:focus-within, .view-homeShortcutsGrid-shortcut:hover, .view-homeShortcutsGrid-shortcut[data-context-menu-open=true] {
+    background-color: var(--spice-selected-row) !important;
 }
