@@ -74,7 +74,7 @@ waitForElement([".main-rootlist-rootlistPlaylistsScrollNode ul"], ([query]) => {
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                img.src = meta.picture;
+                img.src = meta.picture || "/images/tracklist-row-song-fallback.svg";
             });
         }
     }
@@ -272,7 +272,9 @@ waitForElement([
     ));
 });
 
-waitForElement([".Root__nav-bar .LayoutResizer__input"], ([resizer]) => {
+waitForElement([
+    ".Root__nav-bar .LayoutResizer__input, .Root__nav-bar .LayoutResizer__resize-bar input"
+], ([resizer]) => {
     const observer = new MutationObserver(updateVariable);
     observer.observe(resizer, { attributes: true, attributeFilter: ["value"]});
     function updateVariable() {
