@@ -17,8 +17,9 @@
 ### Lover
 ![Lover Screenshot](lover.png)
 
-###Earthy
+### Earthy
 ![Earthy Screenshot](earthy.png)
+
 ## More
 
 A simple and sleek theme that builds on the basic Spotify UI.
