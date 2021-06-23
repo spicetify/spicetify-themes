@@ -357,20 +357,20 @@ p.main-buddyFeed-timestamp.main-type-finale,
 }
 #spicetify-playlist-list{ 
     display: inline;
-    height: 40vh;
+    height: 10%;
     align-items: center;
     box-sizing: border-box;
-     position: fixed;
+     position: relative;
     left: -40px;
-    top: 425px;
+    top: 50px;
     overflow:hidden; 
     overflow-y:scroll;
     }
 #spicetify-playlist-list > li{
   margin: 0 3vw;
-  width: 15vw;
+  width: 90%;
   flex-shrink: 0;
-  padding: 2vw;
+  padding: 13%;
   box-sizing: border-box;
   position: relative;
   border-radius: 2px;
@@ -378,7 +378,6 @@ p.main-buddyFeed-timestamp.main-type-finale,
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  box-shadow: 4px 4px 0 var(--transparent-shadow);
   transition: all 500ms;
 }
 #spicetify-playlist-list > li:hover{
