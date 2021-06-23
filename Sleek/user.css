@@ -377,7 +377,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
   border-radius: 2px;
   border: 5px solid var(--spice-text);
   display: flex;
-  justify-content: space-between;
+  text-align: center;
   flex-direction: column;
   transition: all 500ms;
 }
