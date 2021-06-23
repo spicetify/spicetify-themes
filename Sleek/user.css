@@ -360,21 +360,22 @@ p.main-buddyFeed-timestamp.main-type-finale,
     height: 10%;
     align-items: center;
     box-sizing: border-box;
-     position: relative;
+    position: relative;
     left: -40px;
     top: 50px;
-    overflow:hidden; 
-    overflow-y:scroll;
+    overflow: hidden; 
+    overflow-y: scroll;
     }
 #spicetify-playlist-list > li{
-  margin: 0 3vw;
+  margin: 4px 3.2vw;
   width: 90%;
   flex-shrink: 0;
-  padding: 13%;
+  padding-top: 13%;
+  padding-bottom: 13%;
   box-sizing: border-box;
   position: relative;
   border-radius: 2px;
-  border: 2px solid var(--spice-text);
+  border: 5px solid var(--spice-text);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -385,7 +386,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
 }
 
 .main-rootlist-textWrapper{
-    overflow:auto !important;
+    overflow: auto !important;
     text-overflow: unset !important;
     white-space: pre !important;
 }
