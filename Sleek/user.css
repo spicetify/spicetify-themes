@@ -63,9 +63,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     fill: black;
 }
 
-.main-playPauseButton-button {
-    background-color: var(--spice-player) !important;
-}
 
 /* Hide Banner Ads */
 
@@ -132,6 +129,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     box-shadow: var(--spice-shadow) 0 5px 9px 0px;
     --button-size: 50px !important;
     color: var(--spice-text);
+    background-color: var(--spice-player) !important;
+    cursor: pointer;
 }
 
 .player-controls__buttons {
@@ -356,3 +355,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
 .main-buttons-button {
     color: var(--spice-text) !important;
 }
+.main-repeatButton-button,.main-skipForwardButton-button,.main-skipBackButton-button,.main-shuffleButton-button{
+   cursor: pointer !important;
+}
+
