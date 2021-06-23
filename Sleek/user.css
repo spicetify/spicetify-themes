@@ -1,6 +1,6 @@
-transparent-shadow: var(--spice-shadow) '80'
 .main-rootlist-rootlistDividerGradient {
     display: none;
+    visibility: hidden !important;
 }
 
 .main-rootlist-rootlistDivider {
