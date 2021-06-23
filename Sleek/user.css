@@ -375,7 +375,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
   box-sizing: border-box;
   position: relative;
   border-radius: 2px;
-  border: 5px solid var(--spice-text);
+  border: 2px solid var(--spice-text);
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -396,5 +396,4 @@ p.main-buddyFeed-timestamp.main-type-finale,
 .main-type-mesto {
     color:var(--spice-button);
 }
-
 
