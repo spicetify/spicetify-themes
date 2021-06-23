@@ -1,3 +1,4 @@
+transparent-shadow: var(--spice-shadow) '80'
 .main-rootlist-rootlistDividerGradient {
     display: none;
 }
@@ -324,13 +325,9 @@ p.main-buddyFeed-timestamp.main-type-finale,
     background-color: var(--spice-selected-row) !important;
 }
 .main-rootlist-textWrapper.main-type-viola{
-    cursor: pointer !important;
-    transition: all 500ms;   
+    cursor: pointer !important;    
 }
-.main-rootlist-textWrapper.main-type-viola:hover{
-    font-size:20px;
-    font-size-adjust: 20px;
-    }
+
 .main-navBar-navBar{
     border-right: 2px solid var(--spice-misc);
 }
@@ -358,4 +355,46 @@ p.main-buddyFeed-timestamp.main-type-finale,
 .main-repeatButton-button,.main-skipForwardButton-button,.main-skipBackButton-button,.main-shuffleButton-button{
    cursor: pointer !important;
 }
+#spicetify-playlist-list{ 
+    display: inline;
+    height: 40vh;
+    align-items: center;
+    box-sizing: border-box;
+     position: fixed;
+    left: -40px;
+    top: 425px;
+    overflow:hidden; 
+    overflow-y:scroll;
+    }
+#spicetify-playlist-list > li{
+  margin: 0 3vw;
+  width: 15vw;
+  flex-shrink: 0;
+  padding: 2vw;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid var(--spice-text);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 4px 4px 0 var(--transparent-shadow);
+  transition: all 500ms;
+}
+#spicetify-playlist-list > li:hover{
+animation: mymove 2s;
+}
+@keyframes mymove {
+  50% {border-color:var(--spice-button);}
+}
+
+.main-rootlist-textWrapper{
+    overflow:auto !important;
+    text-overflow: unset !important;
+    white-space: pre !important;
+}
+.main-connectToFacebook-text,.main-connectToFacebook-disclaimer{
+    color: unset !important;
+}
+
 
