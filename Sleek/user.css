@@ -350,7 +350,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
     color:var(--spice-shadow) !important;
 }
 .main-buttons-button {
-    color: var(--spice-text) !important;
+    color: var(--spice-button) !important;
 }
 .main-repeatButton-button,.main-skipForwardButton-button,.main-skipBackButton-button,.main-shuffleButton-button{
    cursor: pointer !important;
@@ -395,6 +395,9 @@ animation: mymove 2s;
 }
 .main-connectToFacebook-text,.main-connectToFacebook-disclaimer{
     color: unset !important;
+}
+.main-type-mesto {
+    color:var(--spice-button);
 }
 
 
