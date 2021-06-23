@@ -381,7 +381,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
   box-shadow: 4px 4px 0 var(--transparent-shadow);
   transition: all 500ms;
 }
-#spicetify-playlist-list > li:hover{
+#spicetify-playlist-list > li:focus{
 animation: mymove 2s;
 }
 @keyframes mymove {
