@@ -410,9 +410,11 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
 svg[Attributes Style] {
     fill: var(--spice-subtext);
 }
-
-.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus, .main-rootlist-rootlistItemLink:hover {
-    border: 5px solid var(--spice-text);
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink {
+    transition:  500ms;
+}
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus{
+    border: 5px solid var(--spice-button);
     border-radius: 10px;
     color: var(--spice-text);
 }
