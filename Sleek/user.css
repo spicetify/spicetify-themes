@@ -417,4 +417,5 @@ svg[Attributes Style] {
     border: 5px solid var(--spice-button);
     border-radius: 10px;
     color: var(--spice-text);
+    background-image: linear-gradient(to bottom right, var(--spice-main), var(--spice-sidebar));
 }
