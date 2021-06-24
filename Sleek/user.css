@@ -414,8 +414,8 @@ svg[Attributes Style] {
     transition:  500ms;
 }
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus{
-    border: 5px solid var(--spice-button);
-    border-radius: 10px;
+    border: 3px solid var(--spice-button);
+    border-radius: 8px;
     color: var(--spice-text);
     background-image: linear-gradient(to bottom right, var(--spice-main), var(--spice-sidebar));
 }
