@@ -51,4 +51,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
 
+## Ziro
 
+#### Blue Dark
+![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/album-blue-dark.png)
+
+#### Blue Light
+![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/artist-blue-light.png)
