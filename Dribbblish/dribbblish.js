@@ -13,7 +13,7 @@ const DribbblishShared = {
 };
 
 DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
+DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
     "Right expanded cover",
     DribbblishShared.rightBigCover,
     (self) => {
