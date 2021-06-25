@@ -1,7 +1,9 @@
 # Ziro
 ## Screenshots
+### Blue Dark
 ![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/album-blue-dark.png)
 ![Cards](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/cards-blue-dark.png)
+### Blue Light
 ![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/artist-blue-light.png)
 ![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/search-blue-light.png)
 
