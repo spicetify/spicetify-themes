@@ -1,4 +1,4 @@
-let current = '1.4'
+let current = '1.5'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -36,13 +36,6 @@ document.styleSheets[0].insertRule(`
         background-color: rgba(var(--spice-rgb-subtext), 0.3) !important;
     }`)
 
-/* unreadable top buttons */
-document.styleSheets[0].insertRule(`
-    .main-topBar-historyButtons svg {
-        color: var(--spice-text) !important;
-        fill: var(--spice-text) !important;
-    }`)
-
 document.styleSheets[0].insertRule(`
     .lyrics-lyricsContainer-LyricsBackground {
         background: linear-gradient(180deg, transparent 0px, transparent 60px, var(--lyrics-color-background) 61px) !important;
@@ -53,12 +46,6 @@ document.styleSheets[0].insertRule(`
     .main-coverSlotExpanded-container:hover .cover-art,
     .main-coverSlotExpanded-container:hover img {
         opacity: 0.5;
-    }`)
-
-/* temporary fix */
-document.styleSheets[0].insertRule(`
-    .main-shuffleButton-button {
-        order: unset !important;
     }`)
 
 document.styleSheets[0].insertRule(`
@@ -203,7 +190,7 @@ let systemDark = parseInt(getComputedStyle(document.documentElement).getProperty
 toggleDark(systemDark)
 
 DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
+DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
     "Dark mode",
     systemDark,
     (self) => { toggleDark(); self.isEnabled = !self.isEnabled; }
