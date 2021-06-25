@@ -95,7 +95,7 @@ waitForElement([".Root__main-view"], ([mainView]) => {
 waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`], ([query]) => {
     const fade = document.createElement("div");
     fade.id = "dribbblish-sidebar-fade-in";
-    queries[0].append(fade);
+    query.append(fade);
 });
 
 waitForElement([

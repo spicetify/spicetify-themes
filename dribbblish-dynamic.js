@@ -52,7 +52,7 @@ document.styleSheets[0].insertRule(`
     .main-navBar-navBar a:hover,
     .main-navBar-navBar a:hover span,
     .main-buddyFeed-activityMetadata a:hover {
-        color: var(--spice-button) !important;
+        color: var(--spice-shadow) !important;
     }`)
 
 document.styleSheets[0].insertRule(`
@@ -72,15 +72,6 @@ document.styleSheets[0].insertRule(`
     }`)
 
 /* js */
-function waitForElement(els, func, timeout = 100) {
-    const queries = els.map(el => document.querySelector(el));
-    if (queries.every(a => a)) {
-        func(queries);
-    } else if (timeout > 0) {
-        setTimeout(waitForElement, 300, els, func, --timeout);
-    }
-}
-
 function getAlbumInfo(uri) {
     return Spicetify.CosmosAsync.get(`hm://album/v1/album-app/album/${uri}/desktop`);
 }
