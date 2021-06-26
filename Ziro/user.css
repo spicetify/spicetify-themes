@@ -152,14 +152,31 @@ button.switch {
   width: -webkit-fill-available;
 }
 .main-rootlist-rootlistItem {
-  padding: 0 8px;
-  display: block;
+  padding-left: calc(8px + var(--indentation)*16px);
+  padding-right: 8px;
+}
+.main-rootlist-rootlistItem {
   height: 32px;
+}
+.main-rootlist-rootlistItemLinkActive ~ .main-rootlist-expandArrow:focus, .main-rootlist-rootlistItemLinkActive ~ .main-rootlist-expandArrow:hover, .main-rootlist-rootlistItemLinkActive ~ .main-rootlist-expandArrow {
+  color: var(--spice-shadow);
+}
+.main-rootlist-expandArrow {
+  color: var(--spice-text);
 }
 .main-rootlist-rootlistItemLink {
   height: 32px;
   border-radius: var(--border-radius-2);
   padding: 0 12px;
+}
+.main-rootlist-expandArrow {
+  margin-inline-start: -32px;
+  padding: 8px;
+}
+.main-rootlist-statusIcons {
+  margin-inline-start: -24px;
+  position: relative;
+  right: 8px;
 }
 .main-rootlist-rootlistItemLink:hover, .main-createPlaylistButton-button:hover, .ac0df040748287f39652cc42e3b762ba-scss:hover {
   background-color: rgba(var(--spice-rgb-selected-row),.05);
@@ -175,13 +192,6 @@ button.switch {
 }
 .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
   color: var(--spice-shadow);
-}
-.main-rootlist-statusIcons {
-  position: relative;
-  top: -24px;
-  right: 10px;
-  justify-content: flex-end;
-  pointer-events: none;
 }
 .main-rootlist-statusIcons > button {
   color: var(--spice-text);
@@ -364,15 +374,15 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   color: var(--spice-text);
 }
 /* dialogs */
-.main-deletePlaylistDialog-container {
+.main-deletePlaylistDialog-container, .main-deleteFolderDialog-container {
   background-color: var(--spice-card);
   color: var(--spice-text);
   border-radius: var(--border-radius-1);
 }
-.main-deletePlaylistDialog-secondaryButton {
+.main-deletePlaylistDialog-secondaryButton, .main-deleteFolderDialog-secondaryButton {
   color: var(--spice-button);
 }
-.main-deletePlaylistDialog-buttonContainer>:last-child {
+.main-deletePlaylistDialog-buttonContainer>:last-child, .main-deleteFolderDialog-buttonContainer>:last-child {
   background-color: var(--spice-notification-error);
 }
 /* friend activity */
