@@ -17,14 +17,14 @@
 ### Lover
 ![Lover Screenshot](lover.png)
 
-###Earthy
-![Earthy Screenshot](earthy.png)
 
 ##Important
+Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available.
 
-Sidebar Config option must be enabled for theme to work properly, you can use it without however some features may not be available.
 
 ## More
+
+
 
 A simple and sleek theme that builds on the basic Spotify UI.
 
