@@ -13,7 +13,7 @@ const DribbblishShared = {
 };
 
 DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
+DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
     "Right expanded cover",
     DribbblishShared.rightBigCover,
     (self) => {
@@ -34,7 +34,7 @@ function waitForElement(els, func, timeout = 100) {
     }
 }
 
-waitForElement([".main-rootlist-rootlistPlaylistsScrollNode ul"], ([query]) => {
+waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`], ([query]) => {
     /** Replace Playlist name with their pictures */
     function loadPlaylistImage() {
         const sidebarItem = query.querySelectorAll("li.GlueDropTarget");
@@ -96,180 +96,6 @@ waitForElement([".main-rootlist-rootlistPlaylistsScrollNode"], (queries) => {
     const fade = document.createElement("div");
     fade.id = "dribbblish-sidebar-fade-in";
     queries[0].append(fade);
-});
-
-waitForElement([
-    ".main-navBar-entryPoints",
-    ".main-rootlist-rootlistPlaylistsScrollNode .os-content",
-    ".main-rootlist-rootlistContent"
-], ([appItems, playlistItems, personalLibrary]) => {
-    const HIDDEN = 0, SHOW = 1, STICKY = 2;
-
-    let buttons = [];
-    let storage = [];
-    let ordered;
-    const list = document.createElement("ul");
-    const hiddenList = document.createElement("ul");
-    hiddenList.id = "dribs-hidden-list";
-    hiddenList.classList.add("hidden-visually");
-    const playlistList = playlistItems.querySelector("ul");
-    playlistList.id = "dribs-playlist-list";
-    playlistItems.prepend(list, hiddenList);
-
-    const up = document.createElement("button"); up.innerText = "Up";
-    const down = document.createElement("button"); down.innerText = "Down";
-    const hide = document.createElement("button");
-    const stick = document.createElement("button");
-    const container = document.createElement("div");
-    container.id = "dribs-sidebar-config";
-    container.append(up, down, hide, stick);
-
-    for (const ele of appItems.children) {
-        ele.dataset.id = ele.querySelector("a").pathname;
-        buttons.push(ele);
-    }
-
-    for (const ele of personalLibrary.querySelectorAll("div.GlueDropTarget")) {
-        const link = ele.querySelector("a");
-        if (!link) {
-            ele.dataset.id = "/add";
-        } else {
-            ele.dataset.id = link.pathname;
-        }
-        ele.classList.add("personal-library");
-        buttons.push(ele);
-    }
-
-    try {
-        storage = JSON.parse(localStorage.getItem("dribs-sidebar-config"))
-        if (!Array.isArray(storage)) throw "";
-    } catch {
-        storage = buttons.map(el => [el.dataset.id, SHOW]);
-    }
-
-    function arrangeItems() {
-        const newButtons = [...buttons];
-        const orderedButtons = [];
-        for (const ele of storage) {
-            const index = newButtons.findIndex(a => ele[0] === a?.dataset.id);
-            if (index !== -1) {
-                orderedButtons.push([newButtons[index], ele[1]]);
-                newButtons[index] = undefined;
-            }
-        }
-        newButtons
-            .filter(a => a)
-            .forEach(a => orderedButtons.push([a, STICKY]));
-        ordered = orderedButtons;
-    }
-
-    function appendItems() {
-        const toShow = [], toHide = [], toStick = [];
-        for (const el of ordered) {
-            const [ item, status ] = el;
-            if (status === STICKY) {
-                appItems.append(item);
-                toStick.push(el);
-            } else if (status === SHOW) {
-                list.append(item);
-                toShow.push(el);
-            } else {
-                hiddenList.append(item);
-                toHide.push(el);
-            }
-        }
-        ordered = [ ...toStick, ...toShow, ...toHide ];
-    }
-
-    function writeStorage() {
-        const array = ordered.map(a => [a[0].dataset.id, a[1]]);
-        console.log(array);
-        localStorage.setItem("dribs-sidebar-config", JSON.stringify(array));
-    }
-
-    arrangeItems();
-    appendItems();
-
-    const observer = new MutationObserver(() => {
-        const residues = personalLibrary.querySelectorAll(".main-rootlist-rootlistContent > div.GlueDropTarget");
-        for (const ele of residues) {
-            ele.dataset.id = ele.querySelector("a").pathname;
-            ele.classList.add("personal-library");
-            buttons.push(ele);
-        }
-        arrangeItems();
-        appendItems();
-    });
-    observer.observe(personalLibrary, { childList: true });
-    setTimeout(() => observer.disconnect(), 10000);
-
-    function onSwap(item, dir) {
-        container.remove();
-        const curPos = ordered.findIndex(e => e[0] === item);
-        const newPos = curPos + dir;
-        if (newPos < 0 || newPos > (ordered.length - 1)) return;
-        if (ordered[curPos][1] !== ordered[newPos][1]) return;
-        [ordered[curPos], ordered[newPos]] = [ordered[newPos], ordered[curPos]];
-        appendItems();
-    }
-
-    function onChangeStatus(item, status) {
-        container.remove();
-        const curPos = ordered.findIndex(e => e[0] === item);
-        ordered[curPos][1] = ordered[curPos][1] === status ? SHOW : status;
-        appendItems();
-    }
-
-    function injectInteraction() {
-        document.documentElement.style.setProperty("--sidebar-width", "280px");
-        document.documentElement.classList.remove("sidebar-hide-text");
-        hiddenList.classList.remove("hidden-visually");
-        for (const el of ordered) {
-            el[0].onmouseover = () => {
-                const [ item, status ] = el;
-                const index = ordered.findIndex(a => a === el);
-                if (index === 0 || ordered[index][1] !== ordered[index - 1][1]) {
-                    up.disabled = true;
-                } else {
-                    up.disabled = false;
-                    up.onclick = () => onSwap(item, -1);
-                }
-                if (index === (ordered.length - 1) || ordered[index][1] !== ordered[index + 1][1]) {
-                    down.disabled = true;
-                } else {
-                    down.disabled = false;
-                    down.onclick = () => onSwap(item, 1);
-                }
-
-                stick.innerText = status === STICKY ? "Unstick" : "Stick";
-                hide.innerText = status === HIDDEN ? "Unhide" : "Hide";
-                hide.onclick = () => onChangeStatus(item, HIDDEN);
-                stick.onclick = () => onChangeStatus(item, STICKY);
-
-                item.append(container);
-            };
-        }
-    }
-
-    function removeInteraction() {
-        hiddenList.classList.add("hidden-visually");
-        container.remove();
-        ordered.forEach(a => a[0].onmouseover = undefined);
-        writeStorage();
-    }
-
-    DribbblishShared.configMenu.subItems.push(new Spicetify.Menu.Item(
-        "Sidebar config",
-        false,
-        (self) => {
-            self.isEnabled = !self.isEnabled;
-            if (self.isEnabled) {
-                injectInteraction();
-            } else {
-                removeInteraction();
-            }
-        }
-    ));
 });
 
 waitForElement([

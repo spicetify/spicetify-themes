@@ -2,6 +2,10 @@
 
 Here you can find a preview of all the themes. Some of them may have different colour schemes (in that case you'll find different entries in the same theme, each one named after the colour scheme).
 
+## BurntSienna
+
+![BurntSienna Screenshot](BurntSienna/screenshot.png)
+
 ## Default
 
 ![Ocean Screenshot](Default/ocean.png)
@@ -66,6 +70,12 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
 
-## Burnt Sienna
+## Ziro
 
-![Burnt Sienna Screenshot](BurntSienna/screenshot.png)
+#### Blue Dark
+
+![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/album-blue-dark.png)
+
+#### Blue Light
+
+![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/artist-blue-light.png)

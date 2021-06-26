@@ -35,3 +35,9 @@ Use GitHub issues ONLY for bugs and requesting new features.
 If you are unsure about which channel to use, go for Spectrum.
 
 NOTE: Spotify ad-blocked version is not supported.
+
+## FAQ 
+
+### How can I remove free version UI elements (e.g. "Upgrade" button)?
+
+Use [this theme](https://github.com/Daksh777/SpotifyNoPremium).
