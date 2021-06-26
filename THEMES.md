@@ -66,6 +66,16 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
 
+<<<<<<< HEAD
 ## Burnt Sienna
 
 ![Burnt Sienna Screenshot](BurntSienna/screenshot.png)
+=======
+## Ziro
+
+#### Blue Dark
+![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/album-blue-dark.png)
+
+#### Blue Light
+![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/artist-blue-light.png)
+>>>>>>> 3b680ad0754185964bc34981d51c9005c4d73640
