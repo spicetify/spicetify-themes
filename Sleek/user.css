@@ -421,3 +421,6 @@ svg[Attributes Style] {
     border-radius:20px;
     border-color:var(--spice-text);
 }
+.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected{
+    color: var(--spice-subbutton-text) !important;
+}
