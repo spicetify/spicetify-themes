@@ -354,7 +354,7 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
 }
 
 .main-buttons-button {
-    color: var(--spice-text) !important;
+    color: var(--spice-subbutton-text) !important;
 }
 
 .main-repeatButton-button, .main-skipForwardButton-button, .main-skipBackButton-button, .main-shuffleButton-button {
@@ -414,8 +414,10 @@ svg[Attributes Style] {
     transition:  500ms;
 }
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus{
-    border: 3px solid var(--spice-button);
-    border-radius: 8px;
     color: var(--spice-text);
-    background-image: linear-gradient(to bottom right, var(--spice-main), var(--spice-sidebar));
+}
+.main-buddyFeed-friendActivity{
+    border:solid;
+    border-radius:20px;
+    border-color:var(--spice-text);
 }
