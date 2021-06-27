@@ -34,12 +34,16 @@ function waitForElement(els, func, timeout = 100) {
     }
 }
 
-waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`], ([query]) => {
+waitForElement([
+    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`,
+    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"] li`
+], ([root, firstItem]) => {
+    const listElem = firstItem.parentElement;
+    root.classList.add("dribs-playlist-list");
+
     /** Replace Playlist name with their pictures */
     function loadPlaylistImage() {
-        const sidebarItem = query.querySelectorAll("li.GlueDropTarget");
-        for (let i = 0; i < sidebarItem.length; i++) {
-            const item = sidebarItem[i];
+        for (const item of listElem.children) {
             let link = item.querySelector("a");
             if (!link) continue;
 
@@ -55,11 +59,7 @@ waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`], 
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                if (base64) {
-                    img.src = base64;
-                } else {
-                    img.src = "";
-                }
+                img.src = base64  || "/images/tracklist-row-song-fallback.svg";
                 continue;
             }
 
@@ -83,7 +83,7 @@ waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`], 
     loadPlaylistImage();
 
     new MutationObserver(loadPlaylistImage)
-        .observe(query, {childList: true});
+        .observe(listElem, {childList: true});
 });
 
 waitForElement([".Root__main-view"], ([mainView]) => {
