@@ -10,7 +10,7 @@
 
 ### Customizable sidebar
 Rearrange icons positions, stick icons to header or hide unnecessary to save space.
-Turn on Config mode in Profile menu and hover on icon to show control buttons.
+Turn on "Sidebar config" mode in Profile menu and hover on icon to show control buttons.
 After you finish customizing, turn off Config mode in Profile menu to save.
 
 <img src="https://i.imgur.com/86gqPe8.png" alt="img" align="center" width="500px"> 
@@ -24,9 +24,15 @@ Right click at folder and choose images for your playlist folder. Every image fo
 In profile menu, toggle option "Right expanded cover" to change expaned current track cover image to left or right side, whereever you prefer.
 
 ## Install
-Make sure you are using spicetify v2 and Spotify v1.1.58 or later.
+Make sure you are using spicetify >= v2.5.0 and Spotify >= v1.1.56.
 
 Run these commands:
+
+### Windows
+In **Powershell**:
+```powershell
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.ps1" | Invoke-Expression
+```
 
 ### Linux and MacOS:
 In **Bash**:
@@ -34,10 +40,11 @@ In **Bash**:
 curl -fsSL https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.sh | sh
 ```
 
-### Windows
-In **Powershell**:
-```powershell
-Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/install.ps1" | Invoke-Expression
+From Spotify > v1.1.62, in sidebar, they use an adaptive render mechanic to actively show and hide items on scroll. It helps reducing number of items to render, hence there is significant performance boost if you have a large playlists collection. But the drawbacks is that item height is hard-coded, it messes up user interaction when we explicity change, in CSS, playlist item height bigger than original value. So you need to add these 2 lines in Patch section in config file:
+```ini
+[Patch]
+xpui.js_find_8008 = ,(\w+=)32,
+xpui.js_repl_8008 = ,${1}56,
 ```
 
 ## Hide Window Controls
@@ -50,11 +57,20 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
-## Uninstall 
+## Auto-uninstall 
+### Windows
+```powershell
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/JulienMaille/dribbblish-dynamic-theme/master/uninstall.ps1" | Invoke-Expression
+```
+
+## Manual uninstall 
 Remove the dribbblish script with the following commands 
 
 ```
 spicetify config extensions dribbblish.js-
 spicetify config extensions dribbblish-dynamic.js-
+```
+And remove Patch lines you added in config file earlier. Finally, run:
+```
 spicetify apply
 ```

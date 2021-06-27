@@ -30,6 +30,12 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
   # Enable TLS 1.2 since it is required for connections to GitHub.
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
+  $checkSpice = Get-Command spicetify -ErrorAction Silent
+  if ($null -eq $checkSpice) {
+      Write-Host -ForegroundColor Red "Spicetify not found"
+      Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.ps1" | Invoke-Expression
+  }
+
   if (-not $version) {
     # Determine latest release via GitHub API.
     $latest_release_uri =
@@ -68,7 +74,8 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
   Write-Done
 
   # Check ~\.spicetify.\Themes directory already exists
-  $sp_dot_dir = "${HOME}\.spicetify\Themes\DribbblishDynamic"
+  $spicePath = spicetify -c | Split-Path
+  $sp_dot_dir = "$spicePath\Themes\DribbblishDynamic"
   if (-not (Test-Path $sp_dot_dir)) {
     Write-Part "MAKING FOLDER  "; Write-Emphasized $sp_dot_dir
     New-Item -Path $sp_dot_dir -ItemType Directory | Out-Null
@@ -87,12 +94,28 @@ if ($PSVersionTable.PSVersion.Major -gt $PSMinVersion) {
   Copy-Item dribbblish-dynamic.js ..\..\Extensions
   Copy-Item Vibrant.min.js ..\..\Extensions
   spicetify config extensions default-dynamic.js-
-  spicetify config extensions dribbblish.js
-  spicetify config extensions dribbblish-dynamic.js
-  spicetify config extensions Vibrant.min.js
+  spicetify config extensions dribbblish.js extensions dribbblish-dynamic.js extensions Vibrant.min.js
   spicetify config current_theme DribbblishDynamic
   spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
   spicetify apply
+  Write-Done
+
+  # Add patch
+  Write-Part "PATCHING       "; Write-Emphasized "config-xpui.ini"
+  $configFile = Get-Content "$spicePath\config-xpui.ini"
+  if (-not ($configFile -match "xpui.js_find_8008")) {
+      $rep = @"
+[Patch]
+xpui.js_find_8008=,(\w+=)32,
+xpui.js_repl_8008=,`${1}56,
+"@
+      # In case missing Patch section
+      if (-not ($configFile -match "\[Patch\]")) {
+          $configFile += "`n[Patch]`n"
+      }
+      $configFile = $configFile -replace "\[Patch\]",$rep
+      Set-Content "$spicePath\config-xpui.ini" $configFile
+  }
   Write-Done
 }
 else {
