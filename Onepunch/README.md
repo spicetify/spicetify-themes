@@ -4,8 +4,12 @@
 
 ![Home_legacy](./__Home.png)
 
-<!-- ![Profile](./__Profile.png)
-![Playlist](./__Playlist.png) -->
+<table>
+  <tr>
+    <td><img src="./__Playlist.png" alt="2" width = 360px> Playlist_legacy </td>
+    <td><img src="./__Profile.png" alt="3" width = 360px> Profile_legacy </td>
+  </tr>
+</table>
 
 ## More
 
