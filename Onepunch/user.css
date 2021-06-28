@@ -2,7 +2,7 @@
 .main-navBar-navBarLinkActive,
 .main-navBar-navBarLinkActive:focus,
 .logo {
-  background-color: var(--spice-card) !important;
+  background-color: var(--spice-sec-card) !important;
   color: var(--spice-main) !important;
 }
 
@@ -18,7 +18,9 @@
 }
 
 .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
-.main-createPlaylistButton-button {
+.main-createPlaylistButton-button,
+.main-rootlist-rootlistItemLink:link,
+.main-rootlist-rootlistItemLink:visited {
   color: var(--spice-text) !important;
 }
 
@@ -51,7 +53,9 @@
 .main-entityHeader-overlay,
 .main-entityHeader-backgroundColor,
 .x-914-entityHeader-overlay,
-.x-914-actionBarBackground-background {
+.x-entityHeader-overlay,
+.x-914-actionBarBackground-background,
+.x-actionBarBackground-background {
   background-color: unset !important;
   background-image: unset !important;
 }
@@ -135,7 +139,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* home screen edits */
 .view-homeShortcutsGrid-name {
-  color: var(--spice-button);
+  color: var(--spice-text);
 }
 
 
@@ -276,23 +280,31 @@ input {
 
 .main-contextMenu-menu,
 .main-card-card:focus-within,
-
 .main-deletePlaylistDialog-container {
+  background-color: var(--spice-card) !important;
+}
+
+.main-deletePlaylistDialog-secondaryButton {
+  color: var(--spice-text) !important;
+}
+
+.main-button-primary {
   background-color: var(--spice-sec-card) !important;
+  color: var(--spice-card) !important;
+}
+
+.main-deletePlaylistDialog-title {
+  color: var(--spice-subtext) !important;
 }
 
 .main-keyboardShortcutsHelpModal-container,
 .main-trackCreditsModal-container {
-  background-color: var(--spice-main) !important;
+  background-color: var(--spice-card) !important;
   color: var(--spice-text) !important;
 }
 
 .main-keyboardShortcutsHelpModal-header,
 .main-trackCreditsModal-header {
-  color: var(--spice-notification) !important;
-}
-
-.main-trackCreditsModal-sectionTitle {
   color: var(--spice-subtext) !important;
 }
 
@@ -302,7 +314,7 @@ input {
 
 /* profile page edits */
 .main-cardImage-imageWrapper {
-  background-color: var(--spice-sec-card) !important;
+  background-color: var(--spice-card) !important;
 }
 
 /* mini player edits */
@@ -330,40 +342,4 @@ input {
 .main-nowPlayingBar-container {
   background-color: var(--spice-sec-player) !important;
   border-top: unset !important;
-
-  height: 80px;
 }
-
-
-
-/* 
-
-i am unable to remove the small album cover when we expand the 
-album art. So for now i am disabling these edits. If anyone wants
-to contribute to this feel free to add.
-
-*/
-
-
-/* .main-nowPlayingBar-container {
-  border-radius: 15px !important;
-} */
-/* .Root__now-playing-bar {
-  position: fixed;
-  bottom: 5px;
-  left: 14%;
-  width: 70%;
-  background: none !important;
-} */
-
-/* .main-coverSlotExpanded-container {
-height: auto;
-position: fixed;
-bottom: 70px;
-left: 14.5%;
-width: 17.85%;
-} */
-
-/* .main-connectBar-connectBar {
-  display: none;
-} */
