@@ -56,7 +56,7 @@ input {
 }
 
 .main-trackList-playingIcon {
-    filter: brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(4689%) hue-rotate(359deg) brightness(78%) contrast(115%);
+    filter: saturate(0);
 }
 
 span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
@@ -213,6 +213,18 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     color: var(--spice-text) !important;
 }
 
+.main-yourEpisodesButton-yourEpisodesIcon {
+    background: var(--spice-text);
+}
+
+.main-yourEpisodesButton-yourEpisodesIcon path {
+    fill: var(--spice-sidebar);
+}
+
+.main-navBar-entryPoints > div:first-of-type {
+    margin-top: 20px;
+}
+
 /* Main Play Button Change */
 .main-playButton-PlayButton.main-playButton-primary {
     color: var(--spice-main);
@@ -244,7 +256,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-navBar-navBarLinkActive {
-    background-color: var(--spice-playback-bar);
+    background-color: var(--spice-sidebar-button);
 }
 
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
