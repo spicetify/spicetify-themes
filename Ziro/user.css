@@ -37,7 +37,7 @@
 .now-playing-bar-container, ._6e96ad0ba78d75ffb2a0156aa1834a21-scss {
   border-top: none;
 }
-.main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after, .show-episodeList-divider {
+.main-rootlist-rootlistDivider, .main-contextMenu-dividerBefore::before, .main-contextMenu-dividerAfter::after, .show-episodeList-divider, .main-rootlist-rootlistDividerContainer {
   display: none;
 }
 /* cards */
@@ -56,10 +56,6 @@
 }
 .link-subtle {
   transition-duration: 150ms;
-}
-/* player */
-.progress-bar {
-  --fg-color: var(--spice-button-active);
 }
 /* headers */
 .main-entityHeader-withBackgroundImage {
@@ -133,16 +129,16 @@ button.switch {
   color: var(--spice-shadow);
 }
 /* playlist sidebar */
-.main-createPlaylistButton-button, ._6b5bc370e9834a4932f57284a96a0748-scss, ._928aa704d6ac22c1e288a4ddbed11a40-scss {
+.main-createPlaylistButton-button, ._6b5bc370e9834a4932f57284a96a0748-scss, ._928aa704d6ac22c1e288a4ddbed11a40-scss, .main-collectionLinkButton-icon, .main-collectionLinkButton-collectionLinkText {
   opacity: 1 !important;
 }
-._6b5bc370e9834a4932f57284a96a0748-scss, .main-createPlaylistButton-button, .main-createPlaylistButton-svg, .ac0df040748287f39652cc42e3b762ba-scss {
+._6b5bc370e9834a4932f57284a96a0748-scss, .main-createPlaylistButton-button, .main-createPlaylistButton-svg, .ac0df040748287f39652cc42e3b762ba-scss, .main-collectionLinkButton-collectionLinkButton {
   border-radius: var(--border-radius-2) !important;
 }
 .main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited, .main-rootlist-rootlistPlaylistHeader {
   color: var(--spice-text);
 }
-.ac0df040748287f39652cc42e3b762ba-scss, .main-createPlaylistButton-button {
+.ac0df040748287f39652cc42e3b762ba-scss, .main-createPlaylistButton-button, .main-collectionLinkButton-collectionLinkButton {
   padding: 0 12px !important;
 }
 .main-rootlist-rootlistPlaylistsScrollNode, .main-createPlaylistButton-button {
@@ -178,17 +174,18 @@ button.switch {
   position: relative;
   right: 8px;
 }
-.main-rootlist-rootlistItemLink:hover, .main-createPlaylistButton-button:hover, .ac0df040748287f39652cc42e3b762ba-scss:hover {
+.main-rootlist-rootlistItemLink:hover, .main-createPlaylistButton-button:hover, .ac0df040748287f39652cc42e3b762ba-scss:hover, .main-collectionLinkButton-collectionLinkButton:hover {
   background-color: rgba(var(--spice-rgb-selected-row),.05);
 }
-.main-rootlist-rootlistItemLink:active, .main-createPlaylistButton-button:active, .ac0df040748287f39652cc42e3b762ba-scss:active {
+.main-rootlist-rootlistItemLink:active, .main-createPlaylistButton-button:active, .ac0df040748287f39652cc42e3b762ba-scss:active, .main-collectionLinkButton-collectionLinkButton:active {
   background-color: rgba(var(--spice-rgb-selected-row),.1);
 }
 .main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLinkActive:hover {
   background-color: var(--spice-selected-row);
 }
-.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
+.ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss, .main-collectionLinkButton-selected {
   background: var(--spice-selected-row) !important;
+  color: var(--spice-shadow);
 }
 .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper, .main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover, .ac0df040748287f39652cc42e3b762ba-scss._926f2bd73c2ddb23fb86b430a2f48707-scss {
   color: var(--spice-shadow);
@@ -203,7 +200,7 @@ button.switch {
   display: none;
 }
 /* tracklist */
- .main-trackList-indexable .main-virtualScrollList-wrapper {
+ .main-trackList-indexable .main-virtualScrollList-wrapper, .main-trackList-indexable .main-rootlist-wrapper {
   background-color: var(--spice-card);
   border-radius: var(--border-radius-1) var(--border-radius-1) 0 0;
   padding: 8px;
@@ -240,7 +237,7 @@ button.switch {
 ._110dbc41d89af63f97cdd8b7cd7fea47-scss {
   border: 1px solid var(--spice-text);
 }
-.main-trackList-trackListRow.main-trackList-selected ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:hover ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:active ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:focus ._110dbc41d89af63f97cdd8b7cd7fea47-scss {
+.main-trackList-trackListRow.main-trackList-selected ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:hover ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:active ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected:focus ._110dbc41d89af63f97cdd8b7cd7fea47-scss, .main-trackList-trackListRow.main-trackList-selected .main-button-outlined {
   border: 1px solid var(--spice-shadow);
 }
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
@@ -272,9 +269,6 @@ button.switch {
 }
 .main-actionBar-ActionBarRow > button:not(:first-child), .x-actionBar-ActionButtonsRow > div > button {
   color: var(--spice-button);
-}
-.main-entityHeader-image[src=https://i.scdn.co/image/ab6775700000ee85a16a411c728cd698af7a5157] {
-  src: url(https://en.gravatar.com/userimage/179347741/9a6aa97e24bcec0b57f6a1cff0f768a3.png);
 }
 /* artist page */
 .artist-artistPick-pinnedImage, .artist-artistOffers-item {
@@ -408,7 +402,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   max-width: 190px;
 }
 /* settings */
-.main-dropDown-dropDown , option {
+.main-dropDown-dropDown, option {
   background-color: var(--spice-card) !important;
 }
 .main-dropDown-dropDown {
@@ -434,7 +428,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   border-color: var(--spice-button-active);
 }
 /* device menu */
-._9eb5acf729a98d62135ca21777fef244-scss {
+._9eb5acf729a98d62135ca21777fef244-scss, .connect-device-button {
   color: var(--spice-shadow);
 }
 .connect-device-list-container {
@@ -452,11 +446,19 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .connect-device-list-item:focus, .connect-device-list-item:hover {
   background-color: rgba(var(--spice-rgb-selected-row),0.05);
 }
+.connect-header {
+  background-color: var(--spice-shadow);
+  margin: 8px;
+  border-radius: var(--border-radius-1);
+}
 /* player */
+.progress-bar {
+  --fg-color: var(--spice-button-active);
+}
 .now-playing-bar .cover-art-image {
   border-radius: var(--border-radius-2);
 }
-.playback-bar__progress-time {
+.playback-bar__progress-time, .main-playbackBarRemainingTime-container {
   position: absolute;
   bottom: -48px;
   right: 250px;
@@ -485,7 +487,7 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .volume-bar {
   margin-right: 8px;
 }
-.main-playPauseButton-button, .player-controls__buttons > button:not(.main-playPauseButton-button) {
+.main-playPauseButton-button, .player-controls__buttons button:not(.main-playPauseButton-button) {
   --button-size: 48px !important;
 }
 .main-shuffleButton-button.main-shuffleButton-on:after, .main-repeatButton-button.main-repeatButton-on:after {
@@ -508,6 +510,9 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   width: 100%;
   bottom: 83px;
   position: absolute;
+}
+.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar, .main-nowPlayingBar-container>div:first-child:nth-last-child(2) .playback-bar {
+  bottom: 107px;
 }
 .playback-bar .progress-bar__bg, .playback-bar .progress-bar__fg_wrapper, .playback-bar .progress-bar__fg {
   border-radius: 0;
