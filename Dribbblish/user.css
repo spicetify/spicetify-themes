@@ -10,28 +10,28 @@
 
 @font-face {
     font-family: "Google Sans Display";
-    src: url("https://local_resource_host/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
+    src: url("glue-resources/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Google Sans Display";
-    src: url("https://local_resource_host/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
+    src: url("glue-resources/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
     font-style: normal;
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url("https://local_resource_host/fonts/Roboto.woff2") format("woff2");
+    src: url("glue-resources/fonts/Roboto.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url("https://local_resource_host/fonts/RobotoMedium.woff2") format("woff2");
+    src: url("glue-resources/fonts/RobotoMedium.woff2") format("woff2");
     font-style: normal;
     font-weight: 500;
 }
@@ -301,7 +301,6 @@ html,
 }
 
 html {
-    background-image: url("http://local_resource_host/dribbblish.svg");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -323,6 +322,10 @@ html {
     padding: 0 8px;
 }
 
+#spicetify-show-list >* {
+    padding: 0 8px;
+}
+
 .main-rootlist-statusIcons {
     color: var(--spice-sidebar-text);
     padding-right: 16px;
@@ -335,7 +338,7 @@ html {
 .main-rootlist-expandArrow {
     position: absolute;
     top: 20px;
-    right: 4px;
+    right: 12px;
     width: 16px;
     height: 16px;
     color: var(--spice-sidebar-text) !important;
@@ -356,6 +359,10 @@ html:not(.sidebar-hide-text) .main-rootlist-expandArrow {
 .main-rootlist-expandArrow::before {
     font-size: 10px;
     padding-bottom: 3px;
+}
+
+html.sidebar-hide-text .main-rootlist-expandArrow {
+    right: 4px;
 }
 
 html.sidebar-hide-text .main-navBar-navBarItem span,
@@ -496,6 +503,7 @@ img.playlist-picture {
 .main-rootlist-rootlistItem {
     padding-left: calc(var(--indentation)*var(--left-sidebar-item-indentation-width));
     padding-right: 0;
+    transition: padding-left .5s ease;
 }
 
 html.sidebar-hide-text .main-rootlist-rootlistItem {
@@ -548,12 +556,12 @@ li.GlueDropTarget {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 20%;
+    height: 15%;
     background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
     z-index: 3;
     pointer-events: none;
 }
-#dribs-playlist-list {
+.dribs-playlist-list {
     padding-bottom: 56px;
 }
 #dribbblish-back-shadow {
@@ -627,13 +635,15 @@ li.GlueDropTarget {
 }
 
 /** Main container */
-.contentSpacing {
+.contentSpacing,
+.artist-artistDiscography-headerContainer {
     padding-left: 64px;
     padding-right: 64px;
 }
 
 @media (min-width: 1024px) {
-    .contentSpacing {
+    .contentSpacing,
+    .artist-artistDiscography-headerContainer {
         padding-left: 128px;
         padding-right: 128px;
     }
@@ -825,13 +835,13 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
     }
 }
 
-.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton {
+.main-userWidget-dropDownMenu > li > button {
     color: rgba(var(--spice-rgb-selected-row), .7);
     padding-left: 8px;
     text-decoration: none;
 }
-.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton:hover,
-.main-userWidget-dropDownMenu > context-menu-item > li > a.main-contextMenu-menuItemButton:focus {
+.main-userWidget-dropDownMenu > li > button:hover,
+.main-userWidget-dropDownMenu > li > button:focus {
     color: var(--spice-text);
 }
 
