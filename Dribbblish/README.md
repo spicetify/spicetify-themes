@@ -26,7 +26,7 @@
 
 ### Customizable sidebar
 Rearrange icons positions, stick icons to header or hide unnecessary to save space.
-Turn on Config mode in Profile menu and hover on icon to show control buttons.
+Turn on "Sidebar config" mode in Profile menu and hover on icon to show control buttons.
 After you finish customizing, turn off Config mode in Profile menu to save.
 
 <img src="https://i.imgur.com/86gqPe8.png" alt="img" align="center" width="500px"> 
@@ -39,9 +39,14 @@ Right click at folder and choose images for your playlist folder. Every image fo
 ### Left/Right expanded cover
 In profile menu, toggle option "Right expanded cover" to change expaned current track cover image to left or right side, whereever you prefer.
 
-## Install
-Make sure you are using spicetify v2 and Spotify v1.1.58 or later.
+## Auto-install
+Make sure you are using spicetify >= v2.5.0 and Spotify >= v1.1.56.
+### Windows
+```powershell
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/v2/Dribbblish/install.ps1" | Invoke-Expression
+```
 
+## Manual Install
 Run these commands:
 
 ### Linux and MacOS:
@@ -67,6 +72,13 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
 
+From Spotify > v1.1.62, in sidebar, they use an adaptive render mechanic to actively show and hide items on scroll. It helps reducing number of items to render, hence there is significant performance boost if you have a large playlists collection. But the drawbacks is that item height is hard-coded, it messes up user interaction when we explicity change, in CSS, playlist item height bigger than original value. So you need to add these 2 lines in Patch section in config file:
+```ini
+[Patch]
+xpui.js_find_8008 = ,(\w+=)32,
+xpui.js_repl_8008 = ,${1}56,
+```
+
 ## Change Color Schemes
 There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `samourai`, `purple`. Change scheme with commands:
 ```
@@ -84,11 +96,19 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
 
-## Uninstall 
+## Auto-uninstall 
+### Windows
+```powershell
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/v2/Dribbblish/uninstall.ps1" | Invoke-Expression
+```
 
+## Manual uninstall 
 Remove the dribbblish script with the following commands 
 
 ```
 spicetify config extensions dribbblish.js-
+```
+And remove Patch lines you added in config file earlier. Finally, run:
+```
 spicetify apply
 ```

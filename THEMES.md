@@ -39,13 +39,13 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Deep Screenshot](Sleek/deep.png)
 
-#### Psycho
-
-![Psycho Screenshot](Sleek/psycho.png)
-
 #### Deeper
 
 ![Deeper Screenshot](Sleek/deeper.png)
+
+#### Psycho
+
+![Psycho Screenshot](Sleek/psycho.png)
 
 ## Turntable
 
