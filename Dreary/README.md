@@ -17,6 +17,8 @@
 ### Lover
 ![Lover Screenshot](lover.png)
 
+### RainforestCafe
+![Rainforest Cafe Screenshot](rainforestcafe.png)
 
 ##Important
 Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available.
