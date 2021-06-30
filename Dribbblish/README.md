@@ -16,6 +16,8 @@
 ![purple](purple.png)
 ### Samourai
 ![samourai](samourai.png)
+### Gruvbox
+![gruvbox](gruvbox.png)
 
 ##  Features
 ### Resizable sidebar
