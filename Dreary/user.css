@@ -1,3 +1,4 @@
+/* Dreary Theme*/
 .main-rootlist-rootlistDividerGradient {
     display: none;
     visibility: hidden !important;
@@ -57,7 +58,9 @@ input {
 }
 
 .main-trackList-playingIcon {
-    filter: brightness(0) saturate(100%) invert(11%) sepia(81%) saturate(4689%) hue-rotate(359deg) brightness(78%) contrast(115%);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTIwIDEyMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSJ2YXIoLS1ncmVlbikiPgogIDxjaXJjbGUgZmlsbD0iY3VycmVudENvbG9yIiBjeD0iNjAiIGN5PSI2MCIgcj0iNTAiLz4KPC9zdmc+);
+  background: var(--spice-text);
+  content-visibility: hidden;
 }
 
 span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
@@ -381,7 +384,8 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     padding-bottom: 13%;
     box-sizing: border-box;
     position: relative;
-    border-radius: 2px;
+    margin-bottom: 8px;
+    border-radius: 10px;
     border: 2px solid var(--spice-text);
     display: flex;
     text-align: center;
@@ -410,17 +414,35 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
 svg[Attributes Style] {
     fill: var(--spice-subtext);
 }
+
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink {
-    transition:  500ms;
+    transition: 500ms;
 }
-.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus{
+
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus {
     color: var(--spice-text);
 }
-.main-buddyFeed-friendActivity{
-    border:solid;
-    border-radius:20px;
-    border-color:var(--spice-text);
-}
-.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected{
+
+.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected {
     color: var(--spice-subbutton-text) !important;
+}
+
+.main-type-mesto {
+    color: var(--spice-subbutton-text);
+}
+.view-homeShortcutsGrid-shortcut {
+    background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
+    border: solid 3px var(--spice-text);
+    border-radius: 10px;
+    padding-bottom: 80.7px;
+    transition: 500ms;
+}
+
+.main-card-card .main-card-cardLink {
+    border: solid 3px;
+    border-radius: 20px;
+    transition:500ms;
+}
+.view-homeShortcutsGrid-shortcut:hover,.main-card-card .main-card-cardLink:hover {
+    border-color:var(--spice-button);
 }
