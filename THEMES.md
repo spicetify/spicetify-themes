@@ -44,6 +44,14 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![samourai](Dribbblish/samourai.png)
 
+#### Gruvbox
+
+![gruvbox](Dribbblish/gruvbox.png)
+
+#### Horizon
+
+![horizon](Dribbblish/horizon.png)
+
 ## Onepunch
 
 ![Onepunch Screenshot](Onepunch/__Home.png)
