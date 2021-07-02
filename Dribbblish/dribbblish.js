@@ -140,8 +140,9 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
 
 (function Dribbblish() {
     const progBar = document.querySelector(".playback-bar");
+    const root = document.querySelector(".Root");
 
-    if (!Spicetify.Player.origin || !progBar) {
+    if (!Spicetify.Player.origin || !progBar || !root) {
         setTimeout(Dribbblish, 300);
         return;
     }
@@ -152,7 +153,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
 
     const progKnob = progBar.querySelector(".progress-bar__slider");
     
-    Spicetify.Player.addEventListener("onprogress", ({ data: e }) => {
+    function updateProgTime({ data: e }) {
         const offsetX = progKnob.offsetLeft + progKnob.offsetWidth / 2;
         const maxWidth = progBar.offsetWidth;
         const curWidth = Spicetify.Player.getProgressPercent() * maxWidth;
@@ -166,6 +167,17 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         }
         tooltip.innerText = Spicetify.Player.formatTime(e) + " / " +
             Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+    }
+    Spicetify.Player.addEventListener("onprogress", updateProgTime);
+    updateProgTime({ data: Spicetify.Player.getProgress() });
+
+    Spicetify.CosmosAsync.sub("sp://connect/v1", (state) => {
+        const isExternal = state.devices.some(a => a.is_active);
+        if (isExternal) {
+            root.classList.add("is-connectBarVisible");
+        } else {
+            root.classList.remove("is-connectBarVisible");
+        }
     });
 
     const filePickerForm = document.createElement("form");
