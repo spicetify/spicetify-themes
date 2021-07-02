@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![dark_home](./screenshots/display.png)
+![dark_home](./screenshots/display.gif)
 
 ## More
 
