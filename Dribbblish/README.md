@@ -6,6 +6,8 @@
 ![white](white.png)
 ### Dark
 ![dark](dark.png)
+### Dracula-Purple
+![dracula-purple](dracula-purple.png)
 ### Nord-Light
 ![nord-light](nord-light.png)
 ### Nord-Dark
