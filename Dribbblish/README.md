@@ -18,6 +18,8 @@
 ![samourai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
+### Horizon
+![horizon](horizon.png)
 
 ##  Features
 ### Resizable sidebar
