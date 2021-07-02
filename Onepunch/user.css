@@ -17,17 +17,18 @@
   color: var(--spice-main) !important;
 }
 
-.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
+.main-collectionLinkButton-collectionLinkButton
+  .main-collectionLinkButton-collectionLinkText,
 .main-createPlaylistButton-button,
 .main-rootlist-rootlistItemLink:link,
 .main-rootlist-rootlistItemLink:visited {
   color: var(--spice-text) !important;
 }
 
-.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected .main-collectionLinkButton-icon {
-  opacity: .7 !important;
+.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected
+  .main-collectionLinkButton-icon {
+  opacity: 0.7 !important;
 }
-
 
 .main-rootlist-rootlistDividerGradient {
   background: linear-gradient(180deg, var(--spice-main), transparent);
@@ -72,11 +73,12 @@
 }
 
 /* Topbar visibility bug */
-.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn)>* {
+.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn) > * {
   opacity: unset !important;
 }
 
-.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)>* {
+.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)
+  > * {
   opacity: 0 !important;
 }
 
@@ -102,7 +104,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   fill: black;
 }
 
-
 /* details metadata */
 .main-entityTitle-subtitle.main-entityTitle-gray,
 .main-entityHeader-metaDataText {
@@ -119,11 +120,12 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* artist page edits*/
 .main-entityHeader-background.main-entityHeader-gradient {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .main-entityHeader-background.main-entityHeader-overlay:after {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(var(--spice-main), var(--spice-main));
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(var(--spice-main), var(--spice-main));
 }
 
 .artist-artistPick-pickComment {
@@ -142,9 +144,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   color: var(--spice-text);
 }
 
-
 .main-shelf-title {
-  color: var(--spice-subtext)
+  color: var(--spice-subtext);
 }
 
 .view-homeShortcutsGrid-shortcut,
@@ -168,10 +169,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   border-radius: 10px;
 }
 
-
 /* inside a page edits */
 .main-addButton-button {
-  color: rgba(var(--spice-rgb-card), .7) !important;
+  color: rgba(var(--spice-rgb-card), 0.7) !important;
 }
 
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker,
@@ -182,8 +182,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .main-trackList-rowTitle {
   color: var(--spice-text) !important;
 }
-
-
 
 /* friend activity */
 .main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
@@ -211,7 +209,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   color: var(--spice-tab-active) !important;
 }
 
-input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
+input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
   background-color: var(--spice-button-knob) !important;
 }
 
@@ -219,10 +217,9 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
   background: var(--spice-button-knob) !important;
 }
 
-input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
-  background-color: rgba(var(--spice-rgb-button), .5) !important;
+input:hover:not([disabled]):not(:active) ~ .x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), 0.5) !important;
 }
-
 
 /* search page edits */
 
@@ -242,7 +239,6 @@ input {
   color: var(--spice-main) !important;
 }
 
-
 /* menu and dropdown menus including the user menu */
 .main-type-mesto,
 .x-533-dropDown-dropDown {
@@ -258,7 +254,7 @@ input {
 
 .main-userWidget-box:focus,
 .main-userWidget-box:hover,
-.main-userWidget-box[data-context-menu-open=true] {
+.main-userWidget-box[data-context-menu-open="true"] {
   border-radius: 10px !important;
 }
 
@@ -274,8 +270,8 @@ input {
 }
 
 .main-card-card:hover,
-.main-card-card[data-context-menu-open=true] {
-  background-color: rgba(var(--spice-rgb-sec-card), .3) !important;
+.main-card-card[data-context-menu-open="true"] {
+  background-color: rgba(var(--spice-rgb-sec-card), 0.3) !important;
 }
 
 .main-contextMenu-menu,

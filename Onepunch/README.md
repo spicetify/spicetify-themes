@@ -2,36 +2,49 @@
 
 ## Screenshots
 
-![Home_legacy](./__Home.png)
-
-<table>
-  <tr>
-    <td><img src="./__Playlist.png" alt="2" width = 360px> Playlist_legacy </td>
-    <td><img src="./__Profile.png" alt="3" width = 360px> Profile_legacy </td>
-  </tr>
-</table>
+![dark_home](./screenshots/display.png)
 
 ## More
 
-#### About
+### About
 
-A simple gruvified spotify theme.
+A simple gruvified spotify theme. Move to [Extra Preview](#extra-preview) for more screenshots.
 
-#### First Aid Kit ¯\\\_(ツ)\_/¯
+### Information
 
-- **The screenshots here are from the old legacy UI.**
-- To change color schemes:
+- To apply this theme:
+
   ```shell
-  spicetify config color_scheme [wal/dark/light]
+  # for dark theme
+  spicetify config current_theme Onepunch color_scheme dark
+  spicetify apply
+
+  #for light theme
+  spicetify config current_theme Onepunch color_scheme light
+  spicetify apply
+
   ```
+
 - Tested on macOS only and pretty much everything worked. ﾍ(･\_|
 
-#### On my list
+### Extra Preview
 
-- [x] Gruvified and updated to the new UI.
-- [x] Added **[wal/dark/light]** mode.
-- [ ] Almost everything looks fine
+#### dark scheme
 
-#### Contact
+|   ![dark_home](./screenshots/dark_home.png)   |   ![dark_album](./screenshots/dark_album.png)   | ![dark_playlist](./screenshots/dark_playlist.png) |
+| :-------------------------------------------: | :---------------------------------------------: | :-----------------------------------------------: |
+|                     home                      |                      album                      |                     playlist                      |
+| ![dark_podcast](screenshots/dark_podcast.png) | ![dark_profile](./screenshots/dark_profile.png) |
+|                    podcat                     |                     profile                     |
+
+#### light scheme
+
+|   ![light_home](./screenshots/light_home.png)   |   ![light_album](./screenshots/light_album.png)   | ![light_playlist](./screenshots/light_playlist.png) |
+| :---------------------------------------------: | :-----------------------------------------------: | :-------------------------------------------------: |
+|                      home                       |                       album                       |                      playlist                       |
+| ![light_podcast](screenshots/light_podcast.png) | ![light_profile](./screenshots/light_profile.png) |
+|                     podcat                      |                      profile                      |
+
+### Contact
 
 Go **[here](https://github.com/okarin001/Onepunch/issues)** and _check/create_ an issue in case you face any probelm.
