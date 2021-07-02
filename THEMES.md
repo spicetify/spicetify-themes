@@ -24,6 +24,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![dark](Dribbblish/dark.png)
 
+#### Dracula-Purple
+
+![dark](Dribbblish/dracula-purple.png)
+
 #### Nord-Light
 
 ![nord-light](Dribbblish/nord-light.png)
