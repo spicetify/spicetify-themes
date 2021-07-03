@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-#### dark
+#### Dark
 
 |   ![dark_home](./screenshots/dark_home.png)   |   ![dark_album](./screenshots/dark_album.png)   | ![dark_playlist](./screenshots/dark_playlist.png) |
 | :-------------------------------------------: | :---------------------------------------------: | :-----------------------------------------------: |
@@ -10,7 +10,7 @@
 | ![dark_podcast](screenshots/dark_podcast.png) | ![dark_profile](./screenshots/dark_profile.png) |
 |                    podcat                     |                     profile                     |
 
-#### light
+#### Light
 
 |   ![light_home](./screenshots/light_home.png)   |   ![light_album](./screenshots/light_album.png)   | ![light_playlist](./screenshots/light_playlist.png) |
 | :---------------------------------------------: | :-----------------------------------------------: | :-------------------------------------------------: |
@@ -26,21 +26,21 @@ A simple gruvified spotify theme. Move to [Extra Preview](#extra-preview) for mo
 
 ### Information
 
-- To apply this theme:
+*   To apply this theme:
 
-  ```shell
-  # for dark theme
-  spicetify config current_theme Onepunch color_scheme dark
-  spicetify apply
+    ```shell
+    # for dark theme
+    spicetify config current_theme Onepunch color_scheme dark
+    spicetify apply
 
-  #for light theme
-  spicetify config current_theme Onepunch color_scheme light
-  spicetify apply
+    #for light theme
+    spicetify config current_theme Onepunch color_scheme light
+    spicetify apply
 
-  ```
+    ```
 
-- Tested on macOS only and pretty much everything worked. ﾍ(･\_|
+*   Tested on macOS only and pretty much everything worked. ﾍ(･\_|
 
 ### Contact
 
-Go **[here](https://github.com/okarin001/Onepunch/issues)** and _check/create_ an issue in case you face any probelm.
+Go **[here](https://github.com/okarin001/Onepunch/issues)** and *check/create* an issue in case you face any probelm.

@@ -46,11 +46,11 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Onepunch
 
-#### dark
+#### Dark
 
 ![dark_home](Onepunch/screenshots/dark_home.png)
 
-#### light
+#### Light
 
 ![light_home](Onepunch/screenshots/light_home.png)
 
