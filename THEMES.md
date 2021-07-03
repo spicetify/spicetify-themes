@@ -58,13 +58,13 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Deep Screenshot](Sleek/deep.png)
 
-#### Psycho
-
-![Psycho Screenshot](Sleek/psycho.png)
-
 #### Deeper
 
 ![Deeper Screenshot](Sleek/deeper.png)
+
+#### Psycho
+
+![Psycho Screenshot](Sleek/psycho.png)
 
 ## Turntable
 
@@ -74,8 +74,8 @@ https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-
 
 #### Blue Dark
 
-![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/album-blue-dark.png)
+![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png)
 
 #### Blue Light
 
-![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/img/preview/artist-blue-light.png)
+![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/artist-blue-light.png)
