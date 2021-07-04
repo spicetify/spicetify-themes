@@ -174,13 +174,6 @@
 }
 
 
-/* modal backdrop */
-.GenericModal__overlay {
-  backdrop-filter: var(--main-blur-backdrop);
-  background-color: rgba(9, 9, 9, .2)
-}
-
-
 /* full app display */
 #full-app-display {
   background-color: #222
