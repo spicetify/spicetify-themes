@@ -176,7 +176,7 @@
 
 /* full app display */
 #full-app-display {
-  background-color: #222
+  background: radial-gradient(#242424, #1f1f1f)
 }
 
 #fad-background {
@@ -221,7 +221,7 @@
 }
 
 #fad-art::after {
-  background-color: #252525;
+  background-color: rgba(60, 60, 60, .1);
   transform: scale(1.65);
   z-index: -1
 }
@@ -231,7 +231,7 @@
 }
 
 #fad-details #fad-title {
-  font-size: 38px
+  font-size: 32px
 }
 
 #fad-details #fad-artist {
@@ -273,6 +273,25 @@
 
 #fad-controls > button:hover > svg {
   fill: #fff
+}
+
+#fad-progress-container {
+  font-size: 12px
+}
+
+#fad-elapsed,
+#fad-duration {
+  min-width: 32px !important
+}
+
+#fad-progress {
+  height: 2px !important;
+  background-color: rgba(100, 100, 100, .5) !important
+}
+
+#fad-progress-inner {
+  background-color: var(--spotify-main-color) !important;
+  box-shadow: unset !important
 }
 
 
