@@ -1,10 +1,10 @@
 window.addEventListener("load", rotateTurntable = () => {
-  if (!Spicetify.Player.origin || !document.querySelector("#fad-art-image")) {
+  const fadBtn = document.querySelector(".main-topBar-button[title='Full App Display']");
+
+  if (!Spicetify.Player.origin || !fadBtn) {
     setTimeout(rotateTurntable, 250);
     return;
   }
-
-  const fullAppDisplay = document.querySelector("#full-app-display");
 
   let playState;
 
@@ -12,41 +12,61 @@ window.addEventListener("load", rotateTurntable = () => {
     const fadArt = document.querySelector("#fad-art-image");
 
     if (!fromEvent && Spicetify.Player.isPlaying() || fromEvent && !playState) {
-      fadArt.style.animationPlayState = "running";
+      fadArt && (fadArt.style.animationPlayState = "running");
       return playState = true;
     } else {
-      fadArt.style.animationPlayState = "paused";
+      fadArt && (fadArt.style.animationPlayState = "paused");
       return playState = false;
     }
+  }
+
+  function handleFadControl(event) {
+    event.stopPropagation();
   }
 
   function handleFadDblclick() {
     const fadControlsBtns = document.querySelectorAll("#fad-controls button");
 
     for (const fadControl of fadControlsBtns) {
-      fadControl.addEventListener("dblclick", event => event.stopPropagation());
+      fadControl.addEventListener("dblclick", handleFadControl);
     }
   }
 
+  function handleConfigSwitch() {
+    const genericModal = document.querySelector("generic-modal");
+
+    handleInitalStatus(genericModal);
+  }
+
   function handleInitalStatus(genericModal) {
-    if (genericModal) {
-      genericModal.remove();
-    }
+    genericModal.remove();
 
     handleRotate();
     handleFadDblclick();
   }
 
-  handleInitalStatus();
-
-  Spicetify.Player.addEventListener("onplaypause", () => handleRotate(true));
-
-  fullAppDisplay.addEventListener("contextmenu", () => {
-    const genericModal = document.querySelector("generic-modal");
+  function handleContextMenu() {
     const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
 
     for (const configSwitch of configSwitchBtns) {
-      configSwitch.addEventListener("click", () => handleInitalStatus(genericModal));
+      configSwitch.addEventListener("click", handleConfigSwitch);
     }
+  }
+
+  handleRotate();
+
+  Spicetify.Player.addEventListener("onplaypause", () => handleRotate(true));
+
+  fadBtn.addEventListener("click", () => {
+    const fullAppDisplay = document.querySelector("#full-app-display");
+    const fadArt = document.querySelector("#fad-art-image");
+
+    playState
+      ? fadArt.style.animationPlayState = "running"
+      : fadArt.style.animationPlayState = "paused";
+
+    handleFadDblclick();
+
+    fullAppDisplay.addEventListener("contextmenu", handleContextMenu);
   });
 });
