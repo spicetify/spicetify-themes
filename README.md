@@ -17,7 +17,11 @@ cd spicetify-themes
 cp -r * ~/.config/spicetify/Themes
 ```
 
-**NOTE: to install Dribbblish and DribbblishDynamic follow the instructions in its README**.
+**NOTE: to install the themes below, you need to follow the instructions in its README**.
+
+* Dribbblish
+* DribbblishDynamic
+* Turntable
 
 After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`.
 Some themes have 2 or more different color schemes. You can switch between them, once selected the theme, with `spicetify config color_scheme SCHEME_NAME`.
@@ -36,7 +40,7 @@ If you are unsure about which channel to use, go for Spectrum.
 
 NOTE: Spotify ad-blocked version is not supported.
 
-## FAQ 
+## FAQ
 
 ### How can I remove free version UI elements (e.g. "Upgrade" button)?
 
