@@ -20,15 +20,33 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  handleRotate();
+  function handleFadDblclick() {
+    const fadControlsBtns = document.querySelectorAll("#fad-controls button");
+
+    for (const fadControl of fadControlsBtns) {
+      fadControl.addEventListener("dblclick", event => event.stopPropagation());
+    }
+  }
+
+  function handleInitalStatus(genericModal) {
+    if (genericModal) {
+      genericModal.remove();
+    }
+
+    handleRotate();
+    handleFadDblclick();
+  }
+
+  handleInitalStatus();
 
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate(true));
 
   fullAppDisplay.addEventListener("contextmenu", () => {
+    const genericModal = document.querySelector("generic-modal");
     const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
 
     for (const configSwitch of configSwitchBtns) {
-      configSwitch.addEventListener("click", () => handleRotate());
+      configSwitch.addEventListener("click", () => handleInitalStatus(genericModal));
     }
   });
 });
