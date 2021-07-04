@@ -1,30 +1,34 @@
-window.addEventListener("load", () => {
-  (function rotateTurntable() {
-    if (!Spicetify.Player.origin || !document.querySelector("#fad-art-image")) {
-      setTimeout(rotateTurntable, 250);
-      return;
+window.addEventListener("load", rotateTurntable = () => {
+  if (!Spicetify.Player.origin || !document.querySelector("#fad-art-image")) {
+    setTimeout(rotateTurntable, 250);
+    return;
+  }
+
+  const fullAppDisplay = document.querySelector("#full-app-display");
+
+  let playState;
+
+  function handleRotate(fromEvent) {
+    const fadArt = document.querySelector("#fad-art-image");
+
+    if (!fromEvent && Spicetify.Player.isPlaying() || fromEvent && !playState) {
+      fadArt.style.animationPlayState = "running";
+      return playState = true;
+    } else {
+      fadArt.style.animationPlayState = "paused";
+      return playState = false;
     }
+  }
 
-    const fullAppDisplay = document.querySelector("#full-app-display");
+  handleRotate();
 
-    function handleRotate() {
-      const fadArt = document.querySelector("#fad-art-image");
+  Spicetify.Player.addEventListener("onplaypause", () => handleRotate(true));
 
-      Spicetify.Player.isPlaying()
-        ? fadArt.style.animationPlayState = "running"
-        : fadArt.style.animationPlayState = "paused";
+  fullAppDisplay.addEventListener("contextmenu", () => {
+    const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
+
+    for (const configSwitch of configSwitchBtns) {
+      configSwitch.addEventListener("click", () => handleRotate());
     }
-
-    handleRotate();
-
-    Spicetify.Player.addEventListener("onplaypause", () => setTimeout(handleRotate));
-
-    fullAppDisplay.addEventListener("contextmenu", () => {
-      const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
-
-      for (const configSwitch of configSwitchBtns) {
-        configSwitch.addEventListener("click", handleRotate);
-      }
-    });
-  })();
+  });
 });
