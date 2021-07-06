@@ -13,21 +13,20 @@ You can add your own theme simply by opening a Pull Request (more info in the [C
 
 ## Installation and usage
 
-(If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/)).
+(If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
 
-### Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
+1. Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
 
 ```bash
 git clone https://github.com/morpheusthewhite/spicetify-themes.git
 ```
 
-### Copy the files into the [Spicetify Themes folder](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes). Run:
+2. Copy the files into the [Spicetify Themes folder](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes). Run:
 
-**Windows** 
-
-```powershell
+**Linux**
+```bash
 cd spicetify-themes
-cp * "$(spicetify -c | Split-Path)\Themes\"
+cp -r * ~/.config/spicetify/Themes
 ```
 
 **MacOS**
@@ -37,18 +36,18 @@ cd spicetify-themes
 cp -r * ~/spicetify_data/Themes
 ```
 
-**Linux**
-```bash
-cd spicetify-themes
-cp -r * ~/.config/spicetify/Themes
-```
+**Windows** 
 
+```powershell
+cd spicetify-themes
+cp * "$(spicetify -c | Split-Path)\Themes\"
+```
   
-### Choose which theme to apply just by running: 
+3. Choose which theme to apply just by running: 
 ```bash
 spicetify config current_theme THEME_NAME. 
 ```
-#### Some themes have 2 or more different color schemes. After selecting the theme you can switch between them with:
+Some themes have 2 or more different color schemes. After selecting the theme you can switch between them with:
 ```bash
 spicetify config color_scheme SCHEME_NAME
 ```
