@@ -6,6 +6,14 @@ window.addEventListener("load", rotateTurntable = () => {
     return;
   }
 
+  const adModalStyle = document.createElement("style");
+  const STYLE_FOR_AD_MODAL = `
+.ReactModalPortal {
+  display: none
+}
+`;
+  adModalStyle.innerHTML = STYLE_FOR_AD_MODAL;
+
   let playState;
 
   function handleRotate(fromEvent) {
@@ -57,8 +65,11 @@ window.addEventListener("load", rotateTurntable = () => {
     const mainInterface = document.querySelector("#main");
     const mainPlayBtn = document.querySelector(".main-playButton-PlayButton");
     const mainTopbarTitle = document.querySelector(".main-entityHeader-topbarTitle");
+    const billboard = document.querySelector("#view-billboard-ad");
 
     mainInterface.style.display = "block";
+    if (billboard) billboard.closest(".ReactModalPortal").remove();
+    adModalStyle.remove();
 
     setTimeout(() => {
       mainPlayBtn.style.removeProperty("opacity");
@@ -90,6 +101,7 @@ window.addEventListener("load", rotateTurntable = () => {
     }
 
     mainInterface.style.display = "none";
+    document.body.append(adModalStyle);
 
     fullAppDisplay.addEventListener("contextmenu", handleContextMenu);
 
