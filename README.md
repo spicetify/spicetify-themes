@@ -7,13 +7,13 @@ You can add your own theme simply by opening a Pull Request (more info in the [C
 ### **You can find a preview of all the themes in the [wiki](https://github.com/morpheusthewhite/spicetify-themes/wiki/Themes-preview).**
 
 ## Notes:
-- **These themes require you to have the old Spotify UI (<v1.1.56) and [Spicetify <v2](https://github.com/khanhas/spicetify-cli/wiki/Installation#legacy-spotify)**
+- **These themes require you to have the old Spotify UI (<v1.1.56) and [Spicetify <v2](https://github.com/khanhas/spicetify-cli/wiki/Installation#legacy-spotify).**
 - **To install Dribbblish and DribbblishDynamic, follow the instructions in their READMEs**.  
 - **Spotify ad-blocked version is not supported.**
 
 ## Installation and usage
 
-(If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
+(If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/)).
 
 ### Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
 
@@ -82,6 +82,6 @@ If you want to add your theme:
 - If you find problems when using or installing these themes, or you need help in modifying a theme, 
 use the [Spectrum](https://spectrum.chat/spicetify) chat. 
 
-- For bugs and requesting new features, [open an issue](https://github.com/morpheusthewhite/spicetify-themes/issues/new/choose) on GitHub
+- For bugs and requesting new features, [open an issue](https://github.com/morpheusthewhite/spicetify-themes/issues/new/choose) on GitHub.
 
 If you are unsure about which one to use, go for Spectrum.
