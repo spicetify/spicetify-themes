@@ -12,11 +12,11 @@ window.addEventListener("load", rotateTurntable = () => {
     const fadArt = document.querySelector("#fad-art-image");
 
     if (!fromEvent && Spicetify.Player.isPlaying() || fromEvent && !playState) {
-      fadArt && (fadArt.style.animationPlayState = "running");
-      return playState = true;
+      if (fadArt) fadArt.style.animationPlayState = "running";
+      playState = true;
     } else {
-      fadArt && (fadArt.style.animationPlayState = "paused");
-      return playState = false;
+      if (fadArt) fadArt.style.animationPlayState = "paused";
+      playState = false;
     }
   }
 
@@ -53,11 +53,28 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
+  function handleMainInterface() {
+    const mainInterface = document.querySelector("#main");
+    const mainPlayBtn = document.querySelector(".main-playButton-PlayButton");
+    const mainTopbarTitle = document.querySelector(".main-entityHeader-topbarTitle");
+
+    mainInterface.style.display = "block";
+
+    setTimeout(() => {
+      mainPlayBtn.style.removeProperty("opacity");
+      if (mainTopbarTitle) mainTopbarTitle.style.removeProperty("opacity");
+    }, 250);
+  }
+
   handleRotate();
 
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate(true));
 
   fadBtn.addEventListener("click", () => {
+    const mainInterface = document.querySelector("#main");
+    const mainPlayBtn = document.querySelector(".main-playButton-PlayButton");
+    const mainTopbarTitle = document.querySelector(".main-entityHeader-topbarTitle");
+    const topbarContentFadeIn = document.querySelector(".main-entityHeader-topbarContentFadeIn");
     const fullAppDisplay = document.querySelector("#full-app-display");
     const fadArt = document.querySelector("#fad-art-image");
 
@@ -67,6 +84,15 @@ window.addEventListener("load", rotateTurntable = () => {
 
     handleFadDblclick();
 
+    if (!topbarContentFadeIn) {
+      mainPlayBtn.style.setProperty("opacity", "0", "important");
+      if (mainTopbarTitle) mainTopbarTitle.style.setProperty("opacity", "0", "important");
+    }
+
+    mainInterface.style.display = "none";
+
     fullAppDisplay.addEventListener("contextmenu", handleContextMenu);
+
+    fullAppDisplay.addEventListener("dblclick", handleMainInterface);
   });
 });
