@@ -215,6 +215,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .main-nowPlayingBar-nowPlayingBar {
     height: var(--bar-height);
+	padding: 0 16px 0 0 !important;
 }
 
 .Root__top-bar {
@@ -400,10 +401,9 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .playback-bar {
+    top: 0;
     position: absolute;
     width: var(--main-view-width);
-    left: var(--sidebar-width);
-    bottom: calc(var(--main-gap) + var(--bar-height) - 12px / 2);
 }
 
 .Root.is-connectBarVisible .playback-bar {
@@ -418,6 +418,7 @@ html.sidebar-hide-text .GlueDropTarget span {
 .player-controls__buttons {
     margin-bottom: 0;
     width: 192px;
+	margin-left: 16px;
 }
 
 .progress-bar {
@@ -606,6 +607,7 @@ li.GlueDropTarget {
     flex: 1;
     width: auto;
     min-width: unset !important;
+	height: inherit;
 }
 
 .main-nowPlayingBar-right {
@@ -622,6 +624,8 @@ li.GlueDropTarget {
 .player-controls {
     justify-content: flex-start;
     flex-direction: row;
+    position: relative;
+	height: inherit;
 }
 
 .main-playPauseButton-button {
@@ -853,4 +857,8 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 }
 .main-buddyFeed-buddyFeed.main-buddyFeed-buddyFeed-expanded {
     z-index: 4;
+}
+
+.progress-bar-wrapper {
+    height: 1px;
 }
