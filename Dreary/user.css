@@ -3,11 +3,9 @@
     display: none;
     visibility: hidden !important;
 }
-
-.main-rootlist-rootlistDivider {
-    background-color: rgba(var(--spice-rgb-button-disabled), .8)
+.main-rootlist-rootlistDivider{
+    background-color: var(--spice-text) !important;
 }
-
 input {
     background-color: unset !important;
     border-bottom: solid 1px var(--spice-text) !important;
@@ -152,7 +150,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .os-theme-spotify.os-host-transition>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
     border-radius: 4px;
-    background-color: rgba(var(--spice-rgb-button-disabled), .8);
+    background-color: var(--spice-text);
 }
 
 /* Hide Profile Options in Nav Bar */
@@ -434,15 +432,23 @@ svg[Attributes Style] {
     background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
     border: solid 3px var(--spice-text);
     border-radius: 10px;
-    padding-bottom: 80.79px;
+    padding-bottom: 80.7px;
     transition: 500ms;
 }
 
 .main-card-card .main-card-cardLink {
     border: solid 3px;
-    border-radius: 20px;
     transition:500ms;
+    border-radius:27px;
+    
+}
+.main-card-card{
+    border-radius:27px!important;
 }
 .view-homeShortcutsGrid-shortcut:hover,.main-card-card .main-card-cardLink:hover {
     border-color:var(--spice-button);
 }
+.main-createPlaylistButton-button {
+    padding: 0 16px !important;
+    }
+   
