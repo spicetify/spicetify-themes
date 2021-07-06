@@ -20,8 +20,11 @@
 ### RainforestCafe
 ![Rainforest Cafe Screenshot](rainforestcafe.png)
 
+### Mono
+![Mono Screenshot](mono.png)
+
 ##Important
-Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available.
+Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available, such as edits to the sidebar.
 
 
 ## More
