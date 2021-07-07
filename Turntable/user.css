@@ -295,6 +295,25 @@
 }
 
 
+/* fad blur backdrop */
+.blur-fad #fad-background {
+  display: unset
+}
+
+.blur-fad #fad-art::before {
+  background: radial-gradient(#242424, #000)
+}
+
+.blur-fad #fad-art::after {
+  background-color: rgba(40, 40, 40, .1);
+  box-shadow: 0 0 1px rgba(100, 100, 100, .4)
+}
+
+.blur-fad #fad-progress {
+  background-color: rgba(200, 200, 200, .3) !important
+}
+
+
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground {
     transform: scale(1.2)
