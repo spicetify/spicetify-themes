@@ -22,7 +22,7 @@
 
 ### About
 
-A simple gruvified spotify theme. Move to [Extra Preview](#extra-preview) for more screenshots.
+A simple gruvified spotify theme.
 
 ### Information
 
