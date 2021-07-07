@@ -78,43 +78,32 @@ https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-
 
 ## Ziro
 
-### Blue Dark
+#### Blue
+| ![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png) | ![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/artist-blue-light.png) |
+| :-: | :-: |
+| Dark | Light |
 
-![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png)
+#### Gray
+| ![Cards](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/cards-gray-dark.png) | ![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-gray-light.png) |
+| :-: | :-: |
+| Dark | Light |
 
-### Blue Light
+#### Green
+| ![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-dark.png) | ![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-light.png) |
+| :-: | :-: |
+| Dark | Light |
 
-![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/artist-blue-light.png)
+#### Orange
+| ![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-orange-dark.png) | ![Library](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/library-orange-light.png) |
+| :-: | :-: |
+| Dark | Light |
 
-### Gray Dark
+#### Purple
+| ![Single](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/single-purple-dark.png) | ![Playlist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/playlist-purple-light.png) |
+| :-: | :-: |
+| Dark | Light |
 
-![Cards](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/cards-gray-dark.png)
-
-### Gray Light
-
-![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-gray-light.png)
-
-### Green Dark
-![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-dark.png)
-
-### Green Light
-![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-light.png)
-
-### Orange Dark
-![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-orange-dark.png)
-
-### Orange Light
-![Library](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/library-orange-light.png)
-
-### Purple Dark
-![Single](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/single-purple-dark.png)
-
-### Purple Light
-![Playlist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/playlist-purple-light.png)
-
-### Red Dark
-![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png)
-
-### Red Light
-
-![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png)
+#### Red
+| ![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png) | ![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png) |
+| :-: | :-: |
+| Dark | Light |
