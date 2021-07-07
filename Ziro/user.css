@@ -135,6 +135,9 @@ button.switch {
 ._6b5bc370e9834a4932f57284a96a0748-scss, .main-createPlaylistButton-button, .main-createPlaylistButton-svg, .ac0df040748287f39652cc42e3b762ba-scss, .main-collectionLinkButton-collectionLinkButton {
   border-radius: var(--border-radius-2) !important;
 }
+.main-createPlaylistButton-createPlaylistIcon, .main-likedSongsButton-likedSongsIcon, .main-yourEpisodesButton-yourEpisodesIcon {
+  border-radius: var(--border-radius-3);
+}
 .main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited, .main-rootlist-rootlistPlaylistHeader {
   color: var(--spice-text);
 }
@@ -246,20 +249,15 @@ button.switch {
 .main-trackList-statusChangeUp {
   color: var(--green);
 }
-  /* dark mode */
+/* big thanks to CharlieS and harbassan for providing the svg */
 .main-trackList-playingIcon {
-  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+  background: var(--spice-text);
+  content-visibility: hidden;
 }
 .main-trackList-selected .main-trackList-playingIcon {
-  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
+  background: var(--spice-shadow);
 }
-  /* light mode
-.main-trackList-playingIcon {
-  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-123345.gif);
-}
-.main-trackList-selected .main-trackList-playingIcon {
-  content: url(https://raw.githubusercontent.com/schnensch0/ziro/main/img/equalizer-animated-bde6fb.gif);
-} */
 /* headers */
 .main-entityHeader-image:not(.main-entityHeader-circle) {
   border-radius: var(--border-radius-1);
@@ -349,20 +347,23 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
   background-color: var(--spice-main) !important;
   border-radius: var(--border-radius-1) !important;
 }
-.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus {
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .playlist-inlineSearchBox-filterInput {
   background-color: var(--spice-card);
 }
 .profile-userEditDetails-nameInput, .profile-userEditDetails-textElement:focus {
   background: var(--spice-card) !important;
 }
-.main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .profile-userEditDetails-textElement:focus {
-  border-color: var(--spice-button-active) !important;
+.main-playlistEditDetailsModal-titleInput:focus, .main-playlistEditDetailsModal-descriptionTextarea:focus, .profile-userEditDetails-textElement:focus, .playlist-inlineSearchBox-filterInput:focus {
+  border: 1px solid var(--spice-button-active) !important;
 }
-.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .profile-userEditDetails-nameInput {
+.playlist-inlineSearchBox-filterInput {
+  border: 1px solid var(--spice-card);
+}
+.main-playlistEditDetailsModal-titleInput, .main-playlistEditDetailsModal-descriptionTextarea, .profile-userEditDetails-nameInput, .playlist-inlineSearchBox-filterInput {
   border-radius: var(--border-radius-2) !important;
 }
-.main-playlistEditDetailsModal-labelText, .profile-userEditDetails-labelText {
-  bottom: 8px;
+.profile-userEditDetails-labelText:before {
+  bottom: 8px !important;
 }
 .main-playlistEditDetailsModal-titleInput::placeholder, .main-playlistEditDetailsModal-descriptionTextarea::placeholder {
   color: var(--spice-text);
