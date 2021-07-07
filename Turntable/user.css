@@ -61,7 +61,7 @@
   background-color: #181818 !important
 }
 
-.main-virtualScrollList-wrapper [role="row"]:nth-child(odd) {
+.main-rootlist-wrapper [role="row"]:nth-child(odd) {
   background: linear-gradient(to right, #121212, #191919, #121212)
 }
 
