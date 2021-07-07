@@ -61,7 +61,7 @@
   background-color: #181818 !important
 }
 
-.main-virtualScrollList-wrapper [role="row"]:nth-child(odd) {
+.main-rootlist-wrapper [role="row"]:nth-child(odd) {
   background: linear-gradient(to right, #121212, #191919, #121212)
 }
 
@@ -174,16 +174,9 @@
 }
 
 
-/* modal backdrop */
-.GenericModal__overlay {
-  backdrop-filter: var(--main-blur-backdrop);
-  background-color: rgba(9, 9, 9, .2)
-}
-
-
 /* full app display */
 #full-app-display {
-  background-color: #222
+  background: radial-gradient(#242424, #1f1f1f)
 }
 
 #fad-background {
@@ -228,7 +221,7 @@
 }
 
 #fad-art::after {
-  background-color: #252525;
+  background-color: rgba(60, 60, 60, .1);
   transform: scale(1.65);
   z-index: -1
 }
@@ -238,7 +231,7 @@
 }
 
 #fad-details #fad-title {
-  font-size: 38px
+  font-size: 32px
 }
 
 #fad-details #fad-artist {
@@ -282,6 +275,44 @@
   fill: #fff
 }
 
+#fad-progress-container {
+  font-size: 12px
+}
+
+#fad-elapsed,
+#fad-duration {
+  min-width: 32px !important
+}
+
+#fad-progress {
+  height: 2px !important;
+  background-color: rgba(100, 100, 100, .5) !important
+}
+
+#fad-progress-inner {
+  background-color: var(--spotify-main-color) !important;
+  box-shadow: unset !important
+}
+
+
+/* fad blur backdrop */
+.blur-fad #fad-background {
+  display: unset
+}
+
+.blur-fad #fad-art::before {
+  background: radial-gradient(#242424, #000)
+}
+
+.blur-fad #fad-art::after {
+  background-color: rgba(40, 40, 40, .1);
+  box-shadow: 0 0 1px rgba(100, 100, 100, .4)
+}
+
+.blur-fad #fad-progress {
+  background-color: rgba(200, 200, 200, .3) !important
+}
+
 
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground {
@@ -292,7 +323,7 @@
 
 /* rotate turntable */
 #fad-art-image {
-  animation: rotate-cover_img 20s linear infinite paused
+  animation: rotate-cover_img 24s linear infinite paused
 }
 
 @keyframes rotate-cover_img {

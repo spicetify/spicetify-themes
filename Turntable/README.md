@@ -4,6 +4,8 @@ Based on Spotify original theme.
 
 **Note:** Require Spicetify **v2.2.0** or higher! Otherwise, performance problems will happen when the turntable rotate!
 
+View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/master/CHANGELOG.md).
+
 ## Screenshots
 
 <div align="center">
@@ -15,7 +17,6 @@ Based on Spotify original theme.
 <div align="center">
   <img src="screenshots/full_app_display_vertical_mode.png" alt="full app display - vertical mode">
 </div>
-
 
 ## More
 
