@@ -403,7 +403,7 @@ html.sidebar-hide-text .GlueDropTarget span {
     position: absolute;
     width: var(--main-view-width);
     left: var(--sidebar-width);
-    bottom: calc(var(--main-gap) + var(--bar-height) - 12px / 2);
+    bottom: calc(var(--main-gap) + var(--bar-height) + 6px);
 }
 
 .Root.is-connectBarVisible .playback-bar {
