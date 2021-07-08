@@ -378,8 +378,8 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     margin: 4px 3.2vw;
     width: 90%;
     flex-shrink: 0;
-    padding-top: 13%;
-    padding-bottom: 13%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     box-sizing: border-box;
     position: relative;
     margin-bottom: 8px;
