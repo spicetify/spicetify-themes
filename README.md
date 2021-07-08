@@ -2,13 +2,13 @@
 
 This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify.
 
-You can add your own theme simply by opening a Pull Request (more info in the [CONTRIBUTING.md](./CONTRIBUTING.md)).
+You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
 ### **You can find a preview of all the themes in [THEMES.md](./THEMES.md).**
 
 ## Notes:
 
-*   **These themes require you to have the new Spotify UI (>v1.1.56) and Spicetify >v2.**
+*   **These themes require you to have the latest version of Spotify and Spicetify.**
 *   **To install Dribbblish and Turntable, follow the instructions in their READMEs**.
 *   **Spotify ad-blocked version is not supported.**
 
@@ -65,9 +65,7 @@ Use GitHub issues ONLY for bugs and requesting new features.
 
 If you are unsure about which channel to use, go for Spectrum.
 
-NOTE: Spotify ad-blocked version is not supported.
-
-## Useful links
+## Useful resources
 
 *   [Spicetify theme without free version UI elements (e.g. "Upgrade" button)](https://github.com/Daksh777/SpotifyNoPremium)
 *   [DribbblishDynamic theme for v2](https://github.com/JulienMaille/dribbblish-dynamic-theme)
