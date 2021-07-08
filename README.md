@@ -1,30 +1,57 @@
 # spicetify community themes
 
-This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify; you can add your own theme simply by opening a Pull Requests (more info in the Contributions section).
+This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify.
+
+You can add your own theme simply by opening a Pull Request (more info in the [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
 ### **You can find a preview of all the themes in [THEMES.md](./THEMES.md).**
 
-**New Spotify UI (>v1.1.56) and Spicetify >v2 are required**
+## Notes:
+
+*   **These themes require you to have the new Spotify UI (>v1.1.56) and Spicetify >v2.**
+*   **To install Dribbblish and Turntable, follow the instructions in their READMEs**.
+*   **Spotify ad-blocked version is not supported.**
 
 ## Installation and usage
 
 (If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
 
-Once you cloned the repository you'll need to put the files into the Themes folder. This varies between operating systems. The example shows the `Themes` directory for Linux. For other operating systems, see the `Themes` folder location [here](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes).
+1.  Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
+    ```bash
+    git clone https://github.com/morpheusthewhite/spicetify-themes.git
+    ```
 
-```bash
-cd spicetify-themes
-cp -r * ~/.config/spicetify/Themes
-```
+2.  Copy the files into the [Spicetify Themes folder](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes). Run:
 
-**NOTE: to install the themes below, you need to follow the instructions in its README**.
+    **Linux**
 
-* Dribbblish
-* DribbblishDynamic
-* Turntable
+    ```bash
+    cd spicetify-themes
+    cp -r * ~/.config/spicetify/Themes
+    ```
 
-After that you can choose which theme to apply just by running `spicetify config current_theme THEME_NAME`.
-Some themes have 2 or more different color schemes. You can switch between them, once selected the theme, with `spicetify config color_scheme SCHEME_NAME`.
+    **MacOS**
+
+    ```bash
+    cd spicetify-themes
+    cp -r * ~/spicetify_data/Themes
+    ```
+
+    **Windows**
+
+    ```powershell
+    cd spicetify-themes
+    cp * "$(spicetify -c | Split-Path)\Themes\"
+    ```
+
+3.  Choose which theme to apply just by running:
+    ```bash
+    spicetify config current_theme THEME_NAME
+    ```
+    Some themes have 2 or more different color schemes. After selecting the theme you can switch between them with:
+    ```bash
+    spicetify config color_scheme SCHEME_NAME
+    ```
 
 ## Contributions
 
@@ -40,8 +67,7 @@ If you are unsure about which channel to use, go for Spectrum.
 
 NOTE: Spotify ad-blocked version is not supported.
 
-## FAQ
+## Useful links
 
-### How can I remove free version UI elements (e.g. "Upgrade" button)?
-
-Use [this theme](https://github.com/Daksh777/SpotifyNoPremium).
+*   [Spicetify theme without free version UI elements (e.g. "Upgrade" button)](https://github.com/Daksh777/SpotifyNoPremium)
+*   [DribbblishDynamic theme for v2](https://github.com/JulienMaille/dribbblish-dynamic-theme)
