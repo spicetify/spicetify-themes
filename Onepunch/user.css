@@ -10,23 +10,22 @@
 .main-createPlaylistButton-createPlaylistIcon,
 .main-yourEpisodesButton-yourEpisodesIcon {
   background: var(--spice-text) !important;
-  border-radius: 0px !important;
+  border-radius: unset !important;
+  color: var(--spice-main) !important;
 }
 
 .main-collectionLinkButton-collectionLinkButton {
   color: var(--spice-main) !important;
 }
 
-.main-collectionLinkButton-collectionLinkButton
-  .main-collectionLinkButton-collectionLinkText,
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
 .main-createPlaylistButton-button,
 .main-rootlist-rootlistItemLink:link,
 .main-rootlist-rootlistItemLink:visited {
   color: var(--spice-text) !important;
 }
 
-.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected
-  .main-collectionLinkButton-icon {
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-selected .main-collectionLinkButton-icon {
   opacity: 0.7 !important;
 }
 
@@ -73,12 +72,11 @@
 }
 
 /* Topbar visibility bug */
-.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn) > * {
+.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn)>* {
   opacity: unset !important;
 }
 
-.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)
-  > * {
+.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)>* {
   opacity: 0 !important;
 }
 
@@ -93,7 +91,7 @@
 }
 
 .main-entityHeader-shadow {
-  box-shadow: 0 04px 20px #21212130;
+  box-shadow: 0 0 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
 }
 
 .main-trackList-playingIcon {
@@ -114,11 +112,12 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   color: var(--spice-subtext);
 }
 
-.main-entityTitle-subtitle {
-  color: var(--spice-extratext);
+/* artist page edits*/
+
+.artist-artistOverview-artistOverviewContent {
+  box-shadow: 0 -2px 5px 0 rgba(var(--spice-rgb-shadow), 0.7);
 }
 
-/* artist page edits*/
 .main-entityHeader-background.main-entityHeader-gradient {
   opacity: 0.4;
 }
@@ -129,9 +128,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .artist-artistPick-pickComment {
-  background: unset !important;
-  border-radius: 0px !important;
-  border-bottom: solid 2px var(--spice-text) !important;
+  background: var(--spice-sec-player) !important;
+  border-radius: 25px !important;
+  border-bottom: solid 2px var(--spice-sec-player) !important;
   color: var(--spice-text) !important;
 }
 
@@ -140,6 +139,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 /* home screen edits */
+
 .view-homeShortcutsGrid-name {
   color: var(--spice-text);
 }
@@ -171,7 +171,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* inside a page edits */
 .main-addButton-button {
-  color: rgba(var(--spice-rgb-card), 0.7) !important;
+  color: var(--spice-subtext) !important;
 }
 
 .main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker,
@@ -198,27 +198,79 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   background: var(--spice-extratext);
 }
 
-/* setting menu */
+/* setting page */
+
+.x-settings-container {
+  margin: 16px 180px !important;
+}
+
+.x-settings-title {
+  color: var(--spice-subtext) !important;
+}
+
+.main-dropDown-dropDown {
+  border: 0;
+  border-radius: 10px;
+}
 
 .main-dropDown-dropDown {
   background-color: var(--spice-button-disabled) !important;
   color: var(--spice-text) !important;
 }
 
-.x-settings-title {
-  color: var(--spice-tab-active) !important;
-}
-
-input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
-  background-color: var(--spice-button-knob) !important;
-}
-
 .x-toggle-indicator {
-  background: var(--spice-button-knob) !important;
+  background: var(--spice-button) !important;
+  box-shadow: 0 2px 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
 }
 
-input:hover:not([disabled]):not(:active) ~ .x-toggle-indicatorWrapper {
-  background-color: rgba(var(--spice-rgb-button), 0.5) !important;
+input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
+  background-color: var(--spice-button) !important;
+  box-shadow: 0 2px 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
+}
+
+input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
+}
+
+input:checked~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), 0.6) !important;
+}
+
+input:checked:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), 0.4) !important;
+}
+
+
+/* queue, album, recent, playlist, page edits */
+.queue-queue-container,
+.queue-playHistory-container {
+  margin: 40px 60px !important;
+}
+
+.main-actionBar-ActionBar,
+.x-actionBar-ActionBar {
+  margin: 0 40px !important;
+}
+
+/* podcast edits */
+.x-hTMLDescription-HTMLDescription,
+.x-expandableDescription-paragraph {
+  color: var(--spice-text) !important;
+}
+
+.x-seeMore-button,
+.x-expandableDescription-button {
+  color: var(--spice-button) !important;
+}
+
+.main-type-minuetBold {
+  color: var(--spice-extratext) !important;
+}
+
+.main-entityTitle-subtitle,
+.main-entityTitle-subtitle.main-entityTitle-large,
+.main-entityTitle-subtitle.main-entityTitle-bold {
+  color: var(--spice-subtext) !important;
 }
 
 /* search page edits */
@@ -246,20 +298,9 @@ input {
 }
 
 .main-userWidget-box {
-  background-color: unset !important;
-  border-radius: 0px !important;
-  border-bottom: solid 2px var(--spice-text) !important;
-  color: var(--spice-text) !important;
-}
-
-.main-userWidget-box:focus,
-.main-userWidget-box:hover,
-.main-userWidget-box[data-context-menu-open="true"] {
-  border-radius: 10px !important;
-}
-
-.main-avatar-image {
-  padding-bottom: 8% !important;
+  background-color: var(--spice-card) !important;
+  border: unset !important;
+  color: var(--spice-subtext) !important;
 }
 
 /* card edits */
@@ -276,7 +317,8 @@ input {
 
 .main-contextMenu-menu,
 .main-card-card:focus-within,
-.main-deletePlaylistDialog-container {
+.main-deletePlaylistDialog-container,
+.main-aboutRecsModal-container {
   background-color: var(--spice-card) !important;
 }
 
@@ -313,7 +355,30 @@ input {
   background-color: var(--spice-card) !important;
 }
 
-/* mini player edits */
+/* now playing bar edits */
+
+.Root__now-playing-bar {
+  background-color: var(--spice-sec-player) !important;
+  box-shadow: 0 -2px 5px 0 rgba(var(--spice-rgb-shadow), 0.5) !important;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.main-nowPlayingBar-container {
+  background-color: var(--spice-sec-player) !important;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.main-connectBar-connectBar.main-connectBar-FullscreenModeButtonEnabled.main-type-mesto {
+  color: var(--spice-sidebar) !important;
+}
+
+.progress-bar {
+  --progress-bar-height: 5px !important;
+}
+
+.progress-bar__bg {
+  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
+}
 
 .progress-bar--is-active .progress-bar__fg,
 :not(.no-focus-outline) .progress-bar:focus-within .progress-bar__fg {
@@ -331,11 +396,6 @@ input {
 
 .cover-art,
 .cover-art .cover-art-image {
-  border-radius: 10px;
+  border-radius: 10px !important;
   background-color: var(--spice-sec-player) !important;
-}
-
-.main-nowPlayingBar-container {
-  background-color: var(--spice-sec-player) !important;
-  border-top: unset !important;
 }
