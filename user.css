@@ -817,6 +817,9 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
     background-color: rgba(var(--spice-rgb-selected-row), .3);
 }
 
+.bookmark-filter {
+    color: var(--spice-main) !important;
+}
 
 /* 1.1.56 */
 .main-navBar-navBar {

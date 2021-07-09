@@ -1,4 +1,4 @@
-let current = '1.6'
+let current = '1.7'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
