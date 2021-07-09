@@ -20,9 +20,15 @@
 
 .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
 .main-createPlaylistButton-button,
-.main-rootlist-rootlistItemLink:link,
+.main-rootlist-rootlistItemLink,
 .main-rootlist-rootlistItemLink:visited {
   color: var(--spice-text) !important;
+}
+
+.main-rootlist-rootlistItemLinkActive,
+.main-rootlist-rootlistItemLink:hover,
+.main-rootlist-textWrapper:hover {
+  color: var(--spice-subtext) !important;
 }
 
 .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-selected .main-collectionLinkButton-icon {
