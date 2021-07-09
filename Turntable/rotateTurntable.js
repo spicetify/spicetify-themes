@@ -7,8 +7,7 @@ window.addEventListener("load", rotateTurntable = () => {
   }
 
   const adModalStyle = document.createElement("style");
-  const STYLE_FOR_AD_MODAL =
-`
+  const STYLE_FOR_AD_MODAL = `
 .ReactModalPortal {
   display: none
 }
@@ -29,59 +28,45 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleFadControl(event) {
-    event.stopPropagation();
-  }
-
   function handleFadDblclick() {
     const fadControlsBtns = document.querySelectorAll("#fad-controls button");
 
     for (const fadControl of fadControlsBtns) {
-      fadControl.addEventListener("dblclick", handleFadControl);
+      fadControl.addEventListener("dblclick", event => event.stopPropagation());
     }
   }
 
   function handleConfigSwitch() {
-    const genericModal = document.querySelector("generic-modal");
-
-    document.querySelectorAll("#popup-config-container > div")[0].remove();
-
-    handleInitalStatus(genericModal);
-  }
-
-  function handleInitalStatus(genericModal) {
-    genericModal.remove();
+    document.querySelector("generic-modal").remove();
 
     handleRotate();
     handleFadDblclick();
   }
 
-  function handleBackdrop() {
-    const fadClassList = document.querySelector("#full-app-display").classList;
-
+  function handleBackdrop(fullAppDisplay, setBlurBackdropBtn) {
     if (!+localStorage.getItem("enableBlurFad")) {
-      fadClassList.add("blur-fad");
+      fullAppDisplay.setAttribute("data-is-blur-fad", "true");
+      setBlurBackdropBtn.classList.remove("disabled");
 
       localStorage.setItem("enableBlurFad", "1");
     } else {
-      fadClassList.remove("blur-fad");
+      fullAppDisplay.setAttribute("data-is-blur-fad", "false");
+      setBlurBackdropBtn.classList.add("disabled");
 
       localStorage.setItem("enableBlurFad", "0");
     }
   }
 
-  function handleContextMenu() {
-    const configPopupCloseBtn = document.querySelector(".main-trackCreditsModal-closeBtn");
+  function handleContextMenu(fullAppDisplay) {
     const configContainer = document.querySelector("#popup-config-container");
     const settingRowReferenceNode = document.querySelectorAll("#popup-config-container > div")[0];
 
     const settingRowContainer = document.createElement("div");
-    const settingRow =
-`
+    const settingRow = `
 <div class="setting-row">
   <label class="col description">Enable blur backdrop</label>
   <div class="col action">
-    <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}">
+    <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
       <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
         <path d="M13.985 2.383L5.127 12.754 1.388 8.375l-.658.77 4.397 5.149 9.618-11.262z"></path>
       </svg>
@@ -92,17 +77,14 @@ window.addEventListener("load", rotateTurntable = () => {
 
     settingRowContainer.innerHTML = settingRow;
     configContainer.insertBefore(settingRowContainer, settingRowReferenceNode);
-
-    const setBlurBackdropNode = document.querySelectorAll("#popup-config-container > div")[0];
     const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
-
-    configPopupCloseBtn.addEventListener("click", () => setBlurBackdropNode.remove());
+    const setBlurBackdropBtn = document.querySelector("[data-blur-fad]");
 
     for (const configSwitch of configSwitchBtns) {
       configSwitch.addEventListener("click", handleConfigSwitch);
     }
 
-    setBlurBackdropNode.querySelector("button").addEventListener("click", handleBackdrop);
+    setBlurBackdropBtn.addEventListener("click", () => handleBackdrop(fullAppDisplay, setBlurBackdropBtn));
   }
 
   function handleMainInterface() {
@@ -132,10 +114,12 @@ window.addEventListener("load", rotateTurntable = () => {
     const topbarContentFadeIn = document.querySelector(".main-entityHeader-topbarContentFadeIn");
     const fullAppDisplay = document.querySelector("#full-app-display");
     const fadArt = document.querySelector("#fad-art-image");
-    const fadClassList = document.querySelector("#full-app-display").classList;
 
-    if (!clickedFadBtn && +localStorage.getItem("enableBlurFad")) fadClassList.add("blur-fad");
-    if (!clickedFadBtn) clickedFadBtn = true;
+    if (!clickedFadBtn) {
+      if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.setAttribute("data-is-blur-fad", "true");
+
+      clickedFadBtn = true;
+    }
 
     playState
       ? fadArt.style.animationPlayState = "running"
@@ -151,7 +135,9 @@ window.addEventListener("load", rotateTurntable = () => {
     mainInterface.style.display = "none";
     document.body.append(adModalStyle);
 
-    fullAppDisplay.addEventListener("contextmenu", handleContextMenu);
+    fullAppDisplay.addEventListener("contextmenu", () => {
+      if (!document.querySelector("[data-blur-fad]")) handleContextMenu(fullAppDisplay);
+    });
 
     fullAppDisplay.addEventListener("dblclick", handleMainInterface);
   });

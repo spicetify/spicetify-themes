@@ -5,10 +5,16 @@
 }
 
 
-/* remove upgrade button, user name */
+/* Remove Upgrade Button, User Name */
 .main-topBar-UpgradeButton,
 .main-userWidget-displayName {
   display: none
+}
+
+
+/* Notification Dot */
+.main-userWidget-notificationDot {
+  color: #f00
 }
 
 
@@ -66,7 +72,7 @@
 }
 
 
-/* cover image */
+/* Cover Image */
 .main-nowPlayingWidget-coverExpanded{
   transform: translateX(-78px)
 }
@@ -90,7 +96,7 @@
   box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
-/* expand & collapse button */
+/* Expand & Collapse Button */
 .main-coverSlotCollapsed-expandButton {
   top: 50%;
   left: 50%;
@@ -126,7 +132,7 @@
 }
 
 
-/* progress bar */
+/* Progress Bar */
 .Root__now-playing-bar {
   position: relative
 }
@@ -174,7 +180,7 @@
 }
 
 
-/* full app display */
+/* Full App Display */
 #full-app-display {
   background: radial-gradient(#242424, #1f1f1f)
 }
@@ -295,21 +301,21 @@
 }
 
 
-/* fad blur backdrop */
-.blur-fad #fad-background {
+/* Blur the Full App Display */
+[data-is-blur-fad = "true"] #fad-background {
   display: unset
 }
 
-.blur-fad #fad-art::before {
+[data-is-blur-fad = "true"] #fad-art::before {
   background: radial-gradient(#242424, #000)
 }
 
-.blur-fad #fad-art::after {
+[data-is-blur-fad = "true"] #fad-art::after {
   background-color: rgba(40, 40, 40, .1);
   box-shadow: 0 0 1px rgba(100, 100, 100, .4)
 }
 
-.blur-fad #fad-progress {
+[data-is-blur-fad = "true"] #fad-progress {
   background-color: rgba(200, 200, 200, .3) !important
 }
 
@@ -321,7 +327,7 @@
 }
 
 
-/* rotate turntable */
+/* Rotate turntable */
 #fad-art-image {
   animation: rotate-cover_img 24s linear infinite paused
 }
