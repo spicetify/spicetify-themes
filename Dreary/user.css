@@ -119,7 +119,11 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-playbackBarRemainingTime-container {
-    display: none;
+    position: absolute;
+    left: 45.7%;
+    top: 60%;
+    padding-left: 50px;
+    color: var(--spice-sidebar) !important;
 }
 
 .player-controls__buttons {
@@ -451,4 +455,9 @@ svg[Attributes Style] {
 .main-createPlaylistButton-button {
     padding: 0 16px !important;
     }
-   
+.main-trackCreditsModal-closeBtn{
+    color: var(--spice-sub-button) !important;
+   }
+   .main-contextMenu-menu{
+        max-height: 400px;
+   }
