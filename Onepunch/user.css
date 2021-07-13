@@ -255,7 +255,6 @@ input {
 .main-userWidget-box:focus,
 .main-userWidget-box:hover,
 .main-userWidget-box[data-context-menu-open=true] {
-  background-color: rgba(var(--spice-rgb-button), .5) !important;
   border-radius: 10px !important;
 }
 
@@ -282,9 +281,28 @@ input {
   background-color: var(--spice-sec-card) !important;
 }
 
-.main-keyboardShortcutsHelpModal-container {
+.main-keyboardShortcutsHelpModal-container,
+.main-trackCreditsModal-container {
   background-color: var(--spice-main) !important;
   color: var(--spice-text) !important;
+}
+
+.main-keyboardShortcutsHelpModal-header,
+.main-trackCreditsModal-header {
+  color: var(--spice-notification) !important;
+}
+
+.main-trackCreditsModal-sectionTitle {
+  color: var(--spice-subtext) !important;
+}
+
+.main-type-canon {
+  color: var(--spice-extratext) !important;
+}
+
+/* profile page edits */
+.main-cardImage-imageWrapper {
+  background-color: var(--spice-sec-card) !important;
 }
 
 /* mini player edits */
