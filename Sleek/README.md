@@ -8,24 +8,14 @@
 ### Deep
 ![Deep Screenshot](deep.png)
 
-### Psycho
-![Psycho Screenshot](psycho.png)
-
 ### Deeper
 ![Deeper Screenshot](deeper.png)
 
-### Lover
-![Lover Screenshot](lover.png)
+### Psycho
+![Psycho Screenshot](psycho.png)
 
-###Earthy
-![Earthy Screenshot](earthy.png)
+## Info
 
-##Important
+A simple and sleek theme that builds on the basic Spotify UI. Created by [@harbassan](https://github.com/harbassan)
 
-Sidebar Config option must be enabled for theme to work properly, you can use it without however some features may not be available.
-
-## More
-
-A simple and sleek theme that builds on the basic Spotify UI.
-
-BIB color scheme based on original [BIB-Green](https://github.com/morpheusthewhite/spicetify-themes/tree/master/BIB-Green) 
+BIB color scheme based on original theme: [BIB-Green](https://github.com/morpheusthewhite/spicetify-themes/tree/master/BIB-Green) 
