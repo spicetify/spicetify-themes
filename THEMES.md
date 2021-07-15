@@ -10,6 +10,29 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Dreary
+
+#### BIB
+![BIB Screenshot](bib.png)
+
+#### Deep
+![Deep Screenshot](deep.png)
+
+#### Psycho
+![Psycho Screenshot](psycho.png)
+
+#### Deeper
+![Deeper Screenshot](deeper.png)
+
+#### Lover
+![Lover Screenshot](lover.png)
+
+#### RainforestCafe
+![Rainforest Cafe Screenshot](rainforestcafe.png)
+
+#### Mono
+![Mono Screenshot](mono.png)
+
 ## Dribbblish
 
 #### Base
