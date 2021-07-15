@@ -56,49 +56,20 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Sleek
 
-#### BladeRunner
-
-![BladeRunner](Sleek/bladerunner.png)
-
-#### Cherry
-
-![Cherry](Sleek/cherry.png)
-
-#### Coral
-
-![Coral](Sleek/coral.png)
-
-#### Deep
-
-![Deep](Sleek/deep.png)
-
-#### Deeper
-
-![Deeper](Sleek/deeper.png)
-
-#### Elementary
-
-![Elementary](Sleek/elementary.png)
-
-#### Futura
-
-![Futura](Sleek/futura.png)
-
-#### Nord
-
-![Nord]](Sleek/nord.png)
-
-#### Psycho
-
-![Psycho](Sleek/psycho.png)
-
-#### UltraBlack
-
-![UltraBlack](Sleek/ultrablack.png)
-
-#### Wealthy
-
-![Wealthy](Sleek/wealthy.png)
+| | |
+|:-:|:-:|
+| ![BladeRunner](Sleek/bladerunner.png) | ![Cherry](Sleek/cherry.png) |
+| BladeRunner | Cherry |
+| ![Coral](Sleek/coral.png) | ![Deep](Sleek/deep.png) |
+| Coral | Deep |
+| ![Deeper](Sleek/deeper.png) | ![Elementary](Sleek/elementary.png) |
+| Deeper | Elementary |
+| ![Futura](Sleek/futura.png) | ![Nord](Sleek/nord.png) |
+| Futura | Nord |
+| ![Psycho](Sleek/psycho.png) | ![UltraBlack](Sleek/ultrablack.png) |
+| Psycho | UltraBlack |
+| ![Wealthy](Sleek/wealthy.png) | |
+| Wealthy | |
 
 ## Turntable
 
