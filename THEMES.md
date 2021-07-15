@@ -13,25 +13,19 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## Dreary
 
 #### BIB
-![BIB Screenshot](bib.png)
-
-#### Deep
-![Deep Screenshot](deep.png)
+![BIB Screenshot](Dreary/bib.png)
 
 #### Psycho
-![Psycho Screenshot](psycho.png)
+![Psycho Screenshot](Dreary/psycho.png)
 
 #### Deeper
-![Deeper Screenshot](deeper.png)
-
-#### Lover
-![Lover Screenshot](lover.png)
+![Deeper Screenshot](Dreary/deeper.png)
 
 #### RainforestCafe
-![Rainforest Cafe Screenshot](rainforestcafe.png)
+![Rainforest Cafe Screenshot](Dreary/rainforestcafe.png)
 
 #### Mono
-![Mono Screenshot](mono.png)
+![Mono Screenshot](Dreary/mono.png)
 
 ## Dribbblish
 
