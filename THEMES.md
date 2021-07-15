@@ -66,7 +66,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## DanDrumStoneNew
 
-![DanDrumStoneNew](./images/SpicetifyDanDrumStoneNew.png)
+![DanDrumStoneNew](./DanDrumStoneNew/SpicetifyDanDrumStoneNew.png)
 
 ## Dark
 
@@ -188,7 +188,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Base
 
-![JarvisBot](./images/SpicetifyJarvisBot.png)
+![JarvisBot](./JarvisBot/SpicetifyJarvisBot.png)
 
 #### CherryBlossom
 
@@ -200,7 +200,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### DanDrumStone
 
-![DanDrumStone](./images/SpicetifyDanDrumStone.png)
+![DanDrumStone](./JarvisBot/SpicetifyDanDrumStone.png)
 
 ## Kaapi
 
@@ -344,7 +344,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Base
 
-![TychoAwake](./images/SpicetifyTychoAwake.png)
+![TychoAwake](./TychoAwake/SpicetifyTychoAwake.png)
 
 #### Lovelace
 
@@ -386,7 +386,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## WintergatanBlueprint
 
-![WintergatanBlueprint](./images/SpicetifyWintergatanBlueprint.png)
+![WintergatanBlueprint](./WintergatanBlueprint/SpicetifyWintergatanBlueprint.png)
 
 ## YoutubeDark
 
