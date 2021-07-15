@@ -2,6 +2,7 @@
 
 invalid_themes=$(find . -maxdepth 1 -type d \
     ! -regex "./\..*" \
+    ! -regex "./_Extra" \
     ! -regex "\." \
     ! -regex "\./[A-Z][a-z0-9]*\(-?[A-Z][a-z0-9]*\)*")
 

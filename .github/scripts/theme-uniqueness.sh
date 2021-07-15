@@ -3,13 +3,13 @@
 # hidden folders are skipped in this
 for dir1 in *; do
     # skip files
-    if [[ -f "$dir1" ]]; then
+    if [[ -f "$dir1" ]] || [[ "$dir1" == "_Extra" ]] ; then
         continue
     fi
 
     for dir2 in *; do
         # skip files
-        if [[ -f "$dir2" ]]; then
+        if [[ -f "$dir2" ]] || [[ "$dir2" == "_Extra" ]]; then
             continue
         fi
         
