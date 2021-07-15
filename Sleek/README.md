@@ -15,7 +15,7 @@
 ### Futura
 ![Futura](futura.png)
 ### Nord
-![Nord]](nord.png)
+![Nord](nord.png)
 ### Psycho
 ![Psycho](psycho.png)
 ### UltraBlack
