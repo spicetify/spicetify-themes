@@ -56,21 +56,49 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Sleek
 
-#### BIB
+#### BladeRunner
 
-![BIB Screenshot](Sleek/bib.png)
+![BladeRunner](Sleek/bladerunner.png)
+
+#### Cherry
+
+![Cherry](Sleek/cherry.png)
+
+#### Coral
+
+![Coral](Sleek/coral.png)
 
 #### Deep
 
-![Deep Screenshot](Sleek/deep.png)
+![Deep](Sleek/deep.png)
 
 #### Deeper
 
-![Deeper Screenshot](Sleek/deeper.png)
+![Deeper](Sleek/deeper.png)
+
+#### Elementary
+
+![Elementary](Sleek/elementary.png)
+
+#### Futura
+
+![Futura](Sleek/futura.png)
+
+#### Nord
+
+![Nord]](Sleek/nord.png)
 
 #### Psycho
 
-![Psycho Screenshot](Sleek/psycho.png)
+![Psycho](Sleek/psycho.png)
+
+#### UltraBlack
+
+![UltraBlack](Sleek/ultrablack.png)
+
+#### Wealthy
+
+![Wealthy](Sleek/wealthy.png)
 
 ## Turntable
 
