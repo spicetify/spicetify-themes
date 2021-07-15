@@ -53,6 +53,11 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
     spicetify config color_scheme SCHEME_NAME
     ```
 
+### Extra
+
+The `_Extra` folder contains additional resources for tweaking the look of
+Spotify. More info in its [README](./\_Extra/README.md).
+
 ## Contributions
 
 We've set up a separate document for our [contribution guidelines](./CONTRIBUTING.md).
