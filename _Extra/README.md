@@ -1,7 +1,7 @@
 # Extras
 
 This folder contains additional resources for tweaking the look of
-Spotify.
+Spotify. More info in each subfolder.
 
 | Folder      | Description |
 | ----------- | ----------- |
