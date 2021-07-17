@@ -1,11 +1,14 @@
 /* Dreary Theme*/
+
 .main-rootlist-rootlistDividerGradient {
     display: none;
     visibility: hidden !important;
 }
-.main-rootlist-rootlistDivider{
+
+.main-rootlist-rootlistDivider {
     background-color: var(--spice-text) !important;
 }
+
 input {
     background-color: unset !important;
     border-bottom: solid 1px var(--spice-text) !important;
@@ -56,9 +59,9 @@ input {
 }
 
 .main-trackList-playingIcon {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
-  background: var(--spice-text);
-  content-visibility: hidden;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+    background: var(--spice-text);
+    content-visibility: hidden;
 }
 
 span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
@@ -88,10 +91,10 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 /* Fix design fault */
 
 @media (min-width: 1024px) {
-.main-trackList-trackListHeader {
-    border-bottom: solid 1px;
-    margin: 10px;
-}
+    .main-trackList-trackListHeader {
+        border-bottom: solid 1px;
+        margin: 10px;
+    }
 }
 
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
@@ -107,7 +110,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .progress-bar__bg, .progress-bar__fg_wrapper {
     border-radius: 0;
-    z-index:1;
+    z-index: 1;
 }
 
 .playback-bar__progress-time {
@@ -119,7 +122,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     bottom: 83px;
     position: absolute;
     left: -1px;
-    z-index:1;
+    z-index: 1;
 }
 
 .main-playbackBarRemainingTime-container {
@@ -128,7 +131,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     top: 60%;
     border: solid 1px;
     border-radius: 20px;
-    z-index:-1;
+    z-index: 5;
     color: var(--spice-subbutton-text) !important;
 }
 
@@ -147,7 +150,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .player-controls__buttons {
     align-items: center;
-    margin-left:250px;
+    position: relative;
+    left: 2.3%;
 }
 
 .main-entityTitle-subtitle.main-entityTitle-small.main-entityTitle-uppercase.main-entityTitle-bold {
@@ -166,7 +170,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* Hide Profile Options in Nav Bar */
 
-.main-userWidget-displayName, .main-userWidget-notificationIndicator {
+.main-userWidget-notificationIndicator {
     display: none;
 }
 
@@ -175,8 +179,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-userWidget-box {
-    color: var(--spice-subtext);
-    background-color: transparent !important;
+    background-color: var(--spice-sidebar);
+    text-decoration-line: underline;
 }
 
 /* Improve Sidebar Buttons */
@@ -191,7 +195,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 .main-trackList-trackListHeaderRow {
     border-bottom: 1px solid rgba(var(--spice-rgb-button-disabled), .8)
-
 }
 
 .main-trackList-trackListHeaderStuck .main-trackList-trackListHeaderRow {
@@ -228,7 +231,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .main-playButton-PlayButton.main-playButton-primary {
     color: var(--spice-main);
     background-color: var(--spice-playback-bar);
-    box-shadow: var(--spice-shadow) 0 5px 4px 0px;
     cursor: pointer !important;
 }
 
@@ -241,7 +243,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .x-downloadButton-button {
-    box-shadow: var(--spice-shadow) 0 5px 4px 0px;
     background: var(--spice-player);
     border-radius: 50%;
 }
@@ -261,15 +262,16 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus, .main-navBar-navBarLinkActive:hover, .logo {
-    color: var(--spice-button-text) !important;
+    color: var(--spice-text) !important;
+    background-color: var(--spice-selected-row);
 }
 
 .progress-bar__slider {
-    opacity: 1;
-    background-color: var(--spice-sidebar);
-    height: 16px;
-    border: solid 2px var(--spice-subtext);
-    width: 16px;
+    opacity: 1 !important;
+    background-color: var(--spice-sidebar)!important;
+    height: 16px!important;
+    border: solid 2px var(--spice-subtext)!important;
+    width: 16px!important;
 }
 
 a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
@@ -370,9 +372,6 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     color: var(--spice-shadow) !important;
 }
 
-.main-buttons-button {
-    color: var(--spice-subbutton-text) !important;
-}
 
 .main-repeatButton-button, .main-skipForwardButton-button, .main-skipBackButton-button, .main-shuffleButton-button {
     cursor: pointer !important;
@@ -441,9 +440,7 @@ svg[Attributes Style] {
     color: var(--spice-subbutton-text) !important;
 }
 
-.main-type-mesto {
-    color: var(--spice-subbutton-text);
-}
+
 .view-homeShortcutsGrid-shortcut {
     background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
     border: solid 3px var(--spice-text);
@@ -454,55 +451,75 @@ svg[Attributes Style] {
 
 .main-card-card .main-card-cardLink {
     border: solid 3px;
-    transition:500ms;
-    border-radius:27px;
-    
+    transition: 500ms;
+    border-radius: 27px;
 }
-.main-card-card{
-    border-radius:27px!important;
+
+.main-card-card {
+    border-radius: 27px!important;
 }
-.view-homeShortcutsGrid-shortcut:hover,.main-card-card .main-card-cardLink:hover {
-    border-color:var(--spice-button);
+
+.view-homeShortcutsGrid-shortcut:hover, .main-card-card .main-card-cardLink:hover {
+    border-color: var(--spice-button);
 }
+
 .main-createPlaylistButton-button {
     padding: 0 16px !important;
+}
+
+.main-trackCreditsModal-closeBtn {
+    color: var(--spice-button-disabled) !important;
+}
+
+.main-contextMenu-menu {
+    max-height: 400px;
+    opacity: .9676;
+}
+    .main-trackList-trackList {
+        border-radius: 30px;
+        background-color: var(--spice-player);
+        border: 1px solid;
     }
-.main-trackCreditsModal-closeBtn{
-    color: var(--spice-sub-button) !important;
+    .main-buddyFeed-friendsFeedContainer {
+        border-left: solid 2px var(--spice-text);
+    }
+    .main-yourEpisodesButton-yourEpisodesIcon {
+        background: var(--spice-text);
+    }
+    .main-yourEpisodesButton-yourEpisodesIcon path {
+        fill: var(--spice-player);
+        opacity: 0.7;
+    }
+    .main-navBar-entryPoints>div:first-of-type {
+        margin-top: 20px;
+    }
+    .main-nowPlayingBar-left {}
+    .cMigZB {
+        cursor: pointer;
+    }
+    .control-button {
+        color: var(--spice-misc);
+    }
+    .main-buddyFeed-buddyFeed {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .main-buddyFeed-friendActivity {
+        border-bottom: solid 1px;
+    }
+    .collection-collectionEntityHeroCard-likedSongs {
+        background: linear-gradient(149.46deg, var(--spice-sidebar), var(--spice-main) 99.16%) !important;
+    }
+
+    .main-repeatButton-button[disabled] {
+        color: var(--spice-button);
+    }
+    .main-shuffleButton-button[disabled] {
+        color: var(--spice-button);
+    }
+    .progress-bar_bg {
+        z-index: 20;
+    }
+   .main-deletePlaylistDialog-secondaryButton{
+    color:var(--spice-subbutton-text);
    }
-   .main-contextMenu-menu{
-        max-height: 400px;
-   }
-   .main-trackList-trackList {
-    border-radius: 30px;
-    background-color: var(--spice-player);
-    border: 1px solid;
-}
-.main-buddyFeed-friendsFeedContainer{
-    border-left: solid 2px var(--spice-text);
-}
-
-.main-yourEpisodesButton-yourEpisodesIcon {
-    background: var(--spice-text);
-}
-
-.main-yourEpisodesButton-yourEpisodesIcon path {
-    fill: var(--spice-misc);
-}
-
-.main-navBar-entryPoints > div:first-of-type {
-    margin-top: 20px;
-}
-.main-nowPlayingBar-left {
-    min-width: 200px;
-    width: 0%;
-    border-radius: 10px;
-    background-color: var(--spice-card);
-    
-}
-.cMigZB {
-    cursor: pointer;
-}
-.control-button {
-    color:var(--spice-misc);
-}

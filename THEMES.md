@@ -21,11 +21,11 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Deeper
 ![Deeper Screenshot](Dreary/deeper.png)
 
-#### RainforestCafe
-![Rainforest Cafe Screenshot](Dreary/rainforestcafe.png)
-
 #### Mono
 ![Mono Screenshot](Dreary/mono.png)
+
+#### Golden
+![Golden Screenshot](Dreary/golden.png)
 
 ## Dribbblish
 

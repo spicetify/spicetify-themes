@@ -5,23 +5,17 @@
 ### BIB
 ![BIB Screenshot](bib.png)
 
-### Deep
-![Deep Screenshot](deep.png)
-
 ### Psycho
 ![Psycho Screenshot](psycho.png)
 
 ### Deeper
 ![Deeper Screenshot](deeper.png)
 
-### Lover
-![Lover Screenshot](lover.png)
-
-### RainforestCafe
-![Rainforest Cafe Screenshot](rainforestcafe.png)
-
 ### Mono
 ![Mono Screenshot](mono.png)
+
+### Golden
+![Golden Screenshot](golden.png)
 
 ##Important
 Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available, such as edits to the sidebar.
