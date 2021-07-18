@@ -17,9 +17,8 @@
 ### Golden
 ![Golden Screenshot](golden.png)
 
-##Important
-Sidebar Config option must be enabled for theme to work properly, you can use it without, however some features may not be available, such as edits to the sidebar.
-
+## Important
+Certain aspects of the theme, such as the borders around playlist names, requires Sidebar Config to be enabled. It is not requires but recommended.
 
 ## More
 
