@@ -132,7 +132,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     border: solid 1px;
     border-radius: 20px;
     z-index: 5;
-    color: var(--spice-subbutton-text) !important;
+    color: var(--spice-subtext) !important;
 }
 
 .player-controls__buttons {
@@ -523,3 +523,6 @@ svg[Attributes Style] {
    .main-deletePlaylistDialog-secondaryButton{
     color:var(--spice-subbutton-text);
    }
+   .main-connectToFacebook-facebookButton {
+    color: var(--spice-subbutton-text);
+}
