@@ -18,7 +18,9 @@
 ![Golden Screenshot](golden.png)
 
 ## Important
-Certain aspects of the theme, such as the borders around playlist names, requires Sidebar Config to be enabled. It is not requires but recommended.
+Certain aspects of the theme, such as the borders around playlist names, requires Sidebar Config to be enabled. It is not required but recommended.
+
+##### To enable: `spicetify config sidebar_config 1`
 
 ## More
 
