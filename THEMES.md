@@ -10,6 +10,23 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/ocean.png)
 
+## Dreary
+
+#### BIB
+![BIB Screenshot](Dreary/bib.png)
+
+#### Psycho
+![Psycho Screenshot](Dreary/psycho.png)
+
+#### Deeper
+![Deeper Screenshot](Dreary/deeper.png)
+
+#### Mono
+![Mono Screenshot](Dreary/mono.png)
+
+#### Golden
+![Golden Screenshot](Dreary/golden.png)
+
 ## Dribbblish
 
 #### Base
