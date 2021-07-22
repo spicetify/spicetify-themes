@@ -31,7 +31,7 @@ curl --fail --location --progress-bar --output "$tar_file" "$download_uri"
 cd "$spicetify_install"
 
 echo "EXTRACTING     $tar_file"
-unzip "$tar_file"
+unzip "$tar_file" | yes
 
 echo "REMOVING       $tar_file"
 rm "$tar_file"
@@ -44,7 +44,7 @@ if [ ! -d "$sp_dot_dir" ]; then
 fi
 
 echo "COPYING"
-cp -rf "$spicetify_install/dribbblish-dynamic-theme-${version}/." "$sp_dot_dir"
+cp -rf "$spicetify_install/dribbblish-dynamic-theme-${version}/." "$sp_dot_dir" | yes
 
 echo "INSTALLING"
 cd "$(dirname "$(spicetify -c)")/Themes/DribbblishDynamic"
