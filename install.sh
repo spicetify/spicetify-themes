@@ -31,7 +31,7 @@ curl --fail --location --progress-bar --output "$tar_file" "$download_uri"
 cd "$spicetify_install"
 
 echo "EXTRACTING     $tar_file"
-unzip "$tar_file"
+unzip -o "$tar_file"
 
 echo "REMOVING       $tar_file"
 rm "$tar_file"
