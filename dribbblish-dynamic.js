@@ -248,7 +248,7 @@ async function songchange() {
 Spicetify.Player.addEventListener("songchange", songchange)
 
 function pickCoverColor(img) {
-    var swatches = new Vibrant(img, 12).swatches()
+    var swatches = new Vibrant(img, 5).swatches()
     cols = isLight(mainColorBg) ? ["Vibrant", "DarkVibrant", "Muted", "LightVibrant"]
                                 : ["Vibrant", "LightVibrant", "Muted", "DarkVibrant"]
     mainColor = "#509bf5"
