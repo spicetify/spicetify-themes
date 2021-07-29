@@ -199,6 +199,10 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   padding: 0 5px;
 }
 
+.main-entityTitle-subtitle.main-entityTitle-gray {
+  color: rgba(var(--spice-rgb-text), 0.7) !important;
+}
+
 .os-theme-spotify.os-host-transition
   > .os-scrollbar-vertical
   > .os-scrollbar-track
