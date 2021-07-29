@@ -10,6 +10,8 @@
 ![nord-light](nord-light.png)
 ### Nord-Dark
 ![nord-dark](nord-dark.png)
+### Nord-Superdark
+![nord-superdark](nord-superdark.png)
 ### Beach-Sunset
 ![beach-sunset](beach-sunset.png)
 ### Purple
