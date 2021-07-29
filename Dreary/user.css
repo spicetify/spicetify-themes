@@ -463,10 +463,11 @@ svg[Attributes Style] {
     border-color: var(--spice-button);
 }
 
-.main-createPlaylistButton-button {
-    padding: 0 16px !important;
+.main-createPlaylistButton-button, .main-collectionLinkButton-collectionLinkButton{
+   padding-left: 16px !important;
+padding-top: 8px;
 }
-
+ 
 .main-trackCreditsModal-closeBtn {
     color: var(--spice-button-disabled) !important;
 }
