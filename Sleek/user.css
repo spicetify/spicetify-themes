@@ -298,8 +298,8 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 
 /* Main Play Button Change */
 .main-playButton-PlayButton.main-playButton-primary {
-  color: var(--spice-text);
-  background-color: var(--spice-button);
+  color: var(--spice-button-text);
+  background-color: var(--spice-play-button);
   box-shadow: var(--spice-shadow) 0 5px 4px 0px;
   transition-duration: 0.15s !important;
 }
