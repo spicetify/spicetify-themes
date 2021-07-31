@@ -113,8 +113,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 }
 
 /* Round Cover Art */
-.cover-art-image,
-.cover-art {
+.main-coverSlotCollapsed-container .cover-art-image {
   border-radius: 10%;
   transition-duration: 0.15s;
 }
