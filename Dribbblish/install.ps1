@@ -7,10 +7,10 @@ if ($null -eq $checkSpice) {
 
 Write-Host "Downloading themes package:" -ForegroundColor Green
 $zipFile = "$env:TEMP\spicetify-themes.zip"
-Invoke-WebRequest "https://github.com/morpheusthewhite/spicetify-themes/archive/refs/heads/v2.zip" -OutFile $zipFile
+Invoke-WebRequest "https://github.com/morpheusthewhite/spicetify-themes/archive/refs/heads/master.zip" -OutFile $zipFile
 
 Write-Host "Extracting themes package:" -ForegroundColor Green
-$extractPath = "$env:TEMP\spicetify-themes-2"
+$extractPath = "$env:TEMP\spicetify-themes-master"
 if (Test-Path $extractPath) {
     Remove-Item $extractPath -Recurse -Force
 }
