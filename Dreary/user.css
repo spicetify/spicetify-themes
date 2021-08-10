@@ -527,30 +527,3 @@ padding-top: 8px;
    .main-connectToFacebook-facebookButton {
     color: var(--spice-subbutton-text);
 }
-.div.GlueDropTarget.personal-library >*.active {
-    background: var(--spice-selected-row);
-}
-.main-rootlist-topSentinel{
-    right:-10px;
-}
-
-.main-rootlist-rootlistItem {
-    margin: 4px 3.2vw;
-    width: 90%;
-    flex-shrink: 0;
-    padding-top: 14%;
-    padding-bottom: 14%;
-    box-sizing: border-box;
-    position: relative;
-    margin-bottom: 8px;
-    border-radius: 10px;
-    border: 2px solid var(--spice-text);
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    overflow-y:scroll;
-    transition: all 500ms;
-}
-
-
-
