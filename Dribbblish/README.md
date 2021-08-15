@@ -18,6 +18,8 @@
 ![samourai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
+### St-purple-dark
+![gruvbox](st-purple-dark.png)
 
 ##  Features
 ### Resizable sidebar
