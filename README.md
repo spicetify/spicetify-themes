@@ -41,7 +41,7 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 
     ```powershell
     cd spicetify-themes
-    cp * "$(spicetify -c | Split-Path)\Themes\"
+    cp * "$(spicetify -c | Split-Path)\Themes\" -Recurse
     ```
 
 3.  Choose which theme to apply just by running:
