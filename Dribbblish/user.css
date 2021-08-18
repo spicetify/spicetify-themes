@@ -9,6 +9,10 @@
   --os-windows-icon-dodge: 1;
 }
 
+* {
+  text-shadow: 1px 1px 1px #0002;
+}
+
 @font-face {
   font-family: "Google Sans Display";
   src: url("glue-resources/fonts/GoogleSansDisplayRegular.woff2")
@@ -54,13 +58,22 @@ body {
 .main-type-mestoBold,
 .main-type-ballad,
 .main-type-balladBold,
-.main-type-canon {
+.main-type-canon,
+.main-type-finale {
   font-family: var(--info-font-family);
   letter-spacing: normal;
+  color: var(--spice-rgb-sidebar-text);
 }
 
 .main-type-ballad {
   font-weight: 500;
+}
+
+.lyrics-lyricsContainer-SyncedLyrics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .lyrics-lyricsContainer-LyricsLine {
@@ -123,11 +136,27 @@ input {
   box-shadow: 0 4px 20px #21212130;
 }
 
-.main-contextMenu-menuItem:hover {
-  backdrop-filter: brightness(1.1);
-  z-index: 1000000;
+.main-contextMenu-menu {
+  overflow: scroll;
+  scrollbar-width: none;
+}
 
-  overflow: visible;
+.main-contextMenu-menu::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-contextMenu-menuItem {
+  margin: 0.25rem 0;
+}
+
+.main-contextMenu-menuItemButton,
+.main-contextMenu-menuItem button {
+  border-radius: var(--main-corner-radius);
+}
+
+.main-contextMenu-menuItemButton:hover,
+.main-contextMenu-menuItem button:hover {
+  background: #fff2 !important;
 }
 
 .main-trackList-playingIcon {
@@ -189,7 +218,9 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
   background-color: var(--spice-button);
   border-radius: var(--main-corner-radius);
   /* vv Fix hover bug on context menu */
-  overflow: visible;
+  overflow-x: visible;
+  /**/
+  overflow-y: scroll;
 }
 
 .main-contextMenu-menuHeading,
@@ -263,6 +294,10 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
   overflow: hidden;
 }
 
+.main-connectToFacebook-container {
+  margin-top: max(calc(var(--os-windows-icon-dodge) * 12px + 12px), 10px);
+}
+
 .main-buddyFeed-buddyFeed {
   box-shadow: unset;
   -webkit-box-shadow: unset;
@@ -288,8 +323,11 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .main-buddyFeed-findFriendsButton {
   background: transparent;
-  backdrop-filter: brightness(0.9) !important;
   cursor: pointer;
+}
+
+.main-buddyFeed-findFriendsButton:hover {
+  background: var(--spice-button);
 }
 
 .main-buddyFeed-findFriendsButton .main-buddyFeed-findFriendsIcon {
@@ -298,9 +336,11 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .main-connectToFacebook-facebookButton {
   background: var(--spice-button);
-  font-size: clamp(5px, 0.5vw, 12px);
+  font-size: clamp(2px, 1em, 12px);
   max-width: 100%;
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .main-avatar-avatar.main-avatar-withBadge:after {
@@ -325,6 +365,23 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
   border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
   border-top: 0;
   min-width: 518px;
+}
+
+.control-button,
+.player-controls__buttons button {
+  border-radius: 50%;
+  transition: background 0.3s;
+  padding: 0.05rem;
+  margin: 0 0.2rem;
+}
+
+button.main-playPauseButton-button {
+  padding: 0.3rem;
+}
+
+.control-button:hover,
+.player-controls__buttons button:hover {
+  background: #fff2;
 }
 
 .main-connectBar-connectBar {
@@ -376,6 +433,10 @@ html {
   padding: 0 8px;
 }
 
+#spicetify-sidebar-config:hover {
+  background: transparent;
+}
+
 #spicetify-playlist-list > .GlueDropTarget--playlists {
   display: flex;
 }
@@ -385,15 +446,15 @@ div.GlueDropTarget.personal-library > *:hover,
 #spicetify-show-list > .main-navBar-navBarItem > .main-navBar-navBarLink:hover,
 #spicetify-playlist-list > * a:hover,
 ul.main-navBar-entryPoints > * a:hover {
-  background: transparent;
-  backdrop-filter: brightness(1.2);
+  cursor: pointer;
+  background: #fff3;
 }
 
 #spicetify-sticky-list .GlueDropTarget .active,
 #spicetify-sticky-list .main-navBar-navBarItem a.main-navBar-navBarLinkActive,
 #spicetify-show-list > .main-navBar-navBarItem a.main-navBar-navBarLinkActive,
 #spicetify-playlist-list > * a.main-rootlist-rootlistItemLinkActive {
-  backdrop-filter: brightness(0.5) blur(10px) !important;
+  background: #fff3;
 }
 
 #spicetify-show-list > *,
@@ -414,7 +475,7 @@ ul.main-navBar-entryPoints > * a {
   color: var(--spice-sidebar-text);
   border-radius: var(--secondary-corner-radius);
   display: flex;
-  padding: 1.5rem 15px;
+  padding: 1.5rem 16px;
   transition: background 0.3s;
 }
 
@@ -423,7 +484,7 @@ ul.main-navBar-entryPoints > * a {
 }
 
 div.GlueDropTarget.personal-library > *.active {
-  background: #0003;
+  background: #fff3;
 }
 
 .main-rootlist-statusIcons:empty {
@@ -453,7 +514,6 @@ div.GlueDropTarget.personal-library > *.active {
 }
 
 li.GlueDropTarget:hover .main-rootlist-expandArrow {
-  cursor: pointer;
   opacity: 1;
   backdrop-filter: drop-shadow(0 0 0 #0002);
 }
@@ -490,9 +550,21 @@ html.sidebar-hide-text .GlueDropTarget span {
 
 /** */
 .main-topBar-historyButtons .main-topBar-button {
-  background-color: unset;
+  background: unset;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: background 0.3s;
+}
+
+.main-topBar-historyButtons .main-topBar-button:disabled:hover {
+  background: unset;
+}
+
+.main-topBar-historyButtons .main-topBar-button:hover {
+  background: #fff3;
 }
 
 .main-topBar-historyButtons svg {
@@ -912,6 +984,11 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 .main-dropDown-dropDown,
 .x-sortBox-sortDropdown {
   background-color: rgba(var(--spice-rgb-selected-row), 0.1) !important;
+  color: var(--spice-subtext);
+}
+
+.main-dropDown-dropDown option {
+  color: var(--spice-main);
 }
 
 .connect-device-list-item:focus,
