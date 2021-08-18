@@ -7,7 +7,7 @@
 ### Dark
 ![dark](dark.png)
 ### Ant-Dracula
-![and-dracula](Ant-Dracula.png)
+![ant-dracula](ant-dracula.png)
 ### Nord-Light
 ![nord-light](nord-light.png)
 ### Nord-Dark
