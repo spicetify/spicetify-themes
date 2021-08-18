@@ -287,6 +287,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 .main-buddyFeed-buddyFeedRoot {
+    z-index: -1;
     height: 100%;
 }
 
