@@ -527,3 +527,20 @@ padding-top: 8px;
    .main-connectToFacebook-facebookButton {
     color: var(--spice-subbutton-text);
 }
+.div.GlueDropTarget.personal-library >*.active {
+    background: var(--spice-selected-row);
+}
+.main-connectBar-connectBar {
+    overflow: visible !important;
+    --triangle-position: 147px !important;
+    align-items: unset !important;
+    height: 0px !important;
+    position: absolute !important;
+    left: 80% !important;
+    display: flex !important;
+    bottom: 2% !important;
+    padding: unset !important;
+
+}
+
+
