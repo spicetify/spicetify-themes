@@ -1,0 +1,427 @@
+:root {
+	/* colors redefinitions */
+	--spice-subtext: rgba(var(--spice-rgb-subtext), 0.8);
+	--spice-separator: rgba(var(--spice-rgb-text), 0.2);
+	--spice-tab-active: rgba(var(--spice-rgb-tab-active), .1);
+	--spice-card: rgba(var(--spice-rgb-card), 0.05);
+	--spice-hover: rgba(var(--spice-rgb-hover), 0.2); 
+	--spice-button-disabled: rgba(var(--spice-rgb-button-disabled), 0.2); 
+}
+
+
+* {
+	font-family: Montserrat;
+}
+
+/* Page titles */
+h1 {
+	font-weight: 700 !important;
+}
+
+/* top banner ad */
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer {
+	display: none;
+}
+
+/* other banner ad : not sure if that's safe not to display */
+.main-leaderboardComponent-container {
+	display: none;
+}
+
+/* TopBar */
+html {
+	background-color: var(--spice-top);
+}
+
+.main-entityHeader-container {
+	border-bottom: solid 1px var(--spice-separator);
+}
+
+/* Menus */
+.main-contextMenu-menu {
+	background-color: var(--spice-main);
+	border: solid 1px var(--spice-shadow);
+}
+.main-contextMenu-menuItemButton.main-contextMenu-disabled {
+	color: rgba(var(--spice-rgb-selected-row),0.6);
+}
+
+.main-userWidget-dropDownMenu {
+	background-color: var(--spice-main);
+	border: solid 1px var(--spice-shadow);
+}
+.main-userWidget-dropDownMenuItemButton {
+	color: rgba(var(--spice-rgb-selected-row),1);
+}
+
+
+/* sideBar */
+.Root__nav-bar {
+	background-color: var(--spice-sidebar);
+}
+.main-navBar-navBar {
+	border-right: solid 1px var(--spice-separator);
+}
+
+.main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited {
+	color: var(--spice-text);
+}
+
+
+/* sideBar elements - regularize sideBar elements paddings  */
+.main-navBar-navBarItem,
+div.GlueDropTarget.personal-library {
+	padding: 0 24px;
+	position: relative;
+}
+
+/* sideMenu elements - playlist elements*/
+.main-rootlist-rootlistItemLink {
+	padding-left: 0.7em;
+	border-radius: 3px;
+}
+
+.main-navBar-navBarItem a::before,
+.InvalidDropTarget a::before,
+.GlueDropTarget button::before,
+.GlueDropTarget a::before {
+	content: " ";
+    border-radius: 3px 0 0 3px;
+    background-color: var(--spice-primary);
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 6px;
+    height: 100%;
+    opacity: 0;
+}
+
+
+/* hover */
+.main-navBar-navBarItem a:hover,
+.InvalidDropTarget a:hover,
+.GlueDropTarget button:hover,
+.GlueDropTarget a:hover {
+	background-color: var(--spice-card);
+}
+
+
+/* selected */
+.main-navBar-navBarItem a.main-navBar-navBarLinkActive,
+.InvalidDropTarget a.main-navBar-navBarLinkActive,
+.GlueDropTarget a.main-collectionLinkButton-selected,
+.GlueDropTarget a.main-rootlist-rootlistItemLinkActive {
+	background: rgba(var(--spice-rgb-primary), 0.05);
+    border: solid 1px var(--spice-primary);
+}
+.main-navBar-navBarItem a.main-navBar-navBarLinkActive::before,
+.InvalidDropTarget a.main-navBar-navBarLinkActive::before,
+.GlueDropTarget a.main-collectionLinkButton-selected::before,
+.GlueDropTarget a.main-rootlist-rootlistItemLinkActive::before {
+	opacity: 1;
+}
+
+
+
+
+
+.main-card-card {
+	background-color: var(--spice-card);
+}
+.main-card-card:hover {
+	background-color: var(--spice-hover);
+}
+
+.main-button-primary {
+	color: var(--spice-main);
+}
+
+
+.main-nowPlayingBar-container {
+	background-color: var(--spice-player);
+}
+
+
+
+/* playlist content */
+.playlist-playlist-playlistContent {
+	background-color: var(--spice-main);
+}
+
+.main-playButton-PlayButton.main-playButton-primary {
+    color: white;
+}
+
+
+/* active track */
+.main-trackList-active {
+	/*background-color: rgba(var(--spice-rgb-primary), 0.1);*/
+	background: linear-gradient(to right, rgba(var(--spice-rgb-primary), 0.1), transparent);
+	border-radius: 0;
+	border: none;
+}
+.main-trackList-active::before {	/* left-border */
+    content: " ";
+    background-color: var(--spice-primary);
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 7px;
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: var(--spice-primary) 4px 0px 8px 0px;
+}
+
+/* Song name in player */
+.main-nowPlayingWidget-nowPlaying .main-trackInfo-name {
+	overflow: unset;
+	font-size: 20px !important;
+}
+
+/* Artist name in player */
+.main-nowPlayingWidget-nowPlaying .main-trackInfo-artists {
+	overflow: unset;
+	padding-top: 5px;
+	font-size: 15px;
+}
+
+.main-type-finale {
+	line-height: 17px;
+}
+
+/* Icons */
+.Svg-ulyrgf-0,
+.main-trackList-rowPlayPauseIcon {
+	transform: scale(1.3);
+}
+
+.x-downloadButton-button svg {
+	height: 32px;
+	width: 32px;
+}
+
+/* Progress and remaining time */
+.progress-bar__bg {
+    background-color: rgba(var(--spice-rgb-text), 0.2);
+}
+.main-playbackBarRemainingTime-container,
+.playback-bar__progress-time {
+	font-size: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Player play button */
+.main-playPauseButton-button {
+	background-color: unset;
+	color: var(--spice-primary);
+}
+
+.main-nowPlayingBar-container {
+	border-top: solid 1px var(--spice-separator);
+}
+
+.main-playPauseButton-button svg {
+	height: 28px;
+	width: 28px;
+}
+
+/* Progress bar */
+.progress-bar {
+	--fg-color: var(--spice-button);
+}
+
+.progress-bar__bg,
+.progress-bar__fg,
+.progress-bar__fg_wrapper {
+	height: 5px;
+}
+
+.progress-bar-wrapper {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* Extra controls */
+.control-button::before {
+	font-size: 20px;
+}
+
+.ExtraControls svg {
+	height: 20px;
+	width: 20px;
+}
+
+/* Removing gradients */
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-background {
+	background-color: unset !important;
+	background-image: none;
+}
+
+/* Cover shadow */
+.main-entityHeader-shadow {
+	-webkit-box-shadow: 0 4px 20px rgba(var(--spice-rgb-shadow), 0.5);
+	box-shadow: 0 4px 20px rgba(var(--spice-rgb-shadow), 0.5);
+}
+
+/* Top bar */
+.main-topBar-background {
+	background-color: var(--spice-top) !important;
+	border-bottom: solid 1px var(--spice-separator);
+}
+.main-topBar-overlay {
+	background-color: rgba(var(--spice-rgb-shadow), 0.2);
+}
+
+
+/* Playing icon */
+.main-trackList-playingIcon {
+	filter: saturate(0%);
+}
+
+/* Playlist like button */
+.main-actionBar-ActionBarRow .main-addButton-button .Svg-ulyrgf-0 {
+	height: unset;
+	width: unset;
+}
+
+/* Order button */
+.x-sortBox-sortDropdown {
+	margin-top: 3px;
+}
+
+/* Sidebar playlists menu */
+.main-rootlist-rootlistDividerGradient {
+	background: unset;
+}
+
+.main-rootlist-rootlistDivider {
+	background-color: var(--spice-button);
+}
+
+/* Search box */
+.x-searchInput-searchInputInput {
+	font-size: 18px;
+}
+
+/* Artists names */
+.main-type-mesto {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+/* Songs names */
+.main-type-ballad {
+	font-size: 18px;
+}
+
+/* Cards descriptions */
+.main-cardSubHeader-root {
+	overflow: hidden !important;
+}
+
+/* Ad title */
+.desktoproutes-homepage-takeover-ad-hptoNativeOriginal-header {
+	font-weight: 700 !important;
+}
+
+/* Friends names */
+.main-buddyFeed-username a {
+	color: var(--spice-text) !important;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+/* Friends songs and artists */
+.main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-playbackContextLink span {
+	font-size: 13px;
+}
+
+/* Cover height */
+.main-coverSlotExpanded-container {
+	height: var(--nav-bar-width) + 8px;
+}
+
+/* Scrollbars */
+.os-scrollbar-handle {
+	background: var(--spice-button) !important;
+	border-radius: 8px;
+}
+
+/* Making index column wider so that lighter background that 
+highlights selected song contains multi-digit song numbers */
+/* It looks good up to 4 digits, I figured that no one has playlists with more music than that ;) */
+.main-trackList-trackList.main-trackList-indexable .main-trackList-trackListRowGrid {
+	grid-template-columns: [index] 48px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px, 1fr) !important;
+}
+
+
+/* Text boxes in settings */
+.main-dropDown-dropDown {
+	background-color: var(--spice-button-disabled);
+}
+
+/* Facebook button */
+.x-settings-facebookButton {
+	background-color: unset !important;
+}
+
+
+
+/* notification (modals) */
+.main-notificationBubble-isError {
+	background: var(--spice-main);
+	border: solid 1px var(--spice-notification-error);
+    color: var(--spice-notification-error);
+}
+.main-notificationBubble-isNotice {
+	background: var(--spice-main);
+	border: solid 1px var(--spice-notification);
+    color: var(--spice-notification);
+}
+
+/* Edit playList modal */
+.main-playlistEditDetailsModal-container {
+	background-color: var(--spice-main);
+	border: solid 1px var(--spice-shadow);
+}
+.main-editImageButton-image {
+	background-color: var(--spice-main);
+}
+.main-playlistEditDetailsModal-textElementLabel {
+	background-color: var(--spice-text);
+	top: -18px;
+	color: var(--spice-main);
+	padding: 0 0.4em;
+	border-radius: 3px;
+    line-height: 1em;
+}
+
+
+.main-deletePlaylistDialog-container {
+	background-color: var(--spice-main);
+	color: var(--spice-text);
+	border: solid 1px var(--spice-shadow);
+}
+.main-deletePlaylistDialog-secondaryButton {
+	color: var(--spice-notification-error)
+}
+
+.main-rootlist-folderRenameInput {
+	background-color: var(--spice-tab-active);
+}
+.main-rootlist-folderRenameInput::selection {
+	background-color: var(--spice-text);
+}
+
+
+
+/* settings and more ?? */
+option {
+	color: var(--spice-text);
+    background-color: var(--spice-main);
+}
