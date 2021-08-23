@@ -102,6 +102,16 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
 
+
+## Xresources
+
+| | |
+| - | - |
+| dracula color scheme, accent color orange | gruvbox color scheme, accent color blue |
+| ![dark_dracula_orange](Xresources/screenshots/dark_dracula_orange.png) | ![dark_gruvbox_blue](Xresources/screenshots/dark_gruvbox_blue.png) |
+| base16_classic color scheme, accent color orange | gruvbox-mdium color scheme, accent color blue |
+| ![dark_dracula_orange](Xresources/screenshots/light_base16-classic-orange.png) | ![dark_gruvbox_blue](Xresources/screenshots/light_base16-gruvbox-medium_blue.png) |
+
 ## Ziro
 
 #### Blue

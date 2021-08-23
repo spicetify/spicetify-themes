@@ -4,12 +4,16 @@ A [Spicetify](https://github.com/khanhas/spicetify-cli) theme which follow Xreso
 
 ## Screenshots
 ### dark color schemes examples
-![dark_dracula_orange](./screenshots/dark_dracula_orange.png)
-![dark_gruvbox_blue](./screenshots/dark_gruvbox_blue.png)
+| | |
+| - | - |
+| dracula color scheme, accent color orange | gruvbox color scheme, accent color blue |
+| ![dark_dracula_orange](screenshots/dark_dracula_orange.png) | ![dark_gruvbox_blue](screenshots/dark_gruvbox_blue.png) |
 
 ### light color schemes examples
-![light_classic_orange](./screenshots/light_base16-classic-orange.png)
-![light_gruvbox_blue_blue](./screenshots/light_base16-gruvbox-medium_blue.png)
+| | |
+| - | - |
+| base16_classic color scheme, accent color orange | gruvbox-mdium color scheme, accent color blue |
+| ![dark_dracula_orange](screenshots/light_base16-classic-orange.png) | ![dark_gruvbox_blue](screenshots/light_base16-gruvbox-medium_blue.png) |
 
 ## More
 Built on top of [BurntSienna](https://github.com/devcroc/spicetify-themes/tree/master/BurntSienna) as base theme (using Montserrat font)
@@ -29,4 +33,4 @@ spicetify config current_theme Xresources
 spicetify apply
 ```
 
-Author : @devcroc
+Author : [devcroc](https://github.com/devcroc)
