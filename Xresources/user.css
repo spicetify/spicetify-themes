@@ -1,10 +1,14 @@
 :root {
 	/* colors redefinitions */
+	--spice-button: var(--spice-primary);
+	--spice-button-active: var(--spice-primary);
+	--spice-notification: var(--spice-primary);
+	--spice-hover: rgba(var(--spice-rgb-primary), 0.2);
+
 	--spice-subtext: rgba(var(--spice-rgb-subtext), 0.8);
 	--spice-separator: rgba(var(--spice-rgb-text), 0.2);
 	--spice-tab-active: rgba(var(--spice-rgb-tab-active), .1);
 	--spice-card: rgba(var(--spice-rgb-card), 0.05);
-	--spice-hover: rgba(var(--spice-rgb-hover), 0.2); 
 	--spice-button-disabled: rgba(var(--spice-rgb-button-disabled), 0.2); 
 }
 
