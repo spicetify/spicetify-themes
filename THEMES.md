@@ -49,6 +49,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![nord-dark](Dribbblish/nord-dark.png)
 
+#### Nord-Superdark
+
+![nord-superdark](Dribbblish/nord-superdark.png)
+
 #### Beach-Sunset
 
 ![beach-sunset](Dribbblish/beach-sunset.png)
