@@ -614,5 +614,19 @@ span.artist-artistVerifiedBadge-badge path:last-child {
 /* Shift sidebar when connect bar is visible */
 
 body.qualaroo--connect-bar-visible .playback-bar {
-  bottom: 107px;
+  bottom: 107px !important; 
+}
+
+/* Sidebar Bug Fix */
+
+ul.main-navBar-entryPoints > div.GlueDropTarget{
+  padding: 0 8px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >* {
+  padding: 0 16px;
+  height: 40px;
+  border-radius: 4px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
+  background: var(--spice-card);
 }
