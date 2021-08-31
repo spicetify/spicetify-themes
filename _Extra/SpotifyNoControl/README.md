@@ -12,3 +12,10 @@ Alternatively, you can use `SpotifyNoControl.exe`, included in this folder, to c
 Moreover, by default, Spotify adjusted sidebar items and profile menu icon to stay out of Windows native controls region. If you decided to use `SpotifyNoControl.exe` from now on, please open `user.css` file and change variable `--os-windows-icon-dodge` value to 0 as instruction to snap icons back to their original position.
 
 ![nocontrol](https://i.imgur.com/qdZyv1t.png)
+
+## Alternatives
+
+If the executable does not work for you, try using 
+
+- [AHK implementation](https://github.com/SaifAqqad/AHK_SpotifyNoControl)
+- [julienmaille's implementation](https://github.com/morpheusthewhite/spicetify-themes/raw/legacy/Dribbblish/SpotifyNoControl.exe)
