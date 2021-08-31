@@ -304,9 +304,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   transition-duration: 0.15s !important;
 }
 
-.main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
+/* .main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
   display: none;
-}
+} */
 
 .main-entityHeader-image {
   border-radius: 10%;
@@ -613,8 +613,8 @@ span.artist-artistVerifiedBadge-badge path:last-child {
 
 /* Shift sidebar when connect bar is visible */
 
-body.qualaroo--connect-bar-visible .playback-bar {
-  bottom: 107px !important; 
+.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar, .main-nowPlayingBar-container>div:first-child:nth-last-child(2) .playback-bar {
+  bottom: 107px;
 }
 
 /* Sidebar Bug Fix */
