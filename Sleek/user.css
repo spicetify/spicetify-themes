@@ -304,9 +304,9 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   transition-duration: 0.15s !important;
 }
 
-.main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
+/* .main-entityHeader-metaDataText.main-type-mesto:nth-child(2) {
   display: none;
-}
+} */
 
 .main-entityHeader-image {
   border-radius: 10%;
@@ -559,6 +559,10 @@ p.main-buddyFeed-timestamp.main-type-finale,
   background-color: var(--spice-button);
 }
 
+.main-button-primary {
+  color: white !important;
+}
+
 .playlist-inlineSearchBox-searchIcon {
   fill: var(--spice-text) !important;
 }
@@ -605,4 +609,24 @@ span.artist-artistVerifiedBadge-badge path:last-child {
 
 .main-entityHeader-shadow {
   box-shadow: 0 5px 10px rgba(var(--spice-rgb-shadow), 0.5) !important;
+}
+
+/* Shift sidebar when connect bar is visible */
+
+.now-playing-bar-container>div:first-child:nth-last-child(2) .playback-bar, .main-nowPlayingBar-container>div:first-child:nth-last-child(2) .playback-bar {
+  bottom: 107px;
+}
+
+/* Sidebar Bug Fix */
+
+ul.main-navBar-entryPoints > div.GlueDropTarget{
+  padding: 0 8px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >* {
+  padding: 0 16px;
+  height: 40px;
+  border-radius: 4px;
+}
+ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
+  background: var(--spice-card);
 }
