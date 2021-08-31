@@ -275,7 +275,6 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .main-connectBar-connectBar {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
-    border: 2px solid var(--spice-main);
     border-top: 0;
     color: var(--spice-sidebar-text);
 }
