@@ -203,6 +203,7 @@ function updateColors(colHex) {
     setRootColor('sidebar', colHex)
 }
 
+let coverListenerInstalled = true
 async function songchange() {
     // warning popup
     if (Spicetify.PlaybackControl.featureVersion < "1.1.57")
@@ -214,6 +215,9 @@ async function songchange() {
         bgImage = "/images/tracklist-row-song-fallback.svg"
         mainColor = "#509bf5"
         updateColors(mainColor)
+        coverListenerInstalled = false
+    } else if (!coverListenerInstalled) {
+        hookCoverChange(true)
     }
 
     if (album_uri !== undefined && !album_uri.includes('spotify:show')) {
@@ -260,16 +264,22 @@ function pickCoverColor(img) {
     updateColors(mainColor)
 }
 
-waitForElement([".cover-art-image"], (queries) => {
-    queries[0].addEventListener('load', function() {
-        try {
-            pickCoverColor(queries[0])
-        } catch (error) {
-            console.log(error);
-            setTimeout(pickCoverColor, 300, queries[0])
-        }
+function hookCoverChange(pick) {
+    waitForElement([".cover-art-image"], (queries) => {
+        coverListenerInstalled = true
+        if (pick) pickCoverColor(queries[0])
+        queries[0].addEventListener('load', function() {
+            try {
+                pickCoverColor(queries[0])
+            } catch (error) {
+                console.log(error);
+                setTimeout(pickCoverColor, 300, queries[0])
+            }
+        });
     });
-});
+}
+
+hookCoverChange(false);
 
 (function Startup() {
     if (!Spicetify.showNotification) {
