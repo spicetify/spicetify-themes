@@ -1604,3 +1604,26 @@ option {
   background-color: var(--spice-text) !important;
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
 }
+
+.main-playButton-PlayButton[aria-label="Play"],
+.main-playPauseButton-button[aria-label="Play"] {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
+  background-color: var(--spice-text) !important; 
+}
+
+.main-playButton-PlayButton[aria-label="Pause"],
+.main-playPauseButton-button[aria-label="Pause"] {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
+  background-color: var(--spice-text) !important;
+}
+
+.gro_tSi7cwspepH0as03 {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
+  background-color: var(--spice-text) !important; 
+  padding: 0px !important;
+}
+
+.gro_tSi7cwspepH0as03[aria-label="Pause"] {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg') !important;
+  background-color: var(--spice-text) !important;
+}
