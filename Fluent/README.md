@@ -22,7 +22,7 @@ Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https:
 
 ### Install
 
-Run these commands:
+Make sure spicetify >= v2.6.3 is installed. Run these commands:
 
 #### Windows
 In **Powershell**:
