@@ -389,15 +389,15 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     overflow-y: scroll;
 }
 
-#spicetify-playlist-list>li {
+#spicetify-playlist-list > div > div:nth-child(2) > li {
     margin: 4px 3.2vw;
-    width: 90%;
+    width: 84%;
     flex-shrink: 0;
     padding-top: 10%;
     padding-bottom: 10%;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: -1px;
     border-radius: 10px;
     border: 2px solid var(--spice-text);
     display: flex;
@@ -436,9 +436,6 @@ svg[Attributes Style] {
     color: var(--spice-text);
 }
 
-.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected {
-    color: var(--spice-subbutton-text) !important;
-}
 
 
 .view-homeShortcutsGrid-shortcut {
@@ -541,6 +538,12 @@ padding-top: 8px;
     bottom: 2% !important;
     padding: unset !important;
 
+}
+#spicetify-playlist-list > div {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow: hidden;
+    height: 500px !important;
 }
 
 
