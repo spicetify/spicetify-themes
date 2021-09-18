@@ -1,4 +1,4 @@
-let current = '1.7'
+let current = '1.8'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -205,10 +205,15 @@ function updateColors(colHex) {
 
 let coverListenerInstalled = true
 async function songchange() {
-    // warning popup
-    if (Spicetify.PlaybackControl.featureVersion < "1.1.57")
-        Spicetify.showNotification("Your version of Spotify (" + Spicetify.PlaybackControl.featureVersion + ") is un-supported")
-    
+    try {
+        // warning popup
+        if (Spicetify.PlaybackControl.featureVersion < "1.1.57")
+            Spicetify.showNotification("Your version of Spotify (" + Spicetify.PlaybackControl.featureVersion + ") is un-supported")
+    }
+    catch(err) {
+      console.log(err.message);
+    }
+        
     let album_uri = Spicetify.Player.data.track.metadata.album_uri
     let bgImage = Spicetify.Player.data.track.metadata.image_url
     if (bgImage === undefined) {
