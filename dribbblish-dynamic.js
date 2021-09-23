@@ -145,12 +145,6 @@ function setLightness(hex, lightness) {
 }
 
 let nearArtistSpan = null
-
-waitForElement([".main-trackInfo-container"], (queries) => {
-    nearArtistSpan = document.createElement("div")
-    nearArtistSpan.classList.add("main-trackInfo-artists", "ellipsis-one-line", "main-type-finale")
-    queries[0].append(nearArtistSpan)
-});
 let textColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-text')
 let textColorBg = getComputedStyle(document.documentElement).getPropertyValue('--spice-main')
 let sidebarColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-sidebar')
@@ -204,6 +198,7 @@ function updateColors(textColHex, sideColHex) {
     setRootColor('sidebar', sideColHex)
 }
 
+let nearArtistSpanText = ""
 let coverListenerInstalled = true
 async function songchange() {
     let album_uri = Spicetify.Player.data.track.metadata.album_uri
@@ -213,9 +208,8 @@ async function songchange() {
         textColor = "#509bf5"
         updateColors(textColor, textColor)
         coverListenerInstalled = false
-    } else if (!coverListenerInstalled) {
-        hookCoverChange(true)
     }
+    hookCoverChange(true)
 
     if (album_uri !== undefined && !album_uri.includes('spotify:show')) {
         const albumInfo = await getAlbumInfo(album_uri.replace("spotify:album:", ""))
@@ -226,23 +220,26 @@ async function songchange() {
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
         album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
         
-        if (nearArtistSpan!==null)
-            nearArtistSpan.innerHTML = album_link + " — " + album_date
-        else
-            setTimeout(songchange, 200)
+        nearArtistSpanText = album_link + " — " + album_date
     } else if (Spicetify.Player.data.track.uri.includes('spotify:episode')) {
         // podcast
         bgImage = bgImage.replace('spotify:image:', 'https://i.scdn.co/image/')
-        if (nearArtistSpan?.innerText) nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
+        nearArtistSpanText = Spicetify.Player.data.track.metadata.album_title
     } else if (Spicetify.Player.data.track.metadata.is_local=="true") {
         // local file
-        if (nearArtistSpan?.innerText) nearArtistSpan.innerText = Spicetify.Player.data.track.metadata.album_title
+        nearArtistSpanText = Spicetify.Player.data.track.metadata.album_title
     } else {
         // When clicking a song from the homepage, songChange is fired with half empty metadata
         // todo: retry only once?
         setTimeout(songchange, 200)
     }
 
+    waitForElement([".main-trackInfo-container"], (queries) => {
+        nearArtistSpan = document.createElement("div")
+        nearArtistSpan.classList.add("main-trackInfo-artists", "ellipsis-one-line", "main-type-finale")
+        nearArtistSpan.innerHTML = nearArtistSpanText
+        queries[0].append(nearArtistSpan)
+    });
     document.documentElement.style.setProperty('--image_url', 'url("' + bgImage + '")')
 }
 
