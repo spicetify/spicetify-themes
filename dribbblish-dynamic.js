@@ -145,14 +145,15 @@ function setLightness(hex, lightness) {
 }
 
 let nearArtistSpan = null
-let mainColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-text')
-let mainColorBg = getComputedStyle(document.documentElement).getPropertyValue('--spice-main')
 
 waitForElement([".main-trackInfo-container"], (queries) => {
     nearArtistSpan = document.createElement("div")
     nearArtistSpan.classList.add("main-trackInfo-artists", "ellipsis-one-line", "main-type-finale")
     queries[0].append(nearArtistSpan)
 });
+let textColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-text')
+let textColorBg = getComputedStyle(document.documentElement).getPropertyValue('--spice-main')
+let sidebarColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-sidebar')
 
 function setRootColor(name, colHex) {
     let root = document.documentElement
@@ -162,18 +163,18 @@ function setRootColor(name, colHex) {
 }
 
 function toggleDark(setDark) {
-    if (setDark===undefined) setDark = isLight(mainColorBg)
+    if (setDark===undefined) setDark = isLight(textColorBg)
 
     document.documentElement.style.setProperty('--is_light', setDark ? 0 : 1)
-    mainColorBg = setDark ? "#0A0A0A" : "#FAFAFA"
+    textColorBg = setDark ? "#0A0A0A" : "#FAFAFA"
 
-    setRootColor('main', mainColorBg)
-    setRootColor('player', mainColorBg)
+    setRootColor('main', textColorBg)
+    setRootColor('player', textColorBg)
     setRootColor('card', setDark ? "#040404" : "#ECECEC")
     setRootColor('subtext', setDark ? "#EAEAEA" : "#3D3D3D")
     setRootColor('notification', setDark ? "#303030" : "#DDDDDD")
 
-    updateColors(mainColor)
+    updateColors(textColor, sidebarColor)
 }
 
 /* Init with current system light/dark mode */
@@ -187,39 +188,30 @@ DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
     (self) => { toggleDark(); self.isEnabled = !self.isEnabled; }
 ));
 
-function updateColors(colHex) {
-    let isLightBg = isLight(mainColorBg)
-    if( isLightBg ) colHex = LightenDarkenColor(colHex, -15) // vibrant color is always too bright for white bg mode
+function updateColors(textColHex, sideColHex) {
+    let isLightBg = isLight(textColorBg)
+    if( isLightBg ) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
 
-    let darkColHex = LightenDarkenColor(colHex, isLightBg ? 12 : -20)
-    let darkerColHex = LightenDarkenColor(colHex, isLightBg ? 30 : -40)
-    let buttonBgColHex = setLightness(colHex, isLightBg ? 0.90 : 0.14)
-    setRootColor('text', colHex)
+    let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
+    let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
+    let buttonBgColHex = setLightness(textColHex, isLightBg ? 0.90 : 0.14)
+    setRootColor('text', textColHex)
     setRootColor('button', darkerColHex)
     setRootColor('button-active', darkColHex)
     setRootColor('selected-row', darkerColHex)
     setRootColor('tab-active', buttonBgColHex)
     setRootColor('button-disabled', buttonBgColHex)
-    setRootColor('sidebar', colHex)
+    setRootColor('sidebar', sideColHex)
 }
 
 let coverListenerInstalled = true
 async function songchange() {
-    try {
-        // warning popup
-        if (Spicetify.PlaybackControl.featureVersion < "1.1.57")
-            Spicetify.showNotification("Your version of Spotify (" + Spicetify.PlaybackControl.featureVersion + ") is un-supported")
-    }
-    catch(err) {
-      console.log(err.message);
-    }
-        
     let album_uri = Spicetify.Player.data.track.metadata.album_uri
     let bgImage = Spicetify.Player.data.track.metadata.image_url
     if (bgImage === undefined) {
         bgImage = "/images/tracklist-row-song-fallback.svg"
-        mainColor = "#509bf5"
-        updateColors(mainColor)
+        textColor = "#509bf5"
+        updateColors(textColor, textColor)
         coverListenerInstalled = false
     } else if (!coverListenerInstalled) {
         hookCoverChange(true)
@@ -258,15 +250,24 @@ Spicetify.Player.addEventListener("songchange", songchange)
 
 function pickCoverColor(img) {
     var swatches = new Vibrant(img, 5).swatches()
-    cols = isLight(mainColorBg) ? ["Vibrant", "DarkVibrant", "Muted", "LightVibrant"]
-                                : ["Vibrant", "LightVibrant", "Muted", "DarkVibrant"]
-    mainColor = "#509bf5"
-    for (var col in cols)
-        if (swatches[cols[col]]) {
-            mainColor = swatches[cols[col]].getHex()
+    lightCols = ["Vibrant", "DarkVibrant", "Muted", "LightVibrant"]
+    darkCols = ["Vibrant", "LightVibrant", "Muted", "DarkVibrant"]
+
+    mainCols = isLight(textColorBg) ? lightCols : darkCols
+    textColor = "#509bf5"
+    for (var col in mainCols)
+        if (swatches[mainCols[col]]) {
+            textColor = swatches[mainCols[col]].getHex()
             break
         }
-    updateColors(mainColor)
+
+    sidebarColor = "#509bf5"
+    for (var col in lightCols)
+        if (swatches[lightCols[col]]) {
+            sidebarColor = swatches[lightCols[col]].getHex()
+            break
+        }
+    updateColors(textColor, sidebarColor)
 }
 
 function hookCoverChange(pick) {
