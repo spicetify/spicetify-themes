@@ -1605,6 +1605,16 @@ option {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
 }
 
+.main-playButton-button[aria-label="Play"] {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
+  background-color: var(--spice-text) !important;
+}
+
+.main-playButton-button[aria-label="Pause"] {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
+  background-color: var(--spice-text) !important;
+}
+
 .main-playButton-PlayButton[aria-label="Play"],
 .main-playPauseButton-button[aria-label="Play"] {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
