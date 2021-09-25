@@ -1,12 +1,12 @@
 :root {
-  --border-radius-1: 8px;
-  --border-radius-2: 4px;
-  --border-radius-3: 4px;
+  --border-radius-1: 20px;
+  --border-radius-2: 15px;
+  --border-radius-3: 10px;
   --glue-font-weight-normal: 400;
   --glue-font-weight-bold: 600;
   --glue-font-weight-black: 700;
   --scrollbars: unset;
-  --scrollbar-vertical-size: 8px;
+  --scrollbar-vertical-size: 15px;
   --filter-brightness: 1;
   --green: #1db954;
 }
@@ -22,7 +22,7 @@
 .Root__main-view {
   z-index: 0;
   background-color: var(--spice-main);
-  height: 100%;
+  height: 120%;
 }
 
 .os-scrollbar {
@@ -61,7 +61,7 @@
 }
 
 .main-entityHeader-overlay {
-  background-image: linear-gradient(to bottom, rgb(39 39 39 / 0%), var(--spice-main));
+  background-image: linear-gradient(to bottom, rgb(32 32 32 / 100%), var(--spice-main));
 }
 
 .x-actionBarBackground-background,
@@ -102,7 +102,7 @@
 .main-cardImage-image,
 .main-cardImage-imageWrapper,
 .OALAQFKvC7XQOVYpklB4 img {
-  border-radius: var(--border-radius-2);
+  border-radius: var(--border-radius-1);
 }
 
 .main-card-card,
@@ -123,6 +123,7 @@
   background-color: var(--spice-card);
   box-shadow: 0px 0px 6px 0px var(--spice-layer-shadow) !important;
   border: var(--spice-contour) solid 1px;
+  border radius: var(--border-radius-1);
 }
 
 .main-tag-container {
@@ -172,6 +173,8 @@
 .main-entityHeader-withBackgroundImage {
   padding: 0 32px 24px;
   margin-top: 48px;
+
+  border-radius: var(--border-radius-1);
 }
 
 .main-entityHeader-title {
@@ -223,18 +226,18 @@ h3,
 .main-topBar-back {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_left_24_filled.svg');
   background-color: var(--spice-text) !important;
-  padding: 5px;
-  margin-left: 60px;
-  width: 24px !important;
-  height: 24px !important;
+  padding: 15px;
+  margin-left: 75px;
+  width: 10px !important;
+  height:10px !important;
 }
 
 .main-topBar-forward {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg');
   background-color: var(--spice-text) !important;
-  padding: 5px;
-  width: 24px !important;
-  height: 24px !important;
+  padding: 15px;
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .main-userWidget-displayName,
@@ -261,14 +264,18 @@ h3,
 .main-contextMenu-menuItem:first-child,
 ._60cb742e518d084c3c959007b9463b51-scss> :first-child {
   margin: 6px 6px 2px;
+  background-color: var(--spice-card);
 }
 
 .main-contextMenu-menuItem:last-child {
   margin: 2px 6px 6px;
+  background-color: var(--spice-card);
 }
 
 ._60cb742e518d084c3c959007b9463b51-scss> :last-child {
   margin: 2px 6px 8px;
+
+  background-color: var(--spice-card);
 }
 
 .main-contextMenu-menu,
@@ -428,7 +435,7 @@ button.switch {
   font-size: 15px;
   letter-spacing: 0px;
   text-transform: none;
-  border-radius: var(--border-radius-2);
+  border-radius: var(--border-radius-3);
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -736,11 +743,12 @@ li.GlueDropTarget--playlists {
 .main-trackList-indexable .main-rootlist-wrapper {
   background-color: var(--spice-card);
   border-radius: var(--border-radius-2);
-  padding: 8px;
+  padding: 0px;
 }
 
 .main-trackList-indexable {
   padding: 8px;
+border-radius: var(--border-radius-1);
 }
 
 .main-trackList-trackListHeader.g9n_9K5pFI3B_JuDI_hS {
@@ -931,7 +939,7 @@ li.GlueDropTarget--playlists {
 }
 
 .main-entityHeader-container {
-  background-image: linear-gradient(to bottom, rgb(255 255 255 / 0%), var(--spice-main));
+  background-image: var(--spice-main);
 }
 
 .main-entityHeader-metaDataText,
@@ -950,11 +958,11 @@ li.GlueDropTarget--playlists {
 }
 
 .show-episodeBlock-episodeBlock:hover {
-  background-color: rgba(var(--spice-rgb-selected-row), .05);
+  background-color: var(--spice-main);
 }
 
 .show-episodeBlock-episodeBlock:active {
-  background-color: rgba(var(--spice-rgb-selected-row), .1);
+  background-color: var(--spice-main);
 }
 
 .show-show-episodes> :last-child {
@@ -964,6 +972,7 @@ li.GlueDropTarget--playlists {
 .show-trailer-container,
 .show-show-episodes> :last-child {
   background-color: var(--spice-card) !important;
+  border-radius: var(--border-radius-1);
 }
 
 
@@ -1000,7 +1009,7 @@ li.GlueDropTarget--playlists {
 
 a[class*='-tabBar-active'] {
   background-color: rgba(var(--spice-rgb-selected-row), 1) !important;
-}
+border-radius: var(--border-radius-1);}
 
 a[class*='-tabBar-headerItemLink']:hover {
   background-color: rgba(var(--spice-rgb-selected-row), 0.3);
@@ -1016,15 +1025,15 @@ a[class*='-tabBar-headerItemLink']:active {
 .x-searchInput-searchInputInput, .dIwMadpRrW1PwEwEeAbN {
   background-color: var(--spice-card);
   color: var(--spice-text) !important;
-  border-radius: var(--border-radius-2) !important;
+  border-radius: var(--border-radius-1) !important;
   padding-right: 0px;
   padding-left: 12px;
   transition: background-color ease-in 167ms;
 }
 
 .x-searchInput-searchInputInput:focus, .dIwMadpRrW1PwEwEeAbN:focus {
-  background-color: var(--spice-main);
-  border-bottom: var(--spice-accent) solid 2px;
+  background-color: var(--spice-card);
+  border-bottom: var(--spice-accent) solid 0px;
 }
 
 .x-searchInput-searchInput, .KTdyveh7LiwRtB2aC_JT {
@@ -1068,7 +1077,7 @@ a[class*='-tabBar-headerItemLink']:active {
 .x-searchInput-searchInputSearchIcon,
 .x-searchInput-searchInputInput::placeholder,
 .x-searchInput-searchInputClearButton {
-  color: var(--spice-text) !important;
+  color: var(--spice-subtext) !important;
 }
 
 .x-searchResultsTracks-root .main-gridContainer-gridContainer {
@@ -1336,12 +1345,14 @@ option {
 /* player */
 
 .Root__now-playing-bar {
-  padding-right: 6px;
+  padding-right: 0px;
   margin: 0px 13px 13px 13px;
   width: calc(100% - 26px);
   box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25) !important;
   border-radius: var(--border-radius-1);
   border: 1px solid var(--spice-player-border);
+  background-color: rgba(25,25,25,0.7);
+  backdrop-filter: blur(100px) !important;
 }
 
 .main-nowPlayingBar-container {
@@ -1355,10 +1366,13 @@ option {
 
 .main-nowPlayingBar-container {
   border-top: 0px;
+  background-color: rgba(var(--spice-player),0.7);
 }
 
 .now-playing--cover-expanded {
   transform: translateX(0px) !important;
+  border-radius: var(--border-radius-1);
+  
 }
 
 .playback-bar,
@@ -1389,6 +1403,7 @@ option {
 
 .main-coverSlotExpanded-container,
 .T6whS8zYB9fG_tIdTg6m {
+  border-radius: var(--border-radius-1);
   position: fixed;
   top: calc(100% - 320px);
   left: calc(100% - 220px);
@@ -1396,14 +1411,36 @@ option {
   height: 200px;
   visibility: hidden;
   transform-origin: center;
-  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25) !important;
   animation: 1s coverExpandedIn;
   animation-fill-mode: forwards;
   background: none;
+  box-radius: var(--border-radius-1);
+  border-radius: var(--border-radius-1);
+  border-shadow-radius: var(--border-radius-1);
 }
 
 .main-coverSlotExpanded-containerExitActive {
   display: none;
+  border-radius: var(--border-radius-1);
+}
+
+.cover-art,
+.cover-art .cover-art-image{
+  border-radius: var(--border-radius-1);
+  background-color var(--spice-main);
+}
+
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-image {
+  border-radius: var(--border-radius-2) 0 0 var(--border-radius-2) !important;
+}
+
+.view-homeShortcutsGrid-shortcut,
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageWrapper,
+.main-cardImage-imageWrapper,
+.main-cardImage-imagePlaceholder,
+.main-cardImage-image {
+  border-radius: var(--border-radius-2) !important;
 }
 
 @keyframes coverExpandedIn {
@@ -1433,6 +1470,7 @@ option {
   height: 56px;
   visibility: visible;
   z-index: 99999 !important;
+  border-radius: var(--border-radius-1);
 }
 
 .main-coverSlotCollapsed-container,
@@ -1441,6 +1479,7 @@ option {
   transform-origin: center;
   transition-timing-function: ease-in;
   transition: width 0.5s 0.2s, height 0.5s 0.2s, top 0.3s, left 0.5s, box-shadow 0.5s;
+  border-radius: var(--border-radius-1);
 }
 
 .main-coverSlotCollapsed-container[aria-hidden="true"],
@@ -1450,20 +1489,23 @@ option {
   width: 200px;
   height: 200px;
   visibility: hidden;
-  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25) !important;
   animation: 1s coverExpandedOut;
+  border-radius: var(--border-radius-1);
 }
 
 .main-coverSlotCollapsed-container[aria-hidden="false"],
 .zcsxy3fvYCmZGcE7VzW7[aria-hidden="false"] {
   transition-timing-function: ease-out !important;
   transition: width 0.5s 0.2s, height 0.5s 0.2s, top 0.5s 0.1s, left 0.3s, box-shadow 0.5s !important;
+  border-radius: var(--border-radius-1);
 }
 
 .main-coverSlotCollapsed-container[aria-hidden="true"] .cover-art .cover-art-image,
 .main-nowPlayingWidget-coverExpanded .zcsxy3fvYCmZGcE7VzW7 .cover-art .cover-art-image {
   width: 200px;
   height: 200px;
+  border-radius: var(--border-radius-1);
 }
 
 .CoverSlotExpanded__actionButton,
@@ -1473,10 +1515,11 @@ option {
 .kyn0AY4_gXWvbdivdFgP,
 .kyn0AY4_gXWvbdivdFgP:hover {
   background-color: var(--spice-card);
+  border-radius: var(--border-radius-2);
 }
 
 .now-playing-bar .cover-art-image {
-  border-radius: var(--border-radius-2);
+  border-radius: var(--border-radius-1);
 }
 
 .playback-bar__progress-time,
@@ -1489,7 +1532,7 @@ option {
 }
 
 .volume-bar {
-  margin-right: 8px;
+  margin-right: 15px;
 }
 
 .main-playPauseButton-button,
@@ -1599,26 +1642,32 @@ option {
   padding: 10px;
 }
 
-.main-playButton-button,
+.main-playPauseButton-button,
 .main-playButton-PlayButton {
   background-color: var(--spice-text) !important;
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
 }
 
-.main-playButton-PlayButton[aria-label="Play"],
+.main-playPauseButton-button,
+.main-playButton-button {
+  background-color: var(--spice-text) !important;
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
+}
+
+.main-playPauseButton-PlayPauseButton[aria-label="Play"],
 .main-playPauseButton-button[aria-label="Play"] {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
   background-color: var(--spice-text) !important; 
 }
 
-.main-playButton-PlayButton[aria-label="Pause"],
+.main-playPauseButton-PlayPauseButton[aria-label="Pause"],
 .main-playPauseButton-button[aria-label="Pause"] {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
   background-color: var(--spice-text) !important;
 }
 
 .gro_tSi7cwspepH0as03 {
-  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
   background-color: var(--spice-text) !important; 
   padding: 0px !important;
 }
