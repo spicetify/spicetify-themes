@@ -427,11 +427,11 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .progress-bar:not(:active) .x-progressBar-progressBarBg > div:first-child > div {
-	transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .progress-bar:not(:active) .progress-bar__slider {
-	transition: left 0.2s ease;
+    transition: left 0.2s ease;
 }
 
 .minimal-player .player-controls__buttons {
@@ -598,7 +598,7 @@ li.GlueDropTarget {
 }
 
 .playback-bar:active .prog-tooltip {
-	opacity: 1;
+    opacity: 1;
     transition: none;
 }
 
