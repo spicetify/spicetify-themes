@@ -1,4 +1,4 @@
-let current = '1.8'
+let current = '1.9'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -73,7 +73,7 @@ document.styleSheets[0].insertRule(`
 
 /* js */
 function getAlbumInfo(uri) {
-    return Spicetify.CosmosAsync.get(`hm://album/v1/album-app/album/${uri}/desktop`);
+    return Spicetify.CosmosAsync.get(`hm://album/v1/album-app/album/${uri}/desktop`)
 }
 
 function isLight(hex) {
@@ -91,51 +91,54 @@ function hexToRgb(hex) {
 }
 
 function rgbToHex([r, g, b]) {
-    const rgb = (r << 16) | (g << 8) | (b << 0);
-    return '#' + (0x1000000 + rgb).toString(16).slice(1);
+    const rgb = (r << 16) | (g << 8) | (b << 0)
+    return '#' + (0x1000000 + rgb).toString(16).slice(1)
 }
 
-const LightenDarkenColor = (h, p) => '#' + [1, 3, 5].map(s => parseInt(h.substr(s, 2), 16)).map(c => parseInt((c * (100 + p)) / 100)).map(c => (c < 255 ? c : 255)).map(c => c.toString(16).padStart(2, '0')).join('');
+const LightenDarkenColor = (h, p) => '#' + [1, 3, 5].map(s => parseInt(h.substr(s, 2), 16)).map(c => parseInt((c * (100 + p)) / 100)).map(c => (c < 255 ? c : 255)).map(c => c.toString(16).padStart(2, '0')).join('')
 
 function rgbToHsl([r, g, b]) {
-  r /= 255, g /= 255, b /= 255;
-  var max = Math.max(r, g, b), min = Math.min(r, g, b);
-  var h, s, l = (max + min) / 2;
-  if (max == min) {
-    h = s = 0; // achromatic
-  } else {
-    var d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    switch (max) {
-      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-      case g: h = (b - r) / d + 2; break;
-      case b: h = (r - g) / d + 4; break;
+    r /= 255, g /= 255, b /= 255
+    var max = Math.max(r, g, b), min = Math.min(r, g, b)
+    var h, s, l = (max + min) / 2
+    if (max == min) {
+        h = s = 0 // achromatic
+    } else {
+        var d = max - min
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+        switch (max) {
+            case r: h = (g - b) / d + (g < b ? 6 : 0)
+                    break
+            case g: h = (b - r) / d + 2
+                    break
+            case b: h = (r - g) / d + 4
+                    break
+        }
+        h /= 6
     }
-    h /= 6;
-  }
-  return [h, s, l];
+    return [h, s, l]
 }
 
 function hslToRgb([h, s, l]) {
-  var r, g, b;
-  if (s == 0) {
-    r = g = b = l; // achromatic
-  } else {
-    function hue2rgb(p, q, t) {
-      if (t < 0) t += 1;
-      if (t > 1) t -= 1;
-      if (t < 1/6) return p + (q - p) * 6 * t;
-      if (t < 1/2) return q;
-      if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-      return p;
+    var r, g, b
+    if (s == 0) {
+        r = g = b = l // achromatic
+    } else {
+        function hue2rgb(p, q, t) {
+            if (t < 0) t += 1
+            if (t > 1) t -= 1
+            if (t < 1/6) return p + (q - p) * 6 * t
+            if (t < 1/2) return q
+            if (t < 2/3) return p + (q - p) * (2/3 - t) * 6
+            return p
+        }
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s
+        var p = 2 * l - q
+        r = hue2rgb(p, q, h + 1/3)
+        g = hue2rgb(p, q, h)
+        b = hue2rgb(p, q, h - 1/3)
     }
-    var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-    var p = 2 * l - q;
-    r = hue2rgb(p, q, h + 1/3);
-    g = hue2rgb(p, q, h);
-    b = hue2rgb(p, q, h - 1/3);
-  }
-  return [r * 255, g * 255, b * 255];
+    return [r * 255, g * 255, b * 255]
 }
 
 function setLightness(hex, lightness) {
@@ -144,7 +147,6 @@ function setLightness(hex, lightness) {
     return rgbToHex(hslToRgb(hsl))
 }
 
-let nearArtistSpan = null
 let textColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-text')
 let textColorBg = getComputedStyle(document.documentElement).getPropertyValue('--spice-main')
 let sidebarColor = getComputedStyle(document.documentElement).getPropertyValue('--spice-sidebar')
@@ -175,16 +177,16 @@ function toggleDark(setDark) {
 let systemDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--system_is_dark'))==1
 toggleDark(systemDark)
 
-DribbblishShared.configMenu.register();
+DribbblishShared.configMenu.register()
 DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
     "Dark mode",
     systemDark,
     (self) => { toggleDark(); self.isEnabled = !self.isEnabled; }
-));
+))
 
 function updateColors(textColHex, sideColHex) {
     let isLightBg = isLight(textColorBg)
-    if( isLightBg ) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
+    if (isLightBg) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
 
     let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
     let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
@@ -201,6 +203,15 @@ function updateColors(textColHex, sideColHex) {
 let nearArtistSpanText = ""
 let coverListenerInstalled = true
 async function songchange() {
+    try {
+        // warning popup
+        if (Spicetify.PlaybackControl.featureVersion < "1.1.68")
+            Spicetify.showNotification("Your version of Spotify (" + Spicetify.PlaybackControl.featureVersion + ") is un-supported")
+    }
+    catch(err) {
+        console.log(err.message)
+    }
+
     let album_uri = Spicetify.Player.data.track.metadata.album_uri
     let bgImage = Spicetify.Player.data.track.metadata.image_url
     if (bgImage === undefined) {
@@ -234,12 +245,17 @@ async function songchange() {
         setTimeout(songchange, 200)
     }
 
-    waitForElement([".main-trackInfo-container"], (queries) => {
-        nearArtistSpan = document.createElement("div")
-        nearArtistSpan.classList.add("main-trackInfo-artists", "ellipsis-one-line", "main-type-finale")
+    if( document.querySelector("#main-trackInfo-year")===null ) {
+        waitForElement([".main-trackInfo-container"], (queries) => {
+            nearArtistSpan = document.createElement("div")
+            nearArtistSpan.id = 'main-trackInfo-year'
+            nearArtistSpan.classList.add("main-trackInfo-artists", "ellipsis-one-line", "main-type-finale")
+            nearArtistSpan.innerHTML = nearArtistSpanText
+            queries[0].append(nearArtistSpan)
+        })
+    } else {
         nearArtistSpan.innerHTML = nearArtistSpanText
-        queries[0].append(nearArtistSpan)
-    });
+    }
     document.documentElement.style.setProperty('--image_url', 'url("' + bgImage + '")')
 }
 
@@ -275,7 +291,7 @@ function hookCoverChange(pick) {
             try {
                 pickCoverColor(queries[0])
             } catch (error) {
-                console.log(error);
+                console.log(error)
                 setTimeout(pickCoverColor, 300, queries[0])
             }
         });
@@ -291,18 +307,18 @@ hookCoverChange(false);
     }
     // Check latest release
     fetch('https://api.github.com/repos/JulienMaille/dribbblish-dynamic-theme/releases/latest').then(response => {
-      return response.json();
+        return response.json()
     }).then(data => {
-      if( data.tag_name > current ) {
-          upd = document.createElement("div")
-          upd.classList.add("ellipsis-one-line", "main-type-finale")
-          document.querySelector(".main-userWidget-box").append(upd)
-          upd.append(`NEW v${data.tag_name} available`)
-          upd.setAttribute("title", `Changes: ${data.name}`)
-      }
+        if (data.tag_name > current) {
+            upd = document.createElement("div")
+            upd.classList.add("ellipsis-one-line", "main-type-finale")
+            document.querySelector(".main-userWidget-box").append(upd)
+            upd.append(`NEW v${data.tag_name} available`)
+            upd.setAttribute("title", `Changes: ${data.name}`)
+        }
     }).catch(err => {
       // Do something for an error here
-    });
+    })
     Spicetify.showNotification("Applied system " + (systemDark ? "dark" : "light") + " theme.")
 })()
 
