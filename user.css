@@ -597,6 +597,11 @@ li.GlueDropTarget {
     transition: opacity,left 0.2s ease;
 }
 
+.playback-bar:active .prog-tooltip {
+	opacity: 1;
+    transition: none;
+}
+
 .playback-bar:hover .prog-tooltip {
     opacity: 1;
 }
