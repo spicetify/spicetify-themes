@@ -147,29 +147,39 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         return;
     }
 
+    const progKnob = progBar.querySelector(".progress-bar__slider");
+
     const tooltip = document.createElement("div");
     tooltip.className = "prog-tooltip";
-    progBar.append(tooltip);
+    progKnob.append(tooltip);
 
-    const progKnob = progBar.querySelector(".progress-bar__slider");
-    
-    function updateProgTime({ data: e }) {
-        const offsetX = progKnob.offsetLeft + progKnob.offsetWidth / 2;
-        const maxWidth = progBar.offsetWidth;
-        const curWidth = Spicetify.Player.getProgressPercent() * maxWidth;
-        const ttWidth = tooltip.offsetWidth / 2;
-        if (curWidth < ttWidth) {
-            tooltip.style.left = String(offsetX) + "px";
-        } else if (curWidth > maxWidth - ttWidth) {
-            tooltip.style.left = String(offsetX - ttWidth * 2) + "px";
+    function updateProgTime() {
+        const newText = Spicetify.Player.formatTime(Spicetify.Player.getProgress()) + " / " + Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+        // To reduce DOM Updates when the Song is Paused
+        if (tooltip.innerText != newText) tooltip.innerText = newText;
+
+        const tooltipWidth = tooltip.clientWidth;
+        const knobOffsets = progKnob.getBoundingClientRect();
+        const barOffsets = progBar.getBoundingClientRect();
+        const distFromLeft = knobOffsets.left + progKnob.clientWidth / 2 - barOffsets.left;
+        const distFromRight = Math.abs(knobOffsets.right - progKnob.clientWidth / 2 - barOffsets.right);
+        if (distFromLeft < tooltipWidth / 2 + 10) {
+            tooltip.style.setProperty("--padding-offset", `${tooltipWidth / 2 + 10 - distFromLeft}px`);
+        } else if (distFromRight < tooltipWidth / 2 + 10) {
+            tooltip.style.setProperty("--padding-offset", `-${tooltipWidth / 2 + 10 - distFromRight}px`);
         } else {
-            tooltip.style.left = String(offsetX - ttWidth) + "px";
+            tooltip.style.setProperty("--padding-offset", "0px");
         }
-        tooltip.innerText = Spicetify.Player.formatTime(e) + " / " +
-            Spicetify.Player.formatTime(Spicetify.Player.getDuration());
     }
-    Spicetify.Player.addEventListener("onprogress", updateProgTime);
-    updateProgTime({ data: Spicetify.Player.getProgress() });
+    const knobPosObserver = new MutationObserver((muts) => {
+        updateProgTime();
+    });
+    knobPosObserver.observe(document.querySelector(".progress-bar"), {
+        attributes: true,
+        attributeFilter: ["style"]
+    });
+    Spicetify.Player.addEventListener("songchange", () => updateProgTime());
+    updateProgTime();
 
     Spicetify.CosmosAsync.sub("sp://connect/v1", (state) => {
         const isExternal = state.devices.some(a => a.is_active);

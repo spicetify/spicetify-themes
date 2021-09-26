@@ -426,12 +426,38 @@ html.sidebar-hide-text .GlueDropTarget span {
     --bg-color: rgba(var(--spice-rgb-text), .2);
 }
 
+.progress-bar__slider {
+    display: block !important;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.progress-bar:hover .progress-bar__slider,
+.progress-bar:active .progress-bar__slider {
+    opacity: 1;
+}
+
 .progress-bar:not(:active) .x-progressBar-progressBarBg > div:first-child > div {
     transition: transform 0.2s ease;
 }
 
 .progress-bar:not(:active) .progress-bar__slider {
-    transition: left 0.2s ease;
+    transition-property: left,opacity;
+}
+
+.playback-bar .prog-tooltip {
+    --padding-offset: 0px;
+    position: absolute;
+    min-width: 100px;
+    top: -35px;
+    left: 50%;
+    transform: translateX(calc(-50% + var(--padding-offset)));
+    padding: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+    color: var(--spice-text);
+    background-color: var(--spice-button);
+    transition: transform 0.2s ease;
 }
 
 .minimal-player .player-controls__buttons {
@@ -580,30 +606,6 @@ li.GlueDropTarget {
     border-radius: var(--main-corner-radius);
     z-index: 2;
     pointer-events: none;
-}
-
-.playback-bar .prog-tooltip {
-    position: absolute;
-    min-width: 100px;
-    width: unset;
-    height: 25px;
-    top: -35px;
-    padding: 0 5px;
-    border-radius: 4px;
-    text-align: center;
-    color: var(--spice-text);
-    background-color: var(--spice-button);
-    opacity: 0;
-    transition: opacity,left 0.2s ease;
-}
-
-.playback-bar:active .prog-tooltip {
-    opacity: 1;
-    transition: none;
-}
-
-.playback-bar:hover .prog-tooltip {
-    opacity: 1;
 }
 
 /** Rearrange player bar */
