@@ -5,7 +5,7 @@
     --main-corner-radius: 10px;
     --scrollbar-vertical-size: 8px;
     --cover-border-radius: 8px;
-    --os-windows-icon-dodge: 1;
+    --os-windows-icon-dodge: 0;
 }
 
 @font-face {
