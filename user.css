@@ -5,7 +5,7 @@
     --main-corner-radius: 10px;
     --scrollbar-vertical-size: 8px;
     --cover-border-radius: 8px;
-    --os-windows-icon-dodge: 0;
+    --os-windows-icon-dodge: 1;
 }
 
 @font-face {
@@ -426,11 +426,11 @@ html.sidebar-hide-text .GlueDropTarget span {
     --bg-color: rgba(var(--spice-rgb-text), .2);
 }
 
-.x-progressBar-progressBarBg > div:first-child > div {
+.progress-bar:not(:active) .x-progressBar-progressBarBg > div:first-child > div {
 	transition: transform 0.2s ease;
 }
 
-.progress-bar__slider {
+.progress-bar:not(:active) .progress-bar__slider {
 	transition: left 0.2s ease;
 }
 
