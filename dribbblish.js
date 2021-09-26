@@ -153,8 +153,8 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     tooltip.className = "prog-tooltip";
     progKnob.append(tooltip);
 
-    function updateProgTime() {
-        const newText = Spicetify.Player.formatTime(Spicetify.Player.getProgress()) + " / " + Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+    function updateProgTime(timeOverride) {
+        const newText = Spicetify.Player.formatTime(timeOverride || Spicetify.Player.getProgress()) + " / " + Spicetify.Player.formatTime(Spicetify.Player.getDuration());
         // To reduce DOM Updates when the Song is Paused
         if (tooltip.innerText != newText) tooltip.innerText = newText;
 
@@ -172,7 +172,8 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         }
     }
     const knobPosObserver = new MutationObserver((muts) => {
-        updateProgTime();
+        const progressPercentage = Number(getComputedStyle(document.querySelector(".progress-bar")).getPropertyValue("--progress-bar-transform").replace("%", "")) / 100;
+        updateProgTime(Spicetify.Player.getDuration() * progressPercentage);
     });
     knobPosObserver.observe(document.querySelector(".progress-bar"), {
         attributes: true,

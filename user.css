@@ -457,6 +457,9 @@ html.sidebar-hide-text .GlueDropTarget span {
     text-align: center;
     color: var(--spice-text);
     background-color: var(--spice-button);
+}
+
+.playback-bar:not(:active) .prog-tooltip {
     transition: transform 0.2s ease;
 }
 
