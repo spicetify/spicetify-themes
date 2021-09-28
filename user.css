@@ -5,6 +5,7 @@
     --main-corner-radius: 10px;
     --scrollbar-vertical-size: 8px;
     --cover-border-radius: 8px;
+    --playbar-movement-anim-speed: 0.5s;
     --os-windows-icon-dodge: 0;
 }
 
@@ -438,7 +439,7 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .progress-bar:not(:active) .x-progressBar-progressBarBg > div:first-child > div {
-    transition: transform 0.2s ease;
+    transition: transform var(--playbar-movement-anim-speed) ease;
 }
 
 .progress-bar:not(:active) .progress-bar__slider {
@@ -446,12 +447,11 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .playback-bar .prog-tooltip {
-    --padding-offset: 0px;
     position: absolute;
     min-width: 100px;
     top: -35px;
     left: 50%;
-    transform: translateX(calc(-50% + var(--padding-offset)));
+    transform: translateX(calc(-50%));
     padding: 0 5px;
     border-radius: 4px;
     text-align: center;
@@ -460,7 +460,7 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .playback-bar:not(:active) .prog-tooltip {
-    transition: transform 0.2s ease;
+    transition: transform var(--playbar-movement-anim-speed) ease;
 }
 
 .minimal-player .player-controls__buttons {

@@ -157,19 +157,6 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         const newText = Spicetify.Player.formatTime(timeOverride || Spicetify.Player.getProgress()) + " / " + Spicetify.Player.formatTime(Spicetify.Player.getDuration());
         // To reduce DOM Updates when the Song is Paused
         if (tooltip.innerText != newText) tooltip.innerText = newText;
-
-        const tooltipWidth = tooltip.clientWidth;
-        const knobOffsets = progKnob.getBoundingClientRect();
-        const barOffsets = progBar.getBoundingClientRect();
-        const distFromLeft = knobOffsets.left + progKnob.clientWidth / 2 - barOffsets.left;
-        const distFromRight = Math.abs(knobOffsets.right - progKnob.clientWidth / 2 - barOffsets.right);
-        if (distFromLeft < tooltipWidth / 2 + 10) {
-            tooltip.style.setProperty("--padding-offset", `${tooltipWidth / 2 + 10 - distFromLeft}px`);
-        } else if (distFromRight < tooltipWidth / 2 + 10) {
-            tooltip.style.setProperty("--padding-offset", `-${tooltipWidth / 2 + 10 - distFromRight}px`);
-        } else {
-            tooltip.style.setProperty("--padding-offset", "0px");
-        }
     }
     const knobPosObserver = new MutationObserver((muts) => {
         const progressPercentage = Number(getComputedStyle(document.querySelector(".progress-bar")).getPropertyValue("--progress-bar-transform").replace("%", "")) / 100;
