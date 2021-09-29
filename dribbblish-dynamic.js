@@ -1,4 +1,4 @@
-let current = '1.9'
+let current = '2.0'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -313,7 +313,7 @@ hookCoverChange(false);
             upd = document.createElement("div")
             upd.classList.add("ellipsis-one-line", "main-type-finale")
             document.querySelector(".main-userWidget-box").append(upd)
-            upd.append(`NEW v${data.tag_name} available`)
+            upd.append(`Theme UPD v${data.tag_name} avail.`)
             upd.setAttribute("title", `Changes: ${data.name}`)
         }
     }).catch(err => {
