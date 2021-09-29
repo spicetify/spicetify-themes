@@ -147,29 +147,27 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         return;
     }
 
+    const progKnob = progBar.querySelector(".progress-bar__slider");
+
     const tooltip = document.createElement("div");
     tooltip.className = "prog-tooltip";
-    progBar.append(tooltip);
+    progKnob.append(tooltip);
 
-    const progKnob = progBar.querySelector(".progress-bar__slider");
-    
-    function updateProgTime({ data: e }) {
-        const offsetX = progKnob.offsetLeft + progKnob.offsetWidth / 2;
-        const maxWidth = progBar.offsetWidth;
-        const curWidth = Spicetify.Player.getProgressPercent() * maxWidth;
-        const ttWidth = tooltip.offsetWidth / 2;
-        if (curWidth < ttWidth) {
-            tooltip.style.left = String(offsetX) + "px";
-        } else if (curWidth > maxWidth - ttWidth) {
-            tooltip.style.left = String(offsetX - ttWidth * 2) + "px";
-        } else {
-            tooltip.style.left = String(offsetX - ttWidth) + "px";
-        }
-        tooltip.innerText = Spicetify.Player.formatTime(e) + " / " +
-            Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+    function updateProgTime(timeOverride) {
+        const newText = Spicetify.Player.formatTime(timeOverride || Spicetify.Player.getProgress()) + " / " + Spicetify.Player.formatTime(Spicetify.Player.getDuration());
+        // To reduce DOM Updates when the Song is Paused
+        if (tooltip.innerText != newText) tooltip.innerText = newText;
     }
-    Spicetify.Player.addEventListener("onprogress", updateProgTime);
-    updateProgTime({ data: Spicetify.Player.getProgress() });
+    const knobPosObserver = new MutationObserver((muts) => {
+        const progressPercentage = Number(getComputedStyle(document.querySelector(".progress-bar")).getPropertyValue("--progress-bar-transform").replace("%", "")) / 100;
+        updateProgTime(Spicetify.Player.getDuration() * progressPercentage);
+    });
+    knobPosObserver.observe(document.querySelector(".progress-bar"), {
+        attributes: true,
+        attributeFilter: ["style"]
+    });
+    Spicetify.Player.addEventListener("songchange", () => updateProgTime());
+    updateProgTime();
 
     Spicetify.CosmosAsync.sub("sp://connect/v1", (state) => {
         const isExternal = state.devices.some(a => a.is_active);
