@@ -249,6 +249,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 .main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName span,
 .main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink,
 .main-buddyFeed-activityMetadata .main-buddyFeed-timestamp {
     color: rgba(var(--spice-rgb-sidebar-text), 0.8);
