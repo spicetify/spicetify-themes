@@ -231,7 +231,7 @@ async function songchange() {
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
         album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
         
-        nearArtistSpanText = album_link + " — " + album_date
+        nearArtistSpanText = album_link + " • " + album_date
     } else if (Spicetify.Player.data.track.uri.includes('spotify:episode')) {
         // podcast
         bgImage = bgImage.replace('spotify:image:', 'https://i.scdn.co/image/')
