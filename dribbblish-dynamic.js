@@ -1,4 +1,4 @@
-let current = '2.0'
+let current = '2.1'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -286,7 +286,7 @@ function pickCoverColor(img) {
 function hookCoverChange(pick) {
     waitForElement([".cover-art-image"], (queries) => {
         coverListenerInstalled = true
-        if (pick) pickCoverColor(queries[0])
+        if (pick && queries[0].complete && queries[0].naturalHeight !== 0) pickCoverColor(queries[0])
         queries[0].addEventListener('load', function() {
             try {
                 pickCoverColor(queries[0])
