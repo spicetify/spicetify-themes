@@ -3,27 +3,43 @@
 const DribbblishShared = {
     configMenu: new Spicetify.Menu.SubMenu("Dribbblish", []),
     rightBigCover: localStorage.getItem("dribs-right-big-cover") === "true",
-    setRightBigCover: () => {
+    osIconDodge: localStorage.getItem("dribs-os-icon-dodge") === "true",
+    updateConfig: () => {
         if (DribbblishShared.rightBigCover) {
             document.documentElement.classList.add("right-expanded-cover");
         } else {
             document.documentElement.classList.remove("right-expanded-cover");
         }
+
+        if (DribbblishShared.osIconDodge) {
+            document.documentElement.style.setProperty("--os-windows-icon-dodge", 1);
+        } else {
+            document.documentElement.style.setProperty("--os-windows-icon-dodge", 0);
+        }
     }
 };
 
 DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
-    "Right expanded cover",
-    DribbblishShared.rightBigCover,
-    (self) => {
+DribbblishShared.configMenu.addItem(
+    new Spicetify.Menu.Item("Right expanded cover", DribbblishShared.rightBigCover, (self) => {
         self.isEnabled = !self.isEnabled;
         DribbblishShared.rightBigCover = self.isEnabled;
         localStorage.setItem("dribs-right-big-cover", self.isEnabled);
-        DribbblishShared.setRightBigCover();
-    }
-));
-DribbblishShared.setRightBigCover();
+        DribbblishShared.updateConfig();
+    })
+);
+
+DribbblishShared.configMenu.register();
+DribbblishShared.configMenu.addItem(
+    new Spicetify.Menu.Item("OS Icon Dodge", DribbblishShared.osIconDodge, (self) => {
+        self.isEnabled = !self.isEnabled;
+        DribbblishShared.osIconDodge = self.isEnabled;
+        localStorage.setItem("dribs-os-icon-dodge", self.isEnabled);
+        DribbblishShared.updateConfig();
+    })
+);
+
+DribbblishShared.updateConfig();
 
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));
