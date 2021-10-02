@@ -22,7 +22,6 @@
           uri = Spicetify.URI.playlistV2URI(link.split("/").pop());
         } else if (link.search("folder") !== -1) {
           item.style.content = "url(https://api.iconify.design/fluent/folder-24-regular.svg?color=%23bbb)"
-          item.style.padding = "10px";
           continue;
         }
 
@@ -36,19 +35,19 @@
           const meta = res.metadata;
           if (meta.picture === "") {
             item.style.content = "url(https://api.iconify.design/fluent/music-note-2-24-regular.svg?color=%23bbb)"
-            item.style.padding = "10px";
           } else {
             item.style.backgroundImage = "url(" + meta.picture + ")";
             item.style.content = "";
           }
         });
       };
+
     };
 
     replacePlaylistIcons();
     const observer = new MutationObserver(replacePlaylistIcons);
-    waitForElement([".main-rootlist-wrapper .os-content"], () => {
-      const rootList = document.querySelector(".main-rootlist-wrapper .os-content");
+    waitForElement(["#spicetify-playlist-list"], () => {
+      const rootList = document.querySelector("#spicetify-playlist-list");
       observer.observe(rootList, {
         childList: true,
         subtree: true
@@ -73,20 +72,29 @@
   if (textColor == " #000000") {
     document.documentElement.style.setProperty('--filter-brightness', 0);
   }
+    
+  var interval = setInterval(function() {
+    if(typeof Spicetify.Platform.Translations.play == 'undefined' && typeof Spicetify.Platform.Translations.pause == 'undefined') return;
+      clearInterval(interval);
+      var playButtonStyle = document.createElement('style');
+      playButtonStyle.type = 'text/css';
+      playButtonStyle.innerHTML = `
+      .main-playButton-button[aria-label="${Spicetify.Platform.Translations.play}"],
+      .main-playButton-PlayButton[aria-label="${Spicetify.Platform.Translations.play}"],
+      .main-playPauseButton-button[aria-label="${Spicetify.Platform.Translations.play}"],
+      .main-trackList-rowPlayPauseButton[aria-label="${Spicetify.Platform.Translations.play}"] {
+        background-color: var(--spice-text) !important;
+        -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg') !important;
+      }
+      .main-playButton-button[aria-label="${Spicetify.Platform.Translations.pause}"],
+      .main-playButton-PlayButton[aria-label="${Spicetify.Platform.Translations.pause}"],
+      .main-playPauseButton-button[aria-label="${Spicetify.Platform.Translations.pause}"],
+      .main-trackList-rowPlayPauseButton[aria-label="${Spicetify.Platform.Translations.pause}"] {
+        background-color: var(--spice-text) !important;
+        -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg') !important;
+      }
+      `;
+      document.getElementsByTagName('head')[0].appendChild(playButtonStyle);
+  }, 10)
 
-  waitForElement([".main-playButton-button"], () => {
-    const style = document.createElement("style");
-    style.innerHTML = `\
-    .main-playButton-button[aria-label="${Spicetify.Platform.Translations.play}"],
-    .main-playButton-PlayButton[aria-label="${Spicetify.Platform.Translations.play}"] {
-      background-color: var(--spice-text) !important;
-      -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
-    }
-    .main-playButton-button[aria-label="${Spicetify.Platform.Translations.pause}"],
-    .main-playButton-PlayButton[aria-label="${Spicetify.Platform.Translations.pause}"] {
-      background-color: var(--spice-text) !important;
-      -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_pause_16_filled.svg');
-    }`;
-    document.head.appendChild(style);
-  });
 })();
