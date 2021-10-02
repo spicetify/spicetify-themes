@@ -396,7 +396,7 @@ html.sidebar-hide-text .GlueDropTarget span {
     fill: var(--spice-button);
 }
 
-.playback-bar__progress-time,
+.playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     display: none;
 }
