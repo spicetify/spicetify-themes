@@ -21,7 +21,7 @@
         if (link.search("playlist") !== -1) {
           uri = Spicetify.URI.playlistV2URI(link.split("/").pop());
         } else if (link.search("folder") !== -1) {
-          item.style.content = "url(https://api.iconify.design/fluent/folder-24-regular.svg?color=%23bbb)"
+          item.style.content = "url('./fluentui-system-icons/ic_fluent_folder_24_filled.svg')"
           continue;
         }
 
@@ -34,7 +34,7 @@
         ).then(res => {
           const meta = res.metadata;
           if (meta.picture === "") {
-            item.style.content = "url(https://api.iconify.design/fluent/music-note-2-24-regular.svg?color=%23bbb)"
+            item.style.content = "url('./fluentui-system-icons/ic_fluent_music_note_2_24_filled.svg')"
           } else {
             item.style.backgroundImage = "url(" + meta.picture + ")";
             item.style.content = "";

@@ -368,11 +368,40 @@ h3,
   display: none !important;
 }
 
-.GlueDropTarget--tracks.personal-library[data-id="/collection/tracks"],
-.GlueDropTarget--episodes.personal-library[data-id="/collection/episodes"],
 .main-collectionLinkButton-collectionLinkButton {
+  width: 49px;
+  min-height: 48px;
+  margin: auto;
+  margin-bottom: 14px;
+  justify-content: center;
+}
+
+.main-collectionLinkButton-collectionLinkButton[href="/collection/tracks"] {
+  background: linear-gradient(135deg,#450af5,#c4efd9) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton[href="/collection/episodes"] {
+  background-color: #006450 !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton[href="/collection/tracks"] .main-collectionLinkButton-icon {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_heart_24_filled.svg');
+  background-color: white !important;
+  margin-right: 0px;
+}
+
+.main-collectionLinkButton-collectionLinkButton[href="/collection/episodes"] .main-collectionLinkButton-icon {
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_mic_on_24_filled.svg');
+  background-color: #00DA6B !important;
+  margin-right: 0px;
+}
+
+.main-likedSongsButton-likedSongsIcon,
+.main-yourEpisodesButton-yourEpisodesIcon,
+.main-collectionLinkButton-collectionLinkText {
   display: none !important;
 }
+
 
 .main-type-balladBold {
   font-family: 'Segoe UI', sans-serif !important;
@@ -570,10 +599,18 @@ button.switch {
 
 /* playlist sidebar */
 
+.main-rootlist-rootlist .os-content {
+  padding: 0px 0px !important;
+}
+
 .main-rootlist-rootlist {
   --left-sidebar-item-height: 48px;
   --left-sidebar-padding-left: 18px;
   --left-sidebar-padding-right: 18px;
+}
+
+.main-rootlist-rootlistItemLink {
+  padding: 8px;
 }
 
 .main-rootlist-rootlistItemLink:link,
@@ -1504,4 +1541,16 @@ option {
 .main-trackList-rowPlayPauseButton{
   background-color: var(--spice-text) !important;
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_play_24_filled.svg');
+}
+
+
+/* spicetify */
+
+#spicetify-sidebar-config {
+  flex-direction: column;
+  top: -60px !important;
+}
+
+#spicetify-show-list >* {
+  padding: 0px;
 }
