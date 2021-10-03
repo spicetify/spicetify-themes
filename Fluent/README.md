@@ -22,7 +22,7 @@ Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https:
 
 ### Install
 
-Make sure spicetify >= v2.6.3 is installed. Run these commands:
+Make sure spicetify >= v2.7.0 is installed. Run these commands:
 
 #### Windows
 In **Powershell**:
@@ -46,6 +46,15 @@ spicetify config current_theme Fluent color_scheme dark
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
 ```
+
+### Important
+For the sidebar playlists to show properly, ensure that these two lines are added in your config-xpui.ini file:
+```ini
+[Patch]
+xpui.js_find_8008 = ,(\w+=)32,
+xpui.js_repl_8008 = ,${1}56,
+```
+
 
 ### Customization
 

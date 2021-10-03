@@ -320,6 +320,18 @@
 }
 
 
+/* Responsive */
+@media (max-width: 908px) {
+  #fad-foreground {
+    flex-wrap: wrap;
+    align-content: center
+  }
+
+  #fad-details {
+    padding-top: 50px
+  }
+}
+
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground {
     transform: scale(1.2)
