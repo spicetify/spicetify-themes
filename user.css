@@ -165,7 +165,6 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
     line-height: 120px !important;
 }
 
-/** Hightlight selected playlist */
 .main-contextMenu-menu {
     background-color: var(--spice-button);
 }
