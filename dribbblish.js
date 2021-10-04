@@ -92,12 +92,23 @@ DribbblishShared.config.register("Right expanded cover", "rightBigCover", true, 
     }
 });
 
-DribbblishShared.config.register("OS Icon Dodge", "osIconDodge", false, (value) => {
-    if (value) {
-        document.documentElement.style.setProperty("--os-windows-icon-dodge", 1);
-    } else {
-        document.documentElement.style.setProperty("--os-windows-icon-dodge", 0);
-    }
+waitForElement(["#main"], () => {
+    DribbblishShared.config.registerSelect("Windows Top Bar", "winTopBar", ["None", "None (With Top Padding)", "Solid", "Transparent"], 0, (value) => {
+        switch (value) {
+            case 0:
+                document.getElementById("main").setAttribute("top-bar", "none");
+                break;
+            case 1:
+                document.getElementById("main").setAttribute("top-bar", "none-padding");
+                break;
+            case 2:
+                document.getElementById("main").setAttribute("top-bar", "solid");
+                break;
+            case 3:
+                document.getElementById("main").setAttribute("top-bar", "transparent");
+                break;
+        }
+    });
 });
 
 function waitForElement(els, func, timeout = 100) {

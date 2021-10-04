@@ -569,20 +569,52 @@ li.GlueDropTarget {
 }
 
 /** OS-specific window controls dodge */
-.spotify__os--is-windows .main-navBar-navBar {
-    padding-top: calc(var(--os-windows-icon-dodge) * 24px);
+#main:not([top-bar^="none"]) .main-topBar-background {
+    -webkit-app-region: no-drag;
 }
 
-.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows .main-navBar-entryPoints {
-    padding-top: calc(var(--os-windows-icon-dodge) * 12px + 12px);
+#main:not([top-bar="none-padding"]) .main-navBar-navBar,
+#main:not([top-bar="none-padding"]) .main-buddyFeed-header,
+#main:not([top-bar="none-padding"]) .main-navBar-entryPoints {
+    padding-top: 8px !important;
 }
 
-.spotify__os--is-windows .main-buddyFeed-header {
-    padding-top: calc(var(--os-windows-icon-dodge) * 32px);
+#main:not([top-bar^="none"]) {
+    padding-top: 31px;
 }
 
-.spotify__container--is-desktop.spotify__os--is-windows[dir=ltr] .main-topBar-container {
-    padding-right: calc(var(--os-windows-icon-dodge) * 135px + 32px);
+#main:not([top-bar^="none"])::before {
+    z-index: 999;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 135px;
+    height: 31px;
+    background-color: rgba(0, 0, 0, 0.53);
+    -webkit-app-region: drag;
+    pointer-events: none;
+}
+
+#main[top-bar="solid"]::before {
+    right: 0px;
+    background-color: black;
+}
+
+#main[top-bar="none-padding"] .spotify__os--is-windows .main-navBar-navBar {
+    padding-top: 24px;
+}
+
+#main[top-bar="none-padding"] .spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows .main-navBar-entryPoints {
+    padding-top: 22px;
+}
+
+#main[top-bar="none-padding"] .spotify__os--is-windows .main-buddyFeed-header {
+    padding-top: 32px;
+}
+
+#main[top-bar="none-padding"] .spotify__container--is-desktop.spotify__os--is-windows[dir=ltr] .Root__top-bar + .main-buddyFeed-buddyFeedRoot .main-topBar-container {
+    padding-right: 167px;
 }
 
 .main-topBar-container {
