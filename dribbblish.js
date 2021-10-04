@@ -2,44 +2,103 @@
 // document.getElementById("popover-container").style.height = 0;
 const DribbblishShared = {
     configMenu: new Spicetify.Menu.SubMenu("Dribbblish", []),
-    rightBigCover: localStorage.getItem("dribs-right-big-cover") === "true",
-    osIconDodge: localStorage.getItem("dribs-os-icon-dodge") === "true",
-    updateConfig: () => {
-        if (DribbblishShared.rightBigCover) {
-            document.documentElement.classList.add("right-expanded-cover");
-        } else {
-            document.documentElement.classList.remove("right-expanded-cover");
-        }
+    config: {
+        register: (name, key, defaultValue, update) => {
+            const menuItem = new Spicetify.Menu.Item(name, defaultValue, (self) => {
+                self.setState(!self.isEnabled);
+                DribbblishShared.config.toggle(key);
+            });
+            DribbblishShared.configMenu.addItem(menuItem);
 
-        if (DribbblishShared.osIconDodge) {
-            document.documentElement.style.setProperty("--os-windows-icon-dodge", 1);
-        } else {
-            document.documentElement.style.setProperty("--os-windows-icon-dodge", 0);
+            if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultValue);
+
+            DribbblishShared.configData[key] = {
+                menuItem,
+                update
+            };
+
+            DribbblishShared.config.update(key);
+        },
+        registerSelect: (name, key, choices, defaultChoice, update) => {
+            const menuItem = new Spicetify.Menu.SubMenu(name, []);
+            const menuItems = choices.map((choice, i) => {
+                const subItem = new Spicetify.Menu.Item(choice, i == defaultChoice, (self) => {
+                    self.setState(!self.isEnabled);
+                    DribbblishShared.config.set(key, i);
+                });
+                menuItem.addItem(subItem);
+                return subItem;
+            });
+            DribbblishShared.configMenu.addItem(menuItem);
+            menuItem.register();
+
+            if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultChoice);
+
+            DribbblishShared.configData[key] = {
+                subItems: menuItems,
+                menuItem,
+                update
+            };
+
+            DribbblishShared.config.update(key);
+        },
+        get: (key) => {
+            const val = localStorage.getItem(`dribbblish:config:${key}`);
+            if (val == "true" || val == "false") return val == "true";
+            if (!isNaN(val) && !isNaN(parseInt(val))) return parseInt(val);
+        },
+        set: (key, val) => {
+            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
+                DribbblishShared.configData[key].subItems.forEach((item, i) => {
+                    item.setState(val == i);
+                });
+            } else {
+                DribbblishShared.configData[key].menuItem.setState(val);
+            }
+            localStorage.setItem(`dribbblish:config:${key}`, val);
+            DribbblishShared.config.update(key);
+        },
+        toggle: (key) => {
+            DribbblishShared.config.set(key, !DribbblishShared.config.get(key));
+
+            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
+                // Can't toggle lists
+            } else {
+                DribbblishShared.configData[key].menuItem.setState(DribbblishShared.config.get(key));
+            }
+        },
+        update: (key) => {
+            const val = DribbblishShared.config.get(key);
+            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
+                DribbblishShared.configData[key].subItems.forEach((item, i) => {
+                    item.setState(val == i);
+                });
+            } else {
+                DribbblishShared.configData[key].menuItem.setState(val);
+            }
+            DribbblishShared.configData[key].update(val);
         }
-    }
+    },
+    configData: {}
 };
-
 DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.addItem(
-    new Spicetify.Menu.Item("Right expanded cover", DribbblishShared.rightBigCover, (self) => {
-        self.isEnabled = !self.isEnabled;
-        DribbblishShared.rightBigCover = self.isEnabled;
-        localStorage.setItem("dribs-right-big-cover", self.isEnabled);
-        DribbblishShared.updateConfig();
-    })
-);
 
-DribbblishShared.configMenu.register();
-DribbblishShared.configMenu.addItem(
-    new Spicetify.Menu.Item("OS Icon Dodge", DribbblishShared.osIconDodge, (self) => {
-        self.isEnabled = !self.isEnabled;
-        DribbblishShared.osIconDodge = self.isEnabled;
-        localStorage.setItem("dribs-os-icon-dodge", self.isEnabled);
-        DribbblishShared.updateConfig();
-    })
-);
+// Initialize Config
+DribbblishShared.config.register("Right expanded cover", "rightBigCover", true, (value) => {
+    if (value) {
+        document.documentElement.classList.add("right-expanded-cover");
+    } else {
+        document.documentElement.classList.remove("right-expanded-cover");
+    }
+});
 
-DribbblishShared.updateConfig();
+DribbblishShared.config.register("OS Icon Dodge", "osIconDodge", false, (value) => {
+    if (value) {
+        document.documentElement.style.setProperty("--os-windows-icon-dodge", 1);
+    } else {
+        document.documentElement.style.setProperty("--os-windows-icon-dodge", 0);
+    }
+});
 
 function waitForElement(els, func, timeout = 100) {
     const queries = els.map(el => document.querySelector(el));

@@ -174,15 +174,21 @@ function toggleDark(setDark) {
 }
 
 /* Init with current system light/dark mode */
-let systemDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--system_is_dark'))==1
-toggleDark(systemDark)
+let systemDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--system_is_dark")) == 1;
 
-DribbblishShared.configMenu.register()
-DribbblishShared.configMenu.addItem(new Spicetify.Menu.Item(
-    "Dark mode",
-    systemDark,
-    (self) => { toggleDark(); self.isEnabled = !self.isEnabled; }
-))
+DribbblishShared.config.registerSelect("Theme", "theme", ["System", "Dark", "Light"], 0, (val) => {
+    switch (val) {
+        case 0:
+            toggleDark(systemDark);
+            break;
+        case 1:
+            toggleDark(true);
+            break;
+        case 2:
+            toggleDark(false);
+            break;
+    }
+});
 
 function updateColors(textColHex, sideColHex) {
     let isLightBg = isLight(textColorBg)
