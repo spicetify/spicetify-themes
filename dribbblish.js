@@ -92,6 +92,14 @@ DribbblishShared.config.register("Right expanded cover", "rightBigCover", true, 
     }
 });
 
+DribbblishShared.config.register("Round Sidebar Icons", "roundSidebarIcons", false, (value) => {
+    if (value) {
+        document.documentElement.style.setProperty("--sidebar-icons-border-radius", "50%");
+    } else {
+        document.documentElement.style.setProperty("--sidebar-icons-border-radius", "var(--image-radius)");
+    }
+});
+
 waitForElement(["#main"], () => {
     DribbblishShared.config.registerSelect("Windows Top Bar", "winTopBar", ["None", "None (With Top Padding)", "Solid", "Transparent"], 0, (value) => {
         switch (value) {

@@ -6,6 +6,8 @@
     --scrollbar-vertical-size: 8px;
     --cover-border-radius: 8px;
     --playbar-movement-anim-speed: 0.5s;
+    --image-radius: 10px;
+    --sidebar-icons-border-radius: 50%;
 }
 
 @font-face {
@@ -164,15 +166,6 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 /** Hightlight selected playlist */
-.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive {
-    background: var(--spice-button);
-    border-radius: 4px;
-}
-
-.main-navBar-navBarLinkActive {
-    background: var(--spice-button);
-}
-
 .main-contextMenu-menu {
     background-color: var(--spice-button);
 }
@@ -264,6 +257,23 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
     height: 32px !important;
 }
 
+.view-homeShortcutsGrid-shortcut {
+    overflow: hidden;
+}
+
+.cover-art,
+.view-homeShortcutsGrid-shortcut,
+:not(.view-homeShortcutsGrid-imageWrapper) > .main-image-image:not(.main-avatar-image) {
+    border-radius: var(--image-radius) !important;
+}
+
+.main-userWidget-box,
+.main-avatar-userIcon,
+.main-avatar-image,
+.view-homeShortcutsGrid-shortcutLink {
+    border-radius: var(--sidebar-icons-border-radius) !important;
+}
+
 .main-avatar-avatar.main-avatar-withBadge:after {
     box-shadow: 0 0 0 2px var(--spice-sidebar);
     background-color: var(--spice-notification);
@@ -329,7 +339,8 @@ html {
 }
 
 .main-navBar-navBarItem {
-    padding: 0 8px;
+    position: relative;
+    padding: 0px;
 }
 
 #spicetify-show-list >* {
@@ -387,6 +398,28 @@ html.sidebar-hide-text .GlueDropTarget span {
     margin-top: 0;
 }
 
+.main-rootlist-rootlist::before,
+.main-rootlist-rootlist::after {
+    z-index: 10;
+    position: absolute;
+    content: "";
+    left: 0px;
+    right: 0px;
+    pointer-events: none;
+}
+
+.main-rootlist-rootlist::before {
+    top: 0px;
+    height: 5%;
+    background: linear-gradient(to bottom, var(--spice-sidebar) 10%, transparent);
+}
+
+.main-rootlist-rootlist::after {
+    bottom: 0px;
+    height: 15%;
+    background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
+}
+
 .Root__nav-bar .os-scrollbar-vertical,
 .main-buddyFeed-buddyFeedRoot .os-scrollbar-vertical {
     display: none;
@@ -404,6 +437,7 @@ html.sidebar-hide-text .GlueDropTarget span {
     fill: var(--spice-button);
 }
 
+.playback-bar__progress-time,
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     display: none;
@@ -539,7 +573,7 @@ img.playlist-picture {
     flex: 0 0 32px;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
+    border-radius: var(--sidebar-icons-border-radius);
 }
 
 .main-rootlist-rootlistItem a span {
@@ -630,18 +664,10 @@ li.GlueDropTarget {
 }
 
 /** Custom elements */
-#dribbblish-sidebar-fade-in {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
-    background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
-    z-index: 3;
-    pointer-events: none;
-}
 .dribs-playlist-list {
-    padding-bottom: 56px;
+    padding-bottom: 86px;
 }
+
 #dribbblish-back-shadow {
     position: fixed;
     width: var(--main-view-width);
@@ -785,6 +811,41 @@ span.main-userWidget-displayName,
 .main-navBar-entryPoints {
     --left-sidebar-padding-left: 24px;
     --left-sidebar-padding-right: 24px;
+
+    padding: 0px 8px;
+}
+
+.main-navBar-navBar,
+.main-rootlist-wrapper > div:nth-child(2),
+.main-navBar-entryPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-rootlist-wrapper > div:nth-child(2) > li img,
+.main-navBar-navBarLink > .icon {
+    z-index: 100;
+}
+
+.main-navBar-navBarItem:hover::before,
+.main-rootlist-rootlistItem:hover::before,
+.main-rootlist-rootlistItemLinkActive::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-color: rgba(var(--spice-rgb-main), 0.4);
+    border-radius: var(--image-radius);
+    pointer-events: none;
+}
+
+.main-navBar-navBarLinkActive {
+    border-radius: var(--image-radius);
+    background-color: rgba(var(--spice-rgb-main), 0.4);
+}
+
+.main-navBar-navBar a:hover, .main-navBar-navBar a:hover span {
+    color: unset !important;
 }
 
 div.GlueDropTarget.personal-library  {
