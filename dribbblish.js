@@ -180,16 +180,41 @@ waitForElement([
         .observe(listElem, {childList: true});
 });
 
+waitForElement([".main-rootlist-rootlist", ".main-rootlist-wrapper > :nth-child(2) > :first-child"], ([rootlist]) => {
+    function checkSidebarPlaylistScroll() {
+        const topDist = rootlist.getBoundingClientRect().top - document.querySelector(".main-rootlist-wrapper > :nth-child(2) > :first-child").getBoundingClientRect().top;
+        const bottomDist = document.querySelector(".main-rootlist-wrapper > :nth-child(2) > :last-child").getBoundingClientRect().bottom - rootlist.getBoundingClientRect().bottom;
+
+        rootlist.classList.remove("no-top-shadow", "no-bottom-shadow");
+        if (topDist < 10) rootlist.classList.add("no-top-shadow");
+        if (bottomDist < 10) rootlist.classList.add("no-bottom-shadow");
+    }
+    checkSidebarPlaylistScroll();
+
+    // Use Interval because scrolling takes a while and getBoundingClientRect() gets position at the moment of calling, so the interval keeps calling for 1s
+    let c = 0;
+    let interval;
+    rootlist.addEventListener("wheel", () => {
+        checkSidebarPlaylistScroll();
+        c = 0;
+        if (interval == null)
+            interval = setInterval(() => {
+                if (c > 20) {
+                    clearInterval(interval);
+                    interval = null;
+                    return;
+                }
+
+                checkSidebarPlaylistScroll();
+                c++;
+            }, 50);
+    });
+});
+
 waitForElement([".Root__main-view"], ([mainView]) => {
     const shadow = document.createElement("div");
     shadow.id = "dribbblish-back-shadow";
     mainView.prepend(shadow);
-});
-
-waitForElement([".main-rootlist-rootlistPlaylistsScrollNode"], (queries) => {
-    const fade = document.createElement("div");
-    fade.id = "dribbblish-sidebar-fade-in";
-    queries[0].append(fade);
 });
 
 waitForElement([

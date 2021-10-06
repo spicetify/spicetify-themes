@@ -405,6 +405,15 @@ html.sidebar-hide-text .GlueDropTarget span {
     left: 0px;
     right: 0px;
     pointer-events: none;
+    transition: height 0.5s ease;
+}
+
+.main-rootlist-rootlist.no-top-shadow::before {
+    height: 0px;
+}
+
+.main-rootlist-rootlist.no-bottom-shadow::after {
+    height: 0px;
 }
 
 .main-rootlist-rootlist::before {
