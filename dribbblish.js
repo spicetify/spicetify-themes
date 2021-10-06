@@ -157,8 +157,6 @@ DribbblishShared.config.register({
     }
 });
 
-DribbblishShared.config.open();
-
 waitForElement(["#main"], () => {
     DribbblishShared.config.register({
         type: "select",
