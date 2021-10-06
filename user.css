@@ -274,14 +274,14 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 .cover-art,
+.main-userWidget-box,
 .view-homeShortcutsGrid-shortcut,
 :not(.view-homeShortcutsGrid-imageWrapper) > .main-image-image:not(.main-avatar-image) {
     border-radius: var(--image-radius) !important;
 }
 
-.main-userWidget-box,
-.main-avatar-userIcon,
 .main-avatar-image,
+.main-avatar-userIcon,
 .view-homeShortcutsGrid-shortcutLink {
     border-radius: var(--sidebar-icons-border-radius) !important;
 }
@@ -697,6 +697,73 @@ li.GlueDropTarget {
     border-radius: var(--main-corner-radius);
     z-index: 2;
     pointer-events: none;
+}
+
+#dribbblish-config {
+    display: none;
+    z-index: 99999;
+    position: absolute;
+    inset: 0px;
+    align-items: center;
+    justify-content: center;
+    color: var(--spice-text);
+}
+
+#dribbblish-config[active] {
+    display: flex;
+}
+
+#dribbblish-config .dribbblish-config-container {
+    z-index: 1;
+    position: relative;
+    max-width: 80%;
+    background-color: rgba(var(--spice-rgb-main), 0.85);
+    backdrop-filter: blur(3px);
+    padding: 20px 15px;
+    border-radius: var(--main-corner-radius);
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#dribbblish-config .dribbblish-config-item {
+    position: relative;
+    width: 100%;
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 10px;
+    grid-template-areas:
+        "header input"
+        "description input";
+}
+
+#dribbblish-config .dribbblish-config-item > .x-settings-title {
+    grid-area: header;
+}
+
+#dribbblish-config .dribbblish-config-item > .main-type-mesto {
+    grid-area: description;
+}
+
+#dribbblish-config .dribbblish-config-item > .x-settings-secondColumn {
+    grid-area: input;
+}
+
+#dribbblish-config .dribbblish-config-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#dribbblish-config .dribbblish-config-backdrop {
+    position: absolute;
+    content: "";
+    inset: 0px;
+    backdrop-filter: blur(3px) brightness(60%);
 }
 
 /** Rearrange player bar */

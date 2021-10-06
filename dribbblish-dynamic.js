@@ -176,17 +176,25 @@ function toggleDark(setDark) {
 /* Init with current system light/dark mode */
 let systemDark = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--system_is_dark")) == 1;
 
-DribbblishShared.config.registerSelect("Theme", "theme", ["System", "Dark", "Light"], 0, (val) => {
-    switch (val) {
-        case 0:
-            toggleDark(systemDark);
-            break;
-        case 1:
-            toggleDark(true);
-            break;
-        case 2:
-            toggleDark(false);
-            break;
+DribbblishShared.config.register({
+    type: "select",
+    options: ["System", "Dark", "Light"],
+    key: "theme",
+    name: "Theme",
+    description: "Select Dark / Bright mode",
+    defaultValue: 0,
+    onChange: (val) => {
+        switch (val) {
+            case 0:
+                toggleDark(systemDark);
+                break;
+            case 1:
+                toggleDark(true);
+                break;
+            case 2:
+                toggleDark(false);
+                break;
+        }
     }
 });
 
@@ -321,11 +329,15 @@ hookCoverChange(false);
             document.querySelector(".main-userWidget-box").append(upd)
             upd.append(`Theme UPD v${data.tag_name} avail.`)
             upd.setAttribute("title", `Changes: ${data.name}`)
-            DribbblishShared.configButton.addItem(
-                new Spicetify.Menu.Item("Update", false, (self) => {
+            DribbblishShared.config.register({
+                insertOnTop: true,
+                type: "button",
+                name: "Update",
+                description: "Open the GitHub Page with Installation instructions / Commands.",
+                onChange: () => {
                     window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank");
-                })
-            );
+                }
+            });
         }
     }).catch(err => {
       // Do something for an error here

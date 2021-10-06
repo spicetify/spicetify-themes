@@ -1,131 +1,211 @@
 // Hide popover message
 // document.getElementById("popover-container").style.height = 0;
-const DribbblishShared = {
-    configButton: new Spicetify.Menu.SubMenu("Dribbblish", []),
-    config: {
-        register: (name, key, defaultValue, update) => {
-            const menuItem = new Spicetify.Menu.Item(name, defaultValue, (self) => {
-                self.setState(!self.isEnabled);
-                DribbblishShared.config.toggle(key);
-            });
-            DribbblishShared.configButton.addItem(menuItem);
+class ConfigMenu {
+    constructor() {
+        this.config = {};
+        this.configButton = new Spicetify.Menu.Item("Dribbblish config", false, () => DribbblishShared.config.open());
+        this.configButton.register();
 
-            if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultValue);
+        const container = document.createElement("div");
+        container.id = "dribbblish-config";
+        container.innerHTML = /* html */ `
+            <div class="dribbblish-config-container">
+                <button aria-label="Close" class="dribbblish-config-close main-trackCreditsModal-closeBtn">
+                    <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143" fill="currentColor" fill-rule="evenodd"></path></svg>
+                </button>
+                <h1>Dribbblish Settings</h1>
+            </div>
+            <div class="dribbblish-config-backdrop"></div>
+        `;
 
-            DribbblishShared.configData[key] = {
-                menuItem,
-                update
-            };
+        document.body.appendChild(container);
+        document.querySelector(".dribbblish-config-close").addEventListener("click", () => DribbblishShared.config.close());
+        document.querySelector(".dribbblish-config-backdrop").addEventListener("click", () => DribbblishShared.config.close());
+    }
 
-            DribbblishShared.config.update(key);
-        },
-        registerSelect: (name, key, choices, defaultChoice, update) => {
-            const menuItem = new Spicetify.Menu.SubMenu(name, []);
-            const menuItems = choices.map((choice, i) => {
-                const subItem = new Spicetify.Menu.Item(choice, i == defaultChoice, (self) => {
-                    self.setState(!self.isEnabled);
-                    DribbblishShared.config.set(key, i);
-                });
-                menuItem.addItem(subItem);
-                return subItem;
-            });
-            DribbblishShared.configButton.addItem(menuItem);
-            menuItem.register();
+    open() {
+        document.getElementById("dribbblish-config").setAttribute("active", "");
+    }
 
-            if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultChoice);
+    close() {
+        document.getElementById("dribbblish-config").removeAttribute("active");
+    }
 
-            DribbblishShared.configData[key] = {
-                subItems: menuItems,
-                menuItem,
-                update
-            };
-
-            DribbblishShared.config.update(key);
-        },
-        get: (key) => {
-            const val = localStorage.getItem(`dribbblish:config:${key}`);
-            if (val == "true" || val == "false") return val == "true";
-            if (!isNaN(val) && !isNaN(parseInt(val))) return parseInt(val);
-        },
-        set: (key, val) => {
-            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
-                DribbblishShared.configData[key].subItems.forEach((item, i) => {
-                    item.setState(val == i);
-                });
-            } else {
-                DribbblishShared.configData[key].menuItem.setState(val);
-            }
-            localStorage.setItem(`dribbblish:config:${key}`, val);
-            DribbblishShared.config.update(key);
-        },
-        toggle: (key) => {
-            DribbblishShared.config.set(key, !DribbblishShared.config.get(key));
-
-            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
-                // Can't toggle lists
-            } else {
-                DribbblishShared.configData[key].menuItem.setState(DribbblishShared.config.get(key));
-            }
-        },
-        update: (key) => {
-            const val = DribbblishShared.config.get(key);
-            if (DribbblishShared.configData[key].hasOwnProperty("subItems")) {
-                DribbblishShared.configData[key].subItems.forEach((item, i) => {
-                    item.setState(val == i);
-                });
-            } else {
-                DribbblishShared.configData[key].menuItem.setState(val);
-            }
-            DribbblishShared.configData[key].update(val);
+    /** @private */
+    addInputHTML({ type, key, name, description, input, insertOnTop }) {
+        const elem = document.createElement("div");
+        elem.classList.add("dribbblish-config-item");
+        elem.setAttribute("key", `dribbblish:config:${key}`);
+        elem.setAttribute("type", type);
+        elem.innerHTML = /* html */ `
+            <h2 class="x-settings-title main-type-cello" as="h2">${name}</h2>
+            <label class="main-type-mesto" as="label" for="dribbblish-config-input-${key}" style="color: var(--spice-subtext);">${description}</label>
+            <label class="x-toggle-wrapper x-settings-secondColumn">
+                ${input}
+            </label>
+        `;
+        if (insertOnTop && document.querySelector(".dribbblish-config-item")) {
+            console.log("before");
+            document.querySelector(".dribbblish-config-container").insertBefore(elem, document.querySelector(".dribbblish-config-item:first-of-type"));
+        } else {
+            document.querySelector(".dribbblish-config-container").appendChild(elem);
         }
-    },
-    configData: {}
-};
-DribbblishShared.configButton.register();
+    }
 
-// Initialize Config
-DribbblishShared.config.register("Right expanded cover", "rightBigCover", true, (value) => {
-    if (value) {
-        document.documentElement.classList.add("right-expanded-cover");
-    } else {
-        document.documentElement.classList.remove("right-expanded-cover");
+    register({ type, options, key, name, description, defaultValue, insertOnTop, onChange }) {
+        if (!key) key = cyrb53Hash(name);
+        var fireChange = true;
+
+        if (type == "checkbox") {
+            const input = /* html */ `
+                <input id="dribbblish-config-input-${key}" class="x-toggle-input" type="checkbox"${this.get(key, defaultValue) ? " checked" : ""}>
+                <span class="x-toggle-indicatorWrapper">
+                    <span class="x-toggle-indicator"></span>
+                </span>
+            `;
+            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+
+            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("change", (e) => {
+                this.set(key, e.target.checked);
+                onChange(this.get(key));
+            });
+        } else if (type == "select") {
+            const input = /* html */ `
+                <span class="x-settings-secondColumn">
+                    <select class="main-dropDown-dropDown" id="dribbblish-config-input-${key}">
+                        ${options.map((option, i) => `<option value="${i}"${this.get(key, defaultValue) == i ? " selected" : ""}>${option}</option>`).join("")}
+                    </select>
+                </span>
+            `;
+            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+
+            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("change", (e) => {
+                this.set(key, e.target.value);
+                onChange(this.get(key));
+            });
+        } else if (type == "button") {
+            const input = /* html */ `
+                <span class="x-settings-secondColumn">
+                    <button class="main-buttons-button main-button-primary" type="button" id="dribbblish-config-input-${key}">
+                        <div class="x-settings-buttonContainer">
+                            <span>${name}</span>
+                        </div>
+                    </button>
+                </span>
+            `;
+            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+
+            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("click", (e) => {
+                onChange(true);
+            });
+            fireChange = false;
+        } else {
+            throw new Error(`Config Type "${type}" invalid`);
+        }
+
+        if (fireChange) onChange(this.get(key, defaultValue));
+    }
+
+    get(key, defaultValue) {
+        const val = localStorage.getItem(`dribbblish:config:${key}`);
+        if (val == null) return defaultValue;
+
+        if (val == "true" || val == "false") return val == "true"; // Boolean
+        if (!isNaN(val) && !isNaN(parseInt(val))) return parseInt(val); // Number
+        return val; // String
+    }
+
+    set(key, val) {
+        localStorage.setItem(`dribbblish:config:${key}`, val);
+    }
+}
+
+class _DribbblishShared {
+    constructor() {
+        this.config = new ConfigMenu();
+    }
+}
+const DribbblishShared = new _DribbblishShared();
+
+DribbblishShared.config.register({
+    type: "checkbox",
+    key: "rightBigCover",
+    name: "Right expanded cover",
+    description: "Have the expanded cover Image on the right instead of onn the left.",
+    defaultValue: true,
+    onChange: (val) => {
+        if (val) {
+            document.documentElement.classList.add("right-expanded-cover");
+        } else {
+            document.documentElement.classList.remove("right-expanded-cover");
+        }
     }
 });
 
-DribbblishShared.config.register("Round Sidebar Icons", "roundSidebarIcons", false, (value) => {
-    if (value) {
-        document.documentElement.style.setProperty("--sidebar-icons-border-radius", "50%");
-    } else {
-        document.documentElement.style.setProperty("--sidebar-icons-border-radius", "var(--image-radius)");
+DribbblishShared.config.register({
+    type: "checkbox",
+    key: "roundSidebarIcons",
+    name: "Round Sidebar Icons",
+    description: "If the Sidebar Iconns should be round instead of square",
+    defaultValue: false,
+    onChange: (val) => {
+        if (val) {
+            document.documentElement.style.setProperty("--sidebar-icons-border-radius", "50%");
+        } else {
+            document.documentElement.style.setProperty("--sidebar-icons-border-radius", "var(--image-radius)");
+        }
     }
 });
+
+DribbblishShared.config.open();
 
 waitForElement(["#main"], () => {
-    DribbblishShared.config.registerSelect("Windows Top Bar", "winTopBar", ["None", "None (With Top Padding)", "Solid", "Transparent"], 0, (value) => {
-        switch (value) {
-            case 0:
-                document.getElementById("main").setAttribute("top-bar", "none");
-                break;
-            case 1:
-                document.getElementById("main").setAttribute("top-bar", "none-padding");
-                break;
-            case 2:
-                document.getElementById("main").setAttribute("top-bar", "solid");
-                break;
-            case 3:
-                document.getElementById("main").setAttribute("top-bar", "transparent");
-                break;
+    DribbblishShared.config.register({
+        type: "select",
+        options: ["None", "None (With Top Padding)", "Solid", "Transparent"],
+        key: "winTopBar",
+        name: "Windows Top Bar",
+        description: "Have differennt top Bars (Ore none at all)",
+        defaultValue: 0,
+        onChange: (val) => {
+            switch (val) {
+                case 0:
+                    document.getElementById("main").setAttribute("top-bar", "none");
+                    break;
+                case 1:
+                    document.getElementById("main").setAttribute("top-bar", "none-padding");
+                    break;
+                case 2:
+                    document.getElementById("main").setAttribute("top-bar", "solid");
+                    break;
+                case 3:
+                    document.getElementById("main").setAttribute("top-bar", "transparent");
+                    break;
+            }
         }
     });
 });
 
 function waitForElement(els, func, timeout = 100) {
-    const queries = els.map(el => document.querySelector(el));
-    if (queries.every(a => a)) {
+    const queries = els.map((el) => document.querySelector(el));
+    if (queries.every((a) => a)) {
         func(queries);
     } else if (timeout > 0) {
         setTimeout(waitForElement, 300, els, func, --timeout);
     }
+}
+
+function cyrb53Hash(str, seed = 0) {
+    let h1 = 0xdeadbeef ^ seed,
+        h2 = 0x41c6ce57 ^ seed;
+    for (let i = 0, ch; i < str.length; i++) {
+        ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507) ^ Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507) ^ Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 }
 
 waitForElement([
