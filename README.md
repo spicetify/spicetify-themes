@@ -1,7 +1,7 @@
 # Dribbblish Dynamic
 
-### base
-![base](showcase-images/dynamic.gif)
+### Preview
+![preview](showcase-images/preview.gif)
 
 ##  Features
 ### Resizable sidebar
@@ -49,10 +49,10 @@ xpui.js_repl_8008 = ,${1}56,
 
 ## Hide Window Controls
 Windows user, please edit your Spotify shortcut and add flag `--transparent-window-controls` after the Spotify.exe:
-![instruction1](showcase-images/windows-shortcut-instruction.png)
 To edit an taskbar shortcut, right click it, then right click Spotify in the list again.
+![instruction1](showcase-images/windows-shortcut-instruction.png)
 
-In addition to `--transparent-window-controls` you can set `Dribbblish > Windows Top Bars` to `Solid` or `Transparent` to look like this:
+In addition to `--transparent-window-controls` you can set `Windows Top Bars` to `Solid` or `Transparent` to look like this:
 ![top-bars](showcase-images/top-bars.png)
 
 Alternatively, you can use [`SpotifyNoControl.exe`](https://github.com/JulienMaille/SpotifyNoControl/files/6793911/SpotifyNoControl.zip), included in this theme package, to completely remove all windows controls and title menu (three dots at top left corner). Title menu still can be accessed via the Alt key. Closing and minimizing can be done via the right click menu at top window region.  
