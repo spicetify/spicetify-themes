@@ -54,6 +54,19 @@ body {
     filter: brightness(80%);
 }
 
+::-webkit-scrollbar {
+    width: var(--scrollbar-vertical-size);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--spice-text) !important;
+    border-radius: calc(var(--scrollbar-vertical-size) / 2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    filter: brightness(80%);
+}
+
 .main-type-mesto,
 .main-type-mestoBold,
 .main-type-ballad,
