@@ -321,6 +321,11 @@ hookCoverChange(false);
             document.querySelector(".main-userWidget-box").append(upd)
             upd.append(`Theme UPD v${data.tag_name} avail.`)
             upd.setAttribute("title", `Changes: ${data.name}`)
+            DribbblishShared.configButton.addItem(
+                new Spicetify.Menu.Item("Update", false, (self) => {
+                    window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank");
+                })
+            );
         }
     }).catch(err => {
       // Do something for an error here

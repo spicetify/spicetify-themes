@@ -1,14 +1,14 @@
 // Hide popover message
 // document.getElementById("popover-container").style.height = 0;
 const DribbblishShared = {
-    configMenu: new Spicetify.Menu.SubMenu("Dribbblish", []),
+    configButton: new Spicetify.Menu.SubMenu("Dribbblish", []),
     config: {
         register: (name, key, defaultValue, update) => {
             const menuItem = new Spicetify.Menu.Item(name, defaultValue, (self) => {
                 self.setState(!self.isEnabled);
                 DribbblishShared.config.toggle(key);
             });
-            DribbblishShared.configMenu.addItem(menuItem);
+            DribbblishShared.configButton.addItem(menuItem);
 
             if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultValue);
 
@@ -29,7 +29,7 @@ const DribbblishShared = {
                 menuItem.addItem(subItem);
                 return subItem;
             });
-            DribbblishShared.configMenu.addItem(menuItem);
+            DribbblishShared.configButton.addItem(menuItem);
             menuItem.register();
 
             if (localStorage.getItem(`dribbblish:config:${key}`) == null) localStorage.setItem(`dribbblish:config:${key}`, defaultChoice);
@@ -81,7 +81,7 @@ const DribbblishShared = {
     },
     configData: {}
 };
-DribbblishShared.configMenu.register();
+DribbblishShared.configButton.register();
 
 // Initialize Config
 DribbblishShared.config.register("Right expanded cover", "rightBigCover", true, (value) => {
