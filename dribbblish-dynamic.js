@@ -170,7 +170,7 @@ function toggleDark(setDark) {
     setRootColor('subtext', setDark ? "#EAEAEA" : "#3D3D3D")
     setRootColor('notification', setDark ? "#303030" : "#DDDDDD")
 
-    updateColors(textColor, sidebarColor)
+    updateColors(textColor, sidebarColor, false)
 }
 
 /* Init with current system light/dark mode */
@@ -198,20 +198,70 @@ DribbblishShared.config.register({
     }
 });
 
-function updateColors(textColHex, sideColHex) {
-    let isLightBg = isLight(textColorBg)
-    if (isLightBg) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
+var currentColor;
+var currentSideColor;
+var colorFadeInterval = false;
 
-    let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
-    let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
-    let buttonBgColHex = setLightness(textColHex, isLightBg ? 0.90 : 0.14)
-    setRootColor('text', textColHex)
-    setRootColor('button', darkerColHex)
-    setRootColor('button-active', darkColHex)
-    setRootColor('selected-row', darkerColHex)
-    setRootColor('tab-active', buttonBgColHex)
-    setRootColor('button-disabled', buttonBgColHex)
-    setRootColor('sidebar', sideColHex)
+function updateColors(textColHex, sideColHex, animate=false) {
+    let update = (textColHex, sideColHex) => {
+        currentColor = textColHex;
+        currentSideColor = sideColHex;
+
+        let isLightBg = isLight(textColorBg)
+        if (isLightBg) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
+
+        let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
+        let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
+        let buttonBgColHex = setLightness(textColHex, isLightBg ? 0.90 : 0.14)
+        setRootColor('text', textColHex)
+        setRootColor('button', darkerColHex)
+        setRootColor('button-active', darkColHex)
+        setRootColor('selected-row', darkerColHex)
+        setRootColor('tab-active', buttonBgColHex)
+        setRootColor('button-disabled', buttonBgColHex)
+        setRootColor('sidebar', sideColHex)
+    };
+
+    clearInterval(colorFadeInterval); // clear any interval that might be running
+
+    if(!animate) {
+        update(textColHex, sideColHex);
+        return;
+    }
+
+    let clamp = (num,min,max) => Math.min(Math.max(num, min), max);
+    let lerp = (a,b,u) => (1-u) * a + u * b;
+    let toMS = s => parseFloat(s) * (/\ds$/.test(s) ? 1000 : 1);
+
+    let interval = 10; // 10 ms between each call
+    var duration = toMS(getComputedStyle(document.documentElement).getPropertyValue("--song-transition-speed"));
+    if(duration < 1) duration = 1;
+    let startC1 = hexToRgb(currentColor);
+    let startC2 = hexToRgb(currentSideColor);
+
+    let endC1 = hexToRgb(textColHex);
+    let endC2 = hexToRgb(sideColHex);
+
+    var start;
+
+    colorFadeInterval = setInterval(function(){
+        if(!start) { start = performance.now() }
+        let elapsed = performance.now()-start;
+        let ratio = clamp(elapsed/duration, 0, 1)
+
+        let currentC1 = [];
+        let currentC2 = [];
+        for(var i = 0; i < 3; i++){
+            currentC1[i] = lerp(startC1[i], endC1[i], ratio);
+            currentC2[i] = lerp(startC2[i], endC2[i], ratio);
+        }
+
+        update(rgbToHex(currentC1), rgbToHex(currentC2));
+
+        console.log(elapsed+">"+duration+"->"+(elapsed>duration))
+        if (elapsed>duration){ clearInterval(colorFadeInterval) }
+
+    }, interval);
 }
 
 let nearArtistSpanText = ""
@@ -294,7 +344,7 @@ function pickCoverColor(img) {
             sidebarColor = swatches[lightCols[col]].getHex()
             break
         }
-    updateColors(textColor, sidebarColor)
+    updateColors(textColor, sidebarColor, true)
 }
 
 function hookCoverChange(pick) {
@@ -363,6 +413,7 @@ document.styleSheets[0].addRule('.Root__top-container::before',
     backface-visibility: hidden;
     will-change: transform;
     opacity: calc(0.07 + 0.03 * var(--is_light, 0));
-    z-index: +3;`)
+    z-index: +3;
+    transition: background-image var(--song-transition-speed) linear;`)
 
 document.documentElement.style.setProperty('--warning_message', ' ');

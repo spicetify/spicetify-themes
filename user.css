@@ -8,6 +8,7 @@
     --playbar-movement-anim-speed: 0.5s;
     --image-radius: 10px;
     --sidebar-icons-border-radius: 50%;
+    --song-transition-speed: 3s;
 }
 
 @font-face {
@@ -1068,4 +1069,3 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 
 .main-actionBar-ActionBarRow button:not(.main-playButton-primary) {
   color: var(--spice-subtext);
-}

@@ -131,7 +131,7 @@ DribbblishShared.config.register({
     type: "checkbox",
     key: "rightBigCover",
     name: "Right expanded cover",
-    description: "Have the expanded cover Image on the right instead of onn the left.",
+    description: "Have the expanded cover Image on the right instead of on the left",
     defaultValue: true,
     onChange: (val) => {
         if (val) {
@@ -146,7 +146,7 @@ DribbblishShared.config.register({
     type: "checkbox",
     key: "roundSidebarIcons",
     name: "Round Sidebar Icons",
-    description: "If the Sidebar Iconns should be round instead of square",
+    description: "If the Sidebar Icons should be round instead of square",
     defaultValue: false,
     onChange: (val) => {
         if (val) {
@@ -157,13 +157,26 @@ DribbblishShared.config.register({
     }
 });
 
+DribbblishShared.config.register({
+    type: "select",
+    options: ["No fade", "0.25s", "0.5s", "1s", "5s"],
+    key: "fadeDuration",
+    name: "Color Fade Duration",
+    description: "Select the duration of the color fading transition",
+    defaultValue: 0,
+    onChange: (val) => {
+        let values = ["0s", "0.25s", "0.5s", "1s", "5s"];
+        document.documentElement.style.setProperty("--song-transition-speed", values[val]);
+    }
+});
+
 waitForElement(["#main"], () => {
     DribbblishShared.config.register({
         type: "select",
         options: ["None", "None (With Top Padding)", "Solid", "Transparent"],
         key: "winTopBar",
         name: "Windows Top Bar",
-        description: "Have differennt top Bars (Ore none at all)",
+        description: "Have different top Bars (or none at all)",
         defaultValue: 0,
         onChange: (val) => {
             switch (val) {
