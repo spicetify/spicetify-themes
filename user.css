@@ -340,19 +340,29 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 
 .view-homeShortcutsGrid-shortcut {
     overflow: hidden;
+    background-color: rgba(var(--spice-rgb-selected-row), 0.4);
+}
+
+.view-homeShortcutsGrid-shortcut:hover {
+    background-color: rgba(var(--spice-rgb-selected-row), 0.6);
 }
 
 .cover-art,
-.main-userWidget-box,
+.main-userWidget-box.upd-avail,
 .view-homeShortcutsGrid-shortcut,
 :not(.view-homeShortcutsGrid-imageWrapper) > .main-image-image:not(.main-avatar-image) {
     border-radius: var(--image-radius) !important;
 }
 
 .main-avatar-image,
+.main-userWidget-box:not(.upd-avail),
 .main-avatar-userIcon,
 .view-homeShortcutsGrid-shortcutLink {
     border-radius: var(--sidebar-icons-border-radius) !important;
+}
+
+.main-userWidget-box {
+    background-color: transparent;
 }
 
 .main-avatar-avatar.main-avatar-withBadge:after {
