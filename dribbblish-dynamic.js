@@ -1,4 +1,4 @@
-let current = '2.3'
+let current = '2.4.3'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -70,6 +70,25 @@ document.styleSheets[0].insertRule(`
     .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
         color: var(--spice-sidebar-text) !important;
     }`)
+
+/* Config settings */
+
+DribbblishShared.config.register({
+    type: "slider",
+    data: {
+        "min": 0,
+        "max": 10,
+        "step": 0.1,
+        "suffix": "s"
+    },
+    key: "fadeDuration",
+    name: "Color Fade Duration",
+    description: "Select the duration of the color fading transition",
+    defaultValue: 0.5,
+    onChange: (val) => {
+        document.documentElement.style.setProperty("--song-transition-speed", val+"s");
+    }
+});
 
 /* js */
 function getAlbumInfo(uri) {
@@ -170,7 +189,7 @@ function toggleDark(setDark) {
     setRootColor('subtext', setDark ? "#EAEAEA" : "#3D3D3D")
     setRootColor('notification', setDark ? "#303030" : "#DDDDDD")
 
-    updateColors(textColor, sidebarColor)
+    updateColors(textColor, sidebarColor, false)
 }
 
 /* Init with current system light/dark mode */
@@ -178,7 +197,7 @@ let systemDark = parseInt(getComputedStyle(document.documentElement).getProperty
 
 DribbblishShared.config.register({
     type: "select",
-    options: ["System", "Dark", "Light"],
+    data: ["System", "Dark", "Light"],
     key: "theme",
     name: "Theme",
     description: "Select Dark / Bright mode",
@@ -198,20 +217,69 @@ DribbblishShared.config.register({
     }
 });
 
-function updateColors(textColHex, sideColHex) {
-    let isLightBg = isLight(textColorBg)
-    if (isLightBg) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
+var currentColor;
+var currentSideColor;
+var colorFadeInterval = false;
 
-    let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
-    let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
-    let buttonBgColHex = setLightness(textColHex, isLightBg ? 0.90 : 0.14)
-    setRootColor('text', textColHex)
-    setRootColor('button', darkerColHex)
-    setRootColor('button-active', darkColHex)
-    setRootColor('selected-row', darkerColHex)
-    setRootColor('tab-active', buttonBgColHex)
-    setRootColor('button-disabled', buttonBgColHex)
-    setRootColor('sidebar', sideColHex)
+function updateColors(textColHex, sideColHex, animate=false) {
+    let update = (textColHex, sideColHex) => {
+        currentColor = textColHex;
+        currentSideColor = sideColHex;
+
+        let isLightBg = isLight(textColorBg)
+        if (isLightBg) textColHex = LightenDarkenColor(textColHex, -15) // vibrant color is always too bright for white bg mode
+
+        let darkColHex = LightenDarkenColor(textColHex, isLightBg ? 12 : -20)
+        let darkerColHex = LightenDarkenColor(textColHex, isLightBg ? 30 : -40)
+        let buttonBgColHex = setLightness(textColHex, isLightBg ? 0.90 : 0.14)
+        setRootColor('text', textColHex)
+        setRootColor('button', darkerColHex)
+        setRootColor('button-active', darkColHex)
+        setRootColor('selected-row', darkerColHex)
+        setRootColor('tab-active', buttonBgColHex)
+        setRootColor('button-disabled', buttonBgColHex)
+        setRootColor('sidebar', sideColHex)
+    };
+
+    clearInterval(colorFadeInterval); // clear any interval that might be running
+
+    if(!animate) {
+        update(textColHex, sideColHex);
+        return;
+    }
+
+    let clamp = (num,min,max) => Math.min(Math.max(num, min), max);
+    let lerp = (a,b,u) => (1-u) * a + u * b;
+    let toMS = s => parseFloat(s) * (/\ds$/.test(s) ? 1000 : 1);
+
+    let interval = 10; // 10 ms between each call
+    var duration = toMS(getComputedStyle(document.documentElement).getPropertyValue("--song-transition-speed"));
+    if(duration < 1) duration = 1;
+    let startC1 = hexToRgb(currentColor);
+    let startC2 = hexToRgb(currentSideColor);
+
+    let endC1 = hexToRgb(textColHex);
+    let endC2 = hexToRgb(sideColHex);
+
+    var start;
+
+    colorFadeInterval = setInterval(function(){
+        if(!start) { start = performance.now() }
+        let elapsed = performance.now()-start;
+        let ratio = clamp(elapsed/duration, 0, 1)
+
+        let currentC1 = [];
+        let currentC2 = [];
+        for(var i = 0; i < 3; i++){
+            currentC1[i] = lerp(startC1[i], endC1[i], ratio);
+            currentC2[i] = lerp(startC2[i], endC2[i], ratio);
+        }
+
+        update(rgbToHex(currentC1), rgbToHex(currentC2));
+
+        if (elapsed>duration){ clearInterval(colorFadeInterval) }
+
+    }, interval);
 }
 
 let nearArtistSpanText = ""
@@ -244,7 +312,7 @@ async function songchange() {
         recent_date.setMonth(recent_date.getMonth() - 6)
         album_date = album_date.toLocaleString('default', album_date>recent_date ? { year: 'numeric', month: 'short' } : { year: 'numeric' })
         album_link = "<a title=\""+Spicetify.Player.data.track.metadata.album_title+"\" href=\""+album_uri+"\" data-uri=\""+album_uri+"\" data-interaction-target=\"album-name\" class=\"tl-cell__content\">"+Spicetify.Player.data.track.metadata.album_title+"</a>"
-        
+
         nearArtistSpanText = album_link + " • " + album_date
     } else if (Spicetify.Player.data.track.uri.includes('spotify:episode')) {
         // podcast
@@ -294,7 +362,7 @@ function pickCoverColor(img) {
             sidebarColor = swatches[lightCols[col]].getHex()
             break
         }
-    updateColors(textColor, sidebarColor)
+    updateColors(textColor, sidebarColor, true)
 }
 
 function hookCoverChange(pick) {
@@ -325,19 +393,13 @@ hookCoverChange(false);
     }).then(data => {
         if (data.tag_name > current) {
             upd = document.createElement("div")
+            upd.innerText = `Theme UPD v${data.tag_name} avail.`
             upd.classList.add("ellipsis-one-line", "main-type-finale")
-            document.querySelector(".main-userWidget-box").append(upd)
-            upd.append(`Theme UPD v${data.tag_name} avail.`)
             upd.setAttribute("title", `Changes: ${data.name}`)
-            DribbblishShared.config.register({
-                insertOnTop: true,
-                type: "button",
-                name: "Update",
-                description: "Open the GitHub Page with Installation instructions / Commands.",
-                onChange: () => {
-                    window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank");
-                }
-            });
+            upd.style.setProperty("color", "var(--spice-button-active)");
+            document.querySelector(".main-userWidget-box").append(upd)
+            document.querySelector(".main-userWidget-box").classList.add("update-avail")
+            new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme/blob/main/README.md#install--update", "_blank")).register();
         }
     }).catch(err => {
       // Do something for an error here
@@ -346,23 +408,26 @@ hookCoverChange(false);
 })()
 
 /* translucid background cover */
-document.styleSheets[0].addRule('.Root__top-container::before',
-`   content: '';
-    background-image: var(--image_url);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(15px);
-    pointer-events: none;
-    backface-visibility: hidden;
-    will-change: transform;
-    opacity: calc(0.07 + 0.03 * var(--is_light, 0));
-    z-index: +3;`)
+document.styleSheets[0].insertRule(`
+    .Root__top-container::before {
+        content: '';
+        background-image: var(--image_url);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(15px);
+        pointer-events: none;
+        backface-visibility: hidden;
+        will-change: transform;
+        opacity: calc(0.07 + 0.03 * var(--is_light, 0));
+        z-index: +3;
+        transition: background-image var(--song-transition-speed) linear;
+    }`)
 
 document.documentElement.style.setProperty('--warning_message', ' ');
