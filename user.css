@@ -708,15 +708,20 @@ html.sidebar-hide-text .main-rootlist-rootlistItem {
     height: 2px;
 }
 
-.main-navBar-navBarLink {
-    height: 56px;
+.main-rootlist-rootlistPlaylistsScrollNode {
+    padding: 0px;
 }
 
-.main-navBar-navBarLink .icon,
 .main-collectionLinkButton-icon,
-.main-createPlaylistButton-icon,
-.main-collectionLinkButton-icon {
-    margin-right: 24px;
+.main-createPlaylistButton-icon {
+    margin: 0px;
+}
+
+.main-navBar-navBarLink,
+.main-collectionLinkButton-collectionLinkButton,
+.main-createPlaylistButton-button {
+    gap: 24px;
+    height: 56px;
 }
 
 li.GlueDropTarget {
@@ -941,6 +946,16 @@ li.GlueDropTarget {
     opacity: 1;
 }
 
+.main-collectionLinkButton-collectionLinkText,
+.main-createPlaylistButton-text,
+.main-navBar-navBarLink > span {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 20px;
+    text-transform: none;
+}
+
 .main-likedSongsButton-likedSongsIcon,
 .main-yourEpisodesButton-yourEpisodesIcon,
 .main-createPlaylistButton-createPlaylistIcon {
@@ -1016,12 +1031,17 @@ span.main-userWidget-displayName,
     padding: 0px 8px;
 }
 
-.main-navBar-navBar,
-.main-rootlist-wrapper > div:nth-child(2),
-.main-navBar-entryPoints {
+.main-navBar-navBar .main-rootlist-wrapper > div:nth-child(2),
+.main-navBar-entryPoints,
+#spicetify-show-list,
+.main-rootlist-rootlistContent .os-content {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+#spicetify-show-list:empty {
+    display: none;
 }
 
 .main-rootlist-wrapper > div:nth-child(2) > li img,
@@ -1029,9 +1049,17 @@ span.main-userWidget-displayName,
     z-index: 100;
 }
 
+.main-collectionLinkButton-collectionLinkButton,
+.main-createPlaylistButton-button {
+    position: relative;
+}
+
 .main-navBar-navBarItem:hover::before,
 .main-rootlist-rootlistItem:hover::before,
-.main-rootlist-rootlistItemLinkActive::before {
+.main-rootlist-rootlistItemLinkActive::before,
+.main-collectionLinkButton-collectionLinkButton:hover::before,
+.main-collectionLinkButton-selected::before,
+.main-createPlaylistButton-button:hover::before {
     content: "";
     position: absolute;
     inset: 0px;
@@ -1040,7 +1068,8 @@ span.main-userWidget-displayName,
     pointer-events: none;
 }
 
-.main-navBar-navBarLinkActive {
+.main-navBar-navBarLinkActive,
+.main-collectionLinkButton-selected {
     border-radius: var(--image-radius);
     background-color: rgba(var(--spice-rgb-main), 0.4);
 }
@@ -1059,7 +1088,7 @@ div.GlueDropTarget.personal-library >* {
 }
 
 div.GlueDropTarget.personal-library >*.active {
-    background: var(--spice-button);
+    background: transparent;
 }
 
 /** Big cover, small cover */
@@ -1128,9 +1157,19 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
     border-radius: 5px;
 }
 
+.main-buttons-button {
+    color: var(--spice-main);
+}
+
 .main-dropDown-dropDown,
 .x-sortBox-sortDropdown {
-    background-color: rgba(var(--spice-rgb-selected-row), .1) !important;
+    background-color: rgba(var(--spice-rgb-selected-row), .4) !important;
+    color: var(--spice-subtext);
+}
+
+.main-dropDown-dropDown:hover,
+.x-sortBox-sortDropdown:hover {
+    background-color: rgba(var(--spice-rgb-selected-row), .6) !important;
 }
 
 .connect-device-list-item:focus,
