@@ -178,7 +178,7 @@ let systemDark = parseInt(getComputedStyle(document.documentElement).getProperty
 
 DribbblishShared.config.register({
     type: "select",
-    options: ["System", "Dark", "Light"],
+    data: ["System", "Dark", "Light"],
     key: "theme",
     name: "Theme",
     description: "Select Dark / Bright mode",
@@ -325,19 +325,13 @@ hookCoverChange(false);
     }).then(data => {
         if (data.tag_name > current) {
             upd = document.createElement("div")
+            upd.innerText = `Theme UPD v${data.tag_name} avail.`
             upd.classList.add("ellipsis-one-line", "main-type-finale")
-            document.querySelector(".main-userWidget-box").append(upd)
-            upd.append(`Theme UPD v${data.tag_name} avail.`)
             upd.setAttribute("title", `Changes: ${data.name}`)
-            DribbblishShared.config.register({
-                insertOnTop: true,
-                type: "button",
-                name: "Update",
-                description: "Open the GitHub Page with Installation instructions / Commands.",
-                onChange: () => {
-                    window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank");
-                }
-            });
+            upd.style.setProperty("color", "var(--spice-main)");
+            document.querySelector(".main-userWidget-box").append(upd)
+            document.querySelector(".main-userWidget-box").classList.add("update-avail")
+            new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank")).register();
         }
     }).catch(err => {
       // Do something for an error here
@@ -346,23 +340,25 @@ hookCoverChange(false);
 })()
 
 /* translucid background cover */
-document.styleSheets[0].addRule('.Root__top-container::before',
-`   content: '';
-    background-image: var(--image_url);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(15px);
-    pointer-events: none;
-    backface-visibility: hidden;
-    will-change: transform;
-    opacity: calc(0.07 + 0.03 * var(--is_light, 0));
-    z-index: +3;`)
+document.styleSheets[0].insertRule(`
+    .Root__top-container::before {
+        content: '';
+        background-image: var(--image_url);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(15px);
+        pointer-events: none;
+        backface-visibility: hidden;
+        will-change: transform;
+        opacity: calc(0.07 + 0.03 * var(--is_light, 0));
+        z-index: +3;
+    }`)
 
 document.documentElement.style.setProperty('--warning_message', ' ');
