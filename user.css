@@ -530,6 +530,14 @@ html.sidebar-hide-text .GlueDropTarget span {
     display: none;
 }
 
+.x-toggle-indicatorWrapper {
+    background-color: var(--spice-shadow);
+}
+
+input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+    background-color: var(--spice-button-active);
+}
+
 /** */
 .main-topBar-historyButtons .main-topBar-button {
     background-color: unset;
