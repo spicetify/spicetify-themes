@@ -71,6 +71,25 @@ document.styleSheets[0].insertRule(`
         color: var(--spice-sidebar-text) !important;
     }`)
 
+/* Config settings */
+
+DribbblishShared.config.register({
+    type: "slider",
+    data: {
+        "min": 0,
+        "max": 10,
+        "step": 0.1,
+        "suffix": "s"
+    },
+    key: "fadeDuration",
+    name: "Color Fade Duration",
+    description: "Select the duration of the color fading transition",
+    defaultValue: 0.5,
+    onChange: (val) => {
+        document.documentElement.style.setProperty("--song-transition-speed", val+"s");
+    }
+});
+
 /* js */
 function getAlbumInfo(uri) {
     return Spicetify.CosmosAsync.get(`hm://album/v1/album-app/album/${uri}/desktop`)
@@ -258,7 +277,6 @@ function updateColors(textColHex, sideColHex, animate=false) {
 
         update(rgbToHex(currentC1), rgbToHex(currentC2));
 
-        console.log(elapsed+">"+duration+"->"+(elapsed>duration))
         if (elapsed>duration){ clearInterval(colorFadeInterval) }
 
     }, interval);
@@ -409,6 +427,7 @@ document.styleSheets[0].insertRule(`
         will-change: transform;
         opacity: calc(0.07 + 0.03 * var(--is_light, 0));
         z-index: +3;
+        transition: background-image var(--song-transition-speed) linear;
     }`)
 
 document.documentElement.style.setProperty('--warning_message', ' ');

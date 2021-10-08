@@ -258,23 +258,6 @@ DribbblishShared.config.register({
     }
 });
 
-DribbblishShared.config.register({
-    type: "slider",
-    data: {
-        "min": 0,
-        "max": 10,
-        "step": 0.1,
-        "suffix": "s"
-    },
-    key: "fadeDuration",
-    name: "Color Fade Duration",
-    description: "Select the duration of the color fading transition",
-    defaultValue: 0.5,
-    onChange: (val) => {
-        document.documentElement.style.setProperty("--song-transition-speed", val+"s");
-    }
-});
-
 waitForElement(["#main"], () => {
     DribbblishShared.config.register({
         type: "select",
