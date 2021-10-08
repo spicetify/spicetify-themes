@@ -8,6 +8,7 @@
     --playbar-movement-anim-speed: 0.5s;
     --image-radius: 10px;
     --sidebar-icons-border-radius: 50%;
+    --song-transition-speed: 3s;
 }
 
 @font-face {

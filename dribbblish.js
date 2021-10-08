@@ -232,7 +232,7 @@ DribbblishShared.config.register({
     type: "checkbox",
     key: "rightBigCover",
     name: "Right expanded cover",
-    description: "Have the expanded cover Image on the right instead of on the left.",
+    description: "Have the expanded cover Image on the right instead of on the left",
     defaultValue: true,
     onChange: (val) => {
         if (val) {
@@ -247,7 +247,7 @@ DribbblishShared.config.register({
     type: "checkbox",
     key: "roundSidebarIcons",
     name: "Round Sidebar Icons",
-    description: "If the Sidebar Iconns should be round instead of square",
+    description: "If the Sidebar Icons should be round instead of square",
     defaultValue: false,
     onChange: (val) => {
         if (val) {
@@ -264,7 +264,7 @@ waitForElement(["#main"], () => {
         data: ["None", "None (With Top Padding)", "Solid", "Transparent"],
         key: "winTopBar",
         name: "Windows Top Bar",
-        description: "Have differennt top Bars (Ore none at all)",
+        description: "Have different top Bars (or none at all)",
         defaultValue: 0,
         onChange: (val) => {
             switch (val) {
