@@ -331,7 +331,7 @@ hookCoverChange(false);
             upd.style.setProperty("color", "var(--spice-button-active)");
             document.querySelector(".main-userWidget-box").append(upd)
             document.querySelector(".main-userWidget-box").classList.add("update-avail")
-            new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank")).register();
+            new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme/blob/main/README.md#install--update", "_blank")).register();
         }
     }).catch(err => {
       // Do something for an error here
