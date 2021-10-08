@@ -1158,7 +1158,7 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
     border-radius: 5px;
 }
 
-.main-buttons-button {
+.main-buttons-button:not(.main-entityHeader-titleButton) {
     color: var(--spice-main);
 }
 
