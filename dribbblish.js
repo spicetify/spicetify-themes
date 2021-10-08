@@ -1,6 +1,20 @@
 // Hide popover message
 // document.getElementById("popover-container").style.height = 0;
 class ConfigMenu {
+    /**
+     * @typedef {Object} DribbblishConfigOptions
+     * @property {"checkbox" | "select" | "button" | "slider" | "number" | "text"} type
+     * @property {String?} area
+     * @property {any?} data
+     * @property {String?} key
+     * @property {String?} name
+     * @property {String?} description
+     * @property {any?} defaultValue
+     * @property {Boolean?} insertOnTop
+     * @property {Function?} onAppended
+     * @property {Function?} onChange
+     */
+
     constructor() {
         this.config = {};
         this.configButton = new Spicetify.Menu.Item("Dribbblish config", false, () => DribbblishShared.config.open());
@@ -14,6 +28,7 @@ class ConfigMenu {
                     <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143" fill="currentColor" fill-rule="evenodd"></path></svg>
                 </button>
                 <h1>Dribbblish Settings</h1>
+                <div class="dribbblish-config-items"></div>
             </div>
             <div class="dribbblish-config-backdrop"></div>
         `;
@@ -31,79 +46,164 @@ class ConfigMenu {
         document.getElementById("dribbblish-config").removeAttribute("active");
     }
 
-    /** @private */
-    addInputHTML({ type, key, name, description, input, insertOnTop }) {
+    /**
+     * @private
+     * @param {DribbblishConfigOptions} options
+     */
+    addInputHTML(options) {
+        let parent;
+        if (options.area != null) {
+            if (!document.querySelector(`.dribbblish-config-area[name="${options.area}"]`)) {
+                const areaElem = document.createElement("div");
+                areaElem.classList.add("dribbblish-config-area");
+                areaElem.setAttribute("name", options.area);
+                areaElem.innerHTML = `<h2>${options.area}</h2>`;
+                document.querySelector(".dribbblish-config-items").appendChild(areaElem);
+            }
+            parent = document.querySelector(`.dribbblish-config-area[name="${options.area}"]`);
+        } else {
+            parent = document.querySelector(".dribbblish-config-items");
+        }
+
         const elem = document.createElement("div");
         elem.classList.add("dribbblish-config-item");
-        elem.setAttribute("key", `dribbblish:config:${key}`);
-        elem.setAttribute("type", type);
+        elem.setAttribute("key", `dribbblish:config:${options.key}`);
+        elem.setAttribute("type", options.type);
         elem.innerHTML = /* html */ `
-            <h2 class="x-settings-title main-type-cello" as="h2">${name}</h2>
-            <label class="main-type-mesto" as="label" for="dribbblish-config-input-${key}" style="color: var(--spice-subtext);">${description}</label>
+            <h2 class="x-settings-title main-type-cello${!options.description ? " no-desc" : ""}" as="h2">${options.name}</h2>
+            <label class="main-type-mesto" as="label" for="dribbblish-config-input-${options.key}" style="color: var(--spice-subtext);">${options.description}</label>
             <label class="x-toggle-wrapper x-settings-secondColumn">
-                ${input}
+                ${options.input}
             </label>
         `;
-        if (insertOnTop && document.querySelector(".dribbblish-config-item")) {
-            console.log("before");
-            document.querySelector(".dribbblish-config-container").insertBefore(elem, document.querySelector(".dribbblish-config-item:first-of-type"));
+
+        if (options.insertOnTop && parent.children.length > 0) {
+            parent.insertBefore(elem, parent.children[0]);
         } else {
-            document.querySelector(".dribbblish-config-container").appendChild(elem);
+            parent.appendChild(elem);
         }
     }
 
-    register({ type, options, key, name, description, defaultValue, insertOnTop, onChange }) {
-        if (!key) key = cyrb53Hash(name);
+    /**
+     * @param {DribbblishConfigOptions} options
+     */
+    register(options) {
+        options = {
+            ...{
+                area: "Main Settings",
+                data: {},
+                key: cyrb53Hash(options.name ?? ""),
+                name: "",
+                description: "",
+                insertOnTop: false,
+                onAppended: () => {},
+                onChange: () => {}
+            },
+            ...options
+        };
         var fireChange = true;
 
-        if (type == "checkbox") {
+        if (options.type == "checkbox") {
             const input = /* html */ `
-                <input id="dribbblish-config-input-${key}" class="x-toggle-input" type="checkbox"${this.get(key, defaultValue) ? " checked" : ""}>
+                <input id="dribbblish-config-input-${options.key}" class="x-toggle-input" type="checkbox"${this.get(options.key, options.defaultValue) ? " checked" : ""}>
                 <span class="x-toggle-indicatorWrapper">
                     <span class="x-toggle-indicator"></span>
                 </span>
             `;
-            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+            this.addInputHTML({ ...options, input });
 
-            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("change", (e) => {
-                this.set(key, e.target.checked);
-                onChange(this.get(key));
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("change", (e) => {
+                this.set(options.key, e.target.checked);
+                options.onChange(this.get(options.key));
             });
-        } else if (type == "select") {
+        } else if (options.type == "select") {
             const input = /* html */ `
-                <span class="x-settings-secondColumn">
-                    <select class="main-dropDown-dropDown" id="dribbblish-config-input-${key}">
-                        ${options.map((option, i) => `<option value="${i}"${this.get(key, defaultValue) == i ? " selected" : ""}>${option}</option>`).join("")}
-                    </select>
-                </span>
+                <select class="main-dropDown-dropDown" id="dribbblish-config-input-${options.key}">
+                    ${options.data.map((option, i) => `<option value="${i}"${this.get(options.key, options.defaultValue) == i ? " selected" : ""}>${option}</option>`).join("")}
+                </select>
             `;
-            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+            this.addInputHTML({ ...options, input });
 
-            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("change", (e) => {
-                this.set(key, e.target.value);
-                onChange(this.get(key));
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("change", (e) => {
+                this.set(options.key, e.target.value);
+                options.onChange(this.get(options.key));
             });
-        } else if (type == "button") {
+        } else if (options.type == "button") {
             const input = /* html */ `
-                <span class="x-settings-secondColumn">
-                    <button class="main-buttons-button main-button-primary" type="button" id="dribbblish-config-input-${key}">
-                        <div class="x-settings-buttonContainer">
-                            <span>${name}</span>
-                        </div>
-                    </button>
-                </span>
+                <button class="main-buttons-button main-button-primary" type="button" id="dribbblish-config-input-${options.key}">
+                    <div class="x-settings-buttonContainer">
+                        <span>${options.name}</span>
+                    </div>
+                </button>
             `;
-            this.addInputHTML({ type, key, name, description, input, insertOnTop });
+            this.addInputHTML({ ...options, input });
 
-            document.getElementById(`dribbblish-config-input-${key}`).addEventListener("click", (e) => {
-                onChange(true);
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("click", (e) => {
+                options.onChange(true);
             });
             fireChange = false;
+        } else if (options.type == "number") {
+            if (options.defaultValue == null) options.defaultValue = 0;
+
+            const input = /* html */ `
+                <input type="number" id="dribbblish-config-input-${options.key}" value="${this.get(options.key, options.defaultValue)}">
+            `;
+            this.addInputHTML({ ...options, input });
+
+            // Prevent inputting +, - and e. Why is it even possible in the first place?
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("keypress", (e) => {
+                if (["+", "-", "e"].includes(e.key)) e.preventDefault();
+            });
+
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("input", (e) => {
+                if (options.data.min != null && e.target.value < options.data.min) e.target.value = options.data.min;
+                if (options.data.max != null && e.target.value > options.data.max) e.target.value = options.data.max;
+
+                this.set(options.key, e.target.value);
+                options.onChange(this.get(options.key));
+            });
+        } else if (options.type == "text") {
+            if (options.defaultValue == null) options.defaultValue = "";
+
+            const input = /* html */ `
+                <input type="text" id="dribbblish-config-input-${options.key}" value="${this.get(options.key, options.defaultValue)}">
+            `;
+            this.addInputHTML({ ...options, input });
+
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("input", (e) => {
+                // TODO: maybe add an validation function via `data.validate`
+                this.set(options.key, e.target.value);
+                options.onChange(this.get(options.key));
+            });
+        } else if (options.type == "slider") {
+            if (options.defaultValue == null) options.defaultValue = 0;
+
+            const input = /* html */ `
+                <input
+                    type="range"
+                    id="dribbblish-config-input-${options.key}"
+                    name="${options.name}"
+                    min="${options.data?.min ?? "0"}"
+                    max="${options.data?.max ?? "100"}"
+                    step="${options.data?.step ?? "1"}"
+                    value="${this.get(options.key, options.defaultValue)}"
+                    tooltip="${this.get(options.key, options.defaultValue)}${options.data?.suffix ?? ""}"
+                >
+            `;
+            this.addInputHTML({ ...options, input });
+
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("input", (e) => {
+                document.getElementById(`dribbblish-config-input-${options.key}`).setAttribute("tooltip", `${e.target.value}${options.data?.suffix ?? ""}`);
+                document.getElementById(`dribbblish-config-input-${options.key}`).setAttribute("value", e.target.value);
+                this.set(options.key, e.target.value);
+                options.onChange(e.target.value);
+            });
         } else {
-            throw new Error(`Config Type "${type}" invalid`);
+            throw new Error(`Config Type "${options.type}" invalid`);
         }
 
-        if (fireChange) onChange(this.get(key, defaultValue));
+        options.onAppended();
+        if (fireChange) options.onChange(this.get(options.key, options.defaultValue));
     }
 
     get(key, defaultValue) {
@@ -111,7 +211,8 @@ class ConfigMenu {
         if (val == null) return defaultValue;
 
         if (val == "true" || val == "false") return val == "true"; // Boolean
-        if (!isNaN(val) && !isNaN(parseInt(val))) return parseInt(val); // Number
+        if (!isNaN(val) && /\d+\.\d+/.test(val) && !isNaN(parseFloat(val))) return parseFloat(val); // Float
+        if (!isNaN(val) && /\d+/.test(val) && !isNaN(parseInt(val))) return parseInt(val); // Int
         return val; // String
     }
 
@@ -158,22 +259,26 @@ DribbblishShared.config.register({
 });
 
 DribbblishShared.config.register({
-    type: "select",
-    options: ["No fade", "0.25s", "0.5s", "1s", "5s"],
+    type: "slider",
+    data: {
+        "min": 0,
+        "max": 10,
+        "step": 0.1,
+        "suffix": "s"
+    },
     key: "fadeDuration",
     name: "Color Fade Duration",
     description: "Select the duration of the color fading transition",
-    defaultValue: 0,
+    defaultValue: 0.5,
     onChange: (val) => {
-        let values = ["0s", "0.25s", "0.5s", "1s", "5s"];
-        document.documentElement.style.setProperty("--song-transition-speed", values[val]);
+        document.documentElement.style.setProperty("--song-transition-speed", val+"s");
     }
 });
 
 waitForElement(["#main"], () => {
     DribbblishShared.config.register({
         type: "select",
-        options: ["None", "None (With Top Padding)", "Solid", "Transparent"],
+        data: ["None", "None (With Top Padding)", "Solid", "Transparent"],
         key: "winTopBar",
         name: "Windows Top Bar",
         description: "Have different top Bars (or none at all)",
@@ -219,10 +324,7 @@ function cyrb53Hash(str, seed = 0) {
     return 4294967296 * (2097151 & h2) + (h1 >>> 0);
 }
 
-waitForElement([
-    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`,
-    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"] li`
-], ([root, firstItem]) => {
+waitForElement([`.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`, `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"] li`], ([root, firstItem]) => {
     const listElem = firstItem.parentElement;
     root.classList.add("dribs-playlist-list");
 
@@ -232,7 +334,7 @@ waitForElement([
             let link = item.querySelector("a");
             if (!link) continue;
 
-            let [_, app, uid ] = link.pathname.split("/");
+            let [_, app, uid] = link.pathname.split("/");
             let uri;
             if (app === "playlist") {
                 uri = Spicetify.URI.playlistV2URI(uid);
@@ -244,14 +346,11 @@ waitForElement([
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                img.src = base64  || "/images/tracklist-row-song-fallback.svg";
+                img.src = base64 || "/images/tracklist-row-song-fallback.svg";
                 continue;
             }
 
-            Spicetify.CosmosAsync.get(
-                `sp://core-playlist/v1/playlist/${uri.toURI()}/metadata`,
-                { policy: { picture: true } }
-            ).then(res => {
+            Spicetify.CosmosAsync.get(`sp://core-playlist/v1/playlist/${uri.toURI()}/metadata`, { policy: { picture: true } }).then((res) => {
                 const meta = res.metadata;
                 let img = link.querySelector("img");
                 if (!img) {
@@ -267,13 +366,12 @@ waitForElement([
     DribbblishShared.loadPlaylistImage = loadPlaylistImage;
     loadPlaylistImage();
 
-    new MutationObserver(loadPlaylistImage)
-        .observe(listElem, {childList: true});
+    new MutationObserver(loadPlaylistImage).observe(listElem, { childList: true });
 });
 
-waitForElement([".main-rootlist-rootlist", ".main-rootlist-wrapper > :nth-child(2) > :first-child"], ([rootlist]) => {
+waitForElement([".main-rootlist-rootlist", ".main-rootlist-wrapper > :nth-child(2) > :first-child", "#spicetify-show-list"], ([rootlist]) => {
     function checkSidebarPlaylistScroll() {
-        const topDist = rootlist.getBoundingClientRect().top - document.querySelector(".main-rootlist-wrapper > :nth-child(2) > :first-child").getBoundingClientRect().top;
+        const topDist = rootlist.getBoundingClientRect().top - document.querySelector("#spicetify-show-list:not(:empty), .main-rootlist-wrapper > :nth-child(2) > :first-child").getBoundingClientRect().top;
         const bottomDist = document.querySelector(".main-rootlist-wrapper > :nth-child(2) > :last-child").getBoundingClientRect().bottom - rootlist.getBoundingClientRect().bottom;
 
         rootlist.classList.remove("no-top-shadow", "no-bottom-shadow");

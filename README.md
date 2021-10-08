@@ -23,7 +23,7 @@ Right click at folder and choose images for your playlist folder. Every image fo
 ### Left/Right expanded cover
 In profile menu, toggle option "Right expanded cover" to change expaned current track cover image to left or right side, whereever you prefer.
 
-## Install
+## Install / Update
 Make sure you are using spicetify >= v2.6.0 and Spotify >= v1.1.67.
 
 Run these commands:
