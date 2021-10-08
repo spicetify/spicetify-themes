@@ -1,4 +1,4 @@
-let current = '2.3'
+let current = '2.4.1'
 
 /* css is injected so this works with untouched user.css from Dribbblish */
 /* dark theme */
@@ -328,7 +328,7 @@ hookCoverChange(false);
             upd.innerText = `Theme UPD v${data.tag_name} avail.`
             upd.classList.add("ellipsis-one-line", "main-type-finale")
             upd.setAttribute("title", `Changes: ${data.name}`)
-            upd.style.setProperty("color", "var(--spice-main)");
+            upd.style.setProperty("color", "var(--spice-button-active)");
             document.querySelector(".main-userWidget-box").append(upd)
             document.querySelector(".main-userWidget-box").classList.add("update-avail")
             new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme#install", "_blank")).register();
