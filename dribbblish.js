@@ -112,6 +112,10 @@ class ConfigMenu {
                 options.onChange(this.get(options.key));
             });
         } else if (options.type == "select") {
+            // Validate
+            const val = this.get(options.key, options.defaultValue);
+            if (val < 0 || val > options.data.length - 1) this.set(options.key, options.defaultValue);
+
             const input = /* html */ `
                 <select class="main-dropDown-dropDown" id="dribbblish-config-input-${options.key}">
                     ${options.data.map((option, i) => `<option value="${i}"${this.get(options.key, options.defaultValue) == i ? " selected" : ""}>${option}</option>`).join("")}
@@ -138,7 +142,11 @@ class ConfigMenu {
             });
             fireChange = false;
         } else if (options.type == "number") {
+            // Validate
             if (options.defaultValue == null) options.defaultValue = 0;
+            const val = this.get(options.key, options.defaultValue);
+            if (options.data.min != null && val < options.data.min) this.set(options.key, options.data.min);
+            if (options.data.max != null && val > options.data.max) this.set(options.key, options.data.max);
 
             const input = /* html */ `
                 <input type="number" id="dribbblish-config-input-${options.key}" value="${this.get(options.key, options.defaultValue)}">
@@ -171,7 +179,11 @@ class ConfigMenu {
                 options.onChange(this.get(options.key));
             });
         } else if (options.type == "slider") {
+            // Validate
             if (options.defaultValue == null) options.defaultValue = 0;
+            const val = this.get(options.key, options.defaultValue);
+            if (options.data.min != null && val < options.data.min) this.set(options.key, options.data.min);
+            if (options.data.max != null && val > options.data.max) this.set(options.key, options.data.max);
 
             const input = /* html */ `
                 <input
