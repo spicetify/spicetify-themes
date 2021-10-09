@@ -52,6 +52,10 @@ body {
     letter-spacing: normal;
 }
 
+.main-type-bass {
+    font-family: var(--glue-font-family);
+}
+
 .main-type-ballad {
     font-weight: 500;
 }
