@@ -258,6 +258,38 @@ DribbblishShared.config.register({
     }
 });
 
+DribbblishShared.config.register({
+    area: "Ads",
+    type: "checkbox",
+    key: "hideAds",
+    name: "Hide Ads",
+    description: `Hide ads / premium features (see: <a href="https://github.com/Daksh777/SpotifyNoPremium">SpotifyNoPremium</a>)`,
+    defaultValue: false,
+    onAppended: () => {
+        document.styleSheets[0].insertRule(/* css */ `
+            /* Remove upgrade button*/
+            body[hide-ads] .main-topBar-UpgradeButton {
+                display: none
+            }
+        `);
+        document.styleSheets[0].insertRule(/* css */ `
+            /* Remove upgrade to premium button in user menu */
+            body[hide-ads] .main-contextMenu-menuItemButton[href="https://www.spotify.com/premium/"] {
+                display: none
+            }
+        `);
+        document.styleSheets[0].insertRule(/* css */ `
+            /* Remove ad placeholder in main screen */
+            body[hide-ads] .main-leaderboardComponent-container {
+                display: none
+            }
+        `);
+    },
+    onChange: (val) => {
+        document.body.setAttribute("hide-ads", val ? "" : null);
+    }
+});
+
 waitForElement(["#main"], () => {
     DribbblishShared.config.register({
         type: "select",
