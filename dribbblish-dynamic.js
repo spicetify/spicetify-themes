@@ -287,11 +287,9 @@ let coverListenerInstalled = true
 async function songchange() {
     try {
         // warning popup
-        if (Spicetify.PlaybackControl.featureVersion < "1.1.68")
-            Spicetify.showNotification("Your version of Spotify (" + Spicetify.PlaybackControl.featureVersion + ") is un-supported")
-    }
-    catch(err) {
-        console.log(err.message)
+        if (Spicetify.Platform.PlatformData.client_version_triple < "1.1.68") Spicetify.showNotification(`Your version of Spotify ${Spicetify.Platform.PlatformData.client_version_triple}) is un-supported`);
+    } catch (err) {
+        console.error(err);
     }
 
     let album_uri = Spicetify.Player.data.track.metadata.album_uri
