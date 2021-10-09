@@ -28,7 +28,7 @@ class ConfigMenu {
                     <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143" fill="currentColor" fill-rule="evenodd"></path></svg>
                 </button>
                 <h1>Dribbblish Settings</h1>
-                <div class="dribbblish-config-items"></div>
+                <div class="dribbblish-config-areas"></div>
             </div>
             <div class="dribbblish-config-backdrop"></div>
         `;
@@ -51,19 +51,14 @@ class ConfigMenu {
      * @param {DribbblishConfigOptions} options
      */
     addInputHTML(options) {
-        let parent;
-        if (options.area != null) {
-            if (!document.querySelector(`.dribbblish-config-area[name="${options.area}"]`)) {
-                const areaElem = document.createElement("div");
-                areaElem.classList.add("dribbblish-config-area");
-                areaElem.setAttribute("name", options.area);
-                areaElem.innerHTML = `<h2>${options.area}</h2>`;
-                document.querySelector(".dribbblish-config-items").appendChild(areaElem);
-            }
-            parent = document.querySelector(`.dribbblish-config-area[name="${options.area}"]`);
-        } else {
-            parent = document.querySelector(".dribbblish-config-items");
+        if (!document.querySelector(`.dribbblish-config-area[name="${options.area}"]`)) {
+            const areaElem = document.createElement("div");
+            areaElem.classList.add("dribbblish-config-area");
+            areaElem.setAttribute("name", options.area);
+            areaElem.innerHTML = `<h2>${options.area}</h2>`;
+            document.querySelector(".dribbblish-config-areas").appendChild(areaElem);
         }
+        const parent = document.querySelector(`.dribbblish-config-area[name="${options.area}"]`);
 
         const elem = document.createElement("div");
         elem.classList.add("dribbblish-config-item");
