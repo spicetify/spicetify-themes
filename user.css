@@ -337,6 +337,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 .main-buddyFeed-buddyFeedRoot .main-buddyFeed-overlay {
     width: 32px !important;
     height: 32px !important;
+    border-radius: var(--sidebar-icons-border-radius);
 }
 
 .view-homeShortcutsGrid-shortcut {
@@ -349,21 +350,25 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 }
 
 .cover-art,
-.main-userWidget-box.upd-avail,
+.main-userWidget-box.update-avail,
 .view-homeShortcutsGrid-shortcut,
 :not(.view-homeShortcutsGrid-imageWrapper) > .main-image-image:not(.main-avatar-image) {
     border-radius: var(--image-radius) !important;
 }
 
 .main-avatar-image,
-.main-userWidget-box:not(.upd-avail),
+.main-userWidget-box:not(.update-avail),
 .main-avatar-userIcon,
 .view-homeShortcutsGrid-shortcutLink {
     border-radius: var(--sidebar-icons-border-radius) !important;
 }
 
 .main-userWidget-box {
-    background-color: transparent;
+    background-color: transparent !important;
+}
+
+.main-userWidget-box.update-avail {
+    backdrop-filter: invert(0.1);
 }
 
 .main-avatar-avatar.main-avatar-withBadge:after {
@@ -532,11 +537,21 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .x-toggle-indicatorWrapper {
-    background-color: var(--spice-shadow);
+    background-color: transparent;
+    backdrop-filter: invert(0.25);
+}
+
+input:checked~.x-toggle-indicatorWrapper {
+    background-color: rgba(var(--spice-rgb-button), 0.4);
+}
+
+input:hover:checked~.x-toggle-indicatorWrapper {
+    background-color: rgba(var(--spice-rgb-button), 0.5) !important;
 }
 
 input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
-    background-color: var(--spice-button-active);
+    background-color: transparent;
+    backdrop-filter: invert(0.4);
 }
 
 /** */
