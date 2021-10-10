@@ -836,7 +836,8 @@ li.GlueDropTarget {
 #dribbblish-config .dribbblish-config-container {
     z-index: 1;
     position: relative;
-    max-width: 80%;
+    min-width: 400px;
+    max-width: 30%;
     background-color: rgba(var(--spice-rgb-main), 0.9);
     backdrop-filter: blur(3px);
     padding: 20px 15px;
@@ -897,6 +898,7 @@ li.GlueDropTarget {
 #dribbblish-config .dribbblish-config-item > .main-type-mesto {
     grid-area: description;
     height: min-content;
+    color: var(--spice-subtext);
 }
 
 #dribbblish-config .dribbblish-config-item > .x-settings-secondColumn {
@@ -955,6 +957,23 @@ li.GlueDropTarget {
     width: 32px !important;
     height: 32px !important;
     color: var(--spice-button);
+}
+
+/* Spotify style player bar */
+#main[player-controls=spotify] .main-nowPlayingBar-left {
+    order: 0;
+}
+
+#main[player-controls=spotify] .main-nowPlayingBar-center {
+    order: 1;
+}
+
+#main[player-controls=spotify] .main-nowPlayingWidget-nowPlaying {
+    justify-content: left;
+}
+
+#main[player-controls=spotify] .player-controls {
+    justify-content: center;
 }
 
 /** Main container */

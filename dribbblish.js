@@ -66,7 +66,7 @@ class ConfigMenu {
         elem.setAttribute("type", options.type);
         elem.innerHTML = /* html */ `
             <h2 class="x-settings-title main-type-cello${!options.description ? " no-desc" : ""}" as="h2">${options.name}</h2>
-            <label class="main-type-mesto" as="label" for="dribbblish-config-input-${options.key}" style="color: var(--spice-subtext);">${options.description}</label>
+            <label class="main-type-mesto" as="label" for="dribbblish-config-input-${options.key}">${options.description}</label>
             <label class="x-toggle-wrapper x-settings-secondColumn">
                 ${options.input}
             </label>
@@ -332,6 +332,25 @@ waitForElement(["#main"], () => {
                     break;
                 case 3:
                     document.getElementById("main").setAttribute("top-bar", "transparent");
+                    break;
+            }
+        }
+    });
+
+    DribbblishShared.config.register({
+        type: "select",
+        data: ["Dribbblish", "Spotify"],
+        key: "playerControlsStyle",
+        name: "Player Controls Style",
+        description: "Style of the Player Controls. Selecting Spotify basically changes Play / Pause back to the center",
+        defaultValue: 0,
+        onChange: (val) => {
+            switch (val) {
+                case 0:
+                    document.getElementById("main").setAttribute("player-controls", "dribbblish");
+                    break;
+                case 1:
+                    document.getElementById("main").setAttribute("player-controls", "spotify");
                     break;
             }
         }

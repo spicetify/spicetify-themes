@@ -365,14 +365,14 @@ function pickCoverColor(img) {
 
 function hookCoverChange(pick) {
     waitForElement([".cover-art-image"], (queries) => {
-        coverListenerInstalled = true
-        if (pick && queries[0].complete && queries[0].naturalHeight !== 0) pickCoverColor(queries[0])
-        queries[0].addEventListener('load', function() {
+        coverListenerInstalled = true;
+        if (pick && queries[0].complete && queries[0].naturalHeight !== 0) pickCoverColor(queries[0]);
+        queries[0].addEventListener("load", function () {
             try {
-                pickCoverColor(queries[0])
+                pickCoverColor(queries[0]);
             } catch (error) {
-                console.log(error)
-                setTimeout(pickCoverColor, 300, queries[0])
+                console.error(error);
+                setTimeout(pickCoverColor, 300, queries[0]);
             }
         });
     });
@@ -382,28 +382,31 @@ hookCoverChange(false);
 
 (function Startup() {
     if (!Spicetify.showNotification) {
-        setTimeout(Startup, 300)
-        return
+        setTimeout(Startup, 300);
+        return;
     }
     // Check latest release
-    fetch('https://api.github.com/repos/JulienMaille/dribbblish-dynamic-theme/releases/latest').then(response => {
-        return response.json()
-    }).then(data => {
-        if (data.tag_name > current) {
-            upd = document.createElement("div")
-            upd.innerText = `Theme UPD v${data.tag_name} avail.`
-            upd.classList.add("ellipsis-one-line", "main-type-finale")
-            upd.setAttribute("title", `Changes: ${data.name}`)
-            upd.style.setProperty("color", "var(--spice-button-active)");
-            document.querySelector(".main-userWidget-box").append(upd)
-            document.querySelector(".main-userWidget-box").classList.add("update-avail")
-            new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme/blob/main/README.md#install--update", "_blank")).register();
-        }
-    }).catch(err => {
-      // Do something for an error here
-    })
-    Spicetify.showNotification("Applied system " + (systemDark ? "dark" : "light") + " theme.")
-})()
+    fetch("https://api.github.com/repos/JulienMaille/dribbblish-dynamic-theme/releases/latest")
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            if (data.tag_name > current) {
+                upd = document.createElement("div");
+                upd.innerText = `Theme UPD v${data.tag_name} avail.`;
+                upd.classList.add("ellipsis-one-line", "main-type-finale");
+                upd.setAttribute("title", `Changes: ${data.name}`);
+                upd.style.setProperty("color", "var(--spice-button-active)");
+                document.querySelector(".main-userWidget-box").append(upd);
+                document.querySelector(".main-userWidget-box").classList.add("update-avail");
+                new Spicetify.Menu.Item("Update Dribbblish", false, () => window.open("https://github.com/JulienMaille/dribbblish-dynamic-theme/blob/main/README.md#install--update", "_blank")).register();
+            }
+        })
+        .catch((err) => {
+            // Do something for an error here
+            console.error(err);
+        });
+})();
 
 /* translucid background cover */
 document.styleSheets[0].insertRule(`
