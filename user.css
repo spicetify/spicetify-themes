@@ -1130,7 +1130,7 @@ span.main-userWidget-displayName,
 }
 
 div.GlueDropTarget.personal-library  {
-    padding: 0 8px;
+    padding: 0px;
 }
 div.GlueDropTarget.personal-library >* {
     padding: 0 16px;
