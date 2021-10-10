@@ -96,7 +96,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![Psycho](Sleek/psycho.png) | ![UltraBlack](Sleek/ultrablack.png) |
 | Psycho | UltraBlack |
 | ![Wealthy](Sleek/wealthy.png) | |
-| Wealthy | |
+| Wealthy | Dracula |
+| |![Dracula](Sleek/dracula.png) |
 
 ## Turntable
 
