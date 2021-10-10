@@ -1119,6 +1119,10 @@ span.main-userWidget-displayName,
     pointer-events: none;
 }
 
+.main-rootlist-rootlist .main-navBar-navBarItem:hover::before {
+    margin: 0 8px;
+}
+
 .main-navBar-navBarLinkActive,
 .main-collectionLinkButton-selected {
     border-radius: var(--image-radius);
