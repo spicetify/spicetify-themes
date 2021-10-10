@@ -151,7 +151,8 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=number],
-input[type=text] {
+input[type=text],
+input[type=time] {
     height: 32px;
     border: none;
     border-radius: 4px !important;
@@ -163,8 +164,14 @@ input[type=text] {
 input[type=number]:hover,
 input[type=number]:active,
 input[type=text]:hover,
-input[type=text]:active {
+input[type=text]:active,
+input[type=time]:hover,
+input[type=time]:active {
     background-color: rgba(var(--spice-rgb-selected-row), .6) !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(calc(1 - var(--is_light)));
 }
 
 .x-searchInput-searchInputSearchIcon,

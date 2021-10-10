@@ -3,7 +3,7 @@
 class ConfigMenu {
     /**
      * @typedef {Object} DribbblishConfigOptions
-     * @property {"checkbox" | "select" | "button" | "slider" | "number" | "text"} type
+     * @property {"checkbox" | "select" | "button" | "slider" | "number" | "text" | "time"} type
      * @property {String?} area
      * @property {any?} data
      * @property {String?} key
@@ -201,6 +201,20 @@ class ConfigMenu {
 
             document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("input", (e) => {
                 document.getElementById(`dribbblish-config-input-${options.key}`).setAttribute("tooltip", `${e.target.value}${options.data?.suffix ?? ""}`);
+                document.getElementById(`dribbblish-config-input-${options.key}`).setAttribute("value", e.target.value);
+                this.set(options.key, e.target.value);
+                options.onChange(e.target.value);
+            });
+        } else if (options.type == "time") {
+            // Validate
+            if (options.defaultValue == null) options.defaultValue = "00:00";
+
+            const input = /* html */ `
+                <input type="time" id="dribbblish-config-input-${options.key}" name="${options.name}" value="${this.get(options.key, options.defaultValue)}">
+            `;
+            this.addInputHTML({ ...options, input });
+
+            document.getElementById(`dribbblish-config-input-${options.key}`).addEventListener("input", (e) => {
                 document.getElementById(`dribbblish-config-input-${options.key}`).setAttribute("value", e.target.value);
                 this.set(options.key, e.target.value);
                 options.onChange(e.target.value);
