@@ -199,9 +199,14 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
   transition-duration: 0.15s !important;
 }
 
+.main-playPauseButton-button svg {
+  height: 21px;
+  width: 21px;
+}
+
 .main-playPauseButton-button:focus, .main-playPauseButton-button:hover {
-  transform: scale(1.15) !important;
-  -webkit-transform: scale(1.15) !important;
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
 }
 
 /* change progress bar slider color */
