@@ -153,7 +153,7 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
 }
 
 /* hide and move progress time location */
-.playback-bar__progress-time {
+.playback-bar__progress-time-elapsed.main-type-finale {
   opacity: 0;
   position: absolute;
   bottom: 13px;
@@ -170,7 +170,7 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
 }
 
 /* show time on hover */
-.playback-bar:hover .playback-bar__progress-time,
+.playback-bar:hover .playback-bar__progress-time-elapsed.main-type-finale,
 .playback-bar:hover .main-playbackBarRemainingTime-container {
   opacity: 1;
 }
