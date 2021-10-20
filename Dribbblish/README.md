@@ -18,6 +18,10 @@
 ![samourai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
+### Solarized Light
+![solarized-light](solarized-light.png)
+### Solarized Dark 
+![solarized-dark](solarized-dark.png)
 
 ##  Features
 ### Resizable sidebar
