@@ -144,35 +144,36 @@
   left: 0
 }
 
-.progress-bar-wrapper {
+.playback-progressbar {
   height: 4px
 }
 
-.playback-bar .progress-bar__fg {
+.x-progressBar-progressBarBg > div > div {
   background-color: var(--spotify-main-color)
 }
 
-.playback-bar__progress-time,
+.playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
   position: absolute;
   top: 12px;
   left: 50%
 }
 
-.playback-bar__progress-time {
-  transform: translateX(-45px)
+.playback-bar__progress-time-elapsed {
+  transform: translateX(calc(-100% - 10px))
 }
 
-.playback-bar__progress-time::after {
+.playback-bar__progress-time-elapsed::after {
   position: absolute;
-  right: -5px;
+  left: calc(100% + 10px);
   font-weight: bold;
   color: var(--spotify-main-color);
-  content: "/"
+  content: "/";
+  transform: translateX(-50%)
 }
 
 .main-playbackBarRemainingTime-container {
-  transform: translateX(-1px)
+  transform: translateX(10px)
 }
 
 .player-controls {
