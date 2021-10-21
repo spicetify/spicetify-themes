@@ -81,6 +81,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![light_home](Onepunch/screenshots/light_home.png)
 
+## Retroblur
+
+![retroblur](Retroblur/preview/playlist.png)
+
 ## Sleek
 
 | | |
