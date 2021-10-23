@@ -321,6 +321,51 @@
 }
 
 
+/* Full App Display - heart */
+.fad-heart-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.fad-heart {
+  width: 16px;
+  height: 16px;
+  padding: unset !important
+}
+
+.fad-heart svg {
+  fill: #ccc
+}
+
+.fad-heart svg:hover,
+.fad-heart.checked svg {
+  fill: var(--spotify-main-color)
+}
+
+
+/* Full App Display - song preview */
+.song-preview {
+  width: 100%;
+  padding: 0 10%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.song-preview > button {
+  font-size: 14px;
+  color: #ccc !important
+}
+
+.song-preview > button:hover {
+  color: #fff !important
+}
+
+
 /* Responsive */
 @media (max-width: 908px) {
   #fad-foreground {
@@ -336,6 +381,10 @@
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground {
     transform: scale(1.2)
+  }
+
+  .song-preview > span {
+    font-size: 16px
   }
 }
 
