@@ -32,6 +32,19 @@ window.addEventListener("load", rotateTurntable = () => {
   songPreviewContainer.classList.add("song-preview");
   songPreviewContainer.append(previousSong, nextSong);
 
+  const fadArtistSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  fadArtistSvg.setAttribute("width", "16");
+  fadArtistSvg.setAttribute("height", "16");
+  fadArtistSvg.setAttribute("viewBox", "0 0 16 16");
+  fadArtistSvg.setAttribute("fill", "currentColor");
+  fadArtistSvg.innerHTML = Spicetify.SVGIcons.artist;
+  const fadAlbumSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  fadAlbumSvg.setAttribute("width", "16");
+  fadAlbumSvg.setAttribute("height", "16");
+  fadAlbumSvg.setAttribute("viewBox", "0 0 16 16");
+  fadAlbumSvg.setAttribute("fill", "currentColor");
+  fadAlbumSvg.innerHTML = Spicetify.SVGIcons.album;
+
   let isPlaying, clickedFadBtn;
 
   function handleRotate(eventType) {
@@ -129,6 +142,7 @@ window.addEventListener("load", rotateTurntable = () => {
 
     genericModal.remove();
 
+    handleIcons();
     handleRotate();
     handleFadControl();
   }
@@ -144,6 +158,36 @@ window.addEventListener("load", rotateTurntable = () => {
       setBlurBackdropBtn.classList.add("disabled");
 
       localStorage.setItem("enableBlurFad", "0");
+    }
+  }
+
+  function handleIcons() {
+    const iconsConfig = JSON.parse(localStorage.getItem("full-app-display-config")).icons;
+
+    if (!iconsConfig) return;
+
+    const isFadArtistSvg = document.querySelector("#fad-artist svg");
+    const isFadAlbumSvg = document.querySelector("#fad-album svg");
+
+    if (SpicetifyOrigin._state.item.type === "ad") {
+      isFadArtistSvg?.remove();
+      isFadAlbumSvg?.remove();
+
+      return;
+    }
+
+    if (!isFadArtistSvg) {
+      const fadArtist = document.querySelector("#fad-artist");
+      const fadArtistTitle = document.querySelector("#fad-artist span");
+
+      fadArtist?.insertBefore(fadArtistSvg, fadArtistTitle);
+    }
+
+    if (!isFadAlbumSvg) {
+      const fadAlbum = document.querySelector("#fad-album");
+      const fadAlbumTitle = document.querySelector("#fad-album span");
+
+      fadAlbum?.insertBefore(fadAlbumSvg, fadAlbumTitle);
     }
   }
 
@@ -208,6 +252,7 @@ window.addEventListener("load", rotateTurntable = () => {
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
+      handleIcons();
       handleRotate();
       handleFadHeart();
       handleTracksNamePreview();
@@ -241,6 +286,7 @@ window.addEventListener("load", rotateTurntable = () => {
     }
 
     handleMainInterface("active", topbarContentFadeIn);
+    handleIcons();
     handleFadHeart();
     handleTracksNamePreview();
     handleRotate();
