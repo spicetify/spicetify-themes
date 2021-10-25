@@ -36,7 +36,7 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 
     ```bash
     cd spicetify-themes
-    cp -r * ~/spicetify_data/Themes
+    cp -r * ~/.config/spicetify/Themes
     ```
 
     **Windows**
