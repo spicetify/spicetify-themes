@@ -96,32 +96,25 @@ window.addEventListener("load", rotateTurntable = () => {
 
   function handleTracksNamePreview() {
     const prevTracks = Spicetify.Queue.prevTracks;
+    const currentTrack = Spicetify.Queue.track;
     const nextTracks = Spicetify.Queue.nextTracks;
-
-    // let prevTracksIndexRefer = 1;
-    // let nextTracksIndexRefer = 0;
-
-    // while (
-    //   prevTracks[prevTracks.length - prevTracksIndexRefer].metadata.hidden
-    //   ||
-    //   prevTracks[prevTracks.length - prevTracksIndexRefer].provider == "ad"
-    // ) ++prevTracksIndexRefer;
-    // previousSong.innerHTML = `&lt; ${prevTracks[prevTracks.length - prevTracksIndexRefer].metadata.title}`;
-
-    // while (
-    //   nextTracks[nextTracksIndexRefer].metadata.hidden
-    //   ||
-    //   nextTracks[nextTracksIndexRefer].provider == "ad"
-    // ) ++nextTracksIndexRefer;
-    // nextSong.innerHTML = `${nextTracks[nextTracksIndexRefer].metadata.title} &gt;`;
 
     trackCondition = element => !element.contextTrack.metadata.hidden && element.provider != "ad";
 
     const prevTrack = prevTracks.slice().reverse().find(trackCondition);
-    previousSong.innerHTML = `&lt; ${prevTrack.contextTrack.metadata.title}`;
-
     const nextTrack = nextTracks.find(trackCondition);
-    nextSong.innerHTML = `${nextTrack.contextTrack.metadata.title} &gt;`;
+
+    const prevTrackTitle = prevTrack.contextTrack.metadata.title;
+    const currentTrackTitle = currentTrack.contextTrack.metadata.title;
+    const nextTrackTitle = nextTrack.contextTrack.metadata.title;
+
+    if (currentTrackTitle === prevTrackTitle && currentTrackTitle === nextTrackTitle) {
+      previousSong.innerHTML = "";
+      nextSong.innerHTML = "";
+    } else {
+      previousSong.innerHTML = `&lt; ${prevTrackTitle}`;
+      nextSong.innerHTML = `${nextTrackTitle} &gt;`;
+    }
   }
 
   function handleConfigSwitch() {
