@@ -35,6 +35,7 @@ window.addEventListener("load", rotateTurntable = () => {
   let isPlaying, clickedFadBtn;
 
   function handleRotate(eventType) {
+    const coverArt = document.querySelector(".cover-art-image");
     const fadArt = document.querySelector("#fad-art-image");
 
     if (
@@ -44,9 +45,11 @@ window.addEventListener("load", rotateTurntable = () => {
       ||
       !eventType && isPlaying
     ) {
+      coverArt.style.setProperty("animation-play-state", "running");
       fadArt?.style.setProperty("animation-play-state", "running");
       if (eventType) isPlaying = true;
     } else {
+      coverArt.style.setProperty("animation-play-state", "paused");
       fadArt?.style.setProperty("animation-play-state", "paused");
       if (eventType) isPlaying = false;
     }
@@ -212,6 +215,7 @@ window.addEventListener("load", rotateTurntable = () => {
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
+      handleRotate();
       handleFadHeart();
       handleTracksNamePreview();
     }, 500);

@@ -87,12 +87,13 @@
 }
 
 .main-nowPlayingWidget-coverArt .cover-art.shadow {
+  width: 62px !important;
+  height: 62px !important;
   box-shadow: unset
 }
 
 .main-nowPlayingWidget-coverArt .cover-art-image {
   border: 2px solid #aaa;
-  transform: scale(1.1);
   box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
@@ -312,8 +313,9 @@
 }
 
 [data-is-blur-fad = "true"] #fad-art::after {
-  background-color: rgba(40, 40, 40, .1);
-  box-shadow: 0 0 1px rgba(100, 100, 100, .4)
+  background-color: rgba(100, 100, 100, .1);
+  border: 1px solid rgba(100, 100, 100, .1);
+  box-shadow: 0 0 1px rgba(40, 40, 40, .2) inset, 0 0 1px rgba(200, 200, 200, .2)
 }
 
 [data-is-blur-fad = "true"] #fad-progress {
@@ -390,6 +392,7 @@
 
 
 /* Rotate turntable */
+.main-nowPlayingWidget-coverArt .cover-art-image,
 #fad-art-image {
   animation: rotate-cover_img 24s linear infinite paused
 }
