@@ -48,21 +48,23 @@ window.addEventListener("load", rotateTurntable = () => {
   let isPlaying, clickedFadBtn;
 
   function handleRotate(eventType) {
-    const coverArt = document.querySelector(".cover-art-image");
+    if (eventType === "load" && !SpicetifyOrigin._state.item) return;
+
+    const coverArt = document.querySelector(".main-nowPlayingWidget-coverArt > .cover-art");
     const fadArt = document.querySelector("#fad-art-image");
 
     if (
-      eventType == "load" && !SpicetifyOrigin._state.isPaused
+      eventType === "load" && !SpicetifyOrigin._state.isPaused
       ||
-      eventType == "playpause" && !isPlaying
+      eventType === "playpause" && !isPlaying
       ||
       !eventType && isPlaying
     ) {
-      coverArt.style.setProperty("animation-play-state", "running");
+      coverArt?.style.setProperty("animation-play-state", "running");
       fadArt?.style.setProperty("animation-play-state", "running");
       if (eventType) isPlaying = true;
     } else {
-      coverArt.style.setProperty("animation-play-state", "paused");
+      coverArt?.style.setProperty("animation-play-state", "paused");
       fadArt?.style.setProperty("animation-play-state", "paused");
       if (eventType) isPlaying = false;
     }
@@ -85,7 +87,7 @@ window.addEventListener("load", rotateTurntable = () => {
 
     const stateItem = SpicetifyOrigin._state.item;
 
-    if (stateItem.isLocal || stateItem.type == "ad") {
+    if (stateItem.isLocal || stateItem.type === "ad") {
       isFadHeartContainer?.remove();
       return;
     }
@@ -112,7 +114,7 @@ window.addEventListener("load", rotateTurntable = () => {
     const currentTrack = Spicetify.Queue.track;
     const nextTracks = Spicetify.Queue.nextTracks;
 
-    trackCondition = element => !element.contextTrack.metadata.hidden && element.provider != "ad";
+    trackCondition = element => !element.contextTrack.metadata.hidden && element.provider !== "ad";
 
     const prevTrack = prevTracks.slice().reverse().find(trackCondition);
     const nextTrack = nextTracks.find(trackCondition);
@@ -137,7 +139,7 @@ window.addEventListener("load", rotateTurntable = () => {
 
     const stateItem = SpicetifyOrigin._state.item;
 
-    if (!stateItem.isLocal && stateItem.type != "ad") fadFg.appendChild(fadHeartContainer);
+    if (!stateItem.isLocal && stateItem.type !== "ad") fadFg.appendChild(fadHeartContainer);
     fullAppDisplay.appendChild(songPreviewContainer);
 
     genericModal.remove();
