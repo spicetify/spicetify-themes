@@ -251,6 +251,14 @@ window.addEventListener("load", rotateTurntable = () => {
 
   handleRotate("load");
 
+  const shuffleBtn = document.querySelector(".main-shuffleButton-button");
+  const shuffleObserver = new MutationObserver(() => {
+    setTimeout(handleTracksNamePreview, 500);
+  });
+  shuffleObserver.observe(shuffleBtn, {
+    attributes: true,
+  });
+
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
