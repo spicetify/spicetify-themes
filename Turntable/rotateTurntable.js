@@ -82,7 +82,7 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleFadHeart(fromEvent) {
+  function handleFadHeart() {
     const isFadHeartContainer = document.querySelector(".fad-heart-container");
 
     const stateItem = SpicetifyOrigin._state.item;
@@ -92,21 +92,15 @@ window.addEventListener("load", rotateTurntable = () => {
       return;
     }
 
-    const fadFg = document.querySelector("#fad-foreground");
+    if (!isFadHeartContainer) document.querySelector("#fad-foreground")?.appendChild(fadHeartContainer);
 
-    const fadHeartState = Spicetify.Player.getHeart();
-
-    if (!fromEvent && fadFg && !isFadHeartContainer) fadFg.appendChild(fadHeartContainer);
-
-    if (!fromEvent && fadHeartState || fromEvent && !fadHeartState) {
+    if (Spicetify.Player.getHeart()) {
       fadHeartSvg.innerHTML = Spicetify.SVGIcons["heart-active"];
       fadHeart.classList.add("checked");
     } else {
       fadHeartSvg.innerHTML = Spicetify.SVGIcons.heart;
       fadHeart.classList.remove("checked");
     }
-
-    if (fromEvent) Spicetify.Player.toggleHeart();
   }
 
   function handleTracksNamePreview() {
@@ -251,6 +245,29 @@ window.addEventListener("load", rotateTurntable = () => {
 
   handleRotate("load");
 
+  const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
+  const heartHiddenObserver = new MutationObserver(mutationsList => {
+    const targetMutation = mutationsList[mutationsList.length - 1];
+
+    for (const addedNode of targetMutation.addedNodes) {
+      if (
+        addedNode.matches('svg[class]')
+        ||
+        addedNode.matches('button[class^="main-addButton-button"]')
+      ) handleFadHeart();
+    }
+
+    for (const removedNode of targetMutation.removedNodes) {
+      if (
+        removedNode.matches('button[class^="main-addButton-button"]')
+      ) handleFadHeart();
+    }
+  });
+  heartHiddenObserver.observe(nowPlayingBarLeft, {
+    childList: true,
+    subtree: true,
+  });
+
   const shuffleBtn = document.querySelector(".main-shuffleButton-button");
   const shuffleObserver = new MutationObserver(() => {
     setTimeout(handleTracksNamePreview, 500);
@@ -264,12 +281,11 @@ window.addEventListener("load", rotateTurntable = () => {
     setTimeout(() => {
       handleIcons();
       handleRotate();
-      handleFadHeart();
       handleTracksNamePreview();
     }, 500);
   });
 
-  fadHeart.addEventListener("click", () => handleFadHeart(true));
+  fadHeart.addEventListener("click", Spicetify.Player.toggleHeart);
   previousSong.addEventListener("click", () => SpicetifyOrigin.skipToPrevious());
   nextSong.addEventListener("click", () => SpicetifyOrigin.skipToNext());
 
@@ -285,7 +301,6 @@ window.addEventListener("load", rotateTurntable = () => {
       if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
       fullAppDisplay.appendChild(songPreviewContainer);
 
-      // if (!songPreviewContainer.textContent.length) handleTracksNamePreview();
       handleFadControl();
 
       fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
