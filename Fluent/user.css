@@ -142,6 +142,10 @@
   margin-top: 8px;
 }
 
+._AxyaXOKl3GkvT212Vco { /* tags */
+  padding: 12px !important;
+}
+
 .x-categoryCard-title,
 .x-heroCategoryCard-heroTitle,
 .collection-collectionEntityHeroCard-likedSongs div {
@@ -289,12 +293,14 @@ h3,
 
 /* buttons */
 
-.icon {
+.icon, .gSLhUO {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   margin: auto;
+  display: block;
 }
 
+.main-navBar-navBarLink .gSLhUO path,
 .icon > svg,
 .x-searchInput-searchInputIconContainer path,
 .show-episodeBlock-playerActions svg, 
@@ -534,18 +540,16 @@ button.switch {
   color: var(--spice-subtext);
 }
 
-.main-navBar-navBarLinkActive > .icon {
+.main-navBar-navBarLinkActive > .icon,
+.main-navBar-navBarLinkActive .gSLhUO {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
+  margin: auto;
 }
 
 .main-navBar-navBarLinkActive {
   padding: 0px;
-}
-
-.main-navBar-navBarLink .icon {
-  margin: auto;
 }
 
 .main-navBar-entryPoints {
@@ -684,6 +688,7 @@ button.switch {
 
 .main-trackList-indexable {
   padding: 8px;
+  padding-bottom: 24px;
 }
 
 .main-trackList-trackListHeader.g9n_9K5pFI3B_JuDI_hS {
@@ -1305,6 +1310,7 @@ option {
 }
 
 .playback-bar,
+.progress-bar,
 .progress-bar__fg_wrapper,
 .lRNLjBiX_H7SPYbkJKLp,
 .lIrtJi5Y_8ENU19VSvJO {
@@ -1553,4 +1559,12 @@ option {
 
 #spicetify-show-list >* {
   padding: 0px;
+}
+
+/* spicetify extensions */
+
+.main-topBar-button[title="Popup Lyrics"],
+.main-topBar-button[title="Full App Display"],
+.main-topBar-button[title="Bookmark"] {
+  background-color: var(--spice-card) !important;
 }
