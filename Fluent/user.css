@@ -1488,6 +1488,24 @@ option {
   height: 22px !important;
 }
 
+.j4TkiByCgwfJawuHfzsd { /* Skip back 15 sec */
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_skip_backward_15_24_filled.svg');
+  background-color: var(--spice-text) !important; 
+  height: 22px !important;
+}
+
+.Kvxb6GUtWNNo5mFeKfMn { /* Skip forward 15 sec */
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_skip_forward_15_24_filled.svg');
+  background-color: var(--spice-text) !important; 
+  height: 22px !important;
+}
+
+.Y0lBew4O9_Ma84_Lnnsq { /* Speed icon for podcasts */
+  -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_top_speed_24_filled.svg');
+  background-color: var(--spice-text) !important; 
+  height: 22px !important;
+}
+
 /* Disabled */
 .main-repeatButton-button[aria-checked="false"]{
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_repeat_all_off_24_regular.svg');
