@@ -1538,6 +1538,10 @@ option {
   height: 22px !important;
 }
 
+/*Like button*/
+.control-button-heart[aria-checked=true] {
+  color: var(--spice-accent);
+}
 
 /* ads */
 
