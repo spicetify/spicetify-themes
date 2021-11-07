@@ -176,7 +176,7 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 .main-contextMenu-menuItemButton,
 .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):focus,
 .main-contextMenu-menuItemButton:not(.main-contextMenu-disabled):hover {
-    color: var(--spice-main);
+    color: var(--spice-text);
 }
 
 .main-playPauseButton-button {
