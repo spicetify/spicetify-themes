@@ -563,6 +563,12 @@ li.GlueDropTarget {
     max-width: unset;
 }
 
+/** Linux-specific remove padding */
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-entryPoints,
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-navBar {
+    padding-top: 0;
+}
+
 /** Custom elements */
 #dribbblish-sidebar-fade-in {
     position: absolute;
