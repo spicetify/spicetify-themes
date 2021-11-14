@@ -7,6 +7,13 @@ assignees: ''
 
 ---
 
+**Prerequisites**
+Before opening an issue, make sure
+1. You have the most recent `spicetify` version.
+2. Your Spotify version is compatible with the `spicetify` version you are using.
+3. You have the most recent version of the themes.
+4. You followed the installation instructions for the theme you are using (please go through the entire theme README).
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
