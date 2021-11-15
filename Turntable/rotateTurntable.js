@@ -247,20 +247,29 @@ window.addEventListener("load", rotateTurntable = () => {
 
   const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
   const heartHiddenObserver = new MutationObserver(mutationsList => {
-    const targetMutation = mutationsList[mutationsList.length - 1];
+    mutationsLoop:
+    for (const mutation of mutationsList) {
+      for (const addedNode of mutation.addedNodes) {
+        if (
+          addedNode.matches('svg[class]')
+          ||
+          addedNode.matches('button[class^="main-addButton-button"]')
+        ) {
+          handleFadHeart();
 
-    for (const addedNode of targetMutation.addedNodes) {
-      if (
-        addedNode.matches('svg[class]')
-        ||
-        addedNode.matches('button[class^="main-addButton-button"]')
-      ) handleFadHeart();
-    }
+          break mutationsLoop;
+        }
+      }
 
-    for (const removedNode of targetMutation.removedNodes) {
-      if (
-        removedNode.matches('button[class^="main-addButton-button"]')
-      ) handleFadHeart();
+      for (const removedNode of mutation.removedNodes) {
+        if (
+          removedNode.matches('button[class^="main-addButton-button"]')
+        ) {
+          handleFadHeart();
+
+          break mutationsLoop;
+        }
+      }
     }
   });
   heartHiddenObserver.observe(nowPlayingBarLeft, {
