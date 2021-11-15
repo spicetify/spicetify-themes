@@ -3,6 +3,11 @@
 
 /* TOPBAR */
 
+/* fix topbar bug */
+.main-entityHeader-topbarContent.main-entityHeader-topbarContentFadeIn > * {
+  opacity: unset !important;
+}
+
 /* unset colors of history buttons */
 .main-topBar-historyButtons .main-topBar-button {
   background-color: unset;
@@ -153,7 +158,7 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
 }
 
 /* hide and move progress time location */
-.playback-bar__progress-time {
+.playback-bar__progress-time-elapsed.main-type-finale {
   opacity: 0;
   position: absolute;
   bottom: 13px;
@@ -170,7 +175,7 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
 }
 
 /* show time on hover */
-.playback-bar:hover .playback-bar__progress-time,
+.playback-bar:hover .playback-bar__progress-time-elapsed.main-type-finale,
 .playback-bar:hover .main-playbackBarRemainingTime-container {
   opacity: 1;
 }
@@ -517,9 +522,62 @@ span.artist-artistVerifiedBadge-badge path:last-child {
   background-color: var(--spice-subtext);
 }
 
+/* change background color of selected row */
+.main-trackList-trackListRow.main-trackList-selected, .main-trackList-trackListRow.main-trackList-selected:hover {
+  background-color: rgba(var(--spice-rgb-selected-row), 0.8) !important;
+}
+
 .main-trackList-trackListRow:focus-within,
 .main-trackList-trackListRow:hover {
   background-color: rgba(var(--spice-rgb-selected-row), 0.4);
+}
+
+/* When song is currently playing */
+.main-trackList-active .main-type-mesto,
+.main-trackList-active .main-trackList-rowSubTitle,
+.main-trackList-active .main-trackList-rowSubTitle a,
+.main-trackList-active .main-trackList-rowMarker {
+  color: var(--spice-button) !important;
+}
+
+.main-trackList-active .main-tag-container {
+  background-color: var(--spice-button);
+}
+
+/* When song is hovered/selected */
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active) 
+  .main-tag-container,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active) 
+  .main-tag-container {
+  background-color: var(--spice-text);
+}
+
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowTitle,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowTitle {
+  color: var(--spice-text);
+}
+
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSubTitle,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSubTitle {
+  color: var(--spice-text) !important;
+}
+
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSubTitle a,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSubTitle a {
+  color: unset !important;
+}
+
+.main-trackList-trackListRow.main-trackList-selected:not(.main-trackList-active)
+  .main-trackList-rowSectionVariable a,
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.main-trackList-active)
+  .main-trackList-rowSectionVariable a {
+  color: var(--spice-text) !important;
 }
 
 
@@ -534,84 +592,26 @@ span.artist-artistVerifiedBadge-badge path:last-child {
 
 /* TEMPORARY */
 
-
-/* When song is currently playing */
-.main-trackList-trackListRow.SzCNXJJQz7BiDOO0B2Xv .main-type-mesto,
-.main-trackList-trackListRow.SzCNXJJQz7BiDOO0B2Xv .main-trackList-rowSubTitle,
-.main-trackList-trackListRow.SzCNXJJQz7BiDOO0B2Xv .main-trackList-rowSubTitle a,
-.main-trackList-trackListRow.SzCNXJJQz7BiDOO0B2Xv .main-trackList-rowMarker {
-  color: var(--spice-button) !important;
-}
-
-.main-trackList-trackListRow.SzCNXJJQz7BiDOO0B2Xv .main-tag-container {
-  background-color: var(--spice-button);
-}
-
-/* When song is hovered/selected */
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:not(.SzCNXJJQz7BiDOO0B2Xv) 
-  .main-tag-container,
-.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.SzCNXJJQz7BiDOO0B2Xv) 
-  .main-tag-container {
-  background-color: var(--spice-text);
-}
-
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowTitle,
-.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowTitle {
-  color: var(--spice-text);
-}
-
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSubTitle,
-.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSubTitle {
-  color: var(--spice-text) !important;
-}
-
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSubTitle a,
-.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSubTitle a {
-  color: unset !important;
-}
-
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSectionVariable a,
-.main-trackList-trackListRow:hover:not(.main-trackList-disabled):not(.SzCNXJJQz7BiDOO0B2Xv)
-  .main-trackList-rowSectionVariable a {
-  color: var(--spice-text) !important;
-}
-
-/* change background color of selected row */
-.main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe, .main-trackList-trackListRow.vMOFJ7EasQXUloRrStEe:hover {
-  background-color: rgba(var(--spice-rgb-selected-row), 0.8) !important;
-}
-
 /* change progress bar color */
-.lz_1dGnEKWyCpV_qE0ux {
+.dt2nNuPMSEfD8Pv4Na9G {
   background-color: var(--spice-playback-bar) !important;
 }
 
 /* change delete playlist dialog box colors */
-.wCkjuzeyTEYt_GDNp_O7 {
+._XjIr3Jebi9c96f7h74J {
   background-color: var(--spice-player);
 }
 
-.wCkjuzeyTEYt_GDNp_O7 > *:not(div) {
+._XjIr3Jebi9c96f7h74J > *:not(div) {
   color: var(--spice-text);
 }
 
-.aAT_crLSb3P2CFGBeIbr > *:not(div) {
+.reDC8RlgDXoQ_bz0umLz > *:not(div) {
   color: white;
 }
 
 .main-deleteFolderDialog-buttonContainer,
-.aAT_crLSb3P2CFGBeIbr {
+.reDC8RlgDXoQ_bz0umLz {
   justify-content: space-between !important;
 }
 
-/* fix topbar bug */
-.main-entityHeader-topbarContent.tRMDJJhIW8nJePfuY9aC > * {
-  opacity: unset !important;
-}
