@@ -51,7 +51,7 @@ window.addEventListener("load", rotateTurntable = () => {
     if (eventType === "load" && !SpicetifyOrigin._state.item) return;
 
     const coverArt = document.querySelector(".main-nowPlayingWidget-coverArt > .cover-art");
-    const fadArt = document.querySelector("#fad-art-image");
+    const fadArt = document.querySelector("#fad-art");
 
     if (
       eventType === "load" && !SpicetifyOrigin._state.isPaused

@@ -1,7 +1,15 @@
 :root {
   --spotify-main-color: #1db954;
   --round-value: 50%;
-  --main-blur-backdrop: blur(20px) saturate(180%)
+  --main-blur-backdrop: blur(20px) saturate(180%);
+  --shine:
+    conic-gradient(
+      from 15deg,
+      transparent, #222 45deg, transparent 90deg,
+      transparent 90deg 180deg,
+      transparent 180deg, #222 225deg, transparent 270deg,
+      transparent 270deg 360deg
+    )
 }
 
 
@@ -198,10 +206,9 @@
 }
 
 #fad-art {
-  width: 300px !important;
-  margin: 60px 80px;
-  position: relative;
-  transform: scale(.85)
+  width: 255px !important;
+  margin: 80px 100px;
+  position: relative
 }
 
 #fad-art-image {
@@ -223,8 +230,12 @@
 }
 
 #fad-art::before {
-  background: radial-gradient(#333, #000);
-  box-shadow: 0 0 10px #000;
+  background:
+    var(--shine),
+    radial-gradient(#333, #000);
+  box-shadow:
+    0 0 5px #0a0a0a inset,
+    0 0 5px #000;
   transform: scale(1.5)
 }
 
@@ -309,13 +320,17 @@
 }
 
 [data-is-blur-fad = "true"] #fad-art::before {
-  background: radial-gradient(#242424, #000)
+  background:
+    var(--shine),
+    radial-gradient(#242424, #000)
 }
 
 [data-is-blur-fad = "true"] #fad-art::after {
   background-color: rgba(100, 100, 100, .1);
   border: 1px solid rgba(100, 100, 100, .1);
-  box-shadow: 0 0 1px rgba(40, 40, 40, .2) inset, 0 0 1px rgba(200, 200, 200, .2)
+  box-shadow:
+    0 0 1px rgba(40, 40, 40, .2) inset,
+    0 0 1px rgba(200, 200, 200, .2)
 }
 
 [data-is-blur-fad = "true"] #fad-progress {
@@ -393,7 +408,7 @@
 
 /* Rotate turntable */
 .main-nowPlayingWidget-coverArt > .cover-art,
-#fad-art-image {
+#fad-art {
   animation: rotate-cover_img 24s linear infinite paused
 }
 
