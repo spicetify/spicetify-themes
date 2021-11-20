@@ -22,6 +22,8 @@
 ![UltraBlack](ultrablack.png)
 ### Wealthy
 ![Wealthy](wealthy.png)
+### Dracula
+![Dracula](dracula.png)
 
 ## Info
 A simple, 'sleek' theme that builds upon the basic Spotify UI to create a more stylised experience. Also removes all annoyances from free version, including banner advertisements and upgrade buttons.

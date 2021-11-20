@@ -52,6 +52,10 @@ body {
     letter-spacing: normal;
 }
 
+.main-type-bass {
+    font-family: var(--glue-font-family);
+}
+
 .main-type-ballad {
     font-weight: 500;
 }
@@ -237,6 +241,10 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
     z-index: 0;
 }
 
+.main-buddyFeed-activityMetadata {
+    margin-left: 24px;
+}
+
 .main-buddyFeed-headerTitle,
 .main-buddyFeed-activityMetadata .main-buddyFeed-username a {
     color: var(--spice-sidebar-text);
@@ -313,11 +321,6 @@ html {
     color: var(--spice-sidebar-text)
 }
 
-.main-navBar-navBarItem svg {
-    width: 24px !important;
-    height: 24px !important;
-}
-
 .main-navBar-navBarItem {
     padding: 0 8px;
 }
@@ -365,11 +368,10 @@ html.sidebar-hide-text .main-rootlist-expandArrow {
     right: 4px;
 }
 
-html.sidebar-hide-text .main-navBar-navBarItem span,
-html.sidebar-hide-text .main-rootlist-rootlistContent span,
-html.sidebar-hide-text .main-rootlist-rootlistItem span,
-html.sidebar-hide-text .main-rootlist-statusIcons,
-html.sidebar-hide-text .GlueDropTarget span {
+html.sidebar-hide-text .main-navBar-navBarItem a span,
+html.sidebar-hide-text .main-rootlist-rootlistContent a span,
+html.sidebar-hide-text .main-rootlist-rootlistItem a span,
+html.sidebar-hide-text .main-rootlist-statusIcons {
     display: none;
 }
 
@@ -395,7 +397,8 @@ html.sidebar-hide-text .GlueDropTarget span {
 }
 
 .playback-bar__progress-time,
-.main-playbackBarRemainingTime-container {
+.main-playbackBarRemainingTime-container,
+.playback-bar__progress-time-elapsed {
     display: none;
 }
 
@@ -519,7 +522,16 @@ html.sidebar-hide-text .main-rootlist-rootlistItem {
     height: 56px;
 }
 
-.main-navBar-navBarLink .icon,
+.main-navBar-navBarItem .collection-active-icon,
+.main-navBar-navBarItem .collection-icon,
+.main-navBar-navBarItem .home-active-icon,
+.main-navBar-navBarItem .home-icon,
+.main-navBar-navBarItem .search-active-icon,
+.main-navBar-navBarItem .search-icon {
+    flex: 0 0 auto;
+    margin-right: 8px;
+}
+
 .main-collectionLinkButton-icon,
 .main-createPlaylistButton-icon,
 .main-collectionLinkButton-icon {
@@ -549,6 +561,12 @@ li.GlueDropTarget {
 
 .main-topBar-container {
     max-width: unset;
+}
+
+/** Linux-specific remove padding */
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-entryPoints,
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-navBar {
+    padding-top: 0;
 }
 
 /** Custom elements */
@@ -619,6 +637,11 @@ li.GlueDropTarget {
     justify-content: center;
 }
 
+.main-trackInfo-container > div > div::before,
+.main-trackInfo-container > div > div::after {
+    background: unset;
+}
+
 .player-controls {
     justify-content: flex-start;
     flex-direction: row;
@@ -641,7 +664,7 @@ li.GlueDropTarget {
     padding-right: 64px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .contentSpacing,
     .artist-artistDiscography-headerContainer {
         padding-left: 128px;

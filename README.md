@@ -1,5 +1,7 @@
 # spicetify community themes
 
+### **Some of the themes are not working properly due to a recent Spotify update. Spicetify community is aware of that and everyone is working hard to fix them, so please do not open new issues.**
+
 This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify.
 
 You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
@@ -34,14 +36,14 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 
     ```bash
     cd spicetify-themes
-    cp -r * ~/spicetify_data/Themes
+    cp -r * ~/.config/spicetify/Themes
     ```
 
     **Windows**
 
     ```powershell
     cd spicetify-themes
-    cp * "$(spicetify -c | Split-Path)\Themes\"
+    cp * "$(spicetify -c | Split-Path)\Themes\" -Recurse
     ```
 
 3.  Choose which theme to apply just by running:
@@ -64,11 +66,11 @@ We've set up a separate document for our [contribution guidelines](./CONTRIBUTIN
 
 ## Troubleshooting
 
-Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. If you find problems when using or installing these themes, or you need help in modifying a theme use the [Spectrum](https://spectrum.chat/spicetify) chat.
+Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. If you find problems when using or installing these themes, or you need help in modifying a theme then ask for suggestions on the [subreddit](https://www.reddit.com/r/spicetify/) or on the [Discord Server](https://discord.com/invite/VnevqPp2Rr).
 
 Use GitHub issues ONLY for bugs and requesting new features.
 
-If you are unsure about which channel to use, go for Spectrum.
+If you are unsure about which channel to use, go for Reddit or Discord.
 
 ## Useful resources
 

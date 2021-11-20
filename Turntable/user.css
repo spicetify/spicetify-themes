@@ -1,7 +1,15 @@
 :root {
   --spotify-main-color: #1db954;
   --round-value: 50%;
-  --main-blur-backdrop: blur(20px) saturate(180%)
+  --main-blur-backdrop: blur(20px) saturate(180%);
+  --shine:
+    conic-gradient(
+      from 15deg,
+      transparent, #222 45deg, transparent 90deg,
+      transparent 90deg 180deg,
+      transparent 180deg, #222 225deg, transparent 270deg,
+      transparent 270deg 360deg
+    )
 }
 
 
@@ -87,12 +95,13 @@
 }
 
 .main-nowPlayingWidget-coverArt .cover-art.shadow {
+  width: 62px !important;
+  height: 62px !important;
   box-shadow: unset
 }
 
 .main-nowPlayingWidget-coverArt .cover-art-image {
   border: 2px solid #aaa;
-  transform: scale(1.1);
   box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
@@ -144,35 +153,36 @@
   left: 0
 }
 
-.progress-bar-wrapper {
+.playback-progressbar {
   height: 4px
 }
 
-.playback-bar .progress-bar__fg {
+.x-progressBar-progressBarBg > div > div {
   background-color: var(--spotify-main-color)
 }
 
-.playback-bar__progress-time,
+.playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
   position: absolute;
   top: 12px;
   left: 50%
 }
 
-.playback-bar__progress-time {
-  transform: translateX(-45px)
+.playback-bar__progress-time-elapsed {
+  transform: translateX(calc(-100% - 10px))
 }
 
-.playback-bar__progress-time::after {
+.playback-bar__progress-time-elapsed::after {
   position: absolute;
-  right: -5px;
+  left: calc(100% + 10px);
   font-weight: bold;
   color: var(--spotify-main-color);
-  content: "/"
+  content: "/";
+  transform: translateX(-50%)
 }
 
 .main-playbackBarRemainingTime-container {
-  transform: translateX(-1px)
+  transform: translateX(10px)
 }
 
 .player-controls {
@@ -196,10 +206,9 @@
 }
 
 #fad-art {
-  width: 300px !important;
-  margin: 60px 80px;
-  position: relative;
-  transform: scale(.85)
+  width: 268px !important;
+  margin: 80px 100px;
+  position: relative
 }
 
 #fad-art-image {
@@ -221,8 +230,12 @@
 }
 
 #fad-art::before {
-  background: radial-gradient(#333, #000);
-  box-shadow: 0 0 10px #000;
+  background:
+    var(--shine),
+    radial-gradient(#333, #000);
+  box-shadow:
+    0 0 5px #0a0a0a inset,
+    0 0 5px #000;
   transform: scale(1.5)
 }
 
@@ -307,12 +320,17 @@
 }
 
 [data-is-blur-fad = "true"] #fad-art::before {
-  background: radial-gradient(#242424, #000)
+  background:
+    var(--shine),
+    radial-gradient(#242424, #000)
 }
 
 [data-is-blur-fad = "true"] #fad-art::after {
-  background-color: rgba(40, 40, 40, .1);
-  box-shadow: 0 0 1px rgba(100, 100, 100, .4)
+  background-color: rgba(100, 100, 100, .1);
+  border: 1px solid rgba(100, 100, 100, .1);
+  box-shadow:
+    0 0 1px rgba(40, 40, 40, .2) inset,
+    0 0 1px rgba(200, 200, 200, .2)
 }
 
 [data-is-blur-fad = "true"] #fad-progress {
@@ -320,15 +338,78 @@
 }
 
 
-@media (min-width: 1460px) and (min-height: 960px) {
+/* Full App Display - heart */
+.fad-heart-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.fad-heart {
+  width: 16px;
+  height: 16px;
+  padding: unset !important
+}
+
+.fad-heart svg {
+  fill: #ccc
+}
+
+.fad-heart svg:hover,
+.fad-heart.checked svg {
+  fill: var(--spotify-main-color)
+}
+
+
+/* Full App Display - song preview */
+.song-preview {
+  width: 100%;
+  padding: 0 10%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.song-preview > button {
+  font-size: 14px;
+  color: #ccc !important
+}
+
+.song-preview > button:hover {
+  color: #fff !important
+}
+
+
+/* Responsive */
+@media (max-width: 908px) {
   #fad-foreground {
+    flex-wrap: wrap;
+    align-content: center
+  }
+
+  #fad-details {
+    padding-top: 50px
+  }
+}
+
+@media (min-width: 1460px) and (min-height: 960px) {
+  #fad-foreground,
+  .main-trackCreditsModal-container {
     transform: scale(1.2)
+  }
+
+  .song-preview > span {
+    font-size: 16px
   }
 }
 
 
 /* Rotate turntable */
-#fad-art-image {
+.main-nowPlayingWidget-coverArt > .cover-art,
+#fad-art {
   animation: rotate-cover_img 24s linear infinite paused
 }
 

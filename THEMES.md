@@ -61,6 +61,16 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![samourai](Dribbblish/samourai.png)
 
+## Fluent
+
+#### Dark
+
+![dark](Fluent/screenshots/dark-1.png)
+
+#### Light
+
+![light](Fluent/screenshots/light-1.png)
+
 ## Onepunch
 
 #### Dark
@@ -86,11 +96,12 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![Psycho](Sleek/psycho.png) | ![UltraBlack](Sleek/ultrablack.png) |
 | Psycho | UltraBlack |
 | ![Wealthy](Sleek/wealthy.png) | |
-| Wealthy | |
+| Wealthy | Dracula |
+| |![Dracula](Sleek/dracula.png) |
 
 ## Turntable
 
-https://user-images.githubusercontent.com/19476925/119483404-84223100-bd87-11eb-8dfa-5af9f7a2e925.mov
+![Turntable](Turntable/screenshots/fad.png)
 
 ## Ziro
 
