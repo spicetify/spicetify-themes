@@ -133,6 +133,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     border-radius: 20px;
     z-index: 5;
     color: var(--spice-subtext) !important;
+    padding-left: 5px;
 }
 
 .player-controls__buttons {
@@ -272,6 +273,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     height: 16px!important;
     border: solid 2px var(--spice-subtext)!important;
     width: 16px!important;
+    display: unset !important;
 }
 
 a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
@@ -366,10 +368,6 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
 
 .main-connectToFacebook-headerTitle {
     color: var(--spice-misc) !important;
-}
-
-.main-cardSubHeader-root, .main-cardHeader-text {
-    color: var(--spice-shadow) !important;
 }
 
 
@@ -543,7 +541,30 @@ padding-top: 8px;
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow: hidden;
-    height: 500px !important;
+    contain: unset !important;
+    height: fit-content !important;
+    padding-bottom: 10px;
 }
-
-
+div.main-cardImage-imageWrapper.main-cardImage-roundedCorners > div > div > svg > path {
+    color: blue;
+    background-color: blue;
+    fill: var(--spice-sidebar);
+    opacity: 0.7;
+}
+div.main-cardImage-imageWrapper.main-cardImage-roundedCorners > div > div > svg > path {
+    color: blue;
+    background-color: blue;
+    fill: var(--spice-sidebar);
+    opacity: 0.7;
+}
+.main-yourEpisodes-coverContainer{
+background-color: var(--spice-text);
+}
+.playback-bar__progress-time-elapsed {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+}
