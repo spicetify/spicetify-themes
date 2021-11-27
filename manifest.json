@@ -22,7 +22,7 @@
         "readme": "Dribbblish/README.md",
         "usercss": "Dribbblish/user.css",
         "schemes": "Dribbblish/color.ini",
-        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/dribbblish.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/dribbblish.js"]
     },
     {
         "name": "Fluent",
@@ -31,7 +31,7 @@
         "readme": "Fluent/README.md",
         "usercss": "Fluent/user.css",
         "schemes": "Fluent/color.ini",
-        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Fluent/fluent.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Fluent/fluent.js"]
     },
     {
         "name": "Onepunch",
@@ -56,7 +56,7 @@
         "readme": "Turntable/README.md",
         "usercss": "Turntable/user.css",
         "schemes": "Turntable/color.ini",
-        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Turntable/turntable.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Turntable/turntable.js"]
     },
     {
         "name": "Ziro",
