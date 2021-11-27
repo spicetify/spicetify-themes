@@ -1354,6 +1354,16 @@ option {
   --bg-color: var(--spice-player-bar-bg);
 }
 
+/* Progress bar tooltip:
+ * I think it makes sense to just remove the tooltip, given that the labels on the progress bar provide the exact same info.
+ * Regardless, this style will prevent the text from pushing the player controls uncomfortably close to the top of the player bar.
+*/
+.prog-tooltip {
+  width: 140px;
+  overflow: hidden;
+  display: none;
+}
+
 .progress-bar__slider,
 .giO6cIQ8auPNZuTvC4Y8 {
   background-color: var(--spice-accent) !important;
