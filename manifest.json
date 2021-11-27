@@ -1,0 +1,69 @@
+[
+    {
+        "name": "BurntSienna",
+        "description": "BurntSienna",
+        "preview": "BurntSienna/screenshot.png",
+        "readme": "BurntSienna/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini"
+    },
+    {
+        "name": "Default",
+        "description": "Default",
+        "preview": "Default/ocean.png",
+        "readme": "Default/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini"
+    },
+    {
+        "name": "Dribbblish",
+        "description": "Dribbblish",
+        "preview": "Dribbblish/base.png",
+        "readme": "Dribbblish/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/dribbblish.js"]
+    },
+    {
+        "name": "Fluent",
+        "description": "Fluent",
+        "preview": "Fluent/screenshots/dark-1.png",
+        "readme": "Fluent/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Fluent/fluent.js"]
+    },
+    {
+        "name": "Onepunch",
+        "description": "Onepunch",
+        "preview": "Onepunch/screenshots/dark_home.png",
+        "readme": "Onepunch/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini"
+    },
+    {
+        "name": "Sleek",
+        "description": "Sleek",
+        "preview": "Sleek/coral.png",
+        "readme": "Sleek/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini"
+    },
+    {
+        "name": "Turntable",
+        "description": "Turntable",
+        "preview": "Turntable/screenshots/turntable.png",
+        "readme": "Turntable/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini",
+        "includes": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Turntable/turntable.js"]
+    },
+    {
+        "name": "Ziro",
+        "description": "Ziro",
+        "preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png",
+        "readme": "Ziro/README.md",
+        "usercss": "user.css",
+        "schemes": "color.ini"
+    }
+]
