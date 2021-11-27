@@ -142,7 +142,7 @@
   margin-top: 8px;
 }
 
-._AxyaXOKl3GkvT212Vco { /* tags */
+.ZHE5oMCbrUVXtUWiPmpH { /* tags */
   padding: 12px !important;
 }
 
@@ -961,7 +961,9 @@ a[class*='-tabBar-headerItemLink']:active {
 
 /* search */
 
-.x-searchInput-searchInputInput, .dIwMadpRrW1PwEwEeAbN {
+.x-searchInput-searchInputInput, 
+.dIwMadpRrW1PwEwEeAbN,
+.G9iUss4eOSpJyn2VBzsS {
   background-color: var(--spice-card);
   color: var(--spice-text) !important;
   border-radius: var(--border-radius-2) !important;
@@ -970,21 +972,29 @@ a[class*='-tabBar-headerItemLink']:active {
   transition: background-color ease-in 167ms;
 }
 
-.x-searchInput-searchInputInput:focus, .dIwMadpRrW1PwEwEeAbN:focus {
+.x-searchInput-searchInputInput:focus, 
+.dIwMadpRrW1PwEwEeAbN:focus,
+.G9iUss4eOSpJyn2VBzsS:focus {
   background-color: var(--spice-main);
   border-bottom: var(--spice-accent) solid 2px;
 }
 
-.x-searchInput-searchInput, .KTdyveh7LiwRtB2aC_JT {
+.x-searchInput-searchInput, ._UTWTgKCqE8eruFNFAMf {
   -webkit-box-flex: 1;
   width: 40vw;
 }
 
-.x-searchInput-searchInputIconContainer, .mCoaW_xbXtY1_uzuUKu_ {
+.x-searchInput-searchInputIconContainer, 
+._6e_T5d5DVIdzLw3pCIw {
   flex-direction: row-reverse;
 }
 
-.x-searchInput-searchInputSearchIcon, .Y_y159Y1ahiDoouerBGc {
+.c16n2m346Ss2TcRUx8Bw {
+  flex: 0 !important;
+}
+
+.x-searchInput-searchInputSearchIcon, 
+.c16n2m346Ss2TcRUx8Bw .BDcKgSW_ys9_Hj2DwDBW {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_search_16_regular.svg');
   background-color: var(--spice-subtext) !important; 
   flex: 0;
@@ -993,23 +1003,26 @@ a[class*='-tabBar-headerItemLink']:active {
   width: 16px;
 }
 
-.Y_y159Y1ahiDoouerBGc path {
+.BDcKgSW_ys9_Hj2DwDBW path {
   display: none;
 }
 
-.x-searchInput-searchInputClearButton, ._77ZnlZoTKshnd3uWfXf {
+.x-searchInput-searchInputClearButton, 
+.g7ggq46CbOli19ZxJlQe .BDcKgSW_ys9_Hj2DwDBW {
   margin-left: 5px;
   margin-right: 12px;
-  height: 48px;
+  height: 20px;
 }
 
-.x-searchInput-searchInputClearButton path, ._77ZnlZoTKshnd3uWfXf path {
+.x-searchInput-searchInputClearButton path, 
+.g7ggq46CbOli19ZxJlQe .BDcKgSW_ys9_Hj2DwDBW path {
   display: block !important;
   stroke: var(--spice-subtext) !important;
   stroke-width: 1.3px;
 }
 
-.x-searchInput-searchInputClearButton svg, ._77ZnlZoTKshnd3uWfXf svg {
+.x-searchInput-searchInputClearButton svg, 
+.g7ggq46CbOli19ZxJlQe .BDcKgSW_ys9_Hj2DwDBW svg {
   padding: 3px;
 }
 
