@@ -1,7 +1,5 @@
 # spicetify community themes
 
-### **Some of the themes are not working properly due to a recent Spotify update. Spicetify community is aware of that and everyone is working hard to fix them, so please do not open new issues.**
-
 This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify.
 
 You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
