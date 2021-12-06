@@ -98,6 +98,12 @@ waitForElement([".main-rootlist-rootlistPlaylistsScrollNode"], (queries) => {
     queries[0].append(fade);
 });
 
+waitForElement([".main-buddyFeed-buddyFeed"], (queries) => {
+    const fade2 = document.createElement("div");
+    fade2.id = "dribbblish-sidebar-fade-in2";
+    queries[0].append(fade2);
+});
+
 waitForElement([
     ".Root__nav-bar .LayoutResizer__input, .Root__nav-bar .LayoutResizer__resize-bar input"
 ], ([resizer]) => {
