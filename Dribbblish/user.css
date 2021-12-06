@@ -579,6 +579,15 @@ li.GlueDropTarget {
     z-index: 3;
     pointer-events: none;
 }
+#dribbblish-buddyfeed-fade-in {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
+    z-index: 3;
+    pointer-events: none;
+}
 .dribs-playlist-list {
     padding-bottom: 56px;
 }
@@ -879,14 +888,4 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
 }
 .main-buddyFeed-buddyFeed.main-buddyFeed-buddyFeed-expanded {
     z-index: 4;
-}
-
-#dribbblish-sidebar-fade-in2 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
-    background: linear-gradient(to top, var(--spice-sidebar) 10%, transparent);
-    z-index: 3;
-    pointer-events: none;
 }
