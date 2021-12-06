@@ -579,7 +579,7 @@ li.GlueDropTarget {
     z-index: 3;
     pointer-events: none;
 }
-#dribbblish-buddyfeed-fade-in {
+#dribbblish-buddyFeed-fade-in {
     position: absolute;
     bottom: 0;
     width: 100%;
