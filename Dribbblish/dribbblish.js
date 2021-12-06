@@ -100,7 +100,7 @@ waitForElement([".main-rootlist-rootlistPlaylistsScrollNode"], (queries) => {
 
 waitForElement([".main-buddyFeed-buddyFeed"], (queries) => {
     const fade2 = document.createElement("div");
-    fade2.id = "dribbblish-sidebar-fade-in2";
+    fade2.id = "dribbblish-buddyfeed-fade-in";
     queries[0].append(fade2);
 });
 
