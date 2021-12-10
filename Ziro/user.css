@@ -332,7 +332,7 @@ a[class*='-tabBar-headerItemLink']:active {
   background-color: rgba(var(--spice-rgb-selected-row),.1);
 }
 :not(li[class*='-tabBar-headerItem']) > a[aria-current="page"] span {
-  color: var(--spice-shadow)
+  color: var(--spice-rgb-selected-row);
 }
 /* search */
 .x-searchInput-searchInputInput {
@@ -475,17 +475,22 @@ input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
 .now-playing-bar .cover-art-image {
   border-radius: var(--border-radius-2);
 }
-.playback-bar__progress-time, .main-playbackBarRemainingTime-container {
+.playback-bar__progress-time-elapsed, .main-playbackBarRemainingTime-container {
   position: absolute;
   bottom: -48px;
   right: 280px;
   color: var(--spice-text) !important;
 }
-.playback-bar__progress-time:first-child {
-  margin-right: 30px;
+.playback-bar__progress-time-elapsed:first-child {
+  margin-right: 40px;
 }
-.playback-bar__progress-time:first-child::after {
+.playback-bar__progress-time-elapsed:first-child::after {
   content: " /";
+}
+.playback-bar > div:nth-child(3) {
+  position:absolute;
+  bottom: -47.5px;
+  right: 280px;
 }
 .progress-bar__slider {
   opacity: 1;
