@@ -408,11 +408,6 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     border-color: var(--spice-button);
 }
 
-.main-rootlist-textWrapper {
-    overflow: auto !important;
-    text-overflow: unset !important;
-    white-space: pre !important;
-}
 
 .main-connectToFacebook-text, .main-connectToFacebook-disclaimer {
     color: unset !important;
