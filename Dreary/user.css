@@ -473,7 +473,7 @@ padding-top: 8px;
     }
     .main-buddyFeed-friendsFeedContainer {
         border-left: solid 2px var(--spice-text);
-    }
+    
     .main-yourEpisodesButton-yourEpisodesIcon {
         background: var(--spice-text);
     }
@@ -562,4 +562,7 @@ background-color: var(--spice-text);
     padding: 0px;
     margin: 0px;
     position: absolute;
+}
+.Root__main-view, .Root__nav-bar{
+    min-width: 285px
 }
