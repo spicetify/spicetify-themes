@@ -564,5 +564,5 @@ background-color: var(--spice-text);
     position: absolute;
 }
 .Root__main-view, .Root__nav-bar{
-    min-width: 285px
+    min-width: 285px;
 }
