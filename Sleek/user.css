@@ -267,6 +267,11 @@ p.main-buddyFeed-timestamp.main-type-finale,
    visibility: hidden;
  } 
 
+/* remove vector (circle) from "search in playlist" to allow padding to be reduced */
+ .x-filterBox-searchIconContainer {
+   visibility: hidden;
+ }
+
 /* change input box appearance */
 input {
   background-color: unset !important;
