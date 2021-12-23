@@ -263,9 +263,19 @@ p.main-buddyFeed-timestamp.main-type-finale,
 }
 
  /* remove vector (circle) from input bar to allow padding to be reduced */
- .jnJioQZqKVcbP_kkmTQ2 {
-   opacity: 0;
+ .x-searchInput-searchInputIcon {
+   visibility: hidden;
  } 
+
+/* remove vector (circle) from "search in playlist" to allow padding to be reduced */
+ .x-filterBox-searchIconContainer {
+   visibility: hidden;
+ }
+
+/* remove vector (circle) from "created playlist(s)" to allow padding to be reduced */
+ .playlist-inlineSearchBox-searchIconContainer {
+   visibility: hidden;
+ }
 
 /* change input box appearance */
 input {
