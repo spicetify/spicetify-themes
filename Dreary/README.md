@@ -20,9 +20,6 @@
 ### Graytone-Blue
 ![Graytone-Blue Screenshot](graytone-blue.png)
 
-### Graytone-Red
-![Graytone-Red Screenshot](graytone-red.png)
-
 
 ## Important
 Certain aspects of the theme, such as the borders around playlist names, require Sidebar Config to be enabled. It is not required but recommended.
