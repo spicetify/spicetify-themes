@@ -27,6 +27,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Golden
 ![Golden Screenshot](Dreary/golden.png)
 
+#### Graytone-Blue
+![Graytone-blue Sreenshot](Dreary/graytone-blue.png)
+
 ## Dribbblish
 
 #### Base
