@@ -404,7 +404,7 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     transition: all 500ms;
 }
 
-#spicetify-playlist-list>li:hover {
+#spicetify-playlist-list > div > div:nth-child(2) > li {
     border-color: var(--spice-button);
 }
 
@@ -417,10 +417,6 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     color: var(--spice-button);
 }
 
-svg[Attributes Style] {
-    fill: var(--spice-subtext);
-}
-
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink {
     transition: 500ms;
 }
@@ -428,8 +424,6 @@ svg[Attributes Style] {
 .main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive, .main-rootlist-rootlistItemLink:focus {
     color: var(--spice-text);
 }
-
-
 
 .view-homeShortcutsGrid-shortcut {
     background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
@@ -473,7 +467,7 @@ padding-top: 8px;
     }
     .main-buddyFeed-friendsFeedContainer {
         border-left: solid 2px var(--spice-text);
-    
+    }
     .main-yourEpisodesButton-yourEpisodesIcon {
         background: var(--spice-text);
     }
@@ -484,7 +478,6 @@ padding-top: 8px;
     .main-navBar-entryPoints>div:first-of-type {
         margin-top: 20px;
     }
-    .main-nowPlayingBar-left {}
     .cMigZB {
         cursor: pointer;
     }
@@ -563,6 +556,12 @@ background-color: var(--spice-text);
     margin: 0px;
     position: absolute;
 }
-.Root__main-view, .Root__nav-bar{
-    min-width: 285px;
+.Root__nav-bar{
+    min-width: 281px !important;
 }
+.playback-bar__progress-time-elapsed {
+    display:none !important;
+        }
+#spicetify-playlist-list > div{
+    height: 100% !important;
+ }
