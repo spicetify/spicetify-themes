@@ -5,7 +5,8 @@
         "preview": "BurntSienna/screenshot.png",
         "readme": "BurntSienna/README.md",
         "usercss": "BurntSienna/user.css",
-        "schemes": "BurntSienna/color.ini"
+        "schemes": "BurntSienna/color.ini",
+        "authors": [ { "name": "pjaspinski", "url": "https://github.com/pjaspinski" } ]
     },
     {
         "name": "Default",
@@ -13,7 +14,8 @@
         "preview": "Default/ocean.png",
         "readme": "Default/README.md",
         "usercss": "Default/user.css",
-        "schemes": "Default/color.ini"
+        "schemes": "Default/color.ini",
+        "authors": [ { "name": "Blacksuan19", "url": "https://github.com/Blacksuan19" } ]
     },
     {
         "name": "Dribbblish",
@@ -31,7 +33,8 @@
         "readme": "Fluent/README.md",
         "usercss": "Fluent/user.css",
         "schemes": "Fluent/color.ini",
-        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Fluent/fluent.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Fluent/fluent.js"],
+        "authors": [ { "name": "williamckha", "url": "https://github.com/williamckha" } ]
     },
     {
         "name": "Onepunch",
@@ -39,7 +42,8 @@
         "preview": "Onepunch/screenshots/dark_home.png",
         "readme": "Onepunch/README.md",
         "usercss": "Onepunch/user.css",
-        "schemes": "Onepunch/color.ini"
+        "schemes": "Onepunch/color.ini",
+        "authors": [ { "name": "okarin001", "url": "https://github.com/okarin001" } ]
     },
     {
         "name": "Sleek",
@@ -47,7 +51,8 @@
         "preview": "Sleek/coral.png",
         "readme": "Sleek/README.md",
         "usercss": "Sleek/user.css",
-        "schemes": "Sleek/color.ini"
+        "schemes": "Sleek/color.ini",
+        "authors": [ { "name": "harbassan", "url": "https://github.com/harbassan" } ]
     },
     {
         "name": "Turntable",
@@ -55,7 +60,8 @@
         "preview": "Turntable/screenshots/turntable.png",
         "readme": "Turntable/README.md",
         "usercss": "Turntable/user.css",
-        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Turntable/turntable.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Turntable/turntable.js"],
+        "authors": [ { "name": "Grason Chan", "url": "https://github.com/grasonchan" } ]
     },
     {
         "name": "Ziro",
@@ -63,6 +69,7 @@
         "preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png",
         "readme": "Ziro/README.md",
         "usercss": "Ziro/user.css",
-        "schemes": "Ziro/color.ini"
+        "schemes": "Ziro/color.ini",
+        "authors": [ { "name": "schnensch0", "url": "https://github.com/schnensch0" } ]
     }
 ]
