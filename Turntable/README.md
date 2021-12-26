@@ -74,10 +74,11 @@ rm ~/.config/spicetify/Extensions/turntable.js
 spicetify config current_theme SpicetifyDefault
 ```
 
-3. remove extension - Full App Display (optional)
+3. remove extension - Full App Display and Turntable(optional)
 
 ```shell
 spicetify config extensions fullAppDisplay.js-
+spicetify config extensions turntable.js-
 ```
 
 4. apply
