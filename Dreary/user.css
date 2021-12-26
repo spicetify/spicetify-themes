@@ -404,7 +404,7 @@ a.x-categoryCard-CategoryCard, a.x-heroCategoryCard-HeroCategoryCard {
     transition: all 500ms;
 }
 
-#spicetify-playlist-list > div > div:nth-child(2) > li {
+#spicetify-playlist-list > div > div:nth-child(2) > li:hover {
     border-color: var(--spice-button);
 }
 
