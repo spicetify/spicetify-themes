@@ -24,7 +24,8 @@
         "readme": "Dribbblish/README.md",
         "usercss": "Dribbblish/user.css",
         "schemes": "Dribbblish/color.ini",
-        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/dribbblish.js"]
+        "include": ["https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/dribbblish.js"],
+        "authors": [ { "name": "khanhas", "url": "https://github.com/khanhas" } ]
     },
     {
         "name": "Fluent",
