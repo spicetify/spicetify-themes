@@ -43,19 +43,19 @@ spicetify config extensions fullAppDisplay.js
 spicetify apply
 ```
 
-2. put **Turntable** and **rotateTurntable.js** into the **spicetify_data**
+2. put **Turntable** and **turntable.js** into the **.config/spicetify**
 
 ```shell
 cd spicetify-themes
-cp -r Turntable ~/spicetify_data/Themes
-cp Turntable/rotateTurntable.js ~/spicetify_data/Extensions
+cp -r Turntable ~/.config/spicetify/Themes
+cp Turntable/turntable.js ~/.config/spicetify/Extensions
 ```
 
 3. select the theme and extension, then apply
 
 ```shell
 spicetify config current_theme Turntable
-spicetify config extensions rotateTurntable.js
+spicetify config extensions turntable.js
 spicetify apply
 ```
 
@@ -64,8 +64,8 @@ spicetify apply
 1. remove **Turntable** and **rotateTurntable.js**
 
 ```shell
-rm -r ~/spicetify_data/Themes/Turntable
-rm ~/spicetify_data/Extensions/rotateTurntable.js
+rm -r ~/.config/spicetify/Themes/Turntable
+rm ~/.config/spicetify/Extensions/turntable.js
 ```
 
 2. config to spicetify default theme
@@ -74,10 +74,11 @@ rm ~/spicetify_data/Extensions/rotateTurntable.js
 spicetify config current_theme SpicetifyDefault
 ```
 
-3. remove extension - Full App Display (optional)
+3. remove extension - Full App Display and Turntable(optional)
 
 ```shell
 spicetify config extensions fullAppDisplay.js-
+spicetify config extensions turntable.js-
 ```
 
 4. apply
