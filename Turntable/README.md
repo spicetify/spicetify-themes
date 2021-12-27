@@ -12,10 +12,10 @@ View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/m
   <img src="screenshots/turntable.png" alt="turntable">
 </div>
 <div align="center">
-  <img src="screenshots/full_app_display.png" alt="full app display">
+  <img src="screenshots/fad.png" alt="full app display">
 </div>
 <div align="center">
-  <img src="screenshots/full_app_display_vertical_mode.png" alt="full app display - vertical mode">
+  <img src="screenshots/fad_vertical.png" alt="full app display - vertical mode">
 </div>
 
 ## More
