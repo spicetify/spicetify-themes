@@ -17,4 +17,5 @@ It may be necessary to enable sidebar config in order to make certain aspects of
 
 ##### To enable: `spicetify config sidebar_config 1`
 
-
+## Author
+Made by: https://github.com/CharlieS1103
