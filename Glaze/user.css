@@ -7,7 +7,15 @@
     background: var(--spice-text);
     content-visibility: hidden;
 }
-
+.main-topBar-UpgradeButton{
+    display:none !important;
+}
+.main-yourEpisodesButton-yourEpisodesIcon { 
+    background: var(--spice-text); 
+    } 
+    .main-yourEpisodesButton-yourEpisodesIcon path { 
+        fill: var(--spice-player); opacity: 0.7; 
+    }
 .main-rootlist-rootlistDivider, .main-rootlist-rootlistDividerContainer{
     visibility: hidden !important;
 }
