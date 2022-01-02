@@ -77,14 +77,14 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## Glaze
 
 ### Base
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/base.png" alt="img" width="500px"> 
+<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/base.png" alt="img" > 
 
 
 ### Dark
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img" width="500px"> 
+<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img" > 
 
 ### Gray
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" width="500px"> 
+<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" > 
 
 ## Onepunch
 
