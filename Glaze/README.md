@@ -7,7 +7,7 @@
 
 
 ### Dark
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img" "> 
+<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img"> 
 
 ### Gray
 <img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img"> 
