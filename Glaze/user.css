@@ -1,0 +1,235 @@
+/* Glaze Theme*/
+
+
+
+.main-trackList-playingIcon {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+    background: var(--spice-text);
+    content-visibility: hidden;
+}
+.main-topBar-UpgradeButton{
+    display:none !important;
+}
+.main-yourEpisodesButton-yourEpisodesIcon { 
+    background: var(--spice-text); 
+    } 
+    .main-yourEpisodesButton-yourEpisodesIcon path { 
+        fill: var(--spice-player); opacity: 0.7; 
+    }
+.main-rootlist-rootlistDivider, .main-rootlist-rootlistDividerContainer{
+    visibility: hidden !important;
+}
+
+div.main-cardImage-imageWrapper.main-cardImage-roundedCorners > div > div > svg > path {
+    color: blue;
+    background-color: blue;
+    fill: var(--spice-sidebar);
+    opacity: 0.7;
+}
+
+.main-yourEpisodes-coverContainer{
+background-color: var(--spice-text);
+}
+
+.collection-collectionEntityHeroCard-likedSongs {
+    background: linear-gradient(
+149.46deg
+, var(--spice-sidebar), var(--spice-main) 99.16%) !important;
+}
+.main-likedSongsButton-likedSongsIcon {
+    color: var(--spice-sidebar);
+}
+.main-likedSongsButton-likedSongsIcon {
+    background: var(--spice-text);
+}
+
+.main-leaderboardComponent-container{
+  display: none;
+}
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer{
+  display: none !important;
+}
+.main-yourEpisodesButton-yourEpisodesIcon path {
+    fill: var(--spice-sidebar);
+
+}
+#spicetify-show-list{
+    width:90%;
+    margin-right: 1px;
+    position: relative !Important;
+    top: -5px;
+    z-index:20;
+}
+#spicetify-show-list > li{
+    padding-bottom: 5px;
+    width:110%;
+
+}
+.main-navBar-navBarLinkActive{
+    background-image: linear-gradient(90deg, var(--spice-sidebar), var(--spice-selected-row))
+}
+.main-navBar-navBarLink:hover{
+    background-color: var(--spice-main);
+}
+.main-navBar-navBarLink{
+    height:50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#spicetify-show-list > div.GlueDropTarget {
+    display:table-cell;
+    width:0px !important;
+    padding: 0x !important;
+    margin:0px !important;
+    border-top: var(--spice-selected-row)solid 1px;
+    border-bottom: var(--spice-selected-row)solid 1px;
+}
+#spicetify-show-list > div > a > span, #spicetify-show-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes.personal-library > button > span{
+    display: none;
+    padding: 0px;
+    margin:0px;
+}
+span.main-createPlaylistButton-text.standalone-ellipsis-one-line.main-type-mestoBold {
+    display: none;
+}
+.main-createPlaylistButton-button, div.GlueDropTarget.personal-library >*  {
+    padding: 0px !important;
+  
+}
+
+#spicetify-show-list > div.GlueDropTarget.GlueDropTarget--episodes.personal-library.podcast-item{
+    padding-left: 25px !important;
+}
+.main-entityHeader-backgroundColor{
+    background-color: var(--spice-selected-row);
+        background-image: linear-gradient(0deg, var(--spice-main), transparent);
+    }
+
+    .main-actionBarBackground-background {
+        background-color: unset !important;
+        background-image: unset !important;
+}
+
+
+#spicetify-show-list > div > a > div.main-collectionLinkButton-icon > div, .main-createPlaylistButton-createPlaylistIcon {
+    width:30px;
+    height:30px;
+}
+#spicetify-show-list > div:nth-child(9) {
+    padding-right: 1100px;
+}
+#spicetify-show-list > div:nth-child(7) {
+    padding-left: 20px;
+}
+#spicetify-show-list > div > a > div.main-collectionLinkButton-icon > div > svg, #spicetify-show-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes.personal-library > button > div > div > svg,#spicetify-show-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes > button > div > div > svg{
+width:20px !important;
+height:20px !important;
+}
+#spicetify-show-list > li:nth-child(3){
+	border-bottom: var(--spice-selected-row)solid 1px;
+}
+.main-card-card {
+    background: var(--spice-card);
+    }
+.Z35BWOA10YGn5uc9YgAp {
+    background-color: var(--spice-player) !important;
+}
+.main-card-card:hover{
+    background: var(--spice-sidebar);
+ }
+ .main-userWidget-displayName {
+    display: none;
+}
+.main-userWidget-box {
+    right: 5px;
+    top: 5px;
+    position:fixed;
+}
+.main-home-homeHeader {
+    background-image: unset !important;
+    background-color:unset !important;
+    }
+/* Playback bar and controls*/
+.playback-bar {
+    width: 100%;
+    bottom: 83px;
+    position: absolute;
+    left: -1px;
+    z-index: 1;
+}
+.playback-bar__progress-time-elapsed.main-type-finale,.main-playbackBarRemainingTime-container {
+    display: none;
+}
+.main-nowPlayingBar-left {
+    order: 1;
+    flex: 1;
+    width: auto;
+    min-width: 0 !important;
+}
+
+.main-nowPlayingBar-center {
+    order: 0;
+    flex: 1;
+    width: auto;
+    min-width: unset !important;
+}
+
+.main-nowPlayingBar-right {
+    order: 2;
+    flex: 1;
+    width: auto;
+    min-width: unset !important;
+}
+
+.main-nowPlayingWidget-nowPlaying {
+    justify-content: center;
+}
+
+.main-trackInfo-container > div > div::before,
+.main-trackInfo-container > div > div::after {
+    background: unset;
+}
+
+.player-controls {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.main-playPauseButton-button {
+    background-color: transparent;
+}
+
+.main-playPauseButton-button svg {
+    width: 32px !important;
+    height: 32px !important;
+    color: var(--spice-button);
+}
+.main-playButton-PlayButton.main-playButton-primary{
+	background-color:var(--spice-main);
+}
+.player-controls__left{
+    flex:0;
+}
+.epWhU7hHGktzlO_dop6z{
+    background-color: var(--spice-text);
+}
+/*Hide things and general cleanup */
+nav.Root__nav-bar {
+    min-width: 200px !important;
+    max-width: 235px;
+    border-right: 1px solid var(--spice-selected-row);
+}
+.os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-horizontal {
+
+    display: none;
+}
+#main > div > div.Root__top-container > nav > div.main-navBar-navBar > div.main-rootlist-rootlist > div > div.os-host.os-host-foreign.os-theme-spotify.os-host-resize-disabled.main-rootlist-rootlistPlaylistsScrollNode.os-host-scrollbar-vertical-hidden.os-host-transition.os-host-overflow.os-host-overflow-x > div.os-padding > div > div {
+    overflow: hidden;
+}
+.main-topBar-background{
+	background-color:unset !important;
+	width:110%;
+}
+.main-trackList-trackListHeader{
+	position: unset !important;
+}

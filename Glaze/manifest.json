@@ -1,0 +1,11 @@
+{
+    "name": "Glaze",
+    "description": "Glaze",
+    "preview": "screenshots/dark.png",
+    "readme": "README.md",
+    "usercss": "user.css",
+    "schemes": "color.ini",
+    "authors": [
+        { "name": "CharlieS1103", "url": "https://github.com/CharlieS1103" }
+    ]
+}
