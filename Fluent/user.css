@@ -541,7 +541,8 @@ button.switch {
 }
 
 .main-navBar-navBarLinkActive > .icon,
-.main-navBar-navBarLinkActive .gSLhUO {
+.main-navBar-navBarLinkActive .gSLhUO,
+.main-navBar-navBarLinkActive > .hDgDGI {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
