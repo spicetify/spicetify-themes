@@ -74,7 +74,7 @@
   }
     
   var interval = setInterval(function() {
-    if(typeof Spicetify.Platform.Translations.play == 'undefined' && typeof Spicetify.Platform.Translations.pause == 'undefined') return;
+    if (typeof Spicetify.Platform == 'undefined' || (typeof Spicetify.Platform.Translations.play == 'undefined' && typeof Spicetify.Platform.Translations.pause == 'undefined')) return;
       clearInterval(interval);
       var playButtonStyle = document.createElement('style');
       playButtonStyle.type = 'text/css';
