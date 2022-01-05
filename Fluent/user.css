@@ -228,16 +228,16 @@ h3,
   transition: background-color ease-out 167ms;
 }
 
-.main-topBar-back {
+.main-topBar-historyButtons button:nth-child(1) {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_left_24_filled.svg');
+  margin-left: 60px;
   background-color: var(--spice-text) !important;
   padding: 5px;
-  margin-left: 60px;
   width: 24px !important;
   height: 24px !important;
 }
 
-.main-topBar-forward, .ayEN3UX5aZhEFVVlNX4K {
+.main-topBar-historyButtons button:nth-child(2) {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg');
   background-color: var(--spice-text) !important;
   padding: 5px;
