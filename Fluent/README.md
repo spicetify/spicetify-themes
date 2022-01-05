@@ -7,8 +7,8 @@
 ![dark-2](screenshots/dark-2.png)
 
 ### Comfy
-![dark-1](screenshots/comfy-1.png)
-![dark-2](screenshots/comfy-2.png)
+![comfy-1](screenshots/comfy-1.jpg)
+![comfy-2](screenshots/comfy-2.jpg)
 
 ### Light
 ![light-1](screenshots/light-1.png)
