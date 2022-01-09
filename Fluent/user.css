@@ -1390,6 +1390,14 @@ option {
   transition: border-width 75ms ease;
 }
 
+.slider-dot:hover {
+  border-width: 7px;
+}
+
+.slider-dot:active {
+  border-width: 4px;
+}
+
 .main-nowPlayingWidget-nowPlaying>.ellipsis-one-line,
 .main-trackInfo-container {
   margin-left: 74px;
