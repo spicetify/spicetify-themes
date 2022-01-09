@@ -1368,7 +1368,7 @@ option {
 .progress-bar__slider,
 .giO6cIQ8auPNZuTvC4Y8 {
   background-color: var(--spice-selected-row) !important;
-  border: 5px solid var(--spice-selected-row);
+  border: 6px solid var(--spice-selected-row);
   box-shadow: 0 0 3px 0 var(--spice-player-bar-shadow) !important;
   box-sizing: content-box !important;
   width: 10px;
@@ -1390,12 +1390,16 @@ option {
   transition: border-width 75ms ease;
 }
 
+.progress-bar__slider:hover .slider-dot:not(:hover) {
+  border-width: 7px;
+}
+
 .slider-dot:hover {
   border-width: 7px;
 }
 
 .slider-dot:active {
-  border-width: 4px;
+  border-width: 4px !important;
 }
 
 .main-nowPlayingWidget-nowPlaying>.ellipsis-one-line,
