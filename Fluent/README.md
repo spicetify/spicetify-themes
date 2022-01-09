@@ -6,6 +6,10 @@
 ![dark-1](screenshots/dark-1.png)
 ![dark-2](screenshots/dark-2.png)
 
+### Comfy
+![comfy-1](screenshots/comfy-1.jpg)
+![comfy-2](screenshots/comfy-2.jpg)
+
 ### Light
 ![light-1](screenshots/light-1.png)
 
@@ -58,7 +62,7 @@ xpui.js_repl_8008 = ,${1}56,
 
 ### Customization
 
-Two color schemes are available: `light` or `dark`. Change scheme with commands:
+Three color schemes are available: `light` or `dark` or `comfy`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme_name>
 spicetify apply

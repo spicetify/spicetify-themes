@@ -60,7 +60,7 @@
 
 .main-topBar-background,
 .main-topBar-overlay {
-  background-color: var(--spice-sidebar) !important;
+  background-color: var(--spice-topbar) !important;
   opacity: 1 !important;
 }
 
@@ -228,16 +228,16 @@ h3,
   transition: background-color ease-out 167ms;
 }
 
-.main-topBar-back {
+.main-topBar-historyButtons button:nth-child(1) {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_left_24_filled.svg');
+  margin-left: 60px;
   background-color: var(--spice-text) !important;
   padding: 5px;
-  margin-left: 60px;
   width: 24px !important;
   height: 24px !important;
 }
 
-.main-topBar-forward {
+.main-topBar-historyButtons button:nth-child(2) {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg');
   background-color: var(--spice-text) !important;
   padding: 5px;
@@ -293,7 +293,7 @@ h3,
 
 /* buttons */
 
-.icon, .gSLhUO {
+.icon, .gSLhUO, .hDgDGI {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   margin: auto;
@@ -316,7 +316,7 @@ h3,
 
 .home-active-icon {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_home_24_filled.svg');
-  background-color: var(--spice-accent) !important; 
+  background-color: var(--spice-nav-icon-active) !important; 
 }
 
 .search-icon {
@@ -326,7 +326,7 @@ h3,
 
 .search-active-icon {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_search_24_filled.svg');
-  background-color: var(--spice-accent) !important; 
+  background-color: var(--spice-nav-icon-active) !important; 
 }
 
 .collection-icon {
@@ -336,7 +336,7 @@ h3,
 
 .collection-active-icon {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_library_24_filled.svg');
-  background-color: var(--spice-accent) !important; 
+  background-color: var(--spice-nav-icon-active) !important; 
 }
 
 .main-navBar-navBarLink[href="/lyrics-plus"] > .collection-icon {
@@ -346,7 +346,7 @@ h3,
 
 .main-navBar-navBarLink[href="/lyrics-plus"] > .collection-active-icon {
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_slide_text_24_filled.svg');
-  background-color: var(--spice-accent) !important; 
+  background-color: var(--spice-nav-icon-active) !important; 
 }
 
 .main-createPlaylistButton-button {
@@ -541,7 +541,8 @@ button.switch {
 }
 
 .main-navBar-navBarLinkActive > .icon,
-.main-navBar-navBarLinkActive .gSLhUO {
+.main-navBar-navBarLinkActive .gSLhUO,
+.main-navBar-navBarLinkActive > .hDgDGI {
   position: relative;
   top: 50%;
   transform: translate(0, -50%);
