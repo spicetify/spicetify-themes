@@ -1367,14 +1367,27 @@ option {
 
 .progress-bar__slider,
 .giO6cIQ8auPNZuTvC4Y8 {
-  background-color: var(--spice-accent) !important;
-  border: 4px solid var(--spice-selected-row);
+  background-color: var(--spice-selected-row) !important;
+  border: 5px solid var(--spice-selected-row);
   box-shadow: 0 0 3px 0 var(--spice-player-bar-shadow) !important;
   box-sizing: content-box !important;
-  width: 11px;
-  height: 11px;
+  width: 10px;
+  height: 10px;
   opacity: 1 !important;
   display: block;
+}
+
+.slider-dot {
+  width: 3px;
+  height: 3px;
+  background-color: var(--spice-accent);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--spice-accent);
+  border-radius: 50%;
+  transition: border-width 75ms ease;
 }
 
 .main-nowPlayingWidget-nowPlaying>.ellipsis-one-line,
