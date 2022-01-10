@@ -1375,6 +1375,7 @@ option {
   height: 10px;
   opacity: 1 !important;
   display: block;
+  margin-left: -10px;
 }
 
 .slider-dot {
