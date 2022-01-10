@@ -1399,6 +1399,10 @@ option {
   border-width: 7px;
 }
 
+.progress-bar__slider:active .slider-dot:not(:active) {
+  border-width: 4px !important;
+}
+
 .slider-dot:active {
   border-width: 4px !important;
 }
