@@ -97,4 +97,29 @@
       document.getElementsByTagName('head')[0].appendChild(playButtonStyle);
   }, 10)
 
+  waitForElement([".progress-bar__slider"], () => {
+    const sliders = document.getElementsByClassName("progress-bar__slider");
+    for (const slider of sliders) {
+      const dot = document.createElement("div");
+      dot.classList.add("slider-dot");
+      slider.appendChild(dot);
+    }
+  }, 10);
+    
+    
+  waitForElement([".ExtraControls"], () => {
+    const element = document.querySelector(".ExtraControls");
+    element.addEventListener("click", () => {
+      waitForElement([".npv-main-container .progress-bar__slider"], () => {
+        const sliders = document.getElementsByClassName("npv-main-container")[0].getElementsByClassName("progress-bar__slider");
+        for (const slider of sliders) {
+          if(slider.dataset.dot === "true") { continue; }
+          slider.dataset.dot = "true";
+          const dot = document.createElement("div");
+          dot.classList.add("slider-dot");
+          slider.appendChild(dot);
+        }
+      }, 10)
+    })
+  }, 10);
 })();
