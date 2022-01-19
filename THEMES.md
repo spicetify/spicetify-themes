@@ -74,6 +74,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![light](Fluent/screenshots/light-1.png)
 
+#### Dark-purple
+https://user-images.githubusercontent.com/85103150/149978364-2b573888-6c3d-4d6e-bbee-b16722d24843.png
+
 ## Glaze
 
 ### Base
