@@ -6,6 +6,11 @@
 ![dark-1](screenshots/dark-1.png)
 ![dark-2](screenshots/dark-2.png)
 
+### Dark-purple
+![dark-purple-1](https://user-images.githubusercontent.com/85103150/149978364-2b573888-6c3d-4d6e-bbee-b16722d24843.png)
+![dark-purple-1](https://user-images.githubusercontent.com/85103150/150125863-20211415-28f2-4db3-9388-13e3f2c9448f.png)
+)
+
 ### Comfy
 ![comfy-1](screenshots/comfy-1.jpg)
 ![comfy-2](screenshots/comfy-2.jpg)
