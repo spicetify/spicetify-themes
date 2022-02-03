@@ -1668,3 +1668,8 @@ option {
 .main-topBar-button[title="Bookmark"] {
   background-color: var(--spice-card) !important;
 }
+
+.contentSpacing div[role="search"] > div > span {
+  margin-right: auto;
+  flex: 0;
+}
