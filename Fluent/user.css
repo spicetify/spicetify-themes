@@ -221,7 +221,7 @@ h3,
 
 .queue-tabBar-header {
   text-align: center;
-  min-width: 500px;
+  min-width: 100px;
 }
 
 .queue-tabBar-headerItemLink {
