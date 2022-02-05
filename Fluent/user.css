@@ -221,7 +221,7 @@ h3,
 
 .queue-tabBar-header {
   text-align: center;
-  min-width: 500px;
+  min-width: 100px;
 }
 
 .queue-tabBar-headerItemLink {
@@ -233,6 +233,7 @@ h3,
   margin-left: 60px;
   background-color: var(--spice-text) !important;
   padding: 5px;
+  align-self: center;
   width: 24px !important;
   height: 24px !important;
 }
@@ -241,6 +242,7 @@ h3,
   -webkit-mask-image: url('./fluentui-system-icons/ic_fluent_arrow_right_24_filled.svg');
   background-color: var(--spice-text) !important;
   padding: 5px;
+  align-self: center;
   width: 24px !important;
   height: 24px !important;
 }
@@ -1665,4 +1667,9 @@ option {
 .main-topBar-button[title="Full App Display"],
 .main-topBar-button[title="Bookmark"] {
   background-color: var(--spice-card) !important;
+}
+
+.contentSpacing div[role="search"] > div > span {
+  margin-right: auto;
+  flex: 0;
 }
