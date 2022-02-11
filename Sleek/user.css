@@ -18,7 +18,8 @@
   color: var(--spice-text);
   height: 17px !important;
   stroke: var(--spice-text);
-  stroke-width: 10px;
+  stroke-width: 1px;
+  float: right;
 }
 
 [role='searchbox']::placeholder {
