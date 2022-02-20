@@ -37,6 +37,7 @@ h1 {
 
 /* Progress and remaining time */
 .main-playbackBarRemainingTime-container,
+.playback-bar__progress-time-elapsed,
 .playback-bar__progress-time {
 	font-size: 15px;
 	margin-left: 5px;
