@@ -1,6 +1,6 @@
 # spicetify community themes
 
-This is a collection of themes for [spicetify](https://github.com/khanhas/spicetify-cli), a command-line tool to customize Spotify.
+This is a collection of themes for [spicetify](https://github.com/spicetify/spicetify-cli), a command-line tool to customize Spotify.
 
 You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
@@ -18,10 +18,10 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 
 1.  Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
     ```bash
-    git clone https://github.com/morpheusthewhite/spicetify-themes.git
+    git clone https://github.com/spicetify/spicetify-themes.git
     ```
 
-2.  Copy the files into the [Spicetify Themes folder](https://github.com/khanhas/spicetify-cli/wiki/Customization#themes). Run:
+2.  Copy the files into the [Spicetify Themes folder](https://spicetify.app/docs/development/customization#themes). Run:
 
     **Linux**
 

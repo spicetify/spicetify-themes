@@ -17,7 +17,7 @@
 
 ### About
 
-[Spicetify](https://github.com/khanhas/spicetify-cli) theme inspired by Windows 11 UI and Microsoft's Fluent Design.  
+[Spicetify](https://github.com/spicetify/spicetify-cli) theme inspired by Windows 11 UI and Microsoft's Fluent Design.  
 Requires Segoe UI font.
 
 Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https://github.com/schnensch0)  

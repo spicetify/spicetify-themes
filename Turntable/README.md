@@ -36,7 +36,7 @@ Develop and test on macOS. If there's any problem, please open issue or PR.
 
 ### Installation
 
-1. add extension - [Full App Display](https://github.com/khanhas/spicetify-cli/wiki/Extensions#full-app-display)
+1. add extension - [Full App Display](https://spicetify.app/docs/getting-started/extensions#full-app-display)
 
 ```shell
 spicetify config extensions fullAppDisplay.js
