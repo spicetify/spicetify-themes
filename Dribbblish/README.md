@@ -43,7 +43,7 @@ In profile menu, toggle option "Right expanded cover" to change expaned current 
 Make sure you are using spicetify >= v2.5.0 and Spotify >= v1.1.56.
 ### Windows
 ```powershell
-Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/master/Dribbblish/install.ps1" | Invoke-Expression
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/install.ps1" | Invoke-Expression
 ```
 
 ## Manual Install
@@ -89,7 +89,7 @@ spicetify apply
 ## Auto-uninstall 
 ### Windows
 ```powershell
-Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/morpheusthewhite/spicetify-themes/v2/Dribbblish/uninstall.ps1" | Invoke-Expression
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/spicetify-themes/v2/Dribbblish/uninstall.ps1" | Invoke-Expression
 ```
 
 ## Manual uninstall 
