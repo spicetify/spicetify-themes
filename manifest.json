@@ -45,23 +45,6 @@
         ]
     },
     {
-        "name": "Fluent",
-        "description": "Fluent",
-        "preview": "Fluent/screenshots/dark-1.png",
-        "readme": "Fluent/README.md",
-        "usercss": "Fluent/user.css",
-        "schemes": "Fluent/color.ini",
-        "include": [
-            "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Fluent/fluent.js"
-        ],
-        "authors": [
-            {
-                "name": "williamckha",
-                "url": "https://github.com/williamckha"
-            }
-        ]
-    },
-    {
         "name": "Onepunch",
         "description": "Onepunch",
         "preview": "Onepunch/screenshots/dark_home.png",
