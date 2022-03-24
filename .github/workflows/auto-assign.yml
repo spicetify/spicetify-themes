@@ -58,6 +58,6 @@ jobs:
                 "keywords": ["Ziro"],
                 "labels": ["🙋 help wanted"],
                 "assignees": ["username"],
-              },
+              }
             ]
           github-token: "${{ secrets.GITHUB_TOKEN }}"
