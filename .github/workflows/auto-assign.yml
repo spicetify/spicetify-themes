@@ -1,0 +1,63 @@
+name: "Auto Assing on Theme"
+on:
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Naturalclar/issue-action@v2.0.2
+        with:
+          title-or-body: "both"
+          parameters: |
+            [
+              {
+                "keywords": ["BurntSienna"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Default"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Dreary"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Dribbblish"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["khanhas"],
+              },
+              {
+                "keywords": ["Glaze"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Onepunch"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Sleek"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Turntable"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+              {
+                "keywords": ["Ziro"],
+                "labels": ["🙋 help wanted"],
+                "assignees": ["username"],
+              },
+            ]
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
