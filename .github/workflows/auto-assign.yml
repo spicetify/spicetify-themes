@@ -17,47 +17,47 @@ jobs:
               {
                 "keywords": ["BurntSienna"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Default"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Dreary"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Dribbblish"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["khanhas"],
+                "assignees": ["khanhas"]
               },
               {
                 "keywords": ["Glaze"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Onepunch"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Sleek"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Turntable"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               },
               {
                 "keywords": ["Ziro"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"],
+                "assignees": ["username"]
               }
             ]
           github-token: "${{ secrets.GITHUB_TOKEN }}"
