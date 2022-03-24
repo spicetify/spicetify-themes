@@ -17,17 +17,17 @@ jobs:
               {
                 "keywords": ["BurntSienna"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["pjaspinski"]
               },
               {
                 "keywords": ["Default"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["Blacksuan19"]
               },
               {
                 "keywords": ["Dreary"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["CharlieS1103"]
               },
               {
                 "keywords": ["Dribbblish"],
@@ -37,27 +37,27 @@ jobs:
               {
                 "keywords": ["Glaze"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["CharlieS1103"]
               },
               {
                 "keywords": ["Onepunch"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["okarin001"]
               },
               {
                 "keywords": ["Sleek"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["harbassan"]
               },
               {
                 "keywords": ["Turntable"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["grasonchan"]
               },
               {
                 "keywords": ["Ziro"],
                 "labels": ["🙋 help wanted"],
-                "assignees": ["username"]
+                "assignees": ["schnensch0"]
               }
             ]
           github-token: "${{ secrets.GITHUB_TOKEN }}"
