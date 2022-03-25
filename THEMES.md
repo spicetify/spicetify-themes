@@ -64,16 +64,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![samourai](Dribbblish/samourai.png)
 
-## Fluent
-
-#### Dark
-
-![dark](Fluent/screenshots/dark-1.png)
-
-#### Light
-
-![light](Fluent/screenshots/light-1.png)
-
 ## Glaze
 
 ### Base
