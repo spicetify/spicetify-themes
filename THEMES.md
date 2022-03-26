@@ -100,9 +100,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 | Futura | Nord |
 | ![Psycho](Sleek/psycho.png) | ![UltraBlack](Sleek/ultrablack.png) |
 | Psycho | UltraBlack |
-| ![Wealthy](Sleek/wealthy.png) | |
+| ![Wealthy](Sleek/wealthy.png) | ![Dracula](Sleek/dracula.png) |
 | Wealthy | Dracula |
-| |![Dracula](Sleek/dracula.png) |
 
 ## Turntable
 
