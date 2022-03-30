@@ -1,3 +1,9 @@
+/* adding more padding on top */
+.Root {
+  padding-top: 30px;
+}
+/*done */
+
 :root {
     --bar-height: 70px;
     --bar-cover-art-size: 40px;
