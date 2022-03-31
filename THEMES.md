@@ -64,16 +64,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![samourai](Dribbblish/samourai.png)
 
-## Fluent
-
-#### Dark
-
-![dark](Fluent/screenshots/dark-1.png)
-
-#### Light
-
-![light](Fluent/screenshots/light-1.png)
-
 ## Glaze
 
 ### Base
@@ -110,9 +100,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 | Futura | Nord |
 | ![Psycho](Sleek/psycho.png) | ![UltraBlack](Sleek/ultrablack.png) |
 | Psycho | UltraBlack |
-| ![Wealthy](Sleek/wealthy.png) | |
+| ![Wealthy](Sleek/wealthy.png) | ![Dracula](Sleek/dracula.png) |
 | Wealthy | Dracula |
-| |![Dracula](Sleek/dracula.png) |
 
 ## Turntable
 
