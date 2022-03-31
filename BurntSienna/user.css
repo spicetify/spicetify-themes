@@ -25,7 +25,6 @@ h1 {
 }
 
 /* Icons */
-.Svg-ulyrgf-0,
 .main-trackList-rowPlayPauseIcon {
 	transform: scale(1.3);
 }
@@ -189,4 +188,39 @@ highlights selected song contains multi-digit song numbers */
 /* Facebook button */
 .x-settings-facebookButton {
 	background-color: unset !important;
+}
+
+/* Playlist play button color */
+.encore-dark-theme .encore-bright-accent-set,
+.encore-dark-theme .encore-bright-accent-set:hover {
+	background-color: var(--spice-button) !important;
+}
+
+/* Volume bar margins */
+.volume-bar .progress-bar {
+	margin: 0 0.4rem;
+}
+
+.volume-bar .playback-progressbar {
+	width: 70%;
+}
+
+
+.volume-bar {
+	flex: 0 150px;
+}
+
+/* Menu hidden under the button with account name - font size and family unification */
+.ellipsis-one-line {
+	font-family: Montserrat;
+}
+
+.ellipsis-one-line.main-type-mesto {
+	font-size: 14px;
+}
+
+/* Removal of empty space above playlist cover and title on narrow viewports */
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+	min-height: 325px;
+	height: 15vh;
 }
