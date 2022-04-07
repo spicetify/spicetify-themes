@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Gill Sans", sans-serif;
+    src: url("resources/fonts/GillSansC.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+body {
+    font-family: "Gill Sans",sans-serif,spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+    font-family: var(font-family);
+    letter-spacing: normal;
+}
