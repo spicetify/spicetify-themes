@@ -138,3 +138,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png) | ![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png) |
 | :-: | :-: |
 | Dark | Light |
+
+#### Rose Pine
+| ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
+| :-: | :-: |
+| Moon | Dawn |
