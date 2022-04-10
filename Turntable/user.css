@@ -402,10 +402,10 @@
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground,
   .main-trackCreditsModal-container {
-    transform: scale(1.2)
+    transform: scale(1.2) !important
   }
 
-  .song-preview > span {
+  .song-preview > button {
     font-size: 16px
   }
 }
