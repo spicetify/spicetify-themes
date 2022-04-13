@@ -292,9 +292,10 @@ window.addEventListener("load", rotateTurntable = () => {
   fadBtn.addEventListener("click", () => {
     const fullAppDisplay = document.querySelector("#full-app-display");
 
+    fullAppDisplay.appendChild(songPreviewContainer);
+
     if (!clickedFadBtn) {
       if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
-      fullAppDisplay.appendChild(songPreviewContainer);
 
       handleFadControl();
 
