@@ -24,6 +24,10 @@
 ![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png)
 ### Red Light
 ![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png)
+### Rose Pine Moon
+![Playlists](screenshots/rose-pine-moon.jpg)
+### Rose Pine Dawn
+![Playlists](screenshots/rose-pine-dawn.jpg)
 
 ## More
 Inspired by the [Zorin GTK theme](https://github.com/ZorinOS/zorin-desktop-themes) and [spot](https://github.com/xou816/spot)

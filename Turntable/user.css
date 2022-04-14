@@ -2,14 +2,14 @@
   --spotify-main-color: #1db954;
   --round-value: 50%;
   --main-blur-backdrop: blur(20px) saturate(180%);
-  --shine:
-    conic-gradient(
-      from 15deg,
-      transparent, #222 45deg, transparent 90deg,
-      transparent 90deg 180deg,
-      transparent 180deg, #222 225deg, transparent 270deg,
-      transparent 270deg 360deg
-    )
+  --shine: conic-gradient(
+    from 15deg,
+    transparent,
+    #222 45deg,
+    transparent 90deg 180deg,
+    #222 225deg,
+    transparent 270deg 360deg
+  )
 }
 
 
@@ -350,7 +350,9 @@
 .fad-heart {
   width: 16px;
   height: 16px;
-  padding: unset !important
+  padding: unset !important;
+  background-color: unset;
+  border: unset
 }
 
 .fad-heart svg {
@@ -375,7 +377,9 @@
 
 .song-preview > button {
   font-size: 14px;
-  color: #ccc !important
+  color: #ccc !important;
+  background-color: unset;
+  border: unset
 }
 
 .song-preview > button:hover {
@@ -398,10 +402,10 @@
 @media (min-width: 1460px) and (min-height: 960px) {
   #fad-foreground,
   .main-trackCreditsModal-container {
-    transform: scale(1.2)
+    transform: scale(1.2) !important
   }
 
-  .song-preview > span {
+  .song-preview > button {
     font-size: 16px
   }
 }
