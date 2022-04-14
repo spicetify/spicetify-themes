@@ -16,47 +16,38 @@ jobs:
             [
               {
                 "keywords": ["BurntSienna"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["pjaspinski"]
               },
               {
                 "keywords": ["Default"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["Blacksuan19"]
               },
               {
                 "keywords": ["Dreary"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["CharlieS1103"]
               },
               {
                 "keywords": ["Dribbblish"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["khanhas"]
               },
               {
                 "keywords": ["Glaze"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["CharlieS1103"]
               },
               {
                 "keywords": ["Onepunch"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["okarin001"]
               },
               {
                 "keywords": ["Sleek"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["harbassan"]
               },
               {
                 "keywords": ["Turntable"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["grasonchan"]
               },
               {
                 "keywords": ["Ziro"],
-                "labels": ["🙋 help wanted"],
                 "assignees": ["schnensch0"]
               }
             ]
