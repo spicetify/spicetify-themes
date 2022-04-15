@@ -49,6 +49,10 @@ jobs:
               {
                 "keywords": ["Ziro"],
                 "assignees": ["schnensch0"]
+              },
+              {
+                "keywords": ["Bloom"],
+                "assignees": ["nimsandu"]
               }
             ]
           github-token: "${{ secrets.GITHUB_TOKEN }}"
