@@ -1,5 +1,7 @@
 /* Glaze Theme*/
-
+#main{
+    background-color: var(--spice-main);
+}
 
 
 .main-trackList-playingIcon {
@@ -7,9 +9,8 @@
     background: var(--spice-text);
     content-visibility: hidden;
 }
-.main-topBar-UpgradeButton{
-    display:none !important;
-}
+
+/* Sidebar changes*/
 .main-yourEpisodesButton-yourEpisodesIcon { 
     background: var(--spice-text); 
     } 
@@ -18,13 +19,6 @@
     }
 .main-rootlist-rootlistDivider, .main-rootlist-rootlistDividerContainer{
     visibility: hidden !important;
-}
-
-div.main-cardImage-imageWrapper.main-cardImage-roundedCorners > div > div > svg > path {
-    color: blue;
-    background-color: blue;
-    fill: var(--spice-sidebar);
-    opacity: 0.7;
 }
 
 .main-yourEpisodes-coverContainer{
@@ -43,16 +37,7 @@ background-color: var(--spice-text);
     background: var(--spice-text);
 }
 
-.main-leaderboardComponent-container{
-  display: none;
-}
-.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer{
-  display: none !important;
-}
-.main-yourEpisodesButton-yourEpisodesIcon path {
-    fill: var(--spice-sidebar);
 
-}
 #spicetify-show-list{
     width:90%;
     margin-right: 1px;
@@ -81,8 +66,8 @@ background-color: var(--spice-text);
     width:0px !important;
     padding: 0x !important;
     margin:0px !important;
-    border-top: var(--spice-selected-row)solid 1px;
-    border-bottom: var(--spice-selected-row)solid 1px;
+    border-top: var(--spice-selected-row) solid 1px;
+    border-bottom: var(--spice-selected-row) solid 1px;
 }
 #spicetify-show-list > div > a > span, #spicetify-show-list > div.GlueDropTarget.GlueDropTarget--albums.GlueDropTarget--tracks.GlueDropTarget--local-tracks.GlueDropTarget--episodes.personal-library > button > span{
     display: none;
@@ -114,7 +99,16 @@ span.main-createPlaylistButton-text.standalone-ellipsis-one-line.main-type-mesto
 #spicetify-show-list > div > a > div.main-collectionLinkButton-icon > div, .main-createPlaylistButton-createPlaylistIcon {
     width:30px;
     height:30px;
+    background: var(--spice-text);
+    color: var(--spice-sidebar)
 }
+.main-shuffleButton-button.pp1ooFGqFEUG5ucC6_KW, .main-repeatButton-button.yKo7LWUCQCEALszRxAaS {
+    color: var(--spice-button);
+}
+.main-skipBackButton-button, .main-skipForwardButton-button{
+        color: var(--spice-subtext);
+}
+
 #spicetify-show-list > div:nth-child(9) {
     padding-right: 1100px;
 }
@@ -126,7 +120,7 @@ width:20px !important;
 height:20px !important;
 }
 #spicetify-show-list > li:nth-child(3){
-	border-bottom: var(--spice-selected-row)solid 1px;
+	border-bottom: var(--spice-selected-row) solid 1px;
 }
 .main-card-card {
     background: var(--spice-card);
@@ -150,14 +144,21 @@ height:20px !important;
     background-color:unset !important;
     }
 /* Playback bar and controls*/
-.playback-bar {
+.main-nowPlayingBar-nowPlayingBar {
     width: 100%;
-    bottom: 83px;
+    bottom: 0%;
     position: absolute;
     left: -1px;
+    background-color: var(--spice-player);
     z-index: 1;
+    padding-left:0px;
 }
-.playback-bar__progress-time-elapsed.main-type-finale,.main-playbackBarRemainingTime-container {
+.playback-bar{
+    position:absolute;
+    width:100%;
+    top:5%;
+}
+.main-playbackBarRemainingTime-container, .playback-bar__progress-time-elapsed {
     display: none;
 }
 .main-nowPlayingBar-left {
@@ -213,11 +214,18 @@ height:20px !important;
 .epWhU7hHGktzlO_dop6z{
     background-color: var(--spice-text);
 }
+.main-playPauseButton-button[disabled] {
+    background-color: unset !important;
+}
 /*Hide things and general cleanup */
 nav.Root__nav-bar {
     min-width: 200px !important;
     max-width: 235px;
     border-right: 1px solid var(--spice-selected-row);
+    background-color: var(--spice-sidebar);
+}
+.x-toggle-indicatorWrapper {
+    background-color: var(--spice-button-disabled) !important;
 }
 .os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-horizontal {
 
@@ -232,4 +240,48 @@ nav.Root__nav-bar {
 }
 .main-trackList-trackListHeader{
 	position: unset !important;
+}
+div.main-cardImage-imageWrapper.main-cardImage-roundedCorners > div > div > svg > path {
+    color: blue;
+    background-color: blue;
+    fill: var(--spice-sidebar);
+    opacity: 0.7;
+}
+/* Block ads */
+.main-leaderboardComponent-container{
+  display: none;
+}
+.desktoproutes-homepage-takeover-ad-hptoComponent-parentContainer{
+  display: none !important;
+}
+.main-yourEpisodesButton-yourEpisodesIcon path {
+    fill: var(--spice-sidebar);
+}
+.main-topBar-UpgradeButton{
+    display:none !important;
+}
+/* Modal changes*/
+.main-trackCreditsModal-container {
+background-color:var(--spice-misc);
+}
+/*Notification Changes*/
+.main-notificationBubble-NotificationBubble {
+    color: var(--spice-main) !important;
+}
+/* Fixes same color on button and button text in some scenarios(Especially on modals)*/
+.main-button-primary{
+    color:var(--spice-subtext)
+}
+/* Fix progress bar displacement on playing on another device popup*/
+.main-connectBar-connectBar {
+    overflow: visible !important;
+    --triangle-position: 147px !important;
+    align-items: unset !important;
+    height: 0px !important;
+    position: absolute !important;
+    left: 80% !important;
+    display: flex !important;
+    bottom: 2% !important;
+    padding: unset !important;
+
 }
