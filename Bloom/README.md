@@ -7,7 +7,7 @@
   <h2>please star and help to shape the future by commenting</h2>
  </dev>
 
-![dark-1](https://github.com/nimsandu/Fluent-Spicetify/blob/main/Dark-1.png)
+![dark-1](https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/Dark-1.png)
 
 
 <br>
