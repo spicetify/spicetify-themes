@@ -102,5 +102,21 @@
                 "url": "https://github.com/schnensch0"
             }
         ]
-    }
+    },
+    {
+    "name": "Bloom",
+    "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
+    "preview": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/Dark-1.png",
+    "readme": "README.md",
+    "usercss": "user.css",
+    "schemes": "color.ini",
+    "include": ["https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/bloom.js"],
+    "branch": "main",
+    "authors": [
+        {
+            "name": "nimsandu",
+            "url": "https://github.com/nimsandu"
+        }
+    ]
+} 
 ]
