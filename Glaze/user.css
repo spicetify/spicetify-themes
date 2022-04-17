@@ -146,10 +146,17 @@ height:20px !important;
 /* Playback bar and controls*/
 .main-nowPlayingBar-nowPlayingBar {
     width: 100%;
-    bottom: 83px;
+    bottom: 0%;
     position: absolute;
     left: -1px;
+    background-color: var(--spice-player);
     z-index: 1;
+    padding-left:0px;
+}
+.playback-bar{
+    position:absolute;
+    width:100%;
+    top:5%;
 }
 .main-playbackBarRemainingTime-container, .playback-bar__progress-time-elapsed {
     display: none;
