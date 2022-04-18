@@ -110,7 +110,7 @@
     "readme": "README.md",
     "usercss": "user.css",
     "schemes": "color.ini",
-    "include": ["https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/bloom.js"],
+    "include": ["https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"],
     "branch": "main",
     "authors": [
         {
