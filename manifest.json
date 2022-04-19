@@ -107,9 +107,9 @@
     "name": "Bloom",
     "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
     "preview": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/Dark-1.png",
-    "readme": "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/README.md",
-    "usercss": "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/user.css",
-    "schemes": "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/color.ini",
+    "readme": "Bloom/README.md",
+    "usercss": "Bloom/user.css",
+    "schemes": "Bloom/color.ini",
     "include": ["https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"],
     "branch": "master",
     "authors": [
