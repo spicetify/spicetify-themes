@@ -24,13 +24,13 @@
 ### Windows (PowerShell)
 
 ```powershell
-Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/nimsandu/Fluent-Spotify/install.ps1" | Invoke-Expression
+Invoke-WebRequest -UseBasicParsing "https://github.com/spicetify/spicetify-themes/blob/7887bbf8768062aa5b719a32d81f0851bf48056c/Bloom/install.ps1" | Invoke-Expression
 ```
 
 ### Linux/macOS (Bash)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nimsandu/Fluent-Spotify/install.sh | sh
+curl -fsSL https://github.com/spicetify/spicetify-themes/blob/7887bbf8768062aa5b719a32d81f0851bf48056c/Bloom/install.sh | sh
 ```
 
 ### OR DOWNLOAD Release script (powershell or shell) and run on your machine
@@ -57,7 +57,7 @@ xpui.js_repl_8008 = ,${1}56,
 apply the theme using these commands
 
 ```
-spicetify current_theme Bloom
+spicetify config current_theme Bloom
 spicetify config color_scheme dark
 spicetify apply
 ```
@@ -70,6 +70,8 @@ spicetify apply
 
 ## Credits
 special thanks and the concept belongs to williamckha
+@williamckha thanx sir
+Another Huge Thanx For @dilith (milkgod)
 customized the theme by williamckha (https://github.com/williamckha/spicetify-fluent)
 Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https://github.com/schnensch0)  
 [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) by Microsoft Corporation  
