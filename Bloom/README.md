@@ -70,6 +70,7 @@ spicetify apply
 
 ## Credits
 special thanks and the concept belongs to williamckha
+ANOTHER HUGE THANX FOR @DILITH (MILKGOD)
 customized the theme by williamckha (https://github.com/williamckha/spicetify-fluent)
 Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https://github.com/schnensch0)  
 [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) by Microsoft Corporation  
