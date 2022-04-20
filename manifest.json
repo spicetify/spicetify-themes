@@ -91,8 +91,8 @@
 	},
 	{
 		"name": "Ziro",
-		"description": "Ziro",
-		"preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png",
+		"description": "a smooth theme inspired by zorin os",
+		"preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.pngg",
 		"readme": "Ziro/README.md",
 		"usercss": "Ziro/user.css",
 		"schemes": "Ziro/color.ini",
