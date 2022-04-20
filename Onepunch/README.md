@@ -43,4 +43,4 @@ A simple gruvified spotify theme.
 
 ### Contact
 
-Go **[here](https://github.com/okarin001/Onepunch/issues)** and *check/create* an issue in case you face any probelm.
+Go **[here](https://github.com/okarin001/Onepunch/issues)** and *check/create* an issue in case you face any problem.
