@@ -45,17 +45,23 @@
   background: var(--spice-button-disabled);
 }
 .main-rootlist-rootlistItem {
-  padding: 0 8px;
+  padding: 0 8px 0 calc(8px + var(--indentation) * 8px);
 }
 .main-rootlist-rootlistItemLink {
   padding: 0 16px;
 }
-.main-rootlist-statusIcons {
+.main-rootlist-statusIcons,
+.main-rootlist-expandArrow {
   position: absolute;
   top: 10px;
   right: 24px;
 }
-.main-rootlist-rootlistItemLinkActive + .main-rootlist-statusIcons .main-playButton-button {
+.main-rootlist-expandArrow {
+  top: 8px;
+  color: var(--spice-subtext);
+}
+.main-rootlist-rootlistItemLinkActive + .main-rootlist-statusIcons .main-rootlist-playButton,
+.main-rootlist-rootlistItemLinkActive + .main-rootlist-expandArrow {
   color: var(--spice-shadow) !important;
 }
 .main-navBar-navBarLink {
@@ -64,6 +70,9 @@
 .main-collectionLinkButton-collectionLinkButton > *,
 .main-createPlaylistButton-button {
   opacity: 1 !important;
+}
+.main-rootlist-rootlist .os-scrollbar {
+  padding: 0 0 0 8px;
 }
 /* player */
 .main-nowPlayingBar-center .playback-progressbar {
@@ -319,6 +328,7 @@
 }
 .GenericModal > * {
   background-color: var(--spice-main) !important;
+  color: var(--spice-text);
 }
 .GenericModal,
 .GenericModal > * {
@@ -487,13 +497,10 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 .lyrics-lyricsContainer-LyricsBackground {
   background-image: none;
 }
-.K8PtC1Way9XetxDGwCGx,
-.jixVGx {
+.jixVGx,
+.euRuBv {
   color: var(--spice-text);
 }
 .XmR5VFpqXOcxRvhuf6OB {
   border-radius: var(--br-1);
-}
-.euRuBv {
-  color: var(--spice-text);
 }
