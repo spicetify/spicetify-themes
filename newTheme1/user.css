@@ -38,7 +38,7 @@
 }
 
 .main-card-card:hover {
-    backgroud-color: ffece0;
+    background-image: linear-gradient(#ffece0, #ffece0);
     border-radius: 10px;
 }
 
