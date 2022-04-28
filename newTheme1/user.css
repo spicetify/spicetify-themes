@@ -24,7 +24,9 @@
     border-radius: var(--border-radius-2);
     color: var(--spice-text);
 }
-
+.main-addButton-active, .main-addButton-active:focus, .main-addButton-active:hover {
+     color: #EBAF98FF;
+}
 /* menus */
 .Z35BWOA10YGn5uc9YgAp {
     /*background-image: linear-gradient(var(--spice-gradientTop), var(--spice-gradientBottom));*/
