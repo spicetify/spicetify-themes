@@ -54,6 +54,15 @@
     color: var(--spice-text) !important;
 }
 
+/*tracklist*/
+.main-trackList-trackListRow {
+    border-radius: var(--border-radius-2);
+}
+.main-trackList-trackListRow:hover {
+    background-color: #ebaf98;
+
+}
+
 /* remove gradients */
 .main-home-homeHeader, .main-actionBarBackground-background {
     background-image: none;
