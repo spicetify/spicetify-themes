@@ -176,6 +176,15 @@ player-controls__left {
     margin-bottom: 10px;
     padding: 10px;
 }
+
+/*button*/
+.encore-dark-theme .encore-bright-accent-set {
+    --background-base: var(--spice-button-active);
+    --background-highlight: #ebaf98;
+    --background-press: #ebaf98;
+    --decorative-subdued: #ebaf98;
+}
+
 /*.main-navBar-entryPoints{*/
 /*    background-color: var(--spice-main) !important;*/
 /*}*/
