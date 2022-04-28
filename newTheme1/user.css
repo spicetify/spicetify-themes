@@ -90,7 +90,7 @@
     align-items: center;
 }
 
-.main-buddyFeed-buddyFeedRoot {
+.ythYrlFSBm1P_ltHc8e1, .aUdGtzUFX8HhUq5AdHcE, .main-buddyFeed-buddyFeedRoot {
     display: none;
 }
 
@@ -178,6 +178,7 @@ player-controls__left {
     align-items: center;
     padding: 10px;
     height: 100%;
+    background-image: linear-gradient(#ebaf98, #f5d4b7);
 }
 
 .main-nowPlayingBar-right,
