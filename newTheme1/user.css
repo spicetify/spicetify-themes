@@ -1,0 +1,117 @@
+.Re403AJffPPuZmX7LRJj {
+    margin-left: 50px; 
+    margin-right: 50px;
+}
+
+.vUzb9hvfXJN11OcnaszM .Re403AJffPPuZmX7LRJj {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 40px;
+    /*color: var(--lyrics-color-background);*/
+}
+
+/* category sidebar */
+.EKdvOmPl7kNCDg_yuma8, .AEfhRyqGa3vzQrgfdwWE .Re403AJffPPuZmX7LRJj {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 40px;
+    /*color: var(--lyrics-color-background);*/
+}
+/* buttons */
+.main-navBar-navBarLink {
+    border-radius: var(--border-radius-2);
+    color: var(--spice-text);
+  }
+
+/* menus */
+.Z35BWOA10YGn5uc9YgAp {
+    /*background-image: linear-gradient(var(--spice-gradientTop), var(--spice-gradientBottom));*/
+    background-image: linear-gradient(#ebaf98, #f5d4b7);
+    border-radius: 10px;
+}
+
+.main-card-card {
+    background-image: linear-gradient(#ebaf98, #f5d4b7);
+    border-radius: 10px;
+}
+
+.main-card-card:hover {
+    backgroud-color: ffece0;
+    border-radius: 10px;
+}
+
+.main-contextMenu-menuItemButton, .main-userWidget-dropDownMenuItemButton {
+    /*border-radius: var(--border-radius-2);*/
+    color: var(--spice-text);
+    height: 32px;
+    padding-left: 8px;
+}
+
+#spicetify-home-config button:disabled, #spicetify-sidebar-config button:disabled {
+    /*background-color: var(--spice-button-disabled) !important;*/
+    color: var(--spice-text) !important;
+}
+
+/* remove gradients */
+.main-home-homeHeader, .main-actionBarBackground-background {
+    background-image: none;
+}
+.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background, .main-topBar-overlay, .x-entityHeader-overlay, .x-actionBarBackground-background, ._UFTK833WfTNGb4agRTd, .Ic3iDUCnC09k55peZBfC {
+    background-color: var(--spice-main) !important;
+}
+.x-actionBarBackground-background, .x-entityHeader-overlay, .Ic3iDUCnC09k55peZBfC, ._UFTK833WfTNGb4agRTd {
+    background-image: none !important;
+}
+.main-entityHeader-backgroundColor {
+    background: var(--spice-main);
+}
+
+/*.main-navBar-entryPoints{*/
+/*    background-color: var(--spice-main) !important;*/
+/*}*/
+
+/*.os-content, .os-content>.os-textarea {*/
+/*    background-color: var(--spice-main) !important;*/
+/*}*/
+
+
+/*.main-actionBarBackground-background, .main-home-homeHeader, .main-topBar-background, .main-topBar-overlay, .x-entityHeader-overlay, .x-actionBarBackground-background, ._UFTK833WfTNGb4agRTd, .Ic3iDUCnC09k55peZBfC {*/
+/*    background-color: var(--spice-main) !important;*/
+/*}*/
+
+/*.main-entityHeader-backgroundColor {*/
+/*    background: var(--spice-main);*/
+/*}*/
+
+/*.main-entityHeader-backgroundColor {*/
+/*    background: var(--spice-main);*/
+/*}*/
+
+/*.main-topBar-button, .main-userWidget-box {*/
+/*    background-color: var(--spice-main) !important;*/
+/*}*/
+
+/*.main-trackCreditsModal-container, .main-aboutRecsModal-container, .main-playlistEditDetailsModal-container, .profile-userEditDetails-container, .artist-artistAbout-modal {*/
+/*    background-color: var(--spice-main) !important;*/
+/*}*/
+
+/*.main-buddyFeed-addFriendsContainer {*/
+/*    background-color: var(--spice-main);*/
+/*}*/
+
+/* .main-playPauseButton-button {
+    background-color: var(--lyrics-color-background);
+    color: var(--lyrics-color-background);
+    transition-duration: 0.15s !important;
+  } */
+
+/* .main-topBar-background {
+    background-color: unset !important;
+  }
+  
+  /* resize play-button on topbar */
+  /* .main-topBar-overlay {
+    background-color: var(--lyrics-color-background);
+  } */ 
