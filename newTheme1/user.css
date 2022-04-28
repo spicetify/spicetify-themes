@@ -50,7 +50,18 @@
     height: 32px;
     padding-left: 8px;
 }
-
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader {
+    background: transparent;
+    -webkit-box-shadow: 0 -1px 0 0 var(--spice-player);
+    box-shadow: 0 -1px 0 0 var(--spice-player);
+}
+.main-trackList-trackListHeaderStuck .main-trackList-trackListHeaderRow {
+    border-bottom: 1px solid transparent;
+    background: var(--spice-main);
+}
+.G1W6k59msDX3wNFCJ1mb.X1PI4ZcmJchyHhBzbrVI {
+    background: var(--spice-button);
+}
 #spicetify-home-config button:disabled, #spicetify-sidebar-config button:disabled {
     /*background-color: var(--spice-button-disabled) !important;*/
     color: var(--spice-text) !important;
