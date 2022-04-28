@@ -25,7 +25,7 @@
     color: var(--spice-text);
 }
 .main-addButton-active, .main-addButton-active:focus, .main-addButton-active:hover {
-     color: #EBAF98FF;
+    color: #EBAF98FF;
 }
 /* menus */
 .Z35BWOA10YGn5uc9YgAp {
@@ -211,6 +211,15 @@ player-controls__left {
     --decorative-subdued: #ebaf98;
 }
 
+/*tracklist*/
+.main-trackList-trackListRow {
+    border-radius: var(--border-radius-2);
+}
+.main-trackList-trackListRow:hover {
+    background-color: #ebaf98;
+
+}
+
 /*.main-navBar-entryPoints{*/
 /*    background-color: var(--spice-main) !important;*/
 /*}*/
@@ -253,7 +262,7 @@ player-controls__left {
 /* .main-topBar-background {
     background-color: unset !important;
   }
-  
+
   /* resize play-button on topbar */
 /* .main-topBar-overlay {
   background-color: var(--lyrics-color-background);
