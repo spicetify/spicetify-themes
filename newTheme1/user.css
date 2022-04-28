@@ -38,7 +38,7 @@
 }
 
 .main-card-card:hover {
-    backgroud-color: ffece0;
+    background-image: linear-gradient(#ffece0, #ffece0);
     border-radius: 10px;
 }
 
@@ -66,6 +66,14 @@
 }
 .main-entityHeader-backgroundColor {
     background: var(--spice-main);
+}
+
+/*button*/
+.encore-dark-theme .encore-bright-accent-set {
+    background-base: var(--spice-button-active);
+    background-highlight: #e91429;
+    background-press: #169c46;
+    decorative-subdued: #1abc54;
 }
 
 /*.main-navBar-entryPoints{*/
