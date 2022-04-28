@@ -70,6 +70,12 @@
     display: flex;
     padding: 32px;
 }
+.Root__now-playing-bar {
+    background-color: var(--spice-player);
+    grid-area: now-playing-bar;
+    width: 200px;
+    z-index: 4;
+}
 .M_Sdhr1fQomXfFpJhlAV.y1_VPBbLK5eyOtpider1 {
     background-color: var(--spice-gradientTop);
     border-bottom: 1px solid rgba(255,255,255,.1);
