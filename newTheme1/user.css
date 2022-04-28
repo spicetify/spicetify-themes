@@ -62,6 +62,18 @@
 .G1W6k59msDX3wNFCJ1mb.X1PI4ZcmJchyHhBzbrVI {
     background: var(--spice-button);
 }
+.Fz5_rAxpenrV3rKWvEE0 {
+    background: -webkit-gradient(linear,left top,left bottom,from(var(--spice-player)),to(var(--spice-main)));
+    background: linear-gradient(var(--spice-button),var(--spice-main));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 32px;
+}
+.M_Sdhr1fQomXfFpJhlAV.y1_VPBbLK5eyOtpider1 {
+    background-color: var(--spice-gradientTop);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
 #spicetify-home-config button:disabled, #spicetify-sidebar-config button:disabled {
     /*background-color: var(--spice-button-disabled) !important;*/
     color: var(--spice-text) !important;
