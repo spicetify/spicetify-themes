@@ -25,7 +25,7 @@
     color: var(--spice-text);
 }
 .main-addButton-active, .main-addButton-active:focus, .main-addButton-active:hover {
-    color: #EBAF98FF;
+    color: var(--spice-player);
 }
 /* menus */
 .Z35BWOA10YGn5uc9YgAp {
@@ -212,9 +212,9 @@ player-controls__left {
 /*button*/
 .encore-dark-theme .encore-bright-accent-set {
     --background-base: var(--spice-button-active);
-    --background-highlight: #ebaf98;
-    --background-press: #ebaf98;
-    --decorative-subdued: #ebaf98;
+    --background-highlight: var(--spice-player);
+    --background-press: var(--spice-player);
+    --decorative-subdued: var(--spice-player);
 }
 
 /*tracklist*/
