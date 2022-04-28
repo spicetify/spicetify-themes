@@ -188,15 +188,6 @@ player-controls__left {
     --decorative-subdued: #ebaf98;
 }
 
-/*tracklist*/
-.main-trackList-trackListRow {
-    border-radius: var(--border-radius-2);
-}
-.main-trackList-trackListRow:hover {
-    background-color: #ebaf98;
-
-}
-
 /*.main-navBar-entryPoints{*/
 /*    background-color: var(--spice-main) !important;*/
 /*}*/
@@ -244,3 +235,12 @@ player-controls__left {
 /* .main-topBar-overlay {
   background-color: var(--lyrics-color-background);
 } */
+
+/*tracklist*/
+.main-trackList-trackListRow {
+    border-radius: var(--border-radius-2);
+}
+.main-trackList-trackListRow:hover {
+    background-color: #ebaf98;
+
+}
