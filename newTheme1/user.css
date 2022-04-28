@@ -225,6 +225,9 @@ player-controls__left {
     background-color: #ebaf98;
 
 }
+.prog-tooltip{
+    display:none;
+}
 
 /*.main-navBar-entryPoints{*/
 /*    background-color: var(--spice-main) !important;*/
