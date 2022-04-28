@@ -3,6 +3,22 @@
     margin-right: 50px;
 }
 
+.VNztd{
+	color: rgb(100,100,100);
+}
+.main-rootlist-rootlistItem:hover{
+	background-color: rgb(150,150,150);
+}
+.main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus,
+.main-navBar-navBarLinkActive:hover, .logo{
+	background-color: #e6cfd7;
+}
+
+.main-navBar-navBar{
+	background-image: linear-gradient(#Eebaf98, #f5d4b7);
+}
+
+
 .vUzb9hvfXJN11OcnaszM .Re403AJffPPuZmX7LRJj {
     font-size: 30px;
     font-weight: 700;
