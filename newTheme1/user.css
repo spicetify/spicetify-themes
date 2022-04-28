@@ -1,5 +1,5 @@
 .Re403AJffPPuZmX7LRJj {
-    margin-left: 50px; 
+    margin-left: 50px;
     margin-right: 50px;
 }
 
@@ -23,8 +23,10 @@
 .main-navBar-navBarLink {
     border-radius: var(--border-radius-2);
     color: var(--spice-text);
-  }
-
+}
+.main-addButton-active, .main-addButton-active:focus, .main-addButton-active:hover {
+     color: #EBAF98FF;
+}
 /* menus */
 .Z35BWOA10YGn5uc9YgAp {
     /*background-image: linear-gradient(var(--spice-gradientTop), var(--spice-gradientBottom));*/
@@ -38,7 +40,7 @@
 }
 
 .main-card-card:hover {
-    backgroud-color: ffece0;
+    background-image: linear-gradient(#ffece0, #ffece0);
     border-radius: 10px;
 }
 
@@ -176,6 +178,15 @@ player-controls__left {
     margin-bottom: 10px;
     padding: 10px;
 }
+
+/*button*/
+.encore-dark-theme .encore-bright-accent-set {
+    --background-base: var(--spice-button-active);
+    --background-highlight: #ebaf98;
+    --background-press: #ebaf98;
+    --decorative-subdued: #ebaf98;
+}
+
 /*.main-navBar-entryPoints{*/
 /*    background-color: var(--spice-main) !important;*/
 /*}*/
@@ -220,6 +231,6 @@ player-controls__left {
   }
   
   /* resize play-button on topbar */
-  /* .main-topBar-overlay {
-    background-color: var(--lyrics-color-background);
-  } */ 
+/* .main-topBar-overlay {
+  background-color: var(--lyrics-color-background);
+} */
