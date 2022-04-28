@@ -167,6 +167,7 @@ player-controls__left {
     align-items: center;
     padding: 10px;
     height: 100%;
+    background-image: linear-gradient(#ebaf98, #f5d4b7);
 }
 
 .main-nowPlayingBar-right,
