@@ -230,17 +230,8 @@ player-controls__left {
 /* .main-topBar-background {
     background-color: unset !important;
   }
-  
+
   /* resize play-button on topbar */
 /* .main-topBar-overlay {
   background-color: var(--lyrics-color-background);
 } */
-
-/*tracklist*/
-.main-trackList-trackListRow {
-    border-radius: var(--border-radius-2);
-}
-.main-trackList-trackListRow:hover {
-    background-color: #ebaf98;
-
-}
