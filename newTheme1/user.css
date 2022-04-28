@@ -11,7 +11,7 @@
 }
 .main-navBar-navBarLinkActive, .main-navBar-navBarLinkActive:focus,
 .main-navBar-navBarLinkActive:hover, .logo{
-	background-color: #e6cfd7;
+	background-color: var(--spice-card-background);
 }
 
 .main-navBar-navBar{
