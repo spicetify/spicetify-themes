@@ -24,7 +24,9 @@
     border-radius: var(--border-radius-2);
     color: var(--spice-text);
 }
-
+.main-addButton-active, .main-addButton-active:focus, .main-addButton-active:hover {
+    color: #EBAF98FF;
+}
 /* menus */
 .Z35BWOA10YGn5uc9YgAp {
     /*background-image: linear-gradient(var(--spice-gradientTop), var(--spice-gradientBottom));*/
@@ -54,15 +56,6 @@
     color: var(--spice-text) !important;
 }
 
-/*tracklist*/
-.main-trackList-trackListRow {
-    border-radius: var(--border-radius-2);
-}
-.main-trackList-trackListRow:hover {
-    background-color: #ebaf98;
-
-}
-
 /* remove gradients */
 .main-home-homeHeader, .main-actionBarBackground-background {
     background-image: none;
@@ -86,7 +79,7 @@
     align-items: center;
 }
 
-.main-buddyFeed-buddyFeedRoot {
+.ythYrlFSBm1P_ltHc8e1, .aUdGtzUFX8HhUq5AdHcE, .main-buddyFeed-buddyFeedRoot {
     display: none;
 }
 
@@ -193,6 +186,15 @@ player-controls__left {
     --background-highlight: #ebaf98;
     --background-press: #ebaf98;
     --decorative-subdued: #ebaf98;
+}
+
+/*tracklist*/
+.main-trackList-trackListRow {
+    border-radius: var(--border-radius-2);
+}
+.main-trackList-trackListRow:hover {
+    background-color: #ebaf98;
+
 }
 
 /*.main-navBar-entryPoints{*/
