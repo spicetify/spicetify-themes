@@ -104,3 +104,11 @@ player-controls__left {
     margin-bottom: 10px;
     padding: 10px;
 }
+
+.playback-progressbar {
+    height: 60px;
+    /* width: 50px; */
+    position: relative;
+    width: 100%;
+    transform: rotate(90deg);
+}
