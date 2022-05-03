@@ -217,30 +217,17 @@ window.addEventListener("load", rotateTurntable = () => {
     setBlurBackdropBtn.addEventListener("click", () => handleBackdrop(fullAppDisplay, setBlurBackdropBtn));
   }
 
-  function handleMainInterface(fromActive, topbarContentFadeIn) {
-    const mainInterface = document.querySelector("#main");
-    const mainPlayBtn = document.querySelector(".main-playButton-PlayButton");
-    const mainTopbarTitle = document.querySelector(".main-entityHeader-topbarTitle");
+  // Todo
+  function handleToggleFad(isActive) {
+    if (isActive) {
+      document.body.append(adModalStyle);
+      return;
+    }
+    
     const billboard = document.querySelector("#view-billboard-ad");
 
-    if (fromActive) {
-      if (!topbarContentFadeIn) {
-        mainPlayBtn?.style.setProperty("opacity", "0", "important");
-        mainTopbarTitle?.style.setProperty("opacity", "0", "important");
-      }
-
-      mainInterface.style.display = "none";
-      document.body.append(adModalStyle);
-    } else {
-      mainInterface.style.display = "block";
-      billboard?.closest(".ReactModalPortal").remove();
-      adModalStyle.remove();
-
-      setTimeout(() => {
-        mainPlayBtn?.style.removeProperty("opacity");
-        mainTopbarTitle?.style.removeProperty("opacity");
-      }, 250);
-    }
+    billboard?.closest(".ReactModalPortal").remove();
+    adModalStyle.remove();
   }
 
   handleRotate("load");
@@ -303,23 +290,23 @@ window.addEventListener("load", rotateTurntable = () => {
   nextSong.addEventListener("dblclick", handleFadBtn);
 
   fadBtn.addEventListener("click", () => {
-    const topbarContentFadeIn = document.querySelector(".main-entityHeader-topbarContentFadeIn");
     const fullAppDisplay = document.querySelector("#full-app-display");
+
+    fullAppDisplay.appendChild(songPreviewContainer);
 
     if (!clickedFadBtn) {
       if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
-      fullAppDisplay.appendChild(songPreviewContainer);
 
       handleFadControl();
 
       fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
 
-      fullAppDisplay.addEventListener("dblclick", () => handleMainInterface());
+      // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
 
       clickedFadBtn = true;
     }
 
-    handleMainInterface("active", topbarContentFadeIn);
+    // handleToggleFad(true);
     handleIcons();
     handleFadHeart();
     handleTracksNamePreview();
