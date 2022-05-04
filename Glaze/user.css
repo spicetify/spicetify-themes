@@ -1,5 +1,7 @@
 /* Glaze Theme*/
 #main{
+    height: 100%;
+    overflow: hidden;
     background-color: var(--spice-main);
 }
 
@@ -131,14 +133,6 @@ height:20px !important;
 .main-card-card:hover{
     background: var(--spice-sidebar);
  }
- .main-userWidget-displayName {
-    display: none;
-}
-.main-userWidget-box {
-    right: 5px;
-    top: 5px;
-    position:fixed;
-}
 .main-home-homeHeader {
     background-image: unset !important;
     background-color:unset !important;
@@ -146,20 +140,17 @@ height:20px !important;
 /* Playback bar and controls*/
 .main-nowPlayingBar-nowPlayingBar {
     width: 100%;
-    bottom: 0%;
+    bottom: -1%;
     position: absolute;
-    left: -1px;
+    left: 0.35%;
     background-color: var(--spice-player);
     z-index: 1;
     padding-left:0px;
 }
 .playback-bar{
     position:absolute;
-    width:100%;
+    width:99%;
     top:5%;
-}
-.main-playbackBarRemainingTime-container, .playback-bar__progress-time-elapsed {
-    display: none;
 }
 .main-nowPlayingBar-left {
     order: 1;
