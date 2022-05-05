@@ -160,3 +160,21 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
 | :-----------------------------------------------: | :-----------------------------------------------: |
 |                       Moon                        |                       Dawn                        |
+
+
+## Flow
+
+#### Ocean
+<img src="https://raw.githubusercontent.com/ossd-sp22/spicetify-themes/newTheme/Flow/screenshots/ocean.png" alt="img"> 
+
+
+#### Pink
+<img src="https://raw.githubusercontent.com/ossd-sp22/spicetify-themes/newTheme/Flow/screenshots/pink.png" alt="img"> 
+
+
+#### Silver
+<img src="https://github.com/ossd-sp22/spicetify-themes/blob/newTheme/Flow/screenshots/silver.png" alt="img"> 
+
+
+#### Violet
+<img src="https://raw.githubusercontent.com/ossd-sp22/spicetify-themes/newTheme/Flow/screenshots/violet.png" alt="img"> 
