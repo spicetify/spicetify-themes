@@ -53,6 +53,10 @@ jobs:
               {
                 "keywords": ["Bloom"],
                 "assignees": ["nimsandu"]
+              },
+              {
+                "keywords": ["Flow"],
+                "assignees": ["ian-Liaozy", "Ruixi-Zhang"]
               }
             ]
           github-token: "${{ secrets.GITHUB_TOKEN }}"
