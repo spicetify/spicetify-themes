@@ -47,6 +47,11 @@ Simply install the [spicetify-marketplace](https://github.com/spicetify/spicetif
 installation instructions and look for and install the theme from within the Marketplace Button.
 
 ### Important
+After Spotify for Windows 1.1.84.716.gc5f8b819 update
+some fetures are not working properly and we will fix that asap
+please be patition 
+
+### Important
 if you are experiencing bugs after installing theme via marketplace then
 proceed following steps
 1-reset the marketplace by clicking the settings icon on marketplace>scroll all the way down>click [reset marketplace]
@@ -98,6 +103,7 @@ customized the theme by williamckha (https://github.com/williamckha/spicetify-fl
 Based off [Ziro](https://github.com/schnensch0/ziro) theme by [schnensch](https://github.com/schnensch0)  
 [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) by Microsoft Corporation  
 [Phosphor Icons](https://github.com/phosphor-icons/phosphor-icons) by Phosphor Icons
+Another Thanx to @PINPAL for fixes
 
 ## License
 
