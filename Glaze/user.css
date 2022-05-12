@@ -79,6 +79,9 @@ background-color: var(--spice-text);
 span.main-createPlaylistButton-text.standalone-ellipsis-one-line.main-type-mestoBold {
     display: none;
 }
+.main-coverSlotCollapsed-expandButton {
+    display: none;
+}
 .main-createPlaylistButton-button, div.GlueDropTarget.personal-library >*  {
     padding: 0px !important;
   
@@ -134,7 +137,7 @@ height:20px !important;
     background: var(--spice-sidebar);
  }
 .main-home-homeHeader {
-    background-image: unset !important;
+    background: unset !important;
     background-color:unset !important;
     }
 /* Playback bar and controls*/
@@ -175,6 +178,9 @@ height:20px !important;
 
 .main-nowPlayingWidget-nowPlaying {
     justify-content: center;
+}
+.cover-art-image {
+    border-radius: 7.5%;
 }
 
 .main-trackInfo-container > div > div::before,
