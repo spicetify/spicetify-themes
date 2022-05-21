@@ -160,6 +160,11 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
   bottom: auto;
 }
 
+/* hides the gradient color for more minimalistic look on the top of the home page */
+.n87ifzfQlmGX8vkeYGDL {
+    visibility: hidden;
+}
+
 /* round cover art when collapsed */
 .main-coverSlotCollapsed-container .cover-art-image {
   border-radius: 10%;
