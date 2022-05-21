@@ -1,9 +1,0 @@
-name: validate-themes-name
-on: [push, pull_request]
-jobs:
-  validate-themes-name:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: .github/scripts/themes-name-matcher.sh
-      
