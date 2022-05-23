@@ -6,6 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install google/zx
+        run: npm i -g zx
+
       - name: checkout
         uses: actions/checkout@v2
         with:
@@ -13,7 +19,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: generating manifest
-        run: npx zx .github/manifest-generator.mjs
+        run: zx .github/manifest-generator.mjs
 
       - name: push generated manifest
         uses: EndBug/add-and-commit@v9
