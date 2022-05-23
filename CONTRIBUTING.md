@@ -1,65 +1,80 @@
 # Contributing guidelines
 
-Here are the guidelines for contributing to this repository.
+To measure theme popularity, one thing that we must ask of you is that **each one of your themes is developed within a repository of its own**.
 
 ## Before contributing
-
-For avoiding having too many similar themes with small changes, themes are merged only if they bring **sensitive** changes to default Spotify UI and are different from existing themes.
 
 A theme name (as well as color scheme name) should consist of one word starting with an uppercase letter and shouldn't contain `spicetify` or any whitespace in it; if a "-" is present in the name it must be followed by an uppercase letter.
 
 ## How to contribute
 
-If you want to add your theme:
+If you want your theme to show up on **Spicetify Marketplace**, you will need to create a Pull Request to this repository with the following structure:
 
-*   Fork this repository
-*   Create another folder named after your theme name
-*   Create `color.ini` and `user.css` files
-*   Create a `README.md` in it with the following structure
+```
+.
+├── ...
+├── THEME_NAME                  # Folder with your theme name.
+│   ├── screenshots             # Folder with theme screenshots.
+│   ├── manifest.json           # Manifest file with the structure detailed below.
+│   └── README.md               # Readme file with the theme description.
+└── ...
+```
 
-    ```markdown
-    # THEME_NAME
+For this, you'll need:
 
-    ## Screenshots
+1. Fork this repository
+2. Create another folder named after your theme name
+3. Create a `README.md` in it with the following structure
 
-    [Put at least one image per color scheme here]
+   ```markdown
+   # THEME_NAME
 
-    ## More
+   ## Latest Validated Version Support
 
-    [Specify any needed font; (optionally) author name and/or any other info about the theme]
-    ```
-*   Add the theme preview to [THEMES.md](./THEMES.md) (themes are in alphabetical order) following this structure if it has only one color scheme
+   | Spotify  | Spicetify |
+   | -------- | --------- |
+   | `1.1.85` | `2.9.8`   |
 
-    ```markdown
+   <!-- Please validate your theme's compatibility with the latest versions often to avoid theme removal. -->
 
-    ## THEME_NAME
+   ## Screenshots
 
-    [A single image of the theme]
-    ```
+   [Put at least one image per color scheme here]
 
-    If, instead, more than one color scheme is present
+   ## More
 
-    ```markdown
-    ## THEME_NAME
+   [Specify any needed font; (optionally) author name and/or any other info about the theme]
+   ```
 
-    #### COLOR_SCHEME1_NAME 
+4. Add the theme preview to [THEMES.md](./THEMES.md) (themes are in alphabetical order) following this structure if it has only one color scheme:
 
-    [A single image of the theme using the color scheme]
+   ```markdown
+   ## THEME_NAME
 
-    #### COLOR_SCHEME2_NAME
+   [A single image of the theme]
+   ```
 
-    [A single image of the theme using the color scheme]
+   If, instead, more than one color scheme is present:
 
-    ...
-    ```
-*   Commit only once, more details in the **Commit Message**
-*   Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)
+   ```markdown
+   ## THEME_NAME
+
+   |                                         |                                       |
+   | :-------------------------------------: | :-----------------------------------: |
+   | ![light]([THEME]/screenshots/light.png) | ![dark]([THEME]/screenshots/dark.png) |
+   |                  light                  |                 dark                  |
+
+   ...
+   ```
+
+5. Commit only once, more details in the **Commit Message**
+6. Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)
 
 **Thanks to all the contributors.**
 
 ## Commit Message
 
-**NOTE: commit only once when you add a new theme or scheme (you can also commit again later, if you need to).**
+**NOTE: commit only once when you add a new theme or scheme (you can also commit again later if you need to).**
 
 ### Format
 
@@ -69,51 +84,54 @@ If you want to add your theme:
 
 **Any line of the commit message cannot be longer than 100 characters!**
 
-*   **type:** feat | fix | docs | chore
-    *   **feat:** A new theme | A new scheme | A new feature
-    *   **fix:** A bug fix
-    *   **docs:** Change the `README.md` of the theme | Change the `THEMES.md`
-    *   **chore:** Add more screenshots | Change the screentshots | Other things
-*   **scope:** THEMES | `<ThemeName>`
-    *   THEMES is a fixed format: `docs(THEMES)`
-    *   In other cases, use the theme name
-*   **subject:** What changes you have done
-    *   Use the imperative, present tense: "change" not "changed" nor "changes"
-    *   Don't capitalize first letter
-    *   No dot (.) at the end
-*   **body**: More details of your changes, you can mention the most important changes here
+- **type:** feat | fix | docs | chore
+  - **feat:** A new theme | A new scheme | A new feature
+  - **fix:** A bug fix
+  - **docs:** Change the `README.md` of the theme | Change the `THEMES.md`
+  - **chore:** Add more screenshots | Change the screentshots | Other things
+- **scope:** THEMES | `<ThemeName>`
+  - THEMES is a fixed format: `docs(THEMES)`
+  - In other cases, use the theme name
+- **subject:** What changes you have done
+  - Use the imperative, present tense: "change" not "changed" nor "changes"
+  - Don't capitalize the first letter
+  - No dot (.) at the end
+- **body**: More details of your changes, you can mention the most important changes here
 
 ### Example (Turntable theme)
 
-*   feat
+- feat
 
-    ```
-    feat(Turntable): add Turntable theme
-    ```
+  ```
+  feat(Turntable): add Turntable theme
+  ```
 
+  ```
+  feat(Turntable): control the rotation of the turntable
 
-    ```
-    feat(Turntable): control the rotation of the turntable
+  Rotate the turntable by playing state.
+  ```
 
-    Rotate the turntable by playing state.
-    ```
-*   fix
+- fix
 
-    ```
-    fix(Turntable): show the cursor outside the context menu
-    ```
-*   docs
+  ```
+  fix(Turntable): show the cursor outside the context menu
+  ```
 
-    ```
-    docs(Turntable): update README.md
-    ```
+- docs
 
-    ```
-    docs(THEMES): add preview for the Turntable
-    ```
-*   chore
+  ```
+  docs(Turntable): update README.md
+  ```
 
-    ```
-    chore(Turntable): add screenshots of the Turntable
-    ```
-If you want to learn more, view the [Angular - Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
+  ```
+  docs(THEMES): add preview for the Turntable
+  ```
+
+- chore
+
+      ```
+      chore(Turntable): add screenshots of the Turntable
+      ```
+
+  If you want to learn more, view the [Angular - Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
