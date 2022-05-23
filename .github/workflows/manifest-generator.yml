@@ -1,0 +1,27 @@
+on:
+  - pull_request
+  - push
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: install google/zx
+        run: npm i -g zx
+
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: generating manifest
+        run: zx .github/manifest-generator.mjs
+
+      - name: push generated manifest
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'manifest.yml'
+          message: 'chore: update manifest.json'
+          committer_name: GitHub Actions
+          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
