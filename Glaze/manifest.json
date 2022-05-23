@@ -2,7 +2,7 @@
     "name": "Glaze",
     "description": "Glaze",
     "preview": "screenshots/dark.png",
-    "readme": "README.md",
+    "readme": "Glaze/README.md",
     "usercss": "https://github.com/CharlieS1103/Glaze-theme/blob/main/user.css",
     "schemes": "https://github.com/CharlieS1103/Glaze-theme/blob/main/color.ini",
     "authors": [
