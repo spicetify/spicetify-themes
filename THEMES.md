@@ -1,117 +1,73 @@
 # Themes preview
 
-Here you can find a preview of all the themes. Some of them may have different colour schemes (in that case you'll find different entries in the same theme, each one named after the colour scheme).
+Here you can find a preview of all the themes. Some of them may have different color schemes (in that case you'll find different entries in the same theme, each one named after the color scheme).
 
 ## BurntSienna
 
-![BurntSienna Screenshot](BurntSienna/screenshot.png)
+![BurntSienna Screenshot](BurntSienna/screenshots/screenshot.png)
 
 ## Default
 
-![Ocean Screenshot](Default/ocean.png)
+![Ocean Screenshot](Default/screenshots/ocean.png)
 
 ## Dreary
 
-#### BIB
-
-![BIB Screenshot](Dreary/bib.png)
-
-#### Psycho
-
-![Psycho Screenshot](Dreary/psycho.png)
-
-#### Deeper
-
-![Deeper Screenshot](Dreary/deeper.png)
-
-#### Mono
-
-![Mono Screenshot](Dreary/mono.png)
-
-#### Golden
-
-![Golden Screenshot](Dreary/golden.png)
-
-#### Graytone-Blue
-
-![Graytone-blue Sreenshot](Dreary/graytone-blue.png)
+|                                                              |                                                     |
+| :----------------------------------------------------------: | :-------------------------------------------------: |
+|     ![Psycho Screenshot](Dreary/screenshots/psycho.png)      | ![Deeper Screenshot](Dreary/screenshots/deeper.png) |
+|                            Psycho                            |                       Deeper                        |
+|       ![Mono Screenshot](Dreary/screenshots/mono.png)        | ![Golden Screenshot](Dreary/screenshots/golden.png) |
+|                             Mono                             |                       Golden                        |
+| ![Graytone Screenshot](Dreary/screenshots/graytone-blue.png) |    ![BIB Screenshot](Dreary/screenshots/bib.png)    |
+|                           Graytone                           |                         BIB                         |
 
 ## Dribbblish
 
-#### Base
-
-![base](Dribbblish/base.png)
-
-#### White
-
-![white](Dribbblish/white.png)
-
-#### Dark
-
-![dark](Dribbblish/dark.png)
-
-#### Nord-Light
-
-![nord-light](Dribbblish/nord-light.png)
-
-#### Nord-Dark
-
-![nord-dark](Dribbblish/nord-dark.png)
-
-#### Beach-Sunset
-
-![beach-sunset](Dribbblish/beach-sunset.png)
-
-#### Purple
-
-![purple](Dribbblish/purple.png)
-
-#### Samourai
-
-![samourai](Dribbblish/samourai.png)
+|                                                    |                                                          |
+| :------------------------------------------------: | :------------------------------------------------------: |
+|      ![base](Dribbblish/screenshots/base.png)      |        ![white](Dribbblish/screenshots/white.png)        |
+|                        Base                        |                          White                           |
+|      ![dark](Dribbblish/screenshots/dark.png)      | ![beach-sunset](Dribbblish/screenshots/beach-sunset.png) |
+|                        Dark                        |                       Beach-Sunset                       |
+| ![nord-dark](Dribbblish/screenshots/nord-dark.png) |   ![nord-light](Dribbblish/screenshots/nord-light.png)   |
+|                     Nord Dark                      |                        Nord Light                        |
+|    ![purple](Dribbblish/screenshots/purple.png)    |     ![samourai](Dribbblish/screenshots/samourai.png)     |
+|                       Purple                       |                         Samourai                         |
 
 ## Glaze
 
-### Base
-
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/base.png" alt="img" >
-
-### Dark
-
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img" >
-
-### Gray
-
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" >
+|                                     |                                     |
+| :---------------------------------: | :---------------------------------: |
+| ![Base](Glaze/screenshots/base.png) | ![Dark](Glaze/screenshots/dark.png) |
+|                Base                 |                Dark                 |
+| ![Gray](Glaze/screenshots/gray.png) |                                     |
+|                Gray                 |
 
 ## Onepunch
 
-#### Dark
-
-![dark_home](Onepunch/screenshots/dark_home.png)
-
-#### Light
-
-![light_home](Onepunch/screenshots/light_home.png)
+|                                                  |                                                    |
+| :----------------------------------------------: | :------------------------------------------------: |
+| ![dark_home](Onepunch/screenshots/dark_home.png) | ![light_home](Onepunch/screenshots/light_home.png) |
+|                       Dark                       |                       Light                        |
 
 ## Sleek
 
-|                                       |                                     |
-| :-----------------------------------: | :---------------------------------: |
-| ![BladeRunner](Sleek/bladerunner.png) |     ![Cherry](Sleek/cherry.png)     |
-|              BladeRunner              |               Cherry                |
-|       ![Coral](Sleek/coral.png)       |       ![Deep](Sleek/deep.png)       |
-|                 Coral                 |                Deep                 |
-|      ![Deeper](Sleek/deeper.png)      | ![Elementary](Sleek/elementary.png) |
-|                Deeper                 |             Elementary              |
-|      ![Futura](Sleek/futura.png)      |       ![Nord](Sleek/nord.png)       |
-|                Futura                 |                Nord                 |
-|      ![Psycho](Sleek/psycho.png)      | ![UltraBlack](Sleek/ultrablack.png) |
-|                Psycho                 |             UltraBlack              |
-|     ![Wealthy](Sleek/wealthy.png)     |    ![Dracula](Sleek/dracula.png)    |
-|                Wealthy                |               Dracula               |
-|  ![VantaBlack](Sleek/vantablack.png)  |
-|              VantaBlack               |
+|                                                   |                                                 |
+| :-----------------------------------------------: | :---------------------------------------------: |
+| ![BladeRunner](Sleek/screenshots/bladerunner.png) |     ![Cherry](Sleek/screenshots/cherry.png)     |
+|                    BladeRunner                    |                     Cherry                      |
+|       ![Coral](Sleek/screenshots/coral.png)       |       ![Deep](Sleek/screenshots/deep.png)       |
+|                       Coral                       |                      Deep                       |
+|      ![Deeper](Sleek/screenshots/deeper.png)      | ![Elementary](Sleek/screenshots/elementary.png) |
+|                      Deeper                       |                   Elementary                    |
+|      ![Futura](Sleek/screenshots/futura.png)      |       ![Nord](Sleek/screenshots/nord.png)       |
+|                      Futura                       |                      Nord                       |
+|      ![Psycho](Sleek/screenshots/psycho.png)      | ![UltraBlack](Sleek/screenshots/ultrablack.png) |
+|                      Psycho                       |                   UltraBlack                    |
+|     ![Wealthy](Sleek/screenshots/wealthy.png)     |    ![Dracula](Sleek/screenshots/dracula.png)    |
+|                      Wealthy                      |                     Dracula                     |
+|  ![VantaBlack](Sleek/screenshots/vantablack.png)  |
+|                    VantaBlack                     |
 
 ## Turntable
 
@@ -121,39 +77,39 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Blue
 
-| ![Album](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/album-blue-dark.png) | ![Artist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/artist-blue-light.png) |
-| :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
-|                                             Dark                                             |                                              Light                                              |
+| ![Album](Ziro/screenshots/album-blue-dark.png) | ![Artist](Ziro/screenshots/artist-blue-light.png) |
+| :--------------------------------------------: | :-----------------------------------------------: |
+|                      Dark                      |                       Light                       |
 
 #### Gray
 
-| ![Cards](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/cards-gray-dark.png) | ![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-gray-light.png) |
-| :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
-|                                             Dark                                             |                                              Light                                              |
+| ![Cards](Ziro/screenshots/cards-gray-dark.png) | ![Search](Ziro/screenshots/search-gray-light.png) |
+| :--------------------------------------------: | :-----------------------------------------------: |
+|                      Dark                      |                       Light                       |
 
 #### Green
 
-| ![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-dark.png) | ![Podcast](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/podcast-green-light.png) |
-| :-----------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
-|                                               Dark                                                |                                               Light                                                |
+| ![Podcast](Ziro/screenshots/podcast-green-dark.png) | ![Podcast](Ziro/screenshots/podcast-green-light.png) |
+| :-------------------------------------------------: | :--------------------------------------------------: |
+|                        Dark                         |                        Light                         |
 
 #### Orange
 
-| ![Search](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/search-orange-dark.png) | ![Library](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/library-orange-light.png) |
-| :----------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: |
-|                                               Dark                                               |                                                Light                                                |
+| ![Search](Ziro/screenshots/search-orange-dark.png) | ![Library](Ziro/screenshots/library-orange-light.png) |
+| :------------------------------------------------: | :---------------------------------------------------: |
+|                        Dark                        |                         Light                         |
 
 #### Purple
 
-| ![Single](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/single-purple-dark.png) | ![Playlist](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/playlist-purple-light.png) |
-| :----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
-|                                               Dark                                               |                                                 Light                                                 |
+| ![Single](Ziro/screenshots/single-purple-dark.png) | ![Playlist](Ziro/screenshots/playlist-purple-light.png) |
+| :------------------------------------------------: | :-----------------------------------------------------: |
+|                        Dark                        |                          Light                          |
 
 #### Red
 
-| ![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png) | ![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png) |
-| :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
-|                                              Dark                                               |                                            Light                                             |
+| ![Profile](Ziro/screenshots/profile-red-dark.png) | ![Queue](Ziro/screenshots/queue-red-light.png) |
+| :-----------------------------------------------: | :--------------------------------------------: |
+|                       Dark                        |                     Light                      |
 
 #### Rose Pine
 
@@ -161,20 +117,11 @@ Here you can find a preview of all the themes. Some of them may have different c
 | :-----------------------------------------------: | :-----------------------------------------------: |
 |                       Moon                        |                       Dawn                        |
 
-
 ## Flow
 
-#### Ocean
-<img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/ocean.png" alt="img"> 
-
-
-#### Pink
-<img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/pink.png" alt="img"> 
-
-
-#### Silver
-<img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/silver.png" alt="img"> 
-
-
-#### Violet
-<img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/violet.png" alt="img"> 
+|                                        |                                        |
+| :------------------------------------: | :------------------------------------: |
+|  ![Ocean](Flow/screenshots/ocean.png)  |   ![Pink](Flow/screenshots/pink.png)   |
+|                 Ocean                  |                  Pink                  |
+| ![Silver](Flow/screenshots/silver.png) | ![Violet](Flow/screenshots/violet.png) |
+|                 Silver                 |                 Violet                 |
