@@ -48,7 +48,7 @@
     "name": "Dreary",
     "description": "Keep things boxed in and nice looking",
     "preview": "Dreary/deeper.png",
-    "readme": "README.md",
+    "readme": "Dreary/README.md",
     "usercss": "Dreary/user.css",
     "schemes": "Dreary/color.ini",
     "tags": [
@@ -101,8 +101,8 @@
   {
     "name": "Glaze",
     "description": "Glaze",
-    "preview": "screenshots/dark.png",
-    "readme": "README.md",
+    "preview": "Glaze/screenshots/dark.png",
+    "readme": "Glaze/README.md",
     "usercss": "https://github.com/CharlieS1103/Glaze-theme/blob/main/user.css",
     "schemes": "https://github.com/CharlieS1103/Glaze-theme/blob/main/color.ini",
     "authors": [
