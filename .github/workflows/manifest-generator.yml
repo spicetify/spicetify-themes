@@ -9,8 +9,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: install google/zx
-        run: npm i -g zx
 
       - name: checkout
         uses: actions/checkout@v2
@@ -19,7 +17,24 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
 
       - name: generating manifest
-        run: zx ./.github/manifest-generator.mjs
+        env:
+          FORCE_COLOR: 3
+        run: |
+          npx zx <<'EOF'
+          const output = (await $`ls -d */`).stdout.trim();
+
+          cd('.github');
+
+          const final_manifest = await Promise.all(output.split('\n').map(async (dir) => {
+              cd('../' + dir);
+              const theme_manifest = (await $`cat manifest.json`).stdout.trim();
+              return JSON.parse(theme_manifest);
+          }));
+
+          cd('..')
+
+          await $`echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`
+          EOF
 
       - name: push generated manifest
         uses: EndBug/add-and-commit@v9
