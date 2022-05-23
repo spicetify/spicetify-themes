@@ -1,6 +1,10 @@
-# spicetify community themes
+# Spicetify Themes
 
-This is a collection of themes for [spicetify](https://github.com/spicetify/spicetify-cli), a command-line tool to customize Spotify.
+This repository holds the official list of all [Spicetify](https://github.com/spicetify/spicetify-cli) themes, a command-line tool to customize Spotify. If a theme is present here, then it will be present in Spicetify Marketplace.
+
+> *Note*: Due to the development of Spicetify Marketplace, a game-changing addition to the Spicetify ecosystem, we are now shifting towards a more open-source friendly approach to theme development. This means that theme creators should now have the freedom to build their themes in a repository owned by them, rather than a repository owned by Spicetify.
+
+> *Note*: Although in the past this repository held the whole code for themes, we are now simply holding the list of available themes. Think of it as an index of themes, or a Database *of sorts*.
 
 You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
@@ -56,7 +60,7 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 ### Extra
 
 The `_Extra` folder contains additional resources for tweaking the look of
-Spotify. More info in its [README](./\_Extra/README.md).
+Spotify. More info in its [README](./.Extra/README.md).
 
 ## Contributions
 
