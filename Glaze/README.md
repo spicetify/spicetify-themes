@@ -1,21 +1,32 @@
 # Glaze
 
+<p align="center">
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spicetify-2.9.9-eb5a37"></a>
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spotify-1.1.85-1DB954"></a>
+</p>
+
+<!-- Please validate your theme's compatibility with the latest versions often, as we will remove themes that have become unsupported. -->
+
 ## Screenshots
 
 ### Base
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/base.png" alt="img"> 
 
+![](screenshots/base.png)
 
 ### Dark
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/dark.png" alt="img"> 
+
+![](screenshots/dark.png)
 
 ### Gray
-<img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img"> 
+
+![](screenshots/gray.png)
 
 ## Important
-It may be necessary to enable sidebar config in order to make certain aspects of the theme.
+
+It may be necessary to enable sidebar config to make certain aspects of the theme.
 
 ##### To enable: `spicetify config sidebar_config 1`
 
 ## Author
-Made by: https://github.com/CharlieS1103
+
+[CharlieS1103](https://github.com/CharlieS1103)

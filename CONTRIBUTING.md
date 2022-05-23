@@ -29,13 +29,16 @@ For this, you'll need:
    ```markdown
    # THEME_NAME
 
-   ## Latest Validated Version Support
+    <p align="center">
+      <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spicetify-2.9.9-eb5a37"></a>
+      <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spotify-1.1.85-1DB954"></a>
+    </p>
 
-   | Spotify  | Spicetify |
-   | -------- | --------- |
-   | `1.1.85` | `2.9.8`   |
+    <!-- Please validate your theme's compatibility with the latest versions often, as we will remove themes that have become unsupported. -->
 
-   <!-- Please validate your theme's compatibility with the latest versions often to avoid theme removal. -->
+   Description of your theme.
+
+    <!-- Below this line you are open to organizing your theme as you please -->
 
    ## Screenshots
 
@@ -48,24 +51,26 @@ For this, you'll need:
 
 4. Add the theme preview to [THEMES.md](./THEMES.md) (themes are in alphabetical order) following this structure if it has only one color scheme:
 
-   ```markdown
-   ## THEME_NAME
+```markdown
+## THEME_NAME
 
-   [A single image of the theme]
-   ```
+[A single image of the theme]
+```
 
-   If, instead, more than one color scheme is present:
+If, instead, more than one color scheme is present:
 
-   ```markdown
-   ## THEME_NAME
+```markdown
+## THEME_NAME
 
-   |                                         |                                       |
-   | :-------------------------------------: | :-----------------------------------: |
-   | ![light]([THEME]/screenshots/light.png) | ![dark]([THEME]/screenshots/dark.png) |
-   |                  light                  |                 dark                  |
+|                                         |                                       |
+| :-------------------------------------: | :-----------------------------------: |
+| ![light]([THEME]/screenshots/light.png) | ![dark]([THEME]/screenshots/dark.png) |
+|                  light                  |                 dark                  |
 
-   ...
-   ```
+...
+```
+
+> _Note_: All screenshots must be in PNG format and, additionally, must be uploaded to this repository.
 
 5. Commit only once, more details in the **Commit Message**
 6. Open a Pull Request and mention the most important changes you've made to the UI (ignoring the color scheme)

@@ -1,60 +1,67 @@
 # Sleek
 
+<p align="center">
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spicetify-2.9.9-eb5a37"></a>
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spotify-1.1.85-1DB954"></a>
+</p>
+
+<!-- Please validate your theme's compatibility with the latest versions often, as we will remove themes that have become unsupported. -->
+
 ### BladeRunner
 
-![BladeRunner](bladerunner.png)
+![BladeRunner](screenshots/bladerunner.png)
 
 ### Cherry
 
-![Cherry](cherry.png)
+![Cherry](screenshots/cherry.png)
 
 ### Coral
 
-![Coral](coral.png)
+![Coral](screenshots/coral.png)
 
 ### Deep
 
-![Deep](deep.png)
+![Deep](screenshots/deep.png)
 
 ### Deeper
 
-![Deeper](deeper.png)
+![Deeper](screenshots/deeper.png)
 
 ### Elementary
 
-![Elementary](elementary.png)
+![Elementary](screenshots/elementary.png)
 
 ### Futura
 
-![Futura](futura.png)
+![Futura](screenshots/futura.png)
 
 ### Nord
 
-![Nord](nord.png)
+![Nord](screenshots/nord.png)
 
 ### Psycho
 
-![Psycho](psycho.png)
+![Psycho](screenshots/psycho.png)
 
 ### UltraBlack
 
-![UltraBlack](ultrablack.png)
+![UltraBlack](screenshots/ultrablack.png)
 
 ### Wealthy
 
-![Wealthy](wealthy.png)
+![Wealthy](screenshots/wealthy.png)
 
 ### Dracula
 
-![Dracula](dracula.png)
+![Dracula](screenshots/dracula.png)
 
 ### VantaBlack
 
-![VantaBlack](vantablack.png)
+![VantaBlack](screenshots/vantablack.png)
 
 ## Info
 
-A simple, 'sleek' theme that builds upon the basic Spotify UI to create a more stylised experience. Also removes all annoyances from free version, including banner advertisements and upgrade buttons.
+A simple, 'sleek' theme that builds upon the basic Spotify UI to create a more stylized experience. Also removes all annoyances from the free version, including banner advertisements and upgrade buttons.
 
 Created by [@harbassan](https://github.com/harbassan)
 

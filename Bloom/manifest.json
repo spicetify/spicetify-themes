@@ -1,0 +1,17 @@
+{
+    "name": "Bloom",
+    "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
+    "preview": "Bloom/screenshots/Dark-1.png",
+    "readme": "Bloom/README.md",
+    "usercss": "Bloom/user.css",
+    "schemes": "Bloom/color.ini",
+    "include": [
+        "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
+    ],
+    "authors": [
+        {
+            "name": "nimsandu",
+            "url": "https://github.com/nimsandu"
+        }
+    ]
+}

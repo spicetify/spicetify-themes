@@ -1,0 +1,11 @@
+{
+    "name": "Dreary",
+    "description": "Keep things boxed in and nice looking",
+    "preview": "Dreary/deeper.png",
+    "readme": "README.md",
+    "usercss": "Dreary/user.css",
+    "schemes": "Dreary/color.ini",
+    "tags": [
+        "dark"
+    ]
+}

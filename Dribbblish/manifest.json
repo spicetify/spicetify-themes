@@ -1,0 +1,17 @@
+{
+    "name": "Dribbblish",
+    "description": "Dribbblish",
+    "preview": "Dribbblish/base.png",
+    "readme": "Dribbblish/README.md",
+    "usercss": "Dribbblish/user.css",
+    "schemes": "Dribbblish/color.ini",
+    "include": [
+        "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/dribbblish.js"
+    ],
+    "authors": [
+        {
+            "name": "khanhas",
+            "url": "https://github.com/khanhas"
+        }
+    ]
+}

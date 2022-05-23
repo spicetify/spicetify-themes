@@ -1,0 +1,14 @@
+{
+    "name": "Onepunch",
+    "description": "Onepunch",
+    "preview": "Onepunch/screenshots/dark_home.png",
+    "readme": "Onepunch/README.md",
+    "usercss": "Onepunch/user.css",
+    "schemes": "Onepunch/color.ini",
+    "authors": [
+        {
+            "name": "okarin001",
+            "url": "https://github.com/okarin001"
+        }
+    ]
+}

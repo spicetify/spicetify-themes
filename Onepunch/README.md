@@ -1,5 +1,12 @@
 # Onepunch
 
+<p align="center">
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spicetify-2.9.9-eb5a37"></a>
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spotify-1.1.85-1DB954"></a>
+</p>
+
+<!-- Please validate your theme's compatibility with the latest versions often, as we will remove themes that have become unsupported. -->
+
 ## Screenshots
 
 #### Dark
@@ -22,25 +29,23 @@
 
 ### About
 
-A simple gruvified spotify theme.
+A simple groovyfied Spicetify theme.
 
 ### Information
 
-*   To apply this theme:
+- To apply this theme:
 
-    ```shell
-    # for dark theme
-    spicetify config current_theme Onepunch color_scheme dark
-    spicetify apply
+  ```shell
+  # for dark theme
+  spicetify config current_theme Onepunch color_scheme dark
+  spicetify apply
 
-    #for light theme
-    spicetify config current_theme Onepunch color_scheme light
-    spicetify apply
+  #for light theme
+  spicetify config current_theme Onepunch color_scheme light
+  spicetify apply
 
-    ```
-
-*   Tested on macOS only and pretty much everything worked. ﾍ(･\_|
+  ```
 
 ### Contact
 
-Go **[here](https://github.com/okarin001/Onepunch/issues)** and *check/create* an issue in case you face any problem.
+Go **[here](https://github.com/okarin001/Onepunch/issues)** and _check/create_ an issue in case you face any problems.

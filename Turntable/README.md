@@ -1,10 +1,13 @@
 # Turntable
 
-Based on Spotify original theme.
+<p align="center">
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spicetify-2.9.9-eb5a37"></a>
+  <a href="https://github.com/spicetify/spicetify-cli"><img src="https://img.shields.io/badge/Spotify-1.1.85-1DB954"></a>
+</p>
 
-**Note:** Require Spicetify **v2.2.0** or higher! Otherwise, performance problems will happen when the turntable rotate!
+<!-- Please validate your theme's compatibility with the latest versions often, as we will remove themes that have become unsupported. -->
 
-View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/master/CHANGELOG.md).
+Based on Spotify's original theme.
 
 ## Screenshots
 
@@ -18,21 +21,15 @@ View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/m
   <img src="screenshots/fad_vertical.png" alt="full app display - vertical mode">
 </div>
 
-## More
-
-### About Turntable
-
-Use CSS to achieve, not picture. This means it can be scaled to any size, but make sure the album cover is not blurry.
-
-Actually, the rotation of the turntable was created at spicetify v1, but in some cases, animation is affected by other factors. I think "fullAppDisplay.js high GPU usage" is the reason. Fortunately, it's normal now!
-
 ### Info
 
 Designed and developed by [Grason Chan](https://github.com/grasonchan).
 
-The turntable inspired by [Netease Music](https://music.163.com) and [Smartisan OS build-in Music Player](https://www.smartisan.com/os/#/beauty) (not include code).
+The turntable was inspired by [Netease Music](https://music.163.com) and [Smartisan OS build-in Music Player](https://www.smartisan.com/os/#/beauty) (not include code).
 
-Develop and test on macOS. If there's any problem, please open issue or PR.
+**Note:** Require Spicetify **v2.2.0** or higher! Otherwise, performance problems will happen when the turntable rotates!
+
+View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/master/CHANGELOG.md).
 
 ### Installation
 
