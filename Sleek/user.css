@@ -98,6 +98,16 @@ ul.main-navBar-entryPoints > div.GlueDropTarget >*.active {
   background-color: rgba(var(--spice-rgb-button-disabled), 0.8);
 }
 
+/* divider color in sidebar */
+.FBPrcmuqo3yv5UfWSRl5 {
+    background-color: var(--spice-nav-active);
+}
+
+/* gradient shadow in sidebar above playlist */
+.Y8edH1Yjo4xrW_58czQj {
+    display: none !important;
+}
+
 /* add gradient to navbar */
 .Root__nav-bar {
   background-image: linear-gradient(
@@ -264,6 +274,11 @@ p.main-buddyFeed-timestamp.main-type-finale,
 /* hide banner ads */
 .main-leaderboardComponent-container {
   display: none;
+}
+
+/* gradient color on home screen */
+.n87ifzfQlmGX8vkeYGDL {
+    display: none !important;
 }
 
 .WiPggcPDzbwGxoxwLWFf.contentSpacing {
