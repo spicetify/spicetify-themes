@@ -45,4 +45,4 @@ jobs:
           add: 'manifest.json'
           message: 'chore: update manifest.json'
           committer_name: GitHub Actions
-          committer_email: 41898282+github-actions[bot]@users.noreply.github.com
+          committer_email: actions@github.com
