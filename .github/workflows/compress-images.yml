@@ -21,8 +21,8 @@ jobs:
       - name: Compress Images
         uses: calibreapp/image-actions@main
         with:
-          jpegQuality: '70'
+          jpegQuality: '75'
           jpegProgressive: false
-          pngQuality: '70'
-          webpQuality: '70'
+          pngQuality: '75'
+          webpQuality: '75'
           githubToken: ${{ secrets.GITHUB_TOKEN }}
