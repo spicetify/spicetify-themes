@@ -365,7 +365,7 @@
 /* tracklist */
 .main-trackList-trackList .JUa6JJNj7R_Y3i4P8YUX {
   background: var(--spice-card);
-  border-radius: var(--br-1);
+  border-radius: 10px 10px 0px 0px;
   padding: 8px;
 }
 .main-trackList-trackListHeaderRow {
