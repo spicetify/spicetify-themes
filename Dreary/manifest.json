@@ -5,6 +5,12 @@
     "readme": "Dreary/README.md",
     "usercss": "Dreary/user.css",
     "schemes": "Dreary/color.ini",
+    "authors": [
+      {
+        "name": "CharlieS1103",
+        "url": "https://github.com/CharlieS1103"
+      }
+    ],
     "tags": [
         "dark"
     ]
