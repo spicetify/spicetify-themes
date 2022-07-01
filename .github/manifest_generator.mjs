@@ -14,4 +14,4 @@ cd('..')
 
 const cmd = `echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`.replace("$'[", "'[");
 
-await $`${cmd}`;
+await $(cmd);
