@@ -1,22 +1,5 @@
 [
   {
-    "name": "Bloom",
-    "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
-    "preview": "Bloom/screenshots/Dark-1.png",
-    "readme": "Bloom/README.md",
-    "usercss": "Bloom/user.css",
-    "schemes": "Bloom/color.ini",
-    "include": [
-      "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
-    ],
-    "authors": [
-      {
-        "name": "nimsandu",
-        "url": "https://github.com/nimsandu"
-      }
-    ]
-  },
-  {
     "name": "BurntSienna",
     "description": "BurntSienna",
     "preview": "BurntSienna/screenshot.png",
@@ -51,9 +34,13 @@
     "readme": "Dreary/README.md",
     "usercss": "Dreary/user.css",
     "schemes": "Dreary/color.ini",
-    "tags": [
-      "dark"
-    ]
+    "authors": [
+      {
+        "name": "CharlieS1103",
+        "url": "https://github.com/CharlieS1103"
+      }
+    ],
+    "tags": ["dark"]
   },
   {
     "name": "Dribbblish",

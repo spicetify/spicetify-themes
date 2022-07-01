@@ -1,4 +1,4 @@
-name: "Auto Assing on Theme"
+name: 'Auto Assing on Theme'
 on:
   issues:
     types: [opened, edited]
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: Naturalclar/issue-action@v2.0.2
         with:
-          title-or-body: "both"
+          title-or-body: 'both'
           parameters: |
             [
               {
@@ -51,12 +51,8 @@ jobs:
                 "assignees": ["schnensch0"]
               },
               {
-                "keywords": ["Bloom"],
-                "assignees": ["nimsandu"]
-              },
-              {
                 "keywords": ["Flow"],
                 "assignees": ["ian-Liaozy", "Ruixi-Zhang"]
               }
             ]
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
