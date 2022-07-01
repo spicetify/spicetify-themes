@@ -12,4 +12,6 @@ const final_manifest = await Promise.all(output.split('\n').map(async (dir) => {
 
 cd('..')
 
-await $`echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`
+const cmd = `echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`.replace("$'[", "'[");
+
+await $`${cmd}`;

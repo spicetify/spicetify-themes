@@ -36,7 +36,8 @@ jobs:
 
           cd('..')
 
-          await $`echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`
+          const cmd = `echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`.replace("$'[", "'[");
+          await $`${cmd}`;
           EOF
 
       - name: push generated manifest
