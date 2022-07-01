@@ -35,8 +35,8 @@ function waitForElement(els, func, timeout = 100) {
 }
 
 waitForElement([
-    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"]`,
-    `.main-rootlist-rootlistPlaylistsScrollNode ul[tabindex="0"] li`
+    `ul[tabindex="0"]`,
+    `ul[tabindex="0"] .GlueDropTarget--playlists.GlueDropTarget--folders`
 ], ([root, firstItem]) => {
     const listElem = firstItem.parentElement;
     root.classList.add("dribs-playlist-list");
@@ -152,7 +152,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     progBar.append(tooltip);
 
     const progKnob = progBar.querySelector(".progress-bar__slider");
-    
+
     function updateProgTime({ data: e }) {
         const offsetX = progKnob.offsetLeft + progKnob.offsetWidth / 2;
         const maxWidth = progBar.offsetWidth;
