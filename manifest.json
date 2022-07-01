@@ -1,4 +1,4 @@
-[
+$[
   {
     "name": "BurntSienna",
     "description": "BurntSienna",
@@ -40,7 +40,9 @@
         "url": "https://github.com/CharlieS1103"
       }
     ],
-    "tags": ["dark"]
+    "tags": [
+      "dark"
+    ]
   },
   {
     "name": "Dribbblish",
