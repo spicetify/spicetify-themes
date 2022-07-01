@@ -1,5 +1,5 @@
 #!/usr/bin/env zx
-
+import 'zx/globals'
 const output = (await $`ls -d */`).stdout.trim();
 
 cd('.github');
@@ -10,8 +10,6 @@ const final_manifest = await Promise.all(output.split('\n').map(async (dir) => {
     return JSON.parse(theme_manifest);
 }));
 
-cd('..')
+cd('..');
 
-const cmd = `echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`.replace("$'[", "'[");
-
-await $(cmd);
+await $`echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`;
