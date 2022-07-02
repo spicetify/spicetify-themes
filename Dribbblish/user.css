@@ -504,8 +504,8 @@ img.playlist-picture {
 }
 
 .main-rootlist-rootlistItem {
-    padding-left: calc(var(--indentation)*var(--left-sidebar-item-indentation-width));
-    padding-right: 0;
+    padding-left: calc(var(--indentation)*var(--left-sidebar-item-indentation-width)) !important;
+    padding-right: 0 !important;
     transition: padding-left .5s ease;
 }
 
