@@ -9,7 +9,7 @@
 .main-actionBarBackground-background {
   display: none;
 }
-.main-topBar-overlay {
+.main-topBar-overlay, .main-view-container, .Root__nav-bar{
   background-color: var(--spice-main);
 }
 .main-topBar-background {
