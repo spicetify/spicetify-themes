@@ -1,3 +1,7 @@
+.Root {
+  padding-top: 30px;
+}
+
 :root {
     --bar-height: 70px;
     --bar-cover-art-size: 40px;
