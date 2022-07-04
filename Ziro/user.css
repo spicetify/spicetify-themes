@@ -120,13 +120,17 @@
   color: var(--spice-subtext);
   position: absolute;
   margin-bottom: 30px;
-  right: 266px;
-}
-.playback-bar__progress-time-elapsed {
   right: 308px;
 }
+/* playback-bar progress-time-remaining */
+.npFSJSO1wsu3mEEGb5bh {
+  color: var(--spice-subtext);
+  position: absolute;
+  margin-bottom: 30px;
+  right: 266px;
+}
 .playback-bar__progress-time-elapsed::after {
-  content: '  /';
+  content: '  / ';
 }
 .player-controls__buttons {
   margin: 0;
@@ -366,7 +370,7 @@
 /* tracklist */
 .main-trackList-trackList .JUa6JJNj7R_Y3i4P8YUX {
   background: var(--spice-card);
-  border-radius: var(--br-1);
+  border-radius: 10px 10px 0px 0px;
   padding: 8px;
 }
 .main-trackList-trackListHeaderRow {
@@ -504,4 +508,12 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 }
 .XmR5VFpqXOcxRvhuf6OB {
   border-radius: var(--br-1);
+}
+
+.main-rootlist-rootlistDividerContainer {
+  display: none;
+}
+
+.n87ifzfQlmGX8vkeYGDL {
+  display: none;
 }
