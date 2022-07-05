@@ -1,14 +1,14 @@
 {
-    "name": "Ziro",
-    "description": "a smooth theme inspired by zorin os",
-    "preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.png",
-    "readme": "Ziro/README.md",
-    "usercss": "Ziro/user.css",
-    "schemes": "Ziro/color.ini",
-    "authors": [
-        {
-            "name": "schnensch0",
-            "url": "https://github.com/schnensch0"
-        }
-    ]
+	"name": "Ziro",
+	"description": "a smooth theme inspired by zorin os",
+	"preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.png",
+	"readme": "Ziro/README.md",
+	"usercss": "Ziro/user.css",
+	"schemes": "Ziro/color.ini",
+	"authors": [
+		{
+			"name": "schnensch0",
+			"url": "https://github.com/schnensch0"
+		}
+	]
 }

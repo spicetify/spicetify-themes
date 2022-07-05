@@ -1,26 +1,26 @@
 {
-    "name": "Flow",
-    "description": "Spicetify theme that has linear gradient effect and vertical playbar",
-    "preview": "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/pink.png",
-    "readme": "Flow/README.md",
-    "usercss": "Flow/user.css",
-    "schemes": "Flow/color.ini",
-    "authors": [
-        {
-            "name": "Ian Liao",
-            "url": "https://github.com/ian-Liaozy"
-        },
-        {
-            "name": "Victoria Zhang",
-            "url": "https://github.com/Ruixi-Zhang"
-        },
-        {
-            "name": "Yu Sung Lee",
-            "url": "https://github.com/yslDevelop"
-        },
-        {
-            "name": "Alex Casieri",
-            "url": "https://github.com/alexcasieri30"
-        }
-    ]
+	"name": "Flow",
+	"description": "Spicetify theme that has linear gradient effect and vertical playbar",
+	"preview": "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/pink.png",
+	"readme": "Flow/README.md",
+	"usercss": "Flow/user.css",
+	"schemes": "Flow/color.ini",
+	"authors": [
+		{
+			"name": "Ian Liao",
+			"url": "https://github.com/ian-Liaozy"
+		},
+		{
+			"name": "Victoria Zhang",
+			"url": "https://github.com/Ruixi-Zhang"
+		},
+		{
+			"name": "Yu Sung Lee",
+			"url": "https://github.com/yslDevelop"
+		},
+		{
+			"name": "Alex Casieri",
+			"url": "https://github.com/alexcasieri30"
+		}
+	]
 }

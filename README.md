@@ -2,9 +2,9 @@
 
 This repository holds the official list of all [Spicetify](https://github.com/spicetify/spicetify-cli) themes, a command-line tool to customize Spotify. If a theme is present here, then it will be present in Spicetify Marketplace.
 
-> *Note*: Due to the development of Spicetify Marketplace, a game-changing addition to the Spicetify ecosystem, we are now shifting towards a more open-source friendly approach to theme development. This means that theme creators should now have the freedom to build their themes in a repository owned by them, rather than a repository owned by Spicetify.
+> _Note_: Due to the development of Spicetify Marketplace, a game-changing addition to the Spicetify ecosystem, we are now shifting towards a more open-source friendly approach to theme development. This means that theme creators should now have the freedom to build their themes in a repository owned by them, rather than a repository owned by Spicetify.
 
-> *Note*: Although in the past this repository held the whole code for themes, we are now simply holding the list of available themes. Think of it as an index of themes, or a Database *of sorts*.
+> _Note_: Although in the past this repository held the whole code for themes, we are now simply holding the list of available themes. Think of it as an index of themes, or a Database _of sorts_.
 
 You can add your own theme simply by opening a Pull Request (more info in [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
@@ -12,15 +12,16 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
 
 ## Notes:
 
-*   **These themes require that you have the latest version of Spotify and Spicetify.**
-*   **To install Dribbblish and Turntable themes, follow the instructions in their READMEs**.
-*   **Spotify ad-blocked version is not supported.**
+- **These themes require that you have the latest version of Spotify and Spicetify.**
+- **To install Dribbblish and Turntable themes, follow the instructions in their READMEs**.
+- **Spotify ad-blocked version is not supported.**
 
 ## Installation and usage
 
 (If you use Arch Linux you can find this project on the [AUR](https://aur.archlinux.org/packages/spicetify-themes-git/))
 
 1.  Clone this repository. Make sure [git](https://git-scm.com/) is installed and run:
+
     ```bash
     git clone https://github.com/spicetify/spicetify-themes.git
     ```
@@ -76,5 +77,5 @@ If you are unsure about which channel to use, go for Reddit or Discord.
 
 ## Useful resources
 
-*   [Spicetify theme without free version UI elements (e.g. "Upgrade" button)](https://github.com/Daksh777/SpotifyNoPremium)
-*   [DribbblishDynamic theme for v2](https://github.com/JulienMaille/dribbblish-dynamic-theme)
+- [Spicetify theme without free version UI elements (e.g. "Upgrade" button)](https://github.com/Daksh777/SpotifyNoPremium)
+- [DribbblishDynamic theme for v2](https://github.com/JulienMaille/dribbblish-dynamic-theme)

@@ -1,17 +1,15 @@
 {
-    "name": "Turntable",
-    "description": "Turntable",
-    "preview": "Turntable/screenshots/turntable.png",
-    "readme": "Turntable/README.md",
-    "usercss": "Turntable/user.css",
-    "schemes": "Turntable/color.ini",
-    "include": [
-        "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/turntable.js"
-    ],
-    "authors": [
-        {
-            "name": "Grason Chan",
-            "url": "https://github.com/grasonchan"
-        }
-    ]
+	"name": "Turntable",
+	"description": "Turntable",
+	"preview": "Turntable/screenshots/turntable.png",
+	"readme": "Turntable/README.md",
+	"usercss": "Turntable/user.css",
+	"schemes": "Turntable/color.ini",
+	"include": ["https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/turntable.js"],
+	"authors": [
+		{
+			"name": "Grason Chan",
+			"url": "https://github.com/grasonchan"
+		}
+	]
 }

@@ -1,14 +1,14 @@
 {
-    "name": "Default",
-    "description": "Default",
-    "preview": "Default/ocean.png",
-    "readme": "Default/README.md",
-    "usercss": "Default/user.css",
-    "schemes": "Default/color.ini",
-    "authors": [
-        {
-            "name": "Blacksuan19",
-            "url": "https://github.com/Blacksuan19"
-        }
-    ]
+	"name": "Default",
+	"description": "Default",
+	"preview": "Default/ocean.png",
+	"readme": "Default/README.md",
+	"usercss": "Default/user.css",
+	"schemes": "Default/color.ini",
+	"authors": [
+		{
+			"name": "Blacksuan19",
+			"url": "https://github.com/Blacksuan19"
+		}
+	]
 }
