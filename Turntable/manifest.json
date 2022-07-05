@@ -5,7 +5,9 @@
 	"readme": "Turntable/README.md",
 	"usercss": "Turntable/user.css",
 	"schemes": "Turntable/color.ini",
-	"include": ["https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/turntable.js"],
+	"include": [
+		"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/turntable.js"
+	],
 	"authors": [
 		{
 			"name": "Grason Chan",

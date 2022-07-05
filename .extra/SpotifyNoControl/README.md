@@ -15,7 +15,7 @@ Moreover, by default, Spotify adjusted sidebar items and profile menu icon to st
 
 ## Alternatives
 
-If the executable does not work for you, try using 
+If the executable does not work for you, try using
 
 - [AHK implementation](https://github.com/SaifAqqad/AHK_SpotifyNoControl)
 - [julienmaille's implementation](https://github.com/spicetify/spicetify-themes/raw/legacy/Dribbblish/SpotifyNoControl.exe)
