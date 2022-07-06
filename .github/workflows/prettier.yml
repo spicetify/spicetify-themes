@@ -1,7 +1,6 @@
 name: Prettier CI
 
 on:
-  pull_request:
   push:
     branches:
       - main
