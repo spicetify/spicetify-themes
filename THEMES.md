@@ -2,6 +2,10 @@
 
 Here you can find a preview of all the themes. Some of them may have different color schemes (in that case you'll find different entries in the same theme, each one named after the color scheme).
 
+## Bloom
+
+![Bloom Screenshot](Bloom/screenshots/dark.png)
+
 ## BurntSienna
 
 ![BurntSienna Screenshot](BurntSienna/screenshots/screenshot.png)
@@ -42,6 +46,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 |                Base                 |                Dark                 |
 | ![Gray](Glaze/screenshots/gray.png) |                                     |
 |                Gray                 |
+
+## Nord
+
+![Nord Screenshot](Nord/screenshots/screenshot_1.png)
 
 ## Onepunch
 

@@ -1,15 +1,15 @@
 {
-	"name": "Dreary",
-	"description": "Keep things boxed in and nice looking",
-	"preview": "Dreary/screenshots/deeper.png",
-	"readme": "Dreary/README.md",
-	"usercss": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/user.css",
-	"schemes": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/color.ini",
-	"authors": [
-		{
-			"name": "CharlieS1103",
-			"url": "https://github.com/CharlieS1103"
-		}
-	],
-	"tags": ["dark"]
+  "name": "Dreary",
+  "description": "Keep things boxed in and nice looking",
+  "preview": "Dreary/screenshots/deeper.png",
+  "readme": "Dreary/README.md",
+  "usercss": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/user.css",
+  "schemes": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/color.ini",
+  "authors": [
+    {
+      "name": "CharlieS1103",
+      "url": "https://github.com/CharlieS1103"
+    }
+  ],
+  "tags": ["dark"]
 }

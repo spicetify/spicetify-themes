@@ -1,14 +1,14 @@
 {
-	"name": "BurntSienna",
-	"description": "BurntSienna",
-	"preview": "BurntSienna/screenshot.png",
-	"readme": "BurntSienna/README.md",
-	"usercss": "BurntSienna/user.css",
-	"schemes": "BurntSienna/color.ini",
-	"authors": [
-		{
-			"name": "pjaspinski",
-			"url": "https://github.com/pjaspinski"
-		}
-	]
+  "name": "BurntSienna",
+  "description": "BurntSienna",
+  "preview": "BurntSienna/screenshot.png",
+  "readme": "BurntSienna/README.md",
+  "usercss": "BurntSienna/user.css",
+  "schemes": "BurntSienna/color.ini",
+  "authors": [
+    {
+      "name": "pjaspinski",
+      "url": "https://github.com/pjaspinski"
+    }
+  ]
 }

@@ -1,19 +1,19 @@
 {
-	"name": "Bloom",
-	"description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
-	"preview": "Bloom/screenshots/dark.png",
-	"readme": "Bloom/README.md",
-	"usercss": "https://github.com/nimsandu/spicetify-bloom/blob/main/user.css",
-	"schemes": "https://github.com/nimsandu/spicetify-bloom/blob/main/color.ini",
-	"include": [
-		"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
-	],
-	"spotify-version": "1.1.88",
-	"spicetify-version": "2.10.2",
-	"authors": [
-		{
-			"name": "nimsandu",
-			"url": "https://github.com/nimsandu"
-		}
-	]
+  "name": "Bloom",
+  "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
+  "preview": "Bloom/screenshots/dark.png",
+  "readme": "Bloom/README.md",
+  "usercss": "https://github.com/nimsandu/spicetify-bloom/blob/main/user.css",
+  "schemes": "https://github.com/nimsandu/spicetify-bloom/blob/main/color.ini",
+  "include": [
+    "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
+  ],
+  "spotify-version": "1.1.88",
+  "spicetify-version": "2.10.2",
+  "authors": [
+    {
+      "name": "nimsandu",
+      "url": "https://github.com/nimsandu"
+    }
+  ]
 }

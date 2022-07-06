@@ -1,14 +1,14 @@
 {
-	"name": "Sleek",
-	"description": "Sleek",
-	"preview": "Sleek/coral.png",
-	"readme": "Sleek/README.md",
-	"usercss": "Sleek/user.css",
-	"schemes": "Sleek/color.ini",
-	"authors": [
-		{
-			"name": "harbassan",
-			"url": "https://github.com/harbassan"
-		}
-	]
+  "name": "Sleek",
+  "description": "Sleek",
+  "preview": "Sleek/coral.png",
+  "readme": "Sleek/README.md",
+  "usercss": "Sleek/user.css",
+  "schemes": "Sleek/color.ini",
+  "authors": [
+    {
+      "name": "harbassan",
+      "url": "https://github.com/harbassan"
+    }
+  ]
 }
