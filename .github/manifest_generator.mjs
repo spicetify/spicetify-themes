@@ -11,4 +11,4 @@ const final_manifest = await Promise.all(output.split('\n').map(async (dir) => {
 
 cd('..');
 
-await $`echo ${JSON.stringify(final_manifest, null, '\t')} > manifest.json`;
+await $`echo ${JSON.stringify(final_manifest, null, 2)} > manifest.json`;
