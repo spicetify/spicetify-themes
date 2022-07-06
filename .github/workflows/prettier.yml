@@ -18,4 +18,4 @@ jobs:
       - name: Prettify code
         uses: creyD/prettier_action@v4.2
         with:
-          prettier_options: --write **/*.{json,md} --use-tabs
+          prettier_options: --write **/*.{json,md}
