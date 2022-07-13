@@ -28,6 +28,20 @@
 		]
 	},
 	{
+		"name": "Dreary",
+		"description": "Dreary",
+		"preview": "Dreary/deeper.png",
+		"readme": "Dreary/README.md",
+		"usercss": "Dreary/user.css",
+		"schemes": "Dreary/color.ini",
+		"authors": [
+			{
+				"name": "CharlieS1103",
+				"url": "https://github.com/CharlieS1103"
+			}
+		]
+	},
+	{
 		"name": "Dribbblish",
 		"description": "Dribbblish",
 		"preview": "Dribbblish/base.png",
