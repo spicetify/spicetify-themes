@@ -410,8 +410,6 @@ p.main-buddyFeed-timestamp.main-type-finale,
   align-items: center;
   box-sizing: border-box;
   position: relative;
-  left: -40px;
-  top: 50px;
   overflow: hidden;
   overflow-y: scroll;
 }
