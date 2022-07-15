@@ -14,17 +14,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/screenshots/ocean.png)
 
-## Dreary
-
-|                                                              |                                                     |
-| :----------------------------------------------------------: | :-------------------------------------------------: |
-|     ![Psycho Screenshot](Dreary/screenshots/psycho.png)      | ![Deeper Screenshot](Dreary/screenshots/deeper.png) |
-|                            Psycho                            |                       Deeper                        |
-|       ![Mono Screenshot](Dreary/screenshots/mono.png)        | ![Golden Screenshot](Dreary/screenshots/golden.png) |
-|                             Mono                             |                       Golden                        |
-| ![Graytone Screenshot](Dreary/screenshots/graytone-blue.png) |    ![BIB Screenshot](Dreary/screenshots/bib.png)    |
-|                           Graytone                           |                         BIB                         |
-
 ## Dribbblish
 
 |                                                    |                                                          |
@@ -37,6 +26,22 @@ Here you can find a preview of all the themes. Some of them may have different c
 |                     Nord Dark                      |                        Nord Light                        |
 |    ![purple](Dribbblish/screenshots/purple.png)    |     ![samourai](Dribbblish/screenshots/samourai.png)     |
 |                       Purple                       |                         Samourai                         |
+
+## Flow
+
+|                                        |                                        |
+| :------------------------------------: | :------------------------------------: |
+|  ![Ocean](Flow/screenshots/ocean.png)  |   ![Pink](Flow/screenshots/pink.png)   |
+|                 Ocean                  |                  Pink                  |
+| ![Silver](Flow/screenshots/silver.png) | ![Violet](Flow/screenshots/violet.png) |
+|                 Silver                 |                 Violet                 |
+
+## Fluent
+
+|                                         |                                         |
+| :-------------------------------------: | :-------------------------------------: |
+| ![Ocean](Fluent/screenshots/dark-1.png) | ![Pink](Fluent/screenshots/light-1.png) |
+|                  Dark                   |                  Light                  |
 
 ## Glaze
 
@@ -124,12 +129,3 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
 | :-----------------------------------------------: | :-----------------------------------------------: |
 |                       Moon                        |                       Dawn                        |
-
-## Flow
-
-|                                        |                                        |
-| :------------------------------------: | :------------------------------------: |
-|  ![Ocean](Flow/screenshots/ocean.png)  |   ![Pink](Flow/screenshots/pink.png)   |
-|                 Ocean                  |                  Pink                  |
-| ![Silver](Flow/screenshots/silver.png) | ![Violet](Flow/screenshots/violet.png) |
-|                 Silver                 |                 Violet                 |

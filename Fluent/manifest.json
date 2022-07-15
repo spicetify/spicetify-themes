@@ -1,0 +1,17 @@
+{
+  "name": "Fluent",
+  "description": "Spicetify theme inspired by Microsoft's Fluent Design",
+  "preview": "Fluent/screenshots/dark.png",
+  "readme": "Fluent/README.md",
+  "repository": "https://github.com/williamckha/spicetify-fluent/",
+  "usercss": "https://raw.githubusercontent.com/williamckha/spicetify-fluent/master/user.css",
+  "schemes": "color.ini",
+  "include": ["https://raw.githubusercontent.com/williamckha/spicetify-fluent/master/fluent.js"],
+  "branch": "master",
+  "authors": [
+      {
+          "name": "William Ha",
+          "url": "https://github.com/williamckha"
+      }
+  ]
+}
