@@ -10,8 +10,8 @@
 
 ## Dependencies
 
-- [Spicetify](https://github.com/khanhas/spicetify-cli) version 2.7.0 or newer, latest version always recommended.
-- [Segoe UI](https://en.wikipedia.org/wiki/Segoe#Segoe_UI) font family, comes pre-installed on Windows Vista and newer.
+- [Spicetify](https://github.com/khanhas/spicetify-cli) version 2.7.0 or newer, the latest version is always recommended.
+- [Segoe [UI](https://en.wikipedia.org/wiki/Segoe#Segoe_UI) font family comes pre-installed on Windows Vista and newer.
   Segoe UI versions older than 5.37 (older than Windows 8.0) are not officially supported but may work.
 
 ## Installation
@@ -31,8 +31,7 @@ curl -fsSL https://raw.githubusercontent.com/williamckha/spicetify-fluent/master
 ### Spicetify Marketplace
 
 You may alternatively install spicetify-fluent from within the Spicetify Marketplace.  
-Simply install the [spicetify-marketplace](https://github.com/spicetify/spicetify-marketplace) by following it's
-installation instructions and look for and install the theme from within the Marketplace Button.
+Simply install the [spicetify-marketplace](https://github.com/spicetify/spicetify-marketplace) by following its installation instructions, and look for the theme install button from within the Marketplace.
 
 ### Important
 
