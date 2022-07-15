@@ -14,6 +14,17 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Ocean Screenshot](Default/screenshots/ocean.png)
 
+## Dreary
+
+|                                                              |                                                     |
+| :----------------------------------------------------------: | :-------------------------------------------------: |
+|     ![Psycho Screenshot](Dreary/screenshots/psycho.png)      | ![Deeper Screenshot](Dreary/screenshots/deeper.png) |
+|                            Psycho                            |                       Deeper                        |
+|       ![Mono Screenshot](Dreary/screenshots/mono.png)        | ![Golden Screenshot](Dreary/screenshots/golden.png) |
+|                             Mono                             |                       Golden                        |
+| ![Graytone Screenshot](Dreary/screenshots/graytone-blue.png) |    ![BIB Screenshot](Dreary/screenshots/bib.png)    |
+|                           Graytone                           |                         BIB                         |
+
 ## Dribbblish
 
 |                                                    |                                                          |
