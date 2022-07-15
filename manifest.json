@@ -4,10 +4,11 @@
     "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
     "preview": "Bloom/screenshots/dark.png",
     "readme": "Bloom/README.md",
-    "usercss": "https://github.com/nimsandu/spicetify-bloom/blob/main/user.css",
-    "schemes": "https://github.com/nimsandu/spicetify-bloom/blob/main/color.ini",
+    "repository": "https://github.com/nimsandu/spicetify-bloom/",
+    "usercss": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/user.css",
+    "schemes": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/color.ini",
     "include": [
-      "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
+      "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/bloom.js"
     ],
     "spotify-version": "1.1.88",
     "spicetify-version": "2.10.2",
@@ -51,8 +52,8 @@
     "description": "Keep things boxed in and nice looking",
     "preview": "Dreary/screenshots/deeper.png",
     "readme": "Dreary/README.md",
-    "usercss": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/user.css",
-    "schemes": "https://github.com/CharlieS1103/Dreary/blob/main/Dreary/color.ini",
+    "usercss": "Dreary/user.css",
+    "schemes": "Dreary/color.ini",
     "authors": [
       {
         "name": "CharlieS1103",
@@ -107,12 +108,32 @@
     ]
   },
   {
+    "name": "Fluent",
+    "description": "Spicetify theme inspired by Microsoft's Fluent Design",
+    "preview": "Fluent/screenshots/dark.png",
+    "readme": "Fluent/README.md",
+    "repository": "https://github.com/williamckha/spicetify-fluent/",
+    "usercss": "https://raw.githubusercontent.com/williamckha/spicetify-fluent/master/user.css",
+    "schemes": "https://raw.githubusercontent.com/williamckha/spicetify-fluent/master/color.ini",
+    "include": [
+      "https://raw.githubusercontent.com/williamckha/spicetify-fluent/master/fluent.js"
+    ],
+    "branch": "master",
+    "authors": [
+      {
+        "name": "William Ha",
+        "url": "https://github.com/williamckha"
+      }
+    ]
+  },
+  {
     "name": "Glaze",
     "description": "Glaze",
     "preview": "Glaze/screenshots/dark.png",
     "readme": "Glaze/README.md",
-    "usercss": "https://github.com/CharlieS1103/Glaze-theme/blob/main/user.css",
-    "schemes": "https://github.com/CharlieS1103/Glaze-theme/blob/main/color.ini",
+    "repository": "https://github.com/CharlieS1103/Glaze-theme",
+    "usercss": "https://raw.githubusercontent.com/CharlieS1103/Glaze-theme/main/user.css",
+    "schemes": "https://raw.githubusercontent.com/CharlieS1103/Glaze-theme/main/color.ini",
     "authors": [
       {
         "name": "CharlieS1103",
@@ -125,8 +146,9 @@
     "description": "Ad free Nord Theme",
     "preview": "Nord/screenshot_1.png",
     "readme": "Nord/README.md",
-    "usercss": "https://github.com/Tetrax-10/Spicetify-Themes/blob/master/Nord-Spotify/user.css",
-    "schemes": "https://github.com/Tetrax-10/Spicetify-Themes/blob/master/Nord-Spotify/color.ini",
+    "repository": "https://github.com/Tetrax-10/Spicetify-Themes/",
+    "usercss": "https://raw.githubusercontent.com/Tetrax-10/Spicetify-Themes/master/Nord-Spotify/user.css",
+    "schemes": "https://raw.githubusercontent.com/Tetrax-10/Spicetify-Themes/master/Nord-Spotify/color.ini",
     "authors": [
       {
         "name": "Tetrax-10",
@@ -188,7 +210,7 @@
   {
     "name": "Ziro",
     "description": "a smooth theme inspired by zorin os",
-    "preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.png",
+    "preview": "Ziro/screenshots/album-blue-dark.png",
     "readme": "Ziro/README.md",
     "usercss": "Ziro/user.css",
     "schemes": "Ziro/color.ini",
