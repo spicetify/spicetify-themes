@@ -3,10 +3,11 @@
   "description": "Spicetify theme inspired by Microsoft's Windows 11 Bloom Experience",
   "preview": "Bloom/screenshots/dark.png",
   "readme": "Bloom/README.md",
-  "usercss": "https://github.com/nimsandu/spicetify-bloom/blob/main/user.css",
-  "schemes": "https://github.com/nimsandu/spicetify-bloom/blob/main/color.ini",
+  "repository": "https://github.com/nimsandu/spicetify-bloom/",
+  "usercss": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/user.css",
+  "schemes": "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/color.ini",
   "include": [
-    "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Bloom/bloom.js"
+    "https://raw.githubusercontent.com/nimsandu/spicetify-bloom/main/bloom.js"
   ],
   "spotify-version": "1.1.88",
   "spicetify-version": "2.10.2",
