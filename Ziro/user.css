@@ -364,7 +364,7 @@
   transform: translateY(64px);
 }
 /* tracklist */
-.main-trackList-trackList .JUa6JJNj7R_Y3i4P8YUX {
+.main-trackList-trackList .main-rootlist-wrapper {
   background: var(--spice-card);
   border-radius: var(--br-1);
   padding: 8px;
@@ -511,6 +511,6 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 .main-home-homeHeader {
   display: none;
 }
-.AINMAUImkAYJd4ertQxy {
+.main-rootlist-rootlistItemOverlay {
   display: none;
 }
