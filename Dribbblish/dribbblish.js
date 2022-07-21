@@ -34,6 +34,13 @@ function waitForElement(els, func, timeout = 100) {
     }
 }
 
+// Avoid clipping playlists at the bottom of scroll node
+waitForElement([".main-rootlist-wrapper"], () => {
+    const mainRootlist = document.querySelector(".main-rootlist-wrapper");
+    const playListItems = document.getElementsByClassName("main-rootlist-rootlistItemLink")
+    mainRootlist.style.height = `${playListItems.length * 56}px`;
+});
+
 waitForElement([
     `ul[tabindex="0"]`,
     `ul[tabindex="0"] .GlueDropTarget--playlists.GlueDropTarget--folders`
@@ -59,7 +66,7 @@ waitForElement([
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                img.src = base64  || "/images/tracklist-row-song-fallback.svg";
+                img.src = base64  || "https://cdn.jsdelivr.net/gh/spicetify/spicetify-themes@master/Dribbblish/images/tracklist-row-song-fallback.svg";
                 continue;
             }
 
@@ -74,7 +81,7 @@ waitForElement([
                     img.classList.add("playlist-picture");
                     link.prepend(img);
                 }
-                img.src = meta.picture || "/images/tracklist-row-song-fallback.svg";
+                img.src = meta.picture || "https://cdn.jsdelivr.net/gh/spicetify/spicetify-themes@master/Dribbblish/images/tracklist-row-song-fallback.svg";
             });
         }
     }

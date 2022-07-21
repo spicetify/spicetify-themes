@@ -503,6 +503,12 @@ img.playlist-picture {
     border-radius: 50%;
 }
 
+img.playlist-picture[src$=".svg"] {
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+}
+
 .main-rootlist-rootlistItem a span {
     margin-left: 24px;
 }
