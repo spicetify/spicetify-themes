@@ -81,8 +81,8 @@
 
 
 /* Cover Image */
-.main-nowPlayingWidget-coverExpanded{
-  transform: translateX(-78px)
+.main-nowPlayingWidget-coverExpanded {
+  transform: translateX(-78px) !important;
 }
 
 .main-coverSlotCollapsed-container {
