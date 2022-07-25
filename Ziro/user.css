@@ -287,7 +287,7 @@
 .oaNVBli46GtVjaQKB15g,
 .marketplace-tabBar-active,
 .lyrics-tabBar-active {
-  color: var(--spice-shadow);
+  color: var(--spice-shadow) !important;
   background: var(--spice-tab-active) !important;
 }
 .JdlKTdpMquftpMwwegZo,
@@ -467,6 +467,9 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 }
 .main-playlistEditDetailsModal-textElement {
   border-radius: var(--br-1);
+}
+.main-playlistEditDetailsModal-textElement:focus {
+  background: rgba(var(--spice-rgb-selected-row),.1) !important;
 }
 /* fullscreen */
 .npv-main-container .npv-cross-fade-image {
