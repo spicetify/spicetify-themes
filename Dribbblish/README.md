@@ -18,8 +18,6 @@
 ![samourai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
-### Rosé Pine
-![rosepine](rosepine.png)
 
 ##  Features
 ### Resizable sidebar
