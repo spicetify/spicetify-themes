@@ -405,3 +405,7 @@ input {
   border-radius: 10px !important;
   background-color: var(--spice-sec-player) !important;
 }
+
+.prog-tooltip {
+  display: none;
+}
