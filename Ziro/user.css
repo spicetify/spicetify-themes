@@ -366,7 +366,7 @@
 /* tracklist */
 .main-trackList-trackList .main-rootlist-wrapper {
   background: var(--spice-card);
-  border-radius: var(--br-1);
+  border-radius: 10px 10px 0px 0px;
   padding: 8px;
 }
 .main-trackList-trackListHeaderRow {
@@ -520,4 +520,7 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 .main-rootlist-rootlist {
   --left-sidebar-padding-left: 8px;
   --left-sidebar-padding-right: 8px;
+}
+label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElementLabel {
+  padding-bottom: 12px;
 }
