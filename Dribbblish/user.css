@@ -891,5 +891,10 @@ html.right-expanded-cover.buddyfeed-visible .main-coverSlotExpanded-container {
     z-index: 4;
 }
 .main-view-container {
-    min-height: 100vh !important;
+    min-height: 90vh !important;
+}
+@media (max-height: 768px) {
+    .main-view-container {
+        min-height: 85vh !important;
+    }
 }
