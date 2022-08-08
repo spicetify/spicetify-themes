@@ -725,6 +725,7 @@ html:not(.buddyfeed-visible) .Root__top-container {
 
 /** Minimal profile button */
 span.main-userWidget-displayName,
+.main-userWidget-box > div:last-child,
 .main-userWidget-box svg {
     display: none;
 }
