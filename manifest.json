@@ -59,6 +59,20 @@
 		]
 	},
 	{
+		"name": "Matte",
+		"description": "Has a neat color pallete and a much cleaner interface",
+		"preview": "Matte/screenshots/queue.png",
+		"readme": "Matte/README.md",
+		"usercss": "Matte/user.css",
+		"schemes": "Matte/color.ini",
+		"authors": [
+			{
+				"name": "darkthemer",
+				"url": "https://github.com/darkthemer"
+			}
+		]
+	},
+	{
 		"name": "Onepunch",
 		"description": "Onepunch",
 		"preview": "Onepunch/screenshots/dark_home.png",
