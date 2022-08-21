@@ -344,19 +344,20 @@ h3,
 
 /* search bar */
 .x-searchInput-searchInputSearchIcon,
-.x-searchInput-searchInputClearButton {
+.x-searchInput-searchInputClearButton,
+.x-searchInput-searchInputInput,
+.x-filterBox-filterInput {
     color: var(--spice-text) !important;
 }
 .x-searchInput-searchInputInput,
-.QZhV0hWVKlExlKr266jo {
-    background-color: var(--spice-main);
+.x-filterBox-filterInput {
+    border-radius: var(--tab-border-radius);
 }
-
-/* text input */
-input {
-    background-color: var(--spice-main);
-    border-radius: var(--tab-border-radius) !important;
-    color: var(--spice-text) !important;
+.x-searchInput-searchInputInput {
+    background-color: var(--spice-tab-active);
+}
+.x-filterBox-filterInput {
+    background-color: rgba(var(--spice-rgb-selected-row), 0.1);
 }
 ::placeholder {
     color: var(--spice-subtext);
