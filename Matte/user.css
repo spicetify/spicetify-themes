@@ -1,18 +1,15 @@
 /*** vars */
 :root {
     /* top bar vars */
-    --top-bar-height: 40px;
-    --top-bar-padding: 5px 20px 5px 20px; /* top right bottom left */
+    --top-bar-padding-top: 45px;
+    --top-bar-padding-right: 20px;
+    --top-bar-padding-bottom: 5px;
+    --top-bar-padding-left: 20px;
     --tab-border-radius: 6px;
-    --user-widget-name-display: none; /* block / none */
-
-    /* main view vars */
-    --playing-icon-color: hue-rotate(
-        30deg
-    ); /* manually set to match accent color */
+    --user-widget-name-display: none; /* block | none */
 
     /* sidebar vars */
-    --create-playlist-liked-songs-display: none; /* flex / none */
+    --create-playlist-liked-songs-display: none; /* flex | none */
     --sidebar-button-border-radius: 4px;
 
     /* player vars */
@@ -38,17 +35,27 @@
     /* customize top bar colors & fixes */
     grid-area: top-bar;
     height: auto;
-    padding-top: var(--top-bar-height);
     background-color: var(--spice-topbar);
+}
+.Root__top-bar:empty {
+    /* make top bar the same height in lyrics page */
+    padding-top: calc(
+        var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
+    );
 }
 .spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows
     .body-drag-top {
     /* make whole top bar draggable in windows */
-    height: calc(var(--top-bar-height) + 45px);
+    height: calc(
+        var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
+    );
 }
 .main-topBar-container {
     /* customize top bar padding */
-    margin: var(--top-bar-padding);
+    margin-top: var(--top-bar-padding-top);
+    margin-right: var(--top-bar-padding-right);
+    margin-bottom: var(--top-bar-padding-bottom);
+    margin-left: var(--top-bar-padding-left);
     padding: unset;
     height: 40px;
     width: auto;
@@ -66,34 +73,30 @@
     /* remove history button background */
     background-color: transparent;
 }
-.oaNVBli46GtVjaQKB15g {
+.queue-tabBar-active {
     /* customize active tab */
     background-color: var(--spice-tab-active) !important;
     border-radius: var(--tab-border-radius);
     color: var(--spice-text) !important;
 }
-.JdlKTdpMquftpMwwegZo {
+.queue-tabBar-headerItemLink {
     /* customize inactive tab */
     color: var(--spice-subtext);
 }
-.JdlKTdpMquftpMwwegZo:hover {
+.queue-tabBar-headerItemLink:hover {
     /* customize hovered inactive tab */
     background-color: rgba(var(--spice-rgb-button-disabled), 0.3);
-}
-.eHCcSU {
-    /* customize tab text */
-    font-weight: normal;
-    text-transform: capitalize;
 }
 .main-userWidget-displayName,
 .main-userWidget-chevron {
     /* hide user widget name & dropdown arrow */
     display: var(--user-widget-name-display) !important;
 }
-[dir="ltr"] .vhW0kRN8JJD5UwW4TdXi,
-[dir="ltr"] .tUg9tRrSVbtjHJ4WHnxw {
+[dir="ltr"] .collection-collection-tabBar,
+.queue-tabBar-nav {
     /* remove tab bar left padding */
     padding-left: 0;
+    padding-inline-start: 0;
 }
 
 /*** nav bar / sidebar */
@@ -154,13 +157,13 @@
     border-bottom: 1px solid rgba(var(--spice-rgb-selected-row), 0.1);
     padding: 16px 0;
 }
-.cWsvKZ {
+.cWsvKZ, .bIeVjB {
     /* search type active tab */
     border-radius: var(--tab-border-radius);
     color: var(--spice-main);
     background-color: var(--spice-button-active) !important;
 }
-.dwbjqG {
+.dwbjqG, .eQrChW {
     /* search type tabs */
     border-radius: var(--tab-border-radius);
     color: var(--spice-subtext);
@@ -177,7 +180,7 @@
     box-shadow: none;
 }
 .rHpv7osDRvs3SUPMpQ_g {
-    /* replace margin with padding */
+    /* replace margin with padding in queue page */
     margin-top: 0;
     padding-top: 40px;
 }
@@ -186,28 +189,17 @@
 .x-actionBarBackground-background,
 .main-actionBarBackground-background,
 .main-entityHeader-overlay,
-.main-entityHeader-backgroundColor,
-.n87ifzfQlmGX8vkeYGDL {
+.main-entityHeader-backgroundColor {
     /* remove background gradient */
     background-color: unset !important;
     background-image: unset !important;
 }
 .main-rootlist-rootlistDividerGradient,
-.Y8edH1Yjo4xrW_58czQj,
 .fEvxx8vl3zTNWsuC8lpx {
-    /* remove background gradient */
+    /* remove background gradient in home page and sidebar */
     background: unset;
 }
-.main-trackList-playingIcon {
-    /* replace green visualiser / playing icon color */
-    filter: var(--playing-icon-color);
-}
-.main-trackList-placeholder {
-    /* recolor loading tracklist */
-    opacity: 0.05;
-    filter: contrast(0.1);
-}
-.jjUWAm {
+.jyfxNy {
     /* customize button */
     background-color: var(--spice-button-disabled);
     font-weight: normal;
@@ -241,7 +233,7 @@
 }
 .k4MNlyGrhsL0qgnENxqh,
 .xaeunxBdlShScWay5mQR {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 /* cards */
 .main-cardImage-imageWrapper {
@@ -300,14 +292,10 @@
 
 /*** misc & fixes */
 /* font styles */
-h1,
-h2,
-h3,
-.main-entityHeader-topbarTitle,
-.fQToy,
-.hCbgTC {
+* {
     /* heading font weight */
     font-weight: normal !important;
+    --font-family: "CircularSP";
 }
 
 /* scrollbars */
@@ -336,10 +324,11 @@ h3,
     top: 5px;
     right: 5px;
 }
-.os-scrollbar-handle,
-.os-scrollbar-track {
+.os-scrollbar-handle {
     /* increase size from right to left */
-    transform: scale(-1, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* search bar */
@@ -379,14 +368,6 @@ h3,
 }
 
 /* fixing color inconsistency */
-.hHrtFe,
-.hyWUsx,
-.fHFuht,
-.bwliue,
-.MObmOrMxbQpO10ebAtZA .cBPbfBWIIPDzhIT6i3ih {
-    /* song duration & queue button & folder arrow & settings desc text & buddy feed text */
-    color: var(--spice-subtext);
-}
 .encore-dark-theme,
 .encore-dark-theme .encore-base-set {
     /* song duration & queue button & folder arrow & settings desc text */
@@ -405,7 +386,7 @@ h3,
     /* recently played header in home */
     color: var(--spice-text) !important;
 }
-.bxzzGk {
+.fYSGgd {
     /* track list play button color */
     background-color: var(--spice-button-active);
 }
@@ -424,28 +405,36 @@ h3,
     /* fix create playlist & liked songs icon */
     color: var(--spice-sidebar);
 }
-.encore-light-theme .encore-bright-accent-set,
-.encore-dark-theme .encore-bright-accent-set {
-    /* replace spotify green with set accent color */
-    --background-highlight: var(--spice-button-active) !important;
-    --background-press: var(--spice-button) !important;
-    --decorative-subdued: var(--spice-button) !important;
-}
-.main-addButton-active:focus,
-.main-addButton-active:hover {
-    /* replace spotify green on hover */
-    color: var(--spice-button-active);
+.collection-active-icon,
+.collection-icon,
+.home-active-icon,
+.home-icon,
+.premiumSpotifyIcon,
+.search-active-icon,
+.search-icon {
+    /* fix sidebar buttons' icons */
+    color: unset;
 }
 #_R_G *:not([fill="none"]) {
     /* fix heart color on click */
-    color: var(--spice-button-active);
-    fill: var(--spice-button-active);
+    fill: var(--spice-button-active) !important;
 }
-#_R_G *:not([stroke="none"]) ellipse {
+#_R_G *:not([stroke="none"]) {
     /* fix heart color on click */
     stroke: var(--spice-button-active);
 }
-.xK6HEWejcSHKyWfhNiJc {
+.x-settings-equalizerContainer {
     /* equalizer background */
     background-color: transparent;
+}
+.main-trackList-playingIcon {
+    /* change playing icon color in playlist to theme color */
+    filter: grayscale(1) opacity(0.2) drop-shadow(0 0 0 var(--spice-button))
+        drop-shadow(0 0 0 var(--spice-button))
+        drop-shadow(0 0 0 var(--spice-button));
+}
+.main-trackList-placeholder {
+    /* recolor loading tracklist */
+    opacity: 0.05;
+    filter: contrast(0.1);
 }
