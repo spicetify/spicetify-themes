@@ -88,7 +88,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ### Dark
 
-<img src="https://raw.githubusercontent.com/itenerai/spicetify-themes/master/Flow/screenshots/nightlight.png" alt="img"> 
+![Nightlight](Nightlight/screenshots/nightlight.png) 
 
 ## Onepunch
 
