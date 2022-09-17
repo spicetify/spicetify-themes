@@ -84,6 +84,12 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 <img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" >
 
+## Nightlight
+
+### Dark
+
+<img src="https://raw.githubusercontent.com/itenerai/spicetify-themes/master/Flow/screenshots/nightlight.png" alt="img"> 
+
 ## Onepunch
 
 #### Dark
