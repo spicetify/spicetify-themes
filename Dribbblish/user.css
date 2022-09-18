@@ -712,14 +712,23 @@ li.GlueDropTarget {
 }
 
 /** Grid */
+
 .Root__top-container {
-    grid-template-areas:
-        "nav-bar main-view buddy-feed"
-        "nav-bar now-playing-bar buddy-feed";
     padding: var(--main-gap) 0;
 }
 
+.spotify__container--is-desktop.buddyfeed-visible .Root__top-container {
+    grid-template-areas:
+        "top-bar top-bar top-bar"
+        "nav-bar main-view buddy-feed"
+        "nav-bar now-playing-bar buddy-feed";
+}
+
 html:not(.buddyfeed-visible) .Root__top-container {
+    grid-template-areas:
+        "top-bar top-bar"
+        "nav-bar main-view"
+        "nav-bar now-playing-bar";
     padding-right: var(--main-gap);
 }
 
