@@ -57,6 +57,14 @@
   color: var(--spice-button);
 }
 
+.main-userWidget-box{
+  border-radius: 7px;
+}
+
+.main-avatar-image{
+  border-radius: 7px;
+}
+
 .queue-tabBar-headerItemLink {
   color: var(--spice-text) !important;
 }
@@ -91,6 +99,10 @@
 
 [dir=ltr] .main-card-PlayButtonContainer{
   right: 8px!important;
+}
+
+.kO5CUIkGb4As30mT69b0 .X4BH6IwOdSduRPbt7ty3{
+  border-radius: 0px;
 }
 
 /* Topbar visibility bug */
@@ -264,7 +276,7 @@ input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
 }
 
 input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
-  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
+  background-color: rgba(var(--spice-sec-card), 0.7) !important;
 }
 
 input:checked~.x-toggle-indicatorWrapper {
@@ -274,6 +286,15 @@ input:checked~.x-toggle-indicatorWrapper {
 input:checked:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
   background-color: rgba(var(--spice-rgb-button), 0.4) !important;
 }
+
+.x-toggle-indicatorWrapper{
+  background-color: #342f27;
+}
+
+.x-settings-equalizerContainer{
+  background-color: var(--spice-sec-player);
+}
+
 /*playlist list*/
 
 .main-trackList-trackListRow{
