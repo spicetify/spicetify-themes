@@ -12,7 +12,7 @@
 
 [Moonlight](https://github.com/Moonlight-theme) is a dark color theme inspired by the camping vibe 🏕
 
-This theme is as simple as possible with some tiny changes to the UI to keep your Spotify as you know it with some minor enhancements and to have Spotify added to your moonlight setup...
+This theme is as simple as possible with some tiny changes to the UI to keep your Spotify as you know it with some minor enhancements to have Spotify added to your moonlight setup...
 
 
 <h2 style="display: flex; flex-direction: row; justify-content: start;"> <img width="15px" alt="Abod1960" src="https://i.imgur.com/nlTtRn7.png"> Gallery</h2>
