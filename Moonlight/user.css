@@ -1,0 +1,650 @@
+.encore-dark-theme .encore-bright-accent-set{
+  --background-highlight: #ecbd7c!important;
+  --background-press: #ecbd7c!important;
+  border-radius: 10px;
+}
+/* sidebar edits */
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.logo {
+  background-color: var(--spice-sec-card) !important;
+  color: var(--spice-main) !important;
+}
+
+.main-likedSongsButton-likedSongsIcon,
+.main-createPlaylistButton-createPlaylistIcon,
+.main-yourEpisodesButton-yourEpisodesIcon {
+  background: var(--spice-button) !important;
+  border-radius: 3px !important;
+  color: var(--spice-main) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton {
+  color: var(--spice-main) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
+.main-createPlaylistButton-button,
+.main-rootlist-rootlistItemLink,
+.main-rootlist-rootlistItemLink:visited {
+  color: var(--spice-text) !important;
+}
+
+.main-rootlist-rootlistItemLinkActive,
+.main-rootlist-rootlistItemLink:hover,
+.main-rootlist-textWrapper:hover {
+  color: var(--spice-subtext) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-selected .main-collectionLinkButton-icon {
+  opacity: 0.7 !important;
+}
+
+.main-rootlist-rootlistDividerGradient {
+  background: linear-gradient(180deg, var(--spice-main), transparent);
+}
+
+.main-rootlist-rootlistDivider {
+  background-color: unset !important;
+}
+
+/* top queue */
+.queue-tabBar-active {
+  background-color: var(--spice-card) !important;
+}
+
+.main-topBar-historyButtons .main-topBar-button{
+  color: var(--spice-button);
+}
+
+.queue-tabBar-headerItemLink {
+  color: var(--spice-text) !important;
+}
+
+/* header colored backgrounds */
+.main-home-homeHeader,
+.x-441-entityHeader-overlay,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor,
+.x-914-entityHeader-overlay,
+.x-entityHeader-overlay,
+.x-914-actionBarBackground-background,
+.x-actionBarBackground-background {
+  background-color: unset !important;
+  background-image: unset !important;
+}
+
+/* play button in main page */
+.main-playButton-PlayButton.main-playButton-primary {
+  color: var(--spice-main);
+  background-color: var(--spice-button);
+}
+.main-playButton-PlayButton:hover.main-playButton-primary:hover {
+  color: var(--spice-main);
+  background-color: red;
+}
+.connect-title,
+.connect-header {
+  display: none;
+}
+
+[dir=ltr] .main-card-PlayButtonContainer{
+  right: 8px!important;
+}
+
+/* Topbar visibility bug */
+
+.KdxlBanhDJjzmHfqhP0X div svg{
+  fill: var(--spice-main);
+}
+
+.main-topBar-topbarContent:not(.main-topBar-topbarContentFadeIn)>* {
+  opacity: unset !important;
+}
+
+.main-entityHeader-topbarContent:not(.main-entityHeader-topbarContentFadeIn)>* {
+  opacity: 0 !important;
+}
+
+/* Remove Topbar background colour */
+.main-topBar-background {
+  background-color: unset !important;
+}
+
+.main-topBar-overlay,
+.x-441-actionBarBackground-background {
+  background-color: var(--spice-main) !important;
+}
+
+.main-entityHeader-shadow {
+  box-shadow: 0 0 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
+}
+
+.main-trackList-playingIcon {
+  filter: hue-rotate(283deg);
+}
+
+span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
+  fill: black;
+}
+
+/* details metadata */
+.main-entityTitle-subtitle.main-entityTitle-gray,
+.main-entityHeader-metaDataText {
+  color: var(--spice-text) !important;
+}
+
+.main-duration-container {
+  color: var(--spice-subtext);
+}
+
+/* artist page edits*/
+
+.artist-artistOverview-artistOverviewContent {
+  box-shadow: 0 -2px 5px 0 rgba(var(--spice-rgb-shadow), 0.7);
+}
+
+.main-entityHeader-background.main-entityHeader-gradient {
+  opacity: 0.4;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(var(--spice-main), var(--spice-main));
+}
+
+.artist-artistPick-pickComment {
+  background: var(--spice-sec-player) !important;
+  border-radius: 25px !important;
+  border-bottom: solid 2px var(--spice-sec-player) !important;
+  color: var(--spice-text) !important;
+}
+
+.artist-artistSavedTracks-imageContainer .artist-artistSavedTracks-heartIcon {
+  color: var(--spice-card);
+}
+
+/* home screen edits */
+
+.view-homeShortcutsGrid-name {
+  color: var(--spice-text);
+}
+
+.main-shelf-title {
+  color: var(--spice-subtext);
+}
+
+.view-homeShortcutsGrid-shortcut,
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-imageWrapper,
+.main-cardImage-imageWrapper,
+.main-cardImage-imagePlaceholder,
+.main-cardImage-image {
+  border-radius: 10px !important;
+}
+
+.view-homeShortcutsGrid-shortcut{
+  background-color: rgba(var(--spice-rgb-tab-active),.15)!important;
+}
+
+.view-homeShortcutsGrid-shortcut:hover{
+  background-color: rgba(var(--spice-rgb-tab-active),.25)!important;
+}
+
+.view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-image {
+  border-radius: 10px 0 0 10px !important;
+}
+
+.main-cardImage-circular,
+.main-entityHeader-circle {
+  border-radius: 50% !important;
+}
+
+.main-entityHeader-image {
+  border-radius: 10px;
+}
+
+/* inside a page edits */
+.main-addButton-button {
+  color: var(--spice-button) !important;
+}
+
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowMarker,
+.main-trackList-trackListRow.main-trackList-active .main-trackList-rowTitle {
+  color: var(--spice-subtext) !important;
+}
+
+.main-trackList-rowTitle {
+  color: var(--spice-text) !important;
+}
+
+/* friend activity */
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-playbackContext a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-usernameAndTimestamp a {
+  color: var(--spice-text) !important;
+}
+
+.main-buddyFeed-activityMetadata .main-buddyFeed-username a {
+  color: var(--spice-subtext) !important;
+}
+
+.main-avatar-avatar.main-avatar-withBadge:after {
+  background: var(--spice-extratext);
+}
+
+/* setting page */
+
+.x-settings-container {
+  margin: 16px 180px !important;
+}
+
+.x-settings-title {
+  color: var(--spice-subtext) !important;
+}
+
+.main-dropDown-dropDown {
+  border: 0;
+  border-radius: 10px;
+}
+
+.main-dropDown-dropDown {
+  background-color: var(--spice-sec-player) !important;
+  color: var(--spice-text) !important;
+}
+
+.x-toggle-indicator {
+  background: var(--spice-button) !important;
+  box-shadow: 0 2px 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
+}
+
+input:checked~.x-toggle-indicatorWrapper .x-toggle-indicator {
+  background-color: var(--spice-button) !important;
+  box-shadow: 0 2px 4px 0 rgba(var(--spice-rgb-shadow), 0.5);
+}
+
+input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
+}
+
+input:checked~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), 0.6) !important;
+}
+
+input:checked:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
+  background-color: rgba(var(--spice-rgb-button), 0.4) !important;
+}
+/*playlist list*/
+
+.main-trackList-trackListRow{
+  height: 46px!important;
+}
+
+.main-trackList-rowImage{
+  border-radius: 7px;
+  width: 35px;
+  height: 35px;
+}
+
+.eDbSCl{
+  font-size: 0.8125rem!important;
+}
+
+.main-trackList-rowMainContent{
+  line-height: 18px;
+}
+.main-trackList-rowSubTitle a{
+  color: var(--spice-button)38;
+}
+/**/
+/* queue, album, recent, playlist, page edits */
+.queue-queue-container,
+.queue-playHistory-container {
+  margin: 40px 60px !important;
+}
+
+.main-actionBar-ActionBar,
+.x-actionBar-ActionBar {
+  margin: 0 40px !important;
+}
+
+/* podcast edits */
+.x-hTMLDescription-HTMLDescription,
+.x-expandableDescription-paragraph {
+  color: var(--spice-text) !important;
+}
+
+.x-seeMore-button,
+.x-expandableDescription-button {
+  color: var(--spice-button) !important;
+}
+
+.main-type-minuetBold {
+  color: var(--spice-extratext) !important;
+}
+
+.main-entityTitle-subtitle,
+.main-entityTitle-subtitle.main-entityTitle-large,
+.main-entityTitle-subtitle.main-entityTitle-bold {
+  color: var(--spice-subtext) !important;
+}
+
+/* search page edits */
+
+input {
+  background-color: unset !important;
+  border-bottom: solid 2px var(--spice-text) !important;
+  border-radius: 0 !important;
+  color: var(--spice-text) !important;
+}
+
+.x-833-searchInput-searchInputSearchIcon {
+  color: var(--spice-text) !important;
+}
+
+.x-833-heroCategoryCard-heroTitle,
+.x-833-categoryCard-title {
+  color: var(--spice-main) !important;
+}
+
+/* menu and dropdown menus including the user menu */
+.main-type-mesto,
+.x-533-dropDown-dropDown {
+  color: var(--spice-text) !important;
+}
+
+.main-userWidget-box {
+  background-color: var(--spice-card) !important;
+  border: unset !important;
+  color: var(--spice-subtext) !important;
+}
+
+/* card edits */
+
+.main-card-card a,
+.main-card-card button {
+  color: var(--spice-extratext);
+}
+
+.main-card-card:hover,
+.main-card-card[data-context-menu-open="true"] {
+  background-color: rgba(var(--spice-rgb-sec-card), 0.3) !important;
+}
+
+.main-contextMenu-menu,
+.main-card-card:focus-within,
+.main-deletePlaylistDialog-container,
+.main-aboutRecsModal-container {
+  background-color: var(--spice-card) !important;
+}
+
+.main-deletePlaylistDialog-secondaryButton {
+  color: var(--spice-text) !important;
+}
+
+.main-button-primary {
+  background-color: var(--spice-sec-card) !important;
+  color: var(--spice-card) !important;
+}
+
+.main-deletePlaylistDialog-title {
+  color: var(--spice-subtext) !important;
+}
+
+.main-keyboardShortcutsHelpModal-container,
+.main-trackCreditsModal-container {
+  background-color: var(--spice-card) !important;
+  color: var(--spice-text) !important;
+}
+
+.main-keyboardShortcutsHelpModal-header,
+.main-trackCreditsModal-header {
+  color: var(--spice-subtext) !important;
+}
+
+.main-type-canon {
+  color: var(--spice-extratext) !important;
+}
+
+/* profile page edits */
+.main-cardImage-imageWrapper {
+  background-color: var(--spice-card) !important;
+}
+
+/* now playing bar edits */
+
+.Root__now-playing-bar {
+  background-color: var(--spice-sec-player) !important;
+  box-shadow: 0 -2px 5px 0 rgba(var(--spice-rgb-shadow), 0.5) !important;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.main-nowPlayingBar-container {
+  background-color: var(--spice-sec-player) !important;
+  border-radius: 0px 10px 0 0 !important;
+}
+
+.main-connectBar-connectBar.main-connectBar-FullscreenModeButtonEnabled.main-type-mesto {
+  color: var(--spice-sidebar) !important;
+}
+
+.main-playPauseButton-button{
+  border-radius: 7px!important;
+  background-color: var(--spice-button)!important;
+}
+
+.progress-bar {
+  --progress-bar-height: 5px !important;
+}
+
+.progress-bar__bg {
+  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
+}
+
+.progress-bar--is-active .progress-bar__fg,
+:not(.no-focus-outline) .progress-bar:focus-within .progress-bar__fg {
+  background-color: var(--fg-color);
+}
+
+.ehgHWV{
+  color: var(--spice-button);
+}
+
+.Button-qlcn5g-0 span{
+  border-radius: 7px!important;
+  background-color: var(--spice-button)!important;
+}
+
+.volume-bar--disabled div{
+  bottom: 0px!important;
+}
+
+.main-shuffleButton-button.main-shuffleButton-on,
+.main-repeatButton-button.main-repeatButton-on {
+  color: var(--spice-button) !important;
+}
+
+.cover-art--with-auto-height {
+  border: solid var(--spice-sec-player) 5px !important;
+}
+
+.cover-art,
+.cover-art .cover-art-image {
+  border-radius: 10px 10px 10px 10px !important;
+  background-color: var(--spice-sec-player) !important;
+}
+
+/** Matching window controls background */
+:root {
+--win-color: var(--spice-main); /* Color depends on your theme - feel free to change */
+--win-tint: -0.42s; /* Tint depends on the color - increment/decrement by 0.01 until it looks right */
+}
+
+@keyframes color-mix {
+0% {
+    color: var(--win-color);
+	}
+	100% {
+	    color: #fff;
+	}
+	}
+	
+	.main-topBar-overlay {
+	animation: color-mix 1s var(--win-tint) linear forwards paused;
+	background-image: linear-gradient(currentColor, currentColor), linear-gradient(var(--win-color), var(--win-color));
+	background-blend-mode: color-dodge;
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 135px 31px; /* Size depends on your page zoom (This one is for 100%) - experiment with its values */
+	}
+	
+	.main-topBar-background {
+	opacity: 1 !important;
+	}
+  .winButton-3UMjdg:not(:last-child) > svg {
+    display: none;
+  }
+  .winButton-3UMjdg:not(:last-child)::after {
+    content: "";
+    border-radius: 50px;
+    pointer-events: fill;
+  }
+  .winButton-3UMjdg:hover {
+    background-color: var(--background-tertiary);
+  }
+  
+  .winButtonClose-3Q8ZH5 {
+    margin-right: 5px;
+  }
+  .winButtonClose-3Q8ZH5::after {
+    padding: 6px;
+    background-image: url("https://i.imgur.com/WAbJScJ.png");
+    background-size: 100%;
+  }
+  .winButtonClose-3Q8ZH5:hover::after {
+    background-image: url("https://i.imgur.com/ipwGE9a.png");
+    background-size: 100%;
+  }
+  
+  .winButtonMinMax-3RsPUg:nth-child(3)::after {
+    background-color: #c69f68;
+    padding: 5px;
+  }
+  .winButtonMinMax-3RsPUg:nth-child(3):hover::after {
+    background-color: #c69f68e5;
+  }
+  .winButtonMinMax-3RsPUg:last-child {
+    color: #75c668;
+  }
+  .winButtonMinMax-3RsPUg:last-child:hover {
+    color: #75c668e3;
+  }
+  .winButtonMinMax-3RsPUg:last-child rect {
+    height: 3px;
+    rx: 2px;
+  }
+  /*hiding the ads container
+  .Root__main-view div:nth-child(1){
+    display: none;
+  }
+  /**/
+
+  /* progress bar*/
+  .main-nowPlayingBar-center .playback-progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 84px;
+  }
+  .main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar {
+    bottom: 108px;
+  }
+  .playback-bar {
+    --bar: var(--spice-button);
+  }
+  .volume-bar {
+    --bar: var(--spice-subtext);
+    margin-right: 8px;
+  }
+  .playback-bar .progress-bar {
+    --progress-bar-radius: 0;
+  }
+  .playback-bar:hover .progress-bar,
+  .playback-bar .DuvrswZugGajIFNXObAr {
+    --progress-bar-height: 8px;
+  }
+  .x-progressBar-progressBarBg {
+    background-color: var(--spice-tab-active);
+  }
+  .DuvrswZugGajIFNXObAr .progress-bar__slider,
+  .epWhU7hHGktzlO_dop6z {
+    background-color: var(--bar) !important;
+    border-radius: 20px;
+  }
+  .progress-bar__slider {
+    background-color: var(--spice-shadow);
+    border: 2px solid var(--bar);
+    height: 16px;
+    width: 16px;
+  }
+  .playback-bar .progress-bar__slider {
+    height: 10px;
+    width: 10px;
+  }
+  .playback-bar__progress-time-elapsed,
+  .main-playbackBarRemainingTime-container {
+    color: var(--spice-subtext);
+    position: absolute;
+    margin-bottom: 45px;
+    right: 266px;
+  }
+  .playback-bar__progress-time-elapsed {
+    right: 308px;
+  }
+  .playback-bar__progress-time-elapsed::after {
+    content: '  /';
+  }
+  @media only screen and (max-width: 58.75em) {
+    .playback-bar__progress-time-elapsed{
+      display: none;
+    }
+    .main-playbackBarRemainingTime-container{
+      display: none;
+    }
+  }
+  /**/
+
+  /* cover-art */
+
+  .cover-art{
+    margin: 0px 20px 20px 20px;
+    padding-block: 100px;
+  }
+
+  .main-coverSlotExpandedCollapseButton-collapseButton{
+    right: 30px!important;
+  }
+
+  .main-coverSlotExpandedCollapseButton-collapseButton{
+    top: 10px!important;
+  }
+  .main-nowPlayingWidget-coverArt .cover-art{
+    margin: 0px;
+    padding-block:0px;
+  }
+  
+  /**/
+
+  /* Scrollbar */
+
+  .os-scrollbar-track div{
+    border-radius: 2px;
+  }
+
+  .os-scrollbar-handle{
+    border-radius: 2px;
+  }
+  /**/
+
+  .main-leaderboardComponent-container{
+    display: none;
+  }
