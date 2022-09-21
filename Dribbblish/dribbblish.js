@@ -93,10 +93,10 @@ waitForElement([
         .observe(listElem, {childList: true});
 });
 
-waitForElement([".Root__main-view"], ([mainView]) => {
+waitForElement([".Root__top-container"], ([topContainer]) => {
     const shadow = document.createElement("div");
     shadow.id = "dribbblish-back-shadow";
-    mainView.prepend(shadow);
+    topContainer.prepend(shadow);
 });
 
 waitForElement([".main-rootlist-rootlistPlaylistsScrollNode"], (queries) => {
@@ -130,8 +130,6 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     function updateVariable([ event ]) {
         document.documentElement.style.setProperty(
             "--main-view-width", event.contentRect.width + "px");
-        document.documentElement.style.setProperty(
-            "--main-view-height", event.contentRect.height + "px");
         if (event.contentRect.width < 700) {
             document.documentElement.classList.add("minimal-player");
         } else {

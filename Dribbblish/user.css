@@ -491,7 +491,7 @@ html.sidebar-hide-text .main-rootlist-statusIcons {
     border-radius: 4px;
     display: flex;
     height: 56px;
-    padding: 0 20px;
+    padding: 0 12px;
 }
 
 img.playlist-picture {
@@ -593,12 +593,10 @@ li.GlueDropTarget {
     padding-bottom: 56px;
 }
 #dribbblish-back-shadow {
-    position: fixed;
-    width: var(--main-view-width);
-    height: calc(var(--main-view-height) + var(--bar-height));
+    z-index: 2;
+    grid-area: main-view / main-view / now-playing-bar / main-view;
     box-shadow: 0 0 10px 3px #0000003b;
     border-radius: var(--main-corner-radius);
-    z-index: 2;
     pointer-events: none;
 }
 
@@ -712,14 +710,23 @@ li.GlueDropTarget {
 }
 
 /** Grid */
+
 .Root__top-container {
-    grid-template-areas:
-        "nav-bar main-view buddy-feed"
-        "nav-bar now-playing-bar buddy-feed";
     padding: var(--main-gap) 0;
 }
 
+.spotify__container--is-desktop.buddyfeed-visible .Root__top-container {
+    grid-template-areas:
+        "top-bar top-bar top-bar"
+        "nav-bar main-view buddy-feed"
+        "nav-bar now-playing-bar buddy-feed";
+}
+
 html:not(.buddyfeed-visible) .Root__top-container {
+    grid-template-areas:
+        "top-bar top-bar"
+        "nav-bar main-view"
+        "nav-bar now-playing-bar";
     padding-right: var(--main-gap);
 }
 
