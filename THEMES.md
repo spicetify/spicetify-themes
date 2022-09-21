@@ -178,3 +178,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Violet
 <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/violet.png" alt="img"> 
+
+## Moonlight
+
+![BurntSienna Screenshot](Moonlight\screenshots\Preview.gif)
