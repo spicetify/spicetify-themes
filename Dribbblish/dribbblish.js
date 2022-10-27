@@ -41,6 +41,21 @@ waitForElement([".main-rootlist-wrapper"], () => {
     mainRootlist.style.height = `${playListItems.length * 56}px`;
 });
 
+// Change colour of playlist play icons in certain color schemes to avoid invisibility
+waitForElement([".main-playButton-PlayButton"], () => {
+    const buttonStyle = getComputedStyle(document.querySelector('.fpCtYO'));
+    if(buttonStyle.color === buttonStyle.backgroundColor) {
+        const style = document.createElement('style');
+        style.innerText = `.fpCtYO {
+            color: var(--spice-text);
+        }
+        .gHYQaG {
+            color: var(--spice-text);
+        }`;
+        document.head.appendChild(style);
+    }
+});
+
 waitForElement([
     `ul[tabindex="0"]`,
     `ul[tabindex="0"] .GlueDropTarget--playlists.GlueDropTarget--folders`
