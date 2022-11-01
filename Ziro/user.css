@@ -524,3 +524,7 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElementLabel {
   padding-bottom: 12px;
 }
+/*navbar active icon*/
+.main-navBar-navBarItem .collection-active-icon, .main-navBar-navBarItem .home-active-icon, .main-navBar-navBarItem .make-music-active-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .collection-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .home-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .make-music-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .search-icon, .main-navBar-navBarItem .search-active-icon {
+  color: var(--spice-main);
+}
