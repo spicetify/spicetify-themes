@@ -536,3 +536,6 @@ button.CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
 button.CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
   color: var(--spice-main);
 }
+.collection-active-icon, .collection-icon, .home-active-icon, .home-icon, .premiumSpotifyIcon, .search-active-icon, .search-icon {
+  color: var(--spice-text);
+}
