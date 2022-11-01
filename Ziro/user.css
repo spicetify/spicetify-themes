@@ -523,19 +523,20 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElementLabel {
   padding-bottom: 12px;
 }
+/*navbar icon*/
+.collection-active-icon, .collection-icon, .home-active-icon, .home-icon, .premiumSpotifyIcon, .search-active-icon, .search-icon {
+  color: var(--spice-text);
+}
 /*navbar active icon*/
 .main-navBar-navBarItem .collection-active-icon, .main-navBar-navBarItem .home-active-icon, .main-navBar-navBarItem .make-music-active-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .collection-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .home-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .make-music-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .search-icon, .main-navBar-navBarItem .search-active-icon {
   color: var(--spice-main);
 }
 /*playing status icon - Playlist*/
-button.CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
+.CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
   color: var(--spice-main);
   top: 10px;
 }
 /*playing status icon - Liked Songs*/
-button.CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
+.CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
   color: var(--spice-main);
-}
-.collection-active-icon, .collection-icon, .home-active-icon, .home-icon, .premiumSpotifyIcon, .search-active-icon, .search-icon {
-  color: var(--spice-text);
 }
