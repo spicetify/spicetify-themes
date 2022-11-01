@@ -53,7 +53,6 @@
 .main-rootlist-statusIcons,
 .main-rootlist-expandArrow {
   position: absolute;
-  top: 10px;
   right: 24px;
 }
 .main-rootlist-expandArrow {
@@ -526,5 +525,14 @@ label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElemen
 }
 /*navbar active icon*/
 .main-navBar-navBarItem .collection-active-icon, .main-navBar-navBarItem .home-active-icon, .main-navBar-navBarItem .make-music-active-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .collection-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .home-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .make-music-icon, .main-navBar-navBarItem .main-navBar-navBarLinkActive .search-icon, .main-navBar-navBarItem .search-active-icon {
+  color: var(--spice-main);
+}
+/*playing status icon - Playlist*/
+button.CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
+  color: var(--spice-main);
+  top: 10px;
+}
+/*playing status icon - Liked Songs*/
+button.CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
   color: var(--spice-main);
 }
