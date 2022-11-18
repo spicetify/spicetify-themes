@@ -21,7 +21,7 @@ You can add your own theme simply by opening a Pull Request (more info in [CONTR
     git clone https://github.com/spicetify/spicetify-themes.git
     ```
 
-2.  Copy the files into the [Spicetify Themes folder](https://spicetify.app/docs/development/customization#themes). Run:
+2.  Copy the files into the [Spicetify Themes folder](https://spicetify.app/docs/development/themes). Run:
 
     **Linux**
 
