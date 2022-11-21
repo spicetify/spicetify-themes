@@ -38,7 +38,7 @@ function waitForElement(els, func, timeout = 100) {
 waitForElement([".main-rootlist-wrapper"], () => {
     const mainRootlist = document.querySelector(".main-rootlist-wrapper");
     const playListItems = document.getElementsByClassName("main-rootlist-rootlistItemLink")
-    mainRootlist.style.height = `${playListItems.length * 56}px`;
+    mainRootlist.style.height = `${(playListItems.length + 1) * 56}px`;
 });
 
 waitForElement([
