@@ -590,6 +590,7 @@ li.GlueDropTarget {
     pointer-events: none;
 }
 .dribs-playlist-list {
+    padding: 0px 8px;
     padding-bottom: 56px;
 }
 #dribbblish-back-shadow {
