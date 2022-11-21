@@ -36,7 +36,7 @@ function waitForElement(els, func, timeout = 100) {
 
 // Avoid clipping playlists at the bottom of scroll node
 waitForElement([".main-rootlist-wrapper"], () => {
-    const mainRootlist = document.querySelector(".main-rootlist-wrapper");
+    const mainRootlist = document.getElementsByClassName("main-rootlist-wrapper");
     const playListItems = document.getElementsByClassName("main-rootlist-rootlistItemLink")
     mainRootlist.style.height = `${(playListItems.length + 1) * 56}px`;
 });
