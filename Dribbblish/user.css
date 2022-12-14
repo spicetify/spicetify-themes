@@ -897,6 +897,10 @@ section.contentSpacing {
     padding: 0 0 0 4px;
 }
 
+.buddyFeed-hide-text .main-buddyFeed-activityMetadata {
+    visibility: hidden;
+}
+
 .buddyFeed-hide-text .main-avatar-avatar > div > div > div {
     display: flex;
     justify-content: center;
