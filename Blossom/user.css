@@ -24,6 +24,20 @@
     background-image: unset;
 }
 
+.EvQHNTBhaU3rGCRRlAWj {
+    background: unset !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+.QplCuuGSoV4updqTSLq9 {
+    background: unset !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
 .main-trackList-trackListHeaderStuck {
     background: unset !important;
     backdrop-filter: blur(5px);
