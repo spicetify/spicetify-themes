@@ -76,6 +76,18 @@ NAVBAR
   color: var(--spice-text);
 }
 
+.main-navBar-entryPoints [data-id="/add"] {
+  margin-top: 20px;
+}
+
+.main-createPlaylistButton-button {
+  color: var(--spice-text);
+}
+
+.main-createPlaylistButton-createPlaylistIcon {
+  background-color: var(--spice-text);
+}
+
 /* change color of navbar liked songs icon */
 .main-likedSongsButton-likedSongsIcon {
   background: transparent;
@@ -84,13 +96,6 @@ NAVBAR
 .main-likedSongsButton-likedSongsIcon svg {
   height: 22px;
   width: 22px;
-}
-
-.main-createPlaylistButton-button {
-  color: var(--spice-subtext);
-}
-.main-createPlaylistButton-createPlaylistIcon {
-  background-color: var(--spice-subtext);
 }
 
 /* remove opacity of navbar buttons */
@@ -102,6 +107,11 @@ NAVBAR
 
 .main-collectionLinkButton-collectionLinkButton {
   color: var(--spice-subtext);
+}
+
+:last-child > .main-collectionLinkButton-collectionLinkButton,
+:last-child > .main-collectionLinkButton-collectionLinkButton .main-likedSongsButton-likedSongsIcon {
+  color: var(--spice-text);
 }
 
 .main-collectionLinkButton-collectionLinkButton:hover,
