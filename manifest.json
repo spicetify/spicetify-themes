@@ -142,5 +142,18 @@
 				"url": "https://github.com/alexcasieri30"
 			}
 		]
+	},
+	{
+		"name": "Blossom",
+		"description": "Blossom Theme, a simple theme.",
+		"preview": "https://user-images.githubusercontent.com/72624799/203471073-4a5e6cf0-a5dc-4ecc-9a12-56d5fc716ac4.png",
+		"readme": "Blossom/README.md",
+		"usercss": "Blossom/user.css",
+		"schemes": "Blossom/color.ini",
+		"authors": [
+			{
+				"name": "Robatortas", "url": "https://github.com/Robatortas"
+			}
+    ]
 	}
 ]

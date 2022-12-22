@@ -1,0 +1,349 @@
+/* Blossom Theme */
+
+#main {
+	overflow: hidden;
+    background-color: var(--spice-background);
+}
+
+/* SEARCH */
+.main-yourEpisodes-episodeCard {
+    background-color: red;
+    transform: translateX(100px);
+}
+
+.x-searchInput-searchInputSearchIcon,
+.x-searchInput-searchInputClearButton {
+    color: var(--spice-button) !important;
+}
+
+/* header colored backgrounds */
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor {
+    background: unset !important;
+    background-image: unset;
+}
+
+.EvQHNTBhaU3rGCRRlAWj {
+    background: unset !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+.QplCuuGSoV4updqTSLq9 {
+    background: unset !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+.main-trackList-trackListHeaderStuck {
+    background: unset !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+/* Home Header, when on home tab */
+.main-home-homeHeader {
+    opacity: 40%;
+    background: radial-gradient(ellipse at top, var(--spice-button), 10%, var(--spice-main), 100%, transparent);
+    background-color: unset !important;
+}
+
+.cover-art {
+    background: var(--spice-background);
+    border-radius: 7.5%;
+}
+.cover-art-image {
+    border-radius: 7.5%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* Album or song art */
+.main-entityHeader-image {
+    border-radius: 10%;
+    opacity: 100;
+    animation: both;
+    cursor: pointer;
+}
+
+.main-editImageButton-overlay {
+    border-radius: 10%;
+    background: unset;
+    backdrop-filter: blur(4px);
+    color: var(--spice-button);
+    transition: all 1s;
+}
+
+.main-entityHeader-imagePlaceholder {
+    background-color: var(--spice-player);
+}
+
+.main-entityHeader-shadow {
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.200);
+}
+
+/* TRACKLIST */
+.main-trackList-playingIcon {
+    filter: hue-rotate(100deg);
+}
+
+.main-trackList-trackListRow {
+    margin-left: 0px;
+    transition: all 0.5s;
+}
+.main-trackList-trackListRow:hover {
+    background-color: var(--spice-player);
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+
+/* Playback bar and controls */
+.main-nowPlayingBar-nowPlayingBar {
+    background-color: unset !important;
+    background: unset !important;
+    background-image: linear-gradient(0deg, var(--spice-player), 80%, transparent);
+    transition: all 0.5s;
+}
+
+.main-playPauseButton-button {
+    background: var(--spice-button-active);
+    color: var(--spice-text);
+}
+
+/* TopBar, where the profile button and back and ford buttons are */
+.main-topBar-background {
+    opacity: 10%;
+    background: linear-gradient(180deg, #171717, 60%, transparent) !important;
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+.main-topBar-overlay {
+    background: unset !important;
+    background-color: unset !important;
+    background-image: unset !important;
+    /* backdrop-filter: blur(10px); */
+}
+
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.logo {
+  background-color: var(--spice-player) !important;
+}
+
+.playback-bar {
+    width: 102vw;
+    left: -25px;
+    bottom: 67px;
+    position: relative;
+    cursor: pointer;
+}
+.main-playbackBarRemainingTime-container {
+    position: absolute;
+    visibility: hidden;
+}
+.progress-bar {
+	--fg-color: var(--spice-button-active);
+}
+
+.os-theme-spotify.os-host-transition
+  > .os-scrollbar-vertical
+  > .os-scrollbar-track
+  > .os-scrollbar-handle {
+  border-radius: 4px;
+  background-color: var(--spice-text);
+  opacity: 30%;
+}
+
+.player-controls__buttons {
+    transform: translateY(15px);
+}
+
+.main-playPauseButton-button {
+    cursor: pointer;
+    border-radius: 10px;
+    --button-size: 50px !important;
+}
+
+.player-controls__buttons {
+    align-items: center;
+  }
+
+/* LEFT BAR STUFF */
+
+/* Playlists text color */
+.main-rootlist-rootlistDivider,
+.main-rootlist-rootlistDividerGradient {
+    visibility: hidden;
+}
+
+.main-rootlist-rootlist {
+    background-color: var(--spice-player);
+    top: 10px;
+}
+.main-rootlist-rootlistItem {
+    cursor: pointer;
+    margin: 0px;
+    transition: all 0.5s;
+}
+.main-rootlist-rootlistItem:hover {
+    background: var(--spice-background) !important;
+    margin: 5px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.main-rootlist-rootlistItemLinkActive {
+    background: var(--spice-background) !important;
+    margin-left: -22px;
+    margin-right: -10px;
+    padding-left: 30px;
+    transition: all 0.5s;
+}
+
+.x-categoryCard-CategoryCard {
+    transition: all 0.5s;
+}
+.x-categoryCard-CategoryCard:hover {
+    margin-top: -2%;
+    transition: all 0.5s;
+}
+
+.main-navBar-navBarItem {
+    cursor: pointer;
+    margin: 0px;
+    transition: all 0.5s;
+}
+.main-navBar-navBarItem:hover {
+    background-color: var(--spice-player) !important;
+    transition: all 0.5s;
+}
+.main-navBar-navBarLinkActive{
+    background: var(--spice-player) !important;
+    margin-left: -22px;
+    margin-right: -10px;
+    padding-left: 30px;
+    transition: all 0.5s;
+}
+
+/* CARDS */
+
+/* Little filter for the cards */
+.main-card-card {
+    opacity: 100%;
+    background-color: unset !important;
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.main-card-card:hover {
+    background-color: unset !important;
+    background: var(--spice-player)!important;
+}
+
+.collection-collectionEntityHeroCard-likedSongs {
+    background-color: unset !important;
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.collection-collectionEntityHeroCard-likedSongs:hover {
+    background-color: unset !important;
+    background: var(--spice-player)!important;
+}
+
+/* Shortcuts */
+.view-homeShortcutsGrid-shortcut {
+    background-color: unset !important;
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.view-homeShortcutsGrid-shortcut:hover {
+    background-color: unset !important;
+    background: var(--spice-player)!important;
+}
+
+/* Cursor things */
+.main-playPauseButton-button,
+.main-repeatButton-button,
+.main-skipForwardButton-button,
+.main-skipBackButton-button,
+.main-shuffleButton-button {
+  cursor: pointer !important;
+}
+
+/* Search */
+input {
+    background-color: unset !important;
+    border-bottom: solid 1px var(--spice-button-active) !important;
+    color: var(--spice-text) !important;
+    border-radius: 0px !important;
+}
+
+.x-833-searchInput-searchInputSearchIcon {
+    color: var(--spice-text) !important;
+}
+
+/* ANIMATIONS */
+
+.view-homeShortcutsGrid-shortcut
+.main-heroCard-card,
+.main-buttonIcon-buttonIcon,
+.main-trackList-column,
+.main-rootlist-rootlistItem,
+.main-card-card,
+.main-entityHeader-smallHeader,
+.main-entityHeader-headerText,
+.main-entityHeader-image {
+    animation-name: up-fade-anim;
+    animation-duration: 1s;
+}
+.main-shelf-seeAll,
+.main-cardImage-image,
+.main-trackList-trackList,
+.main-trackList-number {
+    animation-name: left-fade-anim;
+    animation-duration: 1s;
+}
+.main-shelf-title {
+    animation-name: right-fade-anim;
+    animation-duration: 1s;
+}
+
+@keyframes up-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateY(10px);
+    }
+    to {
+        opacity:100;
+        transform: translateY(0px);
+    }
+}
+@keyframes left-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateX(10px);
+    }
+    to {
+        opacity:100;
+        transform: translateX(0px);
+    }
+}
+@keyframes right-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity:100;
+        transform: translateX(0px);
+    }
+}
+
+.queue-tabBar-active {
+    background-color: var(--spice-player) !important;
+    transition: all 0.5s;
+}
