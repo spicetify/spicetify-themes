@@ -88,14 +88,18 @@ NAVBAR
   background-color: var(--spice-text);
 }
 
-/* change color of navbar liked songs icon */
+/* change color of navbar icons */
 .main-likedSongsButton-likedSongsIcon {
-  background: transparent;
-  color: var(--spice-subtext);
+  background: var(--spice-text);
+  color: var(--spice-sidebar);
 }
-.main-likedSongsButton-likedSongsIcon svg {
-  height: 22px;
-  width: 22px;
+
+.main-yourEpisodesButton-yourEpisodesIcon {
+  background: var(--spice-text);
+}
+
+.main-yourEpisodesButton-yourEpisodesIcon path {
+  fill: var(--spice-sidebar);
 }
 
 /* remove opacity of navbar buttons */
