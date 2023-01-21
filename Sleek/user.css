@@ -88,14 +88,18 @@ NAVBAR
   background-color: var(--spice-text);
 }
 
-/* change color of navbar liked songs icon */
+/* change color of navbar icons */
 .main-likedSongsButton-likedSongsIcon {
-  background: transparent;
-  color: var(--spice-subtext);
+  background: var(--spice-text);
+  color: var(--spice-sidebar);
 }
-.main-likedSongsButton-likedSongsIcon svg {
-  height: 22px;
-  width: 22px;
+
+.main-yourEpisodesButton-yourEpisodesIcon {
+  background: var(--spice-text);
+}
+
+.main-yourEpisodesButton-yourEpisodesIcon path {
+  fill: var(--spice-sidebar);
 }
 
 /* remove opacity of navbar buttons */
@@ -109,16 +113,6 @@ NAVBAR
   color: var(--spice-subtext);
 }
 
-:last-child > .main-collectionLinkButton-collectionLinkButton,
-:last-child > .main-collectionLinkButton-collectionLinkButton .main-likedSongsButton-likedSongsIcon {
-  color: var(--spice-text);
-}
-
-.main-collectionLinkButton-collectionLinkButton:hover,
-.main-collectionLinkButton-collectionLinkButton:hover .main-likedSongsButton-likedSongsIcon {
-  color: var(--spice-text);
-}
-
 /* change colors of active tab */
 .main-navBar-navBarLinkActive,
 .main-collectionLinkButton-selected {
@@ -128,9 +122,7 @@ NAVBAR
 
 .main-navBar-navBarLinkActive,
 .main-navBar-navBarLinkActive:focus,
-.main-navBar-navBarLinkActive:hover,
-.main-collectionLinkButton-selected,
-.main-collectionLinkButton-selected svg {
+.main-navBar-navBarLinkActive:hover {
   color: var(--spice-nav-active-text) !important;
 }
 
