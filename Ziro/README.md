@@ -24,6 +24,8 @@
 ![Profile](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/profile-red-dark.png)
 ### Red Light
 ![Queue](https://raw.githubusercontent.com/schnensch0/ziro/main/preview/queue-red-light.png)
+### Rose Pine
+![Playlists](screenshots/rose-pine.jpg)
 ### Rose Pine Moon
 ![Playlists](screenshots/rose-pine-moon.jpg)
 ### Rose Pine Dawn

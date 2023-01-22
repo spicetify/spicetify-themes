@@ -155,12 +155,17 @@ Here you can find a preview of all the themes. Some of them may have different c
 | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
 |                                              Dark                                               |                                            Light                                             |
 
-#### Rose Pine
+#### Rosé Pine
+
+
 
 | ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
 | :-----------------------------------------------: | :-----------------------------------------------: |
-|                       Moon                        |                       Dawn                        |
+|                       Moon                        |                       Dawn                        | 
 
+| ![Playlists](Ziro/screenshots/rose-pine.jpg)      |
+| :-----------------------------------------------: | 
+|                       Rose-Pine                        |
 
 ## Flow
 
