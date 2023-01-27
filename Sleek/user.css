@@ -122,7 +122,9 @@ NAVBAR
 
 .main-navBar-navBarLinkActive,
 .main-navBar-navBarLinkActive:focus,
-.main-navBar-navBarLinkActive:hover {
+.main-navBar-navBarLinkActive:hover,
+.main-collectionLinkButton-selected,
+.main-collectionLinkButton-selected svg {
   color: var(--spice-nav-active-text) !important;
 }
 
