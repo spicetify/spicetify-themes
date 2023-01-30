@@ -1,7 +1,7 @@
-/* 
+/*
 -------------
-TOPBAR 
-------------- 
+TOPBAR
+-------------
 */
 /* unset colors of history buttons */
 .main-topBar-historyButtons .main-topBar-button {
@@ -51,10 +51,10 @@ TOPBAR
 .main-userWidget-chevron {
   display: none;
 }
-/* 
+/*
 -------------
 NAVBAR
-------------- 
+-------------
 */
 /* remove divider gradient */
 .main-rootlist-rootlistDividerGradient {
@@ -140,7 +140,7 @@ NAVBAR
 .main-navBar-navBarLink:not(.main-navBar-navBarLinkActive):hover svg {
   color: var(--spice-text);
 }
-/* 
+/*
 ---------------
 PLAYBACK BAR
 ---------------
@@ -201,8 +201,8 @@ html:not(.fullscreen) .playback-bar {
   left: 0px;
 }
 
-.main-nowPlayingBar-nowPlayingBar:nth-last-child(2) .playback-bar {
-  bottom: 107px;
+.main-connectBar-connectBar {
+  display: none !important;
 }
 
 .player-controls__buttons {
@@ -486,9 +486,9 @@ a.x-heroCategoryCard-HeroCategoryCard {
 .collection-collectionEntityHeroCard-descriptionContainer {
   color: var(--spice-subtext) !important;
 }
-/* 
+/*
 --------------
-CONTEXT MENU 
+CONTEXT MENU
 --------------
 */
 /* change hover color when selecting in context menu */
@@ -510,9 +510,9 @@ CONTEXT MENU
 .main-contextMenu-menuItem:not(:first-child) > .main-contextMenu-dividerBefore:before {
   border-bottom: 1px solid var(--spice-button-disabled);
 }
-/* 
+/*
 -------------
-TRACKS GRID 
+TRACKS GRID
 -------------
 */
 /* change color of track titles */
@@ -578,9 +578,9 @@ TRACKS GRID
 .main-trackList-rowSectionEnd div {
   color: inherit;
 }
-/* 
+/*
 ---------------
-NEW HOME LAYOUT 
+NEW HOME LAYOUT
 ---------------
 */
 .main-topBar-navLinks a {
