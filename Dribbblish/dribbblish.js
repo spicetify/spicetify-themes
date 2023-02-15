@@ -36,7 +36,7 @@ function waitForElement(els, func, timeout = 100) {
 }
 
 waitForElement([
-    `ul[tabindex="0"]`,
+    `ul[tabindex="0"]`, 
     `ul[tabindex="0"] .GlueDropTarget--playlists.GlueDropTarget--folders`
 ], ([root, firstItem]) => {
     const listElem = firstItem.parentElement;
@@ -51,7 +51,7 @@ waitForElement([
             let [_, app, uid ] = link.pathname.split("/");
             let uri;
             if (app === "playlist") {
-                uri = Spicetify.URI.playlistV2URI(uid);
+                uri = `spotify:playlist:${uid}`;
             } else if (app === "folder") {
                 const base64 = localStorage.getItem("dribbblish:folder-image:" + uid);
                 let img = link.querySelector("img");
@@ -65,7 +65,7 @@ waitForElement([
             }
 
             Spicetify.CosmosAsync.get(
-                `sp://core-playlist/v1/playlist/${uri.toURI()}/metadata`,
+                `sp://core-playlist/v1/playlist/${uri}/metadata`, 
             { policy: { picture: true } }
             ).then(res => {
                 const meta = res.metadata;
@@ -191,7 +191,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         } else {
             tooltip.style.left = String(offsetX - ttWidth) + "px";
         }
-        tooltip.innerText = Spicetify.Player.formatTime(e) + " / " +
+        tooltip.innerText = Spicetify.Player.formatTime(e) + " / " + 
             Spicetify.Player.formatTime(Spicetify.Player.getDuration());
     }
     Spicetify.Player.addEventListener("onprogress", updateProgTime);
@@ -214,12 +214,12 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     /** @type {HTMLInputElement} */
     const filePickerInput = filePickerForm.childNodes[0];
     filePickerInput.accept = [
-        "image/jpeg",
-        "image/apng",
-        "image/avif",
-        "image/gif",
-        "image/png",
-        "image/svg+xml",
+        "image/jpeg", 
+        "image/apng", 
+        "image/avif", 
+        "image/gif", 
+        "image/png", 
+        "image/svg+xml", 
         "image/webp"
     ].join(",");
 
@@ -233,7 +233,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
             const id = Spicetify.URI.from(filePickerInput.uri).id;
             try {
                 localStorage.setItem(
-                    "dribbblish:folder-image:" + id,
+                    "dribbblish:folder-image:" + id, 
                     result
                 );
             } catch {
