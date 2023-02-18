@@ -686,14 +686,14 @@ li.GlueDropTarget {
     padding: var(--main-gap) 0;
 }
 
-.spotify__container--is-desktop .Root__top-container--right-sidebar-visible {
+.Root__top-container:has(> .main-buddyFeed-container ) {
     grid-template-areas:
         "top-bar top-bar top-bar"
         "nav-bar main-view right-sidebar"
         "nav-bar now-playing-bar right-sidebar";
 }
 
-.Root__top-container:not(.Root__top-container--right-sidebar-visible) {
+.Root__top-container:not(:has(> .main-buddyFeed-container )) {
     grid-template-areas:
         "top-bar top-bar"
         "nav-bar main-view"
