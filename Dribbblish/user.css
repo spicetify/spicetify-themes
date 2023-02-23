@@ -59,7 +59,7 @@ body {
 
 .lyrics-lyricsContainer-LyricsLine {
     font-family: var(--glue-font-family);
-    letter-spacing: -.03em !important;
+    letter-spacing: -0.03em !important;
 }
 
 .main-rootlist-rootlistDivider {
@@ -342,7 +342,7 @@ html:not(.sidebar-hide-text) .main-rootlist-expandArrow {
 }
 
 html.sidebar-hide-text .main-rootlist-expandArrow {
-    right: 4px;
+    display: none;
 }
 
 html.sidebar-hide-text .main-navBar-navBarItem a span,
@@ -404,7 +404,7 @@ html.sidebar-hide-text .main-rootlist-statusIcons {
 .progress-bar {
     --progress-bar-height: 2px;
     --fg-color: var(--spice-button);
-    --bg-color: rgba(var(--spice-rgb-text), .2);
+    --bg-color: rgba(var(--spice-rgb-text), 0.2);
 }
 
 .minimal-player .player-controls__buttons {
@@ -488,9 +488,9 @@ img.playlist-picture[src$=".svg"] {
 }
 
 .main-rootlist-rootlistItem {
-    padding-left: calc(var(--indentation)*var(--left-sidebar-item-indentation-width)) !important;
+    padding-left: calc(var(--indentation) * var(--left-sidebar-item-indentation-width)) !important;
     padding-right: 0 !important;
-    transition: padding-left .5s ease;
+    transition: padding-left 0.5s ease;
 }
 
 html.sidebar-hide-text .main-rootlist-rootlistItem {
@@ -540,7 +540,7 @@ li.GlueDropTarget {
     padding-top: calc(var(--os-windows-icon-dodge) * 32px);
 }
 
-.spotify__container--is-desktop.spotify__os--is-windows[dir=ltr] .main-topBar-container {
+.spotify__container--is-desktop.spotify__os--is-windows[dir="ltr"] .main-topBar-container {
     padding-right: calc(var(--os-windows-icon-dodge) * 135px + 32px);
 }
 
@@ -587,7 +587,7 @@ li.GlueDropTarget {
     color: var(--spice-text);
     background-color: var(--spice-button);
     opacity: 0;
-    transition: opacity,left 0.2s ease;
+    transition: opacity, left 0.2s ease;
 }
 
 .playback-bar:hover .prog-tooltip {
@@ -629,7 +629,6 @@ li.GlueDropTarget {
     justify-content: flex-start;
     flex-direction: row;
 }
-
 
 .main-playPauseButton-button svg {
     width: 32px !important;
@@ -687,14 +686,14 @@ li.GlueDropTarget {
     padding: var(--main-gap) 0;
 }
 
-.spotify__container--is-desktop .Root__top-container--right-sidebar-visible {
+.Root__top-container:has(> .main-buddyFeed-container ) {
     grid-template-areas:
         "top-bar top-bar top-bar"
         "nav-bar main-view right-sidebar"
         "nav-bar now-playing-bar right-sidebar";
 }
 
-.Root__top-container:not(.Root__top-container--right-sidebar-visible) {
+.Root__top-container:not(:has(> .main-buddyFeed-container )) {
     grid-template-areas:
         "top-bar top-bar"
         "nav-bar main-view"
@@ -777,12 +776,12 @@ html.right-expanded-cover .Root__top-container--right-sidebar-visible .main-cove
 
 .main-dropDown-dropDown,
 .x-sortBox-sortDropdown {
-    background-color: rgba(var(--spice-rgb-selected-row), .1) !important;
+    background-color: rgba(var(--spice-rgb-selected-row), 0.1) !important;
 }
 
 .connect-device-list-item:focus,
 .connect-device-list-item:hover {
-    background-color: rgba(var(--spice-rgb-selected-row), .3);
+    background-color: rgba(var(--spice-rgb-selected-row), 0.3);
 }
 
 .bookmark-filter {
@@ -807,7 +806,7 @@ html.right-expanded-cover .Root__top-container--right-sidebar-visible .main-cove
 }
 
 .main-userWidget-dropDownMenu > li > button {
-    color: rgba(var(--spice-rgb-selected-row), .7);
+    color: rgba(var(--spice-rgb-selected-row), 0.7);
     padding-left: 8px;
     text-decoration: none;
 }
@@ -888,8 +887,14 @@ section.contentSpacing {
     height: auto !important;
 }
 
+/* fix sidebar resizer position (stops from causing scroll) */
+.LayoutResizer__resize-bar {
+    top: 0;
+}
+
 /* buddy feed w/ hidden text*/
-.buddyFeed-hide-text .NdQkQZhcYIEcJnRdAYcQ {
+.buddyFeed-hide-text .NdQkQZhcYIEcJnRdAYcQ,
+.buddyFeed-hide-text .main-buddyFeed-header {
     display: none;
 }
 
@@ -915,11 +920,17 @@ section.contentSpacing {
 }
 
 /* buddy feed heading and icons  */
-.NdQkQZhcYIEcJnRdAYcQ h1 {
+.NdQkQZhcYIEcJnRdAYcQ h1,
+.main-buddyFeed-header h1 {
     color: var(--spice-sidebar-text);
 }
 
-.NdQkQZhcYIEcJnRdAYcQ {
+.main-buddyFeed-actions button {
+    color: var(--spice-sidebar-text)
+}
+
+.NdQkQZhcYIEcJnRdAYcQ,
+.main-buddyFeed-header {
     padding-left: 16px;
 }
 
