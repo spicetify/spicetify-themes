@@ -194,6 +194,7 @@ player-controls__left {
     align-items: center;
 }
 
+
 .mvRQWscG4lmAxOs4neBL,
 .main-nowPlayingBar-nowPlayingBar {
     -webkit-box-align: center;
@@ -260,12 +261,18 @@ player-controls__left {
 }
 
 .main-nowPlayingBar-right{
-    transform:  translate(0px, -80px) rotate(90deg);
+   transform:  translate(0px, -80px) rotate(90deg);
+}
+
+.mvRQWscG4lmAxOs4neBL, .control-button, .Button-sc-1dqy6lx-0, .Button-sc-1dqy6lx-0:hover {
+    transform: rotate(-90deg);
 }
 
 .volume-bar{
-    width: 0px;
-    height: 0px;
+    width: 200px;
+    height: 10px;
+    transform: translate(6px, 0px) rotate(180deg);
+    transform-origin: 50% 50%;
 }
 
 .ExtraControls > div {
@@ -276,18 +283,17 @@ player-controls__left {
     transform: rotate(-90deg);
 }
 
-
 .volume-bar > .playback-progressbar {
-    width: 75px;
-    transform: translate(-40px, 0px);
+
+    transform: translate(-25px, 0px);
 }
 
 .volume-bar > button {
-    transform: translate(-40px, 0px);
+    transform: translate(0px, 0px) rotate(-90deg);
 }
 
 .main-nowPlayingBar-left {
-    transform: translate(0px, 150%)rotate(90deg);
+    transform: translate(0px, 150%) rotate(90deg);
 }
 .main-nowPlayingWidget-nowPlaying > div{
     transform: rotate(-90deg);
