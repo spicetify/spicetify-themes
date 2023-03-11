@@ -79,7 +79,7 @@
   left: 0;
   bottom: 84px;
 }
-.main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar {
+.main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar:not(.volume-bar > .playback-progressbar) {
   bottom: 108px;
 }
 .playback-bar {
