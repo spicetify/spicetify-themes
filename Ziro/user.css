@@ -491,7 +491,7 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
   color: var(--spice-text);
 }
 /* misc */
-.hW9km7ku6_iggdWDR_Lg,
+.HiVDAl0LvHLB_YdI9xwQ,
 .lyrics-lyricsContainer-LyricsContainer {
   --lyrics-color-active: var(--spice-text) !important;
   --lyrics-color-inactive: var(--spice-subtext) !important;
@@ -499,6 +499,9 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
 }
 .lyrics-lyricsContainer-LyricsBackground {
   background-image: none;
+}
+.lyrics-lyrics-background {
+  background-color: var(--spice-main);
 }
 .jixVGx,
 .euRuBv {
