@@ -536,6 +536,10 @@ label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElemen
 }
 /*playing status icon - Playlist*/
 .CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
+  color: var(--spice-subtext);
+  top: 10px;
+}
+.main-rootlist-rootlistItemLinkActive + .main-rootlist-statusIcons .CCeu9OfWSwIAJqA49n84.ZcKzjCkYGeMizcSAP8UX {
   color: var(--spice-main);
   top: 10px;
 }
