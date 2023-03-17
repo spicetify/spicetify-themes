@@ -73,6 +73,11 @@
 .main-rootlist-rootlist .os-scrollbar {
   padding: 0 0 0 8px;
 }
+.main-rootlist-rootlistItemLinkActive .main-rootlist-expandArrow:focus,
+.main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:focus,
+.main-rootlist-rootlistItemLinkActive .main-rootlist-textWrapper:hover {
+  color: var(--spice-main);
+}
 /* player */
 .main-nowPlayingBar-center .playback-progressbar {
   position: absolute;
