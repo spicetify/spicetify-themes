@@ -230,7 +230,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
         const reader = new FileReader;
         reader.onload = (event) => {
             const result = event.target.result;
-            const id = Spicetify.URI.from(filePickerInput.uri).id;
+            const id = filePickerInput.uri.split(":").pop();
             try {
                 localStorage.setItem(
                     "dribbblish:folder-image:" + id, 
@@ -247,7 +247,7 @@ waitForElement([".Root__main-view .os-resize-observer-host"], ([resizeHost]) => 
     // context menu items for custom folder images
     new Spicetify.ContextMenu.Item("Remove folder image",
         ([uri]) => {
-            const id = Spicetify.URI.from(uri).id;
+            const id = uri.split(":").pop();
             localStorage.removeItem("dribbblish:folder-image:" + id);
             DribbblishShared.loadPlaylistImage?.call();
         },
