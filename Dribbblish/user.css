@@ -894,9 +894,7 @@ section.contentSpacing {
 
 /* buddy feed w/ hidden text*/
 .buddyFeed-hide-text .NdQkQZhcYIEcJnRdAYcQ,
-.buddyFeed-hide-text .main-buddyFeed-header {
-    display: none;
-}
+.buddyFeed-hide-text .main-buddyFeed-header
 
 .buddyFeed-hide-text .main-buddyFeed-friendActivity {
     padding: 0 0 0 4px;
@@ -1025,9 +1023,4 @@ a.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selec
 /* playbutton color */
 .main-playButton-PlayButton > button > span {
     color: var(--spice-text);
-}
-
-/* lyrics background  */
-.lyrics-lyrics-background {
-    background-color: var(--spice-main);
 }
