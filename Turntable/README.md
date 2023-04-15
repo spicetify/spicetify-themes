@@ -43,14 +43,14 @@ spicetify config extensions fullAppDisplay.js
 spicetify apply
 ```
 
-1. put **Turntable** into the **.config/spicetify**
+2. put **Turntable** into the **.config/spicetify**
 
 ```shell
 cd spicetify-themes
 cp -r Turntable ~/.config/spicetify/Themes
 ```
 
-1. select the theme, then apply
+3. select the theme, then apply
 
 ```shell
 spicetify config current_theme Turntable
@@ -72,7 +72,7 @@ rm -r ~/.config/spicetify/Themes/Turntable
 spicetify config current_theme SpicetifyDefault
 ```
 
-1. remove extension - Full App Display
+3. remove extension - Full App Display
 
 ```shell
 spicetify config extensions fullAppDisplay.js-
