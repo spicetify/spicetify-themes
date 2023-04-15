@@ -1,4 +1,4 @@
-spicetify config current_theme " " extensions dribbblish.js-
+spicetify config current_theme " "
 
 $configPath = spicetify -c
 $configFile = Get-Content $configPath
