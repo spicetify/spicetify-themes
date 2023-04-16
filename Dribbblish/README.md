@@ -57,11 +57,8 @@ Run these commands:
 In **Bash**:
 ```bash
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
-mkdir -p ../../Extensions
-cp dribbblish.js ../../Extensions/.
-spicetify config extensions dribbblish.js
 spicetify config current_theme Dribbblish color_scheme base
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
 spicetify apply
 ```
 
@@ -69,10 +66,8 @@ spicetify apply
 In **Powershell**:
 ```powershell
 cd "$(spicetify -c | Split-Path)\Themes\Dribbblish"
-Copy-Item dribbblish.js ..\..\Extensions
-spicetify config extensions dribbblish.js
 spicetify config current_theme Dribbblish color_scheme base
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
 spicetify apply
 ```
 
@@ -97,12 +92,9 @@ Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/
 ```
 
 ## Manual uninstall 
-Remove the dribbblish script with the following commands 
+Remove the dribbblish theme with the following commands 
 
 ```
-spicetify config extensions dribbblish.js-
-```
-And remove Patch lines you added in config file earlier. Finally, run:
-```
+spicetify config current_theme " " color_scheme " "
 spicetify apply
 ```

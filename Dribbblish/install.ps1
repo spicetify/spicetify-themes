@@ -26,13 +26,9 @@ if (Test-Path $destPath) {
 }
 Copy-Item $dribPath $destPath -Recurse
 
-# Copy extension file
-New-Item -ItemType Directory -Force "$spicePath\Extensions"
-Copy-Item "$destPath\dribbblish.js" "$spicePath\Extensions"
-
 Write-Host "Configuring:" -ForegroundColor Green
 spicetify
-spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 current_theme Dribbblish extensions dribbblish.js
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1 current_theme Dribbblish
 
 # Add patch
 $configFile = Get-Content "$spicePath\config-xpui.ini"
