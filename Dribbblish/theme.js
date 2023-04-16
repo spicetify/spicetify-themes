@@ -119,7 +119,7 @@ waitForElement([".Root__right-sidebar .LayoutResizer__input, .Root__right-sideba
     observer.observe(resizer, { attributes: true, attributeFilter: ["value"] });
     function updateVariable() {
         let value = resizer.value;
-        if (value == 320) {
+        if (value == 280) {
             value = 72;
             document.documentElement.classList.add("buddyFeed-hide-text");
         } else {
