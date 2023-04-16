@@ -84,6 +84,14 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 <img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" >
 
+## Matte
+
+![Matte](Matte/screenshots/queue.png)
+
+## Nightlight
+
+![Nightlight](Nightlight/screenshots/nightlight.png) 
+
 ## Onepunch
 
 #### Dark
@@ -155,12 +163,17 @@ Here you can find a preview of all the themes. Some of them may have different c
 | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
 |                                              Dark                                               |                                            Light                                             |
 
-#### Rose Pine
+#### Rosé Pine
+
+
 
 | ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
 | :-----------------------------------------------: | :-----------------------------------------------: |
-|                       Moon                        |                       Dawn                        |
+|                       Moon                        |                       Dawn                        | 
 
+| ![Playlists](Ziro/screenshots/rose-pine.jpg)      |
+| :-----------------------------------------------: | 
+|                       Rose-Pine                        |
 
 ## Flow
 
@@ -181,4 +194,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Moonlight
 
-![BurntSienna Screenshot](Moonlight\screenshots\Preview.gif)
+![Moonlight Screenshot](Moonlight\screenshots\Preview.gif)
+
+### Blossom
+<img src="https://user-images.githubusercontent.com/72624799/203471073-4a5e6cf0-a5dc-4ecc-9a12-56d5fc716ac4.png" alt="img"> 
+

@@ -17,7 +17,6 @@ h1 {
 /* Artist name in player */
 .main-nowPlayingWidget-nowPlaying .main-trackInfo-artists {
 	overflow: unset;
-	padding-top: 5px;
 	font-size: 15px;
 }
 
