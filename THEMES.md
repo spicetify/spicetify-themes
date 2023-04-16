@@ -84,9 +84,11 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 <img src="https://github.com/CharlieS1103/Glaze-theme/blob/main/screenshots/gray.png" alt="img" >
 
-## Nightlight
+## Matte
 
-### Dark
+![Matte](Matte/screenshots/queue.png)
+
+## Nightlight
 
 ![Nightlight](Nightlight/screenshots/nightlight.png) 
 
