@@ -92,12 +92,9 @@ Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/
 ```
 
 ## Manual uninstall 
-Remove the dribbblish script with the following commands 
+Remove the dribbblish theme with the following commands 
 
 ```
-spicetify config inject_theme_js 0
-```
-And remove Patch lines you added in config file earlier. Finally, run:
-```
+spicetify config current_theme " " color_scheme " "
 spicetify apply
 ```
