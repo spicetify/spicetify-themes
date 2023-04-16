@@ -48,6 +48,10 @@
   background-color: unset !important;
 }
 
+.home-icon {
+    color: rgba(var(--spice-rgb-selected-row),.7);
+}
+
 /* top queue */
 .queue-tabBar-active {
   background-color: var(--spice-card) !important;
@@ -458,13 +462,9 @@ input {
   --progress-bar-height: 5px !important;
 }
 
-.progress-bar__bg {
-  background-color: rgba(var(--spice-rgb-button-disabled), 0.7) !important;
-}
 
-.progress-bar--is-active .progress-bar__fg,
-:not(.no-focus-outline) .progress-bar:focus-within .progress-bar__fg {
-  background-color: var(--fg-color);
+.x-progressBar-fillColor {
+    background-color: var(--spice-button) !important;
 }
 
 .ehgHWV{
