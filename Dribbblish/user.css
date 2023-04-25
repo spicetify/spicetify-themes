@@ -701,6 +701,7 @@ li.GlueDropTarget {
 
 .Root__top-container {
     padding: var(--main-gap) 0;
+    position: fixed;
 }
 
 .Root__top-container:has(> .main-buddyFeed-container):not(
