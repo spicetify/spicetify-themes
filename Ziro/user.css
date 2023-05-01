@@ -556,5 +556,8 @@ label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElemen
 }
 /*playing status icon - Liked Songs*/
 .CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
-  color: var(--spice-main);
+  color: var(--spice-text);
+}
+.main-collectionLinkButton-selected .main-rootlist-statusIcons .CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
+  color: var(--spice-shadow);
 }
