@@ -1,27 +1,27 @@
 # Dribbblish
 
 ### Base
-![base](base.png)
+![base](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/base.png)
 ### White
-![white](white.png)
+![white](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/white.png)
 ### Dark
-![dark](dark.png)
+![dark](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/dark.png)
 ### Nord-Light
-![nord-light](nord-light.png)
+![nord-light](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/nord-light.png)
 ### Nord-Dark
-![nord-dark](nord-dark.png)
+![nord-dark](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/nord-dark.png)
 ### Beach-Sunset
-![beach-sunset](beach-sunset.png)
+![beach-sunset](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/beach-sunset.png)
 ### Purple
-![purple](purple.png)
+![purple](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/purple.png)
 ### Samourai
-![samourai](samourai.png)
+![samourai](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/samourai.png)
 ### Gruvbox
-![gruvbox](gruvbox.png)
+![gruvbox](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/gruvbox.png)
 ### Rosé Pine
-![rosepine](rosepine.png)
+![rosepine](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/rosepine.png)
 ### Lunar
-![lunar](lunar.png)
+![lunar](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/lunar.png)
 
 ##  Features
 ### Resizable sidebar

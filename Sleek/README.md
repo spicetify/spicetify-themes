@@ -2,55 +2,55 @@
 
 ### BladeRunner
 
-![BladeRunner](bladerunner.png)
+![BladeRunner](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/bladerunner.png)
 
 ### Cherry
 
-![Cherry](cherry.png)
+![Cherry](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/cherry.png)
 
 ### Coral
 
-![Coral](coral.png)
+![Coral](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/coral.png)
 
 ### Deep
 
-![Deep](deep.png)
+![Deep](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/deep.png)
 
 ### Deeper
 
-![Deeper](deeper.png)
+![Deeper](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/deeper.png)
 
 ### Elementary
 
-![Elementary](elementary.png)
+![Elementary](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/elementary.png)
 
 ### Futura
 
-![Futura](futura.png)
+![Futura](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/futura.png)
 
 ### Nord
 
-![Nord](nord.png)
+![Nord](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/nord.png)
 
 ### Psycho
 
-![Psycho](psycho.png)
+![Psycho](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/psycho.png)
 
 ### UltraBlack
 
-![UltraBlack](ultrablack.png)
+![UltraBlack](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/ultrablack.png)
 
 ### Wealthy
 
-![Wealthy](wealthy.png)
+![Wealthy](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/wealthy.png)
 
 ### Dracula
 
-![Dracula](dracula.png)
+![Dracula](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/dracula.png)
 
 ### VantaBlack
 
-![VantaBlack](vantablack.png)
+![VantaBlack](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Sleek/vantablack.png)
 
 ## Info
 

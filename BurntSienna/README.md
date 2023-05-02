@@ -1,7 +1,7 @@
 # BurntSienna
 
 ## Screenshots
-![BurntSienna](./screenshot.png)
+![BurntSienna](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/BurntSienna/screenshot.png)
 
 ## More
 Montserrat Font is necessary, it is available on Google Fonts:

@@ -9,13 +9,13 @@ View the **CHANGELOG** [here](https://github.com/grasonchan/spotify-spice/blob/m
 ## Screenshots
 
 <div align="center">
-  <img src="screenshots/turntable.png" alt="turntable">
+  <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/screenshots/turntable.png" alt="turntable">
 </div>
 <div align="center">
-  <img src="screenshots/fad.png" alt="full app display">
+  <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/screenshots/fad.png" alt="full app display">
 </div>
 <div align="center">
-  <img src="screenshots/fad_vertical.png" alt="full app display - vertical mode">
+  <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/screenshots/fad_vertical.png" alt="full app display - vertical mode">
 </div>
 
 ## More

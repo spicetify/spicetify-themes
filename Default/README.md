@@ -4,7 +4,7 @@ Default look of Spotify with different color schemes.
 
 ## Screenshot
 
-![screenshot](./ocean.png)
+![screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Default/ocean.png)
 
 ## Info
 

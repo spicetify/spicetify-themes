@@ -3,22 +3,22 @@
 ## Screenshots
 
 ### BIB
-![BIB Screenshot](bib.png)
+![BIB Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/bib.png)
 
 ### Psycho
-![Psycho Screenshot](psycho.png)
+![Psycho Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/psycho.png)
 
 ### Deeper
-![Deeper Screenshot](deeper.png)
+![Deeper Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/deeper.png)
 
 ### Mono
-![Mono Screenshot](mono.png)
+![Mono Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/mono.png)
 
 ### Golden
-![Golden Screenshot](golden.png)
+![Golden Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/golden.png)
 
 ### Graytone-Blue
-![Graytone-Blue Screenshot](graytone-blue.png)
+![Graytone-Blue Screenshot](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dreary/graytone-blue.png)
 
 
 ## Important

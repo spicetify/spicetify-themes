@@ -2,9 +2,9 @@
 
 ## Screenshots
 
-![Queue Page](screenshots/queue.png)
-![Search Page](screenshots/search.png)
-![Customized Config](screenshots/customized.png)
+![Queue Page](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Matte/screenshots/queue.png)
+![Search Page](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Matte/screenshots/search.png)
+![Customized Config](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Matte/screenshots/customized.png)
 
 ## More
 
@@ -25,7 +25,7 @@ Put this snippet into your `user.css`
     background-size: 135px 31px; /* depends on the set page zoom - this value is for 100% */
 }
 ```
-![Window Controls](screenshots/winctrl.png)
+![Window Controls](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Matte/screenshots/winctrl.png)
 
 ### Credits
 Based on [Matte by KDr3w](https://www.deviantart.com/kdr3w/art/Matte-758699852)  

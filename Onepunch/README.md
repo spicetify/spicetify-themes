@@ -4,18 +4,18 @@
 
 #### Dark
 
-|   ![dark_home](./screenshots/dark_home.png)   |   ![dark_album](./screenshots/dark_album.png)   | ![dark_playlist](./screenshots/dark_playlist.png) |
+|   ![dark_home](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/dark_home.png)   |   ![dark_album](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/dark_album.png)   | ![dark_playlist](./screenshots/dark_playlist.png) |
 | :-------------------------------------------: | :---------------------------------------------: | :-----------------------------------------------: |
 |                     home                      |                      album                      |                     playlist                      |
-| ![dark_podcast](screenshots/dark_podcast.png) | ![dark_profile](./screenshots/dark_profile.png) |
+| ![dark_podcast](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/dark_podcast.png) | ![dark_profile](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/dark_profile.png) |
 |                    podcat                     |                     profile                     |
 
 #### Light
 
-|   ![light_home](./screenshots/light_home.png)   |   ![light_album](./screenshots/light_album.png)   | ![light_playlist](./screenshots/light_playlist.png) |
+|   ![light_home](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/light_home.png)   |   ![light_album](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/light_album.png)   | ![light_playlist](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/light_playlist.png) |
 | :---------------------------------------------: | :-----------------------------------------------: | :-------------------------------------------------: |
 |                      home                       |                       album                       |                      playlist                       |
-| ![light_podcast](screenshots/light_podcast.png) | ![light_profile](./screenshots/light_profile.png) |
+| ![light_podcast](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/light_podcast.png) | ![light_profile](https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Onepunch/screenshots/light_profile.png) |
 |                     podcat                      |                      profile                      |
 
 ## More
