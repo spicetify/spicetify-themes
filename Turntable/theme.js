@@ -1,6 +1,15 @@
 window.addEventListener("load", rotateTurntable = () => {
   const SpicetifyOrigin = Spicetify.Player.origin;
-  const fadBtn = document.querySelector(".main-topBar-button[title='Full App Display']");
+  fadBtn = document.querySelector(".main-topBar-button[title='Full App Display']");
+  if (!fadBtn){
+    const possibleFadBtn = document.querySelectorAll(".main-topBar-button")
+    for (const btn of possibleFadBtn) {
+      if (btn._tippy !== undefined && btn._tippy.props.content === "Full App Display") {
+        fadBtn = btn;
+        break;
+      }
+    }
+  }
 
   if (!SpicetifyOrigin?._state || !fadBtn) {
     setTimeout(rotateTurntable, 250);
@@ -289,8 +298,12 @@ window.addEventListener("load", rotateTurntable = () => {
   previousSong.addEventListener("dblclick", handleFadBtn);
   nextSong.addEventListener("dblclick", handleFadBtn);
 
-  fadBtn.addEventListener("click", () => {
+  function fadBtnClick(){
     const fullAppDisplay = document.querySelector("#full-app-display");
+    if (!fullAppDisplay){
+      setTimeout(fadBtnClick, 100);
+      return;
+    }
 
     fullAppDisplay.appendChild(songPreviewContainer);
 
@@ -311,5 +324,8 @@ window.addEventListener("load", rotateTurntable = () => {
     handleFadHeart();
     handleTracksNamePreview();
     handleRotate();
-  });
+  }
+
+  fadBtn.addEventListener("click", () => fadBtnClick());
+
 });
