@@ -5,10 +5,10 @@
 - add navbar top margin
 
 #### Before
-![Before](Ziro/Before.png)
+![Before](Ziro/screenshots/Before.png)
 
 ### After
-![After](Ziro/After.png)
+![After](Ziro/screenshots/After.png)
 
 This is a collection of themes for [spicetify](https://github.com/spicetify/spicetify-cli), a command-line tool to customize Spotify.
 
