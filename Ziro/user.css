@@ -12,6 +12,9 @@
 .main-topBar-overlay, .main-view-container, .Root__nav-bar{
   background-color: var(--spice-main);
 }
+.Root__nav-bar {
+  margin-top: 1rem;
+}
 .main-topBar-background {
   opacity: 1 !important;
 }
