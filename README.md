@@ -1,4 +1,14 @@
-# spicetify community themes
+# macOS Fork - spicetify community themes
+
+## Changes in this fork
+
+- add navbar top margin
+
+#### Before
+![Before](Ziro/Before.png)
+
+### After
+![After](Ziro/After.png)
 
 This is a collection of themes for [spicetify](https://github.com/spicetify/spicetify-cli), a command-line tool to customize Spotify.
 
