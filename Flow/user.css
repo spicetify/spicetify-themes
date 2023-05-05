@@ -194,7 +194,6 @@ player-controls__left {
     align-items: center;
 }
 
-
 .mvRQWscG4lmAxOs4neBL,
 .main-nowPlayingBar-nowPlayingBar {
     -webkit-box-align: center;
@@ -283,8 +282,8 @@ player-controls__left {
     transform: rotate(-90deg);
 }
 
-.volume-bar > .playback-progressbar {
 
+.volume-bar > .playback-progressbar {
     transform: translate(-25px, 0px);
 }
 
