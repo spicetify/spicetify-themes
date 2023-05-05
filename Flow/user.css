@@ -260,7 +260,7 @@ player-controls__left {
 }
 
 .main-nowPlayingBar-right{
-   transform:  translate(0px, -80px) rotate(90deg);
+    transform:  translate(0px, -80px) rotate(90deg);
 }
 
 .mvRQWscG4lmAxOs4neBL, .control-button, .Button-sc-1dqy6lx-0, .Button-sc-1dqy6lx-0:hover {
