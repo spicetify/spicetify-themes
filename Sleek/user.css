@@ -262,6 +262,11 @@ p.main-buddyFeed-timestamp.main-type-finale,
   color: var(--spice-subtext);
 }
 
+.spotify__os--is-windows .nav-ylx .main-buddyFeed-header {
+	padding-left: 0;
+    padding-right: 5px;
+}
+
 /* add gradient */
 .main-buddyFeed-friendsFeedContainer {
   background-image: linear-gradient(to bottom left, var(--spice-sidebar) 0%, var(--spice-player) 100%) !important;

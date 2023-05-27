@@ -49,7 +49,7 @@
 		"usercss": "Dribbblish/user.css",
 		"schemes": "Dribbblish/color.ini",
 		"include": [
-			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/dribbblish.js"
+			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/theme.js"
 		],
 		"authors": [
 			{
@@ -108,7 +108,7 @@
 		"usercss": "Turntable/user.css",
 		"schemes": "Turntable/color.ini",
 		"include": [
-			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/turntable.js"
+			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/theme.js"
 		],
 		"authors": [
 			{

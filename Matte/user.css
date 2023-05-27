@@ -9,7 +9,6 @@
     --user-widget-name-display: none; /* block | none */
 
     /* sidebar vars */
-    --create-playlist-liked-songs-display: none; /* flex | none */
     --sidebar-button-border-radius: 4px;
 
     /* player vars */
@@ -27,7 +26,7 @@
     /* rearrange grid layout */
     grid-template-areas:
         "top-bar top-bar top-bar"
-        "nav-bar main-view buddy-feed"
+        "nav-bar main-view right-sidebar"
         "now-playing-bar now-playing-bar now-playing-bar";
     grid-template-rows: auto 1fr auto;
 }
@@ -114,11 +113,6 @@
     /* replace cursor on layout resize */
     cursor: w-resize;
 }
-.main-createPlaylistButton-button,
-.main-collectionLinkButton-collectionLinkButton {
-    /* remove create playlist & liked songs buttons */
-    display: var(--create-playlist-liked-songs-display);
-}
 .main-rootlist-rootlist {
     /* remove top margin */
     margin-top: 0;
@@ -140,6 +134,55 @@
     transition-property: none;
 }
 
+.main-collectionLinkButton-collectionLinkButton,
+.main-createPlaylistButton-button {
+    color: var(--spice-subtext);
+}
+
+.main-likedSongsButton-likedSongsIcon,
+.main-createPlaylistButton-createPlaylistIcon {
+    background: var(--spice-subtext);
+}
+
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
+.main-collectionLinkButton-collectionLinkButton
+    .main-collectionLinkButton-collectionLinkText,
+.main-createPlaylistButton-button {
+    /* make create playlist & liked songs same as other nav items */
+    opacity: 1;
+}
+
+.main-collectionLinkButton-collectionLinkButton:hover,
+.main-createPlaylistButton-button:hover {
+    color: var(--spice-text);
+}
+
+.main-likedSongsButton-likedSongsIcon > svg {
+    color: var(--spice-sidebar);
+}
+
+.main-createPlaylistButton-button:hover
+    .main-createPlaylistButton-createPlaylistIcon,
+.main-collectionLinkButton-collectionLinkButton:hover
+    .main-likedSongsButton-likedSongsIcon {
+    background: var(--spice-text);
+}
+
+.main-collectionLinkButton-collectionLinkButton.active {
+    background: var(--spice-button-active) !important;
+    color: var(--spice-sidebar) !important;
+}
+.main-collectionLinkButton-collectionLinkButton.active
+    .main-likedSongsButton-likedSongsIcon {
+    background: var(--spice-sidebar);
+}
+
+.main-collectionLinkButton-collectionLinkButton.active
+    .main-likedSongsButton-likedSongsIcon
+    > svg {
+    color: var(--spice-button-active);
+}
+
 /*** main view */
 .main-view-container__scroll-node-child-spacer {
     /* remove main view padding */
@@ -157,13 +200,15 @@
     border-bottom: 1px solid rgba(var(--spice-rgb-selected-row), 0.1);
     padding: 16px 0;
 }
-.cWsvKZ, .bIeVjB {
+.cWsvKZ,
+.bIeVjB {
     /* search type active tab */
     border-radius: var(--tab-border-radius);
     color: var(--spice-main);
     background-color: var(--spice-button-active) !important;
 }
-.dwbjqG, .eQrChW {
+.dwbjqG,
+.eQrChW {
     /* search type tabs */
     border-radius: var(--tab-border-radius);
     color: var(--spice-subtext);
@@ -256,9 +301,17 @@
 }
 
 /*** buddy feed / friend activity bar */
-.main-buddyFeed-buddyFeed {
-    /* remove buddy feed shadow */
-    box-shadow: none;
+.spotify__os--is-windows .main-buddyFeed-content {
+    margin-top: 0;
+}
+
+.main-buddyFeed-friendsFeedContainer {
+    background-color: var(--spice-sidebar);
+}
+
+.TypeElement-balladBold-textBase-type,
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName {
+    color: var(--spice-sub-text);
 }
 
 /*** now playing bar */
@@ -389,21 +442,6 @@
 .fYSGgd {
     /* track list play button color */
     background-color: var(--spice-button-active);
-}
-.main-createPlaylistButton-text,
-.main-collectionLinkButton-collectionLinkText {
-    /* fix create playlist & liked songs text */
-    color: var(--spice-subtext);
-}
-.main-createPlaylistButton-createPlaylistIcon,
-.main-likedSongsButton-likedSongsIcon {
-    /* fix create playlist & liked songs icon */
-    background: var(--spice-subtext);
-}
-.main-createPlaylistButton-createPlaylistIcon,
-.main-collectionLinkButton-collectionLinkButton {
-    /* fix create playlist & liked songs icon */
-    color: var(--spice-sidebar);
 }
 .collection-active-icon,
 .collection-icon,

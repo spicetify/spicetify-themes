@@ -84,7 +84,10 @@
   left: 0;
   bottom: 84px;
 }
-.main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar:not(.volume-bar > .playback-progressbar) {
+/* for older versions */
+.main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar:not(.volume-bar > .playback-progressbar),
+/* for new version */
+.main-nowPlayingBar-nowPlayingBar:not(:only-child) .playback-progressbar:not(.volume-bar__slider-container > .playback-progressbar) {
   bottom: 108px;
 }
 .playback-bar {
@@ -556,5 +559,8 @@ label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElemen
 }
 /*playing status icon - Liked Songs*/
 .CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
+  color: var(--spice-text);
+}
+.main-collectionLinkButton-selected .main-rootlist-statusIcons .CCeu9OfWSwIAJqA49n84.Frn4juLXf6zInWBEFFzr {
   color: var(--spice-main);
 }

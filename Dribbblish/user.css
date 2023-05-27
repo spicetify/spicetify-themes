@@ -14,14 +14,16 @@ html.buddyFeed-hide-text {
 
 @font-face {
     font-family: "Google Sans Display";
-    src: url("glue-resources/fonts/GoogleSansDisplayRegular.woff2") format("woff2");
+    src: url("glue-resources/fonts/GoogleSansDisplayRegular.woff2")
+        format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Google Sans Display";
-    src: url("glue-resources/fonts/GoogleSansDisplayMedium.woff2") format("woff2");
+    src: url("glue-resources/fonts/GoogleSansDisplayMedium.woff2")
+        format("woff2");
     font-style: normal;
     font-weight: 500;
 }
@@ -41,10 +43,14 @@ html.buddyFeed-hide-text {
 }
 
 body {
-    --glue-font-family: "Google Sans Display", "Roboto", spotify-circular, spotify-circular-cyrillic, spotify-circular-arabic, spotify-circular-hebrew, Helvetica Neue, helvetica, arial,
+    --glue-font-family: "Google Sans Display", "Roboto", spotify-circular,
+        spotify-circular-cyrillic, spotify-circular-arabic,
+        spotify-circular-hebrew, Helvetica Neue, helvetica, arial,
         Hiragino Kaku Gothic Pro, Meiryo, MS Gothic, sans-serif;
-    --info-font-family: "Roboto", spotify-circular, spotify-circular-cyrillic, spotify-circular-arabic, spotify-circular-hebrew, Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo,
-        MS Gothic, sans-serif;
+    --info-font-family: "Roboto", spotify-circular, spotify-circular-cyrillic,
+        spotify-circular-arabic, spotify-circular-hebrew, Helvetica Neue,
+        helvetica, arial, Hiragino Kaku Gothic Pro, Meiryo, MS Gothic,
+        sans-serif;
     font-family: var(--glue-font-family);
     letter-spacing: normal;
 }
@@ -259,7 +265,11 @@ span.artist-artistVerifiedBadge-badge svg > path:last-of-type {
 .main-nowPlayingBar-container {
     border-radius: 0 0 var(--main-corner-radius) var(--main-corner-radius);
     background-color: unset;
-    background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%);
+    background: radial-gradient(
+        ellipse at right 50% bottom -80px,
+        rgba(var(--spice-rgb-sidebar), 0.55),
+        var(--spice-main) 60%
+    );
     border-top: 0;
     min-width: 518px;
 }
@@ -488,7 +498,9 @@ img.playlist-picture[src$=".svg"] {
 }
 
 .main-rootlist-rootlistItem {
-    padding-left: calc(var(--indentation) * var(--left-sidebar-item-indentation-width)) !important;
+    padding-left: calc(
+        var(--indentation) * var(--left-sidebar-item-indentation-width)
+    ) !important;
     padding-right: 0 !important;
     transition: padding-left 0.5s ease;
 }
@@ -532,7 +544,8 @@ li.GlueDropTarget {
     padding-top: calc(var(--os-windows-icon-dodge) * 24px);
 }
 
-.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows .main-navBar-entryPoints {
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows
+    .main-navBar-entryPoints {
     padding-top: calc(var(--os-windows-icon-dodge) * 12px + 12px);
 }
 
@@ -540,7 +553,8 @@ li.GlueDropTarget {
     padding-top: calc(var(--os-windows-icon-dodge) * 32px);
 }
 
-.spotify__container--is-desktop.spotify__os--is-windows[dir="ltr"] .main-topBar-container {
+.spotify__container--is-desktop.spotify__os--is-windows[dir="ltr"]
+    .main-topBar-container {
     padding-right: calc(var(--os-windows-icon-dodge) * 135px + 32px);
 }
 
@@ -549,8 +563,10 @@ li.GlueDropTarget {
 }
 
 /** Linux-specific remove padding */
-.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-entryPoints,
-.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux .main-navBar-navBar {
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux
+    .main-navBar-entryPoints,
+.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-linux
+    .main-navBar-navBar {
     padding-top: 0;
 }
 
@@ -652,7 +668,8 @@ li.GlueDropTarget {
 }
 
 .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
-.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText,
+.main-collectionLinkButton-collectionLinkButton
+    .main-collectionLinkButton-collectionLinkText,
 .main-createPlaylistButton-button {
     opacity: 1;
 }
@@ -686,14 +703,27 @@ li.GlueDropTarget {
     padding: var(--main-gap) 0;
 }
 
-.Root__top-container:has(> .main-buddyFeed-container ) {
+.Root__top-container:has(> .main-buddyFeed-container):not(
+        .Root__top-container--right-sidebar-hidden
+    ) {
     grid-template-areas:
         "top-bar top-bar top-bar"
         "nav-bar main-view right-sidebar"
         "nav-bar now-playing-bar right-sidebar";
 }
 
-.Root__top-container:not(:has(> .main-buddyFeed-container )) {
+/* for spotify v prior to 1.2.9 */
+
+.Root__top-container:not(:has(> .main-buddyFeed-container)) {
+    grid-template-areas:
+        "top-bar top-bar"
+        "nav-bar main-view"
+        "nav-bar now-playing-bar";
+    padding-right: var(--main-gap);
+}
+
+/* for spotify v 1.2.9 */
+.Root__top-container.Root__top-container--right-sidebar-hidden {
     grid-template-areas:
         "top-bar top-bar"
         "nav-bar main-view"
@@ -727,7 +757,9 @@ html.right-expanded-cover .main-coverSlotExpanded-container {
     left: unset;
 }
 
-html.right-expanded-cover .Root__top-container--right-sidebar-visible .main-coverSlotExpanded-container {
+html.right-expanded-cover
+    .Root__top-container--right-sidebar-visible
+    .main-coverSlotExpanded-container {
     right: calc(var(--main-gap) + var(--panel-width) + 10px);
     left: unset;
 }
@@ -871,13 +903,21 @@ section.contentSpacing {
 }
 
 /* add fade to sidebar playlist list */
-.main-navBar-navBar .os-viewport.os-viewport-native-scrollbars-invisible[fade="full"] {
-    -webkit-mask-image: linear-gradient(transparent 0%, black 10%, black 90%, transparent 100%);
+.main-navBar-navBar
+    .os-viewport.os-viewport-native-scrollbars-invisible[fade="full"] {
+    -webkit-mask-image: linear-gradient(
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
 }
-.main-navBar-navBar .os-viewport.os-viewport-native-scrollbars-invisible[fade="top"] {
+.main-navBar-navBar
+    .os-viewport.os-viewport-native-scrollbars-invisible[fade="top"] {
     -webkit-mask-image: linear-gradient(transparent 0%, black 10%);
 }
-.main-navBar-navBar .os-viewport.os-viewport-native-scrollbars-invisible[fade="bottom"] {
+.main-navBar-navBar
+    .os-viewport.os-viewport-native-scrollbars-invisible[fade="bottom"] {
     -webkit-mask-image: linear-gradient(black 90%, transparent 100%);
 }
 
@@ -893,6 +933,11 @@ section.contentSpacing {
 }
 
 /* buddy feed w/ hidden text*/
+
+.buddyFeed-hide-text .Root__right-sidebar {
+    width: 72px !important;
+}
+
 .buddyFeed-hide-text .NdQkQZhcYIEcJnRdAYcQ,
 .buddyFeed-hide-text .main-buddyFeed-header {
     display: none;
@@ -926,12 +971,12 @@ section.contentSpacing {
 }
 
 .main-buddyFeed-actions button {
-    color: var(--spice-sidebar-text)
+    color: var(--spice-sidebar-text);
 }
 
 .NdQkQZhcYIEcJnRdAYcQ,
 .main-buddyFeed-header {
-    padding-left: 16px;
+    padding-left: 0;
 }
 
 .spotify__os--is-windows .zuwPpHAEtIqahnB2u9NR {
@@ -988,7 +1033,8 @@ a.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selec
 }
 
 /* keep progress knob on page : important for js to work */
-.progress-bar:not(:hover):not(:focus):not(.DuvrswZugGajIFNXObAr) .progress-bar__slider {
+.progress-bar:not(:hover):not(:focus):not(.DuvrswZugGajIFNXObAr)
+    .progress-bar__slider {
     display: block;
     visibility: hidden;
 }
@@ -1002,15 +1048,29 @@ a.main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selec
     transition: left 1s linear;
 }
 
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .x-progressBar-fillColor,
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .progress-bar__slider {
+.playback-progressbar-isInteractive
+    .DuvrswZugGajIFNXObAr
+    .x-progressBar-fillColor,
+.playback-progressbar-isInteractive
+    .DuvrswZugGajIFNXObAr
+    .progress-bar__slider {
     transition: none;
 }
 
 /* marketplace page  */
 .marketplace-header__left h1,
 .marketplace-card-type-heading {
-    font-family: var(--font-family, CircularSpTitle, CircularSpTitle-Tall, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif));
+    font-family: var(
+        --font-family,
+        CircularSpTitle,
+        CircularSpTitle-Tall,
+        CircularSp-Arab,
+        CircularSp-Hebr,
+        CircularSp-Cyrl,
+        CircularSp-Grek,
+        CircularSp-Deva,
+        var(--fallback-fonts, sans-serif)
+    );
 }
 
 [dir="ltr"] .collection-collection-tabBar {
