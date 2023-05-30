@@ -703,7 +703,7 @@ li.GlueDropTarget {
     padding: var(--main-gap) 0;
 }
 
-.Root__top-container:has(> .main-buddyFeed-container):not(
+.Root__top-container:has(> .Root__right-sidebar > .main-buddyFeed-container):not(
         .Root__top-container--right-sidebar-hidden
     ) {
     grid-template-areas:
@@ -714,7 +714,7 @@ li.GlueDropTarget {
 
 /* for spotify v prior to 1.2.9 */
 
-.Root__top-container:not(:has(> .main-buddyFeed-container)) {
+.Root__top-container:not(:has(> .Root__right-sidebar > .main-buddyFeed-container)) {
     grid-template-areas:
         "top-bar top-bar"
         "left-sidebar main-view"
