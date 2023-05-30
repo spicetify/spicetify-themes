@@ -708,8 +708,8 @@ li.GlueDropTarget {
     ) {
     grid-template-areas:
         "top-bar top-bar top-bar"
-        "nav-bar main-view right-sidebar"
-        "nav-bar now-playing-bar right-sidebar";
+        "left-sidebar main-view right-sidebar"
+        "left-sidebar now-playing-bar right-sidebar";
 }
 
 /* for spotify v prior to 1.2.9 */
@@ -717,8 +717,8 @@ li.GlueDropTarget {
 .Root__top-container:not(:has(> .main-buddyFeed-container)) {
     grid-template-areas:
         "top-bar top-bar"
-        "nav-bar main-view"
-        "nav-bar now-playing-bar";
+        "left-sidebar main-view"
+        "left-sidebar now-playing-bar";
     padding-right: var(--main-gap);
 }
 
@@ -726,8 +726,8 @@ li.GlueDropTarget {
 .Root__top-container.Root__top-container--right-sidebar-hidden {
     grid-template-areas:
         "top-bar top-bar"
-        "nav-bar main-view"
-        "nav-bar now-playing-bar";
+        "left-sidebar main-view"
+        "left-sidebar now-playing-bar";
     padding-right: var(--main-gap);
 }
 
