@@ -90,13 +90,19 @@ Here you can find a preview of all the themes. Some of them may have different c
 ![Matte](Matte/screenshots/ylx-matte.png)
 
 #### Periwinkle
-![Periwinkle](Matte/screenshots/ylx-periwinkle.png)
+
+| ![Periwinkle](Matte/screenshots/ylx-periwinkle.png) | ![Periwkinle-Dark](Matte/screenshots/ylx-periwinkle-dark.png) |
+| :-------------------------------------------------: | :-----------------------------------------------------------: |
+|                        Light                        |                            Dark                               |
 
 #### Porcelain
 ![Porcelain](Matte/screenshots/ylx-porcelain.png)
 
 #### Gray
 ![Gray](Matte/screenshots/ylx-gray.png)
+| ![Gray-Light](Matte/screenshots/ylx-gray-light.png) | ![Gray-Dark1](Matte/screenshots/ylx-gray-dark1.png) |
+| :-------------------------------------------------: | :-------------------------------------------------: |
+|                        Light                        |                       Dark                          |
 
 ## Nightlight
 
