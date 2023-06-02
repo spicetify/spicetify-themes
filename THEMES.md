@@ -86,31 +86,17 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Matte
 
-### Matte
+#### Matte
 ![Matte](Matte/screenshots/ylx-matte.png)
 
-### Periwinkle
+#### Periwinkle
 ![Periwinkle](Matte/screenshots/ylx-periwinkle.png)
 
-### Periwinkle-Dark
-![Periwkinle Dark](Matte/screenshots/ylx-periwinkle-dark.png)
-
-### Porcelain
+#### Porcelain
 ![Porcelain](Matte/screenshots/ylx-porcelain.png)
 
-### Gray-Dark1
-![Gray Dark 1](Matte/screenshots/ylx-gray-dark1.png)
-### Gray-Dark2
-![Gray Dark 2](Matte/screenshots/ylx-gray-dark2.png)
-
-### Gray-Dark3
-![Gray Dark 3](Matte/screenshots/ylx-gray-dark3.png)
-
-### Gray
+#### Gray
 ![Gray](Matte/screenshots/ylx-gray.png)
-
-### Gray-Light
-![Gray Light](Matte/screenshots/ylx-gray-light.png)
 
 ## Nightlight
 
