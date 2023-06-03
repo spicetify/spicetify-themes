@@ -27,26 +27,6 @@
     --scrollbar-width-hover: 6px;
 }
 
-/* window controls background */
-body::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    z-index: 999;
-    backdrop-filter: brightness(2.12);
-    /* page zoom [ctrl][+] or [ctrl][-]
-       edit width and height accordingly
-        69%  = 194px 45px
-        76%  = 177px 40.5px
-        83%  = 162px 37.5px
-        91%  = 148px 34px
-        100% = 135px 31px (default)
-        110% = 123px 28.5px
-    */
-    width: 162px;
-    height: 37.5px;
-}
-
 /*  ================================
     TOPBAR
     ================================ */
@@ -502,6 +482,10 @@ body::after {
     > svg {
     color: var(--spice-link-active);
 }
+.main-yourEpisodesButton-yourEpisodesIcon {
+    background: var(--spice-sidebar-text);
+    color: var(--spice-sidebar);
+}
 
 /* ====main view==== */
 .main-trackList-trackListRow.main-trackList-selected,
@@ -716,7 +700,7 @@ body::after {
     background-color: var(--spice-player);
 }
 .nav-ylx .main-nowPlayingBar-nowPlayingBar {
-    height: 90px;
+    height: var(--player-height);
     padding: var(--player-padding);
 }
 [dir="ltr"] .nav-ylx .main-coverSlotCollapsed-navAltContainer {
