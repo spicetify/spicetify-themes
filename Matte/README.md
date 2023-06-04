@@ -1,15 +1,5 @@
 # Matte
 
-## Description
-
-a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables, and color schemes from Windows visual styles by KDr3w
-
-## Credits
-
--   Based on [Matte by KDr3w](https://www.deviantart.com/kdr3w/art/Matte-758699852) and their [other themes](https://www.deviantart.com/kdr3w/gallery/68078309/windows-10-themes)
-
--   Created by [darkthemer](https://github.com/darkthemer)
-
 ## Screenshots
 
 ### Matte (Old UI)
@@ -54,15 +44,31 @@ a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables
 
 ![Gray Light](screenshots/ylx-gray-light.png)
 
+## More
+
+### Description
+
+a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables, and color schemes from Windows visual styles by KDr3w
+
+### Credits
+
+-   Based on [Matte by KDr3w](https://www.deviantart.com/kdr3w/art/Matte-758699852) and their [other themes](https://www.deviantart.com/kdr3w/gallery/68078309/windows-10-themes)
+
+-   Created by [darkthemer](https://github.com/darkthemer)
+
 ### Notes
 
 -   Supports both Old UI and Your Library X UI
 
 -   Check the very top of `user.css` for quick configs
-    ![Window Controls](screenshots/quickcfg.png)
 
--   For Windows users, here's how to make the window controls' background match with the topbar background:
-    Put this snippet into your `user.css`
+    -   If you use the Marketplace, go to `Marketplace > Snippets > + Add CSS` and then paste the quick configs found in `user.css`. Edit these as you wish.
+
+![Window Controls](screenshots/quickcfg.png)
+
+-   For Windows users, here's how to make the window controls' background match with the topbar background
+
+    -   Put this snippet into your `user.css` (or through the Marketplace's custom CSS feature)
 
 ```css
 /* transparent window controls background */
