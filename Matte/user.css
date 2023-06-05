@@ -51,12 +51,11 @@
         var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
     );
 }
-.spotify__container--is-desktop:not(.fullscreen).spotify__os--is-windows
-    .body-drag-top {
-    /* make whole top bar draggable in windows */
+.body-drag-top {
+    /* make whole top bar draggable */
     height: calc(
         var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
-    );
+    ) !important;
 }
 .main-topBar-container {
     /* customize top bar padding */
@@ -629,8 +628,12 @@
     -webkit-padding-start: unset !important;
     padding-inline-start: unset !important;
 }
+.spotify__container--is-desktop:not(.fullscreen)
+    .nav-ylx
+    .main-topBar-background,
+.nav-ylx .main-topBar-topbarContent,
 .nav-ylx .main-topBar-contentArea {
-    -webkit-app-region: drag;
+    -webkit-app-region: drag !important;
 }
 .nav-ylx .x-searchInput-searchInputInput {
     height: 41px;
