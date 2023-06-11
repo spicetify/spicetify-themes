@@ -177,11 +177,6 @@
     /* fix tracklist header in search */
     top: 64px !important;
 }
-.queue-queuePage-queuePage {
-    /* replace margin with padding in queue page */
-    margin-top: 0;
-    padding-top: 40px;
-}
 .main-home-homeHeader,
 .x-entityHeader-overlay,
 .x-actionBarBackground-background,
