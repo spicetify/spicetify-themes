@@ -317,7 +317,9 @@
 * {
     /* heading font weight */
     font-weight: normal !important;
-    --font-family: "CircularSP";
+    --font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl,
+        CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif),
+        sans-serif;
 }
 
 /*  scrollbar
