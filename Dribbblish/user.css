@@ -45,7 +45,7 @@ body {
 .Root__top-container {
     grid-template-areas:
         "left-sidebar main-view right-sidebar"
-        "left-sidebar now-playing-bar right-sidebar";
+        "left-sidebar now-playing-bar right-sidebar" !important;
     gap: 0;
     padding-left: 0 !important;
 }
@@ -53,14 +53,17 @@ body {
 .Root__now-playing-bar {
     background-color: var(--spice-player);
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
+    grid-area: now-playing-bar !important;
 }
 
 .Root__main-view {
     border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
+    grid-area: main-view !important;
 }
 
 .Root__right-sidebar {
     padding-left: 8px;
+    grid-area: right-sidebar !important;
 }
 .Root__right-sidebar:not(:has(> aside)) {
     padding-left: 0;
@@ -69,6 +72,9 @@ body {
 .Root__right-sidebar > aside {
     border-radius: var(--corner-radius) !important;
     box-shadow: 0 0 10px 3px #0000003b;
+}
+.Root__nav-bar {
+    grid-area: left-sidebar !important;
 }
 
 /* move the progress bar to the top */
