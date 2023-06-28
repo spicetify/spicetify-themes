@@ -134,8 +134,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 |                Psycho                 |             UltraBlack              |
 |     ![Wealthy](Sleek/wealthy.png)     |    ![Dracula](Sleek/dracula.png)    |
 |                Wealthy                |               Dracula               |
-|  ![VantaBlack](Sleek/vantablack.png)  |
-|              VantaBlack               |
+|  ![VantaBlack](Sleek/vantablack.png)  |   ![RosePine](Sleek/rosepine.png)   |
+|              VantaBlack               |              RosePine               |
 
 ## Turntable
 

@@ -1,3 +1,8 @@
+:root {
+  --spice-main-elevated: var(--spice-main);
+  --spice-highlight: var(--spice-main-secondary);
+  --spice-highlight-elevated: var(--spice-main-secondary);
+}
 /* 
 -------------
 TOPBAR 
@@ -25,8 +30,9 @@ TOPBAR
   border-radius: 8px;
 }
 
-/* remove topbar background colour */
+/* smooth topbar background colour */
 .main-topBar-background {
+  background-image: linear-gradient(var(--spice-main) 5%, 75%, transparent);
   background-color: unset !important;
 }
 .main-topBar-overlay {
@@ -124,7 +130,10 @@ NAVBAR
 .main-navBar-navBarLinkActive:focus,
 .main-navBar-navBarLinkActive:hover,
 .main-collectionLinkButton-selected,
-.main-collectionLinkButton-selected svg {
+.main-collectionLinkButton-selected svg,
+.main-yourLibraryX-navLinkActive,
+.main-yourLibraryX-navLinkActive .home-active-icon,
+.main-yourLibraryX-navLinkActive .search-active-icon {
   color: var(--spice-nav-active-text) !important;
 }
 
@@ -141,6 +150,21 @@ NAVBAR
 
 .main-navBar-navBarLink:not(.main-navBar-navBarLinkActive):hover svg {
   color: var(--spice-text);
+}
+
+.main-yourLibraryX-entryPoints {
+  background-color: var(--spice-sidebar);
+}
+
+.main-yourLibraryX-isScrolled {
+  -webkit-box-shadow: 0 20px 10px -10px var(--spice-sidebar);
+  box-shadow: 0 20px 10px -10px var(--spice-sidebar);
+}
+
+.Pns6F5g4OEwEpdmOWTLg {
+  /* playlists loading placeholder */
+  opacity: 0.05;
+  filter: contrast(0.1);
 }
 /* 
 ---------------
@@ -179,6 +203,11 @@ PLAYBACK BAR
   bottom: 13px;
   left: 0;
   transition-duration: 0.3s;
+  padding: 0 10px 0 20px;
+  background-color: var(--spice-sidebar);
+  box-shadow: 0 0 20px 20px var(--spice-sidebar);
+  border-radius: 8px;
+  z-index: -1;
 }
 
 .main-playbackBarRemainingTime-container {
@@ -187,9 +216,14 @@ PLAYBACK BAR
   bottom: 13px;
   right: 0;
   transition-duration: 0.3s;
+  padding-left: 0 20px 0 10px;
+  background-color: var(--spice-main);
+  box-shadow: 0 0 20px 20px var(--spice-main);
+  border-radius: 8px;
+  z-index: -1;
 }
 
-/* show time on hover */
+/* show time on hover & better visibility */
 .playback-bar:hover .playback-bar__progress-time-elapsed,
 .playback-bar:hover .main-playbackBarRemainingTime-container {
   opacity: 1;
@@ -220,7 +254,7 @@ html:not(.fullscreen) .playback-bar {
 /* change appearance of play-button */
 .main-playPauseButton-button {
   background-color: inherit;
-  color: var(--spice-text);
+  color: var(--spice-play-button);
   transition-duration: 0.3s !important;
 }
 
@@ -247,6 +281,11 @@ html.fullscreen .main-playPauseButton-button svg {
 .x-progressBar-progressBarBg {
   background-color: var(--spice-button-disabled);
   border-radius: 0px;
+}
+
+/* matching button colors */
+.main-nowPlayingBar-extraControls button {
+  color: rgba(var(--spice-rgb-selected-row),.7);
 }
 /*
 ---------------
@@ -311,6 +350,9 @@ input {
   padding: 6px 10px 6px 48px;
   color: var(--spice-text) !important;
 }
+::placeholder {
+  color: var(--spice-subtext) !important;
+}
 
 /* remove background color from main headers */
 .main-home-homeHeader,
@@ -367,9 +409,19 @@ input {
   width: 6px;
 }
 
-/* add border under header row */
-.main-trackList-trackListHeaderRow {
-  border-bottom: 2px solid var(--spice-button-disabled);
+/* add smooth shadow under headers */
+.main-trackList-trackListHeaderStuck.main-trackList-trackListHeader,
+.artist-artistDiscography-topBar.artist-artistDiscography-topBarScrolled {
+  background-color: var(--spice-main);
+  border-bottom: none;
+  -webkit-box-shadow: 0 0 50px 50px var(--spice-main);
+  box-shadow: 0 0 50px 50px var(--spice-main);
+  transition: box-shadow 0.2s;
+}
+.search-searchCategory-SearchCategory {
+  -webkit-box-shadow: 0 0 20px 20px var(--spice-main);
+  box-shadow: 0 0 20px 20px var(--spice-main);
+  z-index: 3;
 }
 
 /* topbar play button */
@@ -469,12 +521,13 @@ a.x-heroCategoryCard-HeroCategoryCard {
 
 /* change appearance of verified artist badge */
 .main-entityHeader-headerText > span:first-child {
-  border: 2px solid var(--spice-text);
-  border-radius: 8px;
+  border: 0.25em  solid var(--spice-text);
+  border-radius: 0.5em;
   width: fit-content;
   gap: 0px;
   text-align: center;
-  padding: 3px 7px;
+  padding: 0.25em 0.75em;
+  --font-family: CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif),sans-serif;
 }
 
 .main-entityHeader-headerText > span:first-child > span {
