@@ -112,11 +112,15 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Dark
 
-![dark_home](Onepunch/screenshots/dark_home.png)
+![dark_ylx](Onepunch/screenshots/dark_ylx.png)
 
 #### Light
 
-![light_home](Onepunch/screenshots/light_home.png)
+![light_ylx](Onepunch/screenshots/light_ylx.png)
+
+#### Legacy
+
+![legacy_ylx](Onepunch/screenshots/legacy_ylx.png)
 
 ## Sleek
 
