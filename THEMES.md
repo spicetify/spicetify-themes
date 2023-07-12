@@ -141,6 +141,61 @@ Here you can find a preview of all the themes. Some of them may have different c
 |  ![VantaBlack](Sleek/vantablack.png)  |   ![RosePine](Sleek/rosepine.png)   |
 |              VantaBlack               |              RosePine               |
 
+## text
+
+### Spotify
+
+![Spotify](text/screenshots/Spotify.png)
+
+### Spicetify
+
+![Spicetify](text/screenshots/Spicetify.png)
+
+### Catppuccin
+
+|                                                          |                                                                  |
+|:--------------------------------------------------------:|:----------------------------------------------------------------:|
+| ![CatppuccinMocha](text/screenshots/CatppuccinMocha.png) | ![CatppuccinMacchiato](text/screenshots/CatppuccinMacchiato.png) |
+| Catppuccin Mocha                                         | Catppuccin Macchiato                                             |
+| ![CatppuccinLatte](text/screenshots/CatppuccinLatte.png) |                                                                  |
+| Catppuccin Latte                                         |                                                                  |
+
+#### Dracula
+
+![Dracula](text/screenshots/Dracula.png)
+
+#### Gruvbox
+
+![Gruvbox](text/screenshots/Gruvbox.png)
+
+#### Kanagawa
+
+![Kanagawa](text/screenshots/Kanagawa.png)
+
+#### Nord
+
+![Nord](text/screenshots/Nord.png)
+
+#### Rigel
+
+![CatppuccinMaRigelcchiato](text/screenshots/Rigel.png)
+
+#### RosePine
+
+| ![RosePine](text/screenshots/RosePine.png) | ![RosePineMoon](text/screenshots/RosePineMoon.png) |
+|:------------------------------------------:|:--------------------------------------------------:|
+| Rose Pine                                  | Rose Pine Moon                                     |
+
+#### Solarized
+
+![Solarized](text/screenshots/Solarized.png)
+
+#### TokyoNight
+
+| ![TokyoNight](text/screenshots/TokyoNight.png) | ![TokyoNightStorm](text/screenshots/TokyoNightStorm.png) |
+|:----------------------------------------------:|:--------------------------------------------------------:|
+| Tokyo Night                                    | Tokyo Night Storm                                        |
+
 ## Turntable
 
 ![Turntable](Turntable/screenshots/fad.png)
