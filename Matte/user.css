@@ -71,7 +71,7 @@
     margin-right: var(--top-bar-padding-right);
     margin-bottom: var(--top-bar-padding-bottom);
     margin-left: var(--top-bar-padding-left);
-    padding: unset;
+    padding: unset !important;
     height: 40px;
     width: auto;
 }
@@ -629,7 +629,7 @@
     --panel-gap: 0 !important;
 }
 .spotify__container--is-desktop .Root__top-container {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 body:has(.main-yourLibraryX-library)
     .spotify__container--is-desktop:not(.fullscreen)
