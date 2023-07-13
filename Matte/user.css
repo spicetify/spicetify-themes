@@ -71,7 +71,7 @@
     margin-right: var(--top-bar-padding-right);
     margin-bottom: var(--top-bar-padding-bottom);
     margin-left: var(--top-bar-padding-left);
-    padding: unset;
+    padding: unset !important;
     height: 40px;
     width: auto;
 }
@@ -345,12 +345,10 @@
     border-radius: var(--scrollbar-border-radius);
     width: var(--scrollbar-width-hover);
 }
-.spotify__container--is-desktop.spotify__os--is-windows
-    .main-view-container__scroll-node
-    > .os-scrollbar-vertical {
+.main-view-container__scroll-node > .os-scrollbar-vertical {
     /* fix scrollbar positioning */
-    top: 5px;
-    right: 5px;
+    top: 5px !important;
+    right: 5px !important;
 }
 .os-scrollbar-handle {
     /* increase size from right to left */
@@ -629,7 +627,7 @@
     --panel-gap: 0 !important;
 }
 .spotify__container--is-desktop .Root__top-container {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 body:has(.main-yourLibraryX-library)
     .spotify__container--is-desktop:not(.fullscreen)
