@@ -301,9 +301,9 @@ p.main-buddyFeed-timestamp.main-type-finale,
   color: var(--spice-subtext);
 }
 
-.spotify__os--is-windows .nav-ylx .main-buddyFeed-header {
-	padding-left: 0;
-    padding-right: 5px;
+.spotify__os--is-windows .main-buddyFeed-header {
+  padding-left: 0;
+  padding-right: 5px;
 }
 
 /* add gradient */
