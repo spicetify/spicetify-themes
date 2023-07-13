@@ -86,7 +86,23 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## Matte
 
-![Matte](Matte/screenshots/queue.png)
+#### Matte
+![Matte](Matte/screenshots/ylx-matte.png)
+
+#### Periwinkle
+
+| ![Periwinkle](Matte/screenshots/ylx-periwinkle.png) | ![Periwkinle-Dark](Matte/screenshots/ylx-periwinkle-dark.png) |
+| :-------------------------------------------------: | :-----------------------------------------------------------: |
+|                        Light                        |                            Dark                               |
+
+#### Porcelain
+![Porcelain](Matte/screenshots/ylx-porcelain.png)
+
+#### Gray
+![Gray](Matte/screenshots/ylx-gray.png)
+| ![Gray-Light](Matte/screenshots/ylx-gray-light.png) | ![Gray-Dark1](Matte/screenshots/ylx-gray-dark1.png) |
+| :-------------------------------------------------: | :-------------------------------------------------: |
+|                        Light                        |                       Dark                          |
 
 ## Nightlight
 
@@ -96,11 +112,15 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Dark
 
-![dark_home](Onepunch/screenshots/dark_home.png)
+![dark_ylx](Onepunch/screenshots/dark_ylx.png)
 
 #### Light
 
-![light_home](Onepunch/screenshots/light_home.png)
+![light_ylx](Onepunch/screenshots/light_ylx.png)
+
+#### Legacy
+
+![legacy_ylx](Onepunch/screenshots/legacy_ylx.png)
 
 ## Sleek
 
@@ -118,8 +138,8 @@ Here you can find a preview of all the themes. Some of them may have different c
 |                Psycho                 |             UltraBlack              |
 |     ![Wealthy](Sleek/wealthy.png)     |    ![Dracula](Sleek/dracula.png)    |
 |                Wealthy                |               Dracula               |
-|  ![VantaBlack](Sleek/vantablack.png)  |
-|              VantaBlack               |
+|  ![VantaBlack](Sleek/vantablack.png)  |   ![RosePine](Sleek/rosepine.png)   |
+|              VantaBlack               |              RosePine               |
 
 ## Turntable
 

@@ -28,7 +28,7 @@ jobs:
               },
               {
                 "keywords": ["Dribbblish"],
-                "assignees": ["khanhas"]
+                "assignees": ["harbassan"]
               },
               {
                 "keywords": ["Glaze"],
@@ -53,6 +53,18 @@ jobs:
               {
                 "keywords": ["Flow"],
                 "assignees": ["ian-Liaozy", "Ruixi-Zhang"]
+              },
+              {
+                "keywords": ["Matte"],
+                "assignees": ["darkthemer"]
+              },
+              {
+                "keywords": ["Blossom"],
+                "assignees": ["Robatortas"]
+              },
+              {
+                "keywords": ["Nightlight"],
+                "assignees": ["iTenerai"]
               }
             ]
           github-token: '${{ secrets.GITHUB_TOKEN }}'
