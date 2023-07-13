@@ -101,6 +101,20 @@
 		]
 	},
 	{
+		"name": "text",
+		"description": "a spicetify theme that mimics the look of spotify-tui",
+		"preview": "text/screenshots/gruvbox.png",
+		"readme": "text/README.md",
+		"usercss": "text/user.css",
+		"schemes": "text/color.ini",
+		"authors": [
+			{
+				"name": "darkthemer",
+				"url": "https://github.com/darkthemer"
+			}
+		]
+	},
+	{
 		"name": "Turntable",
 		"description": "Turntable",
 		"preview": "Turntable/screenshots/turntable.png",
