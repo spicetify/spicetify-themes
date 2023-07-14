@@ -84,7 +84,15 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ### Notes
 
--   Feel free to edit `color.ini` to swap the accent color (it's green for most of them) into your preferred color based from the color pallete.
+-   **IMPORTANT:** Add the following to your `config-xpui.ini` file. Details as to why are explained [here](https://github.com/JulienMaille/spicetify-dynamic-theme#important).
+
+```ini
+[Patch]
+xpui.js_find_8008 = ,(\w+=)56,
+xpui.js_repl_8008 = ,${1}32,
+```
+
+-   **SUGGESTION:** Feel free to edit `color.ini` to swap the accent color (it's green for most of them) into your preferred color based from the color pallete.
 
     -   https://github.com/catppuccin/catppuccin
     -   https://github.com/dracula/dracula-theme
@@ -97,45 +105,45 @@ created by [darkthemer](https://github.com/darkthemer/)
     -   https://github.com/altercation/solarized
     -   https://github.com/enkia/tokyo-night-vscode-theme
 
--   Check the very top of `user.css` for user settings
+-   **SUGGESTION:** Check the very top of `user.css` for user settings
 
-    -   If you use the Marketplace, go to `Marketplace > Snippets > + Add CSS` and then paste the variables found in `user.css` (also below). Edit these as you wish.
+    -   If you use the Marketplace, go to `Marketplace > Snippets > + Add CSS` and then paste the variables found in `user.css` (also below). Edit these as you wish. If you're following this method, don't forget to add `!important` at the end of each property.
 
 ```css
 /* user settings */
 :root {
-    --font-family: "DM Mono", monospace;
+    --font-family: "DM Mono", monospace !important;
     /*
-    --font-family: 'Anonymous Pro', monospace;
-    --font-family: 'Courier Prime', monospace;
-    --font-family: 'Cousine', monospace;
-    --font-family: 'Cutive Mono', monospace;
-    --font-family: 'DM Mono', monospace;
-    --font-family: 'Fira Mono', monospace;
-    --font-family: 'IBM Plex Mono', monospace;
-    --font-family: 'Inconsolata', monospace;
-    --font-family: 'Nanum Gothic Coding', monospace;
-    --font-family: 'PT Mono', monospace;
-    --font-family: 'Roboto Mono', monospace;
-    --font-family: 'Share Tech Mono', monospace;
-    --font-family: 'Source Code Pro', monospace;
-    --font-family: 'Space Mono', monospace;
-    --font-family: 'Ubuntu Mono', monospace;
-    --font-family: 'VT323', monospace;
+    --font-family: 'Anonymous Pro', monospace !important;
+    --font-family: 'Courier Prime', monospace !important;
+    --font-family: 'Cousine', monospace !important;
+    --font-family: 'Cutive Mono', monospace !important;
+    --font-family: 'DM Mono', monospace !important;
+    --font-family: 'Fira Mono', monospace !important;
+    --font-family: 'IBM Plex Mono', monospace !important;
+    --font-family: 'Inconsolata', monospac !important;
+    --font-family: 'Nanum Gothic Coding', monospace !important;
+    --font-family: 'PT Mono', monospace !important;
+    --font-family: 'Roboto Mono', monospace !important;
+    --font-family: 'Share Tech Mono', monospace !important;
+    --font-family: 'Source Code Pro', monospace !important;
+    --font-family: 'Space Mono', monospace !important;
+    --font-family: 'Ubuntu Mono', monospace !important;
+    --font-family: 'VT323', monospace !important;
     */
-    --font-size: 14px;
-    --font-weight: 400; /* 200 : 900 */
-    --line-height: 1.2;
+    --font-size: 14px !important;
+    --font-weight: 400 !important; /* 200 : 900 */
+    --line-height: 1.2 !important;
 
-    --display-images: none; /* none | block */
+    --display-images: none !important; /* none | block */
 
-    --border-radius: 0px;
-    --border-width: 1px;
-    --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+    --border-radius: 0px !important;
+    --border-width: 1px !important;
+    --border-style: solid !important; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
 }
 ```
 
--   For Windows users, here's how to make the window controls' background match with the topbar background
+-   **SUGGESTION:** For Windows users, here's how to make the window controls' background match with the topbar background
 
     -   Put this snippet into your `user.css` (or through the Marketplace's `+ Add CSS` feature)
 
