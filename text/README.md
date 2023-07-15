@@ -4,11 +4,27 @@
 
 #### Display Images
 
-##### with images `--display-images: block;`
+##### with images
+
+```css
+--display-card-image: block;
+--display-coverart-image: block;
+--display-header-image: block;
+--display-library-image: block;
+--display-tracklist-image: block;
+```
 
 ![withimg](screenshots/withimg.png)
 
-##### without images `--display-images: none;`
+##### without images
+
+```css
+--display-card-image: none;
+--display-coverart-image: none;
+--display-header-image: none;
+--display-library-image: none;
+--display-tracklist-image: none;
+```
 
 ![withoutimg](screenshots/withoutimg.png)
 
@@ -135,7 +151,11 @@ xpui.js_repl_8008 = ,${1}32,
     --font-weight: 400 !important; /* 200 : 900 */
     --line-height: 1.2 !important;
 
-    --display-images: none !important; /* none | block */
+    --display-card-image: block !important; /* none | block */
+    --display-coverart-image: none !important; /* none | block */
+    --display-header-image: none !important; /* none | block */
+    --display-library-image: block !important; /* none | block */
+    --display-tracklist-image: none !important; /* none | block */
 
     --border-radius: 0px !important;
     --border-width: 1px !important;

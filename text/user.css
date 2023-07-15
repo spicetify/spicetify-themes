@@ -31,7 +31,11 @@
     --font-weight: 400; /* 200 : 900 */
     --line-height: 1.2;
 
-    --display-images: none; /* none | block */
+    --display-card-image: block; /* none | block */
+    --display-coverart-image: none; /* none | block */
+    --display-header-image: none; /* none | block */
+    --display-library-image: block; /* none | block */
+    --display-tracklist-image: none; /* none | block */
 
     --border-radius: 0px;
     --border-width: 1px;
@@ -47,16 +51,27 @@
 }
 
 /* images */
-img:not(.main-trackList-playingIcon) {
-    display: var(--display-images) !important;
+.main-cardImage-imageWrapper img {
+    display: var(--display-card-image);
 }
-.main-coverSlotCollapsed-container,
+.main-coverSlotCollapsed-container {
+    display: var(--display-coverart-image);
+}
+.main-entityHeader-imageContainer,
 .under-main-view,
-.playlist-playlist-playlistImageContainer,
 .main-entityHeader-creatorWrapper .main-avatar-avatar,
 .main-entityHeader-imageContainer,
+.playlist-playlist-playlistImageContainer,
 .profile-userOverview-imageContainer {
-    display: var(--display-images);
+    display: var(--display-header-image);
+}
+.x-entityImage-imageContainer img,
+.main-yourLibraryX-rowCover img,
+.main-avatar-image {
+    display: var(--display-library-image);
+}
+.main-trackList-rowImage {
+    display: var(--display-tracklist-image);
 }
 
 /* fix */
@@ -220,7 +235,8 @@ img:not(.main-trackList-playingIcon) {
     background-color: var(--spice-highlight);
 }
 .x-entityImage-imageContainer,
-.x-entityImage-imageContainer div {
+.x-entityImage-imageContainer div,
+.fRZRXRIV2YBCFLYgwDAr {
     background-color: var(--spice-border-inactive);
 }
 .main-userWidget-boxCondensed,
@@ -369,13 +385,15 @@ img:not(.main-trackList-playingIcon) {
     padding: 4px 18px;
 }
 .x-entityImage-imageContainer,
-.x-entityImage-imageContainer div {
+.x-entityImage-imageContainer div,
+.main-yourLibraryX-rowCover {
     height: 24px !important;
     width: 24px !important;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-.x-entityImage-imagePlaceholder {
+.x-entityImage-imagePlaceholder,
+.main-yourLibraryX-rowCover .Svg-img-textBrightAccent-24-icon {
     transform: scale(0.5);
 }
 
