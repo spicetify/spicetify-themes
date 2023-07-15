@@ -108,6 +108,20 @@
 .LayoutResizer__resize-bar {
     cursor: w-resize;
 }
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art,
+.spotifyinternal-artistnpv .npv-what-is-playing .npv-track {
+    bottom: 26em;
+}
+.tr1hDrJgoPSbMXlXU_sl {
+    flex-direction: column-reverse;
+}
+.npv-main-container .playback-bar {
+    position: unset;
+    width: auto;
+}
+.mbUrqWP55sK6zhspiR72 {
+    height: auto;
+}
 
 /* 1.2.11 backwards compatibility - for linux */
 /* pane borders */
