@@ -5,6 +5,11 @@
     background-color: var(--spice-background);
 }
 
+.spotify__container--is-desktop .Root__top-container {
+    padding-top: calc(24px + 8px * 2);
+    --panel-gap: 0;
+}
+
 /* SEARCH */
 .main-yourEpisodes-episodeCard {
     background-color: red;
@@ -140,21 +145,29 @@
     position: relative;
     padding-inline-end: 16px !important;
 }
-.playback-bar {
-    width: calc(100% + 82px);
-    top: -10px;
-    position: absolute;
-    cursor: pointer;
+
+.playback-bar__progress-time-elapsed,
+.main-playbackBarRemainingTime-container {
+    min-width: 0;
+    width: 0 !important;
+    opacity: 0;
     transition: all 0.5s;
 }
-.playback-bar:hover {
-    width: 100%;
+
+.playback-bar:hover .playback-bar__progress-time-elapsed, .playback-bar:hover
+.main-playbackBarRemainingTime-container {
+    min-width: 40px;
+    width: auto;
+    opacity: 1;
 }
-.Root__top-container {
-    row-gap: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+
+.playback-bar {
+    width: 100%;
+    left: 0;
+    bottom: 65px;
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .progress-bar {
