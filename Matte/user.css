@@ -41,17 +41,21 @@
 }
 .Root__top-bar {
     /* customize top bar colors & fixes */
-    grid-area: top-bar;
+    grid-area: top-bar !important;
     height: auto;
     border-bottom: var(--top-bar-border-width) solid var(--spice-topbar-border);
 }
 .Root__nav-bar {
     /* support layout of older verions */
-    grid-area: left-sidebar;
+    grid-area: left-sidebar !important;
 }
 .Root__right-sidebar {
     /* support layout of older verions */
-    grid-area: right-sidebar;
+    grid-area: right-sidebar !important;
+}
+.Root__now-playing-bar {
+    /* support layout of older verions */
+    grid-area: now-playing-bar !important;
 }
 .Root__top-bar:empty {
     /* make top bar the same height in lyrics page */
@@ -535,7 +539,7 @@
 }
 
 /* ====right sidebar==== */
-.main-buddyFeed-friendsFeedContainer {
+.main-buddyFeed-friendsFeedContainer, .main-buddyFeed-container {
     background-color: var(--spice-sidebar);
 }
 .TypeElement-balladBold-textBase-type,
