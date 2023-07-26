@@ -329,6 +329,15 @@
     color: var(--spice-border-active);
 }
 
+.main-nowPlayingView-content.main-nowPlayingView-gradient{
+    border-radius: var(--border-radius) !important;
+}
+
+/* In case the user is also using the beautiful lyrics extension */
+.lyrics-background.os-padding:has(.main-nowPlayingView-content) .lyrics-background-container{
+    border-radius: var(--border-radius) !important;
+}
+
 /* scrollbars */
 .os-theme-spotify
     > .os-scrollbar-vertical
