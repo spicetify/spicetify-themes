@@ -3,6 +3,8 @@
     --bar-cover-art-size: 40px;
     --scrollbar-vertical-size: 10px;
     --scrollbar-horizontal-size: 10px;
+    --bar-height: 90px;
+    --main-gap: 10px;
 }
 
 @font-face {
@@ -61,18 +63,18 @@ body {
     grid-area: main-view !important;
 }
 
-.Root__right-sidebar {
-    padding-left: 8px;
-    grid-area: right-sidebar !important;
+.legacy .Root__top-container:not(:has(> .Root__right-sidebar)) {
+    padding-right: var(--main-gap);
 }
+
+.ylx .Root__top-container:not(:has(> .Root__right-sidebar > aside)) {
+    padding-right: var(--main-gap);
+}
+
 .Root__right-sidebar:not(:has(> aside)) {
     padding-left: 0;
 }
 
-.Root__right-sidebar > aside {
-    border-radius: var(--corner-radius) !important;
-    box-shadow: 0 0 10px 3px #0000003b;
-}
 .Root__nav-bar {
     grid-area: left-sidebar !important;
 }
@@ -395,6 +397,25 @@ li > div::after {
     transition: none;
 }
 
+/* right sidebar text */
+.Root__right-sidebar {
+    --text-base: var(--spice-sidebar-text);
+    --background-tinted-base: var(--spice-tab-active);
+}
+
+.Root__right-sidebar a,
+.Root__right-sidebar .main-trackInfo-artists a,
+.artist-artistOnTour-timeAndVenue.artist-artistOnTour-condensed,
+.Root__right-sidebar .main-nowPlayingView-creditsSource,
+.Root__right-sidebar .main-nowPlayingView-playNextButton,
+.Root__right-sidebar .main-nowPlayingView-playNext {
+    color: var(--spice-sidebar-text);
+}
+
+.main-nowPlayingView-content {
+    --text-subdued: var(--spice-sidebar-text);
+}
+
 /* add main backshadow */
 #dribbblish-back-shadow {
     z-index: 5;
@@ -463,45 +484,164 @@ input {
     background-color: var(--spice-main);
 }
 
-/* LEGACY NAVBAR ONLY */
-.legacy-nav .Root__top-container {
-    padding: 8px;
+/* v1.2.14 */
+.main-yourLibraryX-libraryContainer.main-yourLibraryX-libraryIsExpanded.main-yourLibraryX-libraryIsCollapsed,
+.main-yourLibraryX-libraryRootlist.main-yourLibraryX-libraryIsExpanded:not(.main-yourLibraryX-libraryIsCollapsed) {
+    padding-bottom: 0;
+}
+
+[dir="ltr"] .main-nowPlayingWidget-coverExpanded {
+    transform: none;
+}
+
+.ylx .main-coverSlotExpanded-container {
+    bottom: calc(var(--main-gap) + 70px + 10px);
+    left: calc(var(--nav-bar-width) + 10px);
+}
+.ylx.connected .main-coverSlotExpanded-container {
+    bottom: calc(var(--main-gap) + 70px + 24px + 10px);
+}
+
+/* v1.2.12 -> 1.2.13 */
+.main-buddyFeed-container {
+    background-color: inherit;
+    box-shadow: none;
+}
+.legacy-gridChange .main-coverSlotExpanded-container {
+    left: calc(var(--nav-bar-width) + 10px);
+}
+
+/* v1.2.0 --> 1.2.11 */
+.legacy .Root__top-container {
+    grid-template-areas:
+        "left-sidebar top-bar right-sidebar"
+        "left-sidebar main-view right-sidebar"
+        "left-sidebar now-playing-bar right-sidebar" !important;
+}
+.Root__top-container {
+    padding: 10px 0;
     background-color: var(--spice-sidebar);
 }
-.legacy-nav .Root__main-view {
+.Root__right-sidebar {
+    background-color: var(--spice-sidebar);
+}
+.Root__main-view {
     background-color: var(--spice-main);
 }
-.legacy-nav .main-rootlist-rootlistDivider {
+.main-rootlist-rootlistDivider {
     background-color: transparent;
 }
-.legacy-nav .main-rootlist-rootlistDividerGradient {
+.main-buddyFeed-activityMetadata .main-buddyFeed-username a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName a,
+.main-buddyFeed-activityMetadata .main-buddyFeed-usernameAndTimestamp,
+.main-buddyFeed-activityMetadata .main-buddyFeed-playbackContextLink {
+    color: var(--spice-sidebar-text) !important;
+}
+.main-buddyFeed-activityMetadata .main-buddyFeed-artistAndTrackName {
+    color: var(--spice-sidebar-text);
+}
+.collection-icon,
+.premiumSpotifyIcon,
+.search-icon {
+    color: var(--spice-sidebar-text) !important;
+}
+.main-confirmDialog-container {
+    background-color: var(--spice-card);
+}
+.main-confirmDialog-container .TypeElement-canon-textBase {
+    color: var(--spice-text);
+}
+.main-confirmDialog-buttonContainer button span {
+    color: var(--spice-card);
+}
+.main-coverSlotExpanded-container {
+    position: fixed;
+    z-index: 2;
+    width: 250px;
+    height: 250px;
+    bottom: calc(var(--main-gap) + var(--bar-height) + 10px);
+    left: calc(var(--nav-bar-width) + 20px);
+}
+.connected .main-coverSlotExpanded-container {
+    bottom: calc(var(--main-gap) + var(--bar-height) + 24px + 10px);
+}
+.left-sidebar-collapsed .main-coverSlotExpanded-container {
+    left: 82px;
+}
+.main-coverSlotExpanded-container img {
+    border-radius: 4px;
+}
+.cover-art {
+    border-radius: 4px;
+}
+.left-sidebar-collapsed .Root__nav-bar {
+    width: 72px;
+}
+.left-sidebar-collapsed .main-rootlist-statusIcons {
+    display: none;
+}
+.main-navBar-navBarLinkActive {
+    background-color: var(--spice-tab-active);
+}
+.Root__nav-bar .main-rootlist-rootlist .os-scrollbar-handle {
+    display: none;
+}
+.Root__top-container:has(> .Root__top-container--right-sidebar-hidden) {
+    padding-right: 10px;
+}
+/* buddy feed w/ hidden text*/
+.buddyFeed-hide-text .Root__top-container:not(:has(> .Root__top-container--right-sidebar-hidden)) .Root__right-sidebar {
+    width: 72px !important;
+}
+.buddyFeed-hide-text .NdQkQZhcYIEcJnRdAYcQ,
+.buddyFeed-hide-text .main-buddyFeed-header {
+    display: none;
+}
+.buddyFeed-hide-text .main-buddyFeed-friendActivity {
+    padding: 0 0 0 4px;
+}
+.buddyFeed-hide-text .main-buddyFeed-activityMetadata {
+    visibility: hidden;
+}
+.buddyFeed-hide-text .main-avatar-avatar > div > div > div {
+    display: flex;
+    justify-content: center;
+    padding-top: 7px;
+}
+.buddyFeed-hide-text .main-avatar-avatar,
+.buddyFeed-hide-text .main-avatar-avatar div,
+.buddyFeed-hide-text .main-buddyFeed-overlay {
+    width: 32px !important;
+    height: 32px !important;
+}
+.main-rootlist-rootlistDividerGradient {
     background: none;
 }
-.legacy-nav .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
-.legacy-nav .main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText {
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-icon,
+.main-collectionLinkButton-collectionLinkButton .main-collectionLinkButton-collectionLinkText {
     opacity: 1;
 }
-.legacy-nav .main-collectionLinkButton-collectionLinkButton,
-.legacy-nav .main-createPlaylistButton-button {
-    color: var(--spice-subtext);
+.main-collectionLinkButton-collectionLinkButton,
+.main-createPlaylistButton-button {
+    color: var(--spice-sidebar-text);
     opacity: 1;
 }
-.legacy-nav .main-likedSongsButton-likedSongsIcon {
+.main-likedSongsButton-likedSongsIcon {
     background: none;
 }
-.legacy-nav .main-likedSongsButton-likedSongsIcon > svg {
+.main-likedSongsButton-likedSongsIcon > svg {
     height: 20px !important;
     width: 20px !important;
 }
 /* style added sidebar images */
-.legacy-nav .main-rootlist-rootlistItem a {
+.main-rootlist-rootlistItem a {
     align-items: center;
     border-radius: 4px;
     display: flex;
     height: 56px;
     gap: 12px;
 }
-.legacy-nav img.playlist-picture {
+img.playlist-picture {
     width: 32px;
     height: 32px;
     flex: 0 0 32px;
@@ -509,47 +649,99 @@ input {
     background-position: center;
     border-radius: 50%;
 }
-.legacy-nav img.playlist-picture[src$=".svg"] {
+img.playlist-picture[src$=".svg"] {
     width: 24px;
     height: 24px;
     border-radius: 0;
 }
-.legacy-nav .Root__nav-bar .main-rootlist-wrapper {
+.legacy .Root__nav-bar .main-rootlist-wrapper,
+.legacy-gridChange .Root__nav-bar .main-rootlist-wrapper {
     height: fit-content !important;
     contain: none !important;
 }
-.legacy-nav .main-navBar-mainNav li:has(> div > .active) {
+.main-navBar-mainNav li:has(> div > .active) {
     background-color: var(--spice-tab-active);
 }
-.legacy-nav .main-collectionLinkButton-selected.active {
+.main-collectionLinkButton-selected.active {
     background-color: var(--spice-tab-active) !important;
 }
-.legacy-nav .main-navBar-mainNav li {
+.legacy .main-navBar-mainNav li,
+.legacy-gridChange .main-navBar-mainNav li {
     background-color: transparent !important;
 }
-.legacy-nav a.active {
+/* a.active {
+    background-color: var(--spice-tab-active) !important;
+} */
+.main-rootlist-rootlistItem:has(> .main-rootlist-rootlistItemLinkActive) {
     background-color: var(--spice-tab-active) !important;
 }
-.legacy-nav .main-rootlist-rootlistItem:has(> .main-rootlist-rootlistItemLinkActive) {
-    background-color: var(--spice-tab-active) !important;
-}
-.legacy-nav .main-rootlist-rootlistItemLink {
+.main-rootlist-rootlistItemLink {
     padding-left: 12px;
 }
-.legacy-nav .main-rootlist-rootlistItem {
+.main-rootlist-rootlistItem {
     margin-left: 8px;
     margin-right: 8px;
-    padding-left: 0;
-    padding-right: 8px;
+    padding-left: 0 !important;
+    padding-right: 8px !important;
     border-radius: 4px;
 }
-.legacy-nav .dribs-playlist-list {
+.dribs-playlist-list {
     overflow: hidden;
 }
-.legacy-nav.left-sidebar-collapsed .main-rootlist-expandArrow {
+.left-sidebar-collapsed .main-rootlist-expandArrow {
     display: none;
 }
-.legacy-nav .main-navBar-navBarLink,
-.legacy-nav .main-collectionLinkButton-collectionLinkButton {
+.main-navBar-navBarLink,
+.main-collectionLinkButton-collectionLinkButton,
+.main-createPlaylistButton-button {
     height: 56px !important;
+}
+
+.Button-md-buttonSecondary-useBrowserDefaultFocusStyle {
+    border: 1px solid var(--spice-text);
+}
+.Button-md-buttonPrimary-useBrowserDefaultFocusStyle .ButtonInner-md {
+    color: var(--spice-text);
+}
+/* sidebar speaker icon */
+.CCeu9OfWSwIAJqA49n84 {
+    color: var(--spice-sidebar-text);
+}
+.legacy .Root__right-sidebar .os-content {
+    overflow-x: hidden;
+}
+.Root__right-sidebar .os-scrollbar-horizontal {
+    display: none;
+}
+.UyzJidwrGk3awngSGIwv,
+.poz9gZKE7xqFwgk231J4,
+.xWm_uA0Co4SXVxaO7wlB {
+    color: var(--spice-text);
+}
+.main-navBar-navBarLink {
+    color: var(--spice-sidebar-text);
+}
+.main-navBar-navBarLink:focus,
+.main-navBar-navBarLink:hover {
+    color: var(--spice-sidebar-text);
+}
+.main-createPlaylistButton-createPlaylistIcon {
+    background-color: var(--spice-sidebar-text);
+}
+.main-rootlist-rootlistItemLink:link,
+.main-rootlist-rootlistItemLink:visited {
+    color: var(--spice-sidebar-text) !important;
+}
+.main-rootlist-expandArrow {
+    color: var(--spice-sidebar-text);
+}
+.main-buddyFeed-actions button,
+.main-buddyFeed-titleContainer {
+    color: var(--spice-sidebar-text) !important;
+}
+.main-tag-container {
+    background-color: var(--spice-subtext);
+}
+.main-buddyFeed-content {
+    height: fit-content;
 }
