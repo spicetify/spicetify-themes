@@ -103,7 +103,7 @@
 	{
 		"name": "text",
 		"description": "a spicetify theme that mimics the look of spotify-tui",
-		"preview": "text/screenshots/gruvbox.png",
+		"preview": "text/screenshots/Gruvbox.png",
 		"readme": "text/README.md",
 		"usercss": "text/user.css",
 		"schemes": "text/color.ini",
