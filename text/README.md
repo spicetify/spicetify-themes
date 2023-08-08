@@ -148,6 +148,7 @@ xpui.js_repl_8008 = ,${1}32,
     --font-family: 'VT323', monospace !important;
     */
     --font-size: 14px !important;
+    --font-size-lyrics: 14px; /* 1.5em (default) */
     --font-weight: 400 !important; /* 200 : 900 */
     --line-height: 1.2 !important;
 
