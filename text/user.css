@@ -245,8 +245,8 @@ section.main-buddyFeed-container {
 .main-trackList-placeholder,
 .Pns6F5g4OEwEpdmOWTLg,
 .eldivguzYznZgQoShJbe {
-    opacity: 0.05;
-    filter: contrast(0.1);
+    background-color: var(--background-base);
+    background-blend-mode: color-dodge;
 }
 .artist-artistAbout-container.artist-artistAbout-backgroundImage
     .artist-artistAbout-content
