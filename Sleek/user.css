@@ -120,10 +120,14 @@ NAVBAR
 }
 
 /* change colors of active tab */
-.main-navBar-navBarLinkActive,
-.main-collectionLinkButton-selected {
-  background-color: var(--spice-nav-active) !important;
-  border-radius: 8px !important;
+.main-yourLibraryX-navLink {
+    border-radius: 8px;
+    margin: 6px 0;
+    padding: 0 10px;
+}
+
+.main-yourLibraryX-navItem {
+    padding: 0;
 }
 
 .main-navBar-navBarLinkActive,
@@ -134,7 +138,8 @@ NAVBAR
 .main-yourLibraryX-navLinkActive,
 .main-yourLibraryX-navLinkActive .home-active-icon,
 .main-yourLibraryX-navLinkActive .search-active-icon {
-  color: var(--spice-nav-active-text) !important;
+    color: var(--spice-nav-active-text) !important;
+    background-color: var(--spice-nav-active);
 }
 
 /* color of navbar icons */
@@ -161,11 +166,14 @@ NAVBAR
   box-shadow: 0 20px 10px -10px var(--spice-sidebar);
 }
 
-.Pns6F5g4OEwEpdmOWTLg {
-  /* playlists loading placeholder */
-  opacity: 0.05;
-  filter: contrast(0.1);
+/* traclists and playlists loading placeholder */
+.main-trackList-placeholder,
+.Pns6F5g4OEwEpdmOWTLg,
+.eldivguzYznZgQoShJbe {
+    background-color: var(--background-base);
+    background-blend-mode: color-dodge;
 }
+
 /* 
 ---------------
 PLAYBACK BAR
@@ -203,9 +211,8 @@ PLAYBACK BAR
   bottom: 13px;
   left: 0;
   transition-duration: 0.3s;
-  padding: 0 10px 0 20px;
-  background-color: var(--spice-sidebar);
-  box-shadow: 0 0 20px 20px var(--spice-sidebar);
+  background-color: rgba(var(--spice-rgb-sidebar),.5);
+  box-shadow: 0 0 20px 20px rgba(var(--spice-rgb-sidebar),.5);
   border-radius: 8px;
   z-index: -1;
 }
@@ -216,9 +223,8 @@ PLAYBACK BAR
   bottom: 13px;
   right: 0;
   transition-duration: 0.3s;
-  padding-left: 0 20px 0 10px;
-  background-color: var(--spice-main);
-  box-shadow: 0 0 20px 20px var(--spice-main);
+  background-color: rgba(var(--spice-rgb-sidebar),.5);
+  box-shadow: 0 0 20px 20px rgba(var(--spice-rgb-sidebar),.5);
   border-radius: 8px;
   z-index: -1;
 }
@@ -380,6 +386,14 @@ input {
   background: var(--spice-button);
   content-visibility: hidden;
   -webkit-mask-repeat: no-repeat;
+}
+
+/* recolor animated liked or heart button on click */
+#_R_G *:not([fill="none"]) {
+    fill: var(--spice-button-active) !important;
+}
+#_R_G *:not([stroke="none"]) {
+    stroke: var(--spice-button-active);
 }
 
 /* change appearance of 'playlist' tag  */
