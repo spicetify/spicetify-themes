@@ -193,7 +193,9 @@ highlights selected song contains multi-digit song numbers */
 /* Playlist play button color */
 .encore-dark-theme .encore-bright-accent-set,
 .encore-dark-theme .encore-bright-accent-set:hover {
-	background-color: var(--spice-button) !important;
+	--background-base: var(--spice-button-active);
+	--background-highlight: var(--spice-player);
+	--background-press: var(--spice-player);	
 }
 
 /* Volume bar margins */
