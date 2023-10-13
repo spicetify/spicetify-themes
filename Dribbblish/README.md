@@ -22,6 +22,10 @@
 ![rosepine](rosepine.png)
 ### Lunar
 ![lunar](lunar.png)
+### Catppuccin Latte
+![catppuccin-latte](catppuccin-latte.png)
+### Catppuccin Macchiato
+![catppuccin-macchiato](catppuccin-macchiato.png)
 
 ##  Features
 ### Resizable sidebar
