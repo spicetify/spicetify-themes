@@ -33,6 +33,7 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
 });
 
 let version;
+let ylx;
 
 (function Dribbblish() {
     // dynamic playback time tooltip
@@ -54,6 +55,7 @@ let version;
         legacy();
     } else if (version >= 121400000) {
         document.documentElement.classList.add("ylx");
+        ylx = true;
     }
 
     const tooltip = document.createElement("div");
@@ -76,69 +78,10 @@ let version;
     Spicetify.Player.addEventListener("onprogress", updateProgTime);
     updateProgTime({ data: Spicetify.Player.getProgress() });
 
-    waitForElement(
-        [`.main-yourLibraryX-libraryRootlist`, `.main-rootlist-wrapper > div:nth-child(2)`, "li.main-yourLibraryX-listItem"],
-        ([rootlist, listElement]) => {
-            listElement.classList.add("dribs-playlist-list");
-
-            const loadFolderImages = items => {
-                if (!items) items = listElement.children;
-                for (const item of items) {
-                    let id = item.querySelector("div > div:nth-child(2)").id;
-                    if (!id.includes("folder")) continue;
-
-                    id = id.split(":")[4];
-                    console.log(id);
-
-                    const base64 = localStorage.getItem("dribbblish:folder-image:" + id);
-
-                    const img_container = item.querySelector(".HeaderSideArea .x-entityImage-imageContainer");
-
-                    if (!base64) {
-                        if (img_container.querySelector("img")) img_container.children[0].remove();
-                        continue;
-                    }
-
-                    img_container.children[0].remove();
-                    const img = document.createElement("img");
-                    img.classList.add("main-image-image", "x-entityImage-image", "main-image-loaded");
-                    img.src = base64;
-                    img_container.append(img);
-                }
-            };
-
-            const getNewEls = mutationsList => {
-                for (const mutation of mutationsList) {
-                    if (mutation.type === "childList") {
-                        if (!mutation.addedNodes.length) continue;
-                        loadFolderImages(mutation.addedNodes);
-                    }
-                }
-            };
-
-            const refresh = mutationsList => {
-                console.log("refresh");
-                for (const mutation of mutationsList) {
-                    if (mutation.type === "attributes" && mutation.attributeName === "class") {
-                        loadFolderImages(listElement.children);
-                    }
-                }
-            };
-
-            loadFolderImages();
-
-            new MutationObserver(getNewEls).observe(listElement, { childList: true });
-            new MutationObserver(refresh).observe(rootlist, { attributes: true, attributeFilter: ["class"] });
-
-            DribbblishShared.loadFolderImages = loadFolderImages;
-        }
-    );
-
     // filepicker for custom folder images
     const filePickerForm = document.createElement("form");
     filePickerForm.setAttribute("aria-hidden", true);
     filePickerForm.innerHTML = '<input type="file" class="hidden-visually" />';
-    document.body.appendChild(filePickerForm);
     /** @type {HTMLInputElement} */
     const filePickerInput = filePickerForm.childNodes[0];
     filePickerInput.accept = ["image/jpeg", "image/apng", "image/avif", "image/gif", "image/png", "image/svg+xml", "image/webp"].join(",");
@@ -156,11 +99,7 @@ let version;
             } catch {
                 Spicetify.showNotification("File too large");
             }
-            if (version < 121200000) {
-                DribbblishShared.loadPlaylistImage?.call();
-            } else {
-                DribbblishShared.loadFolderImages?.call();
-            }
+            DribbblishShared.loadPlaylistImage?.call();
         };
         reader.readAsDataURL(file);
     };
@@ -171,13 +110,9 @@ let version;
         ([uri]) => {
             const id = Spicetify.URI.from(uri).id;
             localStorage.removeItem("dribbblish:folder-image:" + id);
-            if (version < 121200000) {
-                DribbblishShared.loadPlaylistImage?.call();
-            } else {
-                DribbblishShared.loadFolderImages?.call();
-            }
+            DribbblishShared.loadPlaylistImage?.call();
         },
-        ([uri]) => Spicetify.URI.isFolder(uri),
+        ([uri]) => Spicetify.URI.isFolder(uri) && !ylx,
         "x"
     ).register();
     new Spicetify.ContextMenu.Item(
@@ -187,7 +122,7 @@ let version;
             filePickerForm.reset();
             filePickerInput.click();
         },
-        ([uri]) => Spicetify.URI.isFolder(uri),
+        ([uri]) => Spicetify.URI.isFolder(uri) && !ylx,
         "edit"
     ).register();
 })();
