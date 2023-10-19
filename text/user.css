@@ -50,7 +50,8 @@
     font-weight: var(--font-weight) !important;
     line-height: var(--line-height);
 }
-.lyrics-lyricsContent-lyric {
+.lyrics-lyricsContent-lyric,
+.lyrics-lyricsContent-text {
     font-size: var(--font-size-lyrics) !important;
 }
 
