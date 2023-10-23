@@ -100,10 +100,12 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ### Notes
 
--   **IMPORTANT:** Add the following to your `config-xpui.ini` file. Details as to why are explained [here](https://github.com/JulienMaille/spicetify-dynamic-theme#important).
+-   **IMPORTANT:** Add the following to your `config-xpui.ini` file. Details as to why are explained [here](https://github.com/JulienMaille/spicetify-dynamic-theme#important). Run `spicetify apply` after adding these lines.
 
 ```ini
 [Patch]
+xpui.js_find_0880 = COLLAPSED\?64:32
+xpui.js_repl_0880 = COLLAPSED?32:32
 xpui.js_find_8008 = ,(\w+=)56,
 xpui.js_repl_8008 = ,${1}32,
 ```
