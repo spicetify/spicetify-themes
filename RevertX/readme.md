@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-https://i.gyazo.com/6c852eedc6df9bbcc63f1266fd1de62a.png
+RevertX/screenshots/RevertX.png
 
 ## More
 
