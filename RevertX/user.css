@@ -1,0 +1,138 @@
+.spotify__container--is-desktop .Root__top-container {
+  padding-top: calc(24px + var(--panel-gap)-3);
+  background-color: var(--spice-main);
+}
+.body-drag-top {
+  height: 64px !important;
+}
+.contentSpacing {
+  max-width: 100% !important;
+}
+.main-yourLibraryX-navItems {
+  background-color: var(--spice-sidebar);
+  padding: 0px 12px;
+  padding-top: 25px;
+}
+.main-yourLibraryX-libraryRootlist {
+  background-color: var(--spice-sidebar);
+}
+.main-yourLibraryX-header {
+  background-color: var(--spice-sidebar);
+  margin-top: -15px;
+}
+.main-yourLibraryX-filterArea {
+  background-color: var(--spice-sidebar);
+}
+.main-navBar-mainNav {
+  padding-top: 30px;
+  margin-left: 5px;
+}
+/*Your Library Alignment*/
+.Wrapper-medium-leading {
+  display: flex;
+  margin-inline-end: 20px;
+}
+/*Top Play Button*/
+.Wrapper-medium-medium-only {
+  top: calc((var(--encore-control-size-base,48px) - var(--encore-graphic-size-decorative-base,24px)) / 4);
+  left: calc((var(--encore-control-size-base,48px) - var(--encore-graphic-size-decorative-base,24px)) / 4);
+}
+.ButtonInner-medium-iconOnly {
+  min-block-size: var(--encore-control-size-base,37px);
+  inline-size: var(--encore-control-size-base,38px);
+  block-size: var(--encore-control-size-base,36px);
+}
+/Playlist Play Button/
+.Wrapper-large-medium-only {
+  scale: 1.3;
+}
+.Root__nav-bar {
+  margin-left: -11px;
+  min-width: 92px;
+  max-width: -webkit-fill-available;
+  padding-left: inherit;
+  padding-right: inherit;
+}
+.Root__top-bar {
+  margin-left: -20px;
+}
+.Root__main-view {
+  width: 102%;
+  justify-self: center;
+}
+.main-view-container__scroll-node-child {
+  padding-left: 0px;
+}
+.os-theme-spotify.os-host-transition>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle, .os-theme-spotify.os-host-transition>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
+  display: none;
+}
+.Wrapper-md-leading {
+  margin-inline-end: 20px;
+}
+.Button-md-buttonPrimary-useBrowserDefaultFocusStyle {
+  transform: scale(0.85);
+  padding-right: 50px;
+}
+.main-entityHeader-container.main-entityHeader-nonWrapped {
+  margin-left: 35px;
+}
+/*Top Bar*/
+.main-topBar-container {
+  width: 101%;
+  contain: none !important;
+}
+.spotify__container--is-desktop.spotify__os--is-windows .main-topBar-container {
+  padding-right: 200px;
+  padding-left: 70px;
+}
+.main-trackList-trackListHeader.main-trackList-trackListHeaderStuck {
+  top: 63px !important;
+}
+.main-actionBar-ActionBar.contentSpacing {
+  margin-left: 35px;
+}
+
+.spotify__container--is-desktop:not(.fullscreen) .main-topBar-background, .spotify__container--is-desktop:not(.fullscreen) .main-topBar-container>* {
+  -webkit-app-region: drag;
+}
+.main-topBar-historyButtons {
+  -webkit-app-region: no-drag !important;
+  margin-left: -40px;
+}
+.encore-dark-theme .encore-over-media-set {
+  -webkit-app-region: no-drag !important;
+}
+/*Profile Icon*/
+figure.main-avatar-avatar.main-userWidget-hasAvatar {
+  scale: 1.4;
+}
+button.Button-sc-1dqy6lx-0.Button-medium-medium-buttonTertiary-condensedAll-useBrowserDefaultFocusStyle.encore-over-media-set.main-userWidget-boxCondensed {
+  right: 2%;
+}
+/*Local Files Fixes*/
+/*Clickable Top Local Files Bar*/
+nav.app-module__tabBar___EngzO_betterDlocalDfiles {
+  -webkit-app-region: no-drag !important;
+}
+/*Draggable Top Bar*/
+nav.app-module__tabBar___EngzO_betterDlocalDfiles {
+  width: min-content;
+}
+/*Top 3 Dots*/
+.app-module__flex-centered___5gRmM_betterDlocalDfiles {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px;
+}
+/*Right 3 Dots*/
+.main-trackList-rowMoreButton[data-context-menu-open=true] {
+  color: var(--spice-text);
+  opacity: 1;
+  background-color: transparent;
+  border: 1px;
+}
+/*Transparent Local Files Background*/
+.fRZRXRIV2YBCFLYgwDAr  {
+  background-color: transparent !important;
+}
