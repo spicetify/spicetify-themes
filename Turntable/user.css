@@ -94,6 +94,10 @@
   border-radius: var(--round-value)
 }
 
+.main-nowPlayingWidget-coverArt > .cover-art {
+  clip-path: circle(50% at 50% 50%);
+}
+
 .main-nowPlayingWidget-coverArt .cover-art.shadow {
   width: 62px !important;
   height: 62px !important;
@@ -410,11 +414,10 @@
   }
 }
 
-
 /* Rotate turntable */
 .main-nowPlayingWidget-coverArt > .cover-art,
 #fad-art {
-  animation: rotate-cover_img 24s linear infinite paused
+  animation: rotate-cover_img 24s linear infinite
 }
 
 @keyframes rotate-cover_img {
