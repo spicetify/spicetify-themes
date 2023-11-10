@@ -270,3 +270,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ### Blossom
 <img src="https://user-images.githubusercontent.com/72624799/203471073-4a5e6cf0-a5dc-4ecc-9a12-56d5fc716ac4.png" alt="img"> 
+
+#### RevertX
+<img src="https://github.com/JayTheXXVII/spicetify-themes/blob/master/RevertX/screenshots/RevertX.png" alt="img"> 
