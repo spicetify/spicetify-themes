@@ -231,7 +231,6 @@ section.main-buddyFeed-container {
 .main-buddyFeed-container,
 .main-nowPlayingView-content.main-nowPlayingView-gradient {
     background-color: transparent !important;
-    background: transparent;
     background-image: none;
 }
 .progress-bar {
