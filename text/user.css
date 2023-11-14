@@ -724,6 +724,9 @@ section.main-buddyFeed-container {
 .main-repeatButton-button::before {
     content: "\21BB";
 }
+.main-repeatButton-button[aria-checked="mixed"]::before {
+    content: "\21BB\2474";
+}
 .main-shuffleButton-button > svg,
 .main-skipBackButton-button > svg,
 .main-playPauseButton-button > svg,
