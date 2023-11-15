@@ -231,7 +231,6 @@ section.main-buddyFeed-container {
 .main-buddyFeed-container,
 .main-nowPlayingView-content.main-nowPlayingView-gradient {
     background-color: transparent !important;
-    background: transparent;
     background-image: none;
 }
 .progress-bar {
@@ -590,6 +589,11 @@ section.main-buddyFeed-container {
     border: var(--border-width) var(--border-style) transparent;
 }
 
+.main-nowPlayingView-lyricsContent .lyrics-lyricsContent-provider,
+.main-nowPlayingView-lyricsContent .lyrics-lyricsContent-lyric {
+    transform: translateX(100px);
+}
+
 /*  ================================
     PLAYBACK BAR
     ================================ */
@@ -719,6 +723,9 @@ section.main-buddyFeed-container {
 }
 .main-repeatButton-button::before {
     content: "\21BB";
+}
+.main-repeatButton-button[aria-checked="mixed"]::before {
+    content: "\21BB\2474";
 }
 .main-shuffleButton-button > svg,
 .main-skipBackButton-button > svg,
