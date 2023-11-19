@@ -15,7 +15,7 @@
 ### Purple
 ![purple](purple.png)
 ### Samourai
-![samourai](samourai.png)
+![samurai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
 ### Rosé Pine

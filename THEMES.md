@@ -66,9 +66,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![purple](Dribbblish/purple.png)
 
-#### Samourai
+#### Samurai
 
-![samourai](Dribbblish/samourai.png)
+![samurai](Dribbblish/samurai.png)
 
 ## Matte
 
