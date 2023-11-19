@@ -14,7 +14,7 @@
 ![beach-sunset](beach-sunset.png)
 ### Purple
 ![purple](purple.png)
-### Samourai
+### Samurai
 ![samurai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
