@@ -14,8 +14,8 @@
 ![beach-sunset](beach-sunset.png)
 ### Purple
 ![purple](purple.png)
-### Samourai
-![samourai](samourai.png)
+### Samurai
+![samurai](samourai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
 ### Rosé Pine
