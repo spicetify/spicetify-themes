@@ -589,9 +589,9 @@ section.main-buddyFeed-container {
     border: var(--border-width) var(--border-style) transparent;
 }
 
-.main-nowPlayingView-lyricsContent .lyrics-lyricsContent-provider,
-.main-nowPlayingView-lyricsContent .lyrics-lyricsContent-lyric {
-    transform: translateX(100px);
+.main-nowPlayingView-lyricsContent {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
 }
 
 /*  ================================
