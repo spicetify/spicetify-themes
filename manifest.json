@@ -11,6 +11,9 @@
 				"name": "pjaspinski",
 				"url": "https://github.com/pjaspinski"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -25,6 +28,9 @@
 				"name": "Blacksuan19",
 				"url": "https://github.com/Blacksuan19"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -39,6 +45,10 @@
 				"name": "CharlieS1103",
 				"url": "https://github.com/CharlieS1103"
 			}
+		],
+		"tags": [
+			"outdated",
+			"v1.2.13"
 		]
 	},
 	{
@@ -55,7 +65,14 @@
 			{
 				"name": "khanhas",
 				"url": "https://github.com/khanhas"
+			},
+			{
+				"name": "harbassan",
+				"url": "https://github.com/harbassan"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -70,6 +87,10 @@
 				"name": "darkthemer",
 				"url": "https://github.com/darkthemer"
 			}
+		],
+		"tags": [
+			"outdated",
+			"v1.2.22"
 		]
 	},
 	{
@@ -84,6 +105,9 @@
 				"name": "okarin001",
 				"url": "https://github.com/okarin001"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -98,6 +122,9 @@
 				"name": "harbassan",
 				"url": "https://github.com/harbassan"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -112,6 +139,9 @@
 				"name": "darkthemer",
 				"url": "https://github.com/darkthemer"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -129,6 +159,9 @@
 				"name": "Grason Chan",
 				"url": "https://github.com/grasonchan"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -143,6 +176,9 @@
 				"name": "schnensch0",
 				"url": "https://github.com/schnensch0"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -169,6 +205,9 @@
 				"name": "Alex Casieri",
 				"url": "https://github.com/alexcasieri30"
 			}
+		],
+		"tags": [
+			"latest"
 		]
 	},
 	{
@@ -182,6 +221,9 @@
 			{
 				"name": "Robatortas", "url": "https://github.com/Robatortas"
 			}
-    ]
+    ],
+	"tags": [
+		"latest"
+	]
 	}
 ]
