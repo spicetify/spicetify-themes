@@ -87,7 +87,7 @@ xpui.js_repl_8008 = ,${1}56,
 ```
 
 ## Change Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `beach-sunset`, `samourai`, `purple`. Change scheme with commands:
+There are 13 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `beach-sunset`, `samourai`, `purple`, `catppuccin-latte`, `catppuccin-frappe`, `catppuccin-macchiato`, `catppuccin-mocha`. Change scheme with commands:
 ```
 spicetify config color_scheme <scheme name>
 spicetify apply
