@@ -70,6 +70,35 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![samurai](Dribbblish/samurai.png)
 
+#### Gruvbox
+
+![gruvbox](Dribbblish/gruvbox.png)
+
+#### Rosé Pine
+
+![rosepine](Dribbblish/rosepine.png)
+
+#### Lunar
+
+![lunar](Dribbblish/lunar.png)
+
+
+#### Catppuccin Latte
+
+![catppuccin-latte](Dribbblish/catppuccin-latte.png)
+
+#### Catppuccin Frappe
+
+![catppuccin-frappe](Dribbblish/catppuccin-frappe.png)
+
+#### Catppuccin Macchiado
+
+![catppuccin-macchiado](Dribbblish/catppuccin-macchiato.png)
+
+#### Catppuccin Mocha
+
+![catppuccin-mocha](Dribbblish/catppuccin-mocha.png)
+
 ## Matte
 
 #### Matte
