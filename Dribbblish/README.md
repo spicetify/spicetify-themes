@@ -24,8 +24,12 @@
 ![lunar](lunar.png)
 ### Catppuccin Latte
 ![catppuccin-latte](catppuccin-latte.png)
+### Catppuccin Frappe
+![catppuccin-frappe](catppuccin-frappe.png)
 ### Catppuccin Macchiato
 ![catppuccin-macchiato](catppuccin-macchiato.png)
+### Catppuccin Mocha
+![catppuccin-mocha](catppuccin-mocha.png)
 
 ##  Features
 ### Resizable sidebar
