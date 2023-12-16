@@ -438,19 +438,19 @@ input {
   z-index: 3;
 }
 
-/* topbar play button */
-.main-topBar-topbarContent .main-playButton-PlayButton > button > span {
-  inline-size: 32px;
-  block-size: 32px;
+/* main-view play button */
+.main-view-container .main-playButton-PlayButton > button > span {
+  inline-size: 42px;
+  block-size: 42px;
   min-block-size: auto;
 }
-.main-topBar-topbarContent .main-playButton-PlayButton svg {
-  width: 18px;
-  height: 18px;
+.main-view-container .main-playButton-PlayButton svg {
+  width: 24px;
+  height: 24px;
 }
-.main-topBar-topbarContent .main-playButton-PlayButton > button > span > span {
+.main-view-container .main-playButton-PlayButton > button > span > span {
   position: initial;
-  height: 18px;
+  height: 24px;
 }
 
 /* change text color on category cards in 'search' tab */
