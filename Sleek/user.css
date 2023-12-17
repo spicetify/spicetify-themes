@@ -675,3 +675,40 @@ NEW HOME LAYOUT
 .nav-alt .x-searchInput-searchInputInput:focus {
   box-shadow: none;
 }
+/* 
+-------
+TOGGLE 
+-------
+*/
+.x-toggle-indicatorWrapper {
+  background-color: transparent;
+  height: 20px;
+  width: 40px;
+  box-shadow: 0 0 0 1px var(--spice-subtext);
+}
+
+input:hover:not([disabled], :active) ~ .x-toggle-indicatorWrapper {
+  background-color: var(--spice-main-secondary);
+}
+
+input:checked ~ .x-toggle-indicatorWrapper {
+  background-color: var(--spice-button);
+  box-shadow: none;
+}
+
+.x-toggle-indicator {
+  background-color: var(--spice-subtext);
+  height: 12px;
+  width: 12px;
+  top: 4px;
+  left: 3px;
+}
+
+input:not([disabled]) ~ .x-toggle-indicatorWrapper:hover .x-toggle-indicator {
+  transform: scale(1.2);
+}
+
+input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
+  background-color: var(--spice-main);
+  right: 4px;
+}
