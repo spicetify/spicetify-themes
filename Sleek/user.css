@@ -438,19 +438,31 @@ input {
   z-index: 3;
 }
 
-/* main-view play button */
-.main-view-container .main-playButton-PlayButton > button > span {
+/* play button */
+.main-home-home .main-playButton-PlayButton > button > span {
   inline-size: 42px;
   block-size: 42px;
   min-block-size: auto;
 }
-.main-view-container .main-playButton-PlayButton svg {
+
+.main-home-home .main-playButton-PlayButton svg {
   width: 24px;
   height: 24px;
 }
-.main-view-container .main-playButton-PlayButton > button > span > span {
+
+.main-home-home .main-playButton-PlayButton > button > span > span {
   position: initial;
   height: 24px;
+}
+
+.main-actionBar-ActionBar .main-playButton-PlayButton svg {
+  width: 30px;
+  height: 30px;
+}
+
+.main-actionBar-ActionBar .main-playButton-PlayButton > button > span > span {
+  position: initial;
+  height: 30px;
 }
 
 /* change text color on category cards in 'search' tab */
