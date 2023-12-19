@@ -41,7 +41,7 @@ jobs:
             const assignees = [];
 
             for (const [keyword, assignee] of Object.entries(keywordsToAssigneesMap)) {
-              if (title.toUpperCase().includes(keyword.toUpperCase()) || body.toUpperCase().includes(keyword.toUpperCase())) {
+              if (title.match(new RegExp(`\\b${keyword}\\b`, "i")) || body.match(new RegExp(`\\b${keyword}\\b`, "i"))) {
                 if (Array.isArray(assignee)) {
                   assignees.push(...assignee);
                 } else {
