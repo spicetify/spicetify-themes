@@ -42,11 +42,7 @@ jobs:
 
             for (const [keyword, assignee] of Object.entries(keywordsToAssigneesMap)) {
               if (title.match(new RegExp(`\\b${keyword}\\b`, "i")) || body.match(new RegExp(`\\b${keyword}\\b`, "i"))) {
-                if (Array.isArray(assignee)) {
-                  assignees.push(...assignee);
-                } else {
-                  assignees.push(assignee);
-                }
+                assignees.push(...assignee);
               }
             }
 
