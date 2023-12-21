@@ -345,9 +345,11 @@
 .marketplace-settings-button:hover {
   background-color: var(--spice-button-disabled);
 }
-.GenericModal > * {
-  background-color: var(--spice-main) !important;
-  color: var(--spice-text);
+.GenericModal .encore-light-theme,
+.GenericModal .encore-dark-theme {
+  --text-base: var(--spice-text);
+  --text-subdued: var(--spice-subtext);
+  --background-base: var(--spice-main);
 }
 .GenericModal,
 .GenericModal > * {
