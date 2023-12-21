@@ -341,9 +341,6 @@
 .marketplace-header {
   height: 36px;
 }
-.marketplace-header__right {
-  position: fixed;
-}
 .marketplace-settings-button {
   padding: 12px 12px 8px;
   border-radius: var(--br-2);
