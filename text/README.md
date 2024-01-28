@@ -88,6 +88,10 @@
 
 ![TokyoNightStorm](screenshots/TokyoNightStorm.png)
 
+### ForestGreen
+
+![ForestGreen](screenshots/ForestGreen.png)
+
 ## More
 
 ### Description
