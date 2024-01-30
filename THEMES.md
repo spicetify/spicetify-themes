@@ -178,6 +178,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Dracula](text/screenshots/Dracula.png)
 
+#### ForestGreen
+
+![ForestGreen](text/screenshots/ForestGreen.png)
+
 #### Gruvbox
 
 ![Gruvbox](text/screenshots/Gruvbox.png)
@@ -209,6 +213,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 | ![TokyoNight](text/screenshots/TokyoNight.png) | ![TokyoNightStorm](text/screenshots/TokyoNightStorm.png) |
 |:----------------------------------------------:|:--------------------------------------------------------:|
 | Tokyo Night                                    | Tokyo Night Storm                                        |
+
 
 ## Turntable
 
