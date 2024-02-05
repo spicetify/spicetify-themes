@@ -19,7 +19,7 @@
 ### Gruvbox
 ![gruvbox](gruvbox.png)
 ### Gruvbox Material Dark
-![grubox-material-dark](gruvbox-material-dark.png)
+![gruvbox-material-dark](gruvbox-material-dark.png)
 ### Rosé Pine
 ![rosepine](rosepine.png)
 ### Lunar
