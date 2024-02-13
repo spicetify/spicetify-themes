@@ -18,6 +18,8 @@
 ![samurai](samurai.png)
 ### Gruvbox
 ![gruvbox](gruvbox.png)
+### Gruvbox Material Dark
+![gruvbox-material-dark](gruvbox-material-dark.png)
 ### Rosé Pine
 ![rosepine](rosepine.png)
 ### Lunar

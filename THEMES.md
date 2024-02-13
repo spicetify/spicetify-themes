@@ -74,6 +74,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![gruvbox](Dribbblish/gruvbox.png)
 
+#### Gruvbox Material Dark
+![gruvbox-material-dark](Dribbblish/gruvbox-material-dark.png)
+
 #### Rosé Pine
 
 ![rosepine](Dribbblish/rosepine.png)
