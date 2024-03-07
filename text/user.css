@@ -471,11 +471,11 @@
 .main-topBar-button:first-child:before {
     content: "<";
 }
-.main-topBar-button.main-topBar-forward::before {
+.main-topBar-button.main-topBar-responsiveForward::before {
     content: ">";
 }
 .main-topBar-button:first-child > svg,
-.main-topBar-button.main-topBar-forward > svg {
+.main-topBar-button.main-topBar-responsiveForward > svg {
     display: none;
 }
 .main-topBar-topbarContent {
