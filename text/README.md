@@ -6,25 +6,9 @@
 
 ##### with images
 
-```css
---display-card-image: block;
---display-coverart-image: block;
---display-header-image: block;
---display-library-image: block;
---display-tracklist-image: block;
-```
-
 ![withimg](screenshots/withimg.png)
 
 ##### without images
-
-```css
---display-card-image: none;
---display-coverart-image: none;
---display-header-image: none;
---display-library-image: none;
---display-tracklist-image: none;
-```
 
 ![withoutimg](screenshots/withoutimg.png)
 
@@ -123,7 +107,6 @@ xpui.js_repl_8008 = ,${1}32,
     -   https://github.com/nordtheme/nord
     -   https://github.com/Rigellute/rigel/
     -   https://github.com/rose-pine/rose-pine-theme
-    -   https://github.com/rose-pine/rose-pine-theme
     -   https://github.com/altercation/solarized
     -   https://github.com/enkia/tokyo-night-vscode-theme
 
@@ -184,15 +167,10 @@ body::after {
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly
-        69%  = 194px 45px
-        76%  = 177px 40.5px
-        83%  = 162px 37.5px
-        91%  = 148px 34px
-        100% = 135px 31px (default)
-        110% = 123px 28.5px
+       this size is set for 100% zoom
     */
     width: 135px;
-    height: 31px;
+    height: 40px;
 }
 ```
 
