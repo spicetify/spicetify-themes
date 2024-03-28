@@ -398,10 +398,7 @@ section.main-buddyFeed-container {
     height: 24px;
     gap: 8px;
 }
-.main-yourLibraryX-navLink .home-icon,
-.main-yourLibraryX-navLink .search-icon,
-.main-yourLibraryX-navLinkActive .home-active-icon,
-.main-yourLibraryX-navLinkActive .search-active-icon,
+.main-yourLibraryX-navLink > svg,
 .main-yourLibraryX-header .main-yourLibraryX-collapseButtonWrapper > span {
     transform: scale(0.6);
 }
