@@ -475,13 +475,13 @@ section.main-buddyFeed-container {
 .main-topBar-buddyFeed {
     background-color: transparent;
 }
-.main-topBar-button:first-child:before {
+.main-topBar-historyButtons > .main-topBar-button:first-child::before {
     content: "<";
 }
 .main-topBar-button.main-topBar-responsiveForward::before {
     content: ">";
 }
-.main-topBar-button:first-child > svg,
+.main-topBar-historyButtons > .main-topBar-button:first-child > svg,
 .main-topBar-button.main-topBar-responsiveForward > svg {
     display: none;
 }
@@ -545,7 +545,8 @@ section.main-buddyFeed-container {
 .lyrics-lyrics-contentContainer {
     justify-content: start;
 }
-.lyrics-lyrics-container, .main-nowPlayingView-section {
+.lyrics-lyrics-container,
+.main-nowPlayingView-section {
     --lyrics-color-active: var(--spice-text) !important;
     --lyrics-color-inactive: var(--spice-subtext) !important;
     --lyrics-color-passed: var(--spice-subtext) !important;
@@ -560,9 +561,7 @@ section.main-buddyFeed-container {
     opacity: 0.7;
     transition: none;
 }
-.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(
-        :empty
-    ) {
+.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty) {
     background-color: var(--lyrics-color-background);
     color: var(--spice-main);
     opacity: 1;
@@ -573,9 +572,7 @@ section.main-buddyFeed-container {
     opacity: 0;
     white-space: break-spaces;
 }
-.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(
-        :empty
-    )::before {
+.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty)::before {
     content: ">> ";
     opacity: 1;
     white-space: break-spaces;
