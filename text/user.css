@@ -654,7 +654,7 @@ section.main-buddyFeed-container {
 .volume-bar__slider-container .x-progressBar-fillColor,
 .volume-bar__slider-container
     .playback-progressbar-isInteractive
-    .DuvrswZugGajIFNXObAr
+    .progress-bar--isDragging
     .x-progressBar-fillColor,
 .volume-bar__slider-container
     .playback-progressbar-isInteractive
@@ -662,7 +662,6 @@ section.main-buddyFeed-container {
     .x-progressBar-fillColor,
 .volume-bar__slider-container
     .playback-progressbar-isInteractive
-    .volume-bar__slider-container
     .progress-bar:hover
     .x-progressBar-fillColor,
 .volume-bar__slider-container
