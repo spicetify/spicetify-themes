@@ -1,3 +1,7 @@
+.button-module__button___hf2qg_marketplace{ 
+  color: var(--spice-subtext)
+}
+
 .main-entityHeader-backgroundColor {
   background-color: #00000000 !important;
 }
@@ -13,6 +17,18 @@
 .Root__top-container {
   background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
   overflow: hidden;
+  grid-template-areas: 
+    "left-sidebar    main-view         now-playing-bar"
+    "left-sidebar    main-view         right-sidebar";
+}
+
+.Root__right-sidebar {
+  height: calc(100vh - 450px);
+  width: min-content;
+}
+
+.Root__now-playing-bar {
+  width: var(--panel-width);
 }
 
 .main-topBar-background {
@@ -29,6 +45,113 @@
 
 .main-playPauseButton-button {
   background-color: var(--spice-button);
+}
+
+.rX_OmqCngvY5ZCoYBZgb {
+  background-color: var(--background-base) !important;
+}
+
+
+.main-nowPlayingBar-nowPlayingBar {
+  min-height: 400px;
+}
+
+.main-nowPlayingBar-container {
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 420px;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  flex-direction: column;
+}
+
+[data-right-sidebar-hidden] .Root__main-view {
+  grid-area: main-view/main-view/main-view/span 1;
+}
+
+.main-nowPlayingBar-center {
+  width: 100%;
+}
+
+.main-nowPlayingBar-left {
+  width: 100%;
+}
+
+.HD9s7U5E1RLSWKpXmrqx {
+  background-color: #00000000;
+  margin: auto;
+  width: 100%;
+}
+
+.main-nowPlayingWidget-coverArt .cover-art {
+  height: 220px !important;
+  width: 220px !important;
+  margin: auto;
+  background-color: #00000000;
+}
+
+.main-nowPlayingWidget-coverArt .cover-art img {
+  border-radius: 50%;
+  animation: spin 25s linear infinite;
+  animation-play-state: paused;
+  background-color: #00000000;
+  box-shadow: 0 0 5px 5px var(--spice-text);
+}
+
+.running-animation {
+  animation-play-state: running !important;
+}
+
+.main-coverSlotCollapsed-container {
+  width: 100%;
+  height: 100%;
+}
+
+.main-coverSlotCollapsed-container > :first-child {
+  width: 100%;
+  height: 100%;
+}
+
+.main-coverSlotCollapsed-container > :first-child > :first-child {
+  width: 100%;
+  height: 100%;
+  background-color: #00000000;
+}
+
+.main-nowPlayingWidget-coverArt {
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #00000000;
+}
+
+.main-nowPlayingWidget-nowPlaying {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-coverSlotCollapsed-expandButton {
+  right: 25%;
+}
+
+.player-controls__buttons.player-controls__buttons--new-icons {
+  order: 2;
+}
+
+.playback-bar {
+  order: 1;
+}
+
+.main-nowPlayingBar-right {
+  width: 100%;
+}
+
+.main-nowPlayingBar-extraControls {
+  justify-content: space-evenly;
 }
 
 @keyframes twinkle1 {
@@ -65,6 +188,15 @@
   60% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
   80% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
   100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*

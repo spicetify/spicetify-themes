@@ -45,6 +45,61 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
     topContainer.appendChild(star);
   }
 
+  
+  // handles resizing of playbar panel to match right sidebar below it
+  const playbar = document.querySelector('.Root__now-playing-bar');
+  const rightbar = document.querySelector('.Root__right-sidebar');
+
+  const resizeObserver = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      if (entry.target === rightbar) {
+        let newWidth = entry.contentRect.width;
+        if (newWidth == 0) {
+          const localStorageWidth = localStorage.getItem('223ni6f2epqcidhx5etjafeai:panel-width-saved') + 'px';
+          if (localStorageWidth) {
+            newWidth = localStorageWidth;
+          }
+          else {
+            newWidth = 420;
+          }
+        }
+        playbar.style.width = `${newWidth}px`;
+        break;
+      }
+    }
+  });
+
+  resizeObserver.observe(rightbar);
+
+  
+  // start or stop spinning animation based on whether something is playing
+  const targetElement = document.querySelector('.main-playPauseButton-button');
+
+  const playObserver = new MutationObserver(function(mutationsList, observer) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'aria-label') {
+        handleLabelChange();
+      }
+    }
+  });
+
+  const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
+
+  playObserver.observe(targetElement, playConfig);
+
+  function handleLabelChange() {
+    const img = document.querySelector(".main-nowPlayingWidget-coverArt .cover-art img");
+    // checks the state of the play button on the playbar
+    if (document.querySelector('.main-playPauseButton-button').getAttribute('aria-label') == 'Pause'){
+      img.classList.add('running-animation');
+    }
+    else{ 
+      img.classList.remove('running-animation');
+    }
+  }
+
+
+
   /*
   Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
 
@@ -58,7 +113,7 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
     const shootingstar = document.createElement('span');
     shootingstar.className = 'shootingstar';
     if (Math.random() < 0.75) {
-      shootingstar.style.top = '-4px'; // hidden when animation is delayed 
+      shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed 
       shootingstar.style.right = random(0, 90) + '%';
     } 
     else {
@@ -75,6 +130,3 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
     topContainer.appendChild(shootingstar);
   }
 });
-
-
-
