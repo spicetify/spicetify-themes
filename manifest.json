@@ -221,9 +221,29 @@
 			{
 				"name": "Robatortas", "url": "https://github.com/Robatortas"
 			}
-    ],
-	"tags": [
-		"latest"
-	]
+    		],
+		"tags": [
+			"latest"
+		]
+	},
+	{
+		"name": "StarryNight",
+		"description": "Starry Night",
+		"preview": "StarryNight/images/starrynightbase.png",
+		"readme": "StarryNight/README.md",
+		"usercss": "StarryNight/user.css",
+		"schemes": "StarryNight/color.ini",
+		"include": [
+			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/StarryNight/theme.js"
+		],
+		"authors": [
+			{
+				"name": "Brandon Chen",
+				"url": "https://github.com/b-chen00"
+			}
+		],
+		"tags": [
+			"latest"
+		]
 	}
 ]

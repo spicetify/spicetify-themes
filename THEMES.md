@@ -160,6 +160,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 |  ![Eldritch](Sleek/eldritch.png)      |                                     |
 |              Eldritch                 |                                     |
 
+## StarryNight
+
+![base](StarryNight/images/starrynightbase.png)
+
 ## text
 
 ### Spotify
