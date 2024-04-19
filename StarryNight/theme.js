@@ -55,7 +55,7 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
       if (entry.target === rightbar) {
         let newWidth = entry.contentRect.width;
         if (newWidth == 0) {
-          const localStorageWidth = localStorage.getItem('223ni6f2epqcidhx5etjafeai:panel-width-saved') + 'px';
+          const localStorageWidth = localStorage.getItem('223ni6f2epqcidhx5etjafeai:panel-width-saved');
           if (localStorageWidth) {
             newWidth = localStorageWidth;
           }
