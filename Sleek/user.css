@@ -179,18 +179,13 @@ NAVBAR
 PLAYBACK BAR
 ---------------
 */
-/* progress bar moves smoothly */
-.x-progressBar-fillColor {
+/* playback progress bar moves smoothly */
+.playback-bar .x-progressBar-fillColor {
   transition: transform 1s linear;
 }
 
-.progress-bar__slider {
+.playback-bar .progress-bar__slider {
   transition: left 1s linear;
-}
-
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .x-progressBar-fillColor,
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .progress-bar__slider {
-  transition: none;
 }
 
 /* round cover art when collapsed */
