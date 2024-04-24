@@ -180,13 +180,18 @@ PLAYBACK BAR
 ---------------
 */
 /* playback progress bar moves smoothly */
-.playback-bar .x-progressBar-fillColor {
+.x-progressBar-fillColor {
   transition: transform 1s linear;
 }
 
-.playback-bar .progress-bar__slider {
+.progress-bar__slider {
   transition: left 1s linear;
 }
+
+.progress-bar--isDragging .x-progressBar-fillColor, .progress-bar-isDragging .progress-bar__slider {
+  transition: none;
+}
+ 
 
 /* round cover art when collapsed */
 .main-coverSlotCollapsed-container .cover-art-image {
