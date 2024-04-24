@@ -6,6 +6,8 @@
 
 ## More
 
+> Playbar panel is resizable using the resize bar from Now Playing View and Queue card.
+
 ### Created by
 
 - https://github.com/b-chen00
