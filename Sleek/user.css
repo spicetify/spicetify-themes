@@ -188,10 +188,9 @@ PLAYBACK BAR
   transition: left 1s linear;
 }
 
-.progress-bar--isDragging .x-progressBar-fillColor, .progress-bar-isDragging .progress-bar__slider {
+.progress-bar--isDragging .x-progressBar-fillColor, .progress-bar--isDragging .progress-bar__slider {
   transition: none;
 }
- 
 
 /* round cover art when collapsed */
 .main-coverSlotCollapsed-container .cover-art-image {
