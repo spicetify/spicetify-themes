@@ -745,3 +745,8 @@ img.playlist-picture[src$=".svg"] {
 .main-buddyFeed-content {
     height: fit-content;
 }
+
+/* bottom scroll-bar popup fix */
+.Root__main-view-overlay {
+    display: none;
+}
