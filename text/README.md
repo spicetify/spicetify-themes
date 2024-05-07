@@ -170,7 +170,7 @@ body::after {
        this size is set for 100% zoom
     */
     width: 135px;
-    height: 40px;
+    height: 64px;
 }
 ```
 
