@@ -2,7 +2,18 @@
 
 ## Screenshots
 
-![Base](images/starrynightbase.png)
+### Base
+![Base](images/base.png)
+### Cotton Candy
+![Cotton-candy](images/cotton-candy.png)
+### Forest
+![Forest](images/forest.png)
+### Galaxy
+![Galaxy](images/galaxy.png)
+### Sky
+![Sky](images/sky.png)
+### Sunrise
+![Sunrise](images/sunrise.png)
 
 ## More
 
