@@ -170,6 +170,9 @@ body::after {
        this size is set for 100% zoom
     */
     width: 135px;
+   /* depending on what global status bar 
+      style is enabled height need to be 
+      changed accordingly. */
     height: 64px;
 }
 ```
