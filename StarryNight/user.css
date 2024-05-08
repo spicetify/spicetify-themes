@@ -154,6 +154,10 @@
   justify-content: space-evenly;
 }
 
+.main-tag-container {
+  color: var(--spice-sidebar);
+}
+
 @keyframes twinkle1 {
   0% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
   20% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }

@@ -162,7 +162,23 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ## StarryNight
 
-![base](StarryNight/images/starrynightbase.png)
+#### Base
+![Base](StarryNight/images/base.png)
+
+#### Cotton Candy
+![Cotton-candy](StarryNight/images/cotton-candy.png)
+
+#### Forest
+![Forest](StarryNight/images/forest.png)
+
+#### Galaxy
+![Galaxy](StarryNight/images/galaxy.png)
+
+#### Sky
+![Sky](StarryNight/images/sky.png)
+
+#### Sunrise
+![Sunrise](StarryNight/images/sunrise.png)
 
 ## text
 

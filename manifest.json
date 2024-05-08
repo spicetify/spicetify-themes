@@ -229,7 +229,7 @@
 	{
 		"name": "StarryNight",
 		"description": "Starry Night",
-		"preview": "StarryNight/images/starrynightbase.png",
+		"preview": "StarryNight/images/base.png",
 		"readme": "StarryNight/README.md",
 		"usercss": "StarryNight/user.css",
 		"schemes": "StarryNight/color.ini",
@@ -240,6 +240,10 @@
 			{
 				"name": "Brandon Chen",
 				"url": "https://github.com/b-chen00"
+			},
+			{
+				"name": "Julissa Laignelet",
+				"url": "https://github.com/laignelet16"
 			}
 		],
 		"tags": [
