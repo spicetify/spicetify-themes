@@ -229,7 +229,7 @@
 	{
 		"name": "StarryNight",
 		"description": "Starry Night",
-		"preview": "StarryNight/images/starrynightbase.png",
+		"preview": "StarryNight/images/base.png",
 		"readme": "StarryNight/README.md",
 		"usercss": "StarryNight/user.css",
 		"schemes": "StarryNight/color.ini",
