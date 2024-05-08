@@ -174,6 +174,9 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Galaxy
 ![Galaxy](StarryNight/images/galaxy.png)
 
+#### Orange
+![Orange](StarryNight/images/orange.png)
+
 #### Sky
 ![Sky](StarryNight/images/sky.png)
 
