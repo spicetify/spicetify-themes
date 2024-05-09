@@ -317,3 +317,52 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ### Blossom
 <img src="https://user-images.githubusercontent.com/72624799/203471073-4a5e6cf0-a5dc-4ecc-9a12-56d5fc716ac4.png" alt="img"> 
+
+
+## BetterBloom
+
+### Dark (default)
+
+![Dark Screenshot](./BetterBloom/images/base.png)
+![Dark 1 Screenshot](./BetterBloom/images/better-bloom-dark.png)
+![Dark 2 Screenshot](./BetterBloom/images/better-bloom-dark2.png)
+
+### Light
+
+![Light Screenshot](./BetterBloom/images/better-bloom-light.png)
+
+### Comfy
+
+![Comfy Screenshot](./BetterBloom/images/better-bloom-comfy.png)
+
+### Darkgreen
+
+![DarkGreen Screenshot](./BetterBloom/images/better-bloom-darkgreen.png)
+
+### Violet
+
+![Violet Screenshot](./BetterBloom/images/better-bloom-violet.png)
+
+### Dark-Fluent
+
+![Dark-Fluent Screenshot](./BetterBloom/images/better-bloom-dark-fluent.png)
+
+### Dark-Bloom
+
+![Dark-Bloom Screenshot](./BetterBloom/images/better-bloom-dark-bloom.png)
+
+| ![Better Bloom Dark](./BetterBloom/images/base.png) | ![Better Bloom Light](./BetterBloom/images/better-bloom-light.png) |
+| :-------------------------------------------------: | :----------------------------------------------------------------: |
+|                        Dark                         |                               Light                                |
+
+| ![Better Bloom Comfy](./BetterBloom/images/better-bloom-comfy.png) | ![Better Bloom Darkgreen](./BetterBloom/images/better-bloom-darkgreen.png) |
+| :----------------------------------------------------------------: | :------------------------------------------------------------------------: |
+|                               Comfy                                |                                 Darkgreen                                  |
+
+| ![Better Bloom Violet](./BetterBloom/images/better-bloom-violet.png) | ![Better Bloom Dark-bloom](./BetterBloom/images/better-bloom-dark-bloom.png) |
+| :------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+|                                Violet                                |                                  Darkbloom                                   |
+
+| ![Better Bloom Dark-Fluent](./BetterBloom/images/better-bloom-dark-fluent.png) |
+| :----------------------------------------------------------------------------: |
+|                                   Darkfluent                                   |
