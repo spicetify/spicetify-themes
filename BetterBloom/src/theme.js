@@ -1,5 +1,3 @@
-// Scripts are from ohitstom
-
 (function volumePercentage() {
   const volumeBar = document.querySelector(
     ".main-nowPlayingBar-volumeBar .progress-bar"

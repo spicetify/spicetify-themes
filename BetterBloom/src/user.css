@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   /* Scrollbar */
-  --scrollbar-display: none;
+  --scrollbar-display: block;
   --scrollbar-width: 0.25rem;
-  --scrollbar-color: var(--spice-text) !important;
+  --scrollbar-color: rgba(var(--spice-rgb-text), 0.75) !important;
 
   /* Border */
   --default-border-thickness: 2px;
@@ -16,7 +16,7 @@
   --default-gap: 0.5rem;
 
   /* Shadow Color */
-  --black-rgb: var(--spice-rgb-card);
+  --shadow-rgb: var(--spice-rgb-contour);
   --white-rgb: 255, 255, 255;
 
   --margin-heading: 0.5rem;
@@ -28,6 +28,7 @@
 
   --bg-color-opacity: 0.25;
   --bg-color-opacity-homeHeader: 0.5;
+  --bg-color-opacity-cards: 0.75;
 
   --blur-radius: 3rem;
 
@@ -137,10 +138,28 @@
   padding-top: calc(1.5rem + var(--panel-gap) * 2) !important;
 }
 
+.x-searchResultsTracks-root > .main-gridContainer-gridContainer,
+.main-trackList-trackList,
+.main-card-card,
+.main-heroCard-card,
 .main-card-cardContainer,
 .view-homeShortcutsGrid-shortcut {
-  background-color: rgba(var(--spice-rgb-card), 0.75);
+  background-color: rgba(
+    var(--spice-rgb-card),
+    var(--bg-color-opacity-cards)
+  ) !important;
+  border: 1px rgba(var(--spice-rgb-contour), 0.5) solid;
   border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.view-homeShortcutsGrid-draggable {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+}
+
+.main-card-cardContainer,
+.view-homeShortcutsGrid-shortcut {
   &:hover {
     background-color: rgba(var(--spice-rgb-card), 0.5);
   }
@@ -186,13 +205,13 @@
   padding: var(--padding-now-playing-bar);
   bottom: var(--margin-bottom-now-playing-bar);
   border: var(--default-border-thickness) solid
-    rgba(var(--spice-rgb-selected-row), 0.2);
-  background-color: rgba(var(--black-rgb), var(--bg-color-opacity));
+    rgba(var(--shadow-rgb), var(--bg-color-opacity-homeHeader));
+  background-color: rgba(var(--shadow-rgb), var(--bg-color-opacity));
   backdrop-filter: blur(var(--blur-radius)) saturate(1.2);
 }
 
 .main-contextMenu-menu {
-  background-color: rgba(var(--black-rgb), var(--bg-color-opacity));
+  background-color: rgba(var(--shadow-rgb), var(--bg-color-opacity));
 }
 
 .main-contextMenu-menu:before {
@@ -233,6 +252,12 @@
   scale: 0.75 !important;
   background-color: var(--spice-text);
   color: var(--spice-subtext);
+  svg {
+    display: none;
+  }
+}
+
+.main-playPauseButton-button {
   svg {
     display: none;
   }
@@ -342,10 +367,6 @@
 .rX_OmqCngvY5ZCoYBZgb:after,
 .rX_OmqCngvY5ZCoYBZgb::before,
 .search-searchCategory-SearchCategory {
-  /* background-color: rgba(
-    var(--black-rgb),
-    var(--bg-color-opacity-homeHeader)
-  ) !important; */
   backdrop-filter: blur(var(--blur-radius)) saturate(1.5);
   top: 0;
 }
@@ -384,17 +405,21 @@
 }
 
 /* Top Bar Container */
+.spotify__os--is-windows .main-topBar-container {
+  padding-inline-end: 10.125rem !important;
+  padding-inline-start: 5rem !important;
+}
+
+.Root__main-view .main-topBar-container {
+  margin-top: calc(-24px + var(--panel-gap) * -2);
+  height: calc(24px + var(--panel-gap) * 2);
+}
+
 .main-topBar-container {
-  height: 2rem;
-  width: 100vw;
-  left: 5rem;
-  margin-top: 0.25rem;
-  position: fixed;
-  top: 0.05rem;
-  padding: 0;
-  padding-right: calc(15rem);
-  transition: var(--ease-transition);
-  pointer-events: none;
+  position: fixed !important;
+  left: 0;
+  width: 100%;
+  z-index: 5 !important;
 }
 
 .main-view-container__scroll-node-child-spacer {
@@ -439,6 +464,7 @@
   margin-bottom: calc(
     var(--now-playing-bar-height) - (var(--padding-now-playing-bar) * 2)
   ) !important;
+  padding: 0;
 }
 
 .main-nowPlayingBar-container .GlueDropTarget,
@@ -455,6 +481,7 @@
   top: 0 !important;
   height: 100%;
   margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .main-shelf-shelf,
@@ -489,6 +516,19 @@
   min-block-size: 2rem;
   inline-size: 2rem;
   block-size: 2rem;
+  span {
+    scale: 0.75;
+  }
+}
+
+.main-topBar-topbarContent .ButtonInner-medium-iconOnly {
+  min-inline-size: 1.75rem;
+  min-block-size: 1.75rem;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  span {
+    scale: 0.85;
+  }
 }
 
 .Wrapper-medium-medium-only {
@@ -508,7 +548,7 @@
 }
 
 .LegacyChipComponent-checkbox-chip-sm-useBrowserDefaultFocusStyle {
-  background-color: rgba(var(--black-rgb), var(--bg-color-opacity-homeHeader));
+  background-color: rgba(var(--shadow-rgb), var(--bg-color-opacity-homeHeader));
 }
 
 .playlist-playlist-searchBoxContainer {
@@ -544,18 +584,14 @@
 
 /* Animations */
 .main-view-container,
-.Root__right-sidebar {
+.Root__right-sidebar,
+.Root__now-playing-bar {
   transition: var(--ease-transition);
 }
 .Root__nav-bar,
 .Root__main-view {
   position: static;
   transition: var(--ease-transition);
-}
-
-.main-trackList-trackListRowGrid {
-  padding: 0 2rem;
-  padding-right: 1rem;
 }
 
 .progress-bar {
@@ -591,16 +627,19 @@
 .Root__right-sidebar,
 aside[aria-label="Now playing view"] {
   --background-base: var(--spice-sidebar) !important;
-  animation-delay: 10ms;
+  animation-delay: 100ms;
   animation-duration: 0.35s;
   animation-name: animate-fade-in-from-right;
   animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
+
 .Root__nav-bar {
-  animation-delay: 10ms;
+  animation-delay: 100ms;
   animation-duration: 0.35s;
   animation-name: animate-fade-in-from-left;
   animation-fill-mode: forwards;
+  animation-timing-function: ease;
 }
 
 @keyframes animate-fade-in-from-left {
@@ -617,6 +656,14 @@ aside[aria-label="Now playing view"] {
   }
   100% {
     transform: translateX(0%);
+  }
+}
+@keyframes animate-fade-in-from-bottom {
+  0% {
+    transform: translateY(calc(var(--now-playing-bar-height) * 2));
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -740,5 +787,24 @@ button.HD9s7U5E1RLSWKpXmrqx {
   height: 100%;
   border-radius: var(--border-radius-rounded);
   transition: --progress-bar-transform 0.5s linear !important;
+}
+
+.playlist-playlist-searchResultListContainer {
+  display: grid;
+  gap: var(--default-gap);
+}
+
+.BoxComponent-group-listRow-naked-isInteractive-minBlockSize_56px-padding_8px:hover::after {
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+.BoxComponent-group-listRow-tinted-isInteractive-minBlockSize_56px-padding_8px {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.main-shelf-shelfGrid,
+.main-gridContainer-gridContainer {
+  margin-inline: 0rem !important;
+  margin-inline-end: var(--content-spacing) !important;
 }
 
