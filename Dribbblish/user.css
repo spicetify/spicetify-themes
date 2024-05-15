@@ -193,6 +193,12 @@ body {
     color: var(--spice-text);
 }
 
+/* customise cards hover play button */
+.main-card-PlayButtonContainer .ButtonInner-medium-iconOnly {
+    background-color: var(--background-base);
+    color: var(--spice-text);
+}
+
 /* customise player cover art */
 .main-nowPlayingWidget-coverArt .cover-art {
     width: var(--bar-cover-art-size) !important;
