@@ -745,10 +745,9 @@ img.playlist-picture[src$=".svg"] {
 }
 .main-buddyFeed-content {
     height: 100%;
-    position: relative;
 }
 
 /* bottom scroll-bar popup fix */
 .Root__main-view-overlay {
-    display: none;
+    width: 100%;
 }
