@@ -512,6 +512,7 @@ input {
 .main-buddyFeed-container {
     background-color: inherit;
     box-shadow: none;
+    overflow: initial;
 }
 .legacy-gridChange .main-coverSlotExpanded-container {
     left: calc(var(--nav-bar-width) + 10px);
@@ -749,10 +750,10 @@ img.playlist-picture[src$=".svg"] {
     background-color: var(--spice-subtext);
 }
 .main-buddyFeed-content {
-    height: fit-content;
+    height: 100%;
 }
 
 /* bottom scroll-bar popup fix */
 .Root__main-view-overlay {
-    display: none;
+    width: 100%;
 }
