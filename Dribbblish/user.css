@@ -199,6 +199,19 @@ body {
     color: var(--spice-text);
 }
 
+/* small welcome box */
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-small-iconOnly {
+    background-color: var(--background-base);
+    color: var(--spice-text);
+}
+
+/* top bar sponsored ads */
+.Button-medium-buttonPrimary-useBrowserDefaultFocusStyle .ButtonInner-medium {
+    background-color: var(--background-base);
+    color: var(--spice-text);
+}
+
+
 /* customise player cover art */
 .main-nowPlayingWidget-coverArt .cover-art {
     width: var(--bar-cover-art-size) !important;
