@@ -37,6 +37,7 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
     star.style.height = size + 'px';
     star.style.backgroundColor = rs.getPropertyValue('--spice-star');
     star.style.zIndex = '-1';
+    star.style.borderRadius = '50%';
 
     if (Math.random() < 1/5) {
       star.style.animation = 'twinkle' + (Math.floor(Math.random() * 4) + 1) + ' 5s infinite';
