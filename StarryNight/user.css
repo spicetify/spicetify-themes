@@ -97,6 +97,7 @@
   width: 220px !important;
   margin: auto;
   background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
 }
 
 .main-nowPlayingWidget-coverArt .cover-art img {
