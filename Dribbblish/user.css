@@ -199,8 +199,10 @@ body {
     color: var(--spice-text);
 }
 
-/* small welcome box */
-.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-small-iconOnly {
+/* top welcome box viz. good morning */
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-small-iconOnly,
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-medium-iconOnly,
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-large-iconOnly {
     background-color: var(--background-base);
     color: var(--spice-text);
 }
