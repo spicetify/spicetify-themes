@@ -92,6 +92,8 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ```ini
 [Patch]
+xpui.js_find_0880 = COLLAPSED\?64:32
+xpui.js_repl_0880 = COLLAPSED?32:32
 xpui.js_find_8008 = ,(\w+=)56,
 xpui.js_repl_8008 = ,${1}32,
 ```
@@ -100,10 +102,10 @@ xpui.js_repl_8008 = ,${1}32,
 
     -   https://github.com/catppuccin/catppuccin
     -   https://github.com/dracula/dracula-theme
-    -   https://github.com/morhetz/gruvbox
+    -   https://github.com/morhetz/gruvbox/
     -   https://github.com/rebelot/kanagawa.nvim
     -   https://github.com/nordtheme/nord
-    -   https://github.com/Rigellute/rigel
+    -   https://github.com/Rigellute/rigel/
     -   https://github.com/rose-pine/rose-pine-theme
     -   https://github.com/altercation/solarized
     -   https://github.com/enkia/tokyo-night-vscode-theme
@@ -115,45 +117,39 @@ xpui.js_repl_8008 = ,${1}32,
 ```css
 /* user settings */
 :root {
-    --font-family: "DM Mono", monospace;
+    --font-family: "DM Mono", monospace !important;
     /*
-    --font-family: 'Anonymous Pro', monospace;
-    --font-family: 'Courier Prime', monospace;
-    --font-family: 'Cousine', monospace;
-    --font-family: 'Cutive Mono', monospace;
-    --font-family: 'DM Mono', monospace;
-    --font-family: 'Fira Mono', monospace;
-    --font-family: 'IBM Plex Mono', monospace;
-    --font-family: 'Inconsolata', monospace;
-    --font-family: 'Nanum Gothic Coding', monospace;
-    --font-family: 'PT Mono', monospace;
-    --font-family: 'Roboto Mono', monospace;
-    --font-family: 'Share Tech Mono', monospace;
-    --font-family: 'Source Code Pro', monospace;
-    --font-family: 'Space Mono', monospace;
-    --font-family: 'Ubuntu Mono', monospace;
-    --font-family: 'VT323', monospace;
+    --font-family: 'Anonymous Pro', monospace !important;
+    --font-family: 'Courier Prime', monospace !important;
+    --font-family: 'Cousine', monospace !important;
+    --font-family: 'Cutive Mono', monospace !important;
+    --font-family: 'DM Mono', monospace !important;
+    --font-family: 'Fira Mono', monospace !important;
+    --font-family: 'IBM Plex Mono', monospace !important;
+    --font-family: 'Inconsolata', monospac !important;
+    --font-family: 'Nanum Gothic Coding', monospace !important;
+    --font-family: 'PT Mono', monospace !important;
+    --font-family: 'Roboto Mono', monospace !important;
+    --font-family: 'Share Tech Mono', monospace !important;
+    --font-family: 'Source Code Pro', monospace !important;
+    --font-family: 'Space Mono', monospace !important;
+    --font-family: 'Ubuntu Mono', monospace !important;
+    --font-family: 'VT323', monospace !important;
     */
-    --font-size: 14px;
-    --font-weight: 400; /* 200 : 900 */
-    --line-height: 1.2;
-
+    --font-size: 14px !important;
     --font-size-lyrics: 14px; /* 1.5em (default) */
+    --font-weight: 400 !important; /* 200 : 900 */
+    --line-height: 1.2 !important;
 
-    --font-family-header: "asciid";
-    --font-size-multiplier-header: 4;
+    --display-card-image: block !important; /* none | block */
+    --display-coverart-image: none !important; /* none | block */
+    --display-header-image: none !important; /* none | block */
+    --display-library-image: block !important; /* none | block */
+    --display-tracklist-image: none !important; /* none | block */
 
-    --display-card-image: block; /* none | block */
-    --display-coverart-image: none; /* none | block */
-    --display-header-image: none; /* none | block */
-    --display-library-image: block; /* none | block */
-    --display-tracklist-image: none; /* none | block */
-    --display-spicetify-banner-ascii: block; /* none | block */
-    --display-music-banner-ascii: none; /* none | block */
-
-    --border-radius: 0px;
-    --border-width: 1px;
-    --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+    --border-radius: 0px !important;
+    --border-width: 1px !important;
+    --border-style: solid !important; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
 }
 ```
 
@@ -163,20 +159,18 @@ xpui.js_repl_8008 = ,${1}32,
 
 ```css
 /* transparent window controls background */
-.spotify__container--is-desktop:not(.fullscreen) body::after {
+body::after {
     content: "";
     position: absolute;
     right: 0;
     z-index: 999;
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
-       edit width and height accordingly */
+       edit width and height accordingly
+       this size is set for 100% zoom
+    */
     width: 135px;
     height: 40px;
-    /* depending on what global status bar 
-       style is enabled height need to be 
-       changed accordingly. */
-    height: 64px;
 }
 ```
 
