@@ -57,15 +57,18 @@
     font-weight: var(--font-weight) !important;
     line-height: var(--line-height) !important;
 }
-.lyrics-lyrics-container * {
+.lyrics-lyrics-container *,
+.main-nowPlayingView-lyricsContent * {
     font-family: var(--font-family);
     font-size: var(--font-size-lyrics);
     font-weight: var(--font-weight);
     line-height: var(--line-height);
 }
 .main-entityHeader-title h1 {
-    font-family: "asciid" !important;
-    font-size: calc(var(--font-size) * var(--font-size-multiplier-header)) !important;
+    font-family: var(--font-family-header) !important;
+    font-size: calc(
+        var(--font-size) * var(--font-size-multiplier-header)
+    ) !important;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -534,8 +537,9 @@
 }
 
 /* lyrics cinema */
-.main-lyricsCinema-lyricsCinemaVisible {
+.Root__lyrics-cinema {
     border: var(--border-width) var(--border-style) transparent;
+    overflow: hidden;
 }
 .main-nowPlayingView-lyricsContent {
     -webkit-mask-image: none !important;
