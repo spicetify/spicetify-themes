@@ -10,6 +10,18 @@
     --panel-gap: 0;
 }
 
+.LayoutResizer__inline-end {
+    inset-inline-end: 8px;
+}
+
+.LayoutResizer__inline-start {
+    inset-inline-start: 8px;
+}
+
+.LayoutResizer__resize-bar {
+    width: 8px;
+}
+
 /* SEARCH */
 .main-yourEpisodes-episodeCard {
     background-color: red;
