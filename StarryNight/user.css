@@ -22,6 +22,14 @@
     "left-sidebar    main-view         right-sidebar";
 }
 
+.global-nav .Root__top-container {
+  grid-template-areas:
+    "global-nav global-nav global-nav"
+    "left-sidebar main-view now-playing-bar"
+    "left-sidebar main-view right-sidebar" !important;
+  grid-template-rows: auto 1fr 1fr;
+}
+
 .Root__right-sidebar {
   height: calc(100vh - 450px);
   width: min-content;
@@ -89,6 +97,7 @@
   width: 220px !important;
   margin: auto;
   background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
 }
 
 .main-nowPlayingWidget-coverArt .cover-art img {
