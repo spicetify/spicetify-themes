@@ -693,8 +693,8 @@ TOGGLE
 */
 .x-toggle-indicatorWrapper {
   background-color: transparent;
-  height: 20px;
-  width: 40px;
+  height: 20px !important;
+  width: 40px !important;
   box-shadow: 0 0 0 1px var(--spice-subtext);
 }
 
