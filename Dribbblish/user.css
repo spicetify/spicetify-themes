@@ -199,6 +199,21 @@ body {
     color: var(--spice-text);
 }
 
+/* top welcome box viz. good morning */
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-small-iconOnly,
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-medium-iconOnly,
+.view-homeShortcutsGrid-PlayButtonContainer .ButtonInner-large-iconOnly {
+    background-color: var(--background-base);
+    color: var(--spice-text);
+}
+
+/* top bar sponsored ads */
+.Button-medium-buttonPrimary-useBrowserDefaultFocusStyle .ButtonInner-medium {
+    background-color: var(--background-base);
+    color: var(--spice-text);
+}
+
+
 /* customise player cover art */
 .main-nowPlayingWidget-coverArt .cover-art {
     width: var(--bar-cover-art-size) !important;
