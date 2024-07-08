@@ -22,6 +22,13 @@
     "left-sidebar    main-view         right-sidebar";
 }
 
+.global-nav .Root__top-container {
+  grid-template-areas:
+    "global-nav global-nav global-nav"
+    "left-sidebar main-view now-playing-bar"
+    "left-sidebar main-view right-sidebar";
+}
+
 .Root__right-sidebar {
   height: calc(100vh - 450px);
   width: min-content;
@@ -198,6 +205,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
