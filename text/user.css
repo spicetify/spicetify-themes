@@ -108,7 +108,6 @@
 .Root__top-bar {
     border: var(--border-width) solid transparent;
 }
-.Root__main-view,
 .Root__nav-bar,
 .Root__now-playing-bar {
     overflow: visible;
@@ -309,6 +308,7 @@
 }
 .Root__main-view::before {
     content: "Main";
+    position: fixed;
 }
 .Root__now-playing-bar::before {
     content: "Playing";
