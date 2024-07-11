@@ -60,6 +60,10 @@
 
 ![RosePineMoon](screenshots/RosePineMoon.png)
 
+### RosePineDawn
+
+![RosePineDawn](screenshots/RosePineDawn.png)
+
 ### Solarized
 
 ![Solarized](screenshots/Solarized.png)
@@ -172,8 +176,8 @@ xpui.js_repl_8008 = ,${1}32,
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly */
     width: 135px;
-    /* depending on what global status bar 
-       style is enabled height need to be 
+    /* depending on what global status bar
+       style is enabled height need to be
        changed accordingly. */
     height: 64px;
 }
