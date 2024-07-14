@@ -226,6 +226,23 @@
 		]
 	},
 	{
+		"name": "Adwaita",
+		"description": "Adwaita",
+		"preview": "Adwaita/screenshot.png",
+		"readme": "Adwaita/README.md",
+		"usercss": "Adwaita/user.css",
+		"schemes": "Adwaita/color.ini",
+		"authors": [
+			{
+				"name": "mr00k3",
+				"url": "https://github.com/mr00k3"
+			}
+		],
+		"tags": [
+			"latest"
+		]
+	},
+	{
 		"name": "StarryNight",
 		"description": "Starry Night",
 		"preview": "StarryNight/images/base.png",
