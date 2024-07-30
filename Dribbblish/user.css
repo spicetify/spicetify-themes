@@ -44,6 +44,12 @@ body {
     letter-spacing: normal;
 }
 
+.global-nav .Root__top-container {
+    grid-template-areas: "global-nav global-nav global-nav"
+        "left-sidebar main-view right-sidebar"
+        "left-sidebar now-playing-bar now-playing-bar" !important;
+}
+
 .Root__top-container {
     grid-template-areas:
         "left-sidebar main-view right-sidebar"
@@ -52,10 +58,35 @@ body {
     padding-left: 0 !important;
 }
 
+.global-nav #Desktop_PanelContainer_Id {
+    border-radius: 0 !important;
+}
+
 .Root__now-playing-bar {
     background-color: var(--spice-player);
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
     grid-area: now-playing-bar !important;
+}
+
+.Root__globalNav {
+    background-color: var(--spice-main) !important;
+    border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
+    margin-left: calc(var(--left-sidebar-width) * 1px);
+}
+
+.Root__globalNav .main-globalNav-historyButtonsContainer,
+.Root__globalNav .main-globalNav-searchSection,
+.Root__globalNav .main-topBar-topbarContentRight {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.main-home-filterChipsSection {
+    background-color: var(--spice-main) !important;
+}
+
+.global-nav .Root__main-view {
+    border-radius: 0 !important;
 }
 
 .Root__main-view {
