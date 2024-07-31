@@ -16,10 +16,14 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
+  const backgroundContainer = document.createElement('div');
+  backgroundContainer.className = 'starrynight-bg-container';
+  topContainer.appendChild(backgroundContainer);
+
   // make --spice-main transparent for a more visible background
   r.style.setProperty(
     '--spice-main',
-    rs.getPropertyValue('--spice-main') + '00'
+    `${rs.getPropertyValue('--spice-main')}00`
   );
 
   // to position stars and shooting stars between the background and everything else
@@ -27,27 +31,29 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   rootElement.style.zIndex = '0';
 
   // create the stars
-  const canvasSize = topContainer.clientWidth * topContainer.clientHeight;
+  const canvasSize =
+    backgroundContainer.clientWidth * backgroundContainer.clientHeight;
   const starsFraction = canvasSize / 4000;
   for (let i = 0; i < starsFraction; i++) {
     const size = Math.random() < 0.5 ? 1 : 2;
 
     const star = document.createElement('div');
     star.style.position = 'absolute';
-    star.style.left = random(0, 99) + '%';
-    star.style.top = random(0, 99) + '%';
+    star.style.left = `${random(0, 99)}%`;
+    star.style.top = `${random(0, 99)}%`;
     star.style.opacity = random(0.5, 1);
-    star.style.width = size + 'px';
-    star.style.height = size + 'px';
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
     star.style.backgroundColor = rs.getPropertyValue('--spice-star');
     star.style.zIndex = '-1';
 
     if (Math.random() < 1 / 5) {
-      star.style.animation =
-        'twinkle' + (Math.floor(Math.random() * 4) + 1) + ' 5s infinite';
+      star.style.animation = `twinkle${
+        Math.floor(Math.random() * 4) + 1
+      } 5s infinite`;
     }
 
-    topContainer.appendChild(star);
+    backgroundContainer.appendChild(star);
   }
 
   // handles resizing of playbar panel to match right sidebar below it
@@ -55,10 +61,10 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   const rightbar = document.querySelector('.Root__right-sidebar');
 
   const resizeObserver = new ResizeObserver((entries) => {
-    for (let entry of entries) {
+    for (const entry of entries) {
       if (entry.target === rightbar) {
         let newWidth = entry.contentRect.width;
-        if (newWidth == 0) {
+        if (newWidth === 0) {
           const localStorageWidth = localStorage.getItem(
             '223ni6f2epqcidhx5etjafeai:panel-width-saved'
           );
@@ -79,8 +85,8 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   // start or stop spinning animation based on whether something is playing
   const targetElement = document.querySelector('.main-playPauseButton-button');
 
-  const playObserver = new MutationObserver(function (mutationsList, observer) {
-    for (let mutation of mutationsList) {
+  const playObserver = new MutationObserver((mutationsList, observer) => {
+    for (const mutation of mutationsList) {
       if (
         mutation.type === 'attributes' &&
         mutation.attributeName === 'aria-label'
@@ -102,7 +108,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     if (
       document
         .querySelector('.main-playPauseButton-button')
-        .getAttribute('aria-label') == 'Pause'
+        .getAttribute('aria-label') === 'Pause'
     ) {
       img.classList.add('running-animation');
     } else {
@@ -124,30 +130,22 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     shootingstar.className = 'shootingstar';
     if (Math.random() < 0.75) {
       shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
-      shootingstar.style.right = random(0, 90) + '%';
+      shootingstar.style.right = `${random(0, 90)}%`;
     } else {
-      shootingstar.style.top = random(0, 50) + '%';
+      shootingstar.style.top = `${random(0, 50)}%`;
       shootingstar.style.right = '-4px'; // hidden when animation is delayed
     }
 
-    const shootingStarGlowColor =
-      'rgba(' +
-      rs.getPropertyValue('--spice-rgb-shooting-star-glow') +
-      ',' +
-      0.1 +
-      ')';
-    shootingstar.style.boxShadow =
-      '0 0 0 4px ' +
-      shootingStarGlowColor +
-      ', 0 0 0 8px ' +
-      shootingStarGlowColor +
-      ', 0 0 20px ' +
-      shootingStarGlowColor;
+    const shootingStarGlowColor = `rgba(${rs.getPropertyValue(
+      '--spice-rgb-shooting-star-glow'
+    )},${0.1})`;
+    shootingstar.style.boxShadow = `0 0 0 4px ${shootingStarGlowColor}, 0 0 0 8px ${shootingStarGlowColor}, 0 0 20px ${shootingStarGlowColor}`;
 
-    shootingstar.style.animationDuration =
-      Math.floor(Math.random() * 3) + 3 + 's';
-    shootingstar.style.animationDelay = Math.floor(Math.random() * 7) + 's';
+    shootingstar.style.animationDuration = `${
+      Math.floor(Math.random() * 3) + 3
+    }s`;
+    shootingstar.style.animationDelay = `${Math.floor(Math.random() * 7)}s`;
 
-    topContainer.appendChild(shootingstar);
+    backgroundContainer.appendChild(shootingstar);
   }
 });
