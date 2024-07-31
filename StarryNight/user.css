@@ -29,6 +29,10 @@
     "left-sidebar main-view right-sidebar";
 }
 
+.Root__right-sidebar {
+  width: min-content;
+}
+
 .Root__now-playing-bar {
   width: var(--panel-width);
 }
