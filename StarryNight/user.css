@@ -29,11 +29,6 @@
     "left-sidebar main-view right-sidebar";
 }
 
-.Root__right-sidebar {
-  height: calc(100vh - 450px);
-  width: min-content;
-}
-
 .Root__now-playing-bar {
   width: var(--panel-width);
 }
