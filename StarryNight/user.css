@@ -26,7 +26,8 @@
   grid-template-areas:
     "global-nav global-nav global-nav"
     "left-sidebar main-view now-playing-bar"
-    "left-sidebar main-view right-sidebar";
+    "left-sidebar main-view right-sidebar" !important;
+  grid-template-rows: auto 1fr 1fr;
 }
 
 .Root__right-sidebar {
@@ -42,7 +43,7 @@
 }
 
 .Root__nav-bar {
-  background-color: var(--spice-main) !important;
+  background-color: #00000000 !important;
 }
 
 .main-trackList-trackListRow:hover {
@@ -54,9 +55,50 @@
 }
 
 .rX_OmqCngvY5ZCoYBZgb {
-  background-color: var(--background-base) !important;
+  background-color: #00000000 !important;
 }
 
+.main-yourLibraryX-entryPoints {
+  background-color: #00000000 !important;
+}
+
+.marketplace-header {
+  background-color: #00000000 !important;
+}
+
+.EmeHQXR87mUskYK6xEde {
+  background-color: #00000000 !important;
+}
+
+.lyrics-lyrics-background {
+  background-color: #00000000 !important;
+}
+
+.main-actionBarBackground-background {
+  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #000000 100%), #00000000 !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay {
+  background-image: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
+  color: #000000 !important;
+}
+
+.playlist-playlist-playlistContent {
+  background: #00000000 !important;
+}
 
 .main-nowPlayingBar-nowPlayingBar {
   min-height: 400px;
@@ -74,6 +116,14 @@
 
 [data-right-sidebar-hidden] .Root__main-view {
   grid-area: main-view/main-view/main-view/span 1;
+}
+
+.Root__main-view {
+  background-color: #00000000 !important;
+}
+
+.main-home-homeHeader {
+  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #00000000 100%), var(--background-noise);
 }
 
 .main-nowPlayingBar-center {
@@ -95,6 +145,7 @@
   width: 220px !important;
   margin: auto;
   background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
 }
 
 .main-nowPlayingWidget-coverArt .cover-art img {
@@ -173,6 +224,10 @@
   top: 0;
   left: 0;
   background-color: transparent;
+}
+
+.ffFwfKcPDbmAPLXzxzKq {
+  background-color: #00000000 !important;
 }
 
 @keyframes twinkle1 {

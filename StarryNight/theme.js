@@ -20,12 +20,6 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   backgroundContainer.className = 'starrynight-bg-container';
   topContainer.appendChild(backgroundContainer);
 
-  // make --spice-main transparent for a more visible background
-  r.style.setProperty(
-    '--spice-main',
-    `${rs.getPropertyValue('--spice-main')}00`
-  );
-
   // to position stars and shooting stars between the background and everything else
   const rootElement = document.querySelector('.Root__top-container');
   rootElement.style.zIndex = '0';
@@ -46,6 +40,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     star.style.height = `${size}px`;
     star.style.backgroundColor = rs.getPropertyValue('--spice-star');
     star.style.zIndex = '-1';
+    star.style.borderRadius = '50%';
 
     if (Math.random() < 1 / 5) {
       star.style.animation = `twinkle${
@@ -83,7 +78,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   resizeObserver.observe(rightbar);
 
   // start or stop spinning animation based on whether something is playing
-  const targetElement = document.querySelector('.main-playPauseButton-button');
+  const targetElement = document.querySelector('[data-encore-id="buttonPrimary"]');
 
   const playObserver = new MutationObserver((mutationsList, observer) => {
     for (const mutation of mutationsList) {
@@ -105,11 +100,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
       '.main-nowPlayingWidget-coverArt .cover-art img'
     );
     // checks the state of the play button on the playbar
-    if (
-      document
-        .querySelector('.main-playPauseButton-button')
-        .getAttribute('aria-label') === 'Pause'
-    ) {
+    if (document.querySelector('[data-encore-id="buttonPrimary"]').getAttribute('aria-label') == 'Pause'){
       img.classList.add('running-animation');
     } else {
       img.classList.remove('running-animation');
