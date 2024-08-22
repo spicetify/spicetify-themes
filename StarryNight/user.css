@@ -215,6 +215,17 @@
   color: var(--spice-sidebar);
 }
 
+.starrynight-bg-container {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
 .ffFwfKcPDbmAPLXzxzKq {
   background-color: #00000000 !important;
 }

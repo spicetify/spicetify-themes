@@ -16,6 +16,10 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
+  const backgroundContainer = document.createElement('div');
+  backgroundContainer.className = 'starrynight-bg-container';
+  topContainer.appendChild(backgroundContainer);
+
   // to position stars and shooting stars between the background and everything else
   const rootElement = document.querySelector('.Root__top-container');
   rootElement.style.zIndex = '0';
