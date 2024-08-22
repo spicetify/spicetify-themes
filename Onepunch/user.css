@@ -570,6 +570,7 @@ input {
 /* ylx */
 .Root {
   --panel-gap: 0 !important;
+  overflow: hidden;
 }
 .spotify__container--is-desktop .Root__top-container {
   padding-top: 32px !important;
@@ -612,4 +613,13 @@ input {
 }
 .main-yourLibraryX-filterArea {
   background-color: var(--spice-sidebar);
+}
+.LayoutResizer__inline-end {
+  inset-inline-end: 8px;
+}
+.LayoutResizer__inline-start {
+  inset-inline-start: 8px;
+}
+.LayoutResizer__resize-bar {
+  width: 8px;
 }

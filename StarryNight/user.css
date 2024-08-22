@@ -1,4 +1,4 @@
-.button-module__button___hf2qg_marketplace{ 
+.button-module__button___hf2qg_marketplace {
   color: var(--spice-subtext)
 }
 
@@ -17,7 +17,7 @@
 .Root__top-container {
   background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
   overflow: hidden;
-  grid-template-areas: 
+  grid-template-areas:
     "left-sidebar    main-view         now-playing-bar"
     "left-sidebar    main-view         right-sidebar";
 }
@@ -31,7 +31,6 @@
 }
 
 .Root__right-sidebar {
-  height: calc(100vh - 450px);
   width: min-content;
 }
 
@@ -166,12 +165,12 @@
   height: 100%;
 }
 
-.main-coverSlotCollapsed-container > :first-child {
+.main-coverSlotCollapsed-container> :first-child {
   width: 100%;
   height: 100%;
 }
 
-.main-coverSlotCollapsed-container > :first-child > :first-child {
+.main-coverSlotCollapsed-container> :first-child> :first-child {
   width: 100%;
   height: 100%;
   background-color: #00000000;
@@ -221,45 +220,114 @@
 }
 
 @keyframes twinkle1 {
-  0% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle2 {
-  0% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle3 {
-  0% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes twinkle4 {
-  0% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  20% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
-  40% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  60% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  80% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
-  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  0% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  20% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+
+  40% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  60% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  80% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+
+  100% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -286,13 +354,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .shootingstar::before {
-  content:'';
+  content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 300px;
   height: 1px;
-  background: linear-gradient(90deg,var(--spice-shooting-star),transparent);
+  background: linear-gradient(90deg, var(--spice-shooting-star), transparent);
 }
 
 @keyframes animate {
@@ -300,9 +368,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     transform: rotate(315deg) translateX(0);
     opacity: 1;
   }
+
   70% {
     opacity: 1;
   }
+
   100% {
     transform: rotate(315deg) translateX(-1500px);
     opacity: 0;

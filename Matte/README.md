@@ -2,13 +2,7 @@
 
 ## Screenshots
 
-### Matte (Old UI)
-
-![Matte Queue Page](screenshots/queue.png)
-![Matte Search Page](screenshots/search.png)
-![Matte Customized Config](screenshots/customized.png)
-
-### Matte (YLX UI)
+### Matte
 
 ![Matte](screenshots/ylx-matte.png)
 
@@ -58,8 +52,6 @@ a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables
 
 ### Notes
 
--   Supports both Old UI and Your Library X UI
-
 -   Check the very top of `user.css` for quick configs
 
     -   If you use the Marketplace, go to `Marketplace > Snippets > + Add CSS` and then paste the quick configs found in `user.css`. Edit these as you wish.
@@ -72,7 +64,7 @@ a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables
 
 ```css
 /* transparent window controls background */
-body::after {
+.spotify__container--is-desktop:not(.fullscreen) body::after {
     content: "";
     position: absolute;
     right: 0;
@@ -80,15 +72,9 @@ body::after {
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly
-        69%  = 194px 45px
-        76%  = 177px 40.5px
-        83%  = 162px 37.5px
-        91%  = 148px 34px
-        100% = 135px 31px (default)
-        110% = 123px 28.5px
     */
     width: 135px;
-    height: 31px;
+    height: 48px;
 }
 ```
 
