@@ -82,7 +82,7 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
   });
 
   const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-  console.log(targetElement);
+
   playObserver.observe(targetElement, playConfig);
 
   function handleLabelChange() {
