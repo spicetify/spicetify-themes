@@ -71,7 +71,7 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
 
   
   // start or stop spinning animation based on whether something is playing
-  const targetElement = document.querySelector('.main-playPauseButton-button');
+  const targetElement = document.querySelector('[data-encore-id="buttonPrimary"]');
 
   const playObserver = new MutationObserver(function(mutationsList, observer) {
     for (let mutation of mutationsList) {
@@ -82,13 +82,13 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
   });
 
   const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-
+  console.log(targetElement);
   playObserver.observe(targetElement, playConfig);
 
   function handleLabelChange() {
     const img = document.querySelector(".main-nowPlayingWidget-coverArt .cover-art img");
     // checks the state of the play button on the playbar
-    if (document.querySelector('.main-playPauseButton-button').getAttribute('aria-label') == 'Pause'){
+    if (document.querySelector('[data-encore-id="buttonPrimary"]').getAttribute('aria-label') == 'Pause'){
       img.classList.add('running-animation');
     }
     else{ 
