@@ -15,9 +15,6 @@ waitForElement([".Root__top-container"], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
-  // make --spice-main transparent for a more visible background
-  r.style.setProperty('--spice-main', rs.getPropertyValue('--spice-main') + '00');
-
   // to position stars and shooting stars between the background and everything else
   const rootElement = document.querySelector('.Root__top-container');
   rootElement.style.zIndex = '0';
