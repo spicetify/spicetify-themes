@@ -2,6 +2,11 @@
 
 :root{
 	--border-radius-1: 8px; 
+	/* Play Bar */
+	--margin-bottom-now-playing-bar: 0.5rem;
+	--now-playing-bar-height: 5.625rem;
+	--padding-now-playing-bar: 0.25rem;
+	--border-radius-now-playing-bar: 0.5rem;
 } 
 .Root__now-playing-bar, .Root__now-playing-bar footer { 
 	border-radius: var(--border-radius-1) !important; 
@@ -208,7 +213,7 @@ highlights selected song contains multi-digit song numbers */
 .encore-dark-theme .encore-bright-accent-set:hover {
 	--background-base: var(--spice-button-active);
 	--background-highlight: var(--spice-play-hover);
-	--background-press: var(--spice-player);	
+	--background-press: var(--spice-play-hover);	
 }
 
 /* Player bar */
