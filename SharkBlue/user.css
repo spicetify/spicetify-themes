@@ -215,7 +215,6 @@ highlights selected song contains multi-digit song numbers */
 
 .main-nowPlayingBar-container {
 	justify-content: center;
-	/* --background-highlight: rgba(var(--spice-rgb-sidebar), 0.5) !important; */
 	height: var(--now-playing-bar-height);
 	width: 100%;
 	border-radius: var(--border-radius-now-playing-bar);
