@@ -1,3 +1,12 @@
+/* Round Now Playing Bar */
+
+:root{
+	--border-radius-1: 8px; 
+} 
+.Root__now-playing-bar, .Root__now-playing-bar footer { 
+	border-radius: var(--border-radius-1) !important; 
+}
+
 /* Page titles */
 h1 {
 	font-weight: 700 !important;
@@ -86,7 +95,7 @@ h1 {
 .main-entityHeader-shadow {
 	-webkit-box-shadow: 0 4px 20px rgba(var(--spice-rgb-shadow), 0.5);
 	box-shadow: 0 4px 20px rgba(var(--spice-rgb-shadow), 0.5);
-}
+} 
 
 /* Top bar */
 .main-topBar-background {
@@ -168,6 +177,15 @@ h1 {
 	border-radius: 8px;
 }
 
+/* Make Scrollbar look better */
+
+.os-theme-spotify.os-host-transition > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle { 
+	border-radius: 8px; width: 4px; background-color: var(--spice-button-disabled); 
+} 
+.os-theme-spotify.os-host-transition > .os-scrollbar-vertical > .os-scrollbar-track { 
+	width: 4px; 
+}
+
 /* Making index column wider so that lighter background that 
 highlights selected song contains multi-digit song numbers */
 /* It looks good up to 4 digits, I figured that no one has playlists with more music than that ;) */
@@ -189,8 +207,80 @@ highlights selected song contains multi-digit song numbers */
 .encore-dark-theme .encore-bright-accent-set,
 .encore-dark-theme .encore-bright-accent-set:hover {
 	--background-base: var(--spice-button-active);
-	--background-highlight: var(--spice-player);
+	--background-highlight: var(--spice-play-hover);
 	--background-press: var(--spice-player);	
+}
+
+/* Player bar */
+
+.main-nowPlayingBar-container {
+	justify-content: center;
+	/* --background-highlight: rgba(var(--spice-rgb-sidebar), 0.5) !important; */
+	height: var(--now-playing-bar-height);
+	width: 100%;
+	border-radius: var(--border-radius-now-playing-bar);
+	padding: var(--padding-now-playing-bar);
+	bottom: var(--margin-bottom-now-playing-bar);
+	border: var(--default-border-thickness) solid var(--shadow-rgb);
+	background-color: rgba(var(--spice-rgb-main));
+	backdrop-filter: blur(var(--blur-radius)) saturate(0.5) brightness(100%);
+}
+  
+.main-nowPlayingBar-container .GlueDropTarget,
+.main-coverSlotCollapsed-container {
+	max-height: 56px;
+	max-width: 56px;
+}
+
+/**** ROUND IMAGES ****/
+
+/* Expanded Cover Art Image (+ position fix) */
+.main-navBar-navBar > :nth-child(3) {
+	margin: 0 0 0 1px;
+	border-radius: 6px;
+	}
+	
+	/* Collapsed Cover Art Image */
+	.cover-art-image,
+	.artist-artistOverview-sideBlock > div > section > div:nth-child(3) > section:nth-child(2) > div > img,
+	.view-homeShortcutsGrid-image {
+	border-radius: 4px;
+	}
+	
+	/*
+	Playlist Header
+	Search Category Card Image
+	List Cards
+	Local Files Card
+	Placeholder Profile Card
+	Artist Overview Side Block
+	*/
+	.main-entityHeader-shadow,
+	.x-categoryCard-image,
+	.x-entityImage-circle, 
+	.main-cardImage-image,
+	.main-cardImage-imageWrapper,
+	.main-entityHeader-imagePlaceholder > div,
+	.artist-artistOverview-sideBlock > div > section {
+	border-radius: 6px;
+	}
+	
+	/* Circled Artist + Profile Cards (force) */
+	.main-cardImage-circular,
+	.main-entityHeader-imagePlaceholder,
+	.main-entityHeader-circle {
+	border-radius: 50% !important;
+	}
+	
+	/* Track List Image */
+	.main-trackList-rowImage {
+	border-radius: 3px;
+	}
+
+
+/* Home gradient */
+.main-home-homeHeader { 
+	background-color: rgba(var(--spice-rgb-button)) !important;
 }
 
 /* Volume bar margins */
