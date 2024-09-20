@@ -6,12 +6,9 @@
   background-color: #00000000 !important;
 }
 
-.main-actionBarBackground-background {
-  background-color: #00000000 !important;
-}
-
 .main-home-homeHeader {
   background-color: #00000000 !important;
+  background-image: none !important;
 }
 
 .Root__top-container {
@@ -75,15 +72,19 @@
 }
 
 .main-actionBarBackground-background {
-  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #000000 100%), #00000000 !important;
+  background-image: none;
+  background-color: #00000000 !important;
   animation: none !important;
   -webkit-animation: none !important;
 }
 
-.main-entityHeader-background.main-entityHeader-overlay {
-  background-image: none !important;
+.main-entityHeader-overlay {
+  background: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-gradient {
+  opacity: 0.5;
   animation: none !important;
-  -webkit-animation: none !important;
 }
 
 .main-entityHeader-background.main-entityHeader-overlay:after {
@@ -93,7 +94,7 @@
 }
 
 .pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
-  color: #000000 !important;
+  color: #00000000 !important;
 }
 
 .playlist-playlist-playlistContent {
@@ -123,7 +124,7 @@
 }
 
 .main-home-homeHeader {
-  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #00000000 100%), var(--background-noise);
+  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #000000 100%), var(--background-noise);
 }
 
 .main-nowPlayingBar-center {

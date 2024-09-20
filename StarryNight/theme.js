@@ -77,23 +77,22 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
 
   resizeObserver.observe(rightbar);
 
-  // start or stop spinning animation based on whether something is playing
-  const targetElement = document.querySelector('[data-encore-id="buttonPrimary"]');
-
-  const playObserver = new MutationObserver((mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-      if (
-        mutation.type === 'attributes' &&
-        mutation.attributeName === 'aria-label'
-      ) {
-        handleLabelChange();
+  waitForElement(['[data-encore-id="buttonPrimary"]'], ([targetElement]) => {
+    // start or stop spinning animation based on whether something is playing
+    const playObserver = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (
+          mutation.type === 'attributes' &&
+          mutation.attributeName === 'aria-label'
+        ) {
+          handleLabelChange();
+        }
       }
-    }
+    });
+  
+    const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
+    playObserver.observe(targetElement, playConfig);
   });
-
-  const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-
-  playObserver.observe(targetElement, playConfig);
 
   function handleLabelChange() {
     const img = document.querySelector(
