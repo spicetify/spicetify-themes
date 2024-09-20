@@ -1,5 +1,22 @@
 [
 	{
+		"name": "SharkBlue",
+		"description": "SharkBlue",
+		"preview": "SharkBlue/screenshot.png",
+		"readme": "SharkBlue/README.md",
+		"usercss": "SharkBlue/user.css",
+		"schemes": "SharkBlue/color.ini",
+		"authors": [
+			{
+				"name": "Mr Biscuit",
+				"url": "https://github.com/MrBiscuit921"
+			}
+		],
+		"tags": [
+			"latest"
+		]
+	},
+	{
 		"name": "BurntSienna",
 		"description": "BurntSienna",
 		"preview": "BurntSienna/screenshot.png",
