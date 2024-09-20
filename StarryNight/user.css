@@ -123,10 +123,6 @@
   background-color: #00000000 !important;
 }
 
-.main-home-homeHeader {
-  background-image: linear-gradient(rgba(var(--spice-rgb-shadow), .6) 0, #000000 100%), var(--background-noise);
-}
-
 .main-nowPlayingBar-center {
   width: 100%;
 }
