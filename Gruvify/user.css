@@ -127,6 +127,10 @@ div.cover-art.shadow {
   background: none !important;
 }
 
+.main-globalNav-link-icon {
+  background-color: var(--spice-selected-row) !important;
+}
+
 .main-home-filterChipsSection > div {
   background-color: var(--spice-main) !important;
 }
@@ -136,6 +140,10 @@ div.cover-art.shadow {
   background-color: var(--spice-selected-row) !important;
   transition: none;
   -webkit-transition: none;
+}
+
+.LayoutResizer__resize-bar.LayoutResizer__inline-start {
+  display: none;
 }
 
 div[style*="--lyrics-color"] {
@@ -320,10 +328,6 @@ div[data-testid=infinite-scroll-list] hr {
 
 .os-scrollbar {
   opacity: 0 !important;
-}
-
-.main-globalNav-link-icon {
-  background-color: var(--spice-selected-row) !important;
 }
 
 .main-topBar-background {
