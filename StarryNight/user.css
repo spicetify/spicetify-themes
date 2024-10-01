@@ -24,7 +24,6 @@
     "global-nav global-nav global-nav"
     "left-sidebar main-view now-playing-bar"
     "left-sidebar main-view right-sidebar" !important;
-  grid-template-rows: auto 1fr 1fr;
 }
 
 .Root__right-sidebar {
