@@ -20,6 +20,19 @@
   border: var(--spice-selected-row) 3px solid;
 }
 
+input.x-filterBox-filterInput::-moz-placeholder {
+  font-size: 0;
+}
+
+input.x-filterBox-filterInput::placeholder {
+  font-size: 0;
+}
+
+div[role=menuitem] > div.x-filterBox-filterInputContainer {
+  left: 2px;
+  top: 3px;
+}
+
 .main-coverSlotCollapsed-navAltContainer, .main-coverSlotCollapsed-navAltContainer button {
   border-radius: 0;
 }
@@ -171,12 +184,26 @@ button.main-topBar-buddyFeed > svg {
   width: 24px !important;
 }
 
+div.notistack-CollapseWrapper div[role=status] > div div:first-child div.x-entityImage-imageContainer {
+  display: none;
+}
+
+div.notistack-CollapseWrapper div[role=status] > div div:last-child button {
+  color: var(--spice-main) !important;
+  font-weight: 400 !important;
+  text-decoration: underline;
+}
+
 .main-entityHeader-image {
   border-radius: 0;
 }
 
 .main-actionBar-ActionBar {
   padding-top: 5px;
+}
+
+.main-trackList-rowSectionEnd > button {
+  opacity: 1 !important;
 }
 
 div[aria-labelledby=listrow-title-top-artists-this-month], div[aria-labelledby=listrow-title-top-tracks-this-month] {
@@ -231,6 +258,63 @@ button[aria-label="Expand folder"] > span, button[aria-label="Collapse folder"] 
   border-radius: 0px;
 }
 
+div#context-menu > form > div:last-child {
+  height: 36px;
+  padding: 0;
+  background-color: var(--spice-main);
+  border-radius: 0 0 4px 4px;
+}
+
+div#context-menu > form > div:last-child > button {
+  font-weight: 400;
+  text-decoration: underline;
+  margin: auto;
+}
+
+div#context-menu > form > div:last-child > button > span {
+  background-color: var(--spice-main);
+  color: var(--spice-text);
+  padding: 0;
+  left: -5px;
+}
+
+.DquSH3YjnaIIXMZiOvwA {
+  background-color: var(--spice-main);
+  border: var(--spice-selected-row) 3px solid;
+  border-radius: 4px;
+}
+
+div#context-menu > form > div:first-child,
+ul[role=menu][aria-label="Add to playlist menu"] > div:first-child {
+  display: none;
+}
+
+div.x-filterBox-filterInputContainer {
+  left: 2px;
+  top: 11px;
+}
+
+div.HeaderArea p[data-encore-id=listRowTitle] {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+div[data-encore-id=listRow][role=group] > div.HeaderSideArea {
+  display: none;
+}
+
+div.BoxComponent-group-listRow-naked-minBlockSize_48px {
+  gap: 0;
+  grid-template-rows: 16px !important;
+  border-radius: 4px;
+  min-block-size: 0;
+  padding-block: 12px;
+}
+
+ul[role=menu][aria-label="Add to playlist menu"] {
+  padding-top: 8px;
+}
+
 form .main-topBar-searchBar {
   background-color: var(--spice-selected-row) !important;
 }
@@ -245,6 +329,10 @@ form:hover .main-topBar-searchBar {
 }
 
 div[data-testid=top-result-card] > div {
+  background-color: var(--spice-selected-row);
+}
+
+div > button[aria-label=Remove] {
   background-color: var(--spice-selected-row);
 }
 
@@ -286,6 +374,14 @@ div.main-card-PlayButtonContainer {
 }
 
 .x-entityImage-imageContainer {
+  box-shadow: none;
+}
+
+div.notistack-CollapseWrapper div[role=status] > div {
+  box-shadow: none;
+}
+
+.DquSH3YjnaIIXMZiOvwA {
   box-shadow: none;
 }
 
@@ -342,4 +438,8 @@ div[aria-label="Already added"] > div {
 div[aria-label="Already added"] > div > div > button.main-button-tertiary {
   background-color: var(--spice-text);
   color: var(--spice-main);
+}
+
+span.vim-key {
+  background-color: var(--spice-selected-row);
 }/*# sourceMappingURL=user.css.map */
