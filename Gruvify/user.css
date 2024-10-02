@@ -114,6 +114,10 @@ div[role=menuitem] > div.x-filterBox-filterInputContainer {
   display: none;
 }
 
+.Button-buttonPrimary-useBrowserDefaultFocusStyle-data-is-icon-only:hover > span {
+  background-color: var(--spice-text) !important;
+}
+
 .main-home-homeHeader {
   background-image: none;
   transition: none;
@@ -200,10 +204,6 @@ div.notistack-CollapseWrapper div[role=status] > div div:last-child button {
 
 .main-actionBar-ActionBar {
   padding-top: 5px;
-}
-
-.main-trackList-rowSectionEnd > button {
-  opacity: 1 !important;
 }
 
 div[aria-labelledby=listrow-title-top-artists-this-month], div[aria-labelledby=listrow-title-top-tracks-this-month] {
@@ -402,6 +402,10 @@ div.notistack-CollapseWrapper div[role=status] > div {
   border-radius: 0 !important;
   height: 48px;
   width: 48px;
+}
+
+.main-trackList-rowSectionEnd > button {
+  opacity: 1 !important;
 }
 
 :root {
