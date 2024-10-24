@@ -381,7 +381,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 4px;
   background: var(--spice-shooting-star);
   border-radius: 50%;
-  animation: animate 3s linear infinite;
+  animation: animate 3s linear;
   left: initial;
   z-index: -1;
 }
