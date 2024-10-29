@@ -17,6 +17,7 @@
   grid-template-areas:
     "left-sidebar    main-view         now-playing-bar"
     "left-sidebar    main-view         right-sidebar";
+  grid-template-rows: auto auto 1fr;
 }
 
 .global-nav .Root__top-container {
@@ -27,6 +28,10 @@
 }
 
 .Root__globalNav {
+  background-color: #00000000 !important;
+}
+
+.ffFwfKcPDbmAPLXzxzKq:before {
   background-color: #00000000 !important;
 }
 
@@ -54,6 +59,8 @@
 
 .Root__right-sidebar {
   width: min-content;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 .Root__now-playing-bar {
