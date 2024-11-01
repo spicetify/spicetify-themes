@@ -4,29 +4,41 @@
 
 /* import */
 /* find more in https://fonts.google.com/?category=Monospace&sort=popularity */
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Courier+Prime:wght@400;700&family=Cousine:wght@400;700&family=Cutive+Mono&family=DM+Mono:wght@300;400;500&family=Fira+Mono:wght@400;500;700&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Nanum+Gothic+Coding:wght@400;700&family=PT+Mono&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Share+Tech+Mono&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Cutive+Mono&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=M+PLUS+1+Code:wght@100..700&family=Nova+Mono&family=Overpass+Mono:wght@300..700&family=Oxygen+Mono&family=PT+Mono&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Share+Tech+Mono&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&family=Sono:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&family=Xanh+Mono:ital@0;1&display=swap");
 @import url("https://fonts.cdnfonts.com/css/asciid");
 
 /* user settings */
 :root {
-    --font-family: "DM Mono", monospace;
+    --font-family: "JetBrains Mono", monospace;
     /*
     --font-family: 'Anonymous Pro', monospace;
+    --font-family: 'Azeret Mono', monospace;
+    --font-family: 'B612 Mono', monospace;
     --font-family: 'Courier Prime', monospace;
     --font-family: 'Cousine', monospace;
     --font-family: 'Cutive Mono', monospace;
     --font-family: 'DM Mono', monospace;
+    --font-family: 'Fira Code', monospace;
     --font-family: 'Fira Mono', monospace;
     --font-family: 'IBM Plex Mono', monospace;
-    --font-family: 'Inconsolata', monospace;
-    --font-family: 'Nanum Gothic Coding', monospace;
+    --font-family: 'JetBrains Mono', monospace;
+    --font-family: 'M PLUS 1 Code', monospace;
+    --font-family: 'Major Mono Display', monospace;
+    --font-family: 'Monofett', monospace;
+    --font-family: 'Nova Mono', monospace;
+    --font-family: 'Overpass Mono', monospace;
+    --font-family: 'Oxygen Mono', monospace;
     --font-family: 'PT Mono', monospace;
     --font-family: 'Roboto Mono', monospace;
     --font-family: 'Share Tech Mono', monospace;
+    --font-family: 'Sometype Mono', monospace;
+    --font-family: 'Sono', monospace;
     --font-family: 'Source Code Pro', monospace;
     --font-family: 'Space Mono', monospace;
+    --font-family: 'Syne Mono', monospace;
     --font-family: 'Ubuntu Mono', monospace;
     --font-family: 'VT323', monospace;
+    --font-family: 'Xanh Mono', monospace;
     */
     --font-size: 14px;
     --font-weight: 400; /* 200 : 900 */
