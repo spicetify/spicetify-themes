@@ -285,7 +285,9 @@ div:has(> .main-entityHeader-container) {
 .main-contextMenu-menuItemButton:hover,
 .main-contextMenu-menuItemButton:not([aria-checked="true"]):focus,
 .main-card-card:hover,
-.main-card-card[data-context-menu-open="true"] {
+.main-card-card[data-context-menu-open="true"],
+[class*="BoxComponent-group-card"]:hover::after,
+[class*="BoxComponent-group-listRow"]:hover::after {
     background-color: rgba(var(--spice-rgb-highlight), 0.5);
 }
 .main-trackList-trackListRow.main-trackList-selected,
@@ -413,7 +415,6 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .tippy-box {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
     border-radius: var(--border-radius) !important;
-    outline: 14px solid var(--spice-main);
 }
 
 /* modals */
@@ -639,6 +640,9 @@ form .main-topBar-searchBar:placeholder-shown {
     color: var(--spice-highlight);
     padding: 0 10px;
 }
+.main-trackList-rowBadges {
+    padding-right: 10px;
+}
 .main-trackList-number,
 .main-trackList-icon {
     top: unset;
@@ -819,6 +823,9 @@ button[data-testid="control-button-skip-back"]::after {
     )::before,
 button[data-testid="control-button-playpause"]:has(
         path[d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"]
+    )::after,
+button[data-testid="control-button-playpause"]:has(
+        path[d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"]
     )::after {
     content: "\25B6";
 }
@@ -828,6 +835,9 @@ button[data-testid="control-button-playpause"]:has(
     )::before,
 button[data-testid="control-button-playpause"]:has(
         path[d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7H2.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-2.6z"]
+    )::after,
+button[data-testid="control-button-playpause"]:has(
+        path[d="M5.7 3a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7H5.7zm10 0a.7.7 0 0 0-.7.7v16.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V3.7a.7.7 0 0 0-.7-.7h-2.6z"]
     )::after {
     content: "\275A\275A";
     text-wrap: nowrap;
@@ -860,7 +870,7 @@ button[data-testid="control-button-repeat"][aria-checked="mixed"]::after {
 .main-playPauseButton-button > svg,
 .main-skipForwardButton-button > svg,
 .main-repeatButton-button > svg,
-.player-controls__buttons span {
+:is(.player-controls__buttons, .npv-nowPlayingBar-controls) span {
     display: none;
 }
 
