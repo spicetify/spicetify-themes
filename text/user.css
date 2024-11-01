@@ -434,14 +434,6 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
     z-index: 9;
 }
 
-/* focus visible */
-:focus-visible {
-    outline: 4px double var(--spice-accent) !important;
-    outline-offset: -6px !important;
-    border-radius: var(--border-radius) !important;
-    border-color: transparent !important;
-}
-
 /*  ================================
     GLOBAL NAV
     ================================ */
