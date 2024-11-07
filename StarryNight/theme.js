@@ -137,5 +137,24 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     shootingstar.style.animationDelay = `${Math.floor(Math.random() * 7)}s`;
 
     backgroundContainer.appendChild(shootingstar);
+
+    shootingstar.addEventListener('animationend', () => {
+      if (Math.random() < 0.75) {
+        shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+        shootingstar.style.right = `${random(0, 90)}%`;
+      } else {
+        shootingstar.style.top = `${random(0, 50)}%`;
+        shootingstar.style.right = '-4px'; // hidden when animation is delayed
+      }
+
+      shootingstar.style.animation = 'none'; // Remove animation
+
+      void shootingstar.offsetWidth;
+
+      shootingstar.style.animation = '';
+      shootingstar.style.animationDuration = `${
+        Math.floor(Math.random() * 4) + 3
+      }s`;
+    });
   }
 });
