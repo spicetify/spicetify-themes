@@ -17,6 +17,7 @@
   grid-template-areas:
     "left-sidebar    main-view         now-playing-bar"
     "left-sidebar    main-view         right-sidebar";
+  grid-template-rows: auto auto 1fr;
 }
 
 .global-nav .Root__top-container {
@@ -26,8 +27,40 @@
     "left-sidebar main-view right-sidebar" !important;
 }
 
+.Root__globalNav {
+  background-color: #00000000 !important;
+}
+
+.ffFwfKcPDbmAPLXzxzKq:before {
+  background-color: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap {
+  --bgColor: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap::after {
+  --bgColor: #00000000 !important;
+}
+
+.PeLrpasyfBW8ql_bmoAi {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.PkOz5g82CaoKk1J3GX0e  {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.sv5suqIPUwjgUF_BzM41 {
+  transform: none !important;
+}
+
 .Root__right-sidebar {
   width: min-content;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 .Root__now-playing-bar {
@@ -355,7 +388,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 4px;
   background: var(--spice-shooting-star);
   border-radius: 50%;
-  animation: animate 3s linear infinite;
+  animation: animate 3s linear;
   left: initial;
   z-index: -1;
 }
