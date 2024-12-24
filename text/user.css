@@ -903,3 +903,8 @@ button[data-testid="control-button-repeat"][aria-checked="mixed"]::after {
 .main-connectBar-connectBar svg {
     fill: var(--spice-accent-active);
 }
+
+/* quests window */
+.wrapper_c721cc {
+	display: none;
+}
