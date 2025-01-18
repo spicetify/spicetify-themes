@@ -1,0 +1,233 @@
+:root {
+  --spice-transparent: #00000000;
+  /* also sets color for --background-base */
+  --spice-main: #00000000;
+  /* Isabelline */
+  --spice-text: #faf4f0;
+  --spice-topscreen: #00000000;
+  --spice-botscreen: var(--spice-text);
+  /* beige, both the same */
+  --spice-button: #ffffe8;
+  --spice-button-active: #ffffe8;
+
+  /* toggle weird background noise */
+  --background-noise: unset;
+
+  /* used for accenting with sliders and subtle stuff */
+  --spice-active-fg-color: #2a81dd !important;
+}
+
+.encore-dark-theme,
+.encore-bright-accent-set {
+  --background-highlight: var(--spice-button) !important;
+  --background-elevayed-highlight: var(--spice-button) !important;
+  --background-press: var(--spice-button) !important;
+}
+
+/* top level container, covers a lot of background */
+.Root__top-container,
+/* navigation at the top of client */
+.Root__globalNav,
+/* left navigation bar background */
+.Root__nav-bar,
+/* home page > top middle */
+.main-home-homeHeader,
+/* artist bios > primary color */
+.main-entityHeader-backgroundColor,
+/* artist bios > secondary color */
+.main-actionBarBackground-background,
+/* right aside > artist information, tour dates, credits */
+.main-nowPlayingView-section,
+.main-nowPlayingView-aboutArtistV2Button,
+/* middle section albums > card */
+.BoxComponent-group-card-naked-isInteractive-draggable:hover::after,
+/* left navigation > grid layout > cards */
+.BoxComponent-group-card-naked-isInteractive-padding_12px:hover::after,
+.BoxComponent-group-card-naked-isInteractive-padding_4px:hover::after,
+/* left and right navigation > list layout > cards */
+.BoxComponent-group-listRow-naked-isInteractive-minBlockSize_56px-padding_8px:hover::after,
+.BoxComponent-group-listRow-tinted-isInteractive-minBlockSize_56px-padding_8px:hover::after,
+/* left navigation > compact layout > cards */
+.BoxComponent-group-listRow-naked-isInteractive-minBlockSize_32px-padding_4px_8px:hover::after,
+.BoxComponent-group-listRow-tinted-isInteractive-minBlockSize_32px-padding_4px_8px:hover::after,
+/* left navigation > header > plus buttons */
+.main-yourLibraryX-headerContent button:hover,
+/* left navigation > header > carousel > left right buttons */
+.search-searchCategory-carouselButton,
+/* followed content cards */
+.BoxComponent-group-listRow-naked-isInteractive-minBlockSize_56px:hover::after,
+/* Live shows > cards */
+.wedRUk4eiBo9n9vqXLhU:hover,
+/* Lyrics > background */
+.lyrics-lyrics-background,
+/* song queue > header > buttons */
+.StyledTabItem-tab-tabItem-useBrowserDefaultFocusStyle:hover,
+/* Album scroll down > "1 more release" */
+.MGZ4oJmGVPrWsx5cT5hN {
+  background-color: var(--spice-transparent) !important;
+}
+
+/* 
+* left navigation > cards > suspense
+* I don't like these, they're gray
+*/
+.main-yourLibraryX-libraryContainer,
+.main-trackList-trackList,
+.main-trackList-indexable {
+  --placeholder-image: unset !important;
+  --placeholder-image-compact: unset !important;
+  --placeholder-artist-image: unset !important;
+  --placeholder-compact-image: unset !important;
+}
+
+/* 'E' for explicit badges > box */
+.Ps9zgW56WZaBVLo1n3cg {
+  background: var(--spice-button);
+}
+
+/* 'E' for explicit badges > letter */
+.SgFtsvn3upY_tG6mnt4n {
+  color: var(--spice-active-fg-color);
+}
+
+/* main image cards > suspense */
+.GOcsybnoHYyJGQGDRuwj,
+/* bottom left corver image > suspense */
+.HD9s7U5E1RLSWKpXmrqx,
+/* left navigation > image cards > suspense */
+.x-entityImage-imageContainer,
+/* right aside > image > suspense */
+.cover-art,
+.cover-art-image {
+  background-color: var(--spice-transparent) !important;
+}
+
+/* all hover pop up cards */
+.main-contextMenu-tippy,
+/* right click menus */
+.main-contextMenu-menu,
+/* recent searches */
+.GimJ6fo6WOYPyWNVpSr1 {
+  background: black !important;
+}
+
+/* artist bio > header on scroll down */
+.main-topBar-overlay {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* artist bio > sub-header on scroll down */
+.main-trackList-trackListHeaderStuck {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 100%) !important;
+  box-shadow: none !important;
+}
+
+/* home page > top middle header on scroll down */
+.main-home-filterChipsSection,
+.main-home-filterChipsSection::after,
+/* input top screen */
+.main-globalNav-searchContainer input,
+/* button next to input field */
+.main-globalNav-searchContainer button,
+/* right aside header */
+.yvZooOj0rpfRS__cAUCo,
+.W3E0IT3_STcazjTeyOJa,
+/* profile icon, top right corner */
+.main-topBar-topbarContentRight .Button-sc-1dqy6lx-0,
+/* artist bio > header on scroll down */
+.main-topBar-background {
+  background-color: var(--spice-topscreen) !important;
+}
+
+/* footer > connected to bar */
+.main-connectBar-connectBar {
+  background-color: var(--spice-button) !important;
+}
+
+/* right aside > text background gradient */
+.main-nowPlayingView-contextItemInfo::before,
+/* right aside > short background gradient */
+.E08D6ucrHuPJYzzGO7HG::before {
+  background: none;
+}
+
+/* right aside > short background gradient */
+.E08D6ucrHuPJYzzGO7HG::after {
+  background: linear-gradient(180deg, rgba(2, 0, 2, 0.7) 0%, rgba(20, 43, 71, 0.79) 80%) !important;
+}
+
+/* 
+* this is the actual short that plays sometimes, 
+* they set height to 100% and it causes layout 
+* shift when the video loads in, so I set it 
+* to a fixed height.
+*/
+.huMHH_FySIW5UhSrJfy8 video {
+  height: 75vh;
+}
+
+/* right aside header on static image on scroll */
+.mdMUqcSHFw1lZIcYEblu,
+/* right aside header on short playing on scroll */
+.yvZooOj0rpfRS__cAUCo,
+/* shadow effects on album art */
+.main-entityHeader-shadow,
+/* left navigation > header */
+.RHRitk6QC3rvuG24RAdj,
+/* card images */
+.GOcsybnoHYyJGQGDRuwj,
+/* left navigation > card images */
+.x-entityImage-imageContainer {
+  box-shadow: none !important;
+}
+
+/* home page > top middle */
+.main-home-homeHeader,
+/* artist bio and playlist > background images */
+.main-entityHeader-background,
+.main-entityHeader-background::after {
+  background-image: none !important;
+}
+
+/* Top search result card */
+.mXNT9H2GU7lDW4cGx0q1,
+.mXNT9H2GU7lDW4cGx0q1:hover {
+  background: var(--spice-transparent) !important;
+}
+
+/* rate me modal, other modals */
+.osuFIR_6Jo9yKsmLL4y2,
+.main-trackCreditsModal-container {
+  background: black !important;
+}
+
+/* little svg icons */
+.Svg-img-icon-small {
+  fill: var(--spice-button) !important;
+}
+
+.IconWrapper__Wrapper-sc-1hf1hjl-0 svg {
+  fill: black !important;
+}
+
+.main-genericButton-button.main-genericButton-buttonActiveDot:after {
+  background: var(--spice-botscreen);
+}
+
+.ButtonInner-small-iconOnly {
+  background-color: var(--spice-button) !important;
+}
+
+.wPHL366l99aluPsMU8Bl:hover {
+  background-color: rgba(var(--spice-rgb-selected-row), 0.1) !important;
+}
+
+/* progress bar */
+.progress-bar {
+  --is-active-fg-color: var(--spice-active-fg-color) !important;
+}
+
+/* playback animation */
+.KYkSwfV1FCtD15TMChbH {
+  display: none;
+}

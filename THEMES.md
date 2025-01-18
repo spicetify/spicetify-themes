@@ -3,6 +3,7 @@
 Here you can find a preview of all the themes. Some of them may have different colour schemes (in that case you'll find different entries in the same theme, each one named after the colour scheme).
 
 ## SharkBlue
+
 ![SharkBlue Screenshot](SharkBlue/screenshot.png)
 
 ## BurntSienna
@@ -78,6 +79,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 ![gruvbox](Dribbblish/gruvbox.png)
 
 #### Gruvbox Material Dark
+
 ![gruvbox-material-dark](Dribbblish/gruvbox-material-dark.png)
 
 #### Rosé Pine
@@ -107,6 +109,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## Matte
 
 #### Matte
+
 ![Matte](Matte/screenshots/ylx-matte.png)
 
 #### Periwinkle
@@ -116,13 +119,19 @@ Here you can find a preview of all the themes. Some of them may have different c
 |                        Light                        |                             Dark                              |
 
 #### Porcelain
+
 ![Porcelain](Matte/screenshots/ylx-porcelain.png)
 
 #### Gray
+
 ![Gray](Matte/screenshots/ylx-gray.png)
 | ![Gray-Light](Matte/screenshots/ylx-gray-light.png) | ![Gray-Dark1](Matte/screenshots/ylx-gray-dark1.png) |
 | :-------------------------------------------------: | :-------------------------------------------------: |
-|                        Light                        |                        Dark                         |
+| Light | Dark |
+
+## Nebula
+
+![Nebula](Nebula/nebula.png)
 
 ## Nightlight
 
@@ -166,24 +175,31 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## StarryNight
 
 #### Base
+
 ![Base](StarryNight/images/base.png)
 
 #### Cotton Candy
+
 ![Cotton-candy](StarryNight/images/cotton-candy.png)
 
 #### Forest
+
 ![Forest](StarryNight/images/forest.png)
 
 #### Galaxy
+
 ![Galaxy](StarryNight/images/galaxy.png)
 
 #### Orange
+
 ![Orange](StarryNight/images/orange.png)
 
 #### Sky
+
 ![Sky](StarryNight/images/sky.png)
 
 #### Sunrise
+
 ![Sunrise](StarryNight/images/sunrise.png)
 
 ## text
@@ -245,7 +261,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 | :--------------------------------------------: | :------------------------------------------------------: |
 |                  Tokyo Night                   |                    Tokyo Night Storm                     |
 
-
 ## Turntable
 
 ![Turntable](Turntable/screenshots/fad.png)
@@ -290,8 +305,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 #### Rosé Pine
 
-
-
 | ![Playlists](Ziro/screenshots/rose-pine-moon.jpg) | ![Playlists](Ziro/screenshots/rose-pine-dawn.jpg) |
 | :-----------------------------------------------: | :-----------------------------------------------: |
 |                       Moon                        |                       Dawn                        |
@@ -303,20 +316,21 @@ Here you can find a preview of all the themes. Some of them may have different c
 ## Flow
 
 #### Ocean
+
 <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/ocean.png" alt="img">
 
-
 #### Pink
+
 <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/pink.png" alt="img">
 
-
 #### Silver
+
 <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/silver.png" alt="img">
 
-
 #### Violet
+
 <img src="https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Flow/screenshots/violet.png" alt="img">
 
-
 ### Blossom
+
 <img src="https://user-images.githubusercontent.com/72624799/203471073-4a5e6cf0-a5dc-4ecc-9a12-56d5fc716ac4.png" alt="img">
