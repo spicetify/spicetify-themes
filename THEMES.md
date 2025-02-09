@@ -128,6 +128,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Nightlight](Nightlight/screenshots/nightlight.png)
 
+## OLEDify
+
+![OLEDify](OLEDify/screenshots/oledify.png)
+
 ## Onepunch
 
 #### Dark
