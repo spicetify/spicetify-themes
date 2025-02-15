@@ -79,8 +79,8 @@ body {
 .Root__globalNav .main-globalNav-historyButtonsContainer,
 .Root__globalNav .main-globalNav-searchSection,
 .Root__globalNav .main-topBar-topbarContentRight {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .main-home-filterChipsSection {
@@ -924,4 +924,13 @@ img.playlist-picture[src$=".svg"] {
 /* bottom scroll-bar popup fix */
 .Root__main-view-overlay {
     width: 100%;
+}
+
+.IYex0sXu8fnCz1FqFbRe {
+    background: initial;
+    color: var(--spice-text);
+}
+
+.main-dropDown-dropDown {
+    color: var(--spice-sidebar);
 }
