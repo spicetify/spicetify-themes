@@ -437,7 +437,7 @@ li>div::after {
 }
 
 .main-topBar-background {
-    border-radius: var(--corner-radius);
+    border-radius: 0;
 }
 
 .main-topBar-overlay,
@@ -473,6 +473,14 @@ li>div::after {
 .main-entityHeader-container.main-entityHeader-withBackgroundImage,
 .main-entityHeader-background,
 .main-entityHeader-background.main-entityHeader-overlay:after {
+    height: 100vh;
+}
+
+/* (1.2.57+) full screen artists background */
+.wozXSN04ZBOkhrsuY5i2,
+.hYAxYCXtABXg35wNC2TR.bMaQdOqIiAZtt4cKEhWf.KL8t9WB65UfUEPuTFAhO,
+.KL8t9WB65UfUEPuTFAhO,
+.dhq75ObRGjfBoBlz6clW:after {
     height: 100vh;
 }
 
