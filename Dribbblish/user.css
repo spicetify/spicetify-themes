@@ -479,6 +479,7 @@ li>div::after {
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
     font-size: 120px !important;
     line-height: 120px !important;
+    padding-bottom: 20px; /* Adjust the value as needed */
 }
 
 .contentSpacing,
