@@ -940,3 +940,18 @@ img.playlist-picture[src$=".svg"] {
 .main-dropDown-dropDown {
     color: var(--spice-sidebar);
 }
+
+.iWTIFTzhRZT0rCD0_gOK {
+    position: sticky;
+    bottom: 30%;
+}
+
+@keyframes overlay-animation {
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
