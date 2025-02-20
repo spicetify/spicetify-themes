@@ -479,7 +479,7 @@ li>div::after {
 /* (1.2.57+) full screen artists background */
 .wozXSN04ZBOkhrsuY5i2,
 .dhq75ObRGjfBoBlz6clW:after {
-    height: 100vh;
+    height: 100%;
 }
 
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
