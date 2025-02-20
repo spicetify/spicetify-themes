@@ -340,3 +340,8 @@ highlights selected song contains multi-digit song numbers */
   min-height: 325px;
   height: 15vh;
 }
+
+.navBar-module__topBarActive___XhWpm_stats {
+  background-color: var(--text-base);
+  color: var(--spice-tab-active);
+}
