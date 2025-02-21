@@ -1,17 +1,7 @@
 window.addEventListener("load", rotateTurntable = () => {
   const SpicetifyOrigin = Spicetify.Player.origin;
-  fadBtn = document.querySelector(".main-topBar-button[title='Full App Display']");
-  if (!fadBtn){
-    const possibleFadBtn = document.querySelectorAll(".main-topBar-button")
-    for (const btn of possibleFadBtn) {
-      if (btn._tippy !== undefined && btn._tippy.props.content === "Full App Display") {
-        fadBtn = btn;
-        break;
-      }
-    }
-  }
 
-  if (!SpicetifyOrigin?._state || !fadBtn) {
+  if (!SpicetifyOrigin?._state) {
     setTimeout(rotateTurntable, 250);
     return;
   }
@@ -54,7 +44,8 @@ window.addEventListener("load", rotateTurntable = () => {
   fadAlbumSvg.setAttribute("fill", "currentColor");
   fadAlbumSvg.innerHTML = Spicetify.SVGIcons.album;
 
-  let isPlaying, clickedFadBtn;
+  let isFADReady = false;
+  let isPlaying;
 
   function handleRotate(eventType) {
     if (eventType === "load" && !SpicetifyOrigin._state.item) return;
@@ -239,6 +230,30 @@ window.addEventListener("load", rotateTurntable = () => {
     adModalStyle.remove();
   }
 
+  function handleFAD() {
+    const fullAppDisplay = document.querySelector("#full-app-display");
+    fullAppDisplay.appendChild(songPreviewContainer);
+    if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
+    handleFadControl();
+    fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
+    // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
+    // handleToggleFad(true);
+    handleIcons();
+    handleFadHeart();
+    handleTracksNamePreview();
+    handleRotate();
+  }
+
+  function handleFADToggle() {
+    if (!document.body.classList.contains("fad-activated")) {
+      isFADReady = false;
+      return;
+    }
+    if (isFADReady) return;
+    handleFAD();
+    isFADReady = true;
+  }
+
   handleRotate("load");
 
   const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
@@ -290,6 +305,8 @@ window.addEventListener("load", rotateTurntable = () => {
     }, 500);
   });
 
+  window.addEventListener("fad-request", handleFADToggle);
+
   fadHeart.addEventListener("click", Spicetify.Player.toggleHeart);
   previousSong.addEventListener("click", () => SpicetifyOrigin.skipToPrevious());
   nextSong.addEventListener("click", () => SpicetifyOrigin.skipToNext());
@@ -297,35 +314,4 @@ window.addEventListener("load", rotateTurntable = () => {
   fadHeart.addEventListener("dblclick", handleFadBtn);
   previousSong.addEventListener("dblclick", handleFadBtn);
   nextSong.addEventListener("dblclick", handleFadBtn);
-
-  function fadBtnClick(){
-    const fullAppDisplay = document.querySelector("#full-app-display");
-    if (!fullAppDisplay){
-      setTimeout(fadBtnClick, 100);
-      return;
-    }
-
-    fullAppDisplay.appendChild(songPreviewContainer);
-
-    if (!clickedFadBtn) {
-      if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
-
-      handleFadControl();
-
-      fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
-
-      // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
-
-      clickedFadBtn = true;
-    }
-
-    // handleToggleFad(true);
-    handleIcons();
-    handleFadHeart();
-    handleTracksNamePreview();
-    handleRotate();
-  }
-
-  fadBtn.addEventListener("click", () => fadBtnClick());
-
 });
