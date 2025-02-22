@@ -240,7 +240,6 @@ window.addEventListener("load", rotateTurntable = () => {
     // handleToggleFad(true);
     handleIcons();
     handleFadHeart();
-    handleTracksNamePreview();
     handleRotate();
   }
 
@@ -255,6 +254,7 @@ window.addEventListener("load", rotateTurntable = () => {
   }
 
   handleRotate("load");
+  handleTracksNamePreview();
 
   const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
   const heartHiddenObserver = new MutationObserver(mutationsList => {
@@ -288,22 +288,14 @@ window.addEventListener("load", rotateTurntable = () => {
     subtree: true,
   });
 
-  const shuffleBtn = document.querySelector(".main-shuffleButton-button");
-  const shuffleObserver = new MutationObserver(() => {
-    setTimeout(handleTracksNamePreview, 500);
-  });
-  shuffleObserver.observe(shuffleBtn, {
-    attributes: true,
-  });
-
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
       handleIcons();
       handleRotate();
-      handleTracksNamePreview();
     }, 500);
   });
+  Spicetify.Player.origin._events.addListener("queue_update", handleTracksNamePreview);
 
   window.addEventListener("fad-request", handleFADToggle);
 
