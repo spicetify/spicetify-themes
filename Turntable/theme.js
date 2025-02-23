@@ -256,38 +256,6 @@ window.addEventListener("load", rotateTurntable = () => {
   handleRotate("load");
   handleTracksNamePreview();
 
-  const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
-  const heartHiddenObserver = new MutationObserver(mutationsList => {
-    mutationsLoop:
-    for (const mutation of mutationsList) {
-      for (const addedNode of mutation.addedNodes) {
-        if (
-          addedNode.matches('svg[class]')
-          ||
-          addedNode.matches('button[class^="main-addButton-button"]')
-        ) {
-          handleFadHeart();
-
-          break mutationsLoop;
-        }
-      }
-
-      for (const removedNode of mutation.removedNodes) {
-        if (
-          removedNode.matches('button[class^="main-addButton-button"]')
-        ) {
-          handleFadHeart();
-
-          break mutationsLoop;
-        }
-      }
-    }
-  });
-  heartHiddenObserver.observe(nowPlayingBarLeft, {
-    childList: true,
-    subtree: true,
-  });
-
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
@@ -295,6 +263,7 @@ window.addEventListener("load", rotateTurntable = () => {
       handleRotate();
     }, 500);
   });
+  Spicetify.Player.origin._events.addListener("update", handleFadHeart);
   Spicetify.Player.origin._events.addListener("queue_update", handleTracksNamePreview);
 
   window.addEventListener("fad-request", handleFADToggle);
