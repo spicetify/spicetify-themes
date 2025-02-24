@@ -91,6 +91,10 @@ body {
     border-radius: 0 !important;
 }
 
+.Root__globalNav {
+    --left-sidebar-width: 72;
+}
+
 .Root__main-view {
     border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
     grid-area: main-view !important;

@@ -32,6 +32,21 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
     });
 });
 
+// adjust topbar margin with left sidebar width
+waitForElement([".Root__nav-bar"], ([resizer]) => {
+    const observer = new MutationObserver(updateVariable);
+    observer.observe(resizer, { attributes: true, attributeFilter: ["style"] });
+    function updateVariable() {
+        let style = resizer.style;
+        let value = style.getPropertyValue("--left-sidebar-width");
+        waitForElement([".Root__globalNav"], ([globalNav]) => {
+            let globalNavStyle = globalNav.style;
+            globalNavStyle.setProperty("--left-sidebar-width", value);
+        });
+    }
+    updateVariable();
+});
+
 let version;
 let ylx;
 
@@ -141,7 +156,7 @@ function legacy() {
         function updateVariable() {
             let value = resizer.value;
             if (value < 121) {
-                value = 72;
+                // value = 72;
                 document.documentElement.classList.add("left-sidebar-collapsed");
             } else {
                 document.documentElement.classList.remove("left-sidebar-collapsed");
@@ -159,7 +174,7 @@ function legacy() {
             let value = resizer.value;
             let min_value = version < 121200000 ? 321 : 281;
             if (value < min_value) {
-                value = 72;
+                // value = 72;
                 document.documentElement.classList.add("buddyFeed-hide-text");
             } else {
                 document.documentElement.classList.remove("buddyFeed-hide-text");
