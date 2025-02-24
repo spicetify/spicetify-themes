@@ -156,7 +156,7 @@ function legacy() {
         function updateVariable() {
             let value = resizer.value;
             if (value < 121) {
-                // value = 72;
+                value = 72;
                 document.documentElement.classList.add("left-sidebar-collapsed");
             } else {
                 document.documentElement.classList.remove("left-sidebar-collapsed");
@@ -174,7 +174,7 @@ function legacy() {
             let value = resizer.value;
             let min_value = version < 121200000 ? 321 : 281;
             if (value < min_value) {
-                // value = 72;
+                value = 72;
                 document.documentElement.classList.add("buddyFeed-hide-text");
             } else {
                 document.documentElement.classList.remove("buddyFeed-hide-text");
