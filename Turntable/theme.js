@@ -186,24 +186,24 @@ window.addEventListener("load", rotateTurntable = () => {
   }
 
   function handleFADContextMenu() {
-    const configContainer = document.querySelector("#popup-config-container");
-    const settingRowReferenceNode = document.querySelectorAll("#popup-config-container > div")[0];
-
-    const settingRowContainer = document.createElement("div");
-    const settingRow = `
-<div class="setting-row">
-  <label class="col description">${BACKDROP_CONFIG_LABEL}</label>
-  <div class="col action">
-    <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
-      ${parseIcon("check")}
-    </button>
-  </div>
+    const { PopupModal } = Spicetify;
+    const configContainer = PopupModal.querySelector("main > div");
+    const settingRow = document.createElement("div");
+    settingRow.classList.add("setting-row");
+    settingRow.innerHTML = `
+<label class="col description">${BACKDROP_CONFIG_LABEL}</label>
+<div class="col action">
+  <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
+    ${parseIcon("check")}
+  </button>
 </div>
 `;
-    settingRowContainer.innerHTML = settingRow;
-    configContainer.insertBefore(settingRowContainer, settingRowReferenceNode);
-    const configBtns = document.querySelectorAll("#popup-config-container button.switch");
-    const backdropConfigBtn = document.querySelector("[data-blur-fad]");
+    configContainer.insertBefore(
+      settingRow,
+      configContainer.querySelector(".setting-row")
+    );
+    const configBtns = configContainer.querySelectorAll("button.switch");
+    const backdropConfigBtn = configContainer.querySelector("[data-blur-fad]");
     for (const configBtn of configBtns) {
       configBtn.addEventListener("click", handleFADConfigBtnClick);
     }
@@ -228,7 +228,9 @@ window.addEventListener("load", rotateTurntable = () => {
     fullAppDisplay.appendChild(songPreviewContainer);
     if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
     handleFadControl();
-    fullAppDisplay.addEventListener("contextmenu", handleFADContextMenu, { once: true });
+    document
+      .querySelector("#fad-main")
+      .addEventListener("contextmenu", handleFADContextMenu);
     // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
     // handleToggleFad(true);
     handleIcons();
