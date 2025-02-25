@@ -6,6 +6,8 @@ window.addEventListener("load", rotateTurntable = () => {
     return;
   }
 
+  const BACKDROP_CONFIG_LABEL = "Enable blur backdrop";
+
   const adModalStyle = document.createElement("style");
   const STYLE_FOR_AD_MODAL = `
 .ReactModalPortal {
@@ -126,33 +128,29 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleConfigSwitch() {
+  function handleFADConfigBtnClick() {
+    const { PopupModal } = Spicetify;
     const fullAppDisplay = document.querySelector("#full-app-display");
     const fadFg = document.querySelector("#fad-foreground");
-    const genericModal = document.querySelector("generic-modal");
-
     const stateItem = SpicetifyOrigin._state.item;
-
     if (!stateItem.isLocal && stateItem.type !== "ad") fadFg.appendChild(fadHeartContainer);
     fullAppDisplay.appendChild(songPreviewContainer);
-
-    genericModal.remove();
-
+    PopupModal.hide();
     handleIcons();
     handleRotate();
     handleFadControl();
   }
 
-  function handleBackdrop(fullAppDisplay, setBlurBackdropBtn) {
+  function handleFADBackdrop(event) {
+    const { currentTarget } = event;
+    const fullAppDisplay = document.querySelector("#full-app-display");
     if (!+localStorage.getItem("enableBlurFad")) {
       fullAppDisplay.dataset.isBlurFad = "true";
-      setBlurBackdropBtn.classList.remove("disabled");
-
+      currentTarget.classList.remove("disabled");
       localStorage.setItem("enableBlurFad", "1");
     } else {
       fullAppDisplay.dataset.isBlurFad = "false";
-      setBlurBackdropBtn.classList.add("disabled");
-
+      currentTarget.classList.add("disabled");
       localStorage.setItem("enableBlurFad", "0");
     }
   }
@@ -187,34 +185,29 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleContextMenu(fullAppDisplay) {
+  function handleFADContextMenu() {
     const configContainer = document.querySelector("#popup-config-container");
     const settingRowReferenceNode = document.querySelectorAll("#popup-config-container > div")[0];
 
     const settingRowContainer = document.createElement("div");
     const settingRow = `
 <div class="setting-row">
-  <label class="col description">Enable blur backdrop</label>
+  <label class="col description">${BACKDROP_CONFIG_LABEL}</label>
   <div class="col action">
     <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
-      <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
-        <path d="M13.985 2.383L5.127 12.754 1.388 8.375l-.658.77 4.397 5.149 9.618-11.262z"></path>
-      </svg>
+      ${parseIcon("check")}
     </button>
   </div>
 </div>
 `;
     settingRowContainer.innerHTML = settingRow;
     configContainer.insertBefore(settingRowContainer, settingRowReferenceNode);
-
-    const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
-    const setBlurBackdropBtn = document.querySelector("[data-blur-fad]");
-
-    for (const configSwitch of configSwitchBtns) {
-      configSwitch.addEventListener("click", handleConfigSwitch);
+    const configBtns = document.querySelectorAll("#popup-config-container button.switch");
+    const backdropConfigBtn = document.querySelector("[data-blur-fad]");
+    for (const configBtn of configBtns) {
+      configBtn.addEventListener("click", handleFADConfigBtnClick);
     }
-
-    setBlurBackdropBtn.addEventListener("click", () => handleBackdrop(fullAppDisplay, setBlurBackdropBtn));
+    backdropConfigBtn.addEventListener("click", handleFADBackdrop);
   }
 
   // Todo
@@ -235,7 +228,7 @@ window.addEventListener("load", rotateTurntable = () => {
     fullAppDisplay.appendChild(songPreviewContainer);
     if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
     handleFadControl();
-    fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
+    fullAppDisplay.addEventListener("contextmenu", handleFADContextMenu, { once: true });
     // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
     // handleToggleFad(true);
     handleIcons();
