@@ -113,9 +113,6 @@
 }
 
 /* fix */
-:root {
-    --content-max-width: 100% !important;
-}
 .Root__globalNav {
     padding: 8px 16px !important;
     height: unset;
