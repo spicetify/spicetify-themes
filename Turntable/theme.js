@@ -72,18 +72,6 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleFadBtn(event) {
-    event.stopPropagation();
-  }
-
-  function handleFadControl() {
-    const fadControlsBtns = document.querySelectorAll("#fad-controls button");
-
-    for (const fadControl of fadControlsBtns) {
-      fadControl.addEventListener("dblclick", handleFadBtn);
-    }
-  }
-
   function handleFadHeart() {
     const isFadHeartContainer = document.querySelector(".fad-heart-container");
 
@@ -128,17 +116,13 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleFADConfigBtnClick() {
+  function handlePopupModalClick(event) {
     const { PopupModal } = Spicetify;
-    const fullAppDisplay = document.querySelector("#full-app-display");
-    const fadFg = document.querySelector("#fad-foreground");
-    const stateItem = SpicetifyOrigin._state.item;
-    if (!stateItem.isLocal && stateItem.type !== "ad") fadFg.appendChild(fadHeartContainer);
-    fullAppDisplay.appendChild(songPreviewContainer);
-    PopupModal.hide();
-    handleIcons();
-    handleRotate();
-    handleFadControl();
+    const { target } = event;
+    if (target.closest(".setting-row button.switch")) {
+      PopupModal.hide();
+      handleIcons();
+    }
   }
 
   function handleFADBackdrop(event) {
@@ -202,12 +186,15 @@ window.addEventListener("load", rotateTurntable = () => {
       settingRow,
       configContainer.querySelector(".setting-row")
     );
-    const configBtns = configContainer.querySelectorAll("button.switch");
     const backdropConfigBtn = configContainer.querySelector("[data-blur-fad]");
-    for (const configBtn of configBtns) {
-      configBtn.addEventListener("click", handleFADConfigBtnClick);
-    }
     backdropConfigBtn.addEventListener("click", handleFADBackdrop);
+  }
+
+  function handleFADDblClick(event) {
+    const { target } = event;
+    if (target.closest("button")) {
+      event.stopPropagation();
+    }
   }
 
   // Todo
@@ -227,10 +214,10 @@ window.addEventListener("load", rotateTurntable = () => {
     const fullAppDisplay = document.querySelector("#full-app-display");
     fullAppDisplay.appendChild(songPreviewContainer);
     if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
-    handleFadControl();
     document
       .querySelector("#fad-main")
       .addEventListener("contextmenu", handleFADContextMenu);
+    fullAppDisplay.addEventListener("dblclick", handleFADDblClick);
     // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
     // handleToggleFad(true);
     handleIcons();
@@ -261,13 +248,11 @@ window.addEventListener("load", rotateTurntable = () => {
   Spicetify.Player.origin._events.addListener("update", handleFadHeart);
   Spicetify.Player.origin._events.addListener("queue_update", handleTracksNamePreview);
 
+  Spicetify.PopupModal.addEventListener("click", handlePopupModalClick);
+
   window.addEventListener("fad-request", handleFADToggle);
 
   fadHeart.addEventListener("click", Spicetify.Player.toggleHeart);
   previousSong.addEventListener("click", () => SpicetifyOrigin.skipToPrevious());
   nextSong.addEventListener("click", () => SpicetifyOrigin.skipToNext());
-
-  fadHeart.addEventListener("dblclick", handleFadBtn);
-  previousSong.addEventListener("dblclick", handleFadBtn);
-  nextSong.addEventListener("dblclick", handleFadBtn);
 });
