@@ -80,8 +80,8 @@ body {
 .Root__globalNav .main-globalNav-historyButtonsContainer,
 .Root__globalNav .main-globalNav-searchSection,
 .Root__globalNav .main-topBar-topbarContentRight {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .main-home-filterChipsSection {
@@ -438,7 +438,7 @@ li>div::after {
 }
 
 .main-topBar-background {
-    border-radius: var(--corner-radius);
+    border-radius: 0;
 }
 
 .main-topBar-overlay,
@@ -475,6 +475,12 @@ li>div::after {
 .main-entityHeader-background,
 .main-entityHeader-background.main-entityHeader-overlay:after {
     height: 100vh;
+}
+
+/* (1.2.57+) full screen artists background */
+.wozXSN04ZBOkhrsuY5i2,
+.dhq75ObRGjfBoBlz6clW:after {
+    height: 100%;
 }
 
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
@@ -925,4 +931,28 @@ img.playlist-picture[src$=".svg"] {
 /* bottom scroll-bar popup fix */
 .Root__main-view-overlay {
     width: 100%;
+}
+
+.IYex0sXu8fnCz1FqFbRe {
+    background: initial;
+    color: var(--spice-text);
+}
+
+.main-dropDown-dropDown {
+    color: var(--spice-sidebar);
+}
+
+.iWTIFTzhRZT0rCD0_gOK {
+    position: sticky;
+    bottom: 30%;
+}
+
+@keyframes overlay-animation {
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
