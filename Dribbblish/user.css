@@ -69,6 +69,7 @@ body {
 }
 
 .Root__globalNav {
+    --left-sidebar-width: 72;
     background-color: var(--spice-main) !important;
     border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
     margin: 0;
