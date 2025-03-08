@@ -53,6 +53,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![dark](Dribbblish/dark.png)
 
+#### Nebula 
+
+![nebula](Nebula/nebula.png)
+
 #### Nord-Light
 
 ![nord-light](Dribbblish/nord-light.png)
