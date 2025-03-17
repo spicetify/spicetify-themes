@@ -1,4 +1,6 @@
-:root 
+:root {
+  --scroll: 0 !important;
+}
   
   .main-rootlist-rootlistDividerGradient {
     background: unset;
@@ -47,11 +49,6 @@
   
   span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     fill: black;
-  }
-  
-  /* Full window artist background */
-  .main-entityHeader-background.main-entityHeader-gradient {
-    opacity: 0.7;
   }
   
   
@@ -450,21 +447,40 @@ body:has(#lyrics-fullscreen-container) > #main > .Root {
   --background-press: #797979;
 }
 
-/* full screen artists background */
-.main-entityHeader-container.main-entityHeader-withBackgroundImage,
-.main-entityHeader-background,
-.main-entityHeader-background.main-entityHeader-overlay:after {
-    height: 100vh;
-}
-
-.artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
-    font-size: 120px !important;
-    line-height: 120px !important;
-}
-
 
 /* scrollbar hide */
 
 .os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle, .os-scrollbar.os-scrollbar-track-interactive .os-scrollbar-track{
   width: 0 !important;
+}
+
+/* black gradient */
+.XVz4BMGP5zAEE5p90mYK{
+  --background-base: black !important;
+  --background-base-min-contrast: black !important;
+  
+}
+
+.Bdcf5g__Rug3TGqSdbiy{
+    --background-base-70: black !important;
+}
+
+/* white text instead of accented color */
+.encore-internal-color-text-subdued {
+  color: white;
+}
+
+/* fullscreen artist page*/
+.wozXSN04ZBOkhrsuY5i2, .XUwMufC5NCgIyRMyGXLD{
+  height: 90vh;
+  clip-path: inset(0 0 17vh 0);
+}
+
+.main-entityHeader-container.main-entityHeader-withBackgroundImage {
+  height: 73vh;
+}
+
+.dhq75ObRGjfBoBlz6clW:after{
+  height: 90vh;
+  background-color: transparent;
 }
