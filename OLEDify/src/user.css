@@ -151,40 +151,20 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  background-color: black !important;
 }
 
 #lyrics-backdrop-container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: var(--spice-main);
+  background-color: black !important;
 }
 
 .lyrics-lyrics-background {
   visibility: hidden !important;
 }
 
-.lyrics-lyrics-container {
-  --lyrics-color-active: rgb(255, 255, 255) !important;
-  --lyrics-color-inactive: rgba(255, 255, 255, 0.35) !important;
-  --lyrics-color-passed: rgba(255, 255, 255, 0.8) !important;
-  --lyrics-color-messaging: rgba(255, 255, 255, 0.45) !important;
-}
-
-.lyrics-lyricsContent-lyric {
-  opacity: 0;
-  visibility: hidden;
-  animation-fill-mode: forwards;
-  margin: 0.3rem 0;
-  text-shadow: none;
-  transition: text-shadow 100ms ease, color 100ms ease;
-  text-align: left !important;
-}
-
-.lyrics-lyricsContent-text {
-  transform-origin: var(--lyrics-text-direction) ;
-  text-align: left !important;
-}
 
 /* lyrics not available message */
 .C3pBU1DsOUJJOAv89ZFT {
@@ -484,3 +464,4 @@ body:has(#lyrics-fullscreen-container) > #main > .Root {
   height: 90vh;
   background-color: transparent;
 }
+
