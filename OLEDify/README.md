@@ -48,9 +48,6 @@ spicetify config color_scheme ' ' current_theme ' '
 spicetify apply
 ```
 
-## Credits
-
-- Based on [Bloom](https://github.com/nimsandu/spicetify-bloom/tree/main) by [nimsandu](https://github.com/nimsandu)  
 
 ## Other Extensions/Snippets Used
 
