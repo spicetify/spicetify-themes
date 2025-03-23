@@ -75,6 +75,10 @@
   background-color: #00000000 !important;
 }
 
+.main-yourLibraryX-libraryContainer {
+  background: none !important;
+}
+
 .main-trackList-trackListRow:hover {
   background-color: var(--spice-highlight);
 }
