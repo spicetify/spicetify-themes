@@ -15,7 +15,6 @@ A true black AMOLED/OLED theme for spicetify.
 ![artist](https://github.com/thefoodiee/oledify/blob/main/images/artist_page.png?raw=true)
 
 ##### Lyrics Page
-from [Bloom](https://github.com/nimsandu/spicetify-bloom/tree/main) by [nimsandu](https://github.com/nimsandu)  
 ![lyrics](https://github.com/thefoodiee/oledify/blob/main/images/lyrics_page.png?raw=true)
 
 ## Dependencies
