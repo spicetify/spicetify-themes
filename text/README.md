@@ -92,7 +92,7 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ### Notes
 
--   **IMPORTANT:** Add the following to your `config-xpui.ini` file. Details as to why are explained [here](https://github.com/JulienMaille/spicetify-dynamic-theme#important). Run `spicetify apply` after adding these lines.
+-   **IMPORTANT:** Add the following to your `config-xpui.ini` file. This is to ensure the height of the song rows in playlists/albums matches what the theme expects them to be. Run `spicetify apply` after adding these lines. Also, make sure to remove them when you stop using this theme.
 
 ```ini
 [Patch]
