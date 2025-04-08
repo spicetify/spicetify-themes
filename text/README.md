@@ -96,7 +96,7 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ```ini
 [Patch]
-xpui.js_find_8008 = ,(\w+=)56,
+xpui.js_find_8008 = ,(rowHeight:\s*)[a-zA-Z0-9_]+,
 xpui.js_repl_8008 = ,${1}32,
 ```
 
