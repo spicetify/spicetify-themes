@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<img src="https://raw.githubusercontent.com/CuteMrMerp0/spicetify-themes/Animated/screenshots/demo.gif" alt="img"> 
+<img src="https://raw.githubusercontent.com/CuteMrMerp0/spicetify-themes/refs/heads/master/Animated/screenshots/demo.gif" alt="img"> 
 
 ## More
 
