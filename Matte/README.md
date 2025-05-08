@@ -56,11 +56,41 @@ a Spicetify theme which features a distinct top bar, quick-to-edit CSS variables
 
     -   If you use the Marketplace, go to `Marketplace > Snippets > + Add CSS` and then paste the quick configs found in `user.css`. Edit these as you wish.
 
-![Window Controls](screenshots/quickcfg.png)
+```css
+/*  ================================
+    USER-EDITABLE VARIABLES
+    ================================ */
+
+:root {
+    /* top bar vars */
+    --top-bar-padding-top: 45px;
+    --top-bar-padding-right: 20px;
+    --top-bar-padding-bottom: 5px;
+    --top-bar-padding-left: 20px;
+    --tab-border-radius: 6px;
+    --top-bar-border-width: 2px;
+
+    /* sidebar vars */
+    --sidebar-button-border-radius: 4px;
+    --sidebar-border-width: 2px;
+
+    /* player vars */
+    --player-height: 90px;
+    --player-padding: 0 20px;
+    --player-border-width: 2px;
+
+    /* scrollbar vars */
+    --scrollbar-border-radius: 4px;
+    --scrollbar-width: 6px;
+    --scrollbar-width-hover: 6px;
+}
+```
 
 -   For Windows users, here's how to make the window controls' background match with the topbar background
 
-    -   Put this snippet into your `user.css` (or through the Marketplace's custom CSS feature)
+    -   Enable [CEF/Spotify Tweaks](https://windhawk.net/mods/cef-titlebar-enabler-universal) in Windhawk (recommended)
+
+    -   Put this snippet into your `user.css` (or through the Marketplace's custom CSS feature) (alternative)
 
 ```css
 /* transparent window controls background */
