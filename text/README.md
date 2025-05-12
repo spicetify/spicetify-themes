@@ -190,6 +190,17 @@ created by [darkthemer](https://github.com/darkthemer/)
        changed accordingly. */
     height: 64px;
 }
+
+.spotify__container--is-desktop:not(.fullscreen) body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 135px; 
+    height: 16px;
+    z-index: 1000;
+    backdrop-filter: brightness(0.47);
+}
 ```
 
 ![winctrl](screenshots/winctrl.png)
