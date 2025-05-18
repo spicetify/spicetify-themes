@@ -501,9 +501,9 @@ li>div::after {
     transition: left 1s linear;
 }
 
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .x-progressBar-fillColor,
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .progress-bar__slider {
-    transition: none;
+/* progress bar moves instant if clicked */
+*:has(.x-progressBar-fillColor, .progress-bar__slider):active :is(.x-progressBar-fillColor, .progress-bar__slider) {
+    transition-duration: 0.001s;
 }
 
 /* right sidebar text */
