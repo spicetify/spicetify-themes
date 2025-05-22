@@ -1,0 +1,85 @@
+:root {
+  --spice-main: #121212;
+  --spice-sidebar: #121212;
+  --spice-text: #ffffff;
+}
+
+.Root__nav-bar {
+  background-color: var(--spice-sidebar);
+}
+
+.main-playButton-PlayButton {
+  background-color: var(--spice-main);
+}
+
+/* Carousel container styling */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  width: 100%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+.carousel > * {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel > *:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Carousel titles */
+.carousel-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--spice-text);
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  align-self: flex-start;
+}
+
+/* Arrow buttons */
+.carousel-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
