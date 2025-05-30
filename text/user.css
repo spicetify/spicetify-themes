@@ -61,6 +61,8 @@
     --border-width: 1px;
     --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
     --border-transition: 0.2s ease; /* 'none' to disable  */
+
+    --global-nav-margin-top: 40px; /* set to '0px' if you disabled window controls */
 }
 
 /* font */
@@ -113,16 +115,14 @@
 }
 
 /* fix */
-:root {
-    --content-max-width: 100% !important;
-}
 .Root__globalNav {
     padding: 8px 16px !important;
     height: unset;
 }
 .spotify__container--is-desktop.spotify__os--is-windows .Root__globalNav,
 .spotify__container--is-desktop.spotify__os--is-macos .Root__globalNav {
-    margin: 40px 0 0;
+    margin: 0;
+    margin-top: var(--global-nav-margin-top);
 }
 .spotify__container--is-desktop.spotify__os--is-linux .Root__globalNav {
     margin: 8px 0 0;
@@ -161,10 +161,15 @@ div:has(> .main-entityHeader-container) {
 .main-entityHeader-container + div > div[style*="background-color"],
 .main-home-homeHeader,
 .main-home-filterChipsSection,
-.main-home-filterChipsSection::after {
+.main-home-filterChipsSection::after,
+.main-nowPlayingView-contextItemInfo::before {
     background-color: transparent !important;
     background-image: none !important;
     background: transparent !important;
+}
+.main-entityHeader-container + div,
+.main-entityHeader-container + div > div {
+    background: var(--spice-main);
 }
 .LayoutResizer__resize-bar {
     cursor: w-resize;
@@ -319,6 +324,10 @@ div:has(> .main-entityHeader-container) {
 div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
     --text-subdued: var(--spice-subtext) !important;
 }
+.search-searchCategory-contentArea {
+    --carousel-start-chevron-gradient: var(--spice-main);
+    --carousel-end-chevron-gradient: var(--spice-main);
+}
 
 /* pane borders */
 .Root__globalNav,
@@ -431,13 +440,16 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 
 /* modals */
 .GenericModal,
-.GenericModal__overlay > div {
+.GenericModal__overlay > div,
+dialog {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
-    border-radius: var(--border-radius);
-    overflow: visible;
+    border-radius: var(--border-radius) !important;
+    overflow: visible !important;
+    box-shadow: 0 0 0 16px var(--spice-main);
 }
 .GenericModal::before,
-.GenericModal__overlay > div::before {
+.GenericModal__overlay > div::before,
+dialog::before {
     content: "Modal";
     color: var(--spice-border-active);
     position: absolute;
@@ -450,6 +462,37 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 /*  ================================
     GLOBAL NAV
     ================================ */
+
+/* fix spacing */
+.main-globalNav-historyButtonsContainer > div {
+    gap: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+}
+.main-globalNav-historyButtonsContainer > div > div:nth-child(1),
+.Root__globalNav > div:nth-child(3) > div:nth-child(2) {
+    height: 0;
+    width: 0;
+}
+.Root__globalNav > div:nth-child(3) {
+    -webkit-margin-end: 0;
+    margin-inline-end: 0;
+}
+.main-globalNav-historyButtons {
+    gap: 0 !important;
+    padding-inline: 0 !important;
+}
+.main-globalNav-historyButtons > button {
+    padding-inline: var(--encore-spacing-tighter, 12px);
+}
+
+/* icons */
+.main-globalNav-historyButtonsContainer svg,
+.main-globalNav-searchContainer svg {
+    transform: scale(0.7);
+}
 
 /* search section */
 .main-globalNav-searchSection,
@@ -488,7 +531,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
     border-color: var(--spice-border-active);
     outline: 14px solid var(--spice-main);
 }
-.main-globalNav-searchContainer form .main-topBar-searchBar + div > div {
+.main-globalNav-searchContainer form #recent-searches-dropdown > div {
     border-radius: var(--border-radius);
     box-shadow: none;
     margin: 24.5px 0;
@@ -581,45 +624,14 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* top bar */
-.queue-tabBar-active,
 .marketplace-tabBar-active {
     text-decoration: underline !important;
-}
-.main-topBar-historyButtons .main-topBar-button {
-    background-color: transparent;
-}
-.main-topBar-historyButtons > .main-topBar-button:first-child::before {
-    content: "<";
-}
-.main-topBar-button.main-topBar-responsiveForward::before {
-    content: ">";
-}
-.main-topBar-historyButtons > .main-topBar-button:first-child > svg,
-.main-topBar-button.main-topBar-responsiveForward > svg {
-    display: none;
-}
-.main-topBar-topbarContent {
-    gap: 24px;
-}
-.x-searchInput-searchInputInput {
-    border-radius: var(--border-radius);
-    background-color: transparent;
-}
-.x-searchInput-searchInputInput:hover,
-.x-searchInput-searchInputInput:focus {
-    box-shadow: none;
-    border: 1px solid var(--spice-button-active);
-    background-color: transparent;
 }
 .search-searchCategory-catergoryGrid *,
 .main-shelf-subHeader *,
 .ChipInnerComponent-sm,
 .ChipInnerComponent-sm-selected {
     border-radius: var(--border-radius);
-}
-.main-globalNav-historyButtonsContainer svg,
-.main-globalNav-searchContainer svg {
-    transform: scale(0.7);
 }
 
 /* headers */
@@ -633,31 +645,6 @@ form .main-topBar-searchBar:placeholder-shown {
         rgba(var(--spice-rgb-main), 0.9) 50%,
         rgba(var(--spice-rgb-main), 1) 100%
     );
-}
-
-/* compact tracklists */
-.main-trackList-trackListRow {
-    height: 32px;
-}
-.main-trackList-rowMainContent {
-    grid-template: "title badges subtitle" / auto 1fr;
-    column-gap: 0;
-}
-.main-trackList-rowImage {
-    height: 24px;
-    width: 24px;
-}
-.main-trackList-rowTitle:has(+ span)::after {
-    content: "|";
-    color: var(--spice-highlight);
-    padding: 0 10px;
-}
-.main-trackList-rowBadges {
-    padding-right: 10px;
-}
-.main-trackList-number,
-.main-trackList-icon {
-    top: unset;
 }
 
 /* lyrics page & sidebar */
@@ -688,7 +675,7 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 .lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty) {
     background-color: var(--lyrics-color-background);
-    color: var(--spice-main);
+    color: var(--spice-text);
     opacity: 1;
     transition: none;
 }
@@ -756,6 +743,7 @@ form .main-topBar-searchBar:placeholder-shown {
     box-shadow: none;
     height: 100%;
     border-radius: 0;
+    background-color: var(--spice-text);
 }
 
 /* cover art */
@@ -825,6 +813,12 @@ button[data-testid="control-button-shuffle"]::after,
     content: "\21C4\2726";
     text-wrap: nowrap;
 }
+button[data-testid="control-button-seek-back-15"]::before,
+button:has(
+        path[d="M2.464 4.5h1.473a.75.75 0 0 1 0 1.5H0V2.063a.75.75 0 0 1 1.5 0v1.27a8.25 8.25 0 1 1 10.539 12.554.75.75 0 0 1-.828-1.25A6.75 6.75 0 1 0 2.464 4.5Z"]
+    )::before {
+    content: "\21A9";
+}
 .main-skipBackButton-button::before,
 button[data-testid="control-button-skip-back"]::after {
     content: "\25C1";
@@ -884,6 +878,12 @@ button[data-testid="control-button-repeat"][aria-checked="mixed"]::after {
 .main-repeatButton-button > svg,
 :is(.player-controls__buttons, .npv-nowPlayingBar-controls) span {
     display: none;
+}
+button[data-testid="control-button-seek-forward-15"]::before,
+button:has(
+        path[d="M13.536 4.488h-1.473a.75.75 0 1 0 0 1.5H16V2.051a.75.75 0 0 0-1.5 0v1.27A8.25 8.25 0 1 0 3.962 15.876a.75.75 0 0 0 .826-1.252 6.75 6.75 0 1 1 8.747-10.136Z"]
+    )::before {
+    content: "\21AA";
 }
 
 /* connect bar */

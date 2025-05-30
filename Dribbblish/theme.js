@@ -32,6 +32,21 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
     });
 });
 
+// adjust topbar margin with left sidebar width
+waitForElement([".Root__nav-bar"], ([resizer]) => {
+    const observer = new MutationObserver(updateVariable);
+    observer.observe(resizer, { attributes: true, attributeFilter: ["style"] });
+    function updateVariable() {
+        let style = resizer.style;
+        let value = style.getPropertyValue("--left-sidebar-width");
+        waitForElement([".Root__globalNav"], ([globalNav]) => {
+            let globalNavStyle = globalNav.style;
+            globalNavStyle.setProperty("--left-sidebar-width", value);
+        });
+    }
+    updateVariable();
+});
+
 let version;
 let ylx;
 
