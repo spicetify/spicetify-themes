@@ -102,6 +102,14 @@
     width: 100%;
     background-color: var(--spice-main);
 }
+.global-nav .Root__top-container {
+    grid-template-areas:
+        "global-nav global-nav global-nav global-nav"
+        "left-sidebar main-view right-sidebar now-playing-bar"
+        "left-sidebar main-view right-sidebar now-playing-bar";
+    grid-template-columns: auto 1fr auto 15vw;
+    grid-template-rows: 1fr auto;
+}
 .main-nowPlayingBar-container {
     display: flex;
     flex-direction: column;

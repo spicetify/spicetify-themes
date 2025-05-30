@@ -27,88 +27,33 @@
 }
 
 /*  ================================
-    TOPBAR
+    GLOBAL NAV
     ================================ */
 
-.spotify__container--is-desktop:not(.fullscreen) .main-topBar-container,
-.spotify__container--is-desktop:not(.fullscreen) .main-topBar-background {
-    -webkit-app-region: drag !important;
-}
-.Root__top-container {
-    /* rearrange grid layout */
-    grid-template-areas:
-        ". . ."
-        "left-sidebar main-view right-sidebar"
-        "now-playing-bar now-playing-bar now-playing-bar";
-    grid-template-rows:
-        calc(var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom))
-        1fr auto;
-    overflow: hidden !important;
-}
-.Root__nav-bar {
-    grid-area: left-sidebar !important;
-}
-.Root__right-sidebar {
-    grid-area: right-sidebar !important;
-}
-.Root__now-playing-bar {
-    grid-area: now-playing-bar !important;
-}
-.body-drag-top {
-    /* make whole top bar draggable */
-    height: calc(
-        var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
-    ) !important;
-}
-.main-topBar-container,
-.main-topBar-container:empty {
-    /* customize top bar */
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: var(--top-bar-padding-top);
-    padding-right: var(--top-bar-padding-right);
-    padding-bottom: var(--top-bar-padding-bottom);
-    padding-left: var(--top-bar-padding-left);
-    height: calc(
-        var(--top-bar-padding-top) + 40px + var(--top-bar-padding-bottom)
-    );
-    width: 100%;
+.Root__globalNav {
+    /* add nav padding */
+    padding: var(--top-bar-padding-top) var(--top-bar-padding-right)
+        var(--top-bar-padding-bottom) var(--top-bar-padding-left) !important;
     border-bottom: var(--top-bar-border-width) solid var(--spice-topbar-border);
 }
-.main-topBar-container .contentSpacing {
-    max-width: unset;
-    padding: 0;
-}
-.main-topBar-background {
-    /* remove background upon scrolling */
-    opacity: 0 !important;
-}
-.queue-tabBar-active {
-    /* customize active tab */
+.Root__globalNav .main-globalNav-link-icon {
     border-radius: var(--tab-border-radius);
+    background-color: var(--spice-topbar);
+    color: var(--spice-topbar-subtext);
 }
-[dir="ltr"] .collection-collection-tabBar,
-.queue-tabBar-nav {
-    /* remove tab bar left padding */
-    padding-left: 0;
-    padding-inline-start: 0;
+.Root__globalNav .main-globalNav-navLinkActive {
+    background-color: var(--spice-tab-active);
+    color: var(--spice-topbar-text);
 }
-.main-topBar-topbarContent {
-    /* add bigger gap between play button and name */
-    gap: 16px;
+form .main-topBar-searchBar {
+    /* style seaerch bar */
+    border-radius: var(--tab-border-radius) !important;
 }
-.x-searchInput-searchInputInput {
-    height: 41px;
-}
-.x-searchInput-searchInputInput:hover,
-.x-searchInput-searchInputInput:focus,
-.x-entityImage-imageContainer {
-    box-shadow: none;
-}
-.x-searchInput-searchInputInput,
-.x-filterBox-filterInput {
-    border-radius: var(--tab-border-radius);
+form:hover .main-topBar-searchBar,
+form .main-topBar-searchBar:focus {
+    background: var(--spice-tab-hover) !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 /*  ================================
@@ -144,9 +89,6 @@
 .main-yourLibraryX-headerContent {
     padding: 4px 0;
 }
-.main-yourLibraryX-header {
-    padding-top: 0;
-}
 .main-yourLibraryX-navItem {
     padding: 4px 0;
 }
@@ -160,6 +102,13 @@
 }
 .Wrapper-md-leading {
     margin-inline-end: 0;
+}
+.main-yourLibraryX-libraryRootlist {
+    padding: 0 16px 16px;
+}
+.main-rootlist-wrapper .LineClamp {
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
 }
 
 /*  ================================
@@ -224,12 +173,14 @@
 }
 
 /* full window artist background */
-.main-entityHeader-background.main-entityHeader-gradient {
+.main-entityHeader-background.main-entityHeader-gradient,
+.under-main-view > div > div {
     opacity: 0.3 !important;
 }
 .main-entityHeader-container.main-entityHeader-withBackgroundImage,
 .main-entityHeader-background,
-.main-entityHeader-background.main-entityHeader-overlay:after {
+.main-entityHeader-background.main-entityHeader-overlay:after,
+.under-main-view > div > div {
     height: 100vh;
 }
 .main-entityHeader-withBackgroundImage .main-entityHeader-headerText {
@@ -293,14 +244,14 @@
 }
 
 /*  ================================
-    FRIEND ACTIVITY BAR / RIGHT SIDEBAR
+    RIGHT SIDEBAR
     ================================ */
 
-.Root__nav-right-sidebar {
+.Root__right-sidebar {
     border-left: var(--sidebar-border-width) solid var(--spice-sidebar-border);
 }
-.spotify__os--is-windows .main-buddyFeed-content {
-    margin-top: 0;
+.Root__right-sidebar aside::before {
+    background-color: var(--spice-sidebar) !important;
 }
 
 /*  ================================
@@ -335,16 +286,6 @@
     MISC & FIXES
     ================================ */
 
-/*  font style
-    -------------------------------- */
-* {
-    /* heading font weight */
-    font-weight: normal !important;
-    --font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl,
-        CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif),
-        sans-serif;
-}
-
 /*  root
     -------------------------------- */
 .Root {
@@ -360,16 +301,12 @@
     /* customize scrollbar */
     border-radius: var(--scrollbar-border-radius) !important;
     width: var(--scrollbar-width) !important;
+    margin: 0 6px !important;
 }
 .os-scrollbar-handle:hover {
     /* customize hovered scrollbar */
     border-radius: var(--scrollbar-border-radius) !important;
     width: var(--scrollbar-width-hover) !important;
-}
-.os-scrollbar-vertical {
-    /* fix scrollbar positioning */
-    top: 5px !important;
-    right: 5px !important;
 }
 .os-scrollbar-handle {
     /* increase size from right to left */
@@ -395,59 +332,26 @@
     filter: contrast(0.1);
 }
 
-
 /*  color reassignment
     -------------------------------- */
 .encore-dark-theme,
-.encore-dark-theme .encore-base-set {
+.encore-dark-theme .encore-base-set,
+*[style*="subdued"] {
     /* song duration & queue button & folder arrow & settings desc text */
     --text-subdued: var(--spice-subtext) !important;
-    --essential-subdued: var(--spice-button) !important;
+    --essential-subdued: var(--spice-subtext) !important;
+}
+.encore-dark-theme .encore-bright-accent-set {
+    --background-highlight: var(--spice-button-active);
+    --background-press: var(--spice-button-active);
+    --background-elevated-base: var(--spice-button-active);
+    --background-elevated-highlight: var(--spice-button-active);
+    --background-elevated-press: var(--spice-button-active);
 }
 
-/* ====topbar==== */
-.main-topBar-container,
-.main-topBar-container:empty {
+/* ====global nav==== */
+.Root__globalNav {
     background-color: var(--spice-topbar);
-}
-.main-topBar-historyButtons .main-topBar-button {
-    background-color: transparent;
-    color: var(--spice-topbar-text);
-}
-.main-topBar-historyButtons .main-topBar-button:disabled {
-    color: var(--spice-topbar-subtext);
-    opacity: 1;
-}
-.main-entityHeader-topbarTitle {
-    color: var(--spice-topbar-text) !important;
-}
-.queue-tabBar-active {
-    background-color: var(--spice-tab-active) !important;
-    color: var(--spice-tab-active-text) !important;
-}
-.queue-tabBar-headerItemLink {
-    color: var(--spice-topbar-subtext);
-}
-.queue-tabBar-headerItemLink:hover {
-    background-color: rgba(var(--spice-rgb-tab-hover), 0.3);
-}
-.x-searchInput-searchInputSearchIcon,
-.x-searchInput-searchInputClearButton,
-.x-searchInput-searchInputInput {
-    color: var(--spice-tab-active-text) !important;
-}
-.x-searchInput-searchInputInput {
-    background-color: var(--spice-tab-active);
-    color: var(--spice-tab-active-text) !important;
-}
-.x-searchInput-searchInputInput:hover {
-    background-color: var(--spice-tab-hover);
-}
-.x-filterBox-filterInput {
-    background-color: rgba(var(--spice-rgb-subtext), 0.1);
-}
-::placeholder {
-    color: var(--spice-topbar-subtext);
 }
 
 /* ====left sidebar==== */
@@ -475,6 +379,16 @@
 }
 
 /* ====main view==== */
+div[style*="background-base"],
+div[style*="background-color"],
+div[style*="background-color"] + div {
+    --background-base: var(--spice-main) !important;
+    background-color: var(--spice-main) !important;
+    background-image: none !important;
+}
+.main-topBar-overlay {
+    background-color: transparent;
+}
 .main-trackList-trackListRow.main-trackList-selected,
 .main-trackList-trackListRow.main-trackList-selected:hover,
 .main-trackList-trackListRow:focus-within,
@@ -546,12 +460,6 @@
 .main-playPauseButton-button {
     color: var(--spice-player);
     background-color: var(--spice-button-active);
-}
-.control-button-heart[aria-checked="false"],
-.player-controls__left button,
-.player-controls__right button,
-.main-nowPlayingBar-extraControls button {
-    color: rgba(var(--spice-rgb-player-selected-row), 0.7);
 }
 .Button-textBrightAccent-small-small-buttonTertiary-iconOnly-useBrowserDefaultFocusStyle,
 .Button-textBrightAccent-small-small-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle {

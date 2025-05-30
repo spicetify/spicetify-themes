@@ -53,47 +53,46 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
 
   // handles resizing of playbar panel to match right sidebar below it
   const playbar = document.querySelector('.Root__now-playing-bar');
-  const rightbar = document.querySelector('.Root__right-sidebar');
-
-  const resizeObserver = new ResizeObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.target === rightbar) {
-        let newWidth = entry.contentRect.width;
-        if (newWidth === 0) {
-          const localStorageWidth = localStorage.getItem(
-            '223ni6f2epqcidhx5etjafeai:panel-width-saved'
-          );
-          if (localStorageWidth) {
-            newWidth = localStorageWidth;
-          } else {
-            newWidth = 420;
+  waitForElement(['.Root__right-sidebar'], ([rightbar]) => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.target === rightbar) {
+          let newWidth = entry.contentRect.width;
+          if (newWidth === 0) {
+            const localStorageWidth = localStorage.getItem(
+              '223ni6f2epqcidhx5etjafeai:panel-width-saved'
+            );
+            if (localStorageWidth) {
+              newWidth = localStorageWidth;
+            } else {
+              newWidth = 420;
+            }
           }
+          playbar.style.width = `${newWidth}px`;
+          break;
         }
-        playbar.style.width = `${newWidth}px`;
-        break;
       }
-    }
+    });
+
+    resizeObserver.observe(rightbar);
   });
-
-  resizeObserver.observe(rightbar);
-
-  // start or stop spinning animation based on whether something is playing
-  const targetElement = document.querySelector('[data-encore-id="buttonPrimary"]');
-
-  const playObserver = new MutationObserver((mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-      if (
-        mutation.type === 'attributes' &&
-        mutation.attributeName === 'aria-label'
-      ) {
-        handleLabelChange();
+  
+  waitForElement(['[data-encore-id="buttonPrimary"]'], ([targetElement]) => {
+    // start or stop spinning animation based on whether something is playing
+    const playObserver = new MutationObserver((mutationsList) => {
+      for (const mutation of mutationsList) {
+        if (
+          mutation.type === 'attributes' &&
+          mutation.attributeName === 'aria-label'
+        ) {
+          handleLabelChange();
+        }
       }
-    }
+    });
+  
+    const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
+    playObserver.observe(targetElement, playConfig);
   });
-
-  const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-
-  playObserver.observe(targetElement, playConfig);
 
   function handleLabelChange() {
     const img = document.querySelector(
@@ -138,5 +137,24 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     shootingstar.style.animationDelay = `${Math.floor(Math.random() * 7)}s`;
 
     backgroundContainer.appendChild(shootingstar);
+
+    shootingstar.addEventListener('animationend', () => {
+      if (Math.random() < 0.75) {
+        shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+        shootingstar.style.right = `${random(0, 90)}%`;
+      } else {
+        shootingstar.style.top = `${random(0, 50)}%`;
+        shootingstar.style.right = '-4px'; // hidden when animation is delayed
+      }
+
+      shootingstar.style.animation = 'none'; // Remove animation
+
+      void shootingstar.offsetWidth;
+
+      shootingstar.style.animation = '';
+      shootingstar.style.animationDuration = `${
+        Math.floor(Math.random() * 4) + 3
+      }s`;
+    });
   }
 });
