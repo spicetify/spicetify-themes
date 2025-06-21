@@ -492,7 +492,9 @@ select:focus {
     -webkit-margin-start: 0;
     margin-inline-start: 0;
 }
-.main-globalNav-historyButtonsContainer > div > div:nth-child(1),
+.main-globalNav-historyButtonsContainer
+    > div:not([class*="custom"])
+    > div:nth-child(1),
 .Root__globalNav > div:nth-child(3) > div:nth-child(2),
 .main-topBar-topbarContentRight + div {
     height: 0;
@@ -661,13 +663,23 @@ form .main-topBar-searchBar:placeholder-shown {
 .ChipInnerComponent-sm-selected {
     border-radius: var(--border-radius);
 }
-.main-actionBar-ActionBar button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]),
-.main-actionBar-ActionBar button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]):hover,
-.main-topBar-topbarContent button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]),
-.main-topBar-topbarContent button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]):hover {
+.main-actionBar-ActionBar
+    button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]),
+.main-actionBar-ActionBar
+    button:is(
+        [class*="button-primary"],
+        [data-encore-id="buttonPrimary"]
+    ):hover,
+.main-topBar-topbarContent
+    button:is([class*="button-primary"], [data-encore-id="buttonPrimary"]),
+.main-topBar-topbarContent
+    button:is(
+        [class*="button-primary"],
+        [data-encore-id="buttonPrimary"]
+    ):hover {
     transform: scale(0.5) !important;
 }
-.main-actionBar-ActionBarRow>:first-child:not(:only-child) {
+.main-actionBar-ActionBarRow > :first-child:not(:only-child) {
     margin-right: var(--content-spacing);
 }
 
