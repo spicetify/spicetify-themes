@@ -92,14 +92,6 @@ created by [darkthemer](https://github.com/darkthemer/)
 
 ### Notes
 
--   **IMPORTANT:** Add the following to your `config-xpui.ini` file. Details as to why are explained [here](https://github.com/JulienMaille/spicetify-dynamic-theme#important). Run `spicetify apply` after adding these lines.
-
-```ini
-[Patch]
-xpui.js_find_8008 = ,(\w+=)56,
-xpui.js_repl_8008 = ,${1}32,
-```
-
 -   **SUGGESTION:** Feel free to edit `color.ini` to swap the accent color (it's green for most of them) into your preferred color based from the color pallete.
 
     -   https://github.com/catppuccin/catppuccin
@@ -119,24 +111,36 @@ xpui.js_repl_8008 = ,${1}32,
 ```css
 /* user settings */
 :root {
-    --font-family: "DM Mono", monospace;
+    --font-family: "JetBrains Mono", monospace;
     /*
     --font-family: 'Anonymous Pro', monospace;
+    --font-family: 'Azeret Mono', monospace;
+    --font-family: 'B612 Mono', monospace;
     --font-family: 'Courier Prime', monospace;
     --font-family: 'Cousine', monospace;
     --font-family: 'Cutive Mono', monospace;
     --font-family: 'DM Mono', monospace;
+    --font-family: 'Fira Code', monospace;
     --font-family: 'Fira Mono', monospace;
     --font-family: 'IBM Plex Mono', monospace;
-    --font-family: 'Inconsolata', monospace;
-    --font-family: 'Nanum Gothic Coding', monospace;
+    --font-family: 'JetBrains Mono', monospace;
+    --font-family: 'M PLUS 1 Code', monospace;
+    --font-family: 'Major Mono Display', monospace;
+    --font-family: 'Monofett', monospace;
+    --font-family: 'Nova Mono', monospace;
+    --font-family: 'Overpass Mono', monospace;
+    --font-family: 'Oxygen Mono', monospace;
     --font-family: 'PT Mono', monospace;
     --font-family: 'Roboto Mono', monospace;
     --font-family: 'Share Tech Mono', monospace;
+    --font-family: 'Sometype Mono', monospace;
+    --font-family: 'Sono', monospace;
     --font-family: 'Source Code Pro', monospace;
     --font-family: 'Space Mono', monospace;
+    --font-family: 'Syne Mono', monospace;
     --font-family: 'Ubuntu Mono', monospace;
     --font-family: 'VT323', monospace;
+    --font-family: 'Xanh Mono', monospace;
     */
     --font-size: 14px;
     --font-weight: 400; /* 200 : 900 */
@@ -150,7 +154,7 @@ xpui.js_repl_8008 = ,${1}32,
     --display-card-image: block; /* none | block */
     --display-coverart-image: none; /* none | block */
     --display-header-image: none; /* none | block */
-    --display-library-image: block; /* none | block */
+    --display-sidebar-image: block; /* none | block */
     --display-tracklist-image: none; /* none | block */
     --display-spicetify-banner-ascii: block; /* none | block */
     --display-music-banner-ascii: none; /* none | block */
@@ -158,12 +162,17 @@ xpui.js_repl_8008 = ,${1}32,
     --border-radius: 0px;
     --border-width: 1px;
     --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
+    --border-transition: 0.2s ease; /* 'none' to disable  */
+
+    --global-nav-margin-top: 40px /* set to '0px' if you disabled window controls */
 }
 ```
 
 -   **SUGGESTION:** For Windows users, here's how to make the window controls' background match with the topbar background
 
-    -   Put this snippet into your `user.css` (or through the Marketplace's `+ Add CSS` feature)
+    -   Enable [CEF/Spotify Tweaks](https://windhawk.net/mods/cef-titlebar-enabler-universal) in Windhawk (recommended)
+
+    -   Alternatively, Put this snippet into your `user.css` (or through the Marketplace's `+ Add CSS` feature)
 
 ```css
 /* transparent window controls background */
