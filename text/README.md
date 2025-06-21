@@ -181,6 +181,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     position: absolute;
     right: 0;
     z-index: 999;
+    
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly */
@@ -188,7 +189,8 @@ created by [darkthemer](https://github.com/darkthemer/)
     /* depending on what global status bar
        style is enabled height need to be
        changed accordingly. */
-    height: 64px;
+    height: 32px;
+    margin-top: 16px;
 }
 ```
 
