@@ -11,20 +11,29 @@
 .Root__now-playing-bar footer {
   border-radius: var(--border-radius-1) !important;
 }
-#main::after {
+
+/* transparent window controls */
+.spotify__container--is-desktop:not(.fullscreen) body::after {
   content: ""; /* Empty content */
-  position: fixed; /* Fix element to viewport */
-  top: 0;
+  position: absolute;
   right: 0;
-  z-index: 999; /* Position above all other content */
-  -webkit-backdrop-filter: brightness(
-    2.12
-  ); /* Apply brightness filter to background */
-  backdrop-filter: brightness(2.12); /* Cross-browser brightness filter */
+  z-index: 999;
+  backdrop-filter: brightness(2.12);
   /* Page zoom control */
   /* Adjust width and height based on zoom level */
   width: 135px;
-  height: 40px;
+  height: 48px;
+}
+
+.spotify__container--is-desktop:not(.fullscreen) body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 135px;
+  height: 16px; /* only cover the top*/
+  z-index: 1000; /* higher than ::after */
+  backdrop-filter: brightness(0.47);
 }
 
 /* Page titles */
