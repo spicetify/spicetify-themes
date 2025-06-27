@@ -660,7 +660,8 @@ form .main-topBar-searchBar:placeholder-shown {
 .search-searchCategory-catergoryGrid *,
 .main-shelf-subHeader *,
 .ChipInnerComponent-sm,
-.ChipInnerComponent-sm-selected {
+.ChipInnerComponent-sm-selected,
+.ChipInnerComponent-sm-selected-isUsingKeyboard {
     border-radius: var(--border-radius);
 }
 .main-actionBar-ActionBar
