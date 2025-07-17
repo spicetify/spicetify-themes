@@ -593,15 +593,6 @@ form .main-topBar-searchBar:placeholder-shown {
 .HeaderSideArea:has(.x-entityImage-imageContainer) {
     transform: scale(0.7);
 }
-.x-entityImage-imageContainer::before {
-    content: "░▒▒░";
-    color: var(--spice-subtext);
-    transform: scale(1.4);
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    z-index: -1;
-}
 .main-yourLibraryX-filterArea {
     padding: 0 8px;
 }
