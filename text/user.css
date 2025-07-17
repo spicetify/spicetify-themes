@@ -135,7 +135,7 @@
     border: var(--border-width) solid transparent;
 }
 .Root__nav-bar,
-.Root__now-playing-bar {
+.main-nowPlayingBar-container {
     overflow: visible;
 }
 .main-view-container {
@@ -336,7 +336,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .Root__globalNav,
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
-.Root__now-playing-bar,
+.main-nowPlayingBar-container,
 .Root__right-sidebar:has(aside:not(:empty)) {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-inactive);
@@ -347,7 +347,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .Root__globalNav:hover,
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
-.Root__now-playing-bar:hover,
+.main-nowPlayingBar-container:hover,
 .Root__right-sidebar:has(aside:not(:empty)):hover {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
@@ -368,7 +368,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
         .main-yourLibraryX-libraryContainer
     )::before,
 .Root__main-view::before,
-.Root__now-playing-bar::before,
+.main-nowPlayingBar-container::before,
 .Root__right-sidebar:has(aside:not(:empty))::before {
     color: var(--spice-header);
     position: absolute;
@@ -403,7 +403,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
     content: "Main";
     position: fixed;
 }
-.Root__now-playing-bar::before {
+.main-nowPlayingBar-container::before {
     content: "Playing";
 }
 .Root__right-sidebar:has(aside:not(:empty))::before {
@@ -412,7 +412,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .Root__globalNav:hover::before,
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
 .Root__main-view:hover::before,
-.Root__now-playing-bar:hover::before,
+.main-nowPlayingBar-container:hover::before,
 .Root__right-sidebar:has(aside:not(:empty)):hover::before {
     color: var(--spice-border-active);
 }
