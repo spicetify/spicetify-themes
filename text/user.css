@@ -436,7 +436,9 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 
 /* context menus + tippy boxes */
 .main-contextMenu-menu,
-.tippy-box {
+.tippy-box,
+#context-menu > form,
+#context-menu div > ul {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
     border-radius: var(--border-radius) !important;
 }
