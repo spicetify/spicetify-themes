@@ -788,6 +788,9 @@ form .main-topBar-searchBar:placeholder-shown {
     border-radius: 0;
     background-color: var(--spice-text);
 }
+.x-progressBar-fillColor {
+    transition-duration: unset;
+}
 
 /* cover art */
 .main-nowPlayingWidget-coverArt .cover-art {
