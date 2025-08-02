@@ -764,6 +764,7 @@ form .main-topBar-searchBar:placeholder-shown {
 /* playback time indicators */
 .playback-bar__progress-time-elapsed {
     pointer-events: none;
+    width: unset;
 }
 .playback-bar__progress-time-elapsed::after {
     content: " /";
