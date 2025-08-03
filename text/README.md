@@ -80,6 +80,10 @@
 
 ![ForestGreen](screenshots/ForestGreen.png)
 
+### EverforestDarkMedium
+
+![EverforestDarkMedium](screenshots/EverforestDarkMedium.png)
+
 ## More
 
 ### Description
@@ -103,6 +107,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     -   https://github.com/rose-pine/rose-pine-theme
     -   https://github.com/altercation/solarized
     -   https://github.com/enkia/tokyo-night-vscode-theme
+    -   https://github.com/sainnhe/everforest
 
 -   **SUGGESTION:** Check the very top of `user.css` for user settings
 
