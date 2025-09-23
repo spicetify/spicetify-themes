@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Make sure Spicetify is installed
+if ! command -v spicetify &> /dev/null; then
+    echo "Spicetify is not installed. Please install Spicetify first."
+    exit 1
+fi
+
+# Download StarryNight theme from GitHub
+THEME_DIR="$(spicetify -c | sed 's/config.ini$/Themes/')"
+STAR_NIGHT_DIR="${THEME_DIR}/StarryNight"
+
+if [ -d "$STAR_NIGHT_DIR" ]; then
+    echo "StarryNight theme already exists at $STAR_NIGHT_DIR"
+else
+    git clone https://github.com/b-chen00/StarryNight.git "$STAR_NIGHT_DIR"
+    echo "StarryNight theme downloaded to $STAR_NIGHT_DIR"
+fi
+
+# Register theme in Spicetify (but do not apply)
+spicetify config current_theme StarryNight
+
+echo "StarryNight theme installed and registered."
+echo "Your Spotify setup remains unchanged. To use the theme, run 'spicetify apply'."
