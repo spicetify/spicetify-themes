@@ -33,7 +33,7 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
 });
 
 // adjust topbar margin with left sidebar width
-waitForElement([".Root__nav-bar"], ([resizer]) => {
+waitForElement([".Root__nav-bar, #Desktop_LeftSidebar_Id"], ([resizer]) => {
     const observer = new MutationObserver(updateVariable);
     observer.observe(resizer, { attributes: true, attributeFilter: ["style"] });
     function updateVariable() {
