@@ -36,7 +36,7 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
 waitForElement([".Root__nav-bar, #Desktop_LeftSidebar_Id"], ([resizer]) => {
   function updateVariable() {
     const computedStyle = getComputedStyle(resizer);
-    const value = computedStyle.getPropertyValue("--left-sidebar-width");
+    const value = Number(computedStyle.getPropertyValue("--left-sidebar-width").trim()) || resizer.clientWidth;
     waitForElement([".Root__globalNav"], ([globalNav]) => {
       globalNav.style.setProperty("--left-sidebar-width", value);
     });
