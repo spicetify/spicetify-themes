@@ -48,8 +48,9 @@ body {
     grid-template-areas:
         "top-banner top-banner top-banner"
         "global-nav global-nav global-nav"
-        "left-sidebar    main-view         right-sidebar"
+        "left-sidebar main-view right-sidebar"
         "left-sidebar now-playing-bar now-playing-bar" !important;
+    grid-template-rows: auto auto 1fr auto;
 }
 
 .main-yourLibraryX-libraryContainer {
