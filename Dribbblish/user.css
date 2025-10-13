@@ -45,9 +45,16 @@ body {
 }
 
 .global-nav .Root__top-container {
-    grid-template-areas: "global-nav global-nav global-nav"
+    grid-template-areas:
+        "top-banner top-banner top-banner"
+        "global-nav global-nav global-nav"
         "left-sidebar main-view right-sidebar"
         "left-sidebar now-playing-bar now-playing-bar" !important;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.main-yourLibraryX-libraryContainer {
+    background: none !important;
 }
 
 .Root__top-container {
@@ -66,6 +73,8 @@ body {
     background-color: var(--spice-player);
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
     grid-area: now-playing-bar !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .Root__globalNav {
@@ -73,6 +82,7 @@ body {
     background-color: var(--spice-main) !important;
     border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
     margin: 0;
+    grid-area: top-banner/1/global-nav/-1;
     margin-left: calc(var(--left-sidebar-width) * 1px);
     z-index: 10;
 }
@@ -138,6 +148,7 @@ body {
     background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%) !important;
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
     border-top: 0;
+    padding: 8px;
     min-width: 518px;
 }
 
