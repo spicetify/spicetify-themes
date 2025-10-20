@@ -80,6 +80,10 @@
 
 ![ForestGreen](screenshots/ForestGreen.png)
 
+### EverforestDarkMedium
+
+![EverforestDarkMedium](screenshots/EverforestDarkMedium.png)
+
 ## More
 
 ### Description
@@ -103,6 +107,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     -   https://github.com/rose-pine/rose-pine-theme
     -   https://github.com/altercation/solarized
     -   https://github.com/enkia/tokyo-night-vscode-theme
+    -   https://github.com/sainnhe/everforest
 
 -   **SUGGESTION:** Check the very top of `user.css` for user settings
 
@@ -181,6 +186,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     position: absolute;
     right: 0;
     z-index: 999;
+    
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly */
@@ -188,7 +194,8 @@ created by [darkthemer](https://github.com/darkthemer/)
     /* depending on what global status bar
        style is enabled height need to be
        changed accordingly. */
-    height: 64px;
+    height: 32px;
+    margin-top: 16px;
 }
 ```
 

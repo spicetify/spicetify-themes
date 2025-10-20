@@ -33,18 +33,17 @@ waitForElement([".main-navBar-mainNav .os-viewport.os-viewport-native-scrollbars
 });
 
 // adjust topbar margin with left sidebar width
-waitForElement([".Root__nav-bar"], ([resizer]) => {
-    const observer = new MutationObserver(updateVariable);
-    observer.observe(resizer, { attributes: true, attributeFilter: ["style"] });
-    function updateVariable() {
-        let style = resizer.style;
-        let value = style.getPropertyValue("--left-sidebar-width");
-        waitForElement([".Root__globalNav"], ([globalNav]) => {
-            let globalNavStyle = globalNav.style;
-            globalNavStyle.setProperty("--left-sidebar-width", value);
-        });
-    }
-    updateVariable();
+waitForElement([".Root__nav-bar, #Desktop_LeftSidebar_Id"], ([resizer]) => {
+  function updateVariable() {
+    const computedStyle = getComputedStyle(resizer);
+    const value = Number(computedStyle.getPropertyValue("--left-sidebar-width").trim()) || resizer.clientWidth;
+    waitForElement([".Root__globalNav"], ([globalNav]) => {
+      globalNav.style.setProperty("--left-sidebar-width", value);
+    });
+  }
+  const observer = new ResizeObserver(updateVariable);
+  observer.observe(resizer);
+  updateVariable();
 });
 
 let version;
