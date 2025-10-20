@@ -142,6 +142,21 @@
   background: #00000000 !important;
 }
 
+.UrfDp0_mKGL9hkfh9g_R,
+.UrfDp0_mKGL9hkfh9g_R:before,
+.mzBZbIt7NDzzTffimVhn,
+.WBFaUw_oOfN2m4aTxggt,
+.main-nowPlayingView-contextItemInfo:before,
+.playlist-playlist-actionBarBackground-background,
+.main-entityHeader-backgroundColor,
+.Root__now-playing-bar {
+  background: none !important;
+}
+
+.sl_aPp6GDg05ItSfmsS7 {
+  display: none;
+}
+
 .main-nowPlayingBar-nowPlayingBar {
   min-height: 400px;
 }
