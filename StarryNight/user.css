@@ -1,5 +1,10 @@
 .button-module__button___hf2qg_marketplace {
-  color: var(--spice-subtext)
+  color: var(--spice-subtext);
+}
+
+.os-scrollbar {
+  --os-handle-border-radius: 16px !important;
+  --os-size: 8px !important;
 }
 
 .main-entityHeader-backgroundColor {
@@ -135,6 +140,21 @@
 
 .playlist-playlist-playlistContent {
   background: #00000000 !important;
+}
+
+.UrfDp0_mKGL9hkfh9g_R,
+.UrfDp0_mKGL9hkfh9g_R:before,
+.mzBZbIt7NDzzTffimVhn,
+.WBFaUw_oOfN2m4aTxggt,
+.main-nowPlayingView-contextItemInfo:before,
+.playlist-playlist-actionBarBackground-background,
+.main-entityHeader-backgroundColor,
+.Root__now-playing-bar {
+  background: none !important;
+}
+
+.sl_aPp6GDg05ItSfmsS7 {
+  display: none;
 }
 
 .main-nowPlayingBar-nowPlayingBar {
