@@ -22,11 +22,11 @@
   /* Page zoom control */
   /* Adjust width and height based on zoom level */
   width: 135px;
-  height: 48px;
+  height: 64px;
 }
 
 .spotify__container--is-desktop:not(.fullscreen) body::before {
-  content: "";
+  content: none;
   position: absolute;
   top: 0;
   right: 0;
