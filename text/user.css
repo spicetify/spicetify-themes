@@ -286,10 +286,6 @@ div[class*="minBlockSize_56px-padding_8px"] {
     background-color: transparent !important;
     background-image: none;
 }
-.progress-bar {
-    --fg-color: var(--spice-button-active);
-    --bg-color: var(--spice-button-disabled);
-}
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     mix-blend-mode: difference;
@@ -780,16 +776,21 @@ form .main-topBar-searchBar:placeholder-shown {
     position: absolute;
     width: 100%;
 }
-.progress-bar {
+
+.playback-progressbar-container div[data-testid="progress-bar"] {
     --progress-bar-height: 16px;
-    --progress-bar-radius: var(--border-radius);
+    --progress-bar-radius: 0;
+    --fg-color: var(--spice-button-active);
+    --bg-color: var(--spice-button-disabled);
 }
-.progress-bar__slider {
-    box-shadow: none;
-    height: 100%;
+
+
+.playback-progressbar-container div[data-testid="progress-bar"] div[data-testid="progress-bar-background"] div[data-testid="progress-bar-handle"] {
+    height: 16px;
     border-radius: 0;
-    background-color: var(--spice-text);
+    --fg-color: var(--spice-text);
 }
+
 .x-progressBar-fillColor {
     transition-duration: unset;
 }
