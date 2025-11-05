@@ -127,6 +127,23 @@
 		]
 	},
 	{
+		"name": "OsakaJade",
+		"description": "A serene sage green and warm beige theme inspired by Omarchy Osaka Jade",
+		"preview": "OsakaJade/screenshot.png",
+		"readme": "OsakaJade/README.md",
+		"usercss": "OsakaJade/user.css",
+		"schemes": "OsakaJade/color.ini",
+		"authors": [
+			{
+				"name": "arteal",
+				"url": "https://github.com/arteal"
+			}
+		],
+		"tags": [
+			"latest"
+		]
+	},
+	{
 		"name": "Sleek",
 		"description": "Sleek",
 		"preview": "Sleek/coral.png",
