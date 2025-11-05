@@ -1,0 +1,47 @@
+/* OsakaJade Theme - Minimal CSS */
+
+:root {
+  --spice-main-elevated: var(--spice-main);
+  --spice-highlight: var(--spice-main-secondary);
+  --spice-highlight-elevated: var(--spice-main-secondary);
+}
+
+/* Ensure consistent rounded corners for a modern look */
+.main-topBar-topBarContent,
+.main-navBar-navBar,
+.main-nowPlayingBar-nowPlayingBar {
+  border-radius: 0;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+[role="button"],
+[role="link"] {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effects for buttons */
+button:hover,
+[role="button"]:hover {
+  filter: brightness(1.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--spice-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spice-button);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--spice-button-active);
+}
