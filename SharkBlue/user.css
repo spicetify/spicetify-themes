@@ -13,27 +13,16 @@
 }
 
 /* transparent window controls */
-.spotify__container--is-desktop:not(.fullscreen) body::after {
-  content: ""; /* Empty content */
-  position: absolute;
-  right: 0;
-  z-index: 999;
-  backdrop-filter: brightness(2.12);
-  /* Page zoom control */
-  /* Adjust width and height based on zoom level */
-  width: 135px;
-  height: 64px;
-}
-
-.spotify__container--is-desktop:not(.fullscreen) body::before {
-  content: none;
-  position: absolute;
+#main::after {
+  content: "";
+  position: fixed;
   top: 0;
   right: 0;
+  z-index: 999;
+  -webkit-backdrop-filter: brightness(2.12);
+  backdrop-filter: brightness(2.12);
   width: 135px;
-  height: 16px; /* only cover the top*/
-  z-index: 1000; /* higher than ::after */
-  backdrop-filter: brightness(0.47);
+  height: 64px;
 }
 
 /* Page titles */
@@ -349,3 +338,12 @@ highlights selected song contains multi-digit song numbers */
   min-height: 325px;
   height: 15vh;
 }
+
+.ffFwfKcPDbmAPLXzxzKq {
+  border-radius: 6px;
+}
+
+/* button[aria-label="Popup Lyrics"] > svg {
+  width: 24px;
+  height: 24px;
+} */
