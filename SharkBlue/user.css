@@ -9,7 +9,11 @@
 }
 .Root__now-playing-bar,
 .Root__now-playing-bar footer {
-  border-radius: var(--border-radius-1) !important;
+  border-radius: 8px !important;
+}
+.Root__right-sidebar,
+.UrfDp0_mKGL9hkfh9g_R {
+  border-radius: 8px !important;
 }
 
 /* transparent window controls */
@@ -347,3 +351,7 @@ highlights selected song contains multi-digit song numbers */
   width: 24px;
   height: 24px;
 } */
+
+.playlist-playlist-actionBarBackground-background {
+  visibility: hidden;
+}
