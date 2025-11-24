@@ -43,9 +43,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     star.style.borderRadius = '50%';
 
     if (Math.random() < 1 / 5) {
-      star.style.animation = `twinkle${
-        Math.floor(Math.random() * 4) + 1
-      } 5s infinite`;
+      star.style.setProperty("animation", `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`, "important");
     }
 
     backgroundContainer.appendChild(star);
@@ -152,9 +150,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
       void shootingstar.offsetWidth;
 
       shootingstar.style.animation = '';
-      shootingstar.style.animationDuration = `${
-        Math.floor(Math.random() * 4) + 3
-      }s`;
+      shootingstar.style.setProperty("animation-duration", `${Math.floor(Math.random() * 4) + 3}s`, "important");
     });
   }
 });

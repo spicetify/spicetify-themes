@@ -13,9 +13,8 @@
 }
 
 
-/* Remove Upgrade Button, User Name */
-.main-topBar-UpgradeButton,
-.main-userWidget-displayName {
+/* Remove Upgrade Button */
+.main-topBar-UpgradeButton {
   display: none
 }
 
@@ -81,32 +80,20 @@
 
 
 /* Cover Image */
-.main-nowPlayingWidget-coverExpanded {
-  transform: translateX(-78px) !important;
-}
-
 .main-coverSlotCollapsed-container {
   margin-right: 5px
 }
 
-.main-nowPlayingWidget-coverArt .cover-art.shadow,
-.main-nowPlayingWidget-coverArt .cover-art-image {
-  border-radius: var(--round-value)
+[data-testid = "cover-art-button"] {
+  border-radius: var(--round-value);
+  border: 2px solid #aaa;
+  box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
-.main-nowPlayingWidget-coverArt > .cover-art {
-  clip-path: circle(50% at 50% 50%);
-}
-
-.main-nowPlayingWidget-coverArt .cover-art.shadow {
+.main-nowPlayingWidget-coverArt .cover-art {
   width: 62px !important;
   height: 62px !important;
   box-shadow: unset
-}
-
-.main-nowPlayingWidget-coverArt .cover-art-image {
-  border: 2px solid #aaa;
-  box-shadow: 0 0 5px rgba(200, 200, 200, .4)
 }
 
 /* Expand & Collapse Button */
@@ -153,12 +140,12 @@
 .playback-bar {
   width: 100%;
   position: absolute;
-  top: 0;
+  top: calc(0px - var(--panel-gap));
   left: 0
 }
 
 .playback-progressbar {
-  height: 4px
+  height: var(--progress-bar-height)
 }
 
 .x-progressBar-progressBarBg > div > div {
@@ -417,7 +404,7 @@
 /* Rotate turntable */
 .main-nowPlayingWidget-coverArt > .cover-art,
 #fad-art {
-  animation: rotate-cover_img 24s linear infinite
+  animation: rotate-cover_img 24s linear infinite paused
 }
 
 @keyframes rotate-cover_img {
