@@ -283,6 +283,15 @@
   background-color: #00000000 !important;
 }
 
+button[data-testid="cover-art-button"] {
+  height: 220px !important;
+  width: 220px !important;
+  margin: auto;
+  background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
+  display: contents;
+}
+
 @keyframes twinkle1 {
   0% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
