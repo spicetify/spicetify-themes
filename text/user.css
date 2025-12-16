@@ -250,20 +250,28 @@ div[class*="minBlockSize_56px-padding_8px"] {
 }
 .encore-dark-theme,
 .encore-dark-theme .encore-base-set {
+    --background-base: var(--spice-main);
+    --background-highlight: var(--spice-main-elevated);
     --background-press: var(--spice-highlight);
     --background-elevated-press: var(--spice-main-elevated);
     --essential-subdued: var(--spice-border-inactive);
     --decorative-subdued: var(--spice-accent-inactive);
+    --background-tinted-base: rgba(var(--spice-rgb-highlight), 0.25);
+    --background-tinted-highlight: rgba(var(--spice-rgb-highlight), 0.5);
+    --background-tinted-press: rgba(var(--spice-rgb-highlight), 1);
 }
 .encore-dark-theme .encore-bright-accent-set {
     --background-highlight: var(--spice-button-active) !important;
+    --background-press: var(--spice-button-active) !important;
     --background-elevated-base: var(--spice-button-active) !important;
     --background-elevated-highlight: var(--spice-button-active) !important;
-    --background-press: var(--spice-button-active) !important;
     --background-elevated-press: var(--spice-button-active) !important;
 }
 .Root__top-container,
-.Root__nav-bar {
+.Root__nav-bar,
+.main-yourLibraryX-libraryContainer,
+.main-globalNav-navLink,
+.main-topBar-searchBar {
     background-color: var(--spice-main);
 }
 .main-playPauseButton-button {
