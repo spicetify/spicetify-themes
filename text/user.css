@@ -62,7 +62,7 @@
     --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
     --border-transition: 0.2s ease; /* 'none' to disable  */
 
-    --global-nav-margin-top: 40px; /* set to '0px' if you disabled window controls */
+    --global-nav-margin-top: 50px; /* set to '0px' if you disabled window controls */
 }
 
 /* font */
