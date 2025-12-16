@@ -80,9 +80,17 @@
 
 ![ForestGreen](screenshots/ForestGreen.png)
 
+### EverforestDarkHard
+
+![EverforestDarkMedium](screenshots/EverforestDarkHard.png)
+
 ### EverforestDarkMedium
 
 ![EverforestDarkMedium](screenshots/EverforestDarkMedium.png)
+
+### EverforestDarkSoft
+
+![EverforestDarkMedium](screenshots/EverforestDarkSoft.png)
 
 ## More
 
