@@ -829,28 +829,19 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* volume bar */
-.volume-bar__slider-container .x-progressBar-fillColor,
-.volume-bar__slider-container
-    .playback-progressbar-isInteractive
-    .progress-bar--isDragging
-    .x-progressBar-fillColor,
-.volume-bar__slider-container
-    .playback-progressbar-isInteractive
-    .progress-bar:focus
-    .x-progressBar-fillColor,
-.volume-bar__slider-container
-    .playback-progressbar-isInteractive
-    .progress-bar:hover
-    .x-progressBar-fillColor,
-.volume-bar__slider-container
-    .playback-progressbar-isInteractive:focus-within
-    .x-progressBar-fillColor {
-    height: 9px;
-    background-color: transparent;
-    border-bottom: 2px dashed var(--fg-color);
+.volume-bar .progress-bar {
+    --progress-bar-height: calc(var(--font-size) / 6);
 }
-.volume-bar__slider-container .x-progressBar-progressBarBg {
+.volume-bar .progress-bar__slider {
+    height: 16px;
+}
+.volume-bar .x-progressBar-progressBarBg {
     background-color: transparent;
+    border-bottom: var(--progress-bar-height) dashed rgba(var(--spice-rgb-subtext), 0.3);
+}
+.volume-bar .x-progressBar-fillColor {
+    background-color: var(--spice-main) !important;
+    border-bottom: var(--progress-bar-height) dashed var(--fg-color);
 }
 
 /* player controls */
