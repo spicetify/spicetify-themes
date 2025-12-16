@@ -530,7 +530,7 @@ select:focus {
 }
 
 /* icons */
-.main-globalNav-historyButtonsContainer svg,
+.main-globalNav-historyButtonsContainer svg[class*="icon"],
 .main-globalNav-searchContainer svg {
     transform: scale(0.7);
 }
