@@ -304,6 +304,10 @@ img[src*="equaliser"] {
     background-color: transparent !important;
     background-image: none;
 }
+.progress-bar {
+    --fg-color: var(--spice-button-active);
+    --bg-color: var(--spice-button-disabled);
+}
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     mix-blend-mode: difference;
@@ -791,21 +795,21 @@ form .main-topBar-searchBar:placeholder-shown {
     position: absolute;
     width: 100%;
 }
-
+.progress-bar,
 .playback-progressbar-container div[data-testid="progress-bar"] {
     --progress-bar-height: 16px;
-    --progress-bar-radius: 0;
-    --fg-color: var(--spice-button-active);
-    --bg-color: var(--spice-button-disabled);
+    --progress-bar-radius: calc(var(--border-radius) / 2) !important;
 }
-
-
-.playback-progressbar-container div[data-testid="progress-bar"] div[data-testid="progress-bar-background"] div[data-testid="progress-bar-handle"] {
-    height: 16px;
+.progress-bar__slider,
+.playback-progressbar-container
+    div[data-testid="progress-bar"]
+    div[data-testid="progressbar-bar-background"]
+    div[data-testid="progress-bar-handle"] {
+    box-shadow: none;
+    height: 100%;
     border-radius: 0;
-    --fg-color: var(--spice-text);
+    background-color: var(--spice-text);
 }
-
 .x-progressBar-fillColor {
     transition-duration: unset;
 }
