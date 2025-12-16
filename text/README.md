@@ -82,7 +82,7 @@
 
 ### EverforestDarkHard
 
-![EverforestDarkMedium](screenshots/EverforestDarkHard.png)
+![EverforestDarkHard](screenshots/EverforestDarkHard.png)
 
 ### EverforestDarkMedium
 
@@ -90,7 +90,7 @@
 
 ### EverforestDarkSoft
 
-![EverforestDarkMedium](screenshots/EverforestDarkSoft.png)
+![EverforestDarkSoft](screenshots/EverforestDarkSoft.png)
 
 ## More
 
