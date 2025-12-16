@@ -192,6 +192,15 @@ div[class*="minBlockSize_56px-padding_8px"] {
 .main-trackList-number {
     top: 0;
 }
+.main-cardImage-imageWrapper,
+.main-image-image,
+.main-avatar-image,
+.x-entityImage-xsmall {
+    border-radius: var(--border-radius) !important;
+}
+.main-cardImage-imageWrapper {
+    box-shadow: none;
+}
 
 /* fullscreen */
 .spotifyinternal-artistnpv .npv-what-is-playing .npv-cover-art,
