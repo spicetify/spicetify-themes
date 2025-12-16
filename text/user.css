@@ -661,7 +661,6 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* top bar */
-.main-topBar-container a,
 .marketplace-tabBar-active {
     text-decoration: underline !important;
 }
