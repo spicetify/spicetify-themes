@@ -610,8 +610,9 @@ form .main-topBar-searchBar:placeholder-shown {
     transform: scale(0.7);
 }
 
-/* library pane */
-.HeaderSideArea:has(.x-entityImage-imageContainer) {
+/* library pane, tracklist */
+.HeaderSideArea:has(.x-entityImage-imageContainer),
+.main-trackList-rowImage {
     transform: scale(0.7);
 }
 .main-yourLibraryX-filterArea {
