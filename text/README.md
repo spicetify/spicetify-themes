@@ -80,9 +80,17 @@
 
 ![ForestGreen](screenshots/ForestGreen.png)
 
+### EverforestDarkHard
+
+![EverforestDarkHard](screenshots/EverforestDarkHard.png)
+
 ### EverforestDarkMedium
 
 ![EverforestDarkMedium](screenshots/EverforestDarkMedium.png)
+
+### EverforestDarkSoft
+
+![EverforestDarkSoft](screenshots/EverforestDarkSoft.png)
 
 ## More
 
@@ -169,7 +177,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
     --border-transition: 0.2s ease; /* 'none' to disable  */
 
-    --global-nav-margin-top: 40px /* set to '0px' if you disabled window controls */
+    --global-nav-margin-top: 50px; /* set to '0px' if you disabled window controls */
 }
 ```
 
@@ -186,7 +194,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     position: absolute;
     right: 0;
     z-index: 999;
-    
+
     backdrop-filter: brightness(2.12);
     /* page zoom [ctrl][+] or [ctrl][-]
        edit width and height accordingly */
@@ -194,8 +202,7 @@ created by [darkthemer](https://github.com/darkthemer/)
     /* depending on what global status bar
        style is enabled height need to be
        changed accordingly. */
-    height: 32px;
-    margin-top: 16px;
+    height: 64px;
 }
 ```
 
