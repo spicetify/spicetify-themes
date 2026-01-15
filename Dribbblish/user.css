@@ -937,3 +937,10 @@ img.playlist-picture[src$=".svg"] {
 .Root__main-view-overlay {
     width: 100%;
 }
+
+
+.Button-buttonTertiary-textBase-medium-iconOnly-useBrowserDefaultFocusStyle {
+  min-block-size: 40px;
+  height: 40px;
+  width: 40px;
+}
