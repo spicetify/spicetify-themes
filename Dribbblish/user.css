@@ -944,3 +944,8 @@ img.playlist-picture[src$=".svg"] {
   height: 40px;
   width: 40px;
 }
+
+
+.HeaderSideArea {
+    padding-left: 4px;
+}
