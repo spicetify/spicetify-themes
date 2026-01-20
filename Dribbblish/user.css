@@ -949,3 +949,26 @@ img.playlist-picture[src$=".svg"] {
 .HeaderSideArea {
     padding-left: 4px;
 }
+
+/* Cinema View */
+html[data-cinema-npv-postenter] {
+  .Root__cinema-view {
+    padding-left: 10px;
+  }
+  .Root__cinema-view:nth-child(2) {
+    border-radius: 0px;
+  }
+  .Root__globalNav {
+    margin-left: 10px;
+  }
+  .Root__top-container {
+    grid-template-areas:
+      "top-banner top-banner top-banner"
+      "global-nav global-nav global-nav"
+      "left-sidebar main-view right-sidebar"
+      "now-playing-bar now-playing-bar now-playing-bar" !important;
+  }
+  .Root__now-playing-bar {
+    margin-left: 10px !important;
+  }
+}
