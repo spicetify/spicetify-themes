@@ -144,6 +144,23 @@
 		]
 	},
 	{
+		"name": "Terminal",
+		"description": "a spicetify theme that mimics a terminal interface",
+		"preview": "Terminal/screenshots/terminal.jpg",
+		"readme": "Terminal/README.md",
+		"usercss": "Terminal/user.css",
+		"schemes": "Terminal/color.ini",
+		"authors": [
+			{
+				"name": "rydooper",
+				"url": "https://github.com/rydooper"
+			}
+		],
+		"tags": [
+			"latest"
+		]
+	},
+	{
 		"name": "text",
 		"description": "a spicetify theme that mimics the look of spotify-tui",
 		"preview": "text/screenshots/Gruvbox.png",
@@ -235,9 +252,10 @@
 		"schemes": "Blossom/color.ini",
 		"authors": [
 			{
-				"name": "Robatortas", "url": "https://github.com/Robatortas"
+				"name": "Robatortas",
+				"url": "https://github.com/Robatortas"
 			}
-    		],
+		],
 		"tags": [
 			"latest"
 		]
