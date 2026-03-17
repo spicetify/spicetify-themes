@@ -1,8 +1,6 @@
-# Typewriter
+# Terminal
 
 Terminal theme is a simple black with green / white text styling, with a dynamic left sidebar and the playbar moved. The styling is based on the "Old school" theme from Focuswriter. This theme may later be updated to add the other stylings used on Focuswriter.
-
-View the **CHANGELOG** [here](tba)
 
 ## Screenshots
 

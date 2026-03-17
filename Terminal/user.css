@@ -1,9 +1,5 @@
-/*
-Courier New - oldschool
-*/
 * {
-	font-family: 'Courier New';
-	/* background-image: '/assets/images/writingdesk.jpg' !important; */
+	font-family: 'Courier New', monospace;
 }
 
 :root {
@@ -107,7 +103,6 @@ button[aria-label='Podcasts'] {
 }
 
 .main-playPauseButton-button {
-	background-color: var(--spice-main);
 	box-shadow: var(--spice-shadow) 0 5px 9px 0px;
 	--button-size: 50px !important;
 	color: var(--spice-text);
