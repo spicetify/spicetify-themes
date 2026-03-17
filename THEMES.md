@@ -190,6 +190,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 #### Sunrise
 ![Sunrise](StarryNight/images/sunrise.png)
 
+## Terminal
+
+![Terminal](Terminal/screenshots/terminal.jpg)
+
 ## text
 
 ### Spotify

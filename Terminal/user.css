@@ -1,0 +1,136 @@
+/*
+Courier New - oldschool
+*/
+* {
+	font-family: 'Courier New';
+	/* background-image: '/assets/images/writingdesk.jpg' !important; */
+}
+
+:root {
+	margin-left: -8px;
+	margin-top: -16px;
+}
+
+/* Code snippet - on hover, show left sidebar */
+
+#Desktop_LeftSidebar_Id {
+	width: 0px;
+	transition: width 0.5s ease, padding-left 0.5s ease;
+	z-index: 12;
+}
+
+#Desktop_LeftSidebar_Id:hover {
+	padding-left: 8px;
+	width: 280px;
+}
+
+svg[data-encore-id='icon'] {
+	overflow: visible;
+}
+
+#Desktop_LeftSidebar_Id span {
+	white-space: nowrap;
+}
+
+/* Code snippet - hide made for you, recently played, audiobooks, podcasts */
+
+section[aria-label^='Made For'] {
+	display: none;
+}
+
+.view-homeShortcutsGrid-shortcuts,
+section[aria-label='Recently played'] {
+	display: none;
+}
+
+button[aria-label='Audiobooks'] {
+	display: none;
+}
+
+button[aria-label='Podcasts'] {
+	display: none;
+}
+
+/* Code snippet - hide gradient */
+.main-entityHeader-backgroundColor {
+	display: none !important;
+}
+
+.main-actionBarBackground-background {
+	display: none !important;
+}
+
+.main-home-homeHeader {
+	display: none !important;
+}
+
+.playlist-playlist-actionBarBackground-background {
+	display: none !important;
+}
+
+/* Code snippet from Dreary theme */
+
+/* Changing Playback Bar Location */
+
+.progress-bar__bg,
+.progress-bar__fg_wrapper {
+	border-radius: 0;
+	z-index: 1;
+}
+
+.playback-bar__progress-time {
+	display: none;
+}
+
+.playback-bar {
+	width: 100%;
+	bottom: 83px;
+	position: absolute;
+	left: -1px;
+	z-index: 1;
+}
+
+.main-playbackBarRemainingTime-container {
+	padding: 5px;
+	position: absolute;
+	left: 49.68%;
+	top: 60%;
+	border: solid 1px;
+	border-radius: 20px;
+	z-index: 5;
+	color: var(--spice-subtext) !important;
+	padding-left: 5px;
+}
+
+.player-controls__buttons {
+	transform: translateY(6px);
+}
+
+.main-playPauseButton-button {
+	background-color: var(--spice-main);
+	box-shadow: var(--spice-shadow) 0 5px 9px 0px;
+	--button-size: 50px !important;
+	color: var(--spice-text);
+	background-color: var(--spice-player) !important;
+	cursor: pointer;
+}
+
+.player-controls__buttons {
+	align-items: center;
+	position: relative;
+	left: 2.3%;
+}
+
+.main-entityTitle-subtitle.main-entityTitle-small.main-entityTitle-uppercase.main-entityTitle-bold {
+	border: 2px var(--spice-text) solid;
+	border-radius: 4px;
+	width: fit-content;
+	display: inline;
+	text-align: center;
+	padding: 0 5px;
+}
+
+.os-theme-spotify.os-host-transition>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
+	border-radius: 4px;
+	background-color: var(--spice-text);
+}
