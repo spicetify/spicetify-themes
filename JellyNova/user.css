@@ -1,0 +1,226 @@
+/* user.css — Dreamy Sea (Jellyfish Galaxy) for Spicetify
+   Keeps Spotify's default layout 100% intact.
+   Only changes: background transparency so canvas shows through.
+   No now-playing bar resizing. No cover art forced dimensions. */
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+.os-scrollbar {
+  --os-handle-border-radius: 16px !important;
+  --os-size: 8px !important;
+}
+
+/* ── Root container — galaxy gradient base ───────────────── */
+.Root__top-container {
+  background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
+  overflow: hidden;
+}
+
+/* ── All panels/sections — transparent so canvas shows ───── */
+.Root__globalNav {
+  background-color: #00000000 !important;
+}
+
+.Root__nav-bar {
+  background-color: #00000000 !important;
+}
+
+.Root__main-view {
+  background-color: #00000000 !important;
+}
+
+.main-yourLibraryX-libraryContainer {
+  background: none !important;
+}
+
+.main-yourLibraryX-entryPoints {
+  background-color: #00000000 !important;
+}
+
+/* ── Header / entity backgrounds ─────────────────────────── */
+.main-entityHeader-backgroundColor {
+  background-color: #00000000 !important;
+}
+
+.main-home-homeHeader {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.main-entityHeader-overlay {
+  background: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-gradient {
+  opacity: 0.5;
+  animation: none !important;
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+  background-image: none !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+/* ── Action bars / overlays ───────────────────────────────── */
+.main-actionBarBackground-background {
+  background-image: none;
+  background-color: #00000000 !important;
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+.main-topBar-background {
+  background-color: var(--spice-highlight) !important;
+}
+
+/* ── Now playing bar — NO layout changes, only transparent ── */
+.Root__now-playing-bar,
+.UrfDp0_mKGL9hkfh9g_R,
+.UrfDp0_mKGL9hkfh9g_R:before,
+.mzBZbIt7NDzzTffimVhn,
+.WBFaUw_oOfN2m4aTxggt,
+.main-nowPlayingView-contextItemInfo:before,
+.playlist-playlist-actionBarBackground-background,
+.main-entityHeader-backgroundColor {
+  background: none !important;
+}
+
+/* ── Playlist / content areas ─────────────────────────────── */
+.playlist-playlist-playlistContent {
+  background: #00000000 !important;
+}
+
+.lyrics-lyrics-background {
+  background-color: #00000000 !important;
+}
+
+/* ── Track row hover ──────────────────────────────────────── */
+.main-trackList-trackListRow:hover {
+  background-color: var(--spice-highlight);
+}
+
+/* ── Play button ──────────────────────────────────────────── */
+.main-playPauseButton-button {
+  background-color: var(--spice-button);
+}
+
+/* ── Misc hashed class transparencies (from sample) ──────── */
+.ffFwfKcPDbmAPLXzxzKq:before {
+  background-color: #00000000 !important;
+}
+
+.ffFwfKcPDbmAPLXzxzKq {
+  background-color: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap {
+  --bgColor: #00000000 !important;
+}
+
+.I0bVSxvqA3rm5HvciMap::after {
+  --bgColor: #00000000 !important;
+}
+
+.PeLrpasyfBW8ql_bmoAi {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.PkOz5g82CaoKk1J3GX0e {
+  background-color: #00000000 !important;
+  background-image: none !important;
+}
+
+.sv5suqIPUwjgUF_BzM41 {
+  transform: none !important;
+}
+
+.rX_OmqCngvY5ZCoYBZgb {
+  background-color: #00000000 !important;
+}
+
+.marketplace-header {
+  background-color: #00000000 !important;
+}
+
+.EmeHQXR87mUskYK6xEde {
+  background-color: #00000000 !important;
+}
+
+.pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
+  color: #00000000 !important;
+}
+
+.sl_aPp6GDg05ItSfmsS7 {
+  display: none;
+}
+
+/* ── Dreamy Sea canvas container ─────────────────────────── */
+.dreamysea-bg-container {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+#dreamysea-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  display: block;
+}
+
+/* ── Spin animation for cover art (kept from sample) ─────── */
+.running-animation {
+  animation-play-state: running !important;
+}
+
+/* ── @keyframes ───────────────────────────────────────────── */
+@keyframes twinkle1 {
+  0%   { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  20%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  40%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  60%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  80%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+}
+
+@keyframes twinkle2 {
+  0%   { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  20%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  40%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  60%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  80%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  100% { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+}
+
+@keyframes twinkle3 {
+  0%   { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  20%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  40%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  60%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  80%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+}
+
+@keyframes twinkle4 {
+  0%   { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  20%  { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+  40%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  60%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  80%  { box-shadow: 0px 0px 8px 2px var(--spice-star-glow); }
+  100% { box-shadow: 0px 0px -8px 2px var(--spice-star-glow); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
