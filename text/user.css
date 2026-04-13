@@ -186,9 +186,6 @@ div:has(> .main-entityHeader-container) {
 .LayoutResizer__resize-bar--resizing.LayoutResizer__inline-end:after {
     background-color: var(--spice-border-active);
 }
-div[class*="minBlockSize_56px-padding_8px"] {
-    padding: 4px !important;
-}
 .main-trackList-number {
     top: 0;
 }
@@ -331,7 +328,9 @@ img[src*="equaliser"] {
 .main-trackList-trackListRow.main-trackList-selected:hover {
     background-color: var(--spice-highlight) !important;
 }
-.x-entityImage-imageContainer,
+.x-entityImage-imageContainer {
+    background-color: var(--spice-main);
+}
 .main-card-imageContainer > div:first-child {
     background-color: var(--card-color, var(--spice-border-inactive));
 }
@@ -611,7 +610,7 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* library pane, tracklist */
-.HeaderSideArea:has(.x-entityImage-imageContainer),
+.HeaderSideArea .x-entityImage-imageContainer,
 .main-trackList-rowImage {
     transform: scale(0.7);
 }
