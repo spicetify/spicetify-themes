@@ -301,8 +301,9 @@ img[src*="equaliser"] {
     background-color: transparent !important;
     background-image: none;
 }
-.progress-bar {
+.progress-bar, .x-progressBar-progressBar {
     --fg-color: var(--spice-button-active);
+    --mg-color: var(--background-tinted-base);
     --bg-color: var(--spice-button-disabled);
 }
 .playback-bar__progress-time-elapsed,
@@ -801,10 +802,7 @@ form .main-topBar-searchBar:placeholder-shown {
     --progress-bar-radius: calc(var(--border-radius) / 2) !important;
 }
 .progress-bar__slider,
-.playback-progressbar-container
-    div[data-testid="progress-bar"]
-    div[data-testid="progressbar-bar-background"]
-    div[data-testid="progress-bar-handle"] {
+.x-progressBar-handle {
     box-shadow: none;
     height: 100%;
     border-radius: 0;
@@ -829,17 +827,21 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* volume bar */
-.volume-bar .progress-bar {
+.volume-bar .progress-bar,
+.volume-bar .x-progressBar-progressBar {
     --progress-bar-height: calc(var(--font-size) / 6);
 }
-.volume-bar .progress-bar__slider {
+.volume-bar .progress-bar__slider,
+.volume-bar .x-progressBar-handle {
     height: 16px;
 }
-.volume-bar .x-progressBar-progressBarBg {
+.volume-bar .x-progressBar-progressBarBg,
+.volume-bar .x-progressBar-background {
     background-color: transparent;
     border-bottom: var(--progress-bar-height) dashed rgba(var(--spice-rgb-subtext), 0.3);
 }
-.volume-bar .x-progressBar-fillColor {
+.volume-bar .x-progressBar-fillColor,
+.volume-bar .x-progressBar-foreground {
     background-color: var(--spice-main) !important;
     border-bottom: var(--progress-bar-height) dashed var(--fg-color);
 }
