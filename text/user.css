@@ -466,7 +466,8 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 /* modals */
 .GenericModal,
 .GenericModal__overlay > div,
-dialog {
+dialog,
+.main-watchFeed-container {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
     border-radius: var(--border-radius) !important;
     overflow: visible !important;
@@ -474,7 +475,8 @@ dialog {
 }
 .GenericModal::before,
 .GenericModal__overlay > div::before,
-dialog::before {
+dialog::before,
+.main-watchFeed-container::before {
     content: "Modal";
     color: var(--spice-border-active);
     position: absolute;
