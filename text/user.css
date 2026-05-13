@@ -355,8 +355,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
 .main-nowPlayingBar-container,
-.Root__right-sidebar:has(div[aria-hidden="false"] aside:not(:empty)),
-.Root__right-sidebar:has(div[aria-hidden="true"] aside:not(:empty)) > div > div > div:nth-child(3) {
+.Root__right-sidebar:has(aside:not(:empty)) {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-inactive);
     border-radius: var(--border-radius);
@@ -367,7 +366,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
 .main-nowPlayingBar-container:hover,
-.Root__right-sidebar:has(div[aria-hidden="false"] aside:not(:empty)):hover {
+.Root__right-sidebar:has(aside:not(:empty)):hover {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
 }
@@ -388,7 +387,7 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
     )::before,
 .Root__main-view::before,
 .main-nowPlayingBar-container::before,
-.Root__right-sidebar:has(div[aria-hidden="false"] aside:not(:empty))::before {
+.Root__right-sidebar:has(aside:not(:empty))::before {
     color: var(--spice-header);
     position: absolute;
     margin: -10px 4px;
@@ -425,14 +424,14 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .main-nowPlayingBar-container::before {
     content: "Playing";
 }
-.Root__right-sidebar:has(div[aria-hidden="false"] aside:not(:empty))::before {
+.Root__right-sidebar:has(aside:not(:empty))::before {
     content: "Sidebar";
 }
 .Root__globalNav:hover::before,
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
 .Root__main-view:hover::before,
 .main-nowPlayingBar-container:hover::before,
-.Root__right-sidebar:has(div[aria-hidden="false"] aside:not(:empty)):hover::before {
+.Root__right-sidebar:has(aside:not(:empty)):hover::before {
     color: var(--spice-border-active);
 }
 
@@ -708,17 +707,6 @@ form .main-topBar-searchBar:placeholder-shown {
         rgba(var(--spice-rgb-main), 0.9) 50%,
         rgba(var(--spice-rgb-main), 1) 100%
     );
-}
-
-/*  ================================
-    RIGHT SIDEBAR
-    ================================ */
-
-.Root__right-sidebar > div:hover > div > div:first-child {
-    display: none;
-}
-.Root__right-sidebar:has(div[aria-hidden="true"] aside:not(:empty)) > div > div:first-child {
-    transform: translateX(12px) !important;
 }
 
 /* lyrics page & sidebar */
