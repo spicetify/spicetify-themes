@@ -301,7 +301,8 @@ img[src*="equaliser"] {
     background-color: transparent !important;
     background-image: none;
 }
-.progress-bar, .x-progressBar-progressBar {
+.progress-bar,
+[data-testid="progress-bar"] {
     --fg-color: var(--spice-button-active);
     --mg-color: var(--background-tinted-base);
     --bg-color: var(--spice-button-disabled);
@@ -794,21 +795,30 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* playback seek bar */
-.playback-progressbar-container {
-    position: absolute;
-    width: 100%;
+.main-nowPlayingBar-container .playback-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
-.progress-bar,
-.playback-progressbar-container div[data-testid="progress-bar"] {
-    --progress-bar-height: 16px;
+.main-nowPlayingBar-container .playback-bar > div:has(> [data-testid="playback-progressbar"]) {
+    position: absolute !important;
+    width: 100% !important;
+    height: 16px !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar"] {
+    --progress-bar-height: 16px !important;
     --progress-bar-radius: calc(var(--border-radius) / 2) !important;
 }
-.progress-bar__slider,
-.x-progressBar-handle {
-    box-shadow: none;
-    height: 100%;
-    border-radius: 0;
-    background-color: var(--spice-text);
+.main-nowPlayingBar-container .playback-bar .progress-bar__slider,
+.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar-handle"] {
+    box-shadow: none !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    background-color: var(--spice-text) !important;
 }
 .x-progressBar-fillColor {
     transition-duration: unset;
@@ -829,23 +839,24 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* volume bar */
-.volume-bar .progress-bar,
-.volume-bar .x-progressBar-progressBar {
-    --progress-bar-height: calc(var(--font-size) / 6);
+.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar"] {
+    --progress-bar-height: calc(var(--font-size) / 6) !important;
 }
-.volume-bar .progress-bar__slider,
-.volume-bar .x-progressBar-handle {
-    height: 16px;
+.main-nowPlayingBar-container .main-nowPlayingBar-right .progress-bar__slider,
+.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar-handle"] {
+    height: 16px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background-color: var(--spice-text) !important;
 }
-.volume-bar .x-progressBar-progressBarBg,
-.volume-bar .x-progressBar-background {
-    background-color: transparent;
-    border-bottom: var(--progress-bar-height) dashed rgba(var(--spice-rgb-subtext), 0.3);
+.main-nowPlayingBar-container .main-nowPlayingBar-right .x-progressBar-progressBarBg,
+.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar-background"] {
+    background-color: transparent !important;
+    border-bottom: var(--progress-bar-height) dashed rgba(var(--spice-rgb-subtext), 0.3) !important;
 }
-.volume-bar .x-progressBar-fillColor,
-.volume-bar .x-progressBar-foreground {
+.main-nowPlayingBar-container .main-nowPlayingBar-right .x-progressBar-fillColor {
     background-color: var(--spice-main) !important;
-    border-bottom: var(--progress-bar-height) dashed var(--fg-color);
+    border-bottom: var(--progress-bar-height) dashed var(--fg-color) !important;
 }
 
 /* player controls */
@@ -917,9 +928,6 @@ button[data-testid="control-button-playpause"]
     content: "\25B6";
 }
 .main-playPauseButton-button[aria-label="Pause"]::before,
-.main-playPauseButton-button:has(
-        path[d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"]
-    )::after,
 button[data-testid="control-button-playpause"]
     > span
     > span:has(
