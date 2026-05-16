@@ -1,70 +1,132 @@
-# Dribbblish
+# Dribbblish — Spicetify Theme
 
-### Base
+A modern, highly customizable Spotify theme for Spicetify with multiple color schemes and advanced UI enhancements.
+
+---
+
+## Preview
+
+### Base  
 ![base](base.png)
-### White
+
+### White  
 ![white](white.png)
-### Dark
+
+### Dark  
 ![dark](dark.png)
-### Nord-Light
+
+### Nord Light  
 ![nord-light](nord-light.png)
-### Nord-Dark
+
+### Nord Dark  
 ![nord-dark](nord-dark.png)
-### Beach-Sunset
+
+### Beach Sunset  
 ![beach-sunset](beach-sunset.png)
-### Purple
+
+### Purple  
 ![purple](purple.png)
-### Samurai
+
+### Samurai  
 ![samurai](samurai.png)
-### Gruvbox
+
+### Gruvbox  
 ![gruvbox](gruvbox.png)
-### Gruvbox Material Dark
+
+### Gruvbox Material Dark  
 ![gruvbox-material-dark](gruvbox-material-dark.png)
-### Rosé Pine
+
+### Rosé Pine  
 ![rosepine](rosepine.png)
-### Lunar
+
+### Lunar  
 ![lunar](lunar.png)
-### Catppuccin Latte
+
+### Catppuccin Latte  
 ![catppuccin-latte](catppuccin-latte.png)
-### Catppuccin Frappe
+
+### Catppuccin Frappe  
 ![catppuccin-frappe](catppuccin-frappe.png)
-### Catppuccin Macchiato
+
+### Catppuccin Macchiato  
 ![catppuccin-macchiato](catppuccin-macchiato.png)
-### Catppuccin Mocha
+
+### Catppuccin Mocha  
 ![catppuccin-mocha](catppuccin-mocha.png)
 
-##  Features
-### Resizable sidebar
+---
 
-<img src="https://i.imgur.com/1zomkmd.png" alt="img" align="center" width="500px"> 
+## Features
 
-### Customizable sidebar
-Rearrange icons positions, stick icons to header or hide unnecessary to save space.
-Turn on "Sidebar config" mode in Profile menu and hover on icon to show control buttons.
-After you finish customizing, turn off Config mode in Profile menu to save.
+### Resizable Sidebar
+<img src="https://i.imgur.com/1zomkmd.png" alt="img" align="center" width="500px">
 
-<img src="https://i.imgur.com/86gqPe8.png" alt="img" align="center" width="500px"> 
+---
 
-### Playlist Folder image
-Right click at folder and choose images for your playlist folder. Every image formats supported by Chrome can be used, but do keep image size small and in compressed format.
+### Customizable Sidebar
+Rearrange icon positions, stick icons to header, or hide unnecessary icons to save space.
 
-<img src="https://i.imgur.com/WGQ7Bev.gif" alt="img" align="center" width="500px"> 
+**How to use:**
+1. Open Profile menu.
+2. Enable **Sidebar config** mode.
+3. Hover over icons to reveal control buttons.
+4. Disable **Sidebar config** mode to save.
 
-### Left/Right expanded cover
-In profile menu, toggle option "Right expanded cover" to change expaned current track cover image to left or right side, whereever you prefer.
+<img src="https://i.imgur.com/86gqPe8.png" alt="img" align="center" width="500px">
 
-## Auto-install
-Make sure you are using spicetify >= v2.5.0 and Spotify >= v1.1.56.
+---
+
+### Playlist Folder Images
+Right-click a playlist folder and assign custom images.  
+All Chrome-supported image formats work; small and compressed images are recommended.
+
+<img src="https://i.imgur.com/WGQ7Bev.gif" alt="img" align="center" width="500px">
+
+---
+
+### Left / Right Expanded Cover
+Toggle **Right expanded cover** in the Profile menu to move the expanded album artwork to the left or right.
+
+---
+
+## Requirements
+
+- Spicetify **>= v2.5.0**
+- Spotify **>= v1.1.56**
+
+---
+
+## Auto Install
+
 ### Windows
+
 ```powershell
 Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Dribbblish/install.ps1" | Invoke-Expression
+````
+
+---
+
+## Linux — Hassle-Free Script Install
+
+Ready-made install script is available:
+
+```
+install-linux.sh
 ```
 
-## Manual Install
-Run these commands:
+### Usage
 
-### Linux and MacOS:
-In **Bash**:
+```bash
+chmod +x install-linux.sh
+./install-linux.sh
+```
+
+---
+
+## Manual Install
+
+### Linux & macOS (Bash)
+
 ```bash
 cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
 spicetify config current_theme Dribbblish color_scheme base
@@ -72,8 +134,10 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_j
 spicetify apply
 ```
 
-### Windows
-In **Powershell**:
+---
+
+### Windows (PowerShell)
+
 ```powershell
 cd "$(spicetify -c | Split-Path)\Themes\Dribbblish"
 spicetify config current_theme Dribbblish color_scheme base
@@ -81,30 +145,74 @@ spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_j
 spicetify apply
 ```
 
-From Spotify > v1.1.62, in sidebar, they use an adaptive render mechanic to actively show and hide items on scroll. It helps reducing number of items to render, hence there is significant performance boost if you have a large playlists collection. But the drawbacks is that item height is hard-coded, it messes up user interaction when we explicity change, in CSS, playlist item height bigger than original value. So you need to add these 2 lines in Patch section in config file:
+---
+
+## Sidebar Height Patch (Important)
+
+From Spotify **> v1.1.62**, adaptive rendering breaks interaction when playlist item height is modified via CSS.
+
+Add the following to your Spicetify config file:
+
 ```ini
 [Patch]
 xpui.js_find_8008 = ,(\w+=)32,
 xpui.js_repl_8008 = ,${1}56,
 ```
 
+---
+
 ## Change Color Schemes
-There are 9 color schemes you can choose: `base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`, `beach-sunset`, `samurai`, `purple`, `gruvbox`, `gruvbox-material-dark`, `catppuccin-latte`, `catppuccin-frappe`, `catppuccin-macchiato`, and `catppuccin-mocha`. Change scheme with commands:
-```
+
+Available schemes:
+
+`base`, `white`, `dark`, `dracula`, `nord-dark`, `nord-light`,
+`beach-sunset`, `samurai`, `purple`, `gruvbox`,
+`gruvbox-material-dark`,
+`catppuccin-latte`, `catppuccin-frappe`, `catppuccin-macchiato`, `catppuccin-mocha`
+
+### Command
+
+```bash
 spicetify config color_scheme <scheme name>
 spicetify apply
 ```
 
-## Auto-uninstall 
+---
+
+## Auto Uninstall
+
 ### Windows
+
 ```powershell
 Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/spicetify/spicetify-themes/v2/Dribbblish/uninstall.ps1" | Invoke-Expression
 ```
 
-## Manual uninstall 
-Remove the dribbblish theme with the following commands 
+---
+
+## Linux — Hassle-Free Script Uninstall
+
+Ready-made uninstall script is available:
 
 ```
+uninstall-linux.sh
+```
+
+### Usage
+
+```bash
+chmod +x uninstall-linux.sh
+./uninstall-linux.sh
+```
+
+---
+
+## Manual Uninstall
+
+```bash
 spicetify config current_theme " " color_scheme " "
 spicetify apply
+```
+
+---
+
 ```
