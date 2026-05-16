@@ -40,6 +40,10 @@
 
 ![Gruvbox](screenshots/Gruvbox.png)
 
+### GruvboxHard
+
+![GruvboxHard](screenshots/GruvboxHard.png)
+
 ### Kanagawa
 
 ![Kanagawa](screenshots/Kanagawa.png)
