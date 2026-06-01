@@ -481,11 +481,12 @@ li>div::after {
     -webkit-mask-repeat: no-repeat;
 }
 
-/* full screen artists background */
+/* artist page background */
 .main-entityHeader-container.main-entityHeader-withBackgroundImage,
 .main-entityHeader-background,
 .main-entityHeader-background.main-entityHeader-overlay:after {
-    height: 100vh;
+    height: 40vh;
+    max-height: none;
 }
 
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
@@ -500,7 +501,7 @@ li>div::after {
 }
 
 .artist-artistOverview-overview .main-entityHeader-headerText {
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 /* progress bar moves smoothly */
