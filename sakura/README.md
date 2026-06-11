@@ -20,9 +20,9 @@ Copy Sakura into:
 
 Then run:
 
-spicetify config current_theme Sakura
+spicetify config current_theme sakura
 
-spicetify config extensions sakura.js
+spicetify config inject_theme_js 1
 
 spicetify apply
 
