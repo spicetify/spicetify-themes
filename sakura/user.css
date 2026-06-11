@@ -199,13 +199,6 @@ color: #1f1a1f !important;
     --background-highlight: #221a22 !important;
     --background-press: #151015 !important;
 }
-/* Force Sakura background when scrolling */
-
-.main-view-container__scroll-node-child {
-    --background-base: #181218 !important;
-    --background-highlight: #221a22 !important;
-    --background-press: #151015 !important;
-}
 /* Kill artist scroll tint */
 
 .main-entityHeader-backgroundColor,
