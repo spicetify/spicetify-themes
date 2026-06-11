@@ -1,0 +1,226 @@
+/* =========================
+SAKURA THEME
+========================= */
+
+/* Global Accent Override */
+:root {
+--spice-button: #ff9eb5;
+--spice-button-active: #ffc3d2;
+--spice-accent: #ff9eb5;
+
+
+--encore-bright-accent-set: #ff9eb5;
+--encore-bright-accent-hover: #ffc3d2;
+--encore-bright-accent-press: #ffc3d2;
+--encore-bright-accent-active: #ffc3d2;
+
+
+}
+
+/* Top Bar */
+.main-topBar-background {
+background: rgba(23, 18, 23, 0.75) !important;
+backdrop-filter: blur(25px) !important;
+}
+
+/* Sidebar */
+.main-yourLibraryX-libraryContainer,
+.Root__nav-bar {
+background: rgba(33, 27, 33, 0.85) !important;
+backdrop-filter: blur(20px);
+}
+
+/* Main Background */
+.Root__main-view {
+    background:
+        linear-gradient(
+            rgba(10,8,10,.92),
+            rgba(10,8,10,.95)
+        ),
+        url("images/sakura-bg.jpg")
+        !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+/* Now Playing Bar */
+.Root__now-playing-bar {
+background: rgba(25, 18, 25, 0.85) !important;
+backdrop-filter: blur(20px);
+}
+
+/* Album Covers */
+.main-image-image {
+border-radius: 14px !important;
+}
+
+/* Playlist Rows */
+.main-trackList-trackListRow:hover {
+background: rgba(255,183,197,.08) !important;
+}
+
+/* Quick Access Cards */
+.main-quickAccess-quickAccessItem,
+.view-homeShortcutsGrid-shortcut {
+background: linear-gradient(
+90deg,
+rgba(55,40,55,.95),
+rgba(35,25,35,.95)
+) !important;
+
+
+border-radius: 12px !important;
+
+
+}
+
+/* Remove Spotify Gray Areas */
+.main-entityHeader-backgroundColor,
+.main-home-homeHeader,
+.main-shelf-shelf {
+background: transparent !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #ff9eb5;
+border-radius: 20px;
+}
+
+/* Progress Bar */
+.progress-bar__fg,
+.playback-progressbar-progress {
+background: linear-gradient(
+90deg,
+#ff9eb5,
+#ffc3d2
+) !important;
+}
+
+/* Cards */
+.main-card-card {
+border-radius: 18px !important;
+transition: .25s ease;
+}
+
+.main-card-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 0 20px rgba(255,183,197,.15);
+}
+
+/* =========================
+PLAY BUTTONS
+========================= */
+
+/* Remove recommendation section buttons */
+.view-homeShortcutsGrid-playButton,
+.view-homeShortcutsGrid-PlayButtonContainer {
+display: none !important;
+}
+
+/* Remove Spotify green hover */
+.encore-bright-accent-set {
+background-color: #ff9eb5 !important;
+color: #1f1a1f !important;
+}
+
+.encore-bright-accent-set:hover {
+background-color: #ffc3d2 !important;
+}
+
+/* Global Play Buttons */
+button[aria-label="Play"] {
+background-color: #ff9eb5 !important;
+color: #1f1a1f !important;
+}
+
+button[aria-label="Play"]:hover {
+background-color: #ffc3d2 !important;
+}
+
+/* Play Icons */
+button[aria-label="Play"] svg,
+button[aria-label="Play"] path {
+fill: #1f1a1f !important;
+color: #1f1a1f !important;
+}
+.Root__right-sidebar {
+    backdrop-filter: blur(20px);
+    background: rgba(20,15,20,.75) !important;
+}
+.main-nowPlayingView-section,
+.main-nowPlayingView-contextItemInfo {
+    background: rgba(20,15,20,.88) !important;
+    backdrop-filter: blur(20px);
+}
+.main-topBar-searchBar {
+    background: rgba(255,183,197,.08) !important;
+}
+/* Kill Spotify dynamic artwork gradients */
+
+.playlist-playlist-actionBarBackground-background {
+    --background-base: #1a141a !important;
+    --background-highlight: #241c24 !important;
+    --background-press: #120d12 !important;
+
+    --background-elevated-base: #1a141a !important;
+    --background-elevated-highlight: #241c24 !important;
+    --background-elevated-press: #120d12 !important;
+
+    background: linear-gradient(
+        180deg,
+        rgba(36,28,36,0.95),
+        rgba(18,13,18,0.98)
+    ) !important;
+}
+/* Home page scroll gradient fix */
+
+.main-home-homeHeader,
+.main-home-filterChipsSection,
+.main-home-content {
+    background: transparent !important;
+}
+
+.main-home-homeHeader::before,
+.main-home-homeHeader::after {
+    display: none !important;
+}
+
+/* Force Sakura background when scrolling */
+
+.main-view-container__scroll-node-child {
+    --background-base: #181218 !important;
+    --background-highlight: #221a22 !important;
+    --background-press: #151015 !important;
+}
+/* Force Sakura background when scrolling */
+
+.main-view-container__scroll-node-child {
+    --background-base: #181218 !important;
+    --background-highlight: #221a22 !important;
+    --background-press: #151015 !important;
+}
+/* Kill artist scroll tint */
+
+.main-entityHeader-backgroundColor,
+.main-entityHeader-backgroundOverlay,
+.main-entityHeader-overlay {
+    background: transparent !important;
+    opacity: 0 !important;
+}
+
+/* Force Sakura gradient instead */
+
+.main-entityHeader-container {
+    background: linear-gradient(
+        180deg,
+        rgba(25,18,25,.95),
+        rgba(18,13,18,.98)
+    ) !important;
+}
