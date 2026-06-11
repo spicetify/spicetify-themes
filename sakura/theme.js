@@ -62,10 +62,8 @@
 
             petal.style.width = size + "px";
             petal.style.height = size + "px";
-            const opacity = Math.random() * 0.4 + 0.5;
-            petal.style.opacity = opacity;
-
             petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.opacity = Math.random() * 0.4 + 0.5;
 
             const duration = Math.random() * 6 + 8;
             petal.style.animationDuration = duration + "s";
@@ -80,11 +78,61 @@
             });
         }
 
-        setInterval(createPetal, 300);
+        const motionQuery = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        );
+
+        let petalInterval = null;
+
+        function startPetals() {
+            if (petalInterval !== null) {
+                return;
+            }
+
+            petalInterval = setInterval(function () {
+                if (!document.hidden) {
+                    createPetal();
+                }
+            }, 300);
+        }
+
+        function stopPetals() {
+            if (petalInterval !== null) {
+                clearInterval(petalInterval);
+                petalInterval = null;
+            }
+        }
+
+        function updatePetals() {
+            if (motionQuery.matches || document.hidden) {
+                stopPetals();
+            } else {
+                startPetals();
+            }
+        }
+
+        document.addEventListener(
+            "visibilitychange",
+            updatePetals
+        );
+
+        if (motionQuery.addEventListener) {
+            motionQuery.addEventListener(
+                "change",
+                updatePetals
+            );
+        } else {
+            motionQuery.addListener(updatePetals);
+        }
+
+        updatePetals();
     }
 
     if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", init);
+        document.addEventListener(
+            "DOMContentLoaded",
+            init
+        );
     } else {
         init();
     }
