@@ -12,6 +12,39 @@ function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+const SHOOTING_STARS_DISABLED_KEY = 'starrynight:disable-shooting-stars';
+
+function shootingStarsDisabled() {
+  return localStorage.getItem(SHOOTING_STARS_DISABLED_KEY) === '1';
+}
+
+function applyShootingStarsState() {
+  document.documentElement.classList.toggle(
+    'starrynight-disable-shooting-stars',
+    shootingStarsDisabled()
+  );
+}
+applyShootingStarsState();
+
+(function registerShootingStarsMenuItem() {
+  if (!Spicetify?.Menu?.Item) {
+    setTimeout(registerShootingStarsMenuItem, 300);
+    return;
+  }
+
+  const menuItem = new Spicetify.Menu.Item(
+    'Theme: Disable shooting stars',
+    shootingStarsDisabled(),
+    (self) => {
+      const disabled = !shootingStarsDisabled();
+      localStorage.setItem(SHOOTING_STARS_DISABLED_KEY, disabled ? '1' : '0');
+      self.setState(disabled);
+      applyShootingStarsState();
+    }
+  );
+  menuItem.register();
+})();
+
 waitForElement(['.Root__top-container'], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
