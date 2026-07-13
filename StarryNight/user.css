@@ -209,7 +209,12 @@
   box-shadow: 0 0 5px 5px var(--spice-text);
 }
 
-.running-animation {
+[data-testid="now-playing-bar"]:has(
+  [data-testid="control-button-playpause"][aria-label="Pause"]
+)
+  .main-nowPlayingWidget-coverArt
+  .cover-art
+  img {
   animation-play-state: running !important;
 }
 

@@ -74,35 +74,6 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
 
     resizeObserver.observe(rightbar);
   });
-  
-  waitForElement(['[data-encore-id="buttonPrimary"]'], ([targetElement]) => {
-    // start or stop spinning animation based on whether something is playing
-    const playObserver = new MutationObserver((mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (
-          mutation.type === 'attributes' &&
-          mutation.attributeName === 'aria-label'
-        ) {
-          handleLabelChange();
-        }
-      }
-    });
-  
-    const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-    playObserver.observe(targetElement, playConfig);
-  });
-
-  function handleLabelChange() {
-    const img = document.querySelector(
-      '.main-nowPlayingWidget-coverArt .cover-art img'
-    );
-    // checks the state of the play button on the playbar
-    if (document.querySelector('[data-encore-id="buttonPrimary"]').getAttribute('aria-label') == 'Pause'){
-      img.classList.add('running-animation');
-    } else {
-      img.classList.remove('running-animation');
-    }
-  }
 
   /*
   Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
