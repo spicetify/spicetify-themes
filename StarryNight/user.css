@@ -1,5 +1,10 @@
 .button-module__button___hf2qg_marketplace {
-  color: var(--spice-subtext)
+  color: var(--spice-subtext);
+}
+
+.os-scrollbar {
+  --os-handle-border-radius: 16px !important;
+  --os-size: 8px !important;
 }
 
 .main-entityHeader-backgroundColor {
@@ -22,7 +27,7 @@
 
 .global-nav .Root__top-container {
   grid-template-areas:
-    "global-nav global-nav global-nav"
+    "top-banner global-nav global-nav"
     "left-sidebar main-view now-playing-bar"
     "left-sidebar main-view right-sidebar" !important;
 }
@@ -137,6 +142,21 @@
   background: #00000000 !important;
 }
 
+.UrfDp0_mKGL9hkfh9g_R,
+.UrfDp0_mKGL9hkfh9g_R:before,
+.mzBZbIt7NDzzTffimVhn,
+.WBFaUw_oOfN2m4aTxggt,
+.main-nowPlayingView-contextItemInfo:before,
+.playlist-playlist-actionBarBackground-background,
+.main-entityHeader-backgroundColor,
+.Root__now-playing-bar {
+  background: none !important;
+}
+
+.sl_aPp6GDg05ItSfmsS7 {
+  display: none;
+}
+
 .main-nowPlayingBar-nowPlayingBar {
   min-height: 400px;
 }
@@ -189,7 +209,12 @@
   box-shadow: 0 0 5px 5px var(--spice-text);
 }
 
-.running-animation {
+[data-testid="now-playing-bar"]:has(
+  [data-testid="control-button-playpause"][aria-label="Pause"]
+)
+  .main-nowPlayingWidget-coverArt
+  .cover-art
+  img {
   animation-play-state: running !important;
 }
 
@@ -261,6 +286,15 @@
 
 .ffFwfKcPDbmAPLXzxzKq {
   background-color: #00000000 !important;
+}
+
+button[data-testid="cover-art-button"] {
+  height: 220px !important;
+  width: 220px !important;
+  margin: auto;
+  background-color: #00000000;
+  box-shadow: 0 0 0px var(--spice-rgb-shadow);
+  display: contents;
 }
 
 @keyframes twinkle1 {

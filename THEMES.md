@@ -213,6 +213,10 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![Dracula](text/screenshots/Dracula.png)
 
+#### EverforestDarkMedium
+
+![EverforestDarkMedium](text/screenshots/EverforestDarkMedium.png)
+
 #### ForestGreen
 
 ![ForestGreen](text/screenshots/ForestGreen.png)

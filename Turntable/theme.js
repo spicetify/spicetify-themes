@@ -1,20 +1,12 @@
 window.addEventListener("load", rotateTurntable = () => {
   const SpicetifyOrigin = Spicetify.Player.origin;
-  fadBtn = document.querySelector(".main-topBar-button[title='Full App Display']");
-  if (!fadBtn){
-    const possibleFadBtn = document.querySelectorAll(".main-topBar-button")
-    for (const btn of possibleFadBtn) {
-      if (btn._tippy !== undefined && btn._tippy.props.content === "Full App Display") {
-        fadBtn = btn;
-        break;
-      }
-    }
-  }
 
-  if (!SpicetifyOrigin?._state || !fadBtn) {
+  if (!SpicetifyOrigin?._state) {
     setTimeout(rotateTurntable, 250);
     return;
   }
+
+  const BACKDROP_CONFIG_LABEL = "Enable blur backdrop";
 
   const adModalStyle = document.createElement("style");
   const STYLE_FOR_AD_MODAL = `
@@ -54,7 +46,8 @@ window.addEventListener("load", rotateTurntable = () => {
   fadAlbumSvg.setAttribute("fill", "currentColor");
   fadAlbumSvg.innerHTML = Spicetify.SVGIcons.album;
 
-  let isPlaying, clickedFadBtn;
+  let isFADReady = false;
+  let isPlaying;
 
   function handleRotate(eventType) {
     if (eventType === "load" && !SpicetifyOrigin._state.item) return;
@@ -76,18 +69,6 @@ window.addEventListener("load", rotateTurntable = () => {
       coverArt?.style.setProperty("animation-play-state", "paused");
       fadArt?.style.setProperty("animation-play-state", "paused");
       if (eventType) isPlaying = false;
-    }
-  }
-
-  function handleFadBtn(event) {
-    event.stopPropagation();
-  }
-
-  function handleFadControl() {
-    const fadControlsBtns = document.querySelectorAll("#fad-controls button");
-
-    for (const fadControl of fadControlsBtns) {
-      fadControl.addEventListener("dblclick", handleFadBtn);
     }
   }
 
@@ -135,33 +116,25 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleConfigSwitch() {
-    const fullAppDisplay = document.querySelector("#full-app-display");
-    const fadFg = document.querySelector("#fad-foreground");
-    const genericModal = document.querySelector("generic-modal");
-
-    const stateItem = SpicetifyOrigin._state.item;
-
-    if (!stateItem.isLocal && stateItem.type !== "ad") fadFg.appendChild(fadHeartContainer);
-    fullAppDisplay.appendChild(songPreviewContainer);
-
-    genericModal.remove();
-
-    handleIcons();
-    handleRotate();
-    handleFadControl();
+  function handlePopupModalClick(event) {
+    const { PopupModal } = Spicetify;
+    const { target } = event;
+    if (target.closest(".setting-row button.switch")) {
+      PopupModal.hide();
+      handleIcons();
+    }
   }
 
-  function handleBackdrop(fullAppDisplay, setBlurBackdropBtn) {
+  function handleFADBackdrop(event) {
+    const { currentTarget } = event;
+    const fullAppDisplay = document.querySelector("#full-app-display");
     if (!+localStorage.getItem("enableBlurFad")) {
       fullAppDisplay.dataset.isBlurFad = "true";
-      setBlurBackdropBtn.classList.remove("disabled");
-
+      currentTarget.classList.remove("disabled");
       localStorage.setItem("enableBlurFad", "1");
     } else {
       fullAppDisplay.dataset.isBlurFad = "false";
-      setBlurBackdropBtn.classList.add("disabled");
-
+      currentTarget.classList.add("disabled");
       localStorage.setItem("enableBlurFad", "0");
     }
   }
@@ -196,34 +169,32 @@ window.addEventListener("load", rotateTurntable = () => {
     }
   }
 
-  function handleContextMenu(fullAppDisplay) {
-    const configContainer = document.querySelector("#popup-config-container");
-    const settingRowReferenceNode = document.querySelectorAll("#popup-config-container > div")[0];
-
-    const settingRowContainer = document.createElement("div");
-    const settingRow = `
-<div class="setting-row">
-  <label class="col description">Enable blur backdrop</label>
-  <div class="col action">
-    <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
-      <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
-        <path d="M13.985 2.383L5.127 12.754 1.388 8.375l-.658.77 4.397 5.149 9.618-11.262z"></path>
-      </svg>
-    </button>
-  </div>
+  function handleFADContextMenu() {
+    const { PopupModal } = Spicetify;
+    const configContainer = PopupModal.querySelector("main > div");
+    const settingRow = document.createElement("div");
+    settingRow.classList.add("setting-row");
+    settingRow.innerHTML = `
+<label class="col description">${BACKDROP_CONFIG_LABEL}</label>
+<div class="col action">
+  <button class="${+localStorage.getItem("enableBlurFad") ? "switch" : "switch disabled"}" data-blur-fad>
+    ${parseIcon("check")}
+  </button>
 </div>
 `;
-    settingRowContainer.innerHTML = settingRow;
-    configContainer.insertBefore(settingRowContainer, settingRowReferenceNode);
+    configContainer.insertBefore(
+      settingRow,
+      configContainer.querySelector(".setting-row")
+    );
+    const backdropConfigBtn = configContainer.querySelector("[data-blur-fad]");
+    backdropConfigBtn.addEventListener("click", handleFADBackdrop);
+  }
 
-    const configSwitchBtns = document.querySelectorAll("#popup-config-container button.switch");
-    const setBlurBackdropBtn = document.querySelector("[data-blur-fad]");
-
-    for (const configSwitch of configSwitchBtns) {
-      configSwitch.addEventListener("click", handleConfigSwitch);
+  function handleFADDblClick(event) {
+    const { target } = event;
+    if (target.closest("button")) {
+      event.stopPropagation();
     }
-
-    setBlurBackdropBtn.addEventListener("click", () => handleBackdrop(fullAppDisplay, setBlurBackdropBtn));
   }
 
   // Todo
@@ -239,93 +210,49 @@ window.addEventListener("load", rotateTurntable = () => {
     adModalStyle.remove();
   }
 
-  handleRotate("load");
+  function handleFAD() {
+    const fullAppDisplay = document.querySelector("#full-app-display");
+    fullAppDisplay.appendChild(songPreviewContainer);
+    if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
+    document
+      .querySelector("#fad-main")
+      .addEventListener("contextmenu", handleFADContextMenu);
+    fullAppDisplay.addEventListener("dblclick", handleFADDblClick);
+    // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
+    // handleToggleFad(true);
+    handleIcons();
+    handleFadHeart();
+    handleRotate();
+  }
 
-  const nowPlayingBarLeft = document.querySelector(".main-nowPlayingBar-left");
-  const heartHiddenObserver = new MutationObserver(mutationsList => {
-    mutationsLoop:
-    for (const mutation of mutationsList) {
-      for (const addedNode of mutation.addedNodes) {
-        if (
-          addedNode.matches('svg[class]')
-          ||
-          addedNode.matches('button[class^="main-addButton-button"]')
-        ) {
-          handleFadHeart();
-
-          break mutationsLoop;
-        }
-      }
-
-      for (const removedNode of mutation.removedNodes) {
-        if (
-          removedNode.matches('button[class^="main-addButton-button"]')
-        ) {
-          handleFadHeart();
-
-          break mutationsLoop;
-        }
-      }
+  function handleFADToggle() {
+    if (!document.body.classList.contains("fad-activated")) {
+      isFADReady = false;
+      return;
     }
-  });
-  heartHiddenObserver.observe(nowPlayingBarLeft, {
-    childList: true,
-    subtree: true,
-  });
+    if (isFADReady) return;
+    handleFAD();
+    isFADReady = true;
+  }
 
-  const shuffleBtn = document.querySelector(".main-shuffleButton-button");
-  const shuffleObserver = new MutationObserver(() => {
-    setTimeout(handleTracksNamePreview, 500);
-  });
-  shuffleObserver.observe(shuffleBtn, {
-    attributes: true,
-  });
+  handleRotate("load");
+  handleTracksNamePreview();
 
   Spicetify.Player.addEventListener("onplaypause", () => handleRotate("playpause"));
   Spicetify.Player.addEventListener("songchange", () => {
     setTimeout(() => {
       handleIcons();
       handleRotate();
-      handleTracksNamePreview();
     }, 500);
   });
+  Spicetify.Player.origin._events.addListener("update", handleFadHeart);
+  Spicetify.Player.origin._events.addListener("queue_update", handleTracksNamePreview);
+
+  Spicetify.PopupModal.addEventListener("click", handlePopupModalClick);
+
+  window.addEventListener("fad-request", handleFADToggle);
 
   fadHeart.addEventListener("click", Spicetify.Player.toggleHeart);
   previousSong.addEventListener("click", () => SpicetifyOrigin.skipToPrevious());
   nextSong.addEventListener("click", () => SpicetifyOrigin.skipToNext());
-
-  fadHeart.addEventListener("dblclick", handleFadBtn);
-  previousSong.addEventListener("dblclick", handleFadBtn);
-  nextSong.addEventListener("dblclick", handleFadBtn);
-
-  function fadBtnClick(){
-    const fullAppDisplay = document.querySelector("#full-app-display");
-    if (!fullAppDisplay){
-      setTimeout(fadBtnClick, 100);
-      return;
-    }
-
-    fullAppDisplay.appendChild(songPreviewContainer);
-
-    if (!clickedFadBtn) {
-      if (+localStorage.getItem("enableBlurFad")) fullAppDisplay.dataset.isBlurFad = "true";
-
-      handleFadControl();
-
-      fullAppDisplay.addEventListener("contextmenu", () => handleContextMenu(fullAppDisplay), { once: true });
-
-      // fullAppDisplay.addEventListener("dblclick", () => handleToggleFad());
-
-      clickedFadBtn = true;
-    }
-
-    // handleToggleFad(true);
-    handleIcons();
-    handleFadHeart();
-    handleTracksNamePreview();
-    handleRotate();
-  }
-
-  fadBtn.addEventListener("click", () => fadBtnClick());
-
 });

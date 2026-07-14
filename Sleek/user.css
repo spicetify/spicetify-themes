@@ -350,7 +350,6 @@ MAIN VIEW
 
 /* change input box appearance */
 input {
-  background-color: var(--spice-main-secondary) !important;
   border-radius: 8px !important;
   padding: 6px 10px 6px 48px;
   color: var(--spice-text) !important;

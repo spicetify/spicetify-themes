@@ -9,22 +9,24 @@
 }
 .Root__now-playing-bar,
 .Root__now-playing-bar footer {
-  border-radius: var(--border-radius-1) !important;
+  border-radius: 8px !important;
 }
+.Root__right-sidebar,
+.UrfDp0_mKGL9hkfh9g_R {
+  border-radius: 8px !important;
+}
+
+/* transparent window controls */
 #main::after {
-  content: ""; /* Empty content */
-  position: fixed; /* Fix element to viewport */
+  content: "";
+  position: fixed;
   top: 0;
   right: 0;
-  z-index: 999; /* Position above all other content */
-  -webkit-backdrop-filter: brightness(
-    2.12
-  ); /* Apply brightness filter to background */
-  backdrop-filter: brightness(2.12); /* Cross-browser brightness filter */
-  /* Page zoom control */
-  /* Adjust width and height based on zoom level */
+  z-index: 999;
+  -webkit-backdrop-filter: brightness(2.12);
+  backdrop-filter: brightness(2.12);
   width: 135px;
-  height: 40px;
+  height: 64px;
 }
 
 /* Page titles */
@@ -339,4 +341,17 @@ highlights selected song contains multi-digit song numbers */
 .main-entityHeader-container.main-entityHeader-nonWrapped {
   min-height: 325px;
   height: 15vh;
+}
+
+.ffFwfKcPDbmAPLXzxzKq {
+  border-radius: 6px;
+}
+
+/* button[aria-label="Popup Lyrics"] > svg {
+  width: 24px;
+  height: 24px;
+} */
+
+.playlist-playlist-actionBarBackground-background {
+  visibility: hidden;
 }

@@ -45,9 +45,16 @@ body {
 }
 
 .global-nav .Root__top-container {
-    grid-template-areas: "global-nav global-nav global-nav"
+    grid-template-areas:
+        "top-banner top-banner top-banner"
+        "global-nav global-nav global-nav"
         "left-sidebar main-view right-sidebar"
         "left-sidebar now-playing-bar now-playing-bar" !important;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.main-yourLibraryX-libraryContainer {
+    background: none !important;
 }
 
 .Root__top-container {
@@ -66,6 +73,8 @@ body {
     background-color: var(--spice-player);
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
     grid-area: now-playing-bar !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .Root__globalNav {
@@ -73,6 +82,7 @@ body {
     background-color: var(--spice-main) !important;
     border-radius: var(--corner-radius) var(--corner-radius) 0 0 !important;
     margin: 0;
+    grid-area: top-banner/1/global-nav/-1;
     margin-left: calc(var(--left-sidebar-width) * 1px);
     z-index: 10;
 }
@@ -138,6 +148,7 @@ body {
     background: radial-gradient(ellipse at right 50% bottom -80px, rgba(var(--spice-rgb-sidebar), 0.55), var(--spice-main) 60%) !important;
     border-radius: 0 0 var(--corner-radius) var(--corner-radius) !important;
     border-top: 0;
+    padding: 8px;
     min-width: 518px;
 }
 
@@ -470,11 +481,12 @@ li>div::after {
     -webkit-mask-repeat: no-repeat;
 }
 
-/* full screen artists background */
+/* artist page background */
 .main-entityHeader-container.main-entityHeader-withBackgroundImage,
 .main-entityHeader-background,
 .main-entityHeader-background.main-entityHeader-overlay:after {
-    height: 100vh;
+    height: 40vh;
+    max-height: none;
 }
 
 .artist-artistOverview-overview .main-entityHeader-withBackgroundImage h1 {
@@ -489,7 +501,7 @@ li>div::after {
 }
 
 .artist-artistOverview-overview .main-entityHeader-headerText {
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 /* progress bar moves smoothly */
@@ -501,9 +513,9 @@ li>div::after {
     transition: left 1s linear;
 }
 
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .x-progressBar-fillColor,
-.playback-progressbar-isInteractive .DuvrswZugGajIFNXObAr .progress-bar__slider {
-    transition: none;
+/* progress bar moves instant if clicked */
+*:has(.x-progressBar-fillColor, .progress-bar__slider):active :is(.x-progressBar-fillColor, .progress-bar__slider) {
+    transition-duration: 0.001s;
 }
 
 /* right sidebar text */
@@ -528,7 +540,7 @@ li>div::after {
 /* add main backshadow */
 #dribbblish-back-shadow {
     z-index: 5;
-    grid-area: main-view / main-view / now-playing-bar / main-view;
+    grid-area: 1 / 2 / 5 / 5;
     box-shadow: 0 0 10px 3px #0000003b;
     border-radius: var(--corner-radius);
     pointer-events: none;
@@ -925,4 +937,38 @@ img.playlist-picture[src$=".svg"] {
 /* bottom scroll-bar popup fix */
 .Root__main-view-overlay {
     width: 100%;
+}
+
+
+.Button-buttonTertiary-textBase-medium-iconOnly-useBrowserDefaultFocusStyle {
+  min-block-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+
+.HeaderSideArea {
+    padding-left: 4px;
+}
+
+/* Cinema View */
+
+html[data-cinema-npv-postenter] .Root__cinema-view {
+    padding-left: 10px;
+}
+html[data-cinema-npv-postenter] .Root__cinema-view:nth-child(2) {
+    border-radius: 0px;
+}
+html[data-cinema-npv-postenter] .Root__globalNav {
+    margin-left: 10px;
+}
+html[data-cinema-npv-postenter] .Root__top-container {
+    grid-template-areas:
+      "top-banner top-banner top-banner"
+      "global-nav global-nav global-nav"
+      "left-sidebar main-view right-sidebar"
+      "now-playing-bar now-playing-bar now-playing-bar" !important;
+}
+html[data-cinema-npv-postenter] .Root__now-playing-bar {
+    margin-left: 10px !important;
 }

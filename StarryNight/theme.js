@@ -43,9 +43,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     star.style.borderRadius = '50%';
 
     if (Math.random() < 1 / 5) {
-      star.style.animation = `twinkle${
-        Math.floor(Math.random() * 4) + 1
-      } 5s infinite`;
+      star.style.setProperty("animation", `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`, "important");
     }
 
     backgroundContainer.appendChild(star);
@@ -76,35 +74,6 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
 
     resizeObserver.observe(rightbar);
   });
-  
-  waitForElement(['[data-encore-id="buttonPrimary"]'], ([targetElement]) => {
-    // start or stop spinning animation based on whether something is playing
-    const playObserver = new MutationObserver((mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (
-          mutation.type === 'attributes' &&
-          mutation.attributeName === 'aria-label'
-        ) {
-          handleLabelChange();
-        }
-      }
-    });
-  
-    const playConfig = { attributes: true, attributeFilter: ['aria-label'] };
-    playObserver.observe(targetElement, playConfig);
-  });
-
-  function handleLabelChange() {
-    const img = document.querySelector(
-      '.main-nowPlayingWidget-coverArt .cover-art img'
-    );
-    // checks the state of the play button on the playbar
-    if (document.querySelector('[data-encore-id="buttonPrimary"]').getAttribute('aria-label') == 'Pause'){
-      img.classList.add('running-animation');
-    } else {
-      img.classList.remove('running-animation');
-    }
-  }
 
   /*
   Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
@@ -152,9 +121,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
       void shootingstar.offsetWidth;
 
       shootingstar.style.animation = '';
-      shootingstar.style.animationDuration = `${
-        Math.floor(Math.random() * 4) + 3
-      }s`;
+      shootingstar.style.setProperty("animation-duration", `${Math.floor(Math.random() * 4) + 3}s`, "important");
     });
   }
 });

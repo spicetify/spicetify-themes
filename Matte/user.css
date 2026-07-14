@@ -56,6 +56,31 @@ form .main-topBar-searchBar:focus {
     box-shadow: none !important;
 }
 
+/* fix spacing */
+.main-globalNav-historyButtonsContainer > div {
+    gap: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+}
+.main-globalNav-historyButtonsContainer > div > div:nth-child(1),
+.Root__globalNav > div:nth-child(3) > div:nth-child(2) {
+    height: 0;
+    width: 0;
+}
+.Root__globalNav > div:nth-child(3) {
+    -webkit-margin-end: 0;
+    margin-inline-end: 0;
+}
+.main-globalNav-historyButtons {
+    gap: 0 !important;
+    padding-inline: 0 !important;
+}
+.main-globalNav-historyButtons > button {
+    padding-inline: var(--encore-spacing-tighter, 12px);
+}
+
 /*  ================================
     NAVBAR / LEFT SIDEBAR
     ================================ */
@@ -109,6 +134,9 @@ form .main-topBar-searchBar:focus {
 .main-rootlist-wrapper .LineClamp {
     -webkit-line-clamp: 1;
     line-clamp: 1;
+}
+.main-yourLibraryX-libraryContainer {
+    background-color: var(--spice-sidebar);
 }
 
 /*  ================================
@@ -347,6 +375,10 @@ form .main-topBar-searchBar:focus {
     --background-elevated-base: var(--spice-button-active);
     --background-elevated-highlight: var(--spice-button-active);
     --background-elevated-press: var(--spice-button-active);
+}
+.search-searchCategory-contentArea {
+    --carousel-start-chevron-gradient: var(--spice-main);
+    --carousel-end-chevron-gradient: var(--spice-main);
 }
 
 /* ====global nav==== */
