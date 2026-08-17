@@ -1,0 +1,95 @@
+:root {
+    --spice-text: #d3cfe7;
+    --spice-subtext: #b3a9be;
+    --spice-main: #181924;
+    --spice-sidebar: #141322;
+    --spice-player: #2b2736;
+    --spice-card: #18162c;
+    --spice-shadow: #000000;
+    --spice-highlight: #8887a3;
+    --spice-button: #3c3655;
+    --spice-button-active: #b4acce;
+    --spice-button-disabled: #161320;
+    --spice-accent: #a89dd6;
+}
+
+
+
+/* Fullscreen splash container */
+#mytheme-splash {
+    position: fixed;
+    inset: 0;
+    background: #000; /* or var(--spice-main) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+/* The animation image */
+#mytheme-splash-img {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+}
+
+@font-face {
+    font-family: 'FamiljenGrotesk';
+    src: url('.\assets\fonts\FamiljenGrotesk-VariableFont-wght.ttf')
+    format('truetype-variations');
+    font-weight: 100 900;   /* expose full weight axis */
+    font-stretch: 75% 125%; /* optional, if supported */
+    font-style: normal;
+}
+html, body,
+.Root__top-container,
+.main-nowPlayingBar-container,
+.main-navBar-navBar,
+button, .ButtonInner-sc-14ud5tc-0,
+input, textarea,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'FamiljenGrotesk', sans-serif !important;
+}
+
+/* ============================
+   UNIVERSAL SPOTIFY LOGO REPLACEMENT
+   Works on 1.1.x.x and 1.2.x.x+
+   ============================ */
+
+/* Hide SVG logos (old + new UI) */
+.navbar__logo svg,
+.spotify-logo svg,
+[data-testid="spotify-logo"] svg,
+[data-testid="topbar-logo"] svg {
+    display: none !important;
+}
+
+/* Hide IMG logos (some 1.1.x.x builds) */
+.navbar__logo img,
+.spotify-logo img,
+[data-testid="spotify-logo"] img,
+[data-testid="topbar-logo"] img {
+    display: none !important;
+}
+
+/* Replace with your custom logo */
+.navbar__logo,
+.spotify-logo,
+[data-testid="spotify-logo"],
+[data-testid="topbar-logo"] {
+    background-image: url("assets/logo.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    width: 120px !important;   /* adjust if needed */
+    height: 40px !important;
+}
+
+
+
+/* Fade-out when UI loads */
+#mytheme-splash.hide {
+    opacity: 0;
+}
