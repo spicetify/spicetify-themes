@@ -812,6 +812,12 @@ form .main-topBar-searchBar:placeholder-shown {
     pointer-events: none;
     width: unset;
 }
+.playback-bar__progress-time-elapsed > span,
+.main-playbackBarRemainingTime-container > span {
+  position: static !important;
+  inset: auto !important;
+  contain: none !important;
+}
 .playback-bar__progress-time-elapsed::after {
     content: " /";
 }
