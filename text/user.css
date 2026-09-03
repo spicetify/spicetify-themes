@@ -824,7 +824,7 @@ form .main-topBar-searchBar:placeholder-shown {
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     z-index: 9;
-    padding-top: 2px;
+    padding-top: 1px;
 }
 
 /* playback seek bar */
@@ -852,6 +852,8 @@ form .main-topBar-searchBar:placeholder-shown {
     height: 100% !important;
     border-radius: 0 !important;
     background-color: var(--spice-text) !important;
+    top: 0 !important;
+    transform: none !important;
 }
 .x-progressBar-fillColor {
     transition-duration: unset;
