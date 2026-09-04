@@ -824,7 +824,8 @@ form .main-topBar-searchBar:placeholder-shown {
 .playback-bar__progress-time-elapsed,
 .main-playbackBarRemainingTime-container {
     z-index: 9;
-    padding-top: 1px;
+    height: unset;
+    padding-top: 2px;
 }
 
 /* playback seek bar */
