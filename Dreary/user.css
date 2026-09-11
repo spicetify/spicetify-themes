@@ -458,7 +458,7 @@ p.main-buddyFeed-timestamp.main-type-finale,
   background-color: rgba(var(--spice-rgb-selected-row), 0.6) !important;
   border: solid 3px var(--spice-text);
   border-radius: 10px;
-  padding-bottom: 80.7px;
+  padding-bottom: 48px;
   transition: 500ms;
 }
 
