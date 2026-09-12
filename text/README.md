@@ -96,6 +96,14 @@
 
 ![EverforestDarkSoft](screenshots/EverforestDarkSoft.png)
 
+### FlexokiLight
+
+![FlexokiLight](screenshots/FlexokiLight.png)
+
+### FlexokiDark
+
+![FlexokiDark](screenshots/FlexokiDark.png)
+
 ## More
 
 ### Description
