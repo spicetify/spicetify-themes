@@ -1049,3 +1049,15 @@ button[data-testid="control-button-npv-episodes"] svg {
 .main-connectBar-connectBar svg {
     fill: var(--spice-accent-active);
 }
+
+body:has(#SpicyLyricsPage) .playback-bar {
+  position: absolute !important;
+}
+body:has(#SpicyLyricsPage) .playback-bar > .playback-bar__progress-time-elapsed {
+  position: relative !important;
+  height: unset !important;
+}
+body:has(#SpicyLyricsPage) .playback-bar > .playback-progressbar-container,
+body:has(#SpicyLyricsPage) .playback-bar > :has(.playback-progressbar) {
+  margin-left: 0 !important;
+}
