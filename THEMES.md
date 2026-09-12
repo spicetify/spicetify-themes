@@ -253,11 +253,6 @@ Here you can find a preview of all the themes. Some of them may have different c
 | :--------------------------------------------: | :------------------------------------------------------: |
 |                  Tokyo Night                   |                    Tokyo Night Storm                     |
 
-
-## Turntable
-
-![Turntable](Turntable/screenshots/fad.png)
-
 ## Ziro
 
 #### Blue
