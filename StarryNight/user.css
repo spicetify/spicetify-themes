@@ -278,6 +278,11 @@ button[data-testid="cover-art-button"] {
   margin-block: 12px 0;
 }
 
+[data-testid="artist-page"] > div > div {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
 .LayoutResizer__resize-bar,
 .LayoutResizer__resize-bar * {
   outline: none !important;
