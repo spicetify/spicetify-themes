@@ -43,15 +43,6 @@
 }
 
 .Root__top-container
-  > :has(.LayoutResizer__resize-bar)
-  .e-10860-legacy-button:focus,
-.Root__top-container
-  > :has(.LayoutResizer__resize-bar)
-  .e-10860-legacy-button:focus-visible {
-  outline: none !important;
-}
-
-.Root__top-container
   [aria-label="Now playing view"]
   > div
   > div:has(button[aria-label="Hide Now Playing view"]) {
@@ -71,26 +62,20 @@
   box-sizing: border-box;
 }
 
-.main-view-container
-  main
-  > div
-  > *[style*="background-color"]:not([style*="--"]),
+.Root__right-sidebar-fauxMainViewEnd > *,
+div:has(> div > div > aside#Desktop_PanelContainer_Id) > :first-child > * {
+  background-color: transparent !important;
+}
+
+.Root__top-container > :has(aside[aria-label="Now playing view"])::before,
+.Root__top-container > :has(.LayoutResizer__resize-bar)::before {
+  background-color: transparent !important;
+}
+
 .main-view-container
   [style*="background-color"]:not([style*="--"]):not(.e-10860-legacy-box):not(
     .e-10860-legacy-box *
   ) {
-  background-color: transparent !important;
-  background-image: none !important;
-}
-
-.main-view-container
-  [style*="--background-base"]:not(.e-10860-legacy-box):not(
-    .e-10860-legacy-box *
-  ),
-.main-view-container
-  [style*="--background-base"]:not(.e-10860-legacy-box):not(
-    .e-10860-legacy-box *
-  )::after {
   background-color: transparent !important;
   background-image: none !important;
 }
@@ -118,22 +103,16 @@
   --background-base: transparent !important;
 }
 
-.marketplace-header {
-  background-color: #00000000 !important;
-}
-
 .main-nowPlayingBar-nowPlayingBar {
-  min-height: 420px;
+  flex-direction: column;
+  min-height: var(--starrynight-panel-width, 420px);
+  height: auto !important;
 }
 
 .main-nowPlayingBar-container {
   flex-direction: column;
   min-width: 280px;
   max-width: 420px;
-}
-
-.main-nowPlayingBar-nowPlayingBar {
-  flex-direction: column;
 }
 
 .main-nowPlayingBar-center {
@@ -151,24 +130,12 @@
   justify-content: center;
 }
 
-.player-controls__buttons.player-controls__buttons--new-icons {
-  order: 2;
-}
-
-.playback-bar {
-  order: 1;
-}
-
 .main-nowPlayingBar-right {
   width: 100%;
 }
 
 .main-nowPlayingBar-extraControls {
   justify-content: space-evenly;
-}
-
-.main-tag-container {
-  color: var(--spice-sidebar);
 }
 
 .starrynight-bg-container {
@@ -183,15 +150,19 @@
 }
 
 button[data-testid="cover-art-button"] {
-  height: 220px !important;
-  width: 220px !important;
+  width: min(
+    220px,
+    calc(var(--starrynight-panel-width, 420px) * 0.524)
+  ) !important;
+  height: auto !important;
   margin: auto;
+  aspect-ratio: 1 / 1;
   background-color: #00000000;
   box-shadow: 0 0 0px var(--spice-rgb-shadow);
 }
 
 [data-testid="now-playing-bar"] {
-  height: var(--starrynight-panel-width, max-content);
+  min-height: var(--starrynight-panel-width, max-content);
 }
 
 [data-testid="now-playing-bar"] [data-testid="now-playing-widget"] {
@@ -213,31 +184,12 @@ button[data-testid="cover-art-button"] {
   overflow: visible;
 }
 
-[data-testid="now-playing-bar"] [data-testid="cover-art-button"] {
-  display: block;
-  width: 220px !important;
-  height: 220px !important;
-  margin: 44px auto 0 !important;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: transparent;
-  box-shadow: 0 0 5px 5px var(--spice-text);
-}
-
 [data-testid="now-playing-bar"] [data-testid="cover-art-button"] > div,
 [data-testid="now-playing-bar"] [data-testid="cover-art-button"] > div > div {
   width: 100% !important;
   height: 100% !important;
   background-color: transparent;
   box-shadow: none;
-}
-
-[data-testid="now-playing-bar"] [data-testid="cover-art-image"] img {
-  border-radius: 50%;
-  background-color: transparent;
-  animation: spin 25s linear infinite;
-  animation-play-state: paused;
-  box-shadow: 0 0 5px 5px var(--spice-text);
 }
 
 [data-testid="now-playing-bar"] [data-testid="cover-art-button"] img {
@@ -279,6 +231,11 @@ button[data-testid="cover-art-button"] {
 }
 
 [data-testid="artist-page"] > div > div {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+[data-testid="playlist-page"] > div {
   background-color: transparent !important;
   background-image: none !important;
 }
