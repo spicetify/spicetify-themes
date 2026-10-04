@@ -134,10 +134,14 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   right: 0;
 }
 
+.playback-bar__progress-time {
+  display: none;
+}
+
 .playback-bar {
   position: absolute;
-  top: var(--seek-line-top);
-  left: 0;
+  bottom: 100%;
+  left: -1px;
   width: 100%;
   z-index: 1;
 }
@@ -148,7 +152,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   top: 60%;
   border: solid 1px;
   border-radius: 20px;
-  z-index: 4;
+  z-index: 5;
   color: var(--spice-subtext) !important;
   padding-left: 5px;
 }
@@ -599,18 +603,23 @@ div.main-cardImage-imageWrapper.main-cardImage-roundedCorners
 .main-yourEpisodes-coverContainer {
   background-color: var(--spice-text);
 }
+.playback-bar__progress-time-elapsed {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}
 .Root__nav-bar {
   min-width: 281px !important;
+}
+.playback-bar__progress-time-elapsed {
+  display: none !important;
 }
 #spicetify-playlist-list > div {
   height: 100% !important;
 }
-
 .main-nowPlayingBar-nowPlayingBar {
-  --seek-line-top: 15px;
-  --seek-strip: 30px;
   position: relative;
-  box-sizing: border-box;
-  height: 130px;
-  padding-top: var(--seek-strip);
 }
