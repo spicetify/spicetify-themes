@@ -121,19 +121,6 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   z-index: 1;
 }
 
-.playback-bar__progress-time-elapsed,
-.playback-bar__progress-time-remaining {
-  position: absolute;
-  bottom: 100%;
-  color: var(--spice-subtext);
-}
-.playback-bar__progress-time-elapsed {
-  left: 0;
-}
-.playback-bar__progress-time-remaining {
-  right: 0;
-}
-
 .playback-bar__progress-time {
   display: none;
 }
