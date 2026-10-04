@@ -121,15 +121,24 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   z-index: 1;
 }
 
-.playback-bar__progress-time {
-  display: none;
+.playback-bar__progress-time-elapsed,
+.playback-bar__progress-time-remaining {
+  position: absolute;
+  bottom: 100%;
+  color: var(--spice-subtext);
+}
+.playback-bar__progress-time-elapsed {
+  left: 0;
+}
+.playback-bar__progress-time-remaining {
+  right: 0;
 }
 
 .playback-bar {
-  width: 100%;
-  bottom: 83px;
   position: absolute;
-  left: -1px;
+  top: var(--seek-line-top);
+  left: 0;
+  width: 100%;
   z-index: 1;
 }
 
@@ -139,7 +148,7 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
   top: 60%;
   border: solid 1px;
   border-radius: 20px;
-  z-index: 5;
+  z-index: 4;
   color: var(--spice-subtext) !important;
   padding-left: 5px;
 }
@@ -590,20 +599,18 @@ div.main-cardImage-imageWrapper.main-cardImage-roundedCorners
 .main-yourEpisodes-coverContainer {
   background-color: var(--spice-text);
 }
-.playback-bar__progress-time-elapsed {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-  position: absolute;
-}
 .Root__nav-bar {
   min-width: 281px !important;
 }
-.playback-bar__progress-time-elapsed {
-  display: none !important;
-}
 #spicetify-playlist-list > div {
   height: 100% !important;
+}
+
+.main-nowPlayingBar-nowPlayingBar {
+  --seek-line-top: 15px;
+  --seek-strip: 30px;
+  position: relative;
+  box-sizing: border-box;
+  height: 130px;
+  padding-top: var(--seek-strip);
 }
