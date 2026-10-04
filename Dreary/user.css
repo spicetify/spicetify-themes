@@ -124,14 +124,19 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
 .playback-bar__progress-time-elapsed,
 .playback-bar__progress-time-remaining {
   position: absolute;
-  left: 0;
   bottom: 100%;
   color: var(--spice-subtext);
+}
+.playback-bar__progress-time-elapsed {
+  left: 0;
+}
+.playback-bar__progress-time-remaining {
+  right: 0;
 }
 
 .playback-bar {
   position: absolute;
-  top: 0;
+  top: var(--seek-line-top);
   left: 0;
   width: 100%;
   z-index: 1;
@@ -594,25 +599,18 @@ div.main-cardImage-imageWrapper.main-cardImage-roundedCorners
 .main-yourEpisodes-coverContainer {
   background-color: var(--spice-text);
 }
-.playback-bar__progress-time-elapsed {
-  visibility: hidden;
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  margin: 0px;
-  position: absolute;
-}
 .Root__nav-bar {
   min-width: 281px !important;
-}
-.playback-bar__progress-time-elapsed {
-  display: none !important;
 }
 #spicetify-playlist-list > div {
   height: 100% !important;
 }
 
 .main-nowPlayingBar-nowPlayingBar {
+  --seek-line-top: 15px;
+  --seek-strip: 30px;
   position: relative;
-  height: 110px;
+  box-sizing: border-box;
+  height: 130px;
+  padding-top: var(--seek-strip);
 }
