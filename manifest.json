@@ -161,26 +161,6 @@
 		]
 	},
 	{
-		"name": "Turntable",
-		"description": "Turntable",
-		"preview": "Turntable/screenshots/turntable.png",
-		"readme": "Turntable/README.md",
-		"usercss": "Turntable/user.css",
-		"schemes": "Turntable/color.ini",
-		"include": [
-			"https://raw.githubusercontent.com/spicetify/spicetify-themes/master/Turntable/theme.js"
-		],
-		"authors": [
-			{
-				"name": "Grason Chan",
-				"url": "https://github.com/grasonchan"
-			}
-		],
-		"tags": [
-			"latest"
-		]
-	},
-	{
 		"name": "Ziro",
 		"description": "a smooth theme inspired by zorin os",
 		"preview": "https://raw.githubusercontent.com/schnensch0/ziro/main/preview/mockup.png",
