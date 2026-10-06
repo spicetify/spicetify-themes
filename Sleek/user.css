@@ -209,7 +209,6 @@ PLAYBACK BAR
   opacity: 0;
   position: absolute;
   bottom: 13px;
-  left: 0;
   transition-duration: 0.3s;
   background-color: rgba(var(--spice-rgb-sidebar),.5);
   box-shadow: 0 0 20px 20px rgba(var(--spice-rgb-sidebar),.5);
@@ -219,9 +218,11 @@ PLAYBACK BAR
 
 .playback-bar [data-testid="playback-position"] {
   left: 0;
+  right: auto;
 }
 
 .playback-bar [data-testid="playback-duration"] {
+  left: auto;
   right: 0;
 }
 
