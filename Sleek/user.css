@@ -204,7 +204,8 @@ PLAYBACK BAR
 }
 
 /* hide and move progress time location */
-.playback-bar__progress-time-elapsed {
+.playback-bar [data-testid="playback-position"],
+.playback-bar [data-testid="playback-duration"] {
   opacity: 0;
   position: absolute;
   bottom: 13px;
@@ -216,30 +217,30 @@ PLAYBACK BAR
   z-index: -1;
 }
 
-.main-playbackBarRemainingTime-container {
-  opacity: 0;
-  position: absolute;
-  bottom: 13px;
+.playback-bar [data-testid="playback-position"] {
+  left: 0;
+}
+
+.playback-bar [data-testid="playback-duration"] {
   right: 0;
-  transition-duration: 0.3s;
-  background-color: rgba(var(--spice-rgb-sidebar),.5);
-  box-shadow: 0 0 20px 20px rgba(var(--spice-rgb-sidebar),.5);
-  border-radius: 8px;
-  z-index: -1;
 }
 
 /* show time on hover & better visibility */
-.playback-bar:hover .playback-bar__progress-time-elapsed,
-.playback-bar:hover .main-playbackBarRemainingTime-container {
+.main-nowPlayingBar-center:hover [data-testid="playback-position"],
+.main-nowPlayingBar-center:hover [data-testid="playback-duration"] {
   opacity: 1;
 }
 
 /* move progress bar */
-html:not(.fullscreen) .playback-bar {
-  width: 100%;
-  bottom: 83px;
+.main-nowPlayingBar-container {
+  position: relative;
+}
+
+.main-nowPlayingBar-container .playback-bar {
   position: absolute;
-  left: 0px;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
 }
 
 .main-nowPlayingBar-nowPlayingBar:nth-last-child(2) .playback-bar {
