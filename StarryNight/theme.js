@@ -79,7 +79,7 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     const dur = `${Math.floor(Math.random() * 3) + 3}s`;
     const delay = `${Math.floor(Math.random() * 7)}s`;
 
-    shootingstar.style.setProperty('animation', 'animate 3s linear infinite', 'important');
+    shootingstar.style.setProperty('animation', 'animate 3s linear', 'important');
     shootingstar.style.setProperty('animation-duration', dur, 'important');
     shootingstar.style.setProperty('animation-delay', delay, 'important');
 
