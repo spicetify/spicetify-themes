@@ -36,3 +36,10 @@
 >  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 >  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### Modern Spotify Repairs & Optimizations
+- Repaired by [carlitos999yt](https://github.com/carlitos999yt)
+- Fixed vinyl disc size and layout cutoffs on modern Spotify.
+- Restored classic Delroy Prithvi shooting star animation with smooth keyframes.
+- Added synchronized panel collapse (collapsing Now Playing panel automatically collapses top bar).
+- Enhanced button opacity and visibility over starry background.
+- Fixed transparency and compatibility with native and third-party lyrics (Beautiful Lyrics, Spicy Lyrics).

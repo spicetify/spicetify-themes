@@ -1,182 +1,274 @@
-.button-module__button___hf2qg_marketplace {
-  color: var(--spice-subtext);
-}
-
 .os-scrollbar {
   --os-handle-border-radius: 16px !important;
   --os-size: 8px !important;
 }
 
-.main-entityHeader-backgroundColor {
-  background-color: #00000000 !important;
-}
-
-.main-home-homeHeader {
-  background-color: #00000000 !important;
-  background-image: none !important;
-}
-
 .Root__top-container {
-  background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--spice-sidebar-alt) 0%,
+    var(--spice-sidebar) 100%
+  );
   overflow: hidden;
-  grid-template-areas:
-    "left-sidebar    main-view         now-playing-bar"
-    "left-sidebar    main-view         right-sidebar";
-  grid-template-rows: auto auto 1fr;
-}
-
-.global-nav .Root__top-container {
   grid-template-areas:
     "top-banner global-nav global-nav"
     "left-sidebar main-view now-playing-bar"
-    "left-sidebar main-view right-sidebar" !important;
+    "left-sidebar main-view right-sidebar";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto 1fr;
+}
+
+.Root__top-container > :has([data-testid="now-playing-bar"]) {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 8px;
+  overflow: visible !important;
 }
 
 .Root__globalNav {
-  background-color: #00000000 !important;
+  background-color: transparent !important;
 }
 
-.ffFwfKcPDbmAPLXzxzKq:before {
-  background-color: #00000000 !important;
-}
-
-.I0bVSxvqA3rm5HvciMap {
-  --bgColor: #00000000 !important;
-}
-
-.I0bVSxvqA3rm5HvciMap::after {
-  --bgColor: #00000000 !important;
-}
-
-.PeLrpasyfBW8ql_bmoAi {
-  background-color: #00000000 !important;
-  background-image: none !important;
-}
-
-.PkOz5g82CaoKk1J3GX0e  {
-  background-color: #00000000 !important;
-  background-image: none !important;
-}
-
-.sv5suqIPUwjgUF_BzM41 {
-  transform: none !important;
-}
-
-.Root__right-sidebar {
-  width: min-content;
-  height: auto !important;
-  min-height: 100% !important;
-}
-
-.Root__now-playing-bar {
-  width: var(--panel-width);
-}
-
+.main-topBar-container,
 .main-topBar-background {
-  background-color: var(--spice-highlight) !important;
+  background-color: transparent !important;
+  --background-base: transparent !important;
 }
 
-.Root__nav-bar {
-  background-color: #00000000 !important;
+.Root__top-container > :has(.main-view-container) {
+  background-color: transparent !important;
 }
 
-.main-yourLibraryX-libraryContainer {
-  background: none !important;
-}
-
-.main-trackList-trackListRow:hover {
-  background-color: var(--spice-highlight);
-}
-
-.main-playPauseButton-button {
-  background-color: var(--spice-button);
-}
-
-.rX_OmqCngvY5ZCoYBZgb {
-  background-color: #00000000 !important;
-}
-
-.main-yourLibraryX-entryPoints {
-  background-color: #00000000 !important;
-}
-
-.marketplace-header {
-  background-color: #00000000 !important;
-}
-
-.EmeHQXR87mUskYK6xEde {
-  background-color: #00000000 !important;
-}
-
-.lyrics-lyrics-background {
-  background-color: #00000000 !important;
-}
-
-.main-actionBarBackground-background {
-  background-image: none;
-  background-color: #00000000 !important;
-  animation: none !important;
-  -webkit-animation: none !important;
-}
-
-.main-entityHeader-overlay {
-  background: none !important;
-}
-
-.main-entityHeader-background.main-entityHeader-gradient {
-  opacity: 0.5;
-  animation: none !important;
-}
-
-.main-entityHeader-background.main-entityHeader-overlay:after {
+.Root__top-container > :has(.YourLibraryX),
+.Root__top-container > :has(.YourLibraryX) > *,
+.Root__top-container > :has(.YourLibraryX) *:has(.YourLibraryX),
+.YourLibraryX {
+  background-color: transparent !important;
   background-image: none !important;
-  animation: none !important;
-  -webkit-animation: none !important;
 }
 
-.pUNc2aOeOQANHrhYa1GU .RDZ61ETnag1ilfZTkVxe {
-  color: #00000000 !important;
+.Root__top-container
+  [aria-label="Now playing view"]
+  > div
+  > div:has(button[aria-label*="Now Playing view"], button[aria-label*="ahora suena"]) {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
 }
 
-.playlist-playlist-playlistContent {
-  background: #00000000 !important;
+.Root__top-container
+  [aria-label="Now playing view"]
+  > div
+  > div:has(button[aria-label*="Now Playing view"], button[aria-label*="ahora suena"])
+  > div:has(a) {
+  padding-inline-end: 72px;
+  box-sizing: border-box;
 }
 
-.UrfDp0_mKGL9hkfh9g_R,
-.UrfDp0_mKGL9hkfh9g_R:before,
-.mzBZbIt7NDzzTffimVhn,
-.WBFaUw_oOfN2m4aTxggt,
-.main-nowPlayingView-contextItemInfo:before,
-.playlist-playlist-actionBarBackground-background,
-.main-entityHeader-backgroundColor,
-.Root__now-playing-bar {
-  background: none !important;
+.Root__right-sidebar-fauxMainViewEnd > *,
+div:has(> div > div > aside#Desktop_PanelContainer_Id) > :first-child > * {
+  background-color: transparent !important;
 }
 
-.sl_aPp6GDg05ItSfmsS7 {
-  display: none;
+.Root__top-container > :has(aside[aria-label*="Now playing view"], aside[aria-label*="ahora suena"])::before,
+.Root__top-container > :has(.LayoutResizer__resize-bar)::before {
+  background-color: transparent !important;
 }
 
+/* Right sidebar panel behavior: smooth resizing, transparent when collapsed */
+.Root__top-container > :has(aside[aria-label*="Now playing view"], aside[aria-label*="ahora suena"], aside#Desktop_PanelContainer_Id) {
+  min-width: 0 !important;
+}
+
+aside[aria-label*="Now playing view"],
+aside[aria-label*="ahora suena"],
+aside#Desktop_PanelContainer_Id {
+  min-width: 220px;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Collapsed sidebar: completely transparent, eliminate ugly black vertical slabs */
+aside:has(button[aria-label*="Expand"], button[aria-label*="Expandir"], button[aria-label*="Mostrar"]),
+aside:has(button[aria-label*="Expand"], button[aria-label*="Expandir"], button[aria-label*="Mostrar"]) > div,
+.Root__right-sidebar:has(button[aria-label*="Expand"], button[aria-label*="Expandir"], button[aria-label*="Mostrar"]),
+.Root__right-sidebar:has(button[aria-label*="Expand"], button[aria-label*="Expandir"], button[aria-label*="Mostrar"]) > div,
+body.starrynight-sidebar-collapsed aside,
+body.starrynight-sidebar-collapsed aside > div,
+.Root__top-container aside[style*="width: 72px"],
+.Root__top-container aside[style*="width: 60px"],
+.Root__top-container aside[style*="width: 64px"],
+.Root__top-container aside[style*="width: 80px"],
+.Root__top-container aside[style*="width: 72px"] > div,
+.Root__top-container aside[style*="width: 60px"] > div,
+.Root__top-container aside[style*="width: 64px"] > div,
+.Root__top-container aside[style*="width: 80px"] > div {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Floating clean expander button when collapsed */
+aside button[aria-label*="Expand"],
+aside button[aria-label*="Expandir"],
+aside button[aria-label*="Mostrar"] {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  margin: 16px auto !important;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+aside button[aria-label*="Expand"]:hover,
+aside button[aria-label*="Expandir"]:hover,
+aside button[aria-label*="Mostrar"]:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Keep all original buttons on the side 100% visible and solid (no faint transparency) */
+aside button,
+aside [role="button"],
+.Root__top-container aside button,
+.Root__top-container [data-testid="now-playing-bar"] button:not([data-testid="control-button-playpause"]):not([data-testid="cover-art-button"]),
+.main-nowPlayingBar-extraControls button,
+.player-controls__buttons button:not([data-testid="control-button-playpause"]),
+button[aria-label*="Estás escuchando"],
+button[aria-label*="Now Playing"],
+button[aria-label*="Now playing"],
+button[aria-label*="ahora suena"],
+button[aria-label*="Expand"],
+button[aria-label*="Expandir"],
+button[aria-label*="Ocultar"] {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  visibility: visible !important;
+}
+
+aside button svg,
+aside [role="button"] svg,
+.Root__top-container aside button svg,
+.Root__top-container [data-testid="now-playing-bar"] button:not([data-testid="control-button-playpause"]):not([data-testid="cover-art-button"]) svg,
+.main-nowPlayingBar-extraControls button svg,
+.player-controls__buttons button:not([data-testid="control-button-playpause"]) svg,
+button[aria-label*="Estás escuchando"] svg,
+button[aria-label*="Now Playing"] svg,
+button[aria-label*="Now playing"] svg,
+button[aria-label*="ahora suena"] svg,
+button[aria-label*="Expand"] svg,
+button[aria-label*="Expandir"] svg,
+button[aria-label*="Ocultar"] svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+aside button:hover,
+aside [role="button"]:hover,
+.main-nowPlayingBar-extraControls button:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 50% !important;
+}
+
+/* Right sidebar now playing card transparency ("el negro nada más", excluding lyrics) */
+aside section:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+aside article:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+aside .main-card:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+aside .main-card-card,
+aside .main-card-cardContainer,
+aside .e-10860-legacy-box,
+aside [data-testid="card-click-handler"],
+aside [data-testid="now-playing-view-artist-card"],
+aside [data-testid="now-playing-view-track-info"],
+aside .main-nowPlayingView-content,
+aside .main-nowPlayingView-section,
+aside div:has(> img):not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+aside div:has(> button > img),
+aside div:has(> a > img),
+[aria-label*="Now playing view"] div[style*="background"]:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+[aria-label*="ahora suena"] div[style*="background"]:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+[aria-label*="Now playing view"] [style*="background-color"]:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])),
+[aria-label*="ahora suena"] [style*="background-color"]:not([data-testid*="lyric"]):not(:has([data-testid*="lyric"])) {
+  background-color: transparent !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+aside .main-nowPlayingView-trackInfo *,
+aside [data-testid="now-playing-view-track-info"] * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+
+/* When right sidebar is collapsed, collapse the top playbar box too! */
+body.starrynight-sidebar-collapsed .Root__top-container > :has([data-testid="now-playing-bar"]),
+body.starrynight-sidebar-collapsed .main-nowPlayingBar-container,
+body.starrynight-sidebar-collapsed [data-testid="now-playing-bar"],
+[data-right-sidebar-hidden] .Root__top-container > :has([data-testid="now-playing-bar"]),
+[data-right-sidebar-hidden] .main-nowPlayingBar-container,
+[data-right-sidebar-hidden] [data-testid="now-playing-bar"] {
+  display: none !important;
+}
+
+body.starrynight-sidebar-collapsed .Root__top-container,
+[data-right-sidebar-hidden] .Root__top-container {
+  grid-template-columns: auto 1fr auto !important;
+}
+
+
+.main-view-container
+  [style*="background-color"]:not([style*="--"]):not(.e-10860-legacy-box):not(
+    .e-10860-legacy-box *
+  ) {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.main-view-container [style*="top: 64px"],
+.main-view-container [role="presentation"]:has([role="columnheader"]) {
+  background: transparent !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.Root__top-container
+  [style*="--background-base"]:not(.e-10860-legacy-box):not(
+    .e-10860-legacy-box *
+  ),
+.Root__top-container
+  [style*="--background-base"]:not(.e-10860-legacy-box):not(
+    .e-10860-legacy-box *
+  )::after {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Now playing bar container sizing & height */
 .main-nowPlayingBar-nowPlayingBar {
-  min-height: 400px;
+  flex-direction: column;
+  min-height: max(450px, var(--starrynight-panel-width, 420px));
+  height: auto !important;
+  background: transparent !important;
+  overflow: visible !important;
+  padding-bottom: 14px;
 }
 
 .main-nowPlayingBar-container {
   flex-direction: column;
   min-width: 280px;
   max-width: 420px;
-}
-
-.main-nowPlayingBar-nowPlayingBar {
-  flex-direction: column;
-}
-
-[data-right-sidebar-hidden] .Root__main-view {
-  grid-area: main-view/main-view/main-view/span 1;
-}
-
-.Root__main-view {
-  background-color: #00000000 !important;
+  background: transparent !important;
+  overflow: visible !important;
 }
 
 .main-nowPlayingBar-center {
@@ -187,78 +279,11 @@
   width: 100%;
 }
 
-.HD9s7U5E1RLSWKpXmrqx {
-  background-color: #00000000;
-  margin: auto;
-  width: 100%;
-}
-
-.main-nowPlayingWidget-coverArt .cover-art {
-  height: 220px !important;
-  width: 220px !important;
-  margin: auto;
-  background-color: #00000000;
-  box-shadow: 0 0 0px var(--spice-rgb-shadow);
-}
-
-.main-nowPlayingWidget-coverArt .cover-art img {
-  border-radius: 50%;
-  animation: spin 25s linear infinite;
-  animation-play-state: paused;
-  background-color: #00000000;
-  box-shadow: 0 0 5px 5px var(--spice-text);
-}
-
-[data-testid="now-playing-bar"]:has(
-  [data-testid="control-button-playpause"][aria-label="Pause"]
-)
-  .main-nowPlayingWidget-coverArt
-  .cover-art
-  img {
-  animation-play-state: running !important;
-}
-
-.main-coverSlotCollapsed-container {
-  width: 100%;
-  height: 100%;
-}
-
-.main-coverSlotCollapsed-container> :first-child {
-  width: 100%;
-  height: 100%;
-}
-
-.main-coverSlotCollapsed-container> :first-child> :first-child {
-  width: 100%;
-  height: 100%;
-  background-color: #00000000;
-}
-
-.main-nowPlayingWidget-coverArt {
-  width: 100%;
-  height: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #00000000;
-}
-
 .main-nowPlayingWidget-nowPlaying {
   width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-}
-
-.main-coverSlotCollapsed-expandButton {
-  right: 25%;
-}
-
-.player-controls__buttons.player-controls__buttons--new-icons {
-  order: 2;
-}
-
-.playback-bar {
-  order: 1;
 }
 
 .main-nowPlayingBar-right {
@@ -267,10 +292,6 @@
 
 .main-nowPlayingBar-extraControls {
   justify-content: space-evenly;
-}
-
-.main-tag-container {
-  color: var(--spice-sidebar);
 }
 
 .starrynight-bg-container {
@@ -282,42 +303,168 @@
   top: 0;
   left: 0;
   background-color: transparent;
+  overflow: hidden;
 }
 
-.ffFwfKcPDbmAPLXzxzKq {
-  background-color: #00000000 !important;
+[data-testid="now-playing-bar"] {
+  min-height: max(450px, var(--starrynight-panel-width, 420px));
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+/* Now playing widget with generous top padding so the vinyl and its glow are NEVER clipped */
+[data-testid="now-playing-bar"] [data-testid="now-playing-widget"] {
+  padding-top: 32px !important;
+  padding-bottom: 8px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible !important;
+}
+
+[data-testid="now-playing-bar"]
+  [data-testid="now-playing-widget"]
+  > div:has(a)
+  *,
+[data-testid="now-playing-bar"] .main-trackInfo-container * {
+  text-align: center;
+  justify-content: center;
+}
+
+[data-testid="now-playing-bar"] [data-testid="CoverSlotCollapsed__container"] {
+  width: 100%;
+  margin-inline-end: 0;
+  border-radius: 0;
+  overflow: visible !important;
+  display: flex;
+  justify-content: center;
 }
 
 button[data-testid="cover-art-button"] {
-  height: 220px !important;
-  width: 220px !important;
-  margin: auto;
-  background-color: #00000000;
-  box-shadow: 0 0 0px var(--spice-rgb-shadow);
-  display: contents;
+  width: min(
+    215px,
+    calc(var(--starrynight-panel-width, 360px) * 0.56)
+  ) !important;
+  height: min(
+    215px,
+    calc(var(--starrynight-panel-width, 360px) * 0.56)
+  ) !important;
+  margin: 10px auto 6px auto !important;
+  aspect-ratio: 1 / 1;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  display: block !important;
+  overflow: visible !important;
+  border: none !important;
+  border-radius: 50% !important;
+}
+
+[data-testid="now-playing-bar"] [data-testid="cover-art-button"] > div,
+[data-testid="now-playing-bar"] [data-testid="cover-art-button"] > div > div {
+  width: 100% !important;
+  height: 100% !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 50% !important;
+  overflow: visible !important;
+}
+
+[data-testid="now-playing-bar"] [data-testid="cover-art-button"] img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  animation: spin 25s linear infinite;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px 3px var(--spice-star-glow, #ffffff), 0 0 4px 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+[data-testid="now-playing-bar"]:has(
+    [data-testid="control-button-playpause"][aria-label*="aus"]
+  )
+  [data-testid="cover-art-button"]
+  img,
+[data-testid="now-playing-bar"]:has(
+    [data-testid="control-button-playpause"][aria-label*="Pause"]
+  )
+  [data-testid="cover-art-button"]
+  img,
+[data-testid="now-playing-bar"]:has(
+    [data-testid="control-button-playpause"][aria-label*="Stop"]
+  )
+  [data-testid="cover-art-button"]
+  img,
+body.starrynight-is-playing [data-testid="now-playing-bar"] [data-testid="cover-art-button"] img {
+  animation-play-state: running !important;
+}
+
+[data-testid="now-playing-bar"] [data-testid="general-controls"],
+[data-testid="now-playing-bar"] .player-controls__buttons {
+  order: 2;
+  justify-content: center;
+}
+
+[data-testid="now-playing-bar"] .playback-bar {
+  order: 1;
+}
+
+[data-testid="now-playing-bar"] .player-controls__left,
+[data-testid="now-playing-bar"] .player-controls__right {
+  flex: 0 1 auto;
+  justify-content: center;
+}
+
+[data-testid="now-playing-bar"] [data-testid="control-button-playpause"],
+.main-playPauseButton-button {
+  background-color: var(--spice-button) !important;
+  color: #000000 !important;
+  border-radius: 50% !important;
+}
+
+[data-testid="now-playing-bar"] [data-testid="control-button-playpause"] svg,
+.main-playPauseButton-button svg {
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+[data-testid="now-playing-bar"]
+  .main-nowPlayingWidget-nowPlaying
+  > :not([data-testid="CoverSlotCollapsed__container"]) {
+  margin-block: 10px 0;
+}
+
+[data-testid="artist-page"] > div > div {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+[data-testid="playlist-page"] > div {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.LayoutResizer__resize-bar,
+.LayoutResizer__resize-bar * {
+  outline: none !important;
 }
 
 @keyframes twinkle1 {
   0% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   20% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   40% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   60% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   80% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   100% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
@@ -327,23 +474,18 @@ button[data-testid="cover-art-button"] {
   0% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   20% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   40% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   60% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   80% {
-    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   100% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
@@ -353,25 +495,20 @@ button[data-testid="cover-art-button"] {
   0% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   20% {
-    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   40% {
-    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   60% {
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+  }
+  80% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
-  80% {
-    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
-  }
-
   100% {
-    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
 }
 
@@ -379,25 +516,20 @@ button[data-testid="cover-art-button"] {
   0% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   20% {
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+  }
+  40% {
     box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
-  40% {
-    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
-  }
-
   60% {
-    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
   }
-
   80% {
     box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
-
   100% {
-    box-shadow: 0px 0px -8px 2px var(--spice-star-glow);
+    box-shadow: 0px 0px 8px 2px var(--spice-star-glow);
   }
 }
 
@@ -405,20 +537,12 @@ button[data-testid="cover-art-button"] {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
-
 /*
 Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 .shootingstar {
   position: absolute;
@@ -426,9 +550,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   height: 4px;
   background: var(--spice-shooting-star);
   border-radius: 50%;
-  animation: animate 3s linear;
+  animation: animate 3s linear infinite;
   left: initial;
-  z-index: -1;
+  z-index: 0 !important;
+  pointer-events: none;
 }
 
 .shootingstar::before {
@@ -456,3 +581,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     opacity: 0;
   }
 }
+.lyrics-lyrics-background {
+  background-color: #00000000 !important;
+}
+
+

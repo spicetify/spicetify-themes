@@ -8,7 +8,6 @@ function waitForElement(els, func, timeout = 100) {
 }
 
 function random(min, max) {
-  // min inclusive max exclusive
   return Math.random() * (max - min) + min;
 }
 
@@ -16,15 +15,22 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
-  const backgroundContainer = document.createElement('div');
-  backgroundContainer.className = 'starrynight-bg-container';
-  topContainer.appendChild(backgroundContainer);
+  // Background container
+  let backgroundContainer = document.querySelector('.starrynight-bg-container');
+  if (!backgroundContainer) {
+    backgroundContainer = document.createElement('div');
+    backgroundContainer.className = 'starrynight-bg-container';
+    topContainer.appendChild(backgroundContainer);
+  } else {
+    backgroundContainer.innerHTML = '';
+  }
 
-  // to position stars and shooting stars between the background and everything else
   const rootElement = document.querySelector('.Root__top-container');
-  rootElement.style.zIndex = '0';
+  if (rootElement) {
+    rootElement.style.zIndex = '0';
+  }
 
-  // create the stars
+  // 1. Original twinkling stars
   const canvasSize =
     backgroundContainer.clientWidth * backgroundContainer.clientHeight;
   const starsFraction = canvasSize / 4000;
@@ -43,85 +49,135 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     star.style.borderRadius = '50%';
 
     if (Math.random() < 1 / 5) {
-      star.style.setProperty("animation", `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`, "important");
+      star.style.setProperty(
+        'animation',
+        `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`,
+        'important'
+      );
     }
 
     backgroundContainer.appendChild(star);
   }
 
-  // handles resizing of playbar panel to match right sidebar below it
-  const playbar = document.querySelector('.Root__now-playing-bar');
-  waitForElement(['.Root__right-sidebar'], ([rightbar]) => {
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.target === rightbar) {
-          let newWidth = entry.contentRect.width;
-          if (newWidth === 0) {
-            const localStorageWidth = localStorage.getItem(
-              '223ni6f2epqcidhx5etjafeai:panel-width-saved'
-            );
-            if (localStorageWidth) {
-              newWidth = localStorageWidth;
-            } else {
-              newWidth = 420;
-            }
-          }
-          playbar.style.width = `${newWidth}px`;
-          break;
-        }
-      }
-    });
-
-    resizeObserver.observe(rightbar);
-  });
-
-  /*
-  Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-  */
+  // 2. Original Delroy Prithvi shooting stars animation effect
   for (let i = 0; i < 4; i++) {
     const shootingstar = document.createElement('span');
     shootingstar.className = 'shootingstar';
     if (Math.random() < 0.75) {
-      shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+      shootingstar.style.top = '-4px';
       shootingstar.style.right = `${random(0, 90)}%`;
     } else {
       shootingstar.style.top = `${random(0, 50)}%`;
-      shootingstar.style.right = '-4px'; // hidden when animation is delayed
+      shootingstar.style.right = '-4px';
     }
 
     const shootingStarGlowColor = `rgba(${rs.getPropertyValue(
       '--spice-rgb-shooting-star-glow'
-    )},${0.1})`;
+    )},0.1)`;
     shootingstar.style.boxShadow = `0 0 0 4px ${shootingStarGlowColor}, 0 0 0 8px ${shootingStarGlowColor}, 0 0 20px ${shootingStarGlowColor}`;
 
-    shootingstar.style.animationDuration = `${
-      Math.floor(Math.random() * 3) + 3
-    }s`;
-    shootingstar.style.animationDelay = `${Math.floor(Math.random() * 7)}s`;
+    const dur = `${Math.floor(Math.random() * 3) + 3}s`;
+    const delay = `${Math.floor(Math.random() * 7)}s`;
+
+    shootingstar.style.setProperty('animation', 'animate 3s linear infinite', 'important');
+    shootingstar.style.setProperty('animation-duration', dur, 'important');
+    shootingstar.style.setProperty('animation-delay', delay, 'important');
 
     backgroundContainer.appendChild(shootingstar);
 
     shootingstar.addEventListener('animationend', () => {
       if (Math.random() < 0.75) {
-        shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+        shootingstar.style.top = '-4px';
         shootingstar.style.right = `${random(0, 90)}%`;
       } else {
         shootingstar.style.top = `${random(0, 50)}%`;
-        shootingstar.style.right = '-4px'; // hidden when animation is delayed
+        shootingstar.style.right = '-4px';
       }
 
-      shootingstar.style.animation = 'none'; // Remove animation
-
+      shootingstar.style.animation = 'none';
       void shootingstar.offsetWidth;
-
-      shootingstar.style.animation = '';
-      shootingstar.style.setProperty("animation-duration", `${Math.floor(Math.random() * 4) + 3}s`, "important");
+      shootingstar.style.setProperty('animation', 'animate 3s linear', 'important');
+      shootingstar.style.setProperty(
+        'animation-duration',
+        `${Math.floor(Math.random() * 4) + 3}s`,
+        'important'
+      );
     });
   }
+
+  // 3. Resize and collapse observer: when right sidebar collapses, collapse top playbar too!
+  const setupResizeObserver = () => {
+    const container = document.querySelector('.Root__top-container');
+    if (!container) return;
+    const rightSidebarSlot = [...container.children].find((el) => {
+      try {
+        return getComputedStyle(el).gridArea.includes('right-sidebar');
+      } catch (e) {
+        return false;
+      }
+    });
+
+    if (rightSidebarSlot) {
+      let rafPending = false;
+      let lastWidth = -1;
+
+      const updateWidth = (w) => {
+        if (w === lastWidth) return;
+        lastWidth = w;
+
+        // When right sidebar is hidden or collapsed (< 200px)
+        if (w < 200) {
+          document.body.classList.add('starrynight-sidebar-collapsed');
+          container.style.removeProperty('--starrynight-panel-width');
+        } else {
+          document.body.classList.remove('starrynight-sidebar-collapsed');
+          container.style.setProperty('--starrynight-panel-width', `${w}px`);
+        }
+      };
+
+      const ro = new ResizeObserver(([entry]) => {
+        const w = Math.round(entry.contentRect.width);
+        if (!rafPending) {
+          rafPending = true;
+          requestAnimationFrame(() => {
+            rafPending = false;
+            updateWidth(w);
+          });
+        }
+      });
+      ro.observe(rightSidebarSlot);
+
+      document.addEventListener('click', () => {
+        setTimeout(() => {
+          if (rightSidebarSlot) {
+            updateWidth(Math.round(rightSidebarSlot.offsetWidth));
+          }
+        }, 150);
+      });
+    } else {
+      setTimeout(setupResizeObserver, 500);
+    }
+  };
+  setupResizeObserver();
+
+
+  // 4. Handle play/pause state for spinning cover art
+  const setupPlayStateObserver = () => {
+    if (window.Spicetify && Spicetify.Player) {
+      const updatePlaying = () => {
+        const isPlaying = Spicetify.Player.isPlaying();
+        if (isPlaying) {
+          document.body.classList.add('starrynight-is-playing');
+        } else {
+          document.body.classList.remove('starrynight-is-playing');
+        }
+      };
+      Spicetify.Player.addEventListener('onplaypause', updatePlaying);
+      Spicetify.Player.addEventListener('songchange', () => setTimeout(updatePlaying, 100));
+      updatePlaying();
+    } else {
+      setTimeout(setupPlayStateObserver, 300);
+    }
+  };
+  setupPlayStateObserver();
 });
