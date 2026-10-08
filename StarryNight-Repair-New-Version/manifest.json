@@ -1,0 +1,22 @@
+{
+  "name": "StarryNight / Repair New Version",
+  "description": "Versión reparada y optimizada de StarryNight por carlitos999yt: disco giratorio adaptativo sin cortes, lluvia de estrellas clásica y parpadeo original, contracción sincronizada del panel y compatibilidad total con letras.",
+  "preview": "images/base.png",
+  "readme": "README.md",
+  "usercss": "user.css",
+  "schemes": "color.ini",
+  "include": [
+    "https://raw.githubusercontent.com/Carlitos999yt/StarryNight-Repair-New-Version/main/theme.js"
+  ],
+  "authors": [
+    {
+      "name": "Brandon Chen, Julissa Laignelet (Original), carlitos999yt (Repair New Version)",
+      "url": "https://github.com/carlitos999yt"
+    }
+  ],
+  "tags": [
+    "latest",
+    "repaired",
+    "carlitos999yt"
+  ]
+}
