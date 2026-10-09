@@ -92,7 +92,7 @@ Here you can find a preview of all the themes. Some of them may have different c
 
 ![lunar](Dribbblish/lunar.png)
 
-#### Catppuccin Latte
+#### Catppuccin-Latte
 
 ![catppuccin-latte](Dribbblish/catppuccin-latte.png)
 
