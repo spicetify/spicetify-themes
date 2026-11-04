@@ -12,17 +12,17 @@ function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-waitForElement(['.Root__top-container'], ([topContainer]) => {
+waitForElement([".Root__top-container"], ([topContainer]) => {
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
-  const backgroundContainer = document.createElement('div');
-  backgroundContainer.className = 'starrynight-bg-container';
+  const backgroundContainer = document.createElement("div");
+  backgroundContainer.className = "starrynight-bg-container";
   topContainer.appendChild(backgroundContainer);
 
   // to position stars and shooting stars between the background and everything else
-  const rootElement = document.querySelector('.Root__top-container');
-  rootElement.style.zIndex = '0';
+  const rootElement = document.querySelector(".Root__top-container");
+  rootElement.style.zIndex = "0";
 
   // create the stars
   const canvasSize =
@@ -31,49 +31,42 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   for (let i = 0; i < starsFraction; i++) {
     const size = Math.random() < 0.5 ? 1 : 2;
 
-    const star = document.createElement('div');
-    star.style.position = 'absolute';
+    const star = document.createElement("div");
+    star.style.position = "absolute";
     star.style.left = `${random(0, 99)}%`;
     star.style.top = `${random(0, 99)}%`;
     star.style.opacity = random(0.5, 1);
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
-    star.style.backgroundColor = rs.getPropertyValue('--spice-star');
-    star.style.zIndex = '-1';
-    star.style.borderRadius = '50%';
+    star.style.backgroundColor = rs.getPropertyValue("--spice-star");
+    star.style.zIndex = "-1";
+    star.style.borderRadius = "50%";
 
     if (Math.random() < 1 / 5) {
-      star.style.setProperty("animation", `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`, "important");
+      star.style.setProperty(
+        "animation",
+        `twinkle${Math.floor(Math.random() * 4) + 1} 5s infinite`,
+        "important",
+      );
     }
 
     backgroundContainer.appendChild(star);
   }
 
   // handles resizing of playbar panel to match right sidebar below it
-  const playbar = document.querySelector('.Root__now-playing-bar');
-  waitForElement(['.Root__right-sidebar'], ([rightbar]) => {
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.target === rightbar) {
-          let newWidth = entry.contentRect.width;
-          if (newWidth === 0) {
-            const localStorageWidth = localStorage.getItem(
-              '223ni6f2epqcidhx5etjafeai:panel-width-saved'
-            );
-            if (localStorageWidth) {
-              newWidth = localStorageWidth;
-            } else {
-              newWidth = 420;
-            }
-          }
-          playbar.style.width = `${newWidth}px`;
-          break;
-        }
-      }
-    });
-
-    resizeObserver.observe(rightbar);
-  });
+  topContainer = document.querySelector(".Root__top-container");
+  const rightSidebarSlot = [...topContainer.children].find((el) =>
+    getComputedStyle(el).gridArea.includes("right-sidebar"),
+  );
+  if (rightSidebarSlot) {
+    new ResizeObserver(([entry]) => {
+      const w = Math.round(entry.contentRect.width);
+      if (w === 0)
+        topContainer.style.removeProperty("--starrynight-panel-width");
+      else
+        topContainer.style.setProperty("--starrynight-panel-width", `${w}px`);
+    }).observe(rightSidebarSlot);
+  }
 
   /*
   Pure CSS Shooting Star Animation Effect Copyright (c) 2021 by Delroy Prithvi (https://codepen.io/delroyprithvi/pen/LYyJROR)
@@ -85,18 +78,18 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   */
   for (let i = 0; i < 4; i++) {
-    const shootingstar = document.createElement('span');
-    shootingstar.className = 'shootingstar';
+    const shootingstar = document.createElement("span");
+    shootingstar.className = "shootingstar";
     if (Math.random() < 0.75) {
-      shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+      shootingstar.style.top = "-4px"; // hidden off screen when animation is delayed
       shootingstar.style.right = `${random(0, 90)}%`;
     } else {
       shootingstar.style.top = `${random(0, 50)}%`;
-      shootingstar.style.right = '-4px'; // hidden when animation is delayed
+      shootingstar.style.right = "-4px"; // hidden when animation is delayed
     }
 
     const shootingStarGlowColor = `rgba(${rs.getPropertyValue(
-      '--spice-rgb-shooting-star-glow'
+      "--spice-rgb-shooting-star-glow",
     )},${0.1})`;
     shootingstar.style.boxShadow = `0 0 0 4px ${shootingStarGlowColor}, 0 0 0 8px ${shootingStarGlowColor}, 0 0 20px ${shootingStarGlowColor}`;
 
@@ -107,21 +100,25 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
 
     backgroundContainer.appendChild(shootingstar);
 
-    shootingstar.addEventListener('animationend', () => {
+    shootingstar.addEventListener("animationend", () => {
       if (Math.random() < 0.75) {
-        shootingstar.style.top = '-4px'; // hidden off screen when animation is delayed
+        shootingstar.style.top = "-4px"; // hidden off screen when animation is delayed
         shootingstar.style.right = `${random(0, 90)}%`;
       } else {
         shootingstar.style.top = `${random(0, 50)}%`;
-        shootingstar.style.right = '-4px'; // hidden when animation is delayed
+        shootingstar.style.right = "-4px"; // hidden when animation is delayed
       }
 
-      shootingstar.style.animation = 'none'; // Remove animation
+      shootingstar.style.animation = "none"; // Remove animation
 
       void shootingstar.offsetWidth;
 
-      shootingstar.style.animation = '';
-      shootingstar.style.setProperty("animation-duration", `${Math.floor(Math.random() * 4) + 3}s`, "important");
+      shootingstar.style.animation = "";
+      shootingstar.style.setProperty(
+        "animation-duration",
+        `${Math.floor(Math.random() * 4) + 3}s`,
+        "important",
+      );
     });
   }
 });
