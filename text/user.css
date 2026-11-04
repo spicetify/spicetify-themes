@@ -96,7 +96,8 @@
 .view-homeShortcutsGrid-imageContainer img {
     display: var(--display-card-image) !important;
 }
-.main-coverSlotCollapsed-container {
+.main-coverSlotCollapsed-container,
+[data-testid="now-playing-bar"] [data-testid="cover-art-container"] {
     display: var(--display-coverart-image);
 }
 .main-entityHeader-imageContainer,
@@ -135,7 +136,7 @@
     border: var(--border-width) solid transparent;
 }
 .Root__nav-bar,
-.main-nowPlayingBar-container {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) {
     overflow: visible;
 }
 .main-view-container {
@@ -214,7 +215,7 @@ div:has(> .main-entityHeader-container) {
     -webkit-transform: none;
     transform: none;
 }
-.npv-main-container .playback-bar {
+.npv-main-container :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) {
     position: unset;
     width: auto;
 }
@@ -312,10 +313,10 @@ img[src*="equaliser"] {
     --mg-color: var(--background-tinted-base);
     --bg-color: var(--spice-button-disabled);
 }
-.playback-bar__progress-time-elapsed,
-.main-playbackBarRemainingTime-container {
+:is(.playback-bar__progress-time-elapsed, [data-testid="playback-position"]),
+:is(.main-playbackBarRemainingTime-container, [data-testid="playback-duration"]) {
     mix-blend-mode: difference;
-    color: var(--spice-button-active);
+    color: #fff;
 }
 .main-trackList-placeholder {
     background-color: var(--background-base);
@@ -372,7 +373,7 @@ img[src*="equaliser"] {
 .Root__globalNav,
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
-.main-nowPlayingBar-container,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]),
 .Root__right-sidebar:has(aside:not(:empty)) {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-inactive);
@@ -383,7 +384,7 @@ img[src*="equaliser"] {
 .Root__globalNav:hover,
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
-.main-nowPlayingBar-container:hover,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]):hover,
 .Root__right-sidebar:has(aside:not(:empty)):hover {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
@@ -404,7 +405,7 @@ img[src*="equaliser"] {
         .main-yourLibraryX-libraryContainer
     )::before,
 .Root__main-view::before,
-.main-nowPlayingBar-container::before,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"])::before,
 .Root__right-sidebar:has(aside:not(:empty))::before {
     color: var(--spice-header);
     position: absolute;
@@ -439,7 +440,7 @@ img[src*="equaliser"] {
     content: "Main";
     position: fixed;
 }
-.main-nowPlayingBar-container::before {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"])::before {
     content: "Playing";
 }
 .Root__right-sidebar:has(aside:not(:empty))::before {
@@ -448,7 +449,7 @@ img[src*="equaliser"] {
 .Root__globalNav:hover::before,
 .Root__nav-bar .main-yourLibraryX-entryPoints:hover::before,
 .Root__main-view:hover::before,
-.main-nowPlayingBar-container:hover::before,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]):hover::before,
 .Root__right-sidebar:has(aside:not(:empty)):hover::before {
     color: var(--spice-border-active);
 }
@@ -795,11 +796,19 @@ form .main-topBar-searchBar:placeholder-shown {
     ================================ */
 
 /* playback bar itself */
-.main-nowPlayingBar-nowPlayingBar {
+[data-testid="now-playing-bar"] {
+    position: relative;
+}
+/* Inline-size containment would anchor the seek row to the narrow center column. */
+[data-testid="now-playing-bar"] [data-testid="player-controls"] {
+    container-type: normal;
+}
+:is(.main-nowPlayingBar-nowPlayingBar, [data-testid="now-playing-bar"] > div:has([data-testid="player-controls"])) {
+    box-sizing: border-box;
     padding: 8px 8px 32px 8px;
     height: 96px;
 }
-.playback-bar {
+:is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) {
     position: absolute;
     left: calc(var(--panel-gap) + 8px);
     bottom: calc(var(--panel-gap) + 8px);
@@ -807,35 +816,41 @@ form .main-topBar-searchBar:placeholder-shown {
     justify-content: center;
 }
 
+/* The DWP player exposes its panel as a positioning anchor. */
+[data-testid="now-playing-bar"] [data-testid="player-controls"] > div:has(> [data-testid="playback-position"]) {
+    inset: auto 8px 8px;
+    width: auto;
+    height: 18px;
+}
+
 /* playback time indicators */
-.playback-bar__progress-time-elapsed {
-    pointer-events: none;
-    width: unset;
+:is(.playback-bar__progress-time-elapsed, [data-testid="playback-position"]) > span,
+:is(.main-playbackBarRemainingTime-container, [data-testid="playback-duration"]) > span {
+    position: static !important;
+    inset: auto !important;
+    contain: none !important;
 }
-.playback-bar__progress-time-elapsed > span,
-.main-playbackBarRemainingTime-container > span {
-  position: static !important;
-  inset: auto !important;
-  contain: none !important;
-}
-.playback-bar__progress-time-elapsed::after {
+:is(.playback-bar__progress-time-elapsed, [data-testid="playback-position"])::after {
     content: " /";
 }
-.playback-bar__progress-time-elapsed,
-.main-playbackBarRemainingTime-container {
+:is(.playback-bar__progress-time-elapsed, [data-testid="playback-position"]),
+:is(.main-playbackBarRemainingTime-container, [data-testid="playback-duration"]) {
     z-index: 9;
     height: unset;
+    width: unset;
+    flex-shrink: 0;
+    pointer-events: none;
     padding-top: 2px;
 }
 
 /* playback seek bar */
-.main-nowPlayingBar-container .playback-bar {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
 }
-.main-nowPlayingBar-container .playback-bar > div:has(> [data-testid="playback-progressbar"]) {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) > div:has(> [data-testid="playback-progressbar"]) {
     position: absolute !important;
     width: 100% !important;
     height: 16px !important;
@@ -843,12 +858,12 @@ form .main-topBar-searchBar:placeholder-shown {
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
-.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar"] {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) [data-testid="progress-bar"] {
     --progress-bar-height: 16px !important;
     --progress-bar-radius: calc(var(--border-radius) / 2) !important;
 }
-.main-nowPlayingBar-container .playback-bar .progress-bar__slider,
-.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar-handle"] {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) .progress-bar__slider,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.playback-bar, [data-testid="player-controls"] > div:has(> [data-testid="playback-position"])) [data-testid="progress-bar-handle"] {
     box-shadow: none !important;
     height: 100% !important;
     border-radius: 0 !important;
@@ -861,7 +876,8 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* cover art */
-.main-nowPlayingWidget-coverArt .cover-art {
+.main-nowPlayingWidget-coverArt .cover-art,
+[data-testid="now-playing-bar"] [data-testid="cover-art-container"] img {
     height: 32px !important;
     width: 32px !important;
 }
@@ -875,36 +891,37 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* volume bar */
-.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar"] {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) [data-testid="progress-bar"] {
     --progress-bar-height: calc(var(--font-size) / 6) !important;
 }
-.main-nowPlayingBar-container .main-nowPlayingBar-right .progress-bar__slider,
-.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar-handle"] {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) .progress-bar__slider,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) [data-testid="progress-bar-handle"] {
     height: 16px !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     background-color: var(--spice-text) !important;
 }
-.main-nowPlayingBar-container .main-nowPlayingBar-right .x-progressBar-progressBarBg,
-.main-nowPlayingBar-container .main-nowPlayingBar-right [data-testid="progress-bar-background"] {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) .x-progressBar-progressBarBg,
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) [data-testid="progress-bar-background"] {
     background-color: transparent !important;
     border-bottom: var(--progress-bar-height) dashed rgba(var(--spice-rgb-subtext), 0.3) !important;
 }
-.main-nowPlayingBar-container .main-nowPlayingBar-right .x-progressBar-fillColor {
+:is(.main-nowPlayingBar-container, [data-testid="now-playing-bar"]) :is(.main-nowPlayingBar-right, [data-testid="volume-bar"]) .x-progressBar-fillColor {
     background-color: var(--spice-main) !important;
     border-bottom: var(--progress-bar-height) dashed var(--fg-color) !important;
 }
 
 /* player controls */
-.player-controls__buttons {
+:is(.player-controls__buttons, [data-testid="general-controls"]) {
     margin-bottom: 0;
+    align-items: center;
 }
-.player-controls__buttons,
+:is(.player-controls__buttons, [data-testid="general-controls"]),
 .main-nowPlayingBar-extraControls {
     opacity: 0.25;
     transition: opacity var(--border-transition);
 }
-.player-controls__buttons:hover,
+:is(.player-controls__buttons, [data-testid="general-controls"]):hover,
 .main-nowPlayingBar-extraControls:hover {
     opacity: 1;
 }
@@ -1025,7 +1042,7 @@ button[data-testid="control-button-npv-episodes"] > span::after {
 .main-playPauseButton-button > svg,
 .main-skipForwardButton-button > svg,
 .main-repeatButton-button > svg,
-:is(.player-controls__buttons, .npv-nowPlayingBar-controls) svg,
+:is(.player-controls__buttons, [data-testid="general-controls"], .npv-nowPlayingBar-controls) svg,
 button[data-testid="control-button-playback-speed"] svg,
 button[data-testid="control-button-sleep-timer"] svg,
 button[data-testid="control-button-npv-episodes"] svg {
