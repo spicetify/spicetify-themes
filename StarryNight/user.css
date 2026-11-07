@@ -16,25 +16,85 @@
   background-image: none !important;
 }
 
-.Root__top-container {
-  background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%);
+/* ---------- layout ---------- */
+
+/* the sky */
+.starrynight-top-container {
+  background: linear-gradient(180deg, var(--spice-sidebar-alt) 0%, var(--spice-sidebar) 100%) !important;
   overflow: hidden;
-  grid-template-areas:
-    "left-sidebar    main-view         now-playing-bar"
-    "left-sidebar    main-view         right-sidebar";
-  grid-template-rows: auto auto 1fr;
+  /* playbar moves to the top of the right column, above the right sidebar */
+  grid-template:
+    "top-banner   top-banner top-banner"      auto
+    "global-nav   global-nav global-nav"      auto
+    "left-sidebar main-view  now-playing-bar" auto
+    "left-sidebar main-view  right-sidebar"   1fr
+    / auto 1fr auto !important;
 }
 
-.global-nav .Root__top-container {
-  grid-template-areas:
-    "top-banner global-nav global-nav"
-    "left-sidebar main-view now-playing-bar"
-    "left-sidebar main-view right-sidebar" !important;
+/* overlays/popovers used to end at the (old, bottom) playbar row; span everything instead */
+.starrynight-top-container > div:has(> #floating-ui-popover-layer),
+.starrynight-top-container > div:has(> .VTO__modal-slot) {
+  grid-row: 2 / -1 !important;
 }
 
-.Root__globalNav {
+.starrynight-top-container > .Root__lyrics-cinema,
+.starrynight-top-container > #lyrics-cinema {
+  grid-row: 1 / -1 !important;
+}
+
+#global-nav-bar,
+#Desktop_LeftSidebar_Id,
+#Desktop_LeftSidebar_Id nav > div,
+#Desktop_LeftSidebar_Id .YourLibraryX,
+#main-view,
+.starrynight-rightbar,
+.starrynight-rightbar .Root__right-sidebar-peek,
+.starrynight-playbar {
+  background: #00000000 !important;
+}
+
+/* right sidebar panels (queue, now playing view...) were opaque black */
+.starrynight-rightbar aside,
+.starrynight-rightbar aside::before,
+.starrynight-rightbar aside::after,
+.starrynight-rightbar .Root__right-sidebar-overlayWrapper > div:not(.Root__right-sidebar-peekContent),
+.starrynight-rightbar .Root__right-sidebar-fauxMainViewEnd > div {
+  background: #00000000 !important;
+}
+
+/* collapsed sidebar: the (now transparent) strip used to cover the peeking content */
+.starrynight-rightbar .Root__right-sidebar-peek:not(.Root__right-sidebar-expanded):not(:hover)
+  .Root__right-sidebar-peekContent {
+  opacity: 0;
+}
+
+/* all StarryNight schemes use a light button color, so primary buttons need dark text
+   (e.g. Full Screen's "Switch to TV Mode" / "Exit" were white on cream) */
+.main-button-primary {
+  color: #000000 !important;
+}
+
+/* page headers / action bars are painted with the cover art color (playlist, album, artist) */
+[data-testid="entity-header"] > div:not(.main-entityHeader-contentWrapper),
+.playlist-playlist-playlistContent > div:first-child,
+[data-testid$="-page"] > [data-testid="entity-header"] + div,
+[data-testid="artist-page"] [data-testid="entity-header"] + div,
+[data-testid="artist-page"] [data-testid="entity-header"] + div > div:first-child,
+[data-testid="overscroll-background"] {
   background-color: #00000000 !important;
+  background-image: none !important;
 }
+
+/* keep main view out of the playbar column even when the right sidebar is closed */
+#main-view {
+  grid-column: main-view !important;
+}
+
+.starrynight-rightbar {
+  min-height: 0;
+}
+
+/* ---------- misc transparency (some hashed classes may be stale on newer Spotify) ---------- */
 
 .ffFwfKcPDbmAPLXzxzKq:before {
   background-color: #00000000 !important;
@@ -62,22 +122,8 @@
   transform: none !important;
 }
 
-.Root__right-sidebar {
-  width: min-content;
-  height: auto !important;
-  min-height: 100% !important;
-}
-
-.Root__now-playing-bar {
-  width: var(--panel-width);
-}
-
 .main-topBar-background {
   background-color: var(--spice-highlight) !important;
-}
-
-.Root__nav-bar {
-  background-color: #00000000 !important;
 }
 
 .main-yourLibraryX-libraryContainer {
@@ -148,8 +194,7 @@
 .WBFaUw_oOfN2m4aTxggt,
 .main-nowPlayingView-contextItemInfo:before,
 .playlist-playlist-actionBarBackground-background,
-.main-entityHeader-backgroundColor,
-.Root__now-playing-bar {
+.main-entityHeader-backgroundColor {
   background: none !important;
 }
 
@@ -157,120 +202,110 @@
   display: none;
 }
 
-.main-nowPlayingBar-nowPlayingBar {
-  min-height: 400px;
+.main-tag-container {
+  color: var(--spice-sidebar);
 }
 
-.main-nowPlayingBar-container {
-  flex-direction: column;
-  min-width: 280px;
-  max-width: 420px;
+/* ---------- now playing panel ---------- */
+
+/* width 0 + min-width 100%: the right sidebar alone sizes the column, the panel fills it.
+   theme.js sets an inline width when the right sidebar is closed. */
+.starrynight-playbar {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 0;
+  min-width: max(100%, 280px);
 }
 
-.main-nowPlayingBar-nowPlayingBar {
-  flex-direction: column;
+[data-testid="now-playing-bar"] {
+  height: auto !important;
+  min-height: 0 !important;
+  min-width: 0 !important;
+  width: 100% !important;
 }
 
-[data-right-sidebar-hidden] .Root__main-view {
-  grid-area: main-view/main-view/main-view/span 1;
+/* stack left / center / right sections vertically */
+[data-testid="now-playing-bar"] > div {
+  flex-direction: column !important;
+  height: auto !important;
+  gap: 8px;
 }
 
-.Root__main-view {
+[data-testid="now-playing-bar"] > div > div {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+}
+
+/* cover art on top, title + heart centered below */
+[data-testid="now-playing-widget-v2"] {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] {
+  flex: 0 0 100% !important;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  margin: 0 !important;
+}
+
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] > div,
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] [data-testid="cover-drop-target"] {
+  height: 220px !important;
+  width: 220px !important;
   background-color: #00000000 !important;
 }
 
-.main-nowPlayingBar-center {
-  width: 100%;
-}
-
-.main-nowPlayingBar-left {
-  width: 100%;
-}
-
-.HD9s7U5E1RLSWKpXmrqx {
-  background-color: #00000000;
-  margin: auto;
-  width: 100%;
-}
-
-.main-nowPlayingWidget-coverArt .cover-art {
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] img {
   height: 220px !important;
   width: 220px !important;
-  margin: auto;
-  background-color: #00000000;
-  box-shadow: 0 0 0px var(--spice-rgb-shadow);
-}
-
-.main-nowPlayingWidget-coverArt .cover-art img {
-  border-radius: 50%;
+  border-radius: 50% !important;
+  object-fit: cover;
   animation: spin 25s linear infinite;
   animation-play-state: paused;
-  background-color: #00000000;
   box-shadow: 0 0 5px 5px var(--spice-text);
 }
 
-[data-testid="now-playing-bar"]:has(
-  [data-testid="control-button-playpause"][aria-label="Pause"]
-)
-  .main-nowPlayingWidget-coverArt
-  .cover-art
-  img {
+[data-testid="now-playing-bar"]:has([data-testid="control-button-playpause"][aria-label="Pause"])
+  [data-testid="cover-art-container"] img {
   animation-play-state: running !important;
 }
 
-.main-coverSlotCollapsed-container {
+/* clip every layer in the cover slot to the circle (hover overlays, placeholders) */
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] * {
+  border-radius: 50% !important;
+}
+
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] > div {
+  overflow: hidden;
+  border-radius: 50% !important;
+  box-shadow: 0 0 5px 5px var(--spice-text);
+}
+
+[data-testid="now-playing-widget-v2"] [data-testid="cover-art-container"] img {
+  box-shadow: none !important;
+}
+
+/* progress bar above the buttons */
+[data-testid="player-controls"] {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  width: 100% !important;
+}
+
+[data-testid="player-controls"] > div {
+  width: 100% !important;
+}
+
+/* extra controls (lyrics, queue, volume...) */
+[data-testid="now-playing-bar"] > div > div:last-child > div {
+  justify-content: space-evenly !important;
   width: 100%;
-  height: 100%;
-}
-
-.main-coverSlotCollapsed-container> :first-child {
-  width: 100%;
-  height: 100%;
-}
-
-.main-coverSlotCollapsed-container> :first-child> :first-child {
-  width: 100%;
-  height: 100%;
-  background-color: #00000000;
-}
-
-.main-nowPlayingWidget-coverArt {
-  width: 100%;
-  height: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #00000000;
-}
-
-.main-nowPlayingWidget-nowPlaying {
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.main-coverSlotCollapsed-expandButton {
-  right: 25%;
-}
-
-.player-controls__buttons.player-controls__buttons--new-icons {
-  order: 2;
-}
-
-.playback-bar {
-  order: 1;
-}
-
-.main-nowPlayingBar-right {
-  width: 100%;
-}
-
-.main-nowPlayingBar-extraControls {
-  justify-content: space-evenly;
-}
-
-.main-tag-container {
-  color: var(--spice-sidebar);
 }
 
 .starrynight-bg-container {

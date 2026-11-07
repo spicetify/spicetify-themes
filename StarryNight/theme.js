@@ -12,17 +12,24 @@ function random(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-waitForElement(['.Root__top-container'], ([topContainer]) => {
+// the grid child occupying the given grid area (classes are hashed now)
+function findGridChild(container, area) {
+  return [...container.children].find((c) =>
+    getComputedStyle(c).gridArea.split(' / ')[0] === area
+  );
+}
+
+// Spotify 1.3.6 removed .Root__top-container; the global nav's parent is the root grid
+waitForElement(['#global-nav-bar'], ([globalNav]) => {
+  const topContainer = globalNav.parentElement;
+  topContainer.classList.add('starrynight-top-container');
   const r = document.documentElement;
   const rs = window.getComputedStyle(r);
 
   const backgroundContainer = document.createElement('div');
   backgroundContainer.className = 'starrynight-bg-container';
-  topContainer.appendChild(backgroundContainer);
-
-  // to position stars and shooting stars between the background and everything else
-  const rootElement = document.querySelector('.Root__top-container');
-  rootElement.style.zIndex = '0';
+  // prepend so the sky sits behind the panels instead of over them
+  topContainer.prepend(backgroundContainer);
 
   // create the stars
   const canvasSize =
@@ -39,7 +46,6 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
     star.style.backgroundColor = rs.getPropertyValue('--spice-star');
-    star.style.zIndex = '-1';
     star.style.borderRadius = '50%';
 
     if (Math.random() < 1 / 5) {
@@ -50,29 +56,25 @@ waitForElement(['.Root__top-container'], ([topContainer]) => {
   }
 
   // handles resizing of playbar panel to match right sidebar below it
-  const playbar = document.querySelector('.Root__now-playing-bar');
-  waitForElement(['.Root__right-sidebar'], ([rightbar]) => {
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.target === rightbar) {
-          let newWidth = entry.contentRect.width;
-          if (newWidth === 0) {
-            const localStorageWidth = localStorage.getItem(
-              '223ni6f2epqcidhx5etjafeai:panel-width-saved'
-            );
-            if (localStorageWidth) {
-              newWidth = localStorageWidth;
-            } else {
-              newWidth = 420;
-            }
-          }
-          playbar.style.width = `${newWidth}px`;
-          break;
-        }
-      }
-    });
+  // playbar/right sidebar located by testid / grid area
+  waitForElement(['[data-testid="now-playing-bar"]'], ([bar]) => {
+    const playbar = bar.closest('.starrynight-top-container > *');
+    const rightbar = findGridChild(topContainer, 'right-sidebar');
+    if (!playbar || !rightbar) return;
+    playbar.classList.add('starrynight-playbar');
+    rightbar.classList.add('starrynight-rightbar');
 
+    // CSS makes the panel match the right sidebar's width; only give it its own
+    // width (420px) when the right sidebar is closed.
+    // the grid slot always stretches to the column, so measure the sidebar inside it
+    // (collapsed, Spotify leaves a ~40px peek strip)
+    const resizeObserver = new ResizeObserver(() => {
+      const sidebar = rightbar.firstElementChild || rightbar;
+      const sidebarOpen = sidebar.getBoundingClientRect().width > 50;
+      playbar.style.width = sidebarOpen ? '' : '420px';
+    });
     resizeObserver.observe(rightbar);
+    if (rightbar.firstElementChild) resizeObserver.observe(rightbar.firstElementChild);
   });
 
   /*
