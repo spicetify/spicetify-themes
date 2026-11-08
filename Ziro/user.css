@@ -20,7 +20,6 @@
   background-color: var(--spice-main);
 }
 .main-topBar-background {
-  opacity: 1 !important;
   background-color: var(--spice-main) !important;
 }
 * {
