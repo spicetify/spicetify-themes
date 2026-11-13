@@ -28,9 +28,9 @@
 
 ![CatppuccinMacchiato](screenshots/CatppuccinMacchiato.png)
 
-### CatppuccinLatte
+### CatppuccinFrappe
 
-![CatppuccinLatte](screenshots/CatppuccinLatte.png)
+![CatppuccinFrappe](screenshots/CatppuccinFrappe.png)
 
 ### Dracula
 
