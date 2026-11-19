@@ -7,7 +7,7 @@ This is a collection of themes for [spicetify](https://github.com/spicetify/spic
 ## Notes:
 
 *   **These themes require that you have the latest version of Spotify and Spicetify.**
-*   **To install Dribbblish and Turntable themes, follow the instructions in their READMEs**.
+*   **To install Dribbblish theme, follow the instructions in its README**.
 *   **Spotify ad-blocked version is not supported.**
 
 ## Installation and usage
@@ -70,5 +70,6 @@ If you are unsure about which channel to use, go for Reddit or Discord.
 
 ## Useful resources
 
+*   [Turntable, completely reimagined](https://github.com/grasonchan/spotify-spice)
 *   [Spicetify theme without free version UI elements (e.g. "Upgrade" button)](https://github.com/Daksh777/SpotifyNoPremium)
 *   [DribbblishDynamic theme for v2](https://github.com/JulienMaille/dribbblish-dynamic-theme)
