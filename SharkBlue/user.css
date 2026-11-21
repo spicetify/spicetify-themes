@@ -16,13 +16,14 @@
   border-radius: 8px !important;
 }
 
-/* transparent window controls */
-#main::after {
+/* transparent window controls (Windows only, the overlay must not block clicks) */
+.spotify__os--is-windows #main::after {
   content: "";
   position: fixed;
   top: 0;
   right: 0;
   z-index: 999;
+  pointer-events: none;
   -webkit-backdrop-filter: brightness(2.12);
   backdrop-filter: brightness(2.12);
   width: 135px;
