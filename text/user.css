@@ -73,6 +73,7 @@
     line-height: var(--line-height) !important;
 }
 .lyrics-lyrics-container *,
+[style*="--lyrics-color-background"] *,
 .main-nowPlayingView-lyricsContent * {
     font-family: var(--font-family);
     font-size: var(--font-size-lyrics);
@@ -274,7 +275,7 @@ div:has(> .main-entityHeader-container) {
 .Root__nav-bar,
 .main-yourLibraryX-libraryContainer,
 .main-globalNav-navLink,
-.main-topBar-searchBar {
+:is(.main-topBar-searchBar, [data-top-bar-search]) {
     background-color: var(--spice-main);
 }
 .main-playPauseButton-button {
@@ -397,7 +398,7 @@ img[src*="equaliser"] {
 .Root__globalNav::before,
 .main-globalNav-searchContainer
     form
-    div:has(> .main-topBar-searchBar:focus)::before,
+    div:has(> :is(.main-topBar-searchBar, [data-top-bar-search]):focus)::before,
 .Root__nav-bar
     .main-yourLibraryX-entryPoints:has(.main-yourLibraryX-navItems)::before,
 .Root__nav-bar
@@ -422,7 +423,7 @@ img[src*="equaliser"] {
 }
 .main-globalNav-searchContainer
     form
-    div:has(> .main-topBar-searchBar:focus)::before {
+    div:has(> :is(.main-topBar-searchBar, [data-top-bar-search]):focus)::before {
     content: "Search";
     color: var(--spice-border-active) !important;
 }
@@ -580,26 +581,26 @@ select:focus {
     width: 100%;
 }
 .x-searchInput-searchInputInput,
-.main-globalNav-searchContainer form .main-topBar-searchBar {
+.main-globalNav-searchContainer form :is(.main-topBar-searchBar, [data-top-bar-search]) {
     border-radius: var(--border-radius);
     border: 1px solid;
     border-color: var(--spice-main);
 }
 .x-searchInput-searchInputInput:hover,
 .x-searchInput-searchInputInput:focus,
-.main-globalNav-searchContainer form:hover .main-topBar-searchBar {
+.main-globalNav-searchContainer form:hover :is(.main-topBar-searchBar, [data-top-bar-search]) {
     box-shadow: none;
     border: 1px solid;
     border-color: var(--spice-border-inactive);
 }
-.Root__globalNav:hover:has(.main-topBar-searchBar:focus) {
+.Root__globalNav:hover:has(:is(.main-topBar-searchBar, [data-top-bar-search]):focus) {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-inactive);
 }
-.Root__globalNav:hover:has(.main-topBar-searchBar:focus)::before {
+.Root__globalNav:hover:has(:is(.main-topBar-searchBar, [data-top-bar-search]):focus)::before {
     color: var(--spice-header);
 }
-.main-globalNav-searchContainer form .main-topBar-searchBar:focus {
+.main-globalNav-searchContainer form :is(.main-topBar-searchBar, [data-top-bar-search]):focus {
     box-shadow: none;
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
@@ -616,8 +617,8 @@ select:focus {
     border-color: var(--spice-border-active);
     outline: 14px solid var(--spice-main);
 }
-form .main-topBar-searchBar::placeholder,
-form .main-topBar-searchBar:placeholder-shown {
+form :is(.main-topBar-searchBar, [data-top-bar-search])::placeholder,
+form :is(.main-topBar-searchBar, [data-top-bar-search]):placeholder-shown {
     transition: none !important;
 }
 
@@ -739,7 +740,8 @@ form .main-topBar-searchBar:placeholder-shown {
 }
 
 /* lyrics page & sidebar */
-.lyrics-lyrics-background {
+.lyrics-lyrics-background,
+[style*="--lyrics-color-background"] > div:first-child:empty {
     background-color: var(--spice-main);
 }
 .main-nowPlayingView-sectionHeaderSpacing.main-nowPlayingView-lyricsGradient {
@@ -749,33 +751,40 @@ form .main-topBar-searchBar:placeholder-shown {
     justify-content: start;
 }
 .lyrics-lyrics-container,
+[style*="--lyrics-color-background"],
 .main-nowPlayingView-section {
     --lyrics-color-active: var(--spice-text) !important;
     --lyrics-color-inactive: var(--spice-subtext) !important;
     --lyrics-color-passed: var(--spice-subtext) !important;
     --lyrics-color-messaging: var(--spice-subtext) !important;
 }
-.lyrics-lyricsContent-lyric {
+/* Spotify 1.3.4 line classes are unmapped: .loNizikBbaCKyI9Gv8xg = past, .dPaa_Hg0z0Ql_UBrV9uZ = active */
+.lyrics-lyricsContent-lyric,
+[style*="--lyrics-color-background"] div[dir="auto"] {
     opacity: 0.3;
     display: flex;
     flex-direction: row;
 }
-.lyrics-lyricsContent-lyric.lyrics-lyricsContent-highlight {
+.lyrics-lyricsContent-lyric.lyrics-lyricsContent-highlight,
+[style*="--lyrics-color-background"] div[dir="auto"].loNizikBbaCKyI9Gv8xg {
     opacity: 0.7;
     transition: none;
 }
-.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty) {
+.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty),
+[style*="--lyrics-color-background"] div[dir="auto"].dPaa_Hg0z0Ql_UBrV9uZ:not(:empty) {
     background-color: var(--lyrics-color-background);
     color: var(--spice-text);
     opacity: 1;
     transition: none;
 }
-.lyrics-lyricsContent-lyric:not(:empty)::before {
+.lyrics-lyricsContent-lyric:not(:empty)::before,
+[style*="--lyrics-color-background"] div[dir="auto"]:not(:empty)::before {
     content: ">> ";
     opacity: 0;
     white-space: break-spaces;
 }
-.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty)::before {
+.lyrics-lyricsContent-lyric.lyrics-lyricsContent-active:not(:empty)::before,
+[style*="--lyrics-color-background"] div[dir="auto"].dPaa_Hg0z0Ql_UBrV9uZ:not(:empty)::before {
     content: ">> ";
     opacity: 1;
     white-space: break-spaces;
@@ -785,6 +794,39 @@ form .main-topBar-searchBar:placeholder-shown {
 .Root__lyrics-cinema {
     border: var(--border-width) var(--border-style) transparent;
     overflow: hidden;
+}
+.Root__cinema-view {
+    outline-color: var(--spice-main);
+}
+[style*="--header-buttons-hover-bg"]::before {
+    background: none;
+}
+/* idle "ambient" mode: keep the normal layout and every bar visible */
+.Root__cinema-view.Root__cinema-view--controls-hidden {
+    margin: 0;
+    z-index: var(--above-everything-except-now-playing-bar-z-index);
+}
+.Root:has(.Root__cinema-view--controls-hidden) .Root__right-sidebar {
+    margin: 0;
+    z-index: var(--left-sidebar-grid-area-z-index);
+}
+.Root:has(.Root__cinema-view--controls-hidden) .Root__right-sidebar::before {
+    width: auto;
+    height: auto;
+    inset-inline-start: auto;
+}
+.Root__globalNav,
+[data-testid="now-playing-bar"],
+[style*="--header-buttons-hover-bg"] {
+    opacity: 1 !important;
+}
+/* empty 100vh media slot after the lyrics leaves blank space at the end */
+.Root__cinema-view [style*="--lyrics-color-background"] + div {
+    display: none;
+}
+/* start lyrics at the top, not 25vh down (.CltJXu6SzMuxiiabEn_A is unmapped) */
+.CltJXu6SzMuxiiabEn_A {
+    padding-block-start: 0 !important;
 }
 .main-nowPlayingView-lyricsContent {
     -webkit-mask-image: none !important;
